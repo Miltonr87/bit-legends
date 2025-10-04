@@ -58,15 +58,27 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen overflow-x-hidden">
       <Header />
 
       {/* Hero Section */}
-      <section className="relative py-12 sm:py-20 px-4 overflow-hidden">
+      <section
+        className="relative py-12 sm:py-20 px-4 overflow-hidden bg-cover bg-bottom"
+        style={{
+          backgroundImage:
+            "url('/assets/backgrounds/streets-of-rage-city.png')",
+          backgroundRepeat: 'repeat-x',
+          backgroundSize: 'auto 100%',
+          animation: 'parallaxScroll 60s linear infinite',
+        }}
+      >
+        {/* Background overlay */}
+        <div className="absolute inset-0 bg-black/70 backdrop-blur-[1px]" />
         <div className="absolute inset-0 scanline pointer-events-none" />
         <div className="absolute inset-0 bg-gradient-to-b from-accent/5 via-transparent to-transparent" />
 
         <div className="container mx-auto text-center relative z-10">
+          {/* Title Label */}
           <div className="inline-block mb-4 sm:mb-6">
             <div className="px-3 sm:px-4 py-1.5 sm:py-2 bg-accent/10 border-2 border-accent rounded-full backdrop-blur-sm animate-glow-pulse">
               <span className="text-accent font-bold text-xs sm:text-sm">
@@ -75,6 +87,7 @@ const Index = () => {
             </div>
           </div>
 
+          {/* Headline */}
           <h1 className="text-3xl sm:text-5xl md:text-7xl font-black mb-4 sm:mb-6 leading-tight px-4">
             <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent glow-text">
               Bit Legends
@@ -83,12 +96,14 @@ const Index = () => {
             <span className="text-foreground">16-Bit Fighting Collection</span>
           </h1>
 
+          {/* Description */}
           <p className="text-base sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-6 sm:mb-8 px-4">
             Enter the ring and master the art of 16-bit combat. Classic
             fighters, iconic stages, and timeless duels reborn for the modern
             age.
           </p>
 
+          {/* Feature Badges */}
           <div className="flex flex-wrap justify-center gap-2 sm:gap-4 text-xs sm:text-sm text-muted-foreground px-4">
             <div className="flex items-center gap-2 px-3 sm:px-4 py-2 bg-card/50 rounded-lg border border-border">
               <div className="h-2 w-2 rounded-full bg-accent animate-pulse" />
@@ -160,6 +175,7 @@ const Index = () => {
           </div>
         </div>
 
+        {/* Games Grid */}
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3 sm:gap-6 animate-slide-up">
           {paginatedGames.map((game, index) => (
             <div
@@ -172,6 +188,7 @@ const Index = () => {
           ))}
         </div>
 
+        {/* Pagination */}
         {totalPages > 1 && (
           <div className="mt-8 sm:mt-12">
             <Pagination>

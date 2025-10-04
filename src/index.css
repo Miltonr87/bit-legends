@@ -6,6 +6,15 @@
 All colors MUST be HSL.
 */
 
+@keyframes parallaxScroll {
+  from {
+    background-position-x: 0;
+  }
+  to {
+    background-position-x: -2048px; /* adjust if image width differs */
+  }
+}
+
 @layer base {
   :root {
     --background: 220 20% 8%;
@@ -37,19 +46,31 @@ All colors MUST be HSL.
     --ring: 180 100% 50%;
 
     --radius: 0.75rem;
-    
+
     --sega-blue: 211 100% 43%;
     --sega-red: 0 100% 50%;
     --cyber-cyan: 180 100% 50%;
     --neon-pink: 330 100% 60%;
-    
-    --gradient-sega: linear-gradient(135deg, hsl(211 100% 43%), hsl(180 100% 50%));
-    --gradient-retro: linear-gradient(180deg, hsl(220 20% 10%), hsl(220 20% 8%));
-    --gradient-card: linear-gradient(145deg, hsl(220 18% 14%), hsl(220 18% 10%));
-    
+
+    --gradient-sega: linear-gradient(
+      135deg,
+      hsl(211 100% 43%),
+      hsl(180 100% 50%)
+    );
+    --gradient-retro: linear-gradient(
+      180deg,
+      hsl(220 20% 10%),
+      hsl(220 20% 8%)
+    );
+    --gradient-card: linear-gradient(
+      145deg,
+      hsl(220 18% 14%),
+      hsl(220 18% 10%)
+    );
+
     --shadow-glow: 0 0 30px hsl(180 100% 50% / 0.3);
     --shadow-card: 0 8px 32px hsl(0 0% 0% / 0.4);
-    
+
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
     --sidebar-background: 0 0% 98%;
@@ -82,7 +103,8 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+      sans-serif;
   }
 }
 
@@ -96,22 +118,22 @@ All colors MUST be HSL.
     background-size: 100% 4px;
     animation: scanline 8s linear infinite;
   }
-  
+
   .glow-text {
     text-shadow: 0 0 10px hsl(var(--cyber-cyan) / 0.5),
-                 0 0 20px hsl(var(--cyber-cyan) / 0.3);
+      0 0 20px hsl(var(--cyber-cyan) / 0.3);
   }
-  
+
   .retro-border {
     border: 2px solid hsl(var(--cyber-cyan));
     box-shadow: 0 0 15px hsl(var(--cyber-cyan) / 0.4),
-                inset 0 0 15px hsl(var(--cyber-cyan) / 0.1);
+      inset 0 0 15px hsl(var(--cyber-cyan) / 0.1);
   }
-  
+
   .game-card-hover {
     transition: var(--transition-smooth);
   }
-  
+
   .game-card-hover:hover {
     transform: translateY(-8px);
     box-shadow: var(--shadow-glow);
