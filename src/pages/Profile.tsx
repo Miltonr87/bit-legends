@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useGoogleLogin } from '@react-oauth/google';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Header } from '@/components/Header';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -15,6 +17,9 @@ import {
   LogIn,
   LogOut,
   Mail,
+  PlusCircle,
+  Play,
+  Square,
 } from 'lucide-react';
 import { toast } from 'sonner';
 import {
@@ -40,7 +45,7 @@ interface GameHistory {
   id: string;
   game_title: string;
   played_at: string;
-  time_spent: number;
+  time_spent: number; // in seconds
 }
 
 export default function Profile() {
@@ -50,7 +55,11 @@ export default function Profile() {
   const [emailInput, setEmailInput] = useState('');
   const [uploading, setUploading] = useState(false);
   const [gameHistory, setGameHistory] = useState<GameHistory[]>([]);
+  const [useEmail, setUseEmail] = useState(false);
+  const [activeGame, setActiveGame] = useState<string | null>(null);
+  const [startTime, setStartTime] = useState<number | null>(null);
 
+  // --- Load ---
   useEffect(() => {
     const savedUser = localStorage.getItem('bitlegends_user');
     const savedHistory = localStorage.getItem('bitlegends_history');
@@ -58,29 +67,40 @@ export default function Profile() {
     if (savedHistory) setGameHistory(JSON.parse(savedHistory));
   }, []);
 
-  // --- Google Login Simulation ---
-  const handleGoogleLogin = async () => {
-    try {
-      toast('Connecting to Google...', { description: 'Please wait' });
+  // --- Save ---
+  useEffect(() => {
+    localStorage.setItem('bitlegends_history', JSON.stringify(gameHistory));
+  }, [gameHistory]);
 
-      // Simulate real Google login (use your real OAuth flow later)
-      setTimeout(() => {
+  // ✅ Google Login
+  const googleLogin = useGoogleLogin({
+    onSuccess: async (tokenResponse) => {
+      try {
+        toast('Logging in with Google...', { description: 'Please wait' });
+        const res = await fetch(
+          'https://www.googleapis.com/oauth2/v3/userinfo',
+          {
+            headers: { Authorization: `Bearer ${tokenResponse.access_token}` },
+          }
+        );
+        const profile = await res.json();
+
         const googleUser: Profile = {
-          username: 'Milton Rodrigues',
-          email: 'miltonr87@gmail.com',
-          avatar_url:
-            'https://lh3.googleusercontent.com/a-/AOh14Gg8EXAMPLEIMAGE=s96-c',
+          username: profile.name || profile.given_name || 'Player',
+          email: profile.email,
+          avatar_url: profile.picture,
           provider: 'google',
         };
+
         localStorage.setItem('bitlegends_user', JSON.stringify(googleUser));
         setUser(googleUser);
         toast.success(`Welcome, ${googleUser.username}!`);
-      }, 1200);
-    } catch (err) {
-      toast.error('Google login failed');
-      console.error(err);
-    }
-  };
+      } catch {
+        toast.error('Google login failed');
+      }
+    },
+    onError: () => toast.error('Google login failed'),
+  });
 
   // --- Local Email Login ---
   const handleLocalLogin = () => {
@@ -88,14 +108,12 @@ export default function Profile() {
       toast.error('Enter a valid email address');
       return;
     }
-
     const localUser: Profile = {
       username: emailInput.split('@')[0],
       email: emailInput,
       avatar_url: null,
       provider: 'local',
     };
-
     localStorage.setItem('bitlegends_user', JSON.stringify(localUser));
     setUser(localUser);
     toast.success(`Welcome, ${localUser.username}!`);
@@ -108,6 +126,7 @@ export default function Profile() {
     navigate('/');
   };
 
+  // --- Avatar Upload ---
   const uploadAvatar = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (!e.target.files?.length || !user) return;
     setUploading(true);
@@ -123,6 +142,7 @@ export default function Profile() {
     reader.readAsDataURL(file);
   };
 
+  // --- Update username ---
   const updateProfile = () => {
     if (!user) return;
     const updated = { ...user, username };
@@ -131,10 +151,46 @@ export default function Profile() {
     toast.success('Profile updated successfully!');
   };
 
+  // --- Game Tracking ---
+  const startGameSession = (gameId: string) => {
+    if (activeGame) {
+      toast.error('You are already playing another game.');
+      return;
+    }
+    setActiveGame(gameId);
+    setStartTime(Date.now());
+    toast('Game session started!', {
+      description: 'Click stop to record time.',
+    });
+  };
+
+  const stopGameSession = (gameId: string) => {
+    if (!activeGame || !startTime) return;
+    const elapsed = Math.floor((Date.now() - startTime) / 1000); // in seconds
+    setGameHistory((prev) =>
+      prev.map((g) =>
+        g.id === gameId ? { ...g, time_spent: g.time_spent + elapsed } : g
+      )
+    );
+    setActiveGame(null);
+    setStartTime(null);
+    toast.success(`Session saved (${formatTime(elapsed)})`);
+  };
+
+  const addGameHistory = () => {
+    const newGame: GameHistory = {
+      id: crypto.randomUUID(),
+      game_title: `Game ${gameHistory.length + 1}`,
+      played_at: new Date().toISOString(),
+      time_spent: 0,
+    };
+    setGameHistory([newGame, ...gameHistory]);
+    toast.success(`Added ${newGame.game_title}`);
+  };
+
   const deleteGameHistory = (id: string) => {
     const updated = gameHistory.filter((g) => g.id !== id);
     setGameHistory(updated);
-    localStorage.setItem('bitlegends_history', JSON.stringify(updated));
     toast.success('Game history deleted');
   };
 
@@ -147,7 +203,7 @@ export default function Profile() {
     return `${hours}h ${remainingMinutes}m`;
   };
 
-  // --- Not Logged In ---
+  // --- LOGIN SCREEN ---
   if (!user) {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center text-center">
@@ -156,42 +212,79 @@ export default function Profile() {
           <User className="h-16 w-16 mx-auto text-accent mb-2" />
           <h2 className="text-3xl font-bold mb-2">Welcome to BitLegends</h2>
           <p className="text-muted-foreground mb-6 max-w-md mx-auto">
-            Sign in with Google or any custom email to save your progress,
-            avatar, and game history.
+            Sign in with Google or use your email to save progress, avatar, and
+            game history.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              onClick={handleGoogleLogin}
-              className="bg-gradient-to-r from-primary to-accent text-lg"
-            >
-              <LogIn className="mr-2 h-5 w-5" /> Sign in with Google
-            </Button>
-
-            <div className="flex items-center gap-2">
-              <Input
-                placeholder="Enter your email"
-                value={emailInput}
-                onChange={(e) => setEmailInput(e.target.value)}
-                className="w-56"
-              />
-              <Button onClick={handleLocalLogin} variant="outline">
-                <Mail className="h-4 w-4 mr-1" /> Login
+          <div className="flex justify-center mb-6">
+            {!useEmail ? (
+              <Button
+                onClick={() => setUseEmail(true)}
+                variant="outline"
+                className="text-sm"
+              >
+                Use Email Instead
               </Button>
-            </div>
+            ) : (
+              <Button
+                onClick={() => setUseEmail(false)}
+                variant="outline"
+                className="text-sm"
+              >
+                Use Google Instead
+              </Button>
+            )}
           </div>
+
+          <AnimatePresence mode="wait">
+            {!useEmail ? (
+              <motion.div
+                key="google"
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                transition={{ duration: 0.3 }}
+              >
+                <Button
+                  onClick={() => googleLogin()}
+                  className="bg-gradient-to-r from-primary to-accent text-lg"
+                >
+                  <LogIn className="mr-2 h-5 w-5" /> Sign in with Google
+                </Button>
+              </motion.div>
+            ) : (
+              <motion.div
+                key="email"
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                transition={{ duration: 0.3 }}
+                className="flex items-center justify-center gap-2"
+              >
+                <Input
+                  placeholder="Enter your email"
+                  value={emailInput}
+                  onChange={(e) => setEmailInput(e.target.value)}
+                  className="w-56"
+                />
+                <Button onClick={handleLocalLogin} variant="outline">
+                  <Mail className="h-4 w-4 mr-1" /> Login
+                </Button>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </Card>
       </div>
     );
   }
 
-  // --- Logged In ---
+  // --- PROFILE SCREEN ---
   return (
     <div className="min-h-screen">
       <Header />
       <div className="container mx-auto px-4 py-12">
         <div className="grid md:grid-cols-3 gap-8">
-          {/* Profile Card */}
+          {/* Profile */}
           <Card className="p-6 border-2 border-accent/30 bg-card">
             <div className="flex flex-col items-center space-y-4">
               <div className="relative group">
@@ -202,7 +295,6 @@ export default function Profile() {
                   </AvatarFallback>
                 </Avatar>
 
-                {/* Avatar upload always enabled */}
                 <label
                   htmlFor="avatar-upload"
                   className="absolute inset-0 flex items-center justify-center bg-black/50 rounded-full opacity-0 group-hover:opacity-100 cursor-pointer transition-opacity"
@@ -225,7 +317,6 @@ export default function Profile() {
                 </h2>
                 <p className="text-sm text-muted-foreground">{user.email}</p>
 
-                {/* Rename allowed even for Google users */}
                 <Label htmlFor="username">Change Username</Label>
                 <Input
                   id="username"
@@ -254,9 +345,17 @@ export default function Profile() {
 
           {/* Game History */}
           <Card className="md:col-span-2 p-6 border-2 border-accent/30 bg-card">
-            <div className="flex items-center gap-3 mb-6">
-              <Clock className="h-6 w-6 text-accent" />
-              <h2 className="text-2xl font-bold">Recent Games</h2>
+            <div className="flex items-center justify-between mb-6">
+              <div className="flex items-center gap-3">
+                <Clock className="h-6 w-6 text-accent" />
+                <h2 className="text-2xl font-bold">Recent Games</h2>
+              </div>
+              <Button
+                onClick={addGameHistory}
+                className="flex items-center gap-2"
+              >
+                <PlusCircle className="h-4 w-4" /> Add Demo Game
+              </Button>
             </div>
 
             {gameHistory.length === 0 ? (
@@ -284,11 +383,26 @@ export default function Profile() {
                       </div>
                     </div>
                     <div className="flex items-center gap-3">
-                      {game.time_spent > 0 && (
-                        <div className="flex items-center gap-2 text-sm text-accent">
-                          <Clock className="h-4 w-4" />
-                          <span>{formatTime(game.time_spent)}</span>
-                        </div>
+                      <div className="flex items-center gap-2 text-sm text-accent">
+                        <Clock className="h-4 w-4" />
+                        <span>{formatTime(game.time_spent)}</span>
+                      </div>
+                      {activeGame === game.id ? (
+                        <Button
+                          size="icon"
+                          onClick={() => stopGameSession(game.id)}
+                          className="bg-destructive hover:bg-destructive/90"
+                        >
+                          <Square className="h-4 w-4" />
+                        </Button>
+                      ) : (
+                        <Button
+                          size="icon"
+                          onClick={() => startGameSession(game.id)}
+                          className="bg-primary hover:bg-primary/90"
+                        >
+                          <Play className="h-4 w-4" />
+                        </Button>
                       )}
                       <AlertDialog>
                         <AlertDialogTrigger asChild>
@@ -307,7 +421,7 @@ export default function Profile() {
                             </AlertDialogTitle>
                             <AlertDialogDescription>
                               This will remove "{game.game_title}" from your
-                              history. This action cannot be undone.
+                              history.
                             </AlertDialogDescription>
                           </AlertDialogHeader>
                           <AlertDialogFooter>
