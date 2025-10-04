@@ -21,13 +21,21 @@ const Index = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
 
+  // 🔍 Filter games
   let filteredGames = games;
 
-  // Filter by series
+  // Filter by genre or folder
   if (selectedSeries !== 'All Games') {
-    filteredGames = filteredGames.filter((game) =>
-      game.title.includes(selectedSeries)
-    );
+    filteredGames = filteredGames.filter((game) => {
+      const normalizedGenre = game.genre.toLowerCase();
+      const normalizedFolder = game.folder.toLowerCase();
+      const normalizedFilter = selectedSeries.toLowerCase();
+
+      return (
+        normalizedGenre.includes(normalizedFilter) ||
+        normalizedFolder.includes(normalizedFilter)
+      );
+    });
   }
 
   // Filter by search query
@@ -40,6 +48,7 @@ const Index = () => {
     );
   }
 
+  // Pagination
   const totalPages = Math.ceil(filteredGames.length / GAMES_PER_PAGE);
   const startIndex = (currentPage - 1) * GAMES_PER_PAGE;
   const paginatedGames = filteredGames.slice(
@@ -47,6 +56,7 @@ const Index = () => {
     startIndex + GAMES_PER_PAGE
   );
 
+  // Handlers
   const handleSeriesChange = (series: string) => {
     setSelectedSeries(series);
     setCurrentPage(1);
@@ -78,11 +88,11 @@ const Index = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-accent/5 via-transparent to-transparent" />
 
         <div className="container mx-auto text-center relative z-10">
-          {/* Title Label */}
+          {/* Label */}
           <div className="inline-block mb-4 sm:mb-6">
             <div className="px-3 sm:px-4 py-1.5 sm:py-2 bg-accent/10 border-2 border-accent rounded-full backdrop-blur-sm animate-glow-pulse">
               <span className="text-accent font-bold text-xs sm:text-sm">
-                16-BIT LEGENDS
+                CLASSICS
               </span>
             </div>
           </div>
@@ -125,6 +135,7 @@ const Index = () => {
       {/* Games Grid */}
       <section className="container mx-auto px-4 py-8 sm:py-12">
         <div className="mb-6 sm:mb-8">
+          {/* Header */}
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4 sm:mb-6 gap-3">
             <div>
               <h2 className="text-2xl sm:text-3xl font-bold mb-2">
@@ -150,11 +161,8 @@ const Index = () => {
             </div>
           </div>
 
-          {/* Series Filter */}
+          {/* Series Filter Buttons */}
           <div>
-            <h3 className="text-xs sm:text-sm font-semibold text-muted-foreground mb-3">
-              Classic Series
-            </h3>
             <div className="flex flex-wrap gap-2 sm:gap-3">
               {seriesFilters.map((series) => (
                 <Button
@@ -241,18 +249,18 @@ const Index = () => {
       <footer className="border-t border-border/50 mt-12 sm:mt-20 py-6 sm:py-8">
         <div className="container mx-auto px-4 text-center">
           <p className="text-muted-foreground text-xs sm:text-sm">
-            BitLegends • Powered by{' '}
+            BitLegends •{' '}
             <a
               href="https://playminigames.net"
               target="_blank"
               rel="noopener noreferrer"
               className="text-accent hover:underline"
             >
-              PlayMiniGames
+              Milton Rodrigues - 2025
             </a>
           </p>
           <p className="text-muted-foreground/60 text-xs mt-2">
-            All games are property of their respective owners
+            All games are property of their respective owners!
           </p>
         </div>
       </footer>
