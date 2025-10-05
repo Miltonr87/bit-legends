@@ -92,7 +92,7 @@ const Index = () => {
           <div className="inline-block mb-4 sm:mb-6">
             <div className="px-3 sm:px-4 py-1.5 sm:py-2 bg-accent/10 border-2 border-accent rounded-full backdrop-blur-sm animate-glow-pulse">
               <span className="text-accent font-bold text-xs sm:text-sm">
-                CLASSICS
+                ARCADE
               </span>
             </div>
           </div>

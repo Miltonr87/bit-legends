@@ -11,6 +11,7 @@ import {
   DialogTrigger,
 } from '@/components/ui/dialog';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
+import { motion } from 'framer-motion';
 
 export const Header = () => {
   const [aboutOpen, setAboutOpen] = useState(false);
@@ -20,7 +21,6 @@ export const Header = () => {
   } | null>(null);
 
   useEffect(() => {
-    // Load user data from localStorage (set by /profile)
     const savedUser = localStorage.getItem('bitlegends_user');
     if (savedUser) {
       try {
@@ -40,7 +40,7 @@ export const Header = () => {
             <Gamepad2 className="h-6 w-6 sm:h-8 sm:w-8 text-accent group-hover:text-accent/80 transition-colors" />
             <div className="absolute inset-0 blur-xl bg-accent/30 group-hover:bg-accent/40 transition-all" />
           </div>
-          <h1 className="text-lg sm:text-2xl font-bold glow-text bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">
+          <h1 className="text-lg sm:text-2xl font-bold bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">
             BitLegends
           </h1>
         </Link>
@@ -59,41 +59,68 @@ export const Header = () => {
                 <span className="hidden sm:inline">About</span>
               </Button>
             </DialogTrigger>
-            <DialogContent className="sm:max-w-[500px] max-h-[90vh] overflow-y-auto">
+
+            <DialogContent className="sm:max-w-[500px] max-h-[90vh] overflow-y-auto bg-gradient-to-b from-background to-secondary/30 border border-border/50 shadow-lg">
               <DialogHeader>
-                <DialogTitle className="text-2xl glow-text">
+                <DialogTitle className="text-2xl font-bold text-center text-primary mb-4">
                   About BitLegends
                 </DialogTitle>
-                <DialogDescription className="text-base pt-4 space-y-4">
+                <DialogDescription className="text-base text-muted-foreground space-y-5 leading-relaxed">
                   <p>
-                    BitLegends is a retro gaming platform where you can play
-                    classic arcade and console games right in your browser.
-                    Relive the golden age of gaming!
+                    <strong className="text-primary">BitLegends</strong> is a
+                    retro-inspired gaming platform that revives the nostalgia of
+                    arcade and console classics — all playable directly in your
+                    browser. Built for dreamers who grew up with 8-bit/16-bit
+                    era of console adventures.
                   </p>
 
-                  <div className="pt-2">
-                    <h4 className="font-semibold text-accent mb-2">
+                  <p>
+                    Every detail is designed with love for the golden age of
+                    gaming, while leveraging modern web technology for speed,
+                    style, and immersion.
+                  </p>
+
+                  <div>
+                    <h4 className="font-semibold text-accent mb-3">
                       Tech Stack:
                     </h4>
-                    <ul className="list-disc list-inside space-y-1 text-muted-foreground">
-                      <li>React 18 with TypeScript</li>
-                      <li>Vite for blazing fast builds</li>
-                      <li>Tailwind CSS for styling</li>
-                      <li>Shadcn UI components</li>
-                      <li>React Router for navigation</li>
-                      <li>EmulatorJS for games</li>
-                    </ul>
+                    <div className="flex flex-wrap gap-2">
+                      {[
+                        'React 18',
+                        'TypeScript',
+                        'Vite',
+                        'Tailwind CSS',
+                        'Shadcn UI',
+                        'Framer Motion',
+                        'Radix UI',
+                        'html2canvas',
+                        'Lucide React',
+                        'EmulatorJS',
+                      ].map((tech) => (
+                        <motion.span
+                          key={tech}
+                          className="px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium cursor-default"
+                          whileHover={{ scale: 1.1, rotate: 2 }}
+                          transition={{ type: 'spring', stiffness: 200 }}
+                        >
+                          {tech}
+                        </motion.span>
+                      ))}
+                    </div>
                   </div>
 
-                  <div className="pt-2">
-                    <h4 className="font-semibold text-accent mb-2">
-                      Features:
-                    </h4>
-                    <ul className="list-disc list-inside space-y-1 text-muted-foreground">
-                      <li>Play classic games instantly</li>
-                      <li>Track your gameplay history locally</li>
-                      <li>Fully responsive design</li>
-                    </ul>
+                  <div className="pt-4 border-t border-border/40 text-center">
+                    <p className="text-sm">
+                      Created by{' '}
+                      <a
+                        href="https://miltonr87.vercel.app/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-accent font-medium hover:underline hover:text-primary transition-colors"
+                      >
+                        Milton Rodrigues
+                      </a>
+                    </p>
                   </div>
                 </DialogDescription>
               </DialogHeader>
