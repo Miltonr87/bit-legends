@@ -10,7 +10,6 @@ import {
   Gamepad2,
   Star,
   Share2,
-  Instagram,
   MessageCircle,
 } from 'lucide-react';
 import { Card } from '@/components/ui/card';
@@ -24,7 +23,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
-import { useDisplayDevice } from '@/hooks/useDisplayDevice'; // 👈 your hook
+import { useDisplayDevice } from '@/hooks/useDisplayDevice';
 
 const Game = () => {
   const { id } = useParams();
@@ -60,41 +59,6 @@ const Game = () => {
         rating !== 1 ? 's' : ''
       }`,
     });
-  };
-
-  const handleInstagramShare = async () => {
-    if (!gameIframeRef.current) return;
-    try {
-      toast({
-        title: 'Capturing screenshot...',
-        description: 'Please wait a moment',
-      });
-      const canvas = await html2canvas(gameIframeRef.current, {
-        useCORS: true,
-        allowTaint: true,
-        backgroundColor: '#000000',
-      });
-      canvas.toBlob((blob) => {
-        if (blob) {
-          const url = URL.createObjectURL(blob);
-          const link = document.createElement('a');
-          link.href = url;
-          link.download = `${game?.title || 'game'}-screenshot.png`;
-          link.click();
-          URL.revokeObjectURL(url);
-          toast({
-            title: 'Screenshot saved!',
-            description: 'Share it on Instagram',
-          });
-        }
-      });
-    } catch {
-      toast({
-        title: 'Error',
-        description: 'Failed to capture screenshot',
-        variant: 'destructive',
-      });
-    }
   };
 
   const handleWhatsAppShare = () => {
@@ -203,10 +167,6 @@ const Game = () => {
                         </Button>
                       </DropdownMenuTrigger>
                       <DropdownMenuContent align="end">
-                        <DropdownMenuItem onClick={handleInstagramShare}>
-                          <Instagram className="mr-2 h-4 w-4" />
-                          Share to Instagram
-                        </DropdownMenuItem>
                         <DropdownMenuItem onClick={handleWhatsAppShare}>
                           <MessageCircle className="mr-2 h-4 w-4" />
                           Share to WhatsApp
@@ -299,7 +259,6 @@ const Game = () => {
                 </div>
               </div>
             </Card>
-
             <Card className="p-6 border-2 border-primary/30 bg-gradient-to-br from-primary/10 to-transparent">
               <h3 className="font-bold text-lg mb-3 text-primary">Platform</h3>
               <div className="flex items-center gap-3">
@@ -307,12 +266,13 @@ const Game = () => {
                   <Gamepad2 className="h-6 w-6 text-primary" />
                 </div>
                 <div>
-                  <p className="font-bold text-primary">Sega Genesis</p>
-                  <p className="text-xs text-muted-foreground">Mega Drive</p>
+                  <p className="font-bold text-primary">{game.platform}</p>
+                  <p className="text-xs text-muted-foreground">
+                    {game.publisher}
+                  </p>
                 </div>
               </div>
             </Card>
-
             {!isMobile && <ControllerSetup />}
           </div>
         </div>

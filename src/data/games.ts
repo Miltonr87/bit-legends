@@ -13,6 +13,8 @@ export interface Game {
   players: string;
   developer: string;
   coverImage: string;
+  platform: string;
+  embedUrl?: string;
 }
 
 export const games: Game[] = [
@@ -33,6 +35,7 @@ export const games: Game[] = [
     players: "1-2 Players",
     developer: "Sega",
     coverImage: "/assets/covers/sor1.png",
+    platform: "Sega Genesis",
   },
   {
     id: "sor2",
@@ -50,6 +53,7 @@ export const games: Game[] = [
     players: "1-2 Players",
     developer: "Sega",
     coverImage: "/assets/covers/sor2.png",
+    platform: "Sega Genesis",
   },
   {
     id: "sor3",
@@ -67,6 +71,7 @@ export const games: Game[] = [
     players: "1-2 Players",
     developer: "Sega",
     coverImage: "/assets/covers/sor3.png",
+    platform: "Sega Genesis",
   },
 
   {
@@ -86,9 +91,10 @@ export const games: Game[] = [
     developer: "Capcom",
     coverImage: "/assets/covers/the-king-of-dragons.png",
     embedUrl: "https://www.retrogames.cc/embed/10347-the-king-of-dragons.html",
+    platform: "Arcade",
   },
 
-  // Mortal Kombat Series (SNES / Arcade)
+  // Mortal Kombat Series (Super Nintendo)
   {
     id: "mk1",
     title: "Mortal Kombat",
@@ -104,8 +110,8 @@ export const games: Game[] = [
       "The first Mortal Kombat game that started the legendary fighting franchise with brutal kombat.",
     players: "1-2 Players",
     developer: "Midway",
-    coverImage:
-      "/assets/covers/Mortal_Kombat_cover.jpeg",
+    coverImage: "/assets/covers/Mortal_Kombat_cover.jpeg",
+    platform: "Super Nintendo",
   },
   {
     id: "mk2",
@@ -122,8 +128,8 @@ export const games: Game[] = [
       "The second installment with improved graphics and new brutal fatalities that shocked the world.",
     players: "1-2 Players",
     developer: "Midway",
-    coverImage:
-      "/assets/covers/Mortal_Kombat_2.png",
+    coverImage: "/assets/covers/Mortal_Kombat_2.png",
+    platform: "Super Nintendo",
   },
   {
     id: "mk3",
@@ -140,8 +146,8 @@ export const games: Game[] = [
       "Introducing run button and combination system to the series with even more brutal combat.",
     players: "1-2 Players",
     developer: "Midway",
-    coverImage:
-      "/assets/covers/Mortal_Kombat_3_cover.jpeg",
+    coverImage: "/assets/covers/Mortal_Kombat_3_cover.jpeg",
+    platform: "Super Nintendo",
   },
   {
     id: "umk3",
@@ -158,8 +164,8 @@ export const games: Game[] = [
       "The ultimate version with more characters and refined gameplay mechanics.",
     players: "1-2 Players",
     developer: "Midway",
-    coverImage:
-      "/assets/covers/Ultimate_MK3.png",
+    coverImage: "/assets/covers/Ultimate_MK3.png",
+    platform: "Super Nintendo",
   },
 
   // Street Fighter Series (SNES)
@@ -178,8 +184,8 @@ export const games: Game[] = [
       "The game that revolutionized fighting games forever with 8 world warriors and legendary gameplay.",
     players: "1-2 Players",
     developer: "Capcom",
-    coverImage:
-      "/assets/covers/street_fighter_2.png",
+    coverImage: "/assets/covers/street_fighter_2.png",
+    platform: "Super Nintendo",
   },
   {
     id: "sf2turbo",
@@ -196,8 +202,8 @@ export const games: Game[] = [
       "Faster gameplay and new special moves for all characters in this enhanced version.",
     players: "1-2 Players",
     developer: "Capcom",
-    coverImage:
-      "/assets/covers/street_fighter_2_turbo.jpeg",
+    coverImage: "/assets/covers/street_fighter_2_turbo.jpeg",
+    platform: "Super Nintendo",
   },
   {
     id: "ssf2",
@@ -214,8 +220,8 @@ export const games: Game[] = [
       "Four new fighters join the World Warriors tournament in this enhanced edition.",
     players: "1-2 Players",
     developer: "Capcom",
-    coverImage:
-      "/assets/covers/street2_new_challenge.png",
+    coverImage: "/assets/covers/street2_new_challenge.png",
+    platform: "Super Nintendo",
   },
   {
     id: "sfa2",
@@ -232,8 +238,8 @@ export const games: Game[] = [
       "The Alpha series brings a new fighting style and new characters to the Street Fighter universe.",
     players: "1-2 Players",
     developer: "Capcom",
-    coverImage:
-      "/assets/covers/sf_aplha_2.jpeg",
+    coverImage: "/assets/covers/sf_aplha_2.jpeg",
+    platform: "Super Nintendo",
   },
 
   // The King of Fighters Series (Neo Geo)
@@ -252,8 +258,8 @@ export const games: Game[] = [
       "The first KOF tournament with legendary 3-on-3 team battles that defined a franchise.",
     players: "1-2 Players",
     developer: "SNK",
-    coverImage:
-      "/assets/covers/kof_94.jpg",
+    coverImage: "/assets/covers/kof_94.jpg",
+    platform: "Neo Geo",
   },
   {
     id: "kof98",
@@ -270,11 +276,11 @@ export const games: Game[] = [
       "Dream Match - No story, just pure fighting perfection. Considered by many the best KOF game.",
     players: "1-2 Players",
     developer: "SNK",
-    coverImage:
-      "/assets/covers/kof_98.jpg",
+    coverImage: "/assets/covers/kof_98.jpg",
+    platform: "Neo Geo",
   },
 
-  // Crossover Fighters (Arcade/MAME)
+  // Marvel Games
   {
     id: "maximumcarnage",
     title: "Spider-Man & Venom: Maximum Carnage",
@@ -287,13 +293,12 @@ export const games: Game[] = [
     characters: ["Spider-Man", "Venom", "Carnage"],
     description: "A red-cartridge classic — fight Carnage through New York!",
     longDescription:
-      "Based on the Marvel comic crossover, Spider-Man and Venom must team up to stop Carnage and his symbiote army. Battle through the streets of New York in this side-scrolling beat 'em up with fluid animations and comic-style cutscenes.",
+      "Based on the Marvel comic crossover, Spider-Man and Venom must team up to stop Carnage and his symbiote army.",
     players: "1 Player",
     developer: "Software Creations",
-    coverImage:
-      "/assets/covers/spider_carnage.jpg",
+    coverImage: "/assets/covers/spider_carnage.jpg",
+    platform: "Genesis",
   },
-
   {
     id: "spidermanxmen",
     title: "Spider-Man and the X-Men in Arcade's Revenge",
@@ -306,11 +311,11 @@ export const games: Game[] = [
     characters: ["Spider-Man", "Wolverine", "Cyclops", "Storm", "Gambit"],
     description: "Marvel heroes trapped in Arcade's deadly games!",
     longDescription:
-      "Spider-Man and the X-Men must survive Arcade’s deadly traps! Play as five heroes across unique action and platforming levels to defeat the villain and escape his twisted amusement park.",
+      "Spider-Man and the X-Men must survive Arcade’s deadly traps! Play as five heroes across unique action and platforming levels.",
     players: "1 Player",
     developer: "Software Creations",
-    coverImage:
-      "/assets/covers/spiderman_xmen.jpg",
+    coverImage: "/assets/covers/spiderman_xmen.jpg",
+    platform: "Genesis",
   },
   {
     id: "warofthegems",
@@ -324,11 +329,11 @@ export const games: Game[] = [
     characters: ["Spider-Man", "Iron Man", "Hulk", "Captain America", "Wolverine"],
     description: "Battle Thanos in the ultimate gem hunt!",
     longDescription:
-      "Join Earth's mightiest heroes in a quest to collect the powerful Infinity Gems before Thanos does. Choose from five Marvel legends and fight through intense platforming and combat stages inspired by the comic saga.",
+      "Join Earth's mightiest heroes in a quest to collect the powerful Infinity Gems before Thanos does.",
     players: "1 Player",
     developer: "Capcom",
-    coverImage:
-      "/assets/covers/marvel_war_gems.jpg",
+    coverImage: "/assets/covers/marvel_war_gems.jpg",
+    platform: "Super Nintendo",
   },
   {
     id: "marvelsuperheroes",
@@ -342,11 +347,12 @@ export const games: Game[] = [
     characters: [],
     description: "Infinity Gem powered battles!",
     longDescription:
-      "Marvel's mightiest heroes and villains clash in this fighting game featuring the powerful Infinity Gems. Master unique abilities and unleash devastating super combos.",
+      "Marvel's mightiest heroes and villains clash in this fighting game featuring the powerful Infinity Gems.",
     players: "1-2 Players",
     developer: "Capcom",
     coverImage: "/assets/covers/marvelheroes.png",
     embedUrl: "https://www.minijogos.com.br/embed/marvel-super-heroes",
+    platform: "Arcade",
   },
   {
     id: "xmvsf",
@@ -363,8 +369,8 @@ export const games: Game[] = [
       "Marvel mutants clash with Capcom's World Warriors in epic tag battles that started the crossover craze.",
     players: "1-2 Players",
     developer: "Capcom",
-    coverImage:
-      "/assets/covers/xmen_vs_street.jpg",
+    coverImage: "/assets/covers/xmen_vs_street.jpg",
+    platform: "Arcade",
   },
   {
     id: "mvc",
@@ -381,8 +387,8 @@ export const games: Game[] = [
       "The ultimate crossover featuring Marvel and Capcom's greatest heroes in explosive 2v2 battles.",
     players: "1-2 Players",
     developer: "Capcom",
-    coverImage:
-      "/assets/covers/marvel_vs_capcom.jpg",
+    coverImage: "/assets/covers/marvel_vs_capcom.jpg",
+    platform: "Arcade",
   },
 ];
 

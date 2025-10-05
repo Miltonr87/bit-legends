@@ -93,13 +93,12 @@ const Index = () => {
               Bit Legends
             </span>
             <br />
-            <span className="text-foreground">16-Bit Fighting Collection</span>
+            <span className="text-foreground">16-Bit Game Collection</span>
           </h1>
           {/* Description */}
           <p className="text-base sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-6 sm:mb-8 px-4">
-            Enter the ring and master the art of 16-bit combat. Classic
-            fighters, iconic stages, and timeless duels reborn for the modern
-            age.
+            Enter the ring and master the art of combat. Classic fighters,
+            iconic stages, and timeless duels reborn for the modern age.
           </p>
           {/* Feature Badges */}
           <div className="flex flex-wrap justify-center gap-2 sm:gap-4 text-xs sm:text-sm text-muted-foreground px-4">
