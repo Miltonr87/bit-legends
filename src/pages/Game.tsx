@@ -234,15 +234,17 @@ const Game = () => {
                   src={cleanedUrl}
                   className="absolute inset-0 w-full h-full rounded-lg"
                   title={game.title}
-                  allowFullScreen
-                  allow="gamepad; fullscreen; autoplay"
+                  allow="gamepad; fullscreen; autoplay; orientation-lock; encrypted-media; picture-in-picture"
+                  allowFullScreen={true}
+                  webkitallowfullscreen="true"
+                  mozallowfullscreen="true"
                   style={{
                     border: 'none',
                     overflow: 'hidden',
                     backgroundColor: 'black',
                   }}
-                  sandbox="allow-scripts allow-same-origin allow-popups allow-forms allow-pointer-lock allow-presentation"
-                />
+                  sandbox="allow-scripts allow-same-origin allow-popups allow-forms allow-pointer-lock allow-presentation allow-modals"
+                ></iframe>
               </div>
               <div className="p-3 sm:p-4 bg-muted/30 border-t border-accent/20">
                 <div className="flex flex-col sm:flex-row sm:flex-wrap gap-2 sm:gap-4 text-xs sm:text-sm">
