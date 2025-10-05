@@ -2,6 +2,11 @@ import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useGoogleLogin } from '@react-oauth/google';
 import { motion, AnimatePresence } from 'framer-motion';
+import {
+  getGameHistory,
+  deleteGameHistory,
+  type GameHistory,
+} from '@/lib/localStorage';
 import { Header } from '@/components/Header';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -17,9 +22,6 @@ import {
   LogIn,
   LogOut,
   Mail,
-  PlusCircle,
-  Play,
-  Square,
 } from 'lucide-react';
 import { toast } from 'sonner';
 import {
@@ -31,48 +33,37 @@ import {
   AlertDialogFooter,
   AlertDialogHeader,
   AlertDialogTitle,
-  AlertDialogTrigger,
 } from '@/components/ui/alert-dialog';
 
-interface Profile {
+interface ProfileData {
   username: string;
   email: string;
   avatar_url: string | null;
   provider?: 'google' | 'local';
 }
 
-interface GameHistory {
-  id: string;
-  game_title: string;
-  played_at: string;
-  time_spent: number; // in seconds
-}
-
 export default function Profile() {
   const navigate = useNavigate();
-  const [user, setUser] = useState<Profile | null>(null);
+  const [user, setUser] = useState<ProfileData | null>(null);
   const [username, setUsername] = useState('');
   const [emailInput, setEmailInput] = useState('');
   const [uploading, setUploading] = useState(false);
   const [gameHistory, setGameHistory] = useState<GameHistory[]>([]);
   const [useEmail, setUseEmail] = useState(false);
-  const [activeGame, setActiveGame] = useState<string | null>(null);
-  const [startTime, setStartTime] = useState<number | null>(null);
+  const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
+  const [historyToDelete, setHistoryToDelete] = useState<string | null>(null);
 
-  // --- Load ---
   useEffect(() => {
     const savedUser = localStorage.getItem('bitlegends_user');
-    const savedHistory = localStorage.getItem('bitlegends_history');
     if (savedUser) setUser(JSON.parse(savedUser));
-    if (savedHistory) setGameHistory(JSON.parse(savedHistory));
+    loadGameHistory();
   }, []);
 
-  // --- Save ---
-  useEffect(() => {
-    localStorage.setItem('bitlegends_history', JSON.stringify(gameHistory));
-  }, [gameHistory]);
+  const loadGameHistory = () => {
+    const history = getGameHistory();
+    setGameHistory(history.slice(0, 10));
+  };
 
-  // ✅ Google Login
   const googleLogin = useGoogleLogin({
     onSuccess: async (tokenResponse) => {
       try {
@@ -85,7 +76,7 @@ export default function Profile() {
         );
         const profile = await res.json();
 
-        const googleUser: Profile = {
+        const googleUser: ProfileData = {
           username: profile.name || profile.given_name || 'Player',
           email: profile.email,
           avatar_url: profile.picture,
@@ -102,13 +93,12 @@ export default function Profile() {
     onError: () => toast.error('Google login failed'),
   });
 
-  // --- Local Email Login ---
   const handleLocalLogin = () => {
     if (!emailInput.includes('@')) {
       toast.error('Enter a valid email address');
       return;
     }
-    const localUser: Profile = {
+    const localUser: ProfileData = {
       username: emailInput.split('@')[0],
       email: emailInput,
       avatar_url: null,
@@ -126,7 +116,6 @@ export default function Profile() {
     navigate('/');
   };
 
-  // --- Avatar Upload ---
   const uploadAvatar = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (!e.target.files?.length || !user) return;
     setUploading(true);
@@ -142,7 +131,6 @@ export default function Profile() {
     reader.readAsDataURL(file);
   };
 
-  // --- Update username ---
   const updateProfile = () => {
     if (!user) return;
     const updated = { ...user, username };
@@ -151,56 +139,26 @@ export default function Profile() {
     toast.success('Profile updated successfully!');
   };
 
-  // --- Game Tracking ---
-  const startGameSession = (gameId: string) => {
-    if (activeGame) {
-      toast.error('You are already playing another game.');
-      return;
+  const formatTime = (seconds: number): string => {
+    const hours = Math.floor(seconds / 3600);
+    const minutes = Math.floor((seconds % 3600) / 60);
+    if (hours > 0) return `${hours}h ${minutes}m`;
+    return `${minutes}m`;
+  };
+
+  const handleDeleteHistory = (id: string) => {
+    setHistoryToDelete(id);
+    setDeleteDialogOpen(true);
+  };
+
+  const confirmDelete = () => {
+    if (historyToDelete) {
+      deleteGameHistory(historyToDelete);
+      loadGameHistory();
+      toast.success('Game history deleted');
     }
-    setActiveGame(gameId);
-    setStartTime(Date.now());
-    toast('Game session started!', {
-      description: 'Click stop to record time.',
-    });
-  };
-
-  const stopGameSession = (gameId: string) => {
-    if (!activeGame || !startTime) return;
-    const elapsed = Math.floor((Date.now() - startTime) / 1000); // in seconds
-    setGameHistory((prev) =>
-      prev.map((g) =>
-        g.id === gameId ? { ...g, time_spent: g.time_spent + elapsed } : g
-      )
-    );
-    setActiveGame(null);
-    setStartTime(null);
-    toast.success(`Session saved (${formatTime(elapsed)})`);
-  };
-
-  const addGameHistory = () => {
-    const newGame: GameHistory = {
-      id: crypto.randomUUID(),
-      game_title: `Game ${gameHistory.length + 1}`,
-      played_at: new Date().toISOString(),
-      time_spent: 0,
-    };
-    setGameHistory([newGame, ...gameHistory]);
-    toast.success(`Added ${newGame.game_title}`);
-  };
-
-  const deleteGameHistory = (id: string) => {
-    const updated = gameHistory.filter((g) => g.id !== id);
-    setGameHistory(updated);
-    toast.success('Game history deleted');
-  };
-
-  const formatTime = (seconds: number) => {
-    if (seconds < 60) return `${seconds}s`;
-    const minutes = Math.floor(seconds / 60);
-    if (minutes < 60) return `${minutes}m`;
-    const hours = Math.floor(minutes / 60);
-    const remainingMinutes = minutes % 60;
-    return `${hours}h ${remainingMinutes}m`;
+    setDeleteDialogOpen(false);
+    setHistoryToDelete(null);
   };
 
   // --- LOGIN SCREEN ---
@@ -215,7 +173,6 @@ export default function Profile() {
             Sign in with Google or use your email to save progress, avatar, and
             game history.
           </p>
-
           <div className="flex justify-center mb-6">
             {!useEmail ? (
               <Button
@@ -235,7 +192,6 @@ export default function Profile() {
               </Button>
             )}
           </div>
-
           <AnimatePresence mode="wait">
             {!useEmail ? (
               <motion.div
@@ -284,7 +240,7 @@ export default function Profile() {
       <Header />
       <div className="container mx-auto px-4 py-12">
         <div className="grid md:grid-cols-3 gap-8">
-          {/* Profile */}
+          {/* Profile Card */}
           <Card className="p-6 border-2 border-accent/30 bg-card">
             <div className="flex flex-col items-center space-y-4">
               <div className="relative group">
@@ -294,7 +250,6 @@ export default function Profile() {
                     {user.username?.charAt(0).toUpperCase() || <User />}
                   </AvatarFallback>
                 </Avatar>
-
                 <label
                   htmlFor="avatar-upload"
                   className="absolute inset-0 flex items-center justify-center bg-black/50 rounded-full opacity-0 group-hover:opacity-100 cursor-pointer transition-opacity"
@@ -310,7 +265,6 @@ export default function Profile() {
                   className="hidden"
                 />
               </div>
-
               <div className="w-full space-y-3 text-center">
                 <h2 className="text-2xl font-bold text-accent">
                   {user.username}
@@ -331,7 +285,6 @@ export default function Profile() {
                 >
                   Update Profile
                 </Button>
-
                 <Button
                   onClick={handleSignOut}
                   variant="outline"
@@ -342,100 +295,57 @@ export default function Profile() {
               </div>
             </div>
           </Card>
-
           {/* Game History */}
           <Card className="md:col-span-2 p-6 border-2 border-accent/30 bg-card">
-            <div className="flex items-center justify-between mb-6">
-              <div className="flex items-center gap-3">
-                <Clock className="h-6 w-6 text-accent" />
-                <h2 className="text-2xl font-bold">Recent Games</h2>
-              </div>
-              <Button
-                onClick={addGameHistory}
-                className="flex items-center gap-2"
-              >
-                <PlusCircle className="h-4 w-4" /> Add Demo Game
-              </Button>
+            <div className="flex items-center gap-3 mb-6">
+              <Clock className="h-6 w-6 text-accent" />
+              <h2 className="text-2xl font-bold">Game History</h2>
             </div>
-
             {gameHistory.length === 0 ? (
               <div className="text-center py-12">
                 <Gamepad2 className="h-16 w-16 text-muted-foreground mx-auto mb-4" />
                 <p className="text-muted-foreground">
-                  No games played yet. Start playing to build your history!
+                  No games played yet. Start playing to see your history!
                 </p>
               </div>
             ) : (
               <div className="space-y-3">
-                {gameHistory.map((game) => (
+                {gameHistory.map((history) => (
                   <div
-                    key={game.id}
-                    className="flex items-center justify-between p-4 bg-muted/30 rounded-lg hover:bg-muted/50 transition-colors"
+                    key={history.id}
+                    className="flex items-center justify-between p-4 rounded-lg bg-muted/30 border border-accent/20 hover:border-accent/40 transition-colors"
                   >
-                    <div className="flex items-center gap-3">
-                      <Gamepad2 className="h-5 w-5 text-accent" />
-                      <div>
-                        <p className="font-semibold">{game.game_title}</p>
+                    <div className="flex-1">
+                      <p className="font-semibold">{history.gameTitle}</p>
+                      <div className="flex items-center gap-4 mt-1 flex-wrap">
                         <p className="text-sm text-muted-foreground">
-                          {new Date(game.played_at).toLocaleDateString()} •{' '}
-                          {new Date(game.played_at).toLocaleTimeString()}
+                          {new Date(history.playedAt).toLocaleDateString()} •{' '}
+                          <span className="text-accent">
+                            {new Date(history.playedAt).toLocaleTimeString([], {
+                              hour: '2-digit',
+                              minute: '2-digit',
+                            })}
+                          </span>
                         </p>
+                        <div className="flex items-center gap-1 text-sm text-muted-foreground">
+                          <Clock className="w-3 h-3" />
+                          {formatTime(history.timeSpent)}
+                        </div>
+                        {history.score && (
+                          <p className="text-sm text-accent font-semibold">
+                            Score: {history.score.toLocaleString()}
+                          </p>
+                        )}
                       </div>
                     </div>
-                    <div className="flex items-center gap-3">
-                      <div className="flex items-center gap-2 text-sm text-accent">
-                        <Clock className="h-4 w-4" />
-                        <span>{formatTime(game.time_spent)}</span>
-                      </div>
-                      {activeGame === game.id ? (
-                        <Button
-                          size="icon"
-                          onClick={() => stopGameSession(game.id)}
-                          className="bg-destructive hover:bg-destructive/90"
-                        >
-                          <Square className="h-4 w-4" />
-                        </Button>
-                      ) : (
-                        <Button
-                          size="icon"
-                          onClick={() => startGameSession(game.id)}
-                          className="bg-primary hover:bg-primary/90"
-                        >
-                          <Play className="h-4 w-4" />
-                        </Button>
-                      )}
-                      <AlertDialog>
-                        <AlertDialogTrigger asChild>
-                          <Button
-                            variant="ghost"
-                            size="icon"
-                            className="text-destructive hover:text-destructive hover:bg-destructive/10"
-                          >
-                            <Trash2 className="h-4 w-4" />
-                          </Button>
-                        </AlertDialogTrigger>
-                        <AlertDialogContent>
-                          <AlertDialogHeader>
-                            <AlertDialogTitle>
-                              Delete game history?
-                            </AlertDialogTitle>
-                            <AlertDialogDescription>
-                              This will remove "{game.game_title}" from your
-                              history.
-                            </AlertDialogDescription>
-                          </AlertDialogHeader>
-                          <AlertDialogFooter>
-                            <AlertDialogCancel>Cancel</AlertDialogCancel>
-                            <AlertDialogAction
-                              onClick={() => deleteGameHistory(game.id)}
-                              className="bg-destructive hover:bg-destructive/90"
-                            >
-                              Delete
-                            </AlertDialogAction>
-                          </AlertDialogFooter>
-                        </AlertDialogContent>
-                      </AlertDialog>
-                    </div>
+                    <Button
+                      variant="ghost"
+                      size="icon"
+                      onClick={() => handleDeleteHistory(history.id)}
+                      className="hover:bg-destructive/10 hover:text-destructive"
+                    >
+                      <Trash2 className="w-4 h-4" />
+                    </Button>
                   </div>
                 ))}
               </div>
@@ -443,6 +353,22 @@ export default function Profile() {
           </Card>
         </div>
       </div>
+      <AlertDialog open={deleteDialogOpen} onOpenChange={setDeleteDialogOpen}>
+        <AlertDialogContent>
+          <AlertDialogHeader>
+            <AlertDialogTitle>Delete Game History</AlertDialogTitle>
+            <AlertDialogDescription>
+              Are you sure you want to delete this game from your history?
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <AlertDialogCancel>Cancel</AlertDialogCancel>
+            <AlertDialogAction onClick={confirmDelete}>
+              Delete
+            </AlertDialogAction>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
     </div>
   );
 }
