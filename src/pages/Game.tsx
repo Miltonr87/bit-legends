@@ -216,7 +216,7 @@ const Game = () => {
                   isMinijogos ? 'minijogos-embed-clean' : ''
                 }`}
                 style={{
-                  height: 'calc(88vh - 240px)',
+                  height: 'calc(85vh - 240px)',
                   minHeight: '520px',
                 }}
               >
