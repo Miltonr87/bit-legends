@@ -86,18 +86,8 @@ const Index = () => {
         <div className="absolute inset-0 bg-black/70 backdrop-blur-[1px]" />
         <div className="absolute inset-0 scanline pointer-events-none" />
         <div className="absolute inset-0 bg-gradient-to-b from-accent/5 via-transparent to-transparent" />
-
+        {/* Headline */}
         <div className="container mx-auto text-center relative z-10">
-          {/* Label */}
-          <div className="inline-block mb-4 sm:mb-6">
-            <div className="px-3 sm:px-4 py-1.5 sm:py-2 bg-accent/10 border-2 border-accent rounded-full backdrop-blur-sm animate-glow-pulse">
-              <span className="text-accent font-bold text-xs sm:text-sm">
-                ARCADE
-              </span>
-            </div>
-          </div>
-
-          {/* Headline */}
           <h1 className="text-3xl sm:text-5xl md:text-7xl font-black mb-4 sm:mb-6 leading-tight px-4">
             <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent glow-text">
               Bit Legends
@@ -105,14 +95,12 @@ const Index = () => {
             <br />
             <span className="text-foreground">16-Bit Fighting Collection</span>
           </h1>
-
           {/* Description */}
           <p className="text-base sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-6 sm:mb-8 px-4">
             Enter the ring and master the art of 16-bit combat. Classic
             fighters, iconic stages, and timeless duels reborn for the modern
             age.
           </p>
-
           {/* Feature Badges */}
           <div className="flex flex-wrap justify-center gap-2 sm:gap-4 text-xs sm:text-sm text-muted-foreground px-4">
             <div className="flex items-center gap-2 px-3 sm:px-4 py-2 bg-card/50 rounded-lg border border-border">
@@ -131,7 +119,6 @@ const Index = () => {
           </div>
         </div>
       </section>
-
       {/* Games Grid */}
       <section className="container mx-auto px-4 py-8 sm:py-12">
         <div className="mb-6 sm:mb-8">
@@ -146,7 +133,6 @@ const Index = () => {
               </p>
             </div>
           </div>
-
           {/* Search Bar */}
           <div className="mb-4 sm:mb-6">
             <div className="relative max-w-full sm:max-w-md">
@@ -160,7 +146,6 @@ const Index = () => {
               />
             </div>
           </div>
-
           {/* Series Filter Buttons */}
           <div>
             <div className="flex flex-wrap gap-2 sm:gap-3">
@@ -182,7 +167,6 @@ const Index = () => {
             </div>
           </div>
         </div>
-
         {/* Games Grid */}
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3 sm:gap-6 animate-slide-up">
           {paginatedGames.map((game, index) => (
@@ -195,7 +179,6 @@ const Index = () => {
             </div>
           ))}
         </div>
-
         {/* Pagination */}
         {totalPages > 1 && (
           <div className="mt-8 sm:mt-12">
@@ -211,7 +194,6 @@ const Index = () => {
                     }
                   />
                 </PaginationItem>
-
                 {Array.from({ length: Math.min(5, totalPages) }, (_, i) => {
                   const page = i + 1;
                   return (
@@ -226,7 +208,6 @@ const Index = () => {
                     </PaginationItem>
                   );
                 })}
-
                 <PaginationItem>
                   <PaginationNext
                     onClick={() =>
@@ -244,14 +225,13 @@ const Index = () => {
           </div>
         )}
       </section>
-
       {/* Footer */}
       <footer className="border-t border-border/50 mt-12 sm:mt-20 py-6 sm:py-8">
         <div className="container mx-auto px-4 text-center">
           <p className="text-muted-foreground text-xs sm:text-sm">
             BitLegends •{' '}
             <a
-              href="https://playminigames.net"
+              href="https://miltonr87.vercel.app/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-accent hover:underline"
