@@ -314,7 +314,7 @@ export const games: Game[] = [
   },
   {
     id: "warofthegems",
-    title: "Marvel Super Heroes: War of the Gems",
+    title: "Marvel: War of The Gems",
     slug: "marvel-super-heroes-war-of-the-gems-europe",
     embedId: "24033",
     year: 1996,
@@ -368,7 +368,7 @@ export const games: Game[] = [
   },
   {
     id: "mvc",
-    title: "Marvel vs. Capcom - Clash of Super Heroes",
+    title: "Marvel vs. Capcom",
     slug: "marvel-vs-capcom-clash-of-super-heroes",
     embedId: "9123",
     year: 1998,

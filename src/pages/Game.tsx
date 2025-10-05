@@ -8,7 +8,6 @@ import {
   Calendar,
   Users,
   Gamepad2,
-  Info,
   Star,
   Share2,
   Instagram,
@@ -16,6 +15,7 @@ import {
 } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 import html2canvas from 'html2canvas';
+import { ControllerSetup } from '@/components/ControllerSetup';
 import { useToast } from '@/hooks/use-toast';
 import { addGameHistory } from '@/lib/localStorage';
 import {
@@ -24,6 +24,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
+import { useDisplayDevice } from '@/hooks/useDisplayDevice'; // 👈 your hook
 
 const Game = () => {
   const { id } = useParams();
@@ -33,8 +34,8 @@ const Game = () => {
   const startTimeRef = useRef<number>(Date.now());
   const gameIframeRef = useRef<HTMLDivElement>(null);
   const { toast } = useToast();
+  const deviceInfo = useDisplayDevice();
 
-  // ✅ Detect viewport width for mobile layout
   useEffect(() => {
     const checkMobile = () => setIsMobile(window.innerWidth < 640);
     checkMobile();
@@ -148,7 +149,6 @@ const Game = () => {
   return (
     <div className="min-h-screen">
       <Header />
-
       <div className="container mx-auto px-4 py-6 sm:py-8">
         <div className="mb-4 sm:mb-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
           <Link to="/">
@@ -161,9 +161,7 @@ const Game = () => {
             </Button>
           </Link>
         </div>
-
         <div className="grid lg:grid-cols-3 gap-4 sm:gap-8">
-          {/* Game Player */}
           <div className="lg:col-span-2 space-y-4 sm:space-y-6">
             <Card className="overflow-hidden border-2 border-accent/30 bg-card">
               <div className="bg-gradient-to-r from-primary/20 to-accent/20 p-3 sm:p-4 border-b border-accent/30">
@@ -194,7 +192,6 @@ const Game = () => {
                         </button>
                       ))}
                     </div>
-
                     <DropdownMenu>
                       <DropdownMenuTrigger asChild>
                         <Button
@@ -219,74 +216,43 @@ const Game = () => {
                   </div>
                 </div>
               </div>
-              {isMobile ? (
-                // --- MOBILE LAYOUT ---
-                <div
-                  ref={gameIframeRef}
-                  className={`relative w-full max-w-[480px] mx-auto bg-black rounded-lg overflow-hidden ${
-                    isMinijogos ? 'minijogos-embed-clean' : ''
-                  }`}
+              {/* IFRAME */}
+              <div
+                ref={gameIframeRef}
+                className={`relative bg-black rounded-lg overflow-hidden ${
+                  isMinijogos ? 'minijogos-embed-clean' : ''
+                }`}
+                style={
+                  isMobile
+                    ? { height: 'calc(80vh - 240px)' }
+                    : { aspectRatio: '4/3' }
+                }
+              >
+                <iframe
+                  src={cleanedUrl}
+                  className="absolute inset-0 w-full h-full rounded-lg"
+                  title={game.title}
+                  allowFullScreen
+                  allow="gamepad; fullscreen; autoplay"
                   style={{
-                    height: 'calc(80vh - 240px)',
-                    minHeight: '520px',
+                    border: 'none',
+                    overflow: 'hidden',
+                    backgroundColor: 'black',
                   }}
-                >
-                  <iframe
-                    src={cleanedUrl}
-                    className="absolute inset-0 w-full h-full rounded-lg"
-                    title={game.title}
-                    allowFullScreen
-                    allow="gamepad; fullscreen; autoplay"
-                    style={{
-                      border: 'none',
-                      overflow: 'hidden',
-                      backgroundColor: 'black',
-                    }}
-                    sandbox="allow-scripts allow-same-origin allow-popups allow-forms allow-pointer-lock allow-presentation"
-                  />
-                </div>
-              ) : (
-                // --- DESKTOP LAYOUT ---
-                <div
-                  ref={gameIframeRef}
-                  className={`relative bg-black rounded-lg overflow-hidden ${
-                    isMinijogos ? 'minijogos-embed-clean' : ''
-                  }`}
-                  style={{ aspectRatio: '4/3' }}
-                >
-                  <iframe
-                    src={cleanedUrl}
-                    className="absolute inset-0 w-full h-full rounded-lg"
-                    title={game.title}
-                    allowFullScreen
-                    allow="gamepad; fullscreen; autoplay"
-                    style={{
-                      border: 'none',
-                      overflow: 'hidden',
-                      backgroundColor: 'black',
-                    }}
-                    sandbox="allow-scripts allow-same-origin allow-popups allow-forms allow-pointer-lock allow-presentation"
-                  />
-                </div>
-              )}
+                  sandbox="allow-scripts allow-same-origin allow-popups allow-forms allow-pointer-lock allow-presentation"
+                />
+              </div>
               <div className="p-3 sm:p-4 bg-muted/30 border-t border-accent/20">
                 <div className="flex flex-col sm:flex-row sm:flex-wrap gap-2 sm:gap-4 text-xs sm:text-sm">
                   <div className="flex items-center gap-2">
                     <Gamepad2 className="h-4 w-4 text-accent flex-shrink-0" />
                     <span className="text-foreground/80">
-                      Use arrow keys and Z, X, C keys
-                    </span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Info className="h-4 w-4 text-accent flex-shrink-0" />
-                    <span className="text-foreground/80">
-                      Progress autosaves between sessions
+                      Playing On: {deviceInfo}
                     </span>
                   </div>
                 </div>
               </div>
             </Card>
-
             <Card className="p-4 sm:p-6 border-2 border-border bg-card">
               <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-accent">
                 About This Game
@@ -296,8 +262,6 @@ const Game = () => {
               </p>
             </Card>
           </div>
-
-          {/* Sidebar */}
           <div className="space-y-4 sm:space-y-6">
             <Card className="p-4 sm:p-6 border-2 border-accent/30 bg-gradient-to-br from-card to-card/50">
               <div className="space-y-4">
@@ -348,6 +312,8 @@ const Game = () => {
                 </div>
               </div>
             </Card>
+
+            {!isMobile && <ControllerSetup />}
           </div>
         </div>
       </div>
