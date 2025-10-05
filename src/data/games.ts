@@ -99,7 +99,7 @@ export const games: Game[] = [
     id: "mk1",
     title: "Mortal Kombat",
     slug: "mortal-kombat-usa",
-    embedId: "27007",
+    embedId: "19591",
     year: 1993,
     genre: "Fighting",
     folder: "Mortal Kombat",
