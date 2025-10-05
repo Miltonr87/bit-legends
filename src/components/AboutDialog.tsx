@@ -27,9 +27,9 @@ export const AboutDialog = () => {
         </Button>
       </DialogTrigger>
       <DialogContent className="max-w-[40vh] max-h-[90vh] overflow-y-auto bg-gradient-to-b from-background to-secondary/30 border border-border/50 shadow-lg">
-        <DialogHeader className="text-center">
-          <DialogTitle className="text-2xl font-bold text-primary mb-4">
-            About BitLegends
+        <DialogHeader>
+          <DialogTitle className=" text-center text-2xl font-bold text-primary mb-4">
+            About
           </DialogTitle>
           <DialogDescription className="text-base text-muted-foreground space-y-5 leading-relaxed text-left">
             <p>
@@ -40,7 +40,9 @@ export const AboutDialog = () => {
               of console adventures.
             </p>
             <div>
-              <h4 className="font-semibold text-accent mb-3">Tech Stack:</h4>
+              <h4 className="font-semibold text-accent mb-3">
+                Project Tech Stack
+              </h4>
               <div className="flex flex-wrap gap-2">
                 {[
                   'ReactJS',

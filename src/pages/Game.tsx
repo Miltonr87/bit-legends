@@ -29,9 +29,18 @@ const Game = () => {
   const { id } = useParams();
   const game = games.find((g) => g.id === id);
   const [starRating, setStarRating] = useState<number>(0);
+  const [isMobile, setIsMobile] = useState<boolean>(false);
   const startTimeRef = useRef<number>(Date.now());
   const gameIframeRef = useRef<HTMLDivElement>(null);
   const { toast } = useToast();
+
+  // ✅ Detect viewport width for mobile layout
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 640);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   useEffect(() => {
     if (game) {
@@ -210,30 +219,56 @@ const Game = () => {
                   </div>
                 </div>
               </div>
-              <div
-                ref={gameIframeRef}
-                className={`relative w-full max-w-[480px] mx-auto bg-black rounded-lg overflow-hidden ${
-                  isMinijogos ? 'minijogos-embed-clean' : ''
-                }`}
-                style={{
-                  height: 'calc(85vh - 240px)',
-                  minHeight: '520px',
-                }}
-              >
-                <iframe
-                  src={cleanedUrl}
-                  className="absolute inset-0 w-full h-full rounded-lg"
-                  title={game.title}
-                  allowFullScreen
-                  allow="gamepad; fullscreen; autoplay"
+              {isMobile ? (
+                // --- MOBILE LAYOUT ---
+                <div
+                  ref={gameIframeRef}
+                  className={`relative w-full max-w-[480px] mx-auto bg-black rounded-lg overflow-hidden ${
+                    isMinijogos ? 'minijogos-embed-clean' : ''
+                  }`}
                   style={{
-                    border: 'none',
-                    overflow: 'hidden',
-                    backgroundColor: 'black',
+                    height: 'calc(80vh - 240px)',
+                    minHeight: '520px',
                   }}
-                  sandbox="allow-scripts allow-same-origin allow-popups allow-forms allow-pointer-lock allow-presentation"
-                />
-              </div>
+                >
+                  <iframe
+                    src={cleanedUrl}
+                    className="absolute inset-0 w-full h-full rounded-lg"
+                    title={game.title}
+                    allowFullScreen
+                    allow="gamepad; fullscreen; autoplay"
+                    style={{
+                      border: 'none',
+                      overflow: 'hidden',
+                      backgroundColor: 'black',
+                    }}
+                    sandbox="allow-scripts allow-same-origin allow-popups allow-forms allow-pointer-lock allow-presentation"
+                  />
+                </div>
+              ) : (
+                // --- DESKTOP LAYOUT ---
+                <div
+                  ref={gameIframeRef}
+                  className={`relative bg-black rounded-lg overflow-hidden ${
+                    isMinijogos ? 'minijogos-embed-clean' : ''
+                  }`}
+                  style={{ aspectRatio: '4/3' }}
+                >
+                  <iframe
+                    src={cleanedUrl}
+                    className="absolute inset-0 w-full h-full rounded-lg"
+                    title={game.title}
+                    allowFullScreen
+                    allow="gamepad; fullscreen; autoplay"
+                    style={{
+                      border: 'none',
+                      overflow: 'hidden',
+                      backgroundColor: 'black',
+                    }}
+                    sandbox="allow-scripts allow-same-origin allow-popups allow-forms allow-pointer-lock allow-presentation"
+                  />
+                </div>
+              )}
               <div className="p-3 sm:p-4 bg-muted/30 border-t border-accent/20">
                 <div className="flex flex-col sm:flex-row sm:flex-wrap gap-2 sm:gap-4 text-xs sm:text-sm">
                   <div className="flex items-center gap-2">
@@ -251,6 +286,7 @@ const Game = () => {
                 </div>
               </div>
             </Card>
+
             <Card className="p-4 sm:p-6 border-2 border-border bg-card">
               <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-accent">
                 About This Game
