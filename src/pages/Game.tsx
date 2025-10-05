@@ -32,7 +32,7 @@ const Game = () => {
 
   const [starRating, setStarRating] = useState<number>(0);
   const [isMobile, setIsMobile] = useState<boolean>(false);
-  const [isFullscreen, setIsFullscreen] = useState<boolean>(false);
+  console.log('IsMobile', isMobile);
 
   const startTimeRef = useRef<number>(Date.now());
   const gameIframeRef = useRef<HTMLDivElement>(null);
@@ -67,12 +67,6 @@ const Game = () => {
       });
     };
   }, [game]);
-
-  useEffect(() => {
-    const onFsChange = () => setIsFullscreen(!!document.fullscreenElement);
-    document.addEventListener('fullscreenchange', onFsChange);
-    return () => document.removeEventListener('fullscreenchange', onFsChange);
-  }, []);
 
   const handleStarClick = (rating: number) => {
     if (!game) return;
@@ -233,9 +227,7 @@ const Game = () => {
                   isMinijogos ? 'minijogos-embed-clean' : ''
                 }`}
                 style={
-                  isMobile
-                    ? { height: 'calc(80vh - 140px)' }
-                    : { aspectRatio: '4/3' }
+                  isMobile ? { height: '90vh - 140px' } : { aspectRatio: '4/3' }
                 }
               >
                 <iframe
@@ -251,22 +243,6 @@ const Game = () => {
                   }}
                   sandbox="allow-scripts allow-same-origin allow-popups allow-forms allow-pointer-lock allow-presentation"
                 />
-                {isMobile && (
-                  <button
-                    type="button"
-                    onClick={toggleFullscreen}
-                    aria-label={
-                      isFullscreen ? 'Exit fullscreen' : 'Enter fullscreen'
-                    }
-                    className="sm:hidden absolute bottom-4 left-1 z-20 inline-flex items-center gap-2 rounded-lg border border-accent/50 bg-background/80 px-3 py-2 text-xs font-semibold backdrop-blur hover:bg-background transition"
-                  >
-                    {isFullscreen ? (
-                      <Minimize2 className="h-4 w-4" />
-                    ) : (
-                      <Maximize2 className="h-4 w-4" />
-                    )}
-                  </button>
-                )}
               </div>
               <div className="p-3 sm:p-4 bg-muted/30 border-t border-accent/20">
                 <div className="flex flex-col sm:flex-row sm:flex-wrap gap-2 sm:gap-4 text-xs sm:text-sm">
