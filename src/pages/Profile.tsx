@@ -169,9 +169,9 @@ export default function Profile() {
         <Header />
         <Card className="p-10 border-2 border-accent/30 bg-card mt-10 space-y-6">
           <User className="h-16 w-16 mx-auto text-accent mb-2" />
-          <h2 className="text-3xl font-bold mb-2">Welcome to BitLegends</h2>
+          <h2 className="text-3xl font-bold mb-2">Welcome </h2>
           <p className="text-muted-foreground mb-6 max-w-md mx-auto">
-            Sign in with Google or use your email to save progress, avatar, and
+            Sign in with Google or use your email to save progress, avatar and
             game history.
           </p>
           <div className="flex justify-center mb-6">

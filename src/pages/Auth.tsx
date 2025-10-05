@@ -1,10 +1,10 @@
-import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
-import { useAuth } from "@/contexts/AuthContext";
-import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
-import { Gamepad2 } from "lucide-react";
-import { toast } from "sonner";
+import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useAuth } from '@/contexts/AuthContext';
+import { Button } from '@/components/ui/button';
+import { Card } from '@/components/ui/card';
+import { Gamepad2 } from 'lucide-react';
+import { toast } from 'sonner';
 
 const Auth = () => {
   const [loading, setLoading] = useState(false);
@@ -13,7 +13,7 @@ const Auth = () => {
 
   useEffect(() => {
     if (user) {
-      navigate("/");
+      navigate('/');
     }
   }, [user, navigate]);
 
@@ -21,16 +21,15 @@ const Auth = () => {
     setLoading(true);
     const { error } = await signInWithGoogle();
     if (error) {
-      toast.error("Failed to sign in with Google");
+      toast.error('Failed to sign in with Google');
       setLoading(false);
     }
-    // Google will redirect, so we don't set loading to false here
   };
 
   return (
     <div className="min-h-screen flex items-center justify-center p-4">
       <div className="absolute inset-0 scanline pointer-events-none" />
-      
+
       <Card className="w-full max-w-md p-8 bg-card border-2 border-accent/30 relative z-10">
         <div className="flex flex-col items-center mb-8">
           <div className="relative mb-4">
@@ -38,11 +37,9 @@ const Auth = () => {
             <div className="absolute inset-0 blur-xl bg-accent/30" />
           </div>
           <h1 className="text-3xl font-bold glow-text bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">
-            BitLegends
+            Bit Legends
           </h1>
-          <p className="text-muted-foreground mt-2">
-            Sign in with Google to continue
-          </p>
+          <p className="text-muted-foreground mt-2">Sign in with Google</p>
         </div>
 
         <Button

@@ -33,7 +33,7 @@ export const AboutDialog = () => {
           </DialogTitle>
           <DialogDescription className="text-base text-muted-foreground space-y-5 leading-relaxed text-left">
             <p>
-              <strong className="text-primary">BitLegends</strong> is a
+              <strong className="text-primary">Bit Legends</strong> is a
               retro-inspired gaming platform that revives the nostalgia of
               arcade and console classics. All playable directly in your
               browser. Built for dreamers who grew up with the 8-bit/16-bit era

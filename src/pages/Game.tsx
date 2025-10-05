@@ -11,9 +11,10 @@ import {
   Star,
   Share2,
   MessageCircle,
+  Maximize2,
+  Minimize2,
 } from 'lucide-react';
 import { Card } from '@/components/ui/card';
-import html2canvas from 'html2canvas';
 import { ControllerSetup } from '@/components/ControllerSetup';
 import { useToast } from '@/hooks/use-toast';
 import { addGameHistory } from '@/lib/localStorage';
@@ -28,26 +29,50 @@ import { useDisplayDevice } from '@/hooks/useDisplayDevice';
 const Game = () => {
   const { id } = useParams();
   const game = games.find((g) => g.id === id);
+
   const [starRating, setStarRating] = useState<number>(0);
   const [isMobile, setIsMobile] = useState<boolean>(false);
+  const [isFullscreen, setIsFullscreen] = useState<boolean>(false);
+
   const startTimeRef = useRef<number>(Date.now());
   const gameIframeRef = useRef<HTMLDivElement>(null);
+
   const { toast } = useToast();
   const deviceInfo = useDisplayDevice();
 
   useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth < 640);
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
+    const mm = window.matchMedia('(max-width: 639px)');
+    const apply = () => setIsMobile(mm.matches);
+    apply();
+    mm.addEventListener('change', apply);
+    return () => mm.removeEventListener('change', apply);
   }, []);
 
   useEffect(() => {
-    if (game) {
-      const savedRating = localStorage.getItem(`game_rating_${game.id}`);
-      if (savedRating) setStarRating(parseInt(savedRating));
-    }
+    if (!game) return;
+    const saved = localStorage.getItem(`game_rating_${game.id}`);
+    if (saved) setStarRating(parseInt(saved, 10));
   }, [game]);
+
+  useEffect(() => {
+    if (game) startTimeRef.current = Date.now();
+    return () => {
+      if (!game) return;
+      const timeSpent = Math.floor((Date.now() - startTimeRef.current) / 1000);
+      addGameHistory({
+        gameId: game.id,
+        gameTitle: game.title,
+        timeSpent,
+        playedAt: new Date().toISOString(),
+      });
+    };
+  }, [game]);
+
+  useEffect(() => {
+    const onFsChange = () => setIsFullscreen(!!document.fullscreenElement);
+    document.addEventListener('fullscreenchange', onFsChange);
+    return () => document.removeEventListener('fullscreenchange', onFsChange);
+  }, []);
 
   const handleStarClick = (rating: number) => {
     if (!game) return;
@@ -63,26 +88,23 @@ const Game = () => {
 
   const handleWhatsAppShare = () => {
     if (!game) return;
-    const text = `Check out ${game.title} on BitLegends! ${window.location.href}`;
+    const text = `Check out ${game.title} on Bit Legends! ${window.location.href}`;
     window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');
   };
 
-  useEffect(() => {
-    if (game) startTimeRef.current = Date.now();
-    return () => {
-      if (game) {
-        const timeSpent = Math.floor(
-          (Date.now() - startTimeRef.current) / 1000
-        );
-        addGameHistory({
-          gameId: game.id,
-          gameTitle: game.title,
-          timeSpent,
-          playedAt: new Date().toISOString(),
-        });
+  const toggleFullscreen = async () => {
+    const el = gameIframeRef.current;
+    if (!el) return;
+    try {
+      if (!document.fullscreenElement) {
+        await el.requestFullscreen?.();
+      } else {
+        await document.exitFullscreen?.();
       }
-    };
-  }, [game]);
+    } catch {
+      console.error('Fullscreen error');
+    }
+  };
 
   if (!game) {
     return (
@@ -126,8 +148,10 @@ const Game = () => {
           </Link>
         </div>
         <div className="grid lg:grid-cols-3 gap-4 sm:gap-8">
+          {/* Left column */}
           <div className="lg:col-span-2 space-y-4 sm:space-y-6">
             <Card className="overflow-hidden border-2 border-accent/30 bg-card">
+              {/* Header */}
               <div className="bg-gradient-to-r from-primary/20 to-accent/20 p-3 sm:p-4 border-b border-accent/30">
                 <div className="flex items-center justify-between gap-2">
                   <div className="flex-1 min-w-0">
@@ -145,6 +169,10 @@ const Game = () => {
                           key={rating}
                           onClick={() => handleStarClick(rating)}
                           className="transition-transform hover:scale-110"
+                          type="button"
+                          aria-label={`Rate ${rating} star${
+                            rating !== 1 ? 's' : ''
+                          }`}
                         >
                           <Star
                             className={`h-5 w-5 sm:h-6 sm:w-6 ${
@@ -176,7 +204,6 @@ const Game = () => {
                   </div>
                 </div>
               </div>
-              {/* IFRAME */}
               <div
                 ref={gameIframeRef}
                 className={`relative bg-black rounded-lg overflow-hidden ${
@@ -184,7 +211,7 @@ const Game = () => {
                 }`}
                 style={
                   isMobile
-                    ? { height: 'calc(90vh - 240px)' }
+                    ? { height: 'calc(80vh - 140px)' }
                     : { aspectRatio: '4/3' }
                 }
               >
@@ -201,6 +228,26 @@ const Game = () => {
                   }}
                   sandbox="allow-scripts allow-same-origin allow-popups allow-forms allow-pointer-lock allow-presentation"
                 />
+                {isMobile && (
+                  <button
+                    type="button"
+                    onClick={toggleFullscreen}
+                    aria-label={
+                      isFullscreen ? 'Exit fullscreen' : 'Enter fullscreen'
+                    }
+                    className="sm:hidden absolute bottom-1 left-1 z-20 inline-flex items-center gap-2 rounded-lg border border-accent/50 bg-background/80 px-3 py-2 text-xs font-semibold backdrop-blur hover:bg-background transition"
+                  >
+                    {isFullscreen ? (
+                      <>
+                        <Minimize2 className="h-4 w-4" />
+                      </>
+                    ) : (
+                      <>
+                        <Maximize2 className="h-4 w-4" />
+                      </>
+                    )}
+                  </button>
+                )}
               </div>
               <div className="p-3 sm:p-4 bg-muted/30 border-t border-accent/20">
                 <div className="flex flex-col sm:flex-row sm:flex-wrap gap-2 sm:gap-4 text-xs sm:text-sm">

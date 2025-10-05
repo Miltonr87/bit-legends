@@ -31,7 +31,7 @@ export const Header = () => {
             <div className="absolute inset-0 blur-xl bg-accent/30 group-hover:bg-accent/40 transition-all" />
           </div>
           <h1 className="text-lg sm:text-2xl font-bold bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">
-            BitLegends
+            Bit Legends
           </h1>
         </Link>
         <nav className="flex items-center gap-2 sm:gap-4">

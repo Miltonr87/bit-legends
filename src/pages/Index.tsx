@@ -98,7 +98,7 @@ const Index = () => {
           {/* Description */}
           <p className="text-base sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-6 sm:mb-8 px-4">
             Enter the ring and master the art of combat. Classic fighters,
-            iconic stages, and timeless duels reborn for the modern age.
+            iconic stages, and timeless duels reborn for the modern age
           </p>
           {/* Feature Badges */}
           <div className="flex flex-wrap justify-center gap-2 sm:gap-4 text-xs sm:text-sm text-muted-foreground px-4">
@@ -228,7 +228,7 @@ const Index = () => {
       <footer className="border-t border-border/50 mt-12 sm:mt-20 py-6 sm:py-8">
         <div className="container mx-auto px-4 text-center">
           <p className="text-muted-foreground text-xs sm:text-sm">
-            BitLegends •{' '}
+            Bit Legends •{' '}
             <a
               href="https://miltonr87.vercel.app/"
               target="_blank"

@@ -171,7 +171,7 @@ export const games: Game[] = [
   // Street Fighter Series (SNES)
   {
     id: "sf2",
-    title: "Street Fighter II - The World Warrior",
+    title: "Street Fighter II",
     slug: "street-fighter-ii-the-world-warrior-usa",
     embedId: "23597",
     year: 1992,
@@ -189,7 +189,7 @@ export const games: Game[] = [
   },
   {
     id: "sf2turbo",
-    title: "Street Fighter II Turbo - Hyper Fighting",
+    title: "Street Fighter II Turbo",
     slug: "street-fighter-ii-turbo-hyper-fighting-usa",
     embedId: "20197",
     year: 1993,
