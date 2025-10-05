@@ -184,7 +184,7 @@ const Game = () => {
                 }`}
                 style={
                   isMobile
-                    ? { height: 'calc(80vh - 240px)' }
+                    ? { height: 'calc(88vh - 240px)' }
                     : { aspectRatio: '4/3' }
                 }
               >
