@@ -168,7 +168,6 @@ const Game = () => {
                     </p>
                   </div>
                   <div className="flex items-center gap-1 sm:gap-2 flex-shrink-0">
-                    {/* Stars */}
                     <div className="hidden sm:flex gap-1">
                       {[1, 2, 3, 4, 5].map((rating) => (
                         <button
@@ -187,7 +186,6 @@ const Game = () => {
                       ))}
                     </div>
 
-                    {/* Share */}
                     <DropdownMenu>
                       <DropdownMenuTrigger asChild>
                         <Button
@@ -212,20 +210,19 @@ const Game = () => {
                   </div>
                 </div>
               </div>
-
-              {/* Game Iframe */}
               <div
                 ref={gameIframeRef}
-                className={`relative overflow-hidden ${
-                  isMinijogos ? 'minijogos-embed-clean' : 'bg-black'
+                className={`relative w-full max-w-[480px] mx-auto bg-black rounded-lg overflow-hidden ${
+                  isMinijogos ? 'minijogos-embed-clean' : ''
                 }`}
-                style={{ aspectRatio: '4/3' }}
+                style={{
+                  height: 'calc(88vh - 240px)',
+                  minHeight: '520px',
+                }}
               >
                 <iframe
                   src={cleanedUrl}
-                  width="100%"
-                  height="100%"
-                  frameBorder="0"
+                  className="absolute inset-0 w-full h-full rounded-lg"
                   title={game.title}
                   allowFullScreen
                   allow="gamepad; fullscreen; autoplay"
@@ -237,7 +234,6 @@ const Game = () => {
                   sandbox="allow-scripts allow-same-origin allow-popups allow-forms allow-pointer-lock allow-presentation"
                 />
               </div>
-
               <div className="p-3 sm:p-4 bg-muted/30 border-t border-accent/20">
                 <div className="flex flex-col sm:flex-row sm:flex-wrap gap-2 sm:gap-4 text-xs sm:text-sm">
                   <div className="flex items-center gap-2">
@@ -255,8 +251,6 @@ const Game = () => {
                 </div>
               </div>
             </Card>
-
-            {/* Description */}
             <Card className="p-4 sm:p-6 border-2 border-border bg-card">
               <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-accent">
                 About This Game
