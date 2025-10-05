@@ -93,16 +93,39 @@ const Game = () => {
   };
 
   const toggleFullscreen = async () => {
-    const el = gameIframeRef.current;
-    if (!el) return;
+    const container = gameIframeRef.current;
+    if (!container) return;
+
+    const iframe = container.querySelector('iframe');
+    if (!iframe) return;
+
     try {
-      if (!document.fullscreenElement) {
-        await el.requestFullscreen?.();
+      if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+        if (iframe.requestFullscreen) {
+          await iframe.requestFullscreen();
+        } else if (iframe.webkitRequestFullscreen) {
+          // For Safari / iOS Chrome
+          iframe.webkitRequestFullscreen();
+        } else if (iframe.msRequestFullscreen) {
+          iframe.msRequestFullscreen();
+        }
       } else {
-        await document.exitFullscreen?.();
+        if (document.exitFullscreen) {
+          await document.exitFullscreen();
+        } else if (document.webkitExitFullscreen) {
+          document.webkitExitFullscreen();
+        } else if (document.msExitFullscreen) {
+          document.msExitFullscreen();
+        }
       }
-    } catch {
-      console.error('Fullscreen error');
+    } catch (error) {
+      console.error('Fullscreen failed:', error);
+      toast({
+        title: 'Fullscreen not supported',
+        description:
+          'Your device or browser may not allow fullscreen mode for embedded games.',
+        variant: 'destructive',
+      });
     }
   };
 
@@ -235,16 +258,12 @@ const Game = () => {
                     aria-label={
                       isFullscreen ? 'Exit fullscreen' : 'Enter fullscreen'
                     }
-                    className="sm:hidden absolute bottom-1 left-1 z-20 inline-flex items-center gap-2 rounded-lg border border-accent/50 bg-background/80 px-3 py-2 text-xs font-semibold backdrop-blur hover:bg-background transition"
+                    className="sm:hidden absolute bottom-4 left-1 z-20 inline-flex items-center gap-2 rounded-lg border border-accent/50 bg-background/80 px-3 py-2 text-xs font-semibold backdrop-blur hover:bg-background transition"
                   >
                     {isFullscreen ? (
-                      <>
-                        <Minimize2 className="h-4 w-4" />
-                      </>
+                      <Minimize2 className="h-4 w-4" />
                     ) : (
-                      <>
-                        <Maximize2 className="h-4 w-4" />
-                      </>
+                      <Maximize2 className="h-4 w-4" />
                     )}
                   </button>
                 )}
