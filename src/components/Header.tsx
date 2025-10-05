@@ -69,31 +69,23 @@ export const Header = () => {
                   <p>
                     <strong className="text-primary">BitLegends</strong> is a
                     retro-inspired gaming platform that revives the nostalgia of
-                    arcade and console classics — all playable directly in your
+                    arcade and console classic. All playable directly in your
                     browser. Built for dreamers who grew up with 8-bit/16-bit
                     era of console adventures.
                   </p>
-
-                  <p>
-                    Every detail is designed with love for the golden age of
-                    gaming, while leveraging modern web technology for speed,
-                    style, and immersion.
-                  </p>
-
                   <div>
                     <h4 className="font-semibold text-accent mb-3">
                       Tech Stack:
                     </h4>
                     <div className="flex flex-wrap gap-2">
                       {[
-                        'React 18',
+                        'ReactJS',
                         'TypeScript',
                         'Vite',
                         'Tailwind CSS',
                         'Shadcn UI',
                         'Framer Motion',
                         'Radix UI',
-                        'html2canvas',
                         'Lucide React',
                         'EmulatorJS',
                       ].map((tech) => (
