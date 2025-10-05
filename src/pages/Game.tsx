@@ -227,7 +227,7 @@ const Game = () => {
                   isMinijogos ? 'minijogos-embed-clean' : ''
                 }`}
                 style={
-                  isMobile ? { height: 'calc(80vh)' } : { aspectRatio: '4/3' }
+                  isMobile ? { height: 'calc(68vh)' } : { aspectRatio: '4/3' }
                 }
               >
                 <iframe
