@@ -1,3 +1,4 @@
+// need to refactor the entire file into new components
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useGoogleLogin } from '@react-oauth/google';
@@ -354,18 +355,29 @@ export default function Profile() {
         </div>
       </div>
       <AlertDialog open={deleteDialogOpen} onOpenChange={setDeleteDialogOpen}>
-        <AlertDialogContent>
+        <AlertDialogContent
+          className="
+      w-[90vw] max-w-sm sm:max-w-md
+      p-6 rounded-2xl
+      border border-accent/30 bg-card shadow-xl
+      mx-auto text-center
+    "
+        >
           <AlertDialogHeader>
-            <AlertDialogTitle>Delete Game History</AlertDialogTitle>
-            <AlertDialogDescription>
+            <AlertDialogTitle className="text-lg sm:text-xl font-bold">
+              Delete Game History
+            </AlertDialogTitle>
+            <AlertDialogDescription className="text-sm sm:text-base text-muted-foreground mt-2">
               Are you sure you want to delete this game from your history?
             </AlertDialogDescription>
           </AlertDialogHeader>
-          <AlertDialogFooter>
-            <AlertDialogCancel>Cancel</AlertDialogCancel>
-            <AlertDialogAction onClick={confirmDelete}>
+          <AlertDialogFooter className="flex flex-col gap-2 mt-6">
+            <AlertDialogAction className="w-full py-2.5 sm:py-3 text-base sm:text-sm">
               Delete
             </AlertDialogAction>
+            <AlertDialogCancel className="w-full py-2.5 sm:py-3 text-base sm:text-sm border border-border bg-muted/20">
+              Cancel
+            </AlertDialogCancel>
           </AlertDialogFooter>
         </AlertDialogContent>
       </AlertDialog>
