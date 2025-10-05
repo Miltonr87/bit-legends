@@ -104,15 +104,15 @@ const Index = () => {
           <div className="flex flex-wrap justify-center gap-2 sm:gap-4 text-xs sm:text-sm text-muted-foreground px-4">
             <div className="flex items-center gap-2 px-3 sm:px-4 py-2 bg-card/50 rounded-lg border border-border">
               <div className="h-2 w-2 rounded-full bg-accent animate-pulse" />
-              <span>Instant Play</span>
+              <span>Play Online</span>
             </div>
             <div className="flex items-center gap-2 px-3 sm:px-4 py-2 bg-card/50 rounded-lg border border-border">
               <div className="h-2 w-2 rounded-full bg-primary animate-pulse" />
-              <span>Save States</span>
+              <span>Save Progress</span>
             </div>
             <div className="flex items-center gap-2 px-3 sm:px-4 py-2 bg-card/50 rounded-lg border border-border">
               <div className="h-2 w-2 rounded-full bg-accent animate-pulse" />
-              <span className="hidden sm:inline">Full Screen Mode</span>
+              <span className="hidden sm:inline">High Quality</span>
               <span className="sm:hidden">Full Screen</span>
             </div>
           </div>
