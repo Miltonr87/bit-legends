@@ -205,7 +205,7 @@ const Game = () => {
                 {/* Fullscreen Button */}
                 <button
                   onClick={toggleFullscreen}
-                  className="absolute bottom-2 left-2 z-10 bg-black/60 text-white rounded px-3 py-1 text-xs sm:text-sm border border-white/20 hover:bg-black/10 transition-all"
+                  className="absolute bottom-0 right-0 z-10 bg-black/60 text-white rounded px-3 py-1 text-xs sm:text-sm border border-white/20 hover:bg-black/10 transition-all"
                   title="Fullscreen"
                 >
                   ⛶
