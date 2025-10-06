@@ -211,6 +211,18 @@ const Game = () => {
                   isMobile ? { height: 'calc(68vh)' } : { aspectRatio: '4/3' }
                 }
               >
+                <style>
+                  {`
+    iframe[src*="ad.html"],
+    iframe[src*="emulatorjs.com/ad.html"],
+    iframe[src*="retrogames.cc/ad.html"] {
+      display: none !important;
+      visibility: hidden !important;
+      opacity: 0 !important;
+      pointer-events: none !important;
+    }
+  `}
+                </style>
                 <iframe
                   src={iframeUrl}
                   className="absolute inset-0 w-full h-full rounded-lg"
