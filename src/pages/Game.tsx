@@ -202,14 +202,17 @@ const Game = () => {
                   }}
                   sandbox="allow-scripts allow-downloads allow-same-origin allow-pointer-lock allow-forms allow-presentation"
                 ></iframe>
-                {/* Fullscreen Button */}
-                <button
-                  onClick={toggleFullscreen}
-                  className="absolute bottom-0 right-0 z-10 bg-black/60 text-white rounded px-3 py-1 text-xs sm:text-sm border border-white/20 hover:bg-black/10 transition-all"
-                  title="Fullscreen"
-                >
-                  ⛶
-                </button>
+                {isMobile ? (
+                  <button
+                    onClick={toggleFullscreen}
+                    className="absolute bottom-0 right-0 z-10 bg-black/60 text-white rounded px-3 py-1 text-xs sm:text-sm border border-white/20 hover:bg-black/10 transition-all"
+                    title="Fullscreen"
+                  >
+                    ⛶
+                  </button>
+                ) : (
+                  ''
+                )}
               </div>
               <div className="p-3 sm:p-4 bg-muted/30 border-t border-accent/20">
                 <div className="flex flex-col sm:flex-row sm:flex-wrap gap-2 sm:gap-4 text-xs sm:text-sm">
