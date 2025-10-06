@@ -11,8 +11,6 @@ import {
   Star,
   Share2,
   MessageCircle,
-  Maximize2,
-  Minimize2,
 } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 import { ControllerSetup } from '@/components/ControllerSetup';
@@ -87,7 +85,6 @@ const Game = () => {
   const toggleFullscreen = async () => {
     const container = gameIframeRef.current;
     if (!container) return;
-
     const iframe = container.querySelector('iframe');
     if (!iframe) return;
 
@@ -96,18 +93,13 @@ const Game = () => {
         if (iframe.requestFullscreen) {
           await iframe.requestFullscreen();
         } else if (iframe.webkitRequestFullscreen) {
-          // For Safari / iOS Chrome
           iframe.webkitRequestFullscreen();
-        } else if (iframe.msRequestFullscreen) {
-          iframe.msRequestFullscreen();
         }
       } else {
         if (document.exitFullscreen) {
           await document.exitFullscreen();
         } else if (document.webkitExitFullscreen) {
           document.webkitExitFullscreen();
-        } else if (document.msExitFullscreen) {
-          document.msExitFullscreen();
         }
       }
     } catch (error) {
@@ -142,11 +134,6 @@ const Game = () => {
     game.embedUrl ||
     `https://www.retrogames.cc/embed/${game.embedId}-${game.slug}.html`;
 
-  const isMinijogos = iframeUrl.includes('minijogos.com.br');
-  const cleanedUrl = isMinijogos
-    ? `${iframeUrl}?noads=1&embed=1&controls=0`
-    : iframeUrl;
-
   return (
     <div className="min-h-screen">
       <Header />
@@ -163,10 +150,8 @@ const Game = () => {
           </Link>
         </div>
         <div className="grid lg:grid-cols-3 gap-4 sm:gap-8">
-          {/* Left column */}
           <div className="lg:col-span-2 space-y-4 sm:space-y-6">
             <Card className="overflow-hidden border-2 border-accent/30 bg-card">
-              {/* Header */}
               <div className="bg-gradient-to-r from-primary/20 to-accent/20 p-3 sm:p-4 border-b border-accent/30">
                 <div className="flex items-center justify-between gap-2">
                   <div className="flex-1 min-w-0">
@@ -221,21 +206,17 @@ const Game = () => {
               </div>
               <div
                 ref={gameIframeRef}
-                className={`relative bg-black rounded-lg overflow-hidden ${
-                  isMinijogos ? 'minijogos-embed-clean' : ''
-                }`}
+                className="relative bg-black rounded-lg overflow-hidden"
                 style={
                   isMobile ? { height: 'calc(68vh)' } : { aspectRatio: '4/3' }
                 }
               >
                 <iframe
-                  src={cleanedUrl}
+                  src={iframeUrl}
                   className="absolute inset-0 w-full h-full rounded-lg"
                   title={game.title}
                   allow="gamepad; fullscreen; autoplay; orientation-lock; encrypted-media; picture-in-picture"
                   allowFullScreen={true}
-                  webkitallowfullscreen="true"
-                  mozallowfullscreen="true"
                   style={{
                     border: 'none',
                     overflow: 'hidden',
