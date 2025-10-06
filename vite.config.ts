@@ -18,4 +18,7 @@ export default defineConfig({
   optimizeDeps: {
     include: ["react", "react-dom", "@tanstack/react-query"],
   },
+  build: {
+    outDir: "dist", // 👈 required so Vercel serves /dist correctly
+  },
 });

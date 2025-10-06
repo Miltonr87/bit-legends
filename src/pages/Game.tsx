@@ -130,9 +130,10 @@ const Game = () => {
     );
   }
 
-  const iframeUrl =
+  const iframeUrl = `/api/proxy?url=${encodeURIComponent(
     game.embedUrl ||
-    `https://www.retrogames.cc/embed/${game.embedId}-${game.slug}.html`;
+      `https://www.retrogames.cc/embed/${game.embedId}-${game.slug}.html`
+  )}`;
 
   return (
     <div className="min-h-screen">
@@ -205,24 +206,9 @@ const Game = () => {
                 </div>
               </div>
               <div
-                ref={gameIframeRef}
                 className="relative bg-black rounded-lg overflow-hidden"
-                style={
-                  isMobile ? { height: 'calc(68vh)' } : { aspectRatio: '4/3' }
-                }
+                style={isMobile ? { height: '68vh' } : { aspectRatio: '4/3' }}
               >
-                <style>
-                  {`
-    iframe[src*="ad.html"],
-    iframe[src*="emulatorjs.com/ad.html"],
-    iframe[src*="retrogames.cc/ad.html"] {
-      display: none !important;
-      visibility: hidden !important;
-      opacity: 0 !important;
-      pointer-events: none !important;
-    }
-  `}
-                </style>
                 <iframe
                   src={iframeUrl}
                   className="absolute inset-0 w-full h-full rounded-lg"
@@ -236,8 +222,9 @@ const Game = () => {
                     backgroundColor: 'black',
                   }}
                   sandbox="allow-scripts allow-same-origin allow-pointer-lock allow-forms allow-presentation"
-                ></iframe>
+                />
               </div>
+
               <div className="p-3 sm:p-4 bg-muted/30 border-t border-accent/20">
                 <div className="flex flex-col sm:flex-row sm:flex-wrap gap-2 sm:gap-4 text-xs sm:text-sm">
                   <div className="flex items-center gap-2">
