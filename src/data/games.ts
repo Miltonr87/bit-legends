@@ -15,6 +15,8 @@ export interface Game {
   coverImage: string;
   platform: string;
   embedUrl?: string;
+  romUrl?: string;
+  core?: string;
 }
 
 export const games: Game[] = [
@@ -54,6 +56,8 @@ export const games: Game[] = [
     developer: "Sega",
     coverImage: "/assets/covers/sor2.png",
     platform: "Sega Genesis",
+    romUrl: "/rom/sor2.zip",
+    core: "segaMD",
   },
   {
     id: "sor3",

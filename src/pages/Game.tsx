@@ -121,8 +121,13 @@ const Game = () => {
     return map[platform] || 'arcade';
   };
 
-  const core = 'snes';
-  const romUrl = `${window.location.origin}/rom/sf2.zip`;
+  const defaultCore = getCoreByPlatform(game.platform);
+  const core = game.core || defaultCore;
+
+  // 🧠 Resolve rom path
+  const romUrl = game.romUrl
+    ? `${window.location.origin}${game.romUrl}`
+    : `${window.location.origin}/rom/${game.slug}.zip`;
 
   return (
     <div className="min-h-screen">
@@ -206,7 +211,7 @@ const Game = () => {
               <div
                 className="relative bg-black rounded-lg overflow-hidden"
                 style={
-                  isMobile ? { height: 'calc(68vh)' } : { aspectRatio: '4/3' }
+                  isMobile ? { height: 'calc(72vh)' } : { aspectRatio: '4/3' }
                 }
               >
                 <EmulatorCDN romUrl={romUrl} core={core} />
