@@ -371,11 +371,50 @@ export const games: Game[] = [
     coverImage: "/assets/covers/marvel_vs_capcom.jpg",
     platform: "Arcade",
   },
+  // DC Games
+  {
+    id: "batmanreturns",
+    title: "Batman Returns",
+    slug: "batman-returns-usa",
+    embedId: "23794",
+    year: 1993,
+    genre: "DC",
+    folder: "DC",
+    publisher: "Konami",
+    characters: ["Batman", "Catwoman", "The Penguin"],
+    description: "Take back Gotham from Penguin’s gang in this dark SNES classic!",
+    longDescription:
+      "Based on the 1992 film, Batman Returns delivers gritty beat 'em up action through Gotham's icy streets. Fight Penguin’s Red Triangle Circus gang and face off against iconic foes in this Konami masterpiece with cinematic visuals and tight combat.",
+    players: "1 Player",
+    developer: "Konami",
+    coverImage: "/assets/covers/batman_returns.jpeg",
+    platform: "Super Nintendo",
+  },
+  {
+    id: "adventures-batman-robin",
+    title: "The Adventures of Batman & Robin",
+    slug: "adventures-of-batman-robin-the-usa",
+    embedId: "24075",
+    year: 1994,
+    genre: "DC",
+    folder: "DC",
+    publisher: "Konami",
+    characters: ["Batman", "Robin", "The Joker", "Catwoman", "Penguin"],
+    description: "Platforming action in Gotham with gadgets and acrobatics!",
+    longDescription:
+      "Based on the animated series, this SNES platformer lets you control Batman and Robin through Gotham. Use gadgets like the grappling gun, x-ray vision, and smoke bombs to take down enemies and explore secret areas. Published by Konami in 1994. :contentReference[oaicite:0]{index=0}",
+    players: "1 Player",
+    developer: "Konami",
+    coverImage: "/assets/covers/batman-and-robin.png",
+    platform: "Super Nintendo",
+  }
+
 ];
 
 export const seriesFilters = [
   "All Games",
   "Fighting",
   "Beat 'em Up",
-  "Marvel"
+  "Marvel",
+  "DC"
 ] as const;
