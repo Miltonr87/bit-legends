@@ -173,7 +173,7 @@ export const games: Game[] = [
     id: "sf2",
     title: "Street Fighter II",
     slug: "street-fighter-ii-the-world-warrior-usa",
-    embedId: "23597",
+    embedId: "23550",
     year: 1992,
     genre: "Fighting",
     folder: "Street Fighter",
@@ -203,24 +203,6 @@ export const games: Game[] = [
     players: "1-2 Players",
     developer: "Capcom",
     coverImage: "/assets/covers/street_fighter_2_turbo.jpeg",
-    platform: "Super Nintendo",
-  },
-  {
-    id: "ssf2",
-    title: "Super Street Fighter II - The New Challengers",
-    slug: "super-street-fighter-ii-the-new-challengers-usa",
-    embedId: "23550",
-    year: 1994,
-    genre: "Fighting",
-    folder: "Street Fighter",
-    publisher: "Capcom",
-    characters: [],
-    description: "New challengers enter the fight!",
-    longDescription:
-      "Four new fighters join the World Warriors tournament in this enhanced edition.",
-    players: "1-2 Players",
-    developer: "Capcom",
-    coverImage: "/assets/covers/street2_new_challenge.png",
     platform: "Super Nintendo",
   },
   {
@@ -283,7 +265,7 @@ export const games: Game[] = [
   // Marvel Games
   {
     id: "maximumcarnage",
-    title: "Spider-Man & Venom: Maximum Carnage",
+    title: "Spider-Man & Venom",
     slug: "spider-man-venom-maximum-carnage-usa",
     embedId: "23888",
     year: 1994,
@@ -301,7 +283,7 @@ export const games: Game[] = [
   },
   {
     id: "spidermanxmen",
-    title: "Spider-Man and the X-Men in Arcade's Revenge",
+    title: "Spider-Man and X-Men",
     slug: "spider-man-and-the-x-men-in-arcade-s-revenge-europe",
     embedId: "22758",
     year: 1992,
