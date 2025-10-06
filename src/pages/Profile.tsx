@@ -1,4 +1,4 @@
-// need to refactor the entire file into new components
+// src/pages/Profile.tsx
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useGoogleLogin } from '@react-oauth/google';
@@ -76,14 +76,12 @@ export default function Profile() {
           }
         );
         const profile = await res.json();
-
         const googleUser: ProfileData = {
           username: profile.name || profile.given_name || 'Player',
           email: profile.email,
           avatar_url: profile.picture,
           provider: 'google',
         };
-
         localStorage.setItem('bitlegends_user', JSON.stringify(googleUser));
         setUser(googleUser);
         toast.success(`Welcome, ${googleUser.username}!`);
@@ -143,8 +141,7 @@ export default function Profile() {
   const formatTime = (seconds: number): string => {
     const hours = Math.floor(seconds / 3600);
     const minutes = Math.floor((seconds % 3600) / 60);
-    if (hours > 0) return `${hours}h ${minutes}m`;
-    return `${minutes}m`;
+    return hours > 0 ? `${hours}h ${minutes}m` : `${minutes}m`;
   };
 
   const handleDeleteHistory = (id: string) => {
@@ -162,24 +159,25 @@ export default function Profile() {
     setHistoryToDelete(null);
   };
 
-  // --- LOGIN SCREEN ---
+  // LOGIN SCREEN
   if (!user) {
     return (
-      <div className="min-h-screen flex flex-col items-center justify-center text-center">
-        <Header />
-        <Card className="p-10 border-2 border-accent/30 bg-card mt-10 space-y-6">
-          <User className="h-16 w-16 mx-auto text-accent mb-2" />
-          <h2 className="text-3xl font-bold mb-2">Welcome </h2>
-          <p className="text-muted-foreground mb-6 max-w-md mx-auto">
-            Sign in with Google or use your email to save progress, avatar and
+      <div className="min-h-screen flex flex-col items-center justify-center px-4 py-10 text-center">
+        <Header className="mb-8" />
+        <Card className="w-[90%] max-w-sm sm:max-w-md p-6 sm:p-10 border-2 border-accent/30 bg-card rounded-2xl shadow-md space-y-6">
+          <User className="h-14 w-14 sm:h-16 sm:w-16 mx-auto text-accent mb-1" />
+          <h2 className="text-2xl sm:text-3xl font-bold mb-1">Welcome</h2>
+          <p className="text-sm sm:text-base text-muted-foreground mb-4 max-w-xs sm:max-w-md mx-auto">
+            Sign in with Google or use your email to save progress, avatar, and
             game history.
           </p>
-          <div className="flex justify-center mb-6">
+
+          <div className="flex justify-center mb-4">
             {!useEmail ? (
               <Button
                 onClick={() => setUseEmail(true)}
                 variant="outline"
-                className="text-sm"
+                className="text-xs sm:text-sm"
               >
                 Use Email Instead
               </Button>
@@ -187,12 +185,13 @@ export default function Profile() {
               <Button
                 onClick={() => setUseEmail(false)}
                 variant="outline"
-                className="text-sm"
+                className="text-xs sm:text-sm"
               >
                 Use Google Instead
               </Button>
             )}
           </div>
+
           <AnimatePresence mode="wait">
             {!useEmail ? (
               <motion.div
@@ -204,7 +203,7 @@ export default function Profile() {
               >
                 <Button
                   onClick={() => googleLogin()}
-                  className="bg-gradient-to-r from-primary to-accent text-lg"
+                  className="w-full bg-gradient-to-r from-primary to-accent text-base sm:text-lg py-5"
                 >
                   <LogIn className="mr-2 h-5 w-5" /> Sign in with Google
                 </Button>
@@ -216,15 +215,19 @@ export default function Profile() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
                 transition={{ duration: 0.3 }}
-                className="flex items-center justify-center gap-2"
+                className="flex flex-col sm:flex-row items-center justify-center gap-2"
               >
                 <Input
                   placeholder="Enter your email"
                   value={emailInput}
                   onChange={(e) => setEmailInput(e.target.value)}
-                  className="w-56"
+                  className="w-full sm:w-56"
                 />
-                <Button onClick={handleLocalLogin} variant="outline">
+                <Button
+                  onClick={handleLocalLogin}
+                  variant="outline"
+                  className="w-full sm:w-auto mt-2 sm:mt-0"
+                >
                   <Mail className="h-4 w-4 mr-1" /> Login
                 </Button>
               </motion.div>
@@ -235,152 +238,185 @@ export default function Profile() {
     );
   }
 
-  // --- PROFILE SCREEN ---
+  // PROFILE SCREEN
   return (
     <div className="min-h-screen">
       <Header />
       <div className="container mx-auto px-4 py-12">
         <div className="grid md:grid-cols-3 gap-8">
-          {/* Profile Card */}
-          <Card className="p-6 border-2 border-accent/30 bg-card">
-            <div className="flex flex-col items-center space-y-4">
-              <div className="relative group">
-                <Avatar className="h-32 w-32 border-4 border-accent">
-                  <AvatarImage src={user.avatar_url || undefined} />
-                  <AvatarFallback className="bg-primary text-primary-foreground text-3xl">
-                    {user.username?.charAt(0).toUpperCase() || <User />}
-                  </AvatarFallback>
-                </Avatar>
-                <label
-                  htmlFor="avatar-upload"
-                  className="absolute inset-0 flex items-center justify-center bg-black/50 rounded-full opacity-0 group-hover:opacity-100 cursor-pointer transition-opacity"
-                >
-                  <Upload className="h-8 w-8 text-white" />
-                </label>
-                <input
-                  id="avatar-upload"
-                  type="file"
-                  accept="image/*"
-                  onChange={uploadAvatar}
-                  disabled={uploading}
-                  className="hidden"
-                />
-              </div>
-              <div className="w-full space-y-3 text-center">
-                <h2 className="text-2xl font-bold text-accent">
-                  {user.username}
-                </h2>
-                <p className="text-sm text-muted-foreground">{user.email}</p>
-
-                <Label htmlFor="username">Change Username</Label>
-                <Input
-                  id="username"
-                  value={username || user.username}
-                  onChange={(e) => setUsername(e.target.value)}
-                  placeholder="Enter new username"
-                  className="mt-1"
-                />
-                <Button
-                  onClick={updateProfile}
-                  className="w-full bg-gradient-to-r from-primary to-accent"
-                >
-                  Update Profile
-                </Button>
-                <Button
-                  onClick={handleSignOut}
-                  variant="outline"
-                  className="w-full border-destructive text-destructive hover:bg-destructive/10"
-                >
-                  <LogOut className="mr-2 h-4 w-4" /> Sign Out
-                </Button>
-              </div>
-            </div>
-          </Card>
-          {/* Game History */}
-          <Card className="md:col-span-2 p-6 border-2 border-accent/30 bg-card">
-            <div className="flex items-center gap-3 mb-6">
-              <Clock className="h-6 w-6 text-accent" />
-              <h2 className="text-2xl font-bold">Game History</h2>
-            </div>
-            {gameHistory.length === 0 ? (
-              <div className="text-center py-12">
-                <Gamepad2 className="h-16 w-16 text-muted-foreground mx-auto mb-4" />
-                <p className="text-muted-foreground">
-                  No games played yet. Start playing to see your history!
-                </p>
-              </div>
-            ) : (
-              <div className="space-y-3">
-                {gameHistory.map((history) => (
-                  <div
-                    key={history.id}
-                    className="flex items-center justify-between p-4 rounded-lg bg-muted/30 border border-accent/20 hover:border-accent/40 transition-colors"
-                  >
-                    <div className="flex-1">
-                      <p className="font-semibold">{history.gameTitle}</p>
-                      <div className="flex items-center gap-4 mt-1 flex-wrap">
-                        <p className="text-sm text-muted-foreground">
-                          {new Date(history.playedAt).toLocaleDateString()} •{' '}
-                          <span className="text-accent">
-                            {new Date(history.playedAt).toLocaleTimeString([], {
-                              hour: '2-digit',
-                              minute: '2-digit',
-                            })}
-                          </span>
-                        </p>
-                        <div className="flex items-center gap-1 text-sm text-muted-foreground">
-                          <Clock className="w-3 h-3" />
-                          {formatTime(history.timeSpent)}
-                        </div>
-                        {history.score && (
-                          <p className="text-sm text-accent font-semibold">
-                            Score: {history.score.toLocaleString()}
-                          </p>
-                        )}
-                      </div>
-                    </div>
-                    <Button
-                      variant="ghost"
-                      size="icon"
-                      onClick={() => handleDeleteHistory(history.id)}
-                      className="hover:bg-destructive/10 hover:text-destructive"
-                    >
-                      <Trash2 className="w-4 h-4" />
-                    </Button>
-                  </div>
-                ))}
-              </div>
-            )}
-          </Card>
+          <ProfileCard
+            user={user}
+            uploading={uploading}
+            uploadAvatar={uploadAvatar}
+            username={username}
+            setUsername={setUsername}
+            updateProfile={updateProfile}
+            handleSignOut={handleSignOut}
+          />
+          <HistoryCard
+            gameHistory={gameHistory}
+            handleDeleteHistory={handleDeleteHistory}
+            formatTime={formatTime}
+          />
         </div>
       </div>
-      <AlertDialog open={deleteDialogOpen} onOpenChange={setDeleteDialogOpen}>
-        <AlertDialogContent
-          className="
-      w-[90vw] max-w-sm sm:max-w-md
-      p-6 rounded-2xl
-      border border-accent/30 bg-card shadow-xl
-      mx-auto text-center
-    "
-        >
-          <AlertDialogHeader>
-            <AlertDialogTitle className="text-lg sm:text-xl font-bold">
-              Delete Game History
-            </AlertDialogTitle>
-            <AlertDialogDescription className="text-sm sm:text-base text-muted-foreground mt-2">
-              Are you sure you want to delete this game from your history?
-            </AlertDialogDescription>
-          </AlertDialogHeader>
-          <AlertDialogFooter className="flex flex-col gap-2 mt-6">
-            <AlertDialogAction className="w-full py-2.5 sm:py-3 text-base sm:text-sm">
-              Delete
-            </AlertDialogAction>
-            <AlertDialogCancel className="w-full py-2.5 sm:py-3 text-base sm:text-sm border border-border bg-muted/20">
-              Cancel
-            </AlertDialogCancel>
-          </AlertDialogFooter>
-        </AlertDialogContent>
-      </AlertDialog>
+      <DeleteDialog
+        open={deleteDialogOpen}
+        setOpen={setDeleteDialogOpen}
+        confirmDelete={confirmDelete}
+      />
     </div>
+  );
+}
+
+function ProfileCard({
+  user,
+  uploading,
+  uploadAvatar,
+  username,
+  setUsername,
+  updateProfile,
+  handleSignOut,
+}: any) {
+  return (
+    <Card className="p-6 border-2 border-accent/30 bg-card">
+      <div className="flex flex-col items-center space-y-4">
+        <div className="relative group">
+          <Avatar className="h-32 w-32 border-4 border-accent">
+            <AvatarImage src={user.avatar_url || undefined} />
+            <AvatarFallback className="bg-primary text-primary-foreground text-3xl">
+              {user.username?.charAt(0).toUpperCase() || <User />}
+            </AvatarFallback>
+          </Avatar>
+          <label
+            htmlFor="avatar-upload"
+            className="absolute inset-0 flex items-center justify-center bg-black/50 rounded-full opacity-0 group-hover:opacity-100 cursor-pointer transition-opacity"
+          >
+            <Upload className="h-8 w-8 text-white" />
+          </label>
+          <input
+            id="avatar-upload"
+            type="file"
+            accept="image/*"
+            onChange={uploadAvatar}
+            disabled={uploading}
+            className="hidden"
+          />
+        </div>
+        <div className="w-full space-y-3 text-center">
+          <h2 className="text-2xl font-bold text-accent">{user.username}</h2>
+          <p className="text-sm text-muted-foreground">{user.email}</p>
+          <Label htmlFor="username">Change Username</Label>
+          <Input
+            id="username"
+            value={username || user.username}
+            onChange={(e) => setUsername(e.target.value)}
+            placeholder="Enter new username"
+            className="mt-1"
+          />
+          <Button
+            onClick={updateProfile}
+            className="w-full bg-gradient-to-r from-primary to-accent"
+          >
+            Update Profile
+          </Button>
+          <Button
+            onClick={handleSignOut}
+            variant="outline"
+            className="w-full border-destructive text-destructive hover:bg-destructive/10"
+          >
+            <LogOut className="mr-2 h-4 w-4" /> Sign Out
+          </Button>
+        </div>
+      </div>
+    </Card>
+  );
+}
+
+function HistoryCard({ gameHistory, handleDeleteHistory, formatTime }: any) {
+  return (
+    <Card className="md:col-span-2 p-6 border-2 border-accent/30 bg-card">
+      <div className="flex items-center gap-3 mb-6">
+        <Clock className="h-6 w-6 text-accent" />
+        <h2 className="text-2xl font-bold">Game History</h2>
+      </div>
+      {gameHistory.length === 0 ? (
+        <div className="text-center py-12">
+          <Gamepad2 className="h-16 w-16 text-muted-foreground mx-auto mb-4" />
+          <p className="text-muted-foreground">
+            No games played yet. Start playing to see your history!
+          </p>
+        </div>
+      ) : (
+        <div className="space-y-3">
+          {gameHistory.map((history: GameHistory) => (
+            <div
+              key={history.id}
+              className="flex items-center justify-between p-4 rounded-lg bg-muted/30 border border-accent/20 hover:border-accent/40 transition-colors"
+            >
+              <div className="flex-1">
+                <p className="font-semibold">{history.gameTitle}</p>
+                <div className="flex items-center gap-4 mt-1 flex-wrap">
+                  <p className="text-sm text-muted-foreground">
+                    {new Date(history.playedAt).toLocaleDateString()} •{' '}
+                    <span className="text-accent">
+                      {new Date(history.playedAt).toLocaleTimeString([], {
+                        hour: '2-digit',
+                        minute: '2-digit',
+                      })}
+                    </span>
+                  </p>
+                  <div className="flex items-center gap-1 text-sm text-muted-foreground">
+                    <Clock className="w-3 h-3" />
+                    {formatTime(history.timeSpent)}
+                  </div>
+                  {history.score && (
+                    <p className="text-sm text-accent font-semibold">
+                      Score: {history.score.toLocaleString()}
+                    </p>
+                  )}
+                </div>
+              </div>
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={() => handleDeleteHistory(history.id)}
+                className="hover:bg-destructive/10 hover:text-destructive"
+              >
+                <Trash2 className="w-4 h-4" />
+              </Button>
+            </div>
+          ))}
+        </div>
+      )}
+    </Card>
+  );
+}
+
+function DeleteDialog({ open, setOpen, confirmDelete }: any) {
+  return (
+    <AlertDialog open={open} onOpenChange={setOpen}>
+      <AlertDialogContent className="w-[90vw] max-w-sm sm:max-w-md p-6 rounded-2xl border border-accent/30 bg-card shadow-xl mx-auto text-center">
+        <AlertDialogHeader>
+          <AlertDialogTitle className="text-lg sm:text-xl font-bold">
+            Delete Game History
+          </AlertDialogTitle>
+          <AlertDialogDescription className="text-sm sm:text-base text-muted-foreground mt-2">
+            Are you sure you want to delete this game from your history?
+          </AlertDialogDescription>
+        </AlertDialogHeader>
+        <AlertDialogFooter className="flex flex-col gap-2 mt-6">
+          <AlertDialogAction
+            onClick={confirmDelete}
+            className="w-full py-2.5 sm:py-3 text-base sm:text-sm"
+          >
+            Delete
+          </AlertDialogAction>
+          <AlertDialogCancel className="w-full py-2.5 sm:py-3 text-base sm:text-sm border border-border bg-muted/20">
+            Cancel
+          </AlertDialogCancel>
+        </AlertDialogFooter>
+      </AlertDialogContent>
+    </AlertDialog>
   );
 }

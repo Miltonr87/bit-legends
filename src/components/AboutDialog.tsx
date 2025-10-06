@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Info } from 'lucide-react';
+import { Info, ExternalLink } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import {
@@ -20,7 +20,7 @@ export const AboutDialog = () => {
         <Button
           variant="ghost"
           size="lg"
-          className="hover:text-accent px-2 sm:px-4"
+          className="text-center hover:text-accent px-2 sm:px-4"
         >
           <Info className="h-5 w-5 sm:mr-2" />
           About
@@ -36,8 +36,8 @@ export const AboutDialog = () => {
               <strong className="text-primary">Bit Legends</strong> is a
               retro-inspired gaming platform that revives the nostalgia of
               arcade and console classics. All playable directly in your
-              browser. Built for dreamers who grew up with the 8-bit/16-bit era
-              of console adventures.
+              browser. Built for dreamers who grew up with the 16-bit era of
+              console adventures.
             </p>
             <div>
               <h4 className="font-semibold text-accent mb-3">
@@ -66,16 +66,16 @@ export const AboutDialog = () => {
                 ))}
               </div>
             </div>
-            <div className="pt-4 border-t border-border/40 text-center">
-              <p className="text-sm">
-                Created by{' '}
+            <div className="pt-6 border-t border-border">
+              <p className="text-center text-sm text-muted-foreground flex items-center justify-center gap-1">
                 <a
                   href="https://miltonr87.vercel.app/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-accent font-medium hover:underline hover:text-primary transition-colors"
+                  className="hover:text-accent transition-colors font-medium flex items-center gap-1"
                 >
                   Milton Rodrigues
+                  <ExternalLink className="w-4 h-4" />
                 </a>
               </p>
             </div>

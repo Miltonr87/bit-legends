@@ -25,7 +25,7 @@ export const Header = () => {
   return (
     <header className="sticky top-0 z-50 border-b border-border/50 backdrop-blur-md bg-background/80">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-2 sm:gap-3 group">
+        <Link to="/" className="flex items-center gap-3 sm:gap-4 group">
           <div className="relative">
             <Gamepad2 className="h-6 w-6 sm:h-8 sm:w-8 text-accent group-hover:text-accent/80 transition-colors" />
             <div className="absolute inset-0 blur-xl bg-accent/30 group-hover:bg-accent/40 transition-all" />
@@ -34,7 +34,7 @@ export const Header = () => {
             Bit Legends
           </h1>
         </Link>
-        <nav className="flex items-center gap-2 sm:gap-4">
+        <nav className="flex items-center gap-6 sm:gap-8">
           <AboutDialog />
           <Link to="/profile">
             <Button
@@ -54,7 +54,7 @@ export const Header = () => {
               ) : (
                 <User className="h-4 w-4 sm:mr-1 text-accent" />
               )}
-              <span className="hidden sm:inline">
+              <span className="hidden sm:inline font-medium">
                 {user ? user.username || 'Profile' : 'Sign In'}
               </span>
             </Button>

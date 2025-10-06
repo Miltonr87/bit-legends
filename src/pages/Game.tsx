@@ -32,8 +32,6 @@ const Game = () => {
 
   const [starRating, setStarRating] = useState<number>(0);
   const [isMobile, setIsMobile] = useState<boolean>(false);
-  console.log('IsMobile', isMobile);
-
   const startTimeRef = useRef<number>(Date.now());
   const gameIframeRef = useRef<HTMLDivElement>(null);
 
