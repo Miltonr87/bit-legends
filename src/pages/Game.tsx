@@ -214,16 +214,16 @@ const Game = () => {
                 <iframe
                   src={iframeUrl}
                   className="absolute inset-0 w-full h-full rounded-lg"
-                  sandbox="allow-scripts allow-pointer-lock"
-                  referrerPolicy="no-referrer"
                   title={game.title}
+                  referrerPolicy="no-referrer"
                   allow="gamepad; fullscreen; autoplay; orientation-lock; encrypted-media; picture-in-picture"
-                  allowFullScreen={true}
+                  allowFullScreen
                   style={{
                     border: 'none',
                     overflow: 'hidden',
                     backgroundColor: 'black',
                   }}
+                  sandbox="allow-scripts allow-same-origin allow-pointer-lock allow-forms allow-presentation"
                 ></iframe>
               </div>
               <div className="p-3 sm:p-4 bg-muted/30 border-t border-accent/20">
