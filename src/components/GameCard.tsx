@@ -8,7 +8,6 @@ interface GameCardProps {
 }
 
 export const GameCard = ({ game }: GameCardProps) => {
-  console.log('game', game);
   return (
     <Link to={`/game/${game.id}`}>
       <Card className="group game-card-hover overflow-hidden bg-card border-2 border-border hover:border-accent h-full flex flex-col">
