@@ -23,6 +23,7 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import { useDisplayDevice } from '@/hooks/useDisplayDevice';
+import { EmulatorCDN } from '@/components/EmulatorCDN';
 
 const Game = () => {
   const { id } = useParams();
@@ -31,11 +32,11 @@ const Game = () => {
   const [starRating, setStarRating] = useState<number>(0);
   const [isMobile, setIsMobile] = useState<boolean>(false);
   const startTimeRef = useRef<number>(Date.now());
-  const gameIframeRef = useRef<HTMLDivElement>(null);
 
   const { toast } = useToast();
   const deviceInfo = useDisplayDevice();
 
+  // 🔍 Detect mobile screen
   useEffect(() => {
     const mm = window.matchMedia('(max-width: 639px)');
     const apply = () => setIsMobile(mm.matches);
@@ -44,12 +45,14 @@ const Game = () => {
     return () => mm.removeEventListener('change', apply);
   }, []);
 
+  // ⭐ Load saved rating
   useEffect(() => {
     if (!game) return;
     const saved = localStorage.getItem(`game_rating_${game.id}`);
     if (saved) setStarRating(parseInt(saved, 10));
   }, [game]);
 
+  // ⏱️ Track time spent playing
   useEffect(() => {
     if (game) startTimeRef.current = Date.now();
     return () => {
@@ -64,6 +67,7 @@ const Game = () => {
     };
   }, [game]);
 
+  // ⭐ Handle rating click
   const handleStarClick = (rating: number) => {
     if (!game) return;
     setStarRating(rating);
@@ -76,43 +80,14 @@ const Game = () => {
     });
   };
 
+  // 📤 Handle WhatsApp share
   const handleWhatsAppShare = () => {
     if (!game) return;
     const text = `Check out ${game.title} on Bit Legends! ${window.location.href}`;
     window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');
   };
 
-  const toggleFullscreen = async () => {
-    const container = gameIframeRef.current;
-    if (!container) return;
-    const iframe = container.querySelector('iframe');
-    if (!iframe) return;
-
-    try {
-      if (!document.fullscreenElement && !document.webkitFullscreenElement) {
-        if (iframe.requestFullscreen) {
-          await iframe.requestFullscreen();
-        } else if (iframe.webkitRequestFullscreen) {
-          iframe.webkitRequestFullscreen();
-        }
-      } else {
-        if (document.exitFullscreen) {
-          await document.exitFullscreen();
-        } else if (document.webkitExitFullscreen) {
-          document.webkitExitFullscreen();
-        }
-      }
-    } catch (error) {
-      console.error('Fullscreen failed:', error);
-      toast({
-        title: 'Fullscreen not supported',
-        description:
-          'Your device or browser may not allow fullscreen mode for embedded games.',
-        variant: 'destructive',
-      });
-    }
-  };
-
+  // 🚫 Not found fallback
   if (!game) {
     return (
       <div className="min-h-screen">
@@ -130,15 +105,30 @@ const Game = () => {
     );
   }
 
-  // need to add a proxy
-  const iframeUrl =
-    game.embedUrl ||
-    `https://www.retrogames.cc/embed/${game.embedId}-${game.slug}.html`;
+  // 🧠 Auto-select emulator core
+  const getCoreByPlatform = (platform: string) => {
+    const map: Record<string, string> = {
+      SNES: 'snes',
+      'Super Nintendo': 'snes',
+      Genesis: 'segaMD',
+      'Mega Drive': 'segaMD',
+      NES: 'nes',
+      Nintendo: 'nes',
+      'Game Boy': 'gba',
+      GBA: 'gba',
+      Arcade: 'arcade',
+    };
+    return map[platform] || 'arcade';
+  };
+
+  const core = 'snes';
+  const romUrl = `${window.location.origin}/rom/sf2.zip`;
 
   return (
     <div className="min-h-screen">
       <Header />
       <div className="container mx-auto px-4 py-6 sm:py-8">
+        {/* Back Button */}
         <div className="mb-4 sm:mb-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
           <Link to="/">
             <Button
@@ -150,9 +140,12 @@ const Game = () => {
             </Button>
           </Link>
         </div>
+
         <div className="grid lg:grid-cols-3 gap-4 sm:gap-8">
+          {/* 🎮 Left: Emulator + Info */}
           <div className="lg:col-span-2 space-y-4 sm:space-y-6">
             <Card className="overflow-hidden border-2 border-accent/30 bg-card">
+              {/* Header */}
               <div className="bg-gradient-to-r from-primary/20 to-accent/20 p-3 sm:p-4 border-b border-accent/30">
                 <div className="flex items-center justify-between gap-2">
                   <div className="flex-1 min-w-0">
@@ -164,6 +157,7 @@ const Game = () => {
                     </p>
                   </div>
                   <div className="flex items-center gap-1 sm:gap-2 flex-shrink-0">
+                    {/* Rating */}
                     <div className="hidden sm:flex gap-1">
                       {[1, 2, 3, 4, 5].map((rating) => (
                         <button
@@ -185,6 +179,8 @@ const Game = () => {
                         </button>
                       ))}
                     </div>
+
+                    {/* Share */}
                     <DropdownMenu>
                       <DropdownMenuTrigger asChild>
                         <Button
@@ -205,28 +201,18 @@ const Game = () => {
                   </div>
                 </div>
               </div>
+
+              {/* ✅ Emulator Area */}
               <div
-                ref={gameIframeRef}
                 className="relative bg-black rounded-lg overflow-hidden"
                 style={
                   isMobile ? { height: 'calc(68vh)' } : { aspectRatio: '4/3' }
                 }
               >
-                <iframe
-                  src={iframeUrl}
-                  className="absolute inset-0 w-full h-full rounded-lg"
-                  title={game.title}
-                  referrerPolicy="no-referrer"
-                  allow="gamepad; fullscreen; autoplay; orientation-lock; encrypted-media; picture-in-picture"
-                  allowFullScreen
-                  style={{
-                    border: 'none',
-                    overflow: 'hidden',
-                    backgroundColor: 'black',
-                  }}
-                  sandbox="allow-scripts allow-same-origin allow-pointer-lock allow-forms allow-presentation"
-                ></iframe>
+                <EmulatorCDN romUrl={romUrl} core={core} />
               </div>
+
+              {/* Info Bar */}
               <div className="p-3 sm:p-4 bg-muted/30 border-t border-accent/20">
                 <div className="flex flex-col sm:flex-row sm:flex-wrap gap-2 sm:gap-4 text-xs sm:text-sm">
                   <div className="flex items-center gap-2">
@@ -238,6 +224,8 @@ const Game = () => {
                 </div>
               </div>
             </Card>
+
+            {/* 📝 About */}
             <Card className="p-4 sm:p-6 border-2 border-border bg-card">
               <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-accent">
                 About This Game
@@ -247,32 +235,40 @@ const Game = () => {
               </p>
             </Card>
           </div>
+
+          {/* 📊 Right: Metadata */}
           <div className="space-y-4 sm:space-y-6">
             <Card className="p-4 sm:p-6 border-2 border-accent/30 bg-gradient-to-br from-card to-card/50">
               <div className="space-y-4">
-                <div className="flex items-start gap-3 pb-4 border-b border-border">
-                  <Calendar className="h-5 w-5 text-accent mt-1" />
-                  <div>
-                    <p className="text-sm text-muted-foreground">
-                      Release Year
-                    </p>
-                    <p className="font-semibold text-lg">{game.year}</p>
+                {[
+                  {
+                    icon: <Calendar className="h-5 w-5 text-accent mt-1" />,
+                    label: 'Release Year',
+                    value: game.year,
+                  },
+                  {
+                    icon: <Gamepad2 className="h-5 w-5 text-accent mt-1" />,
+                    label: 'Genre',
+                    value: game.genre,
+                  },
+                  {
+                    icon: <Users className="h-5 w-5 text-accent mt-1" />,
+                    label: 'Players',
+                    value: game.players,
+                  },
+                ].map(({ icon, label, value }, i) => (
+                  <div
+                    key={i}
+                    className="flex items-start gap-3 pb-4 border-b border-border last:border-none"
+                  >
+                    {icon}
+                    <div>
+                      <p className="text-sm text-muted-foreground">{label}</p>
+                      <p className="font-semibold text-lg">{value}</p>
+                    </div>
                   </div>
-                </div>
-                <div className="flex items-start gap-3 pb-4 border-b border-border">
-                  <Gamepad2 className="h-5 w-5 text-accent mt-1" />
-                  <div>
-                    <p className="text-sm text-muted-foreground">Genre</p>
-                    <p className="font-semibold text-lg">{game.genre}</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3 pb-4 border-b border-border">
-                  <Users className="h-5 w-5 text-accent mt-1" />
-                  <div>
-                    <p className="text-sm text-muted-foreground">Players</p>
-                    <p className="font-semibold text-lg">{game.players}</p>
-                  </div>
-                </div>
+                ))}
+
                 <div className="flex items-start gap-3">
                   <div className="h-5 w-5 flex items-center justify-center mt-1">
                     <div className="h-3 w-3 rounded-full bg-accent animate-glow-pulse" />
@@ -284,6 +280,7 @@ const Game = () => {
                 </div>
               </div>
             </Card>
+
             <Card className="p-6 border-2 border-primary/30 bg-gradient-to-br from-primary/10 to-transparent">
               <h3 className="font-bold text-lg mb-3 text-primary">Platform</h3>
               <div className="flex items-center gap-3">
@@ -298,6 +295,7 @@ const Game = () => {
                 </div>
               </div>
             </Card>
+
             {!isMobile && <ControllerSetup />}
           </div>
         </div>
