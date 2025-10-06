@@ -85,21 +85,20 @@ const Game = () => {
   const toggleFullscreen = async () => {
     const container = gameIframeRef.current;
     if (!container) return;
-    const iframe = container.querySelector('iframe');
-    if (!iframe) return;
 
     try {
       if (!document.fullscreenElement && !document.webkitFullscreenElement) {
-        if (iframe.requestFullscreen) {
-          await iframe.requestFullscreen();
-        } else if (iframe.webkitRequestFullscreen) {
-          iframe.webkitRequestFullscreen();
+        // ✅ Request fullscreen on the container, not the iframe
+        if (container.requestFullscreen) {
+          await container.requestFullscreen();
+        } else if ((container as any).webkitRequestFullscreen) {
+          (container as any).webkitRequestFullscreen();
         }
       } else {
         if (document.exitFullscreen) {
           await document.exitFullscreen();
-        } else if (document.webkitExitFullscreen) {
-          document.webkitExitFullscreen();
+        } else if ((document as any).webkitExitFullscreen) {
+          (document as any).webkitExitFullscreen();
         }
       }
     } catch (error) {
@@ -107,7 +106,7 @@ const Game = () => {
       toast({
         title: 'Fullscreen not supported',
         description:
-          'Your device or browser may not allow fullscreen mode for embedded games.',
+          'Your browser may not allow fullscreen mode for this embedded game.',
         variant: 'destructive',
       });
     }
