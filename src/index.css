@@ -24,6 +24,19 @@ iframe[src*='retrogames.cc/ad.html'] {
   pointer-events: none !important;
 }
 
+.fullscreen-sim {
+  position: fixed !important;
+  inset: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  z-index: 9999 !important;
+  background: black !important;
+}
+.fullscreen-sim iframe {
+  width: 100% !important;
+  height: 100% !important;
+}
+
 @layer base {
   :root {
     --background: 220 20% 8%;

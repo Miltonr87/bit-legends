@@ -82,34 +82,11 @@ const Game = () => {
     window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');
   };
 
-  const toggleFullscreen = async () => {
+  const toggleFullscreen = () => {
     const container = gameIframeRef.current;
     if (!container) return;
 
-    try {
-      if (!document.fullscreenElement && !document.webkitFullscreenElement) {
-        // ✅ Request fullscreen on the container, not the iframe
-        if (container.requestFullscreen) {
-          await container.requestFullscreen();
-        } else if ((container as any).webkitRequestFullscreen) {
-          (container as any).webkitRequestFullscreen();
-        }
-      } else {
-        if (document.exitFullscreen) {
-          await document.exitFullscreen();
-        } else if ((document as any).webkitExitFullscreen) {
-          (document as any).webkitExitFullscreen();
-        }
-      }
-    } catch (error) {
-      console.error('Fullscreen failed:', error);
-      toast({
-        title: 'Fullscreen not supported',
-        description:
-          'Your browser may not allow fullscreen mode for this embedded game.',
-        variant: 'destructive',
-      });
-    }
+    container.classList.toggle('fullscreen-sim');
   };
 
   if (!game) {
