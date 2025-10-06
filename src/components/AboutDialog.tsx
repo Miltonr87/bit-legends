@@ -47,7 +47,6 @@ export const AboutDialog = () => {
                 {[
                   'ReactJS',
                   'TypeScript',
-                  'Vite',
                   'Tailwind CSS',
                   'Shadcn UI',
                   'Framer Motion',
