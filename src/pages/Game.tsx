@@ -224,7 +224,6 @@ const Game = () => {
                     overflow: 'hidden',
                     backgroundColor: 'black',
                   }}
-                  sandbox="allow-scripts allow-same-origin allow-popups allow-forms allow-pointer-lock allow-presentation allow-modals"
                 ></iframe>
               </div>
               <div className="p-3 sm:p-4 bg-muted/30 border-t border-accent/20">
