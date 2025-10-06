@@ -339,7 +339,7 @@ export const games: Game[] = [
     id: "marvelsuperheroes",
     title: "Marvel Super Heroes",
     slug: "marvel-super-heroes",
-    embedId: "marvel-super-heroes",
+    embedId: "9097-marvel-super-heroes-951117-brazil",
     year: 1995,
     genre: "Marvel",
     folder: "Marvel vs Capcom",
@@ -351,7 +351,6 @@ export const games: Game[] = [
     players: "1-2 Players",
     developer: "Capcom",
     coverImage: "/assets/covers/marvelheroes.png",
-    embedUrl: "https://www.minijogos.com.br/embed/marvel-super-heroes",
     platform: "Arcade",
   },
   {
