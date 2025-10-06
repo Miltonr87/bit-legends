@@ -215,6 +215,7 @@ const Game = () => {
                   src={iframeUrl}
                   className="absolute inset-0 w-full h-full rounded-lg"
                   sandbox="allow-scripts allow-pointer-lock"
+                  referrerPolicy="no-referrer"
                   title={game.title}
                   allow="gamepad; fullscreen; autoplay; orientation-lock; encrypted-media; picture-in-picture"
                   allowFullScreen={true}
