@@ -130,6 +130,7 @@ const Game = () => {
     );
   }
 
+  // need to add a proxy
   const iframeUrl =
     game.embedUrl ||
     `https://www.retrogames.cc/embed/${game.embedId}-${game.slug}.html`;
