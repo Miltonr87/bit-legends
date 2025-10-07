@@ -1,8 +1,6 @@
 import { beatnupGames, beatnupFilters } from "./games/beatemup";
 import { fightGames, fightFilters } from "./games/fight";
 import { raceGames, raceFilters } from "./games/race";
-// import { adventureGames, adventureFilters } from "./games/adventure";
-// import { sportsGames, sportsFilters } from "./games/sports";
 
 export interface Game {
     id: string;
@@ -33,6 +31,6 @@ export const seriesFilters = Array.from(
     new Set([
         ...beatnupFilters,
         ...fightFilters,
-        ...raceFilters,
+        ...raceFilters
     ])
 );

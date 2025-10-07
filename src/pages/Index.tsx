@@ -97,8 +97,9 @@ const Index = () => {
             <span className="text-foreground">16-Bit Game Collection</span>
           </h1>
           <p className="text-base sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-6 sm:mb-8 px-4">
-            Enter the ring and master the art of combat. Classic fighters,
-            iconic stages, and timeless duels reborn for the modern age.
+            Enter the ring and master the art of combat in different scenarios.
+            Classic fighters, iconic stages, and timeless duels reborn for the
+            modern age.
           </p>
           <div className="flex flex-wrap justify-center gap-2 sm:gap-4 text-xs sm:text-sm text-muted-foreground px-4">
             <div className="flex items-center gap-2 px-3 sm:px-4 py-2 bg-card/50 rounded-lg border border-border">

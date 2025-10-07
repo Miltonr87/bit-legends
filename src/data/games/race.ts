@@ -2,55 +2,18 @@ import { Game } from "../index";
 
 export const raceGames: Game[] = [
     {
-        id: "top-gear-snes",
-        title: "Top Gear",
-        slug: "top-gear-usa",
-        embedId: "23881",
-        year: 1992,
-        genre: "Racing",
-        folder: "Racing",
-        publisher: "Kemco",
-        characters: [],
-        description: "Classic SNES racing across multiple countries!",
-        longDescription:
-            "Top Gear sends players through eight countries in a competitive race. Choose from multiple cars and manage fuel & speed to qualify each stage. :contentReference[oaicite:0]{index=0}",
-        players: "1-2 Players",
-        developer: "Gremlin Graphics",
-        coverImage: "/assets/covers/top-gear.jpg",
-        platform: "Super Nintendo",
-    },
-    {
-        id: "top-gear-2",
-        title: "Top Gear 2",
-        slug: "top-gear-2-usa",
-        embedId: "24678",
-        year: 1993,
-        genre: "Racing",
-        folder: "Racing",
-        publisher: "Kemco",
-        characters: [],
-        description: "Sequel with upgrades and weather effects!",
-        longDescription:
-            "Top Gear 2 added purchasable upgrades, nitro, and weather effects, enhancing the formula from the original.",
-        players: "1-2 Players",
-        developer: "Kemco",
-        coverImage: "/assets/covers/top-gear2.jpg",
-        embedUrl: "https://www.retrogames.cc/embed/24678-top-gear-2-usa.html",
-        platform: "Super Nintendo",
-    },
-    {
         id: "lamborghini-american-challenge",
-        title: "Lamborghini",
+        title: "Lamborghini Challenge",
         slug: "lamborghini-american-challenge-usa",
         embedId: "24643",
         year: 1992,
-        genre: "Racing",
+        genre: "Fight Racing",
         folder: "Racing",
         publisher: "Todd-LucasArts / Titus",
         characters: [],
         description: "Exotic car racing in America!",
         longDescription:
-            "Race Lamborghinis across American landscapes in time trials and circuit challenges.",
+            "Race Lamborghinis across iconic American highways, fighting rivals for glory through intense time trials and circuit challenges.",
         players: "1 Player",
         developer: "Titus",
         coverImage: "/assets/covers/lamborghini.jpg",
@@ -62,7 +25,7 @@ export const raceGames: Game[] = [
         slug: "rock-n-roll-racing-usa",
         embedId: "24053",
         year: 1993,
-        genre: "Racing",
+        genre: "Fight Racing",
         folder: "Racing",
         publisher: "Interplay",
         characters: [],
@@ -80,7 +43,7 @@ export const raceGames: Game[] = [
         slug: "biker-mice-from-mars-usa",
         embedId: "20158",
         year: 1994,
-        genre: "Racing",
+        genre: "Fight Racing",
         folder: "Racing",
         publisher: "Konami",
         characters: ["Throttle", "Vinnie", "M.C."],
@@ -95,5 +58,5 @@ export const raceGames: Game[] = [
 ];
 
 export const raceFilters = [
-    "Racing",
+    "Fight Racing",
 ];

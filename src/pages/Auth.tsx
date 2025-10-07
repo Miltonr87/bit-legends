@@ -29,7 +29,6 @@ const Auth = () => {
   return (
     <div className="min-h-screen flex items-center justify-center p-4">
       <div className="absolute inset-0 scanline pointer-events-none" />
-
       <Card className="w-full max-w-md p-8 bg-card border-2 border-accent/30 relative z-10">
         <div className="flex flex-col items-center mb-8">
           <div className="relative mb-4">
@@ -41,7 +40,6 @@ const Auth = () => {
           </h1>
           <p className="text-muted-foreground mt-2">Sign in with Google</p>
         </div>
-
         <Button
           type="button"
           variant="outline"
