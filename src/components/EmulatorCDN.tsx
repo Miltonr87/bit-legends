@@ -13,11 +13,14 @@ export function EmulatorCDN({ romUrl, core = 'arcade' }: EmulatorCDNProps) {
   useEffect(() => {
     if (!romUrl) return;
     let mounted = true;
+
+    // 📱 Detect mobile screen
     const mm = window.matchMedia('(max-width: 639px)');
     const apply = () => setIsMobile(mm.matches);
     apply();
     mm.addEventListener('change', apply);
 
+    // 🧩 Load core config
     const loadCoreConfig = async () => {
       try {
         const apiUrl = `https://www.emulatorjs.com/api/v?name=${core}&_t=${Date.now()}`;
@@ -28,10 +31,9 @@ export function EmulatorCDN({ romUrl, core = 'arcade' }: EmulatorCDNProps) {
         console.error('❌ Failed to fetch EmulatorJS core config', error);
       }
     };
-
     loadCoreConfig();
 
-    // ✅ EmulatorJS global setup
+    // ⚙️ EmulatorJS global setup
     const CDN_BASE = 'https://emulatorjs.vercel.app/data/';
     (window as any).EJS_player = '#emulator-container';
     (window as any).EJS_gameUrl = romUrl;
@@ -40,6 +42,7 @@ export function EmulatorCDN({ romUrl, core = 'arcade' }: EmulatorCDNProps) {
     (window as any).EJS_buttons = true;
     (window as any).usingVersion = '0.5.49';
 
+    // 📦 Load EmulatorJS script
     const loadEmulatorScript = () => {
       if (document.querySelector('script[data-emulatorjs]')) {
         setIsLoaded(true);
@@ -65,19 +68,35 @@ export function EmulatorCDN({ romUrl, core = 'arcade' }: EmulatorCDNProps) {
 
       document.body.appendChild(script);
     };
-
     loadEmulatorScript();
 
+    // 🧹 Cleanup on unmount or ROM/core change
     return () => {
       mounted = false;
       mm.removeEventListener('change', apply);
-      if (containerRef.current) containerRef.current.innerHTML = '';
-      delete (window as any).EJS_player;
-      delete (window as any).EJS_gameUrl;
-      delete (window as any).EJS_core;
-      delete (window as any).EJS_pathtodata;
-      delete (window as any).EJS_buttons;
-      delete (window as any).usingVersion;
+
+      try {
+        // ✅ Stop emulator cleanly if running
+        const emulator = (window as any).EJS_emulator;
+        if (emulator) {
+          emulator.pause?.();
+          emulator.stop?.();
+          (window as any).EJS_emulator = null;
+        }
+
+        // ✅ Clear container
+        if (containerRef.current) containerRef.current.innerHTML = '';
+
+        // ✅ Remove global EmulatorJS variables
+        delete (window as any).EJS_player;
+        delete (window as any).EJS_gameUrl;
+        delete (window as any).EJS_core;
+        delete (window as any).EJS_pathtodata;
+        delete (window as any).EJS_buttons;
+        delete (window as any).usingVersion;
+      } catch (err) {
+        console.warn('⚠️ Failed to clean up EmulatorJS:', err);
+      }
     };
   }, [romUrl, core]);
 

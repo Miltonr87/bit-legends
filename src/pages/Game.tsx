@@ -67,6 +67,29 @@ const Game = () => {
     };
   }, [game]);
 
+  useEffect(() => {
+    return () => {
+      try {
+        // Stop EmulatorJS if running
+        if ((window as any).EJS_emulator) {
+          (window as any).EJS_emulator.pause?.();
+          (window as any).EJS_emulator.stop?.();
+          (window as any).EJS_emulator = null;
+        }
+
+        // Remove iframe or canvas from DOM
+        const container = document.querySelector('#emulator-screen');
+        if (container) container.innerHTML = '';
+
+        // Clear any leftover globals
+        delete (window as any).EJS_gameUrl;
+        delete (window as any).EJS_player;
+      } catch (err) {
+        console.warn('Failed to clean EmulatorJS:', err);
+      }
+    };
+  }, []);
+
   // ⭐ Handle rating click
   const handleStarClick = (rating: number) => {
     if (!game) return;
@@ -214,7 +237,7 @@ const Game = () => {
                   isMobile ? { height: 'calc(72vh)' } : { aspectRatio: '4/3' }
                 }
               >
-                <EmulatorCDN romUrl={romUrl} core={core} />
+                <EmulatorCDN romUrl={romUrl} core={core} key={game.id} />
               </div>
 
               {/* Info Bar */}
