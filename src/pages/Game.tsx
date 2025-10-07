@@ -1,6 +1,6 @@
 import { useParams, Link } from 'react-router-dom';
 import { useEffect, useRef, useState } from 'react';
-import { games } from '@/data/games';
+import { allGames } from '../data';
 import { Header } from '@/components/Header';
 import { Button } from '@/components/ui/button';
 import {
@@ -23,10 +23,11 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import { useDisplayDevice } from '@/hooks/useDisplayDevice';
+import type { Game } from '../data';
 
 const Game = () => {
   const { id } = useParams();
-  const game = games.find((g) => g.id === id);
+  const game: Game | undefined = allGames.find((g) => g.id === id);
 
   const [starRating, setStarRating] = useState<number>(0);
   const [isMobile, setIsMobile] = useState<boolean>(false);
@@ -36,6 +37,7 @@ const Game = () => {
   const { toast } = useToast();
   const deviceInfo = useDisplayDevice();
 
+  // ✅ Detect mobile device
   useEffect(() => {
     const mm = window.matchMedia('(max-width: 639px)');
     const apply = () => setIsMobile(mm.matches);
@@ -44,12 +46,14 @@ const Game = () => {
     return () => mm.removeEventListener('change', apply);
   }, []);
 
+  // ✅ Load saved rating
   useEffect(() => {
     if (!game) return;
     const saved = localStorage.getItem(`game_rating_${game.id}`);
     if (saved) setStarRating(parseInt(saved, 10));
   }, [game]);
 
+  // ✅ Track play time
   useEffect(() => {
     if (game) startTimeRef.current = Date.now();
     return () => {
@@ -64,6 +68,7 @@ const Game = () => {
     };
   }, [game]);
 
+  // ✅ Handle rating
   const handleStarClick = (rating: number) => {
     if (!game) return;
     setStarRating(rating);
@@ -76,19 +81,21 @@ const Game = () => {
     });
   };
 
+  // ✅ Share
   const handleWhatsAppShare = () => {
     if (!game) return;
     const text = `Check out ${game.title} on Bit Legends! ${window.location.href}`;
     window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');
   };
 
+  // ✅ Fullscreen toggle
   const toggleFullscreen = () => {
     const container = gameIframeRef.current;
     if (!container) return;
-
     container.classList.toggle('fullscreen-sim');
   };
 
+  // ✅ Not found fallback
   if (!game) {
     return (
       <div className="min-h-screen">
@@ -106,7 +113,7 @@ const Game = () => {
     );
   }
 
-  // need to add a proxy
+  // ✅ Embed URL handling
   const iframeUrl =
     game.embedUrl ||
     `https://www.retrogames.cc/embed/${game.embedId}-${game.slug}.html`;
@@ -126,8 +133,11 @@ const Game = () => {
             </Button>
           </Link>
         </div>
+
         <div className="grid lg:grid-cols-3 gap-4 sm:gap-8">
+          {/* Left section */}
           <div className="lg:col-span-2 space-y-4 sm:space-y-6">
+            {/* Game Player */}
             <Card className="overflow-hidden border-2 border-accent/30 bg-card">
               <div className="bg-gradient-to-r from-primary/20 to-accent/20 p-3 sm:p-4 border-b border-accent/30">
                 <div className="flex items-center justify-between gap-2">
@@ -139,6 +149,8 @@ const Game = () => {
                       {game.developer} • {game.year}
                     </p>
                   </div>
+
+                  {/* Rating + Share */}
                   <div className="flex items-center gap-1 sm:gap-2 flex-shrink-0">
                     <div className="hidden sm:flex gap-1">
                       {[1, 2, 3, 4, 5].map((rating) => (
@@ -161,6 +173,7 @@ const Game = () => {
                         </button>
                       ))}
                     </div>
+
                     <DropdownMenu>
                       <DropdownMenuTrigger asChild>
                         <Button
@@ -181,6 +194,8 @@ const Game = () => {
                   </div>
                 </div>
               </div>
+
+              {/* Game Iframe */}
               <div
                 ref={gameIframeRef}
                 className="relative bg-black rounded-lg overflow-hidden"
@@ -202,7 +217,8 @@ const Game = () => {
                   }}
                   sandbox="allow-scripts allow-downloads allow-same-origin allow-pointer-lock allow-forms allow-presentation"
                 ></iframe>
-                {isMobile ? (
+
+                {isMobile && (
                   <button
                     onClick={toggleFullscreen}
                     className="absolute bottom-0 right-0 z-10 bg-black/60 text-white rounded px-3 py-1 text-xs sm:text-sm border border-white/20 hover:bg-black/10 transition-all"
@@ -210,10 +226,10 @@ const Game = () => {
                   >
                     ⛶
                   </button>
-                ) : (
-                  ''
                 )}
               </div>
+
+              {/* Device Info */}
               <div className="p-3 sm:p-4 bg-muted/30 border-t border-accent/20">
                 <div className="flex flex-col sm:flex-row sm:flex-wrap gap-2 sm:gap-4 text-xs sm:text-sm">
                   <div className="flex items-center gap-2">
@@ -225,6 +241,8 @@ const Game = () => {
                 </div>
               </div>
             </Card>
+
+            {/* Game Info */}
             <Card className="p-4 sm:p-6 border-2 border-border bg-card">
               <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-accent">
                 About This Game
@@ -234,6 +252,8 @@ const Game = () => {
               </p>
             </Card>
           </div>
+
+          {/* Right Sidebar */}
           <div className="space-y-4 sm:space-y-6">
             <Card className="p-4 sm:p-6 border-2 border-accent/30 bg-gradient-to-br from-card to-card/50">
               <div className="space-y-4">
@@ -246,6 +266,7 @@ const Game = () => {
                     <p className="font-semibold text-lg">{game.year}</p>
                   </div>
                 </div>
+
                 <div className="flex items-start gap-3 pb-4 border-b border-border">
                   <Gamepad2 className="h-5 w-5 text-accent mt-1" />
                   <div>
@@ -253,6 +274,7 @@ const Game = () => {
                     <p className="font-semibold text-lg">{game.genre}</p>
                   </div>
                 </div>
+
                 <div className="flex items-start gap-3 pb-4 border-b border-border">
                   <Users className="h-5 w-5 text-accent mt-1" />
                   <div>
@@ -260,6 +282,7 @@ const Game = () => {
                     <p className="font-semibold text-lg">{game.players}</p>
                   </div>
                 </div>
+
                 <div className="flex items-start gap-3">
                   <div className="h-5 w-5 flex items-center justify-center mt-1">
                     <div className="h-3 w-3 rounded-full bg-accent animate-glow-pulse" />
@@ -271,6 +294,8 @@ const Game = () => {
                 </div>
               </div>
             </Card>
+
+            {/* Platform */}
             <Card className="p-6 border-2 border-primary/30 bg-gradient-to-br from-primary/10 to-transparent">
               <h3 className="font-bold text-lg mb-3 text-primary">Platform</h3>
               <div className="flex items-center gap-3">
@@ -285,6 +310,7 @@ const Game = () => {
                 </div>
               </div>
             </Card>
+
             {!isMobile && <ControllerSetup />}
           </div>
         </div>
