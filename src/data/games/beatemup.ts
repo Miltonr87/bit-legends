@@ -369,7 +369,7 @@ export const beatnupGames: Game[] = [
     slug: "spawn-usa",
     embedId: "22470",
     year: 1995,
-    genre: "Urban",
+    genre: "Horror",
     folder: "Image Comics",
     publisher: "Acclaim",
     characters: ["Spawn", "Violator", "Overt-Kill", "Redeemer", "Angela"],
