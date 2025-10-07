@@ -10,7 +10,7 @@ export const fightGames: Game[] = [
         genre: "Horror",
         folder: "Mortal Kombat",
         publisher: "Acclaim",
-        characters: [],
+        characters: ["Liu Kang", "Kung Lao", "Sub-Zero", "Scorpion", "Shang Tsung"],
         description: "Run button and combo system!",
         longDescription:
             "Introducing run button and combination system to the series with even more brutal combat.",
@@ -28,7 +28,7 @@ export const fightGames: Game[] = [
         genre: "Horror",
         folder: "Mortal Kombat",
         publisher: "Acclaim",
-        characters: [],
+        characters: ["Liu Kang", "Kung Lao", "Sub-Zero", "Scorpion", "Shang Tsung", "Noob Saibot", "Strider", "Sonya Blade"],
         description: "The ultimate MK3!",
         longDescription:
             "The ultimate version with more characters and refined gameplay mechanics.",
@@ -46,7 +46,7 @@ export const fightGames: Game[] = [
         genre: "Tournament",
         folder: "Street Fighter",
         publisher: "Capcom",
-        characters: [],
+        characters: ["Ryu", "Ken", "Chun-li", "Guile", "M. Bison", "Vega", "Dhalsim", "Sagat", "Blanka", "Zangief"],
         description: "The game that revolutionized fighting games!",
         longDescription:
             "The game that revolutionized fighting games forever with 16 world warriors and legendary gameplay.",
@@ -64,7 +64,7 @@ export const fightGames: Game[] = [
         genre: "Tournament",
         folder: "Street Fighter",
         publisher: "Capcom",
-        characters: [],
+        characters: ["Ryu", "Ken", "Chun-li", "Guile", "M. Bison", "Vega", "Dhalsim", "Sagat", "Blanka", "Zangief"],
         description: "The Alpha series!",
         longDescription:
             "The Alpha series brings a new fighting style and new characters to the Street Fighter universe.",
@@ -130,7 +130,7 @@ export const fightGames: Game[] = [
         genre: "Tournament",
         folder: "The King of Fighters",
         publisher: "SNK",
-        characters: [],
+        characters: ["Iori Yagami", "Kyo Kusanagi", "Rugal Bernstein", "Joe Higashi", "Terry Bogard", "Andy Bogard", "Chang Koehan", "Blue Mary"],
         description: "The Dream Match!",
         longDescription:
             "Dream Match - No story, just pure fighting perfection. Considered by many the best KOF game.",
@@ -312,7 +312,7 @@ export const fightGames: Game[] = [
         genre: "Marvel",
         folder: "Marvel vs Capcom",
         publisher: "Capcom",
-        characters: [],
+        characters: ["Wolverine", "Ryu", "Ciclope", "Ken", "Juggernaut", "Zangief", "Akuma", "Apocalypse"],
         description: "Marvel vs Capcom begins!",
         longDescription:
             "Marvel mutants clash with Capcom's World Warriors in epic tag battles that started the crossover craze.",

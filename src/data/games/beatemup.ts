@@ -10,7 +10,7 @@ export const beatnupGames: Game[] = [
     genre: "Urban",
     folder: "Streets of Rage",
     publisher: "Sega",
-    characters: [],
+    characters: ["Adam Hunter", "Axel Stone", "Blaze Fielding"],
     description: "The start of the legendary beat 'em up trilogy!",
     longDescription:
       "Three young police officers fight a syndicate that controls a crime-ridden city in this Genesis classic.",
@@ -28,7 +28,7 @@ export const beatnupGames: Game[] = [
     genre: "Urban",
     folder: "Streets of Rage",
     publisher: "Sega",
-    characters: [],
+    characters: ["Axel Stone", "Blaze Fielding", "Eddie Hunter", "Max Thunder"],
     description: "The legendary beat 'em up masterpiece!",
     longDescription:
       "The legendary beat 'em up returns with improved graphics, gameplay, and an unforgettable soundtrack.",
@@ -46,7 +46,7 @@ export const beatnupGames: Game[] = [
     genre: "Urban",
     folder: "Streets of Rage",
     publisher: "Sega",
-    characters: [],
+    characters: ["Axel Stone", "Blaze Fielding", "Eddie Hunter", "Zan", "Victy"],
     description: "The epic conclusion to the trilogy!",
     longDescription:
       "The third installment adds new moves, multiple storylines, and a challenging difficulty curve.",
@@ -64,7 +64,7 @@ export const beatnupGames: Game[] = [
     genre: "Fantasy",
     folder: "Arcade",
     publisher: "Capcom",
-    characters: [],
+    characters: ["Aldo (Cleric)", "Ravel (Elf)", "Leger (Mage)", "Derel (Fighter)", "Vargas (Dwarf)"],
     description: "Fantasy beat 'em up adventure!",
     longDescription:
       "Embark on an epic fantasy adventure in this Capcom beat 'em up classic. Choose from five character classes and battle through hordes of monsters to defeat the evil dragon.",

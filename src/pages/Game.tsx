@@ -231,6 +231,33 @@ const Game = () => {
                 {game.longDescription}
               </p>
             </Card>
+            {game.characters && game.characters.length > 0 && (
+              <Card className="p-4 sm:p-6 border-2 border-accent/30 bg-gradient-to-br from-accent/5 to-transparent">
+                <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-accent flex items-center gap-2">
+                  <Users className="h-5 w-5 sm:h-6 sm:w-6" />
+                  Main Characters
+                </h2>
+
+                <div className="flex flex-wrap gap-2 sm:gap-3">
+                  {game.characters.map((char, index) => (
+                    <div
+                      key={index}
+                      className="relative px-3 sm:px-4 py-2 sm:py-2.5 rounded-xl bg-gradient-to-br from-primary/10 to-accent/10 
+                     border border-accent/20 shadow-[0_0_6px_rgba(255,255,255,0.05)] 
+                     text-sm sm:text-base font-semibold text-foreground/90 
+                     hover:from-primary/20 hover:to-accent/20 hover:border-accent/40 
+                     hover:scale-105 transition-all duration-300 ease-out 
+                     flex items-center gap-2"
+                    >
+                      <span className="text-xs sm:text-sm font-bold text-accent/70">
+                        #{index + 1}
+                      </span>
+                      <span className="truncate">{char}</span>
+                    </div>
+                  ))}
+                </div>
+              </Card>
+            )}
           </div>
           <div className="space-y-4 sm:space-y-6">
             <Card className="p-4 sm:p-6 border-2 border-accent/30 bg-gradient-to-br from-card to-card/50">

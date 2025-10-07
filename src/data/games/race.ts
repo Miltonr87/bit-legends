@@ -10,7 +10,7 @@ export const raceGames: Game[] = [
         genre: "Fight Race",
         folder: "Racing",
         publisher: "Todd-LucasArts / Titus",
-        characters: [],
+        characters: ["Pam", "Joe", "Sly"],
         description: "Exotic car racing in America!",
         longDescription:
             "Race Lamborghinis across iconic American highways, fighting rivals for glory through intense time trials and circuit challenges.",
@@ -28,7 +28,7 @@ export const raceGames: Game[] = [
         genre: "Fight Race",
         folder: "Racing",
         publisher: "Interplay",
-        characters: [],
+        characters: ["Snake Sanders", "Cyberhawk", "Jake Badlands", "Tarquinn", "Ivanzypher", "Katarina Lyons"],
         description: "Racing with rock soundtrack!",
         longDescription:
             "Rock N’ Roll Racing features vehicular combat and a licensed rock soundtrack as you race across planets.",
@@ -46,7 +46,7 @@ export const raceGames: Game[] = [
         genre: "Fight Race",
         folder: "Racing",
         publisher: "Konami",
-        characters: ["Throttle", "Vinnie", "M.C."],
+        characters: ["Throttle", "Vinnie", "Modo", "Limburger", "Greasepit", "Dr.Karbunkle"],
         description: "Cartoon motorcycle racing on Mars!",
         longDescription:
             "Based on the animated series, Biker Mice from Mars lets you race motorbikes across cosmic tracks and perform stunts.",
