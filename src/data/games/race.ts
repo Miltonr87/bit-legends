@@ -7,7 +7,7 @@ export const raceGames: Game[] = [
         slug: "lamborghini-american-challenge-usa",
         embedId: "24643",
         year: 1992,
-        genre: "Fight Racing",
+        genre: "Fight Race",
         folder: "Racing",
         publisher: "Todd-LucasArts / Titus",
         characters: [],
@@ -25,7 +25,7 @@ export const raceGames: Game[] = [
         slug: "rock-n-roll-racing-usa",
         embedId: "24053",
         year: 1993,
-        genre: "Fight Racing",
+        genre: "Fight Race",
         folder: "Racing",
         publisher: "Interplay",
         characters: [],
@@ -43,7 +43,7 @@ export const raceGames: Game[] = [
         slug: "biker-mice-from-mars-usa",
         embedId: "20158",
         year: 1994,
-        genre: "Fight Racing",
+        genre: "Fight Race",
         folder: "Racing",
         publisher: "Konami",
         characters: ["Throttle", "Vinnie", "M.C."],
@@ -58,5 +58,5 @@ export const raceGames: Game[] = [
 ];
 
 export const raceFilters = [
-    "Fight Racing",
+    "Fight Race",
 ];
