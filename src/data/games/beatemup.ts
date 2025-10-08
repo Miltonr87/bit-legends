@@ -393,7 +393,7 @@ export const beatnupGames: Game[] = [
     characters: ["Spawn", "Violator", "Overt-Kill", "Redeemer", "Angela"],
     description: "Enter Todd McFarlane’s dark comic world of Spawn!",
     longDescription:
-      "Control Spawn as he battles demons and street thugs through gothic urban landscapes in one of SNES’s darkest action titles.",
+      "Spawn is a dark, side-scrolling action game based on Todd McFarlane’s cult comic series, developed by Ukiyotei and published by Acclaim. You play as Al Simmons, a murdered soldier resurrected as the hellspawn Spawn, struggling between his demonic curse and lingering humanity. The gameplay mixes platforming and beat ’em up combat, with Spawn using his chains, cape attacks, and hell energy (a limited power resource) to fight street thugs, monsters, and demonic bosses like Overt-Kill, Violator, and Redeemer across gritty urban and infernal stages.",
     players: "1 Player",
     developer: "Ukiyotei",
     coverImage: "/assets/covers/spaawn.jpg",
