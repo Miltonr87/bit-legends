@@ -1,7 +1,7 @@
 import { Game } from "../index";
 
 export const raceGames: Game[] = [
-    {
+    /*{
         id: "lamborghini-american-challenge",
         title: "Lamborghini Challenge",
         slug: "lamborghini-american-challenge-usa",
@@ -18,7 +18,7 @@ export const raceGames: Game[] = [
         developer: "Titus",
         coverImage: "/assets/covers/lamborghini.jpg",
         platform: "Super Nintendo",
-    },
+    }, */
     {
         id: "rock-n-roll-racing",
         title: "Rock N’ Roll Racing",
