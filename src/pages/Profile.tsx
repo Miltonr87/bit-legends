@@ -33,7 +33,6 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
 } from '@/components/ui/alert-dialog';
-import { FavoriteGames } from '@/components/FavoriteGames';
 
 import { auth } from '@/lib/firebase';
 import { GoogleAuthProvider, signInWithPopup, signOut } from 'firebase/auth';
@@ -337,7 +336,6 @@ function ProfileCard({
         </div>
       </div>
       <br />
-      <FavoriteGames uid={user?.uid!} />
     </Card>
   );
 }

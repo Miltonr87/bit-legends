@@ -11,9 +11,9 @@ import Index from './pages/Index';
 import Game from './pages/Game';
 import Profile from './pages/Profile';
 import NotFound from './pages/NotFound';
+import { FavoriteGames } from './pages/FavoriteGames'; // ✅ Import Favorites page
 
 const queryClient = new QueryClient();
-
 const googleClientId = import.meta.env.VITE_GOOGLE_CLIENT_ID;
 
 const App = () => (
@@ -33,7 +33,8 @@ const App = () => (
               <Route path="/" element={<Index />} />
               <Route path="/game/:id" element={<Game />} />
               <Route path="/profile" element={<Profile />} />
-              {/* Catch-all route */}
+              <Route path="/favorites" element={<FavoriteGames />} />{' '}
+              {/* ✅ NEW */}
               <Route path="*" element={<NotFound />} />
             </Routes>
           </BrowserRouter>
