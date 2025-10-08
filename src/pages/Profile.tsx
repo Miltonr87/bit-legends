@@ -1,7 +1,5 @@
-// src/pages/Profile.tsx
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useGoogleLogin } from '@react-oauth/google';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   getGameHistory,
@@ -35,12 +33,17 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
 } from '@/components/ui/alert-dialog';
+import { FavoriteGames } from '@/components/FavoriteGames';
+
+import { auth } from '@/lib/firebase';
+import { GoogleAuthProvider, signInWithPopup, signOut } from 'firebase/auth';
 
 interface ProfileData {
   username: string;
   email: string;
   avatar_url: string | null;
   provider?: 'google' | 'local';
+  uid?: string;
 }
 
 export default function Profile() {
@@ -65,32 +68,30 @@ export default function Profile() {
     setGameHistory(history.slice(0, 10));
   };
 
-  const googleLogin = useGoogleLogin({
-    onSuccess: async (tokenResponse) => {
-      try {
-        toast('Logging in with Google...', { description: 'Please wait' });
-        const res = await fetch(
-          'https://www.googleapis.com/oauth2/v3/userinfo',
-          {
-            headers: { Authorization: `Bearer ${tokenResponse.access_token}` },
-          }
-        );
-        const profile = await res.json();
-        const googleUser: ProfileData = {
-          username: profile.name || profile.given_name || 'Player',
-          email: profile.email,
-          avatar_url: profile.picture,
-          provider: 'google',
-        };
-        localStorage.setItem('bitlegends_user', JSON.stringify(googleUser));
-        setUser(googleUser);
-        toast.success(`Welcome, ${googleUser.username}!`);
-      } catch {
-        toast.error('Google login failed');
-      }
-    },
-    onError: () => toast.error('Google login failed'),
-  });
+  // ✅ Firebase Google Sign-In
+  const handleGoogleLogin = async () => {
+    try {
+      toast('Logging in with Google...', { description: 'Please wait' });
+      const provider = new GoogleAuthProvider();
+      const userCred = await signInWithPopup(auth, provider);
+      const firebaseUser = userCred.user;
+
+      const googleUser: ProfileData = {
+        username: firebaseUser.displayName || 'Player',
+        email: firebaseUser.email || '',
+        avatar_url: firebaseUser.photoURL,
+        provider: 'google',
+        uid: firebaseUser.uid,
+      };
+
+      localStorage.setItem('bitlegends_user', JSON.stringify(googleUser));
+      setUser(googleUser);
+      toast.success(`Welcome, ${googleUser.username}!`);
+    } catch (err) {
+      console.error(err);
+      toast.error('Google login failed');
+    }
+  };
 
   const handleLocalLogin = () => {
     if (!emailInput.includes('@')) {
@@ -108,7 +109,10 @@ export default function Profile() {
     toast.success(`Welcome, ${localUser.username}!`);
   };
 
-  const handleSignOut = () => {
+  const handleSignOut = async () => {
+    try {
+      await signOut(auth);
+    } catch {}
     localStorage.removeItem('bitlegends_user');
     setUser(null);
     toast.success('Signed out successfully');
@@ -159,7 +163,7 @@ export default function Profile() {
     setHistoryToDelete(null);
   };
 
-  // LOGIN SCREEN
+  // --- LOGIN SCREEN ---
   if (!user) {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center px-4 py-10 text-center">
@@ -202,7 +206,7 @@ export default function Profile() {
                 transition={{ duration: 0.3 }}
               >
                 <Button
-                  onClick={() => googleLogin()}
+                  onClick={handleGoogleLogin}
                   className="w-full bg-gradient-to-r from-primary to-accent text-base sm:text-lg py-5"
                 >
                   <LogIn className="mr-2 h-5 w-5" /> Sign in with Google
@@ -238,7 +242,7 @@ export default function Profile() {
     );
   }
 
-  // PROFILE SCREEN
+  // --- PROFILE SCREEN ---
   return (
     <div className="min-h-screen">
       <Header />
@@ -268,6 +272,8 @@ export default function Profile() {
     </div>
   );
 }
+
+// ✅ Helper Components
 
 function ProfileCard({
   user,
@@ -303,6 +309,7 @@ function ProfileCard({
             className="hidden"
           />
         </div>
+
         <div className="w-full space-y-3 text-center">
           <h2 className="text-2xl font-bold text-accent">{user.username}</h2>
           <p className="text-sm text-muted-foreground">{user.email}</p>
@@ -329,6 +336,8 @@ function ProfileCard({
           </Button>
         </div>
       </div>
+      <br />
+      <FavoriteGames uid={user?.uid!} />
     </Card>
   );
 }

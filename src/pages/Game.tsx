@@ -8,9 +8,9 @@ import {
   Calendar,
   Users,
   Gamepad2,
-  Star,
   Share2,
   MessageCircle,
+  Heart,
 } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 import { ControllerSetup } from '@/components/ControllerSetup';
@@ -23,20 +23,21 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import { useDisplayDevice } from '@/hooks/useDisplayDevice';
+import { db, auth } from '@/lib/firebase';
+import { doc, setDoc, getDoc } from 'firebase/firestore';
 import type { Game } from '../data';
 
 const Game = () => {
   const { id } = useParams();
   const game: Game | undefined = allGames.find((g) => g.id === id);
-
-  const [starRating, setStarRating] = useState<number>(0);
-  const [isMobile, setIsMobile] = useState<boolean>(false);
+  const [isMobile, setIsMobile] = useState(false);
+  const [isFavorite, setIsFavorite] = useState(false);
   const startTimeRef = useRef<number>(Date.now());
   const gameIframeRef = useRef<HTMLDivElement>(null);
-
   const { toast } = useToast();
   const deviceInfo = useDisplayDevice();
 
+  // ✅ Detect mobile
   useEffect(() => {
     const mm = window.matchMedia('(max-width: 639px)');
     const apply = () => setIsMobile(mm.matches);
@@ -45,12 +46,7 @@ const Game = () => {
     return () => mm.removeEventListener('change', apply);
   }, []);
 
-  useEffect(() => {
-    if (!game) return;
-    const saved = localStorage.getItem(`game_rating_${game.id}`);
-    if (saved) setStarRating(parseInt(saved, 10));
-  }, [game]);
-
+  // ✅ Track game play time
   useEffect(() => {
     if (game) startTimeRef.current = Date.now();
     return () => {
@@ -65,30 +61,74 @@ const Game = () => {
     };
   }, [game]);
 
-  const handleStarClick = (rating: number) => {
+  // ✅ Check if game is already favorite
+  useEffect(() => {
+    const checkFavorite = async () => {
+      const user = auth.currentUser;
+      if (!user || !game) return;
+      const favRef = doc(db, 'favorites', user.uid, 'games', game.id);
+      const snapshot = await getDoc(favRef);
+      setIsFavorite(snapshot.exists());
+    };
+    checkFavorite();
+  }, [game]);
+
+  // ✅ Save game to favorites
+  const handleSaveFavorite = async () => {
+    const user = auth.currentUser;
+    if (!user) {
+      toast({
+        title: 'Sign in required',
+        description: 'You need to log in to save favorites.',
+        variant: 'destructive',
+      });
+      return;
+    }
+
     if (!game) return;
-    setStarRating(rating);
-    localStorage.setItem(`game_rating_${game.id}`, rating.toString());
-    toast({
-      title: 'Rating saved!',
-      description: `You rated ${game.title} ${rating} star${
-        rating !== 1 ? 's' : ''
-      }`,
-    });
+
+    try {
+      const favRef = doc(db, 'favorites', user.uid, 'games', game.id);
+
+      // ✅ Prevent undefined values
+      const gameData = {
+        title: game.title || 'Unknown Game',
+        cover: game.cover ?? null,
+        addedAt: new Date().toISOString(),
+      };
+
+      await setDoc(favRef, gameData);
+
+      setIsFavorite(true);
+      toast({
+        title: 'Saved!',
+        description: `${game.title} added to your favorites.`,
+      });
+    } catch (error) {
+      console.error('Error saving favorite:', error);
+      toast({
+        title: 'Error',
+        description: 'Could not save this game.',
+        variant: 'destructive',
+      });
+    }
   };
 
+  // ✅ Share via WhatsApp
   const handleWhatsAppShare = () => {
     if (!game) return;
     const text = `Check out ${game.title} on Bit Legends! ${window.location.href}`;
     window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');
   };
 
+  // ✅ Toggle fullscreen on mobile
   const toggleFullscreen = () => {
     const container = gameIframeRef.current;
     if (!container) return;
     container.classList.toggle('fullscreen-sim');
   };
 
+  // ✅ Handle not found
   if (!game) {
     return (
       <div className="min-h-screen">
@@ -125,7 +165,9 @@ const Game = () => {
             </Button>
           </Link>
         </div>
+
         <div className="grid lg:grid-cols-3 gap-4 sm:gap-8">
+          {/* LEFT SIDE */}
           <div className="lg:col-span-2 space-y-4 sm:space-y-6">
             <Card className="overflow-hidden border-2 border-accent/30 bg-card">
               <div className="bg-gradient-to-r from-primary/20 to-accent/20 p-3 sm:p-4 border-b border-accent/30">
@@ -138,28 +180,27 @@ const Game = () => {
                       {game.developer} • {game.year}
                     </p>
                   </div>
-                  <div className="flex items-center gap-1 sm:gap-2 flex-shrink-0">
-                    <div className="hidden sm:flex gap-1">
-                      {[1, 2, 3, 4, 5].map((rating) => (
-                        <button
-                          key={rating}
-                          onClick={() => handleStarClick(rating)}
-                          className="transition-transform hover:scale-110"
-                          type="button"
-                          aria-label={`Rate ${rating} star${
-                            rating !== 1 ? 's' : ''
-                          }`}
-                        >
-                          <Star
-                            className={`h-5 w-5 sm:h-6 sm:w-6 ${
-                              rating <= starRating
-                                ? 'fill-yellow-400 text-yellow-400'
-                                : 'text-muted-foreground'
-                            }`}
-                          />
-                        </button>
-                      ))}
-                    </div>
+
+                  {/* ✅ Save to Favorites */}
+                  <div className="flex items-center gap-2">
+                    <Button
+                      onClick={handleSaveFavorite}
+                      disabled={isFavorite}
+                      className={`flex items-center gap-2 ${
+                        isFavorite
+                          ? 'bg-green-500/20 text-green-400 border-green-400'
+                          : 'bg-gradient-to-r from-primary to-accent'
+                      }`}
+                    >
+                      <Heart
+                        className={`h-5 w-5 ${
+                          isFavorite ? 'fill-green-400' : 'text-white'
+                        }`}
+                      />
+                      {isFavorite ? 'Saved' : 'Save to Favorites'}
+                    </Button>
+
+                    {/* Share button */}
                     <DropdownMenu>
                       <DropdownMenuTrigger asChild>
                         <Button
@@ -167,7 +208,7 @@ const Game = () => {
                           size="icon"
                           className="border-accent/50 h-8 w-8 sm:h-10 sm:w-10"
                         >
-                          <Share2 className="h-3 w-3 sm:h-4 sm:w-4" />
+                          <Share2 className="h-4 w-4" />
                         </Button>
                       </DropdownMenuTrigger>
                       <DropdownMenuContent align="end">
@@ -180,6 +221,8 @@ const Game = () => {
                   </div>
                 </div>
               </div>
+
+              {/* ✅ Game Embed */}
               <div
                 ref={gameIframeRef}
                 className="relative bg-black rounded-lg overflow-hidden"
@@ -191,15 +234,14 @@ const Game = () => {
                   src={iframeUrl}
                   className="absolute inset-0 w-full h-full rounded-lg"
                   title={game.title}
-                  referrerPolicy="no-referrer"
-                  allow="gamepad; fullscreen; autoplay; orientation-lock; encrypted-media; picture-in-picture"
+                  allow="gamepad; fullscreen; autoplay; encrypted-media; picture-in-picture"
                   allowFullScreen
                   style={{
                     border: 'none',
                     overflow: 'hidden',
                     backgroundColor: 'black',
                   }}
-                  sandbox="allow-scripts allow-downloads allow-same-origin allow-pointer-lock allow-forms allow-presentation"
+                  sandbox="allow-scripts allow-same-origin allow-pointer-lock allow-forms allow-presentation"
                 ></iframe>
 
                 {isMobile && (
@@ -212,53 +254,47 @@ const Game = () => {
                   </button>
                 )}
               </div>
+
+              {/* Device Info */}
               <div className="p-3 sm:p-4 bg-muted/30 border-t border-accent/20">
-                <div className="flex flex-col sm:flex-row sm:flex-wrap gap-2 sm:gap-4 text-xs sm:text-sm">
-                  <div className="flex items-center gap-2">
-                    <Gamepad2 className="h-4 w-4 text-accent flex-shrink-0" />
-                    <span className="text-foreground/80">
-                      Playing On: {deviceInfo}
-                    </span>
-                  </div>
+                <div className="flex items-center gap-2 text-sm sm:text-base text-foreground/80">
+                  <Gamepad2 className="h-4 w-4 text-accent" />
+                  Playing On: {deviceInfo}
                 </div>
               </div>
             </Card>
+
+            {/* ABOUT SECTION */}
             <Card className="p-4 sm:p-6 border-2 border-border bg-card">
-              <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-accent">
+              <h2 className="text-xl sm:text-2xl font-bold mb-4 text-accent">
                 About This Game
               </h2>
               <p className="text-sm sm:text-base text-foreground/90 leading-relaxed">
                 {game.longDescription}
               </p>
             </Card>
-            {game.characters && game.characters.length > 0 && (
-              <Card className="p-4 sm:p-6 border-2 border-accent/30 bg-gradient-to-br from-accent/5 to-transparent">
-                <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-accent flex items-center gap-2">
-                  <Users className="h-5 w-5 sm:h-6 sm:w-6" />
-                  Main Characters
-                </h2>
 
-                <div className="flex flex-wrap gap-2 sm:gap-3">
+            {/* CHARACTERS */}
+            {game.characters?.length > 0 && (
+              <Card className="p-4 sm:p-6 border-2 border-accent/30 bg-gradient-to-br from-accent/5 to-transparent">
+                <h2 className="text-xl sm:text-2xl font-bold mb-4 text-accent flex items-center gap-2">
+                  <Users className="h-5 w-5 sm:h-6 sm:w-6" /> Main Characters
+                </h2>
+                <div className="flex flex-wrap gap-2">
                   {game.characters.map((char, index) => (
                     <div
                       key={index}
-                      className="relative px-3 sm:px-4 py-2 sm:py-2.5 rounded-xl bg-gradient-to-br from-primary/10 to-accent/10 
-                     border border-accent/20 shadow-[0_0_6px_rgba(255,255,255,0.05)] 
-                     text-sm sm:text-base font-semibold text-foreground/90 
-                     hover:from-primary/20 hover:to-accent/20 hover:border-accent/40 
-                     hover:scale-105 transition-all duration-300 ease-out 
-                     flex items-center gap-2"
+                      className="px-3 py-2 rounded-xl bg-gradient-to-br from-primary/10 to-accent/10 border border-accent/20 text-sm font-semibold text-foreground/90 hover:scale-105 transition-all"
                     >
-                      <span className="text-xs sm:text-sm font-bold text-accent/70">
-                        #{index + 1}
-                      </span>
-                      <span className="truncate">{char}</span>
+                      #{index + 1} {char}
                     </div>
                   ))}
                 </div>
               </Card>
             )}
           </div>
+
+          {/* RIGHT SIDE */}
           <div className="space-y-4 sm:space-y-6">
             <Card className="p-4 sm:p-6 border-2 border-accent/30 bg-gradient-to-br from-card to-card/50">
               <div className="space-y-4">
@@ -296,6 +332,7 @@ const Game = () => {
                 </div>
               </div>
             </Card>
+
             <Card className="p-6 border-2 border-primary/30 bg-gradient-to-br from-primary/10 to-transparent">
               <h3 className="font-bold text-lg mb-3 text-primary">Platform</h3>
               <div className="flex items-center gap-3">
@@ -310,6 +347,7 @@ const Game = () => {
                 </div>
               </div>
             </Card>
+
             {!isMobile && <ControllerSetup />}
           </div>
         </div>
