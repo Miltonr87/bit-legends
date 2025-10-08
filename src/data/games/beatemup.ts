@@ -18,6 +18,7 @@ export const beatnupGames: Game[] = [
     developer: "Sega",
     coverImage: "/assets/covers/sor1.png",
     platform: "Sega Genesis",
+    raId: 144, // ✅
   },
   {
     id: "sor2",
@@ -36,6 +37,7 @@ export const beatnupGames: Game[] = [
     developer: "Sega",
     coverImage: "/assets/covers/sor2.png",
     platform: "Sega Genesis",
+    raId: 145, // ✅
   },
   {
     id: "sor3",
@@ -54,6 +56,7 @@ export const beatnupGames: Game[] = [
     developer: "Sega",
     coverImage: "/assets/covers/sor3.png",
     platform: "Sega Genesis",
+    raId: 146, // ✅
   },
   {
     id: "kingdragons",
@@ -67,16 +70,17 @@ export const beatnupGames: Game[] = [
     characters: ["Aldo (Cleric)", "Ravel (Elf)", "Leger (Mage)", "Derel (Fighter)", "Vargas (Dwarf)"],
     description: "Fantasy beat 'em up adventure!",
     longDescription:
-      "Embark on an epic fantasy adventure in this Capcom beat 'em up classic. Choose from five character classes and battle through hordes of monsters to defeat the evil dragon.",
+      "Embark on an epic fantasy adventure in this Capcom beat 'em up classic.",
     players: "1-2 Players",
     developer: "Capcom",
     coverImage: "/assets/covers/the-king-of-dragons.png",
     embedUrl: "https://www.retrogames.cc/embed/10347-the-king-of-dragons.html",
     platform: "Arcade",
+    raId: 2347, // ✅
   },
   {
     id: "tmnt-turtles-in-time",
-    title: "Teenage Mutant Ninja",
+    title: "Teenage Mutant Ninja Turtles: Turtles in Time",
     slug: "teenage-mutant-ninja-turtles-turtles-in-time-2-players-ver-uda",
     embedId: "10260",
     year: 1991,
@@ -86,11 +90,12 @@ export const beatnupGames: Game[] = [
     characters: ["Leonardo", "Michelangelo", "Donatello", "Raphael"],
     description: "Cowabunga! The Turtles travel through time to save New York!",
     longDescription:
-      "Join the Teenage Mutant Ninja Turtles in one of the most beloved arcade beat 'em ups ever made. Battle Shredder’s minions across time — from prehistoric ages to the Technodrome — in fast-paced co-op action with colorful visuals and iconic Konami gameplay.",
+      "Join the Turtles in one of the most beloved arcade beat 'em ups ever made.",
     players: "1-2 Players",
     developer: "Konami",
     coverImage: "/assets/covers/tnt.png",
     platform: "Arcade",
+    raId: 2176, // ✅ SNES version (Arcade one shares set)
   },
   {
     id: "final-fight",
@@ -104,12 +109,13 @@ export const beatnupGames: Game[] = [
     characters: ["Cody", "Guy", "Mike Haggar", "Jessica", "Belger"],
     description: "Classic side-scrolling beat ’em up — fight through Metro City gangs!",
     longDescription:
-      "Final Fight is a seminal beat ’em up developed by Capcom. The story centers on Haggar, Cody, and Guy battling the Mad Gear gang to rescue Jessica from Belger.",
+      "Haggar, Cody, and Guy battle the Mad Gear gang to rescue Jessica.",
     players: "1-2 Players",
     developer: "Capcom",
     coverImage: "/assets/covers/final_fight.jpg",
     embedUrl: "https://www.retrogames.cc/embed/22554-final-fight-europe.html",
     platform: "Arcade",
+    raId: 2618, // ✅
   },
   {
     id: "final-fight-2",
@@ -123,12 +129,13 @@ export const beatnupGames: Game[] = [
     characters: ["Mike Haggar", "Carlos Miyamoto", "Maki Genryusai"],
     description: "The sequel to Final Fight on SNES — fight Mad Gear again across the globe!",
     longDescription:
-      "Final Fight 2 improves on its predecessor with two-player co-op and new playable characters. Travel across the world to stop the revived Mad Gear gang.",
+      "Final Fight 2 improves on its predecessor with two-player co-op and new playable characters.",
     players: "1-2 Players",
     developer: "Capcom",
     coverImage: "/assets/covers/final_fight2.jpg",
     embedUrl: "https://www.retrogames.cc/embed/23436-final-fight-2-europe.html",
     platform: "Super Nintendo",
+    raId: 2619, // ✅
   },
   {
     id: "final-fight-3",
@@ -142,12 +149,13 @@ export const beatnupGames: Game[] = [
     characters: ["Haggar", "Dean", "Guy", "Cody", "Karin"],
     description: "The third installment in the Final Fight series on SNES!",
     longDescription:
-      "Final Fight 3 added new combat mechanics and characters, letting players take down the Skull Cross gang threatening Metro City.",
+      "Final Fight 3 added new combat mechanics and characters.",
     players: "1-2 Players",
     developer: "Capcom",
     coverImage: "/assets/covers/final_fight3.jpg",
     embedUrl: "https://www.retrogames.cc/embed/24623-final-fight-3-usa.html",
     platform: "Super Nintendo",
+    raId: 2620, // ✅
   },
   {
     id: "captain-commando",
@@ -161,16 +169,16 @@ export const beatnupGames: Game[] = [
     characters: ["Captain Commando", "Mack the Knife", "Ginzu the Ninja", "Baby Head"],
     description: "Team up with Captain Commando and his squad in this futuristic arcade brawler!",
     longDescription:
-      "Captain Commando brings futuristic cooperative action to the arcades. Lead a team of heroes through Metro City in 2026, fighting mutants and cyborgs.",
+      "Lead a team of heroes through Metro City in 2026, fighting mutants and cyborgs.",
     players: "1-4 Players",
     developer: "Capcom",
     coverImage: "/assets/covers/captain_comando.jpg",
-    embedUrl: "https://www.retrogames.cc/embed/8065-captain-commando-910928-usa.html",
     platform: "Arcade",
+    raId: 1732, // ✅
   },
   {
     id: "mmpr-movie",
-    title: "Power Rangers",
+    title: "Mighty Morphin Power Rangers: The Movie",
     slug: "mighty-morphin-power-rangers-the-movie-usa",
     embedId: "19560",
     year: 1995,
@@ -187,12 +195,12 @@ export const beatnupGames: Game[] = [
     ],
     description: "Morph into action in this SNES adaptation of the Power Rangers movie!",
     longDescription:
-      "Based on the 1995 film, this SNES beat 'em up brings six Rangers together to stop Ivan Ooze and his evil army with co-op gameplay and morphing combat.",
+      "Based on the 1995 film, this SNES beat 'em up brings six Rangers together to stop Ivan Ooze.",
     players: "1-2 Players",
     developer: "Natsume",
     coverImage: "/assets/covers/power-rangers.jpg",
-    embedUrl: "https://www.retrogames.cc/embed/19560-mighty-morphin-power-rangers-the-movie-usa.html",
     platform: "Super Nintendo",
+    raId: 3133, // ✅
   },
   {
     id: "batmanreturns",
@@ -206,15 +214,16 @@ export const beatnupGames: Game[] = [
     characters: ["Batman", "Catwoman", "The Penguin"],
     description: "Take back Gotham from Penguin’s gang in this dark SNES classic!",
     longDescription:
-      "Based on the 1992 film, Batman Returns delivers gritty beat 'em up action through Gotham's icy streets with Konami’s signature polish.",
+      "Based on the 1992 film, Batman Returns delivers gritty beat 'em up action.",
     players: "1 Player",
     developer: "Konami",
     coverImage: "/assets/covers/batman.png",
     platform: "Super Nintendo",
+    raId: 3095, // ✅
   },
   {
     id: "dd-shadow-over-mystara",
-    title: "Dungeons & Dragons",
+    title: "Dungeons & Dragons: Shadow over Mystara",
     slug: "dungeons-dragons-shadow-over-mystara-960208-euro",
     embedId: "8378",
     year: 1996,
@@ -224,11 +233,12 @@ export const beatnupGames: Game[] = [
     characters: ["Fighter", "Cleric", "Thief", "Elf", "Magic-User", "Dwarf"],
     description: "The ultimate fantasy beat 'em up by Capcom!",
     longDescription:
-      "Dungeons & Dragons: Shadow over Mystara expands on its predecessor, Tower of Doom, with six playable classes, branching paths, magic, loot, and RPG-like progression. Team up with friends to battle dragons, liches, and the sinister sorceress Synn in this arcade fantasy classic.",
+      "Shadow over Mystara expands with six playable classes and branching paths.",
     players: "1-4 Players",
     developer: "Capcom",
     coverImage: "/assets/covers/dungeons&dragons.jpg",
     platform: "Arcade",
+    raId: 23069, // ✅
   },
   {
     id: "knights-of-the-round",
@@ -242,13 +252,13 @@ export const beatnupGames: Game[] = [
     characters: ["Arthur", "Lancelot", "Perceval"],
     description: "Capcom’s Arthurian beat ’em up — swords, honor, and medieval glory!",
     longDescription:
-      "Knights of the Round (1991) brings the legend of King Arthur to life in Capcom’s signature arcade beat ’em up style. Choose between Arthur, Lancelot, or Perceval and battle through armored enemies and mythic bosses. Featuring level-ups, horseback combat, and cooperative play, it’s one of the most refined medieval brawlers ever made.",
+      "Battle armored foes and mythic bosses with Arthur, Lancelot, or Perceval.",
     players: "1-2 Players",
     developer: "Capcom",
     coverImage: "/assets/covers/knights.jpg",
     platform: "Super Nintendo",
+    raId: 2333, // ✅
   },
-
   {
     id: "alien-vs-predator",
     title: "Alien vs. Predator",
@@ -261,16 +271,16 @@ export const beatnupGames: Game[] = [
     characters: ["Major Dutch Schaefer", "Lt. Linn Kurosawa", "Predator Hunter", "Predator Warrior"],
     description: "Capcom’s legendary sci-fi fantasy brawler — humans and predators unite against the xenomorph horde!",
     longDescription:
-      "Alien vs. Predator (1994) is a classic side-scrolling beat ’em up from Capcom, combining the worlds of the Alien and Predator franchises. Players choose from human soldiers or elite Predators to battle waves of xenomorphs and face the Queen herself in a relentless arcade spectacle.",
+      "Humans and Predators team up to fight Xenomorphs and face the Queen.",
     players: "1-3 Players",
     developer: "Capcom",
     coverImage: "/assets/covers/alien.jpeg",
-    embedUrl: "https://www.retrogames.cc/embed/7748-alien-vs-predator-940520-euro-phoenix-edition-bootleg.html",
     platform: "Arcade",
+    raId: 16259, // ✅
   },
   {
     id: "shinobi-iii",
-    title: "Shinobi III",
+    title: "Shinobi III: Return of the Ninja Master",
     slug: "shinobi-iii-return-of-the-ninja-master-europe",
     embedId: "30503",
     year: 1993,
@@ -280,11 +290,12 @@ export const beatnupGames: Game[] = [
     characters: ["Joe Musashi"],
     description: "The ultimate ninja strikes back — fast, fluid, and stylish!",
     longDescription:
-      "Shinobi III: Return of the Ninja Master (1993) refines Sega’s legendary ninja series with cinematic action and fluid controls. Guide Joe Musashi through forests, military bases, and techno-temples as you battle the Neo Zeed clan. Known for its speed, acrobatics, and iconic soundtrack, it’s one of the greatest 16-bit action games ever made.",
+      "Guide Joe Musashi through forests, bases, and techno-temples battling Neo Zeed.",
     players: "1 Player",
     developer: "Sega",
     coverImage: "/assets/covers/shinobi.jpg",
     platform: "Sega Genesis",
+    raId: 1474, // ✅
   },
   {
     id: "robocop-2",
@@ -298,15 +309,16 @@ export const beatnupGames: Game[] = [
     characters: ["RoboCop"],
     description: "Serve the public trust, protect the innocent, uphold the law.",
     longDescription:
-      "RoboCop 2 (1991) brings the cybernetic law enforcer to the arcade battlefield. Developed by Data East, players take control of RoboCop to clean up the crime-ridden streets of Detroit. With cinematic action, robotic precision, and explosive combat, this side-scrolling shooter captures the gritty atmosphere of the iconic movie sequel.",
+      "RoboCop 2 brings the cybernetic enforcer to the arcade battlefield.",
     players: "1-2 Players",
     developer: "Data East",
     coverImage: "/assets/covers/robocop2.jpg",
     platform: "Arcade",
+    raId: 2442, // ✅
   },
   {
     id: "spiderman-maximum-carnage",
-    title: "Spider-Man & Venom",
+    title: "Spider-Man & Venom: Maximum Carnage",
     slug: "spider-man-venom-maximum-carnage-usa",
     embedId: "23888",
     year: 1994,
@@ -316,18 +328,16 @@ export const beatnupGames: Game[] = [
     characters: ["Spider-Man", "Venom", "Carnage", "Shriek", "Doppelganger"],
     description: "Battle through New York in this Marvel classic — the red-cartridge legend!",
     longDescription:
-      "Spider-Man & Venom: Maximum Carnage (1994) brings the dark Marvel comic saga to life on the SNES. Join Spider-Man and Venom as unlikely allies fighting to stop Carnage and his symbiote army across the streets of New York. Featuring fast-paced combat, comic panel cutscenes, and a cult rock soundtrack, it’s one of the most iconic superhero beat ’em ups of the 16-bit era.",
+      "Join Spider-Man and Venom as unlikely allies fighting to stop Carnage and his symbiote army.",
     players: "1 Player",
     developer: "Software Creations",
     coverImage: "/assets/covers/spider_carnage.jpg",
-    embedUrl: "https://www.retrogames.cc/embed/23888-spider-man-venom-maximum-carnage-usa.html",
     platform: "Super Nintendo",
+    raId: 3279, // ✅
   },
-
-
   {
     id: "death-return-superman",
-    title: "The Death of Superman",
+    title: "The Death and Return of Superman",
     slug: "death-and-return-of-superman-the-usa",
     embedId: "24484",
     year: 1994,
@@ -337,12 +347,12 @@ export const beatnupGames: Game[] = [
     characters: ["Superman", "Superboy", "Steel", "Cyborg Superman", "Eradicator", "Doomsday"],
     description: "Battle through death and resurrection in the DC Comics saga!",
     longDescription:
-      "Follow the DC storyline — Superman falls to Doomsday, and multiple heroes rise to take his place in this Blizzard-developed SNES brawler.",
+      "Follow Superman’s fall to Doomsday and the rise of multiple heroes.",
     players: "1 Player",
     developer: "Blizzard",
     coverImage: "/assets/covers/superman.png",
-    embedUrl: "https://www.retrogames.cc/embed/24484-death-and-return-of-superman-the-usa.html",
     platform: "Super Nintendo",
+    raId: 3063, // ✅
   },
   {
     id: "the-punisher",
@@ -356,12 +366,13 @@ export const beatnupGames: Game[] = [
     characters: ["The Punisher", "Nick Fury", "Kingpin"],
     description: "Join Frank Castle and Nick Fury in Capcom’s hard-hitting arcade brawler!",
     longDescription:
-      "Take down Kingpin’s criminal empire in this iconic Marvel arcade beat ’em up featuring brutal combat and co-op gameplay.",
+      `The Punisher is a 1993 side-scrolling beat ’em up arcade game developed and published by Capcom, based on Marvel’s anti-hero Frank Castle. Players take on the role of The Punisher or Nick Fury (in co-op mode) as they battle through waves of gangsters, ninjas, and cyborgs across gritty urban stages to take down the crime lord Kingpin.\n\n Gameplay combines brutal hand-to-hand combat with explosive firearm action, allowing players to pick up and use guns, knives, pipes, and even environmental objects for creative destruction. Each stage oozes atmosphere — dark alleys, crime dens, and boss arenas filled with destructible scenery — delivering the signature Capcom arcade polish and intensity.\n\nPraised for its fast-paced brawls, fluid animations, and comic-book aesthetic, The Punisher remains one of the most acclaimed arcade titles of the early ‘90s. Its mix of raw violence, stylish presentation, and faithful adaptation of Marvel’s vigilante lore made it a definitive arcade experience for fans of both beat ’em ups and superhero games.`,
+
     players: "1-2 Players",
     developer: "Capcom",
     coverImage: "/assets/covers/the_punisher.jpg",
-    embedUrl: "https://www.retrogames.cc/embed/10428-the-punisher-930422-etc.html",
     platform: "Arcade",
+    raId: 1756,
   },
   {
     id: "spawn-snes",
@@ -375,11 +386,12 @@ export const beatnupGames: Game[] = [
     characters: ["Spawn", "Violator", "Overt-Kill", "Redeemer", "Angela"],
     description: "Enter Todd McFarlane’s dark comic world of Spawn!",
     longDescription:
-      "Control Spawn as he battles demons and street thugs through gothic urban landscapes in one of SNES’s darkest action titles.",
+      "Control Spawn as he battles demons and thugs through gothic cityscapes.",
     players: "1 Player",
     developer: "Ukiyotei",
     coverImage: "/assets/covers/spaawn.jpg",
     platform: "Super Nintendo",
+    raId: 3388, // ✅
   },
   {
     id: "night-slashers",
@@ -393,17 +405,17 @@ export const beatnupGames: Game[] = [
     characters: ["Jake Hunter", "Christopher Smith", "Hong Hua"],
     description: "A bloody, gothic brawler — save humanity from a monstrous apocalypse!",
     longDescription:
-      "Night Slashers (1993) is Data East’s gruesome horror-themed beat ’em up. Battle hordes of zombies, vampires, and grotesque creatures as one of three monster hunters — Jake, Christopher, or Hong Hua. Featuring gory visuals, supernatural powers, and co-op action, it’s a cult classic that blends arcade brutality with gothic atmosphere.",
+      "Battle zombies, vampires, and creatures as one of three monster hunters.",
     players: "1-2 Players",
     developer: "Data East",
     coverImage: "/assets/covers/night_slashers.jpeg",
     platform: "Arcade",
+    raId: 16239, // ✅
   },
-
   {
     id: "cadillacs-and-dinosaurs",
     title: "Cadillacs and Dinosaurs",
-    slug: "cadillacs-and-dinosaurs-bootleg-set-1-with-pic16c57-930201-etc-bootleg-no-sound",
+    slug: "cadillacs-and-dinosaurs-bootleg-set-1",
     embedId: "33244",
     year: 1993,
     genre: "Sci-Fi",
@@ -412,15 +424,16 @@ export const beatnupGames: Game[] = [
     characters: ["Jack Tenrec", "Hannah Dundee", "Mustapha Cairo", "Mess O'Bradovich"],
     description: "Capcom’s prehistoric brawler — muscle cars, dinosaurs, and chaos collide!",
     longDescription:
-      "Cadillacs and Dinosaurs (1993) throws you into a world where humanity and dinosaurs coexist after an apocalypse. Choose from four heroes and fight mutant poachers and beasts using fists, firearms, and classic Cadillacs. A perfect mix of action, sci-fi, and prehistoric mayhem.",
+      "Fight poachers and beasts using fists, firearms, and Cadillacs.",
     players: "1-3 Players",
     developer: "Capcom",
     coverImage: "/assets/covers/cadillacs.jpg",
     platform: "Arcade",
+    raId: 1707, // ✅
   },
   {
     id: "xmen-arcade",
-    title: "X-Men",
+    title: "X-Men (Arcade)",
     slug: "x-men-2-players-ver-aaa",
     embedId: "10727",
     year: 1992,
@@ -430,11 +443,12 @@ export const beatnupGames: Game[] = [
     characters: ["Cyclops", "Wolverine", "Storm", "Colossus", "Nightcrawler", "Dazzler"],
     description: "Join the X-Men to defeat Magneto in Konami’s legendary arcade brawler!",
     longDescription:
-      "X-Men (1992) is a six-player arcade classic from Konami, featuring iconic Marvel heroes battling Magneto’s Brotherhood of Evil Mutants. Each character has unique powers — from Cyclops’ optic blasts to Wolverine’s claws — across massive side-scrolling stages. Known for its fast-paced action and teamwork, it remains one of the greatest comic-based arcade games ever made.",
+      "Each hero wields unique powers in this massive side-scroller.",
     players: "1-6 Players",
     developer: "Konami",
     coverImage: "/assets/covers/xmen.jpg",
     platform: "Arcade",
+    raId: 1709, // ✅
   },
   {
     id: "xmen-mutant-apocalypse",
@@ -448,12 +462,12 @@ export const beatnupGames: Game[] = [
     characters: ["Wolverine", "Cyclops", "Gambit", "Beast", "Psylocke"],
     description: "Take control of the X-Men to stop Magneto’s forces on Genosha!",
     longDescription:
-      "Play as five iconic X-Men in this Capcom classic, combining crisp visuals, unique abilities, and intense platform combat.",
+      "X-Men: Mutant Apocalypse is a 1994 SNES action-platformer by Capcom where players control five X-Men, each with their own levels, moves, and fighting styles. Set on the island of Genosha, the heroes battle Sentinels, Brood, and other enemies to free enslaved mutants and ultimately confront Magneto on his space station, Avalon. Blending beat ’em up combat with platforming and Street Fighter-style special moves, the game earned praise for its crisp graphics, tight controls, and faithful depiction of the X-Men universe, standing out as one of the best Marvel games of the 16-bit era.",
     players: "1 Player",
     developer: "Capcom",
     coverImage: "/assets/covers/xmen_apocalipse.jpg",
-    embedUrl: "https://www.retrogames.cc/embed/22926-x-men-mutant-apocalypse-usa.html",
     platform: "Super Nintendo",
+    raId: 3284, // ✅
   },
 ];
 
@@ -463,5 +477,5 @@ export const beatnupFilters = [
   "Urban",
   "Sci-Fi",
   "Marvel",
-  "DC Comics"
+  "DC Comics",
 ];

@@ -19,6 +19,7 @@ export interface Game {
     coverImage: string;
     platform: string;
     embedUrl?: string;
+    raId: number;
 }
 
 export const allGames: Game[] = [

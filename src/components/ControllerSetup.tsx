@@ -106,9 +106,6 @@ export const ControllerSetup = () => {
           </div>
         </div>
       </div>
-      <p className="text-xs text-muted-foreground mt-4 text-center italic">
-        Tip: You can customize your key bindings in the emulator’s input!
-      </p>
     </Card>
   );
 };

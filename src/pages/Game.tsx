@@ -23,6 +23,7 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import { useDisplayDevice } from '@/hooks/useDisplayDevice';
+import { RetroAchievementsCard } from '@/components/RetroAchievementsCard';
 import type { Game } from '../data';
 
 const Game = () => {
@@ -227,7 +228,7 @@ const Game = () => {
               <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-accent">
                 About This Game
               </h2>
-              <p className="text-sm sm:text-base text-foreground/90 leading-relaxed">
+              <p className="text-sm sm:text-base text-foreground/90 leading-relaxed whitespace-pre-line">
                 {game.longDescription}
               </p>
             </Card>
@@ -311,6 +312,7 @@ const Game = () => {
               </div>
             </Card>
             {!isMobile && <ControllerSetup />}
+            {game.raId && <RetroAchievementsCard raId={game.raId} />}
           </div>
         </div>
       </div>
