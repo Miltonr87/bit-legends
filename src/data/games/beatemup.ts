@@ -350,7 +350,7 @@ export const beatnupGames: Game[] = [
     slug: "marvel-super-heroes-war-of-the-gems",
     embedId: "24033",
     year: 1996,
-    genre: "Action / Platformer",
+    genre: "Marvel",
     folder: "Marvel",
     publisher: "Capcom",
     characters: ["Captain America", "Iron Man", "Wolverine", "Spider-Man", "Hulk", "Thanos"],
