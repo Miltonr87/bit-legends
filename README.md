@@ -24,14 +24,14 @@ Bit Legends provides a seamless emulation experience using embedded game ROMs an
 
 ## 🧩 Technologies Used
 
-| Category           | Technologies                                         |
-| ------------------ | ---------------------------------------------------- |
-| **Frontend**       | React 18, TypeScript, Vite                           |
-| **UI & Styling**   | Tailwind CSS, Shadcn/UI, Framer Motion, Lucide Icons |
-| **State & Data**   | React Query, Local Storage API                       |
-| **Backend / Auth** | Supabase (Auth, Database, Storage)                   |
-| **Emulation**      | EmulatorJS (via CDN)                                 |
-| **Hosting**        | Vercel                                               |
+| Category         | Technologies                                         |
+| ---------------- | ---------------------------------------------------- |
+| **Frontend**     | React 18, TypeScript, Vite                           |
+| **UI & Styling** | Tailwind CSS, Shadcn/UI, Framer Motion, Lucide Icons |
+| **State & Data** | React Query, Local Storage API                       |
+| **Auth**         | Google OAuth (Auth, Database, Storage)               |
+| **Emulation**    | EmulatorJS (via CDN)                                 |
+| **Hosting**      | Vercel                                               |
 
 ---
 
