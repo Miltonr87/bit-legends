@@ -31,7 +31,7 @@ export const AboutDialog = () => {
           <DialogTitle className=" text-center text-2xl font-bold text-primary mb-4">
             About
           </DialogTitle>
-          <DialogDescription className="text-base text-muted-foreground space-y-5 leading-relaxed text-center">
+          <DialogDescription className="text-base text-muted-foreground space-y-5 leading-relaxed text-left">
             <p>
               <strong className="text-primary">Bit Legends</strong> is a
               retro-inspired gaming platform that revives the nostalgia of
@@ -53,7 +53,6 @@ export const AboutDialog = () => {
                   'Radix UI',
                   'Lucide React',
                   'EmulatorJS',
-                  'sonner',
                 ].map((tech) => (
                   <motion.span
                     key={tech}
