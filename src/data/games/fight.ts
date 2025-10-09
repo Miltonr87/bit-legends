@@ -22,12 +22,13 @@ export const fightGames: Game[] = [
         developer: "Midway",
         coverImage: "/assets/covers/Mortal_Kombat_3_cover.jpeg",
         platform: "Super Nintendo",
+        logo: "https://gam.onl/user/psx/logos/Mortal%20Kombat%203%20(USA).png"
     },
     {
         id: "umk3",
         title: "Ultimate Mortal Kombat",
         slug: "ultimate-mortal-kombat-3-usa",
-        embedId: "23432",
+        embedId: "42493",
         year: 1995,
         genre: "Horror",
         folder: "Mortal Kombat",
@@ -43,7 +44,8 @@ export const fightGames: Game[] = [
         players: "1-2 Players",
         developer: "Midway",
         coverImage: "/assets/covers/Ultimate_MK3.png",
-        platform: "Super Nintendo",
+        platform: "Arcade",
+        logo: "https://gam.onl/user/snes/logos/Ultimate%20Mortal%20Kombat%203%20(USA)%20SNES.png"
     },
     {
         id: "sf2",
@@ -65,6 +67,7 @@ export const fightGames: Game[] = [
         developer: "Capcom",
         coverImage: "/assets/covers/street_fighter_2.png",
         platform: "Super Nintendo",
+        logo: "https://gam.onl/user/segaMD/logos/Super%20Street%20Fighter%20II%20(U)%20[c][!].png"
     },
     {
         id: "sfa2",
@@ -84,8 +87,9 @@ export const fightGames: Game[] = [
             "A stylish, technical evolution of the Street Fighter legacy.",
         players: "1-2 Players",
         developer: "Capcom",
-        coverImage: "/assets/covers/sf_aplha_2.jpeg",
+        coverImage: "/assets/covers/sf_aplha_2.jpg",
         platform: "Super Nintendo",
+        logo: "https://gam.onl/user/arcade/logos/sfa2.png"
     },
     {
         id: "sf-zero3",
@@ -115,7 +119,79 @@ export const fightGames: Game[] = [
         developer: "Capcom",
         coverImage: "/assets/covers/street_fighter_zero_3.jpeg",
         platform: "Arcade",
+        logo: "https://gam.onl/user/psx/logos/Street%20Fighter%20Alpha%203%20(USA).png"
     },
+    {
+        id: "xmen-children-of-the-atom",
+        title: "X-Men: Atom",
+        slug: "x-men-children-of-the-atom-950105-euro-phoenix-edition-bootleg",
+        embedId: "10740",
+        year: 1994,
+        genre: "Marvel",
+        folder: "Marvel",
+        publisher: "Capcom",
+        characters: [
+            "Wolverine",
+            "Cyclops",
+            "Storm",
+            "Psylocke",
+            "Colossus",
+            "Iceman",
+            "Omega Red",
+            "Silver Samurai",
+            "Spiral",
+            "Sentinel",
+            "Magneto",
+        ],
+        description: "Capcom’s legendary X-Men fighter that started the Marvel vs. Capcom legacy!",
+        longDescription:
+            "X-Men: Children of the Atom (1994) revolutionized arcade fighting with stunning animation, aerial combat, and super moves. " +
+            "Play as iconic heroes and villains from the X-Men universe in beautifully hand-drawn battles. " +
+            "Built on Capcom’s CPS-2 engine, it laid the foundation for the Marvel vs. Capcom series and remains a fan favorite for its style and challenge.",
+        players: "1-2 Players",
+        developer: "Capcom",
+        coverImage: "/assets/covers/xmen_children_of_atom.jpg",
+        platform: "Arcade",
+        logo: "https://gam.onl/user/arcade/logos/xmcota.png",
+    },
+    {
+        id: "mortal-kombat-trilogy",
+        title: "Mortal Kombat Trilogy",
+        slug: "mortal-kombat-trilogy-europe",
+        embedId: "32167",
+        year: 1996,
+        genre: "Horror",
+        folder: "Mortal Kombat",
+        publisher: "Midway",
+        characters: [
+            "Scorpion",
+            "Sub-Zero",
+            "Liu Kang",
+            "Raiden",
+            "Kitana",
+            "Mileena",
+            "Sonya",
+            "Shao Kahn",
+            "Jax",
+            "Kung Lao",
+            "Smoke",
+            "Reptile",
+            "Ermac",
+            "Rain",
+            "Noob Saibot",
+        ],
+        description: "The ultimate Mortal Kombat experience — all fighters, all fatalities, one brutal collection!",
+        longDescription:
+            "Mortal Kombat Trilogy (1996) is the definitive version of the series’ 16-bit and arcade era, featuring every fighter and arena from Mortal Kombat 1, 2, and 3. " +
+            "Unleash every Fatality, Brutality, and Friendship move across iconic stages. " +
+            "Refined mechanics, blazing speed, and pure nostalgia make this one of the most complete fighting games of its time.",
+        players: "1-2 Players",
+        developer: "Avalanche Software / Midway",
+        coverImage: "/assets/covers/mk_trilogy.jpg",
+        platform: "Nintendo 64",
+        logo: "https://gam.onl/user/segaMD/logos/Ultimate%20Mortal%20Kombat%203%20(U)%20[!].png",
+    }
+    ,
     {
         id: "darkstalkers",
         title: "Darkstalkers",
@@ -132,8 +208,9 @@ export const fightGames: Game[] = [
         players: "1-2 Players",
         developer: "Capcom",
         coverImage: "/assets/covers/darkstalkers_night_warriors.jpg",
-        embedUrl: "https://www.retrogames.cc/embed/8227-darkstalkers-the-night-warriors-940705-euro.html",
+        embedUrl: "https://gam.onl/user/psx/logos/Darkstalkers%20-%20The%20Night%20Warriors%20(USA).png",
         platform: "Arcade",
+        logo: "https://gam.onl/user/psx/logos/Darkstalkers%20-%20The%20Night%20Warriors%20(USA).png"
     },
     {
         id: "kof98",
@@ -155,6 +232,7 @@ export const fightGames: Game[] = [
         developer: "SNK",
         coverImage: "/assets/covers/kof_98.jpg",
         platform: "Neo Geo",
+        logo: "https://gam.onl/user/arcade/logos/kof98.png",
     },
     {
         id: "kof2002",
@@ -182,6 +260,7 @@ export const fightGames: Game[] = [
         developer: "Eolith / SNK Playmore",
         coverImage: "/assets/covers/kof_2002.jpg",
         platform: "Neo Geo",
+        logo: "https://gam.onl/user/arcade/logos/kof2002.png"
     },
     {
         id: "kof2004",
@@ -209,6 +288,7 @@ export const fightGames: Game[] = [
         developer: "SNK Playmore (Bootleg Edition)",
         coverImage: "/assets/covers/kof_2004.jpeg",
         platform: "Neo Geo",
+        logo: "https://gam.onl/user/arcade/logos/kof2k4se.png"
     },
     {
         id: "samurai-shodown-ii",
@@ -232,7 +312,7 @@ export const fightGames: Game[] = [
             "Samurai Shodown II (1994) refines the original with smoother animation, new moves, and deeper combat. Set in feudal Japan, this Neo Geo classic emphasizes timing, patience, and devastating swordplay. A masterpiece of traditional weapon-based dueling that defined SNK’s golden era.",
         players: "1-2 Players",
         developer: "SNK",
-        coverImage: "/assets/covers/samurai.jpg",
+        coverImage: "https://gam.onl/user/arcade/logos/samsho2.png",
         platform: "Neo Geo",
     },
     {
@@ -253,6 +333,7 @@ export const fightGames: Game[] = [
         coverImage: "/assets/covers/faltal_fury.jpg",
         embedUrl: "https://www.retrogames.cc/embed/9648-real-bout-fatal-fury.html",
         platform: "Neo Geo",
+        logo: "https://gam.onl/user/arcade/logos/rbffspec.png"
     },
     {
         id: "justice-league-task-force",
@@ -271,10 +352,11 @@ export const fightGames: Game[] = [
         developer: "Blizzard Entertainment",
         coverImage: "/assets/covers/justice_league.jpg",
         platform: "Super Nintendo",
+        logo: "https://gam.onl/user/segaMD/logos/Justice%20League%20Task%20Force%20(W)%20[!].png"
     },
     {
         id: "vampire-hunter",
-        title: "Vampire Hunter",
+        title: "Vampire Hunter 2",
         slug: "vampire-hunter-darkstalkers-revenge-950302-japan",
         embedId: "10578",
         year: 1995,
@@ -301,6 +383,7 @@ export const fightGames: Game[] = [
         developer: "Capcom",
         coverImage: "/assets/covers/vampire_hunter.jpg",
         platform: "Arcade",
+        logo: "https://gam.onl/user/arcade/logos/vhunt2.png"
     },
     {
         id: "marvelsuperheroes",
@@ -322,6 +405,7 @@ export const fightGames: Game[] = [
         developer: "Capcom",
         coverImage: "/assets/covers/marvelheroes.png",
         platform: "Arcade",
+        logo: "https://gam.onl/user/psx/logos/Marvel%20Super%20Heroes%20(USA).png"
     },
     {
         id: "xmvsf",
@@ -343,6 +427,7 @@ export const fightGames: Game[] = [
         developer: "Capcom",
         coverImage: "/assets/covers/xmen_vs_street.jpg",
         platform: "Arcade",
+        logo: "https://gam.onl/user/arcade/logos/xmvsf.png"
     },
     {
         id: "marvel-vs-streetfighter",
@@ -371,6 +456,7 @@ export const fightGames: Game[] = [
         coverImage: "/assets/covers/marvel_street.jpg",
         embedUrl: "https://www.retrogames.cc/embed/9101-marvel-super-heroes-vs-street-fighter-970625-usa-phoenix-edition-bootleg.html",
         platform: "Arcade",
+        logo: "https://gam.onl/user/arcade/logos/mshvsf.png"
     },
     {
         id: "mvc",
@@ -392,6 +478,7 @@ export const fightGames: Game[] = [
         developer: "Capcom",
         coverImage: "/assets/covers/marvel_vs_capcom.jpg",
         platform: "Arcade",
+        logo: "https://gam.onl/user/arcade/logos/mvsc.png"
     },]
 
 export const fightFilters = [

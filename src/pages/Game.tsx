@@ -2,7 +2,7 @@ import { useParams, Link } from 'react-router-dom';
 import { useEffect, useRef, useState } from 'react';
 import { allGames } from '../data';
 import { Header } from '@/components/Header';
-import { Footer } from '@/components/Footer'; // ✅ new component
+import { Footer } from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import {
   ArrowLeft,
@@ -23,6 +23,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
+import { LogoGame } from '@/components/LogoGame';
 import { useDisplayDevice } from '@/hooks/useDisplayDevice';
 import { db, auth } from '@/lib/firebase';
 import { doc, setDoc, getDoc } from 'firebase/firestore';
@@ -38,7 +39,6 @@ const Game = () => {
   const { toast } = useToast();
   const deviceInfo = useDisplayDevice();
 
-  // Detect mobile
   useEffect(() => {
     const mm = window.matchMedia('(max-width: 639px)');
     const apply = () => setIsMobile(mm.matches);
@@ -47,7 +47,6 @@ const Game = () => {
     return () => mm.removeEventListener('change', apply);
   }, []);
 
-  // Track game play time
   useEffect(() => {
     if (game) startTimeRef.current = Date.now();
     return () => {
@@ -62,7 +61,6 @@ const Game = () => {
     };
   }, [game]);
 
-  // Check if game is already favorite
   useEffect(() => {
     const checkFavorite = async () => {
       const user = auth.currentUser;
@@ -89,12 +87,11 @@ const Game = () => {
 
     try {
       const favRef = doc(db, 'favorites', user.uid, 'games', game.id);
-      const gameData = {
-        title: game.title || 'Unknown Game',
+      await setDoc(favRef, {
+        title: game.title,
         cover: game.cover ?? null,
         addedAt: new Date().toISOString(),
-      };
-      await setDoc(favRef, gameData);
+      });
       setIsFavorite(true);
       toast({
         title: 'Saved!',
@@ -185,7 +182,7 @@ const Game = () => {
                               ? 'bg-green-500/10 hover:bg-green-500/20'
                               : 'hover:bg-accent/10'
                           }`}
-                        title={'Added to favorites'}
+                        title="Add to favorites"
                       >
                         <Heart
                           className={`h-4 w-4 transition-all duration-300 
@@ -235,7 +232,7 @@ const Game = () => {
                       backgroundColor: 'black',
                     }}
                     sandbox="allow-scripts allow-same-origin allow-pointer-lock allow-forms allow-presentation"
-                  ></iframe>
+                  />
                   {isMobile && (
                     <button
                       onClick={toggleFullscreen}
@@ -280,6 +277,11 @@ const Game = () => {
               )}
             </div>
             <div className="space-y-4 sm:space-y-6">
+              <LogoGame
+                logoUrl={game.logo}
+                title={game.title}
+                backgroundColor="linear-gradient(135deg, #0f172a, #1e293b)"
+              />
               <Card className="p-4 sm:p-6 border-2 border-accent/30 bg-gradient-to-br from-card to-card/50">
                 <div className="space-y-4">
                   <div className="flex items-start gap-3 pb-4 border-b border-border">
@@ -337,6 +339,7 @@ const Game = () => {
           </div>
         </div>
       </main>
+      <Footer />
     </div>
   );
 };

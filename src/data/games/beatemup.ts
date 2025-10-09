@@ -21,6 +21,7 @@ export const beatnupGames: Game[] = [
     developer: "Sega",
     coverImage: "/assets/covers/sor1.png",
     platform: "Sega Genesis",
+    logo: "https://gam.onl/user/segaMD/logos/Streets%20of%20Rage%20(W)%20(REV01)%20[!].png",
   },
   {
     id: "sor2",
@@ -42,6 +43,7 @@ export const beatnupGames: Game[] = [
     developer: "Sega",
     coverImage: "/assets/covers/sor2.png",
     platform: "Sega Genesis",
+    logo: "https://gam.onl/user/segaMD/logos/Streets%20of%20Rage%202%20(U)%20[!].png"
   },
   {
     id: "sor3",
@@ -63,6 +65,7 @@ export const beatnupGames: Game[] = [
     developer: "Sega",
     coverImage: "/assets/covers/sor3.png",
     platform: "Sega Genesis",
+    logo: "https://gam.onl/user/segaMD/logos/Streets%20of%20Rage%203.png"
   },
   {
     id: "kingdragons",
@@ -85,6 +88,7 @@ export const beatnupGames: Game[] = [
     coverImage: "/assets/covers/the-king-of-dragons.png",
     embedUrl: "https://www.retrogames.cc/embed/10347-the-king-of-dragons.html",
     platform: "Arcade",
+    logo: "https://gam.onl/user/arcade/logos/kod.png"
   },
   {
     id: "tmnt-turtles-in-time",
@@ -106,6 +110,7 @@ export const beatnupGames: Game[] = [
     developer: "Konami",
     coverImage: "/assets/covers/tnt.png",
     platform: "Arcade",
+    logo: "https://gam.onl/user/arcade/logos/tmnt2.png"
   },
   {
     id: "final-fight",
@@ -128,6 +133,29 @@ export const beatnupGames: Game[] = [
     coverImage: "/assets/covers/final_fight.jpg",
     embedUrl: "https://www.retrogames.cc/embed/22554-final-fight-europe.html",
     platform: "Arcade",
+    logo: "https://gam.onl/user/snes/logos/Final%20Fight%20(USA).png"
+  },
+  {
+    id: "final-fight-guy",
+    title: "Final Fight Guy",
+    slug: "final-fight-guy-usa",
+    embedId: "22638",
+    year: 1994,
+    genre: "Urban",
+    folder: "Beat 'em Up",
+    publisher: "Capcom",
+    characters: ["Guy", "Haggar", "Jessica", "Belger"],
+    description: "The SNES-exclusive edition starring Guy — Metro City never sleeps!",
+    longDescription:
+      "Final Fight Guy (1994) is a refined SNES release featuring Guy instead of Cody, bringing new balance and difficulty adjustments. " +
+      "Team up with Haggar to clean the streets from Mad Gear once again. " +
+      "Sharper combat, redone palette, and SNES polish make this a collector’s favorite version of the arcade hit.",
+    players: "1-2 Players",
+    developer: "Capcom",
+    coverImage: "/assets/covers/final_fight_guy.jpg",
+    embedUrl: "https://www.retrogames.cc/embed/22638-final-fight-guy-usa.html",
+    platform: "Super Nintendo",
+    logo: "https://gam.onl/user/snes/logos/Final%20Fight%20Guy%20(USA).png",
   },
   {
     id: "final-fight-2",
@@ -150,6 +178,8 @@ export const beatnupGames: Game[] = [
     coverImage: "/assets/covers/final_fight2.jpg",
     embedUrl: "https://www.retrogames.cc/embed/23436-final-fight-2-europe.html",
     platform: "Super Nintendo",
+    logo:
+      "https://gam.onl/user/snes/logos/Final%20Fight%202%20(USA).png",
   },
   {
     id: "final-fight-3",
@@ -172,6 +202,8 @@ export const beatnupGames: Game[] = [
     coverImage: "/assets/covers/final_fight3.jpg",
     embedUrl: "https://www.retrogames.cc/embed/24623-final-fight-3-usa.html",
     platform: "Super Nintendo",
+    logo:
+      "https://gam.onl/user/snes/logos/Final%20Fight%203%20(USA).png",
   },
   {
     id: "captain-commando",
@@ -194,6 +226,7 @@ export const beatnupGames: Game[] = [
     coverImage: "/assets/covers/captain_comando.jpg",
     embedUrl: "https://www.retrogames.cc/embed/8065-captain-commando-910928-usa.html",
     platform: "Arcade",
+    logo: "https://gam.onl/user/arcade/logos/captcomm.png"
   },
   {
     id: "mmpr-movie",
@@ -223,6 +256,8 @@ export const beatnupGames: Game[] = [
     coverImage: "/assets/covers/power-rangers.jpg",
     embedUrl: "https://www.retrogames.cc/embed/19560-mighty-morphin-power-rangers-the-movie-usa.html",
     platform: "Super Nintendo",
+    logo:
+      "https://gam.onl/user/snes/logos/Mighty%20Morphin%20Power%20Rangers%20-%20The%20Movie%20(USA).png",
   },
   {
     id: "batmanreturns",
@@ -244,10 +279,12 @@ export const beatnupGames: Game[] = [
     developer: "Konami",
     coverImage: "/assets/covers/batman.png",
     platform: "Super Nintendo",
+    logo:
+      "https://gam.onl/user/segaMD/logos/Batman%20Returns%20(W)%20[!].png",
   },
   {
     id: "dd-shadow-over-mystara",
-    title: "Dungeons & Dragons",
+    title: "D&D: Mystara",
     slug: "dungeons-dragons-shadow-over-mystara-960208-euro",
     embedId: "8378",
     year: 1996,
@@ -257,7 +294,7 @@ export const beatnupGames: Game[] = [
     characters: ["Fighter", "Cleric", "Thief", "Elf", "Magic-User", "Dwarf"],
     description: "The ultimate fantasy beat 'em up by Capcom!",
     longDescription:
-      "Enter the world of Mystara in Capcom’s epic fantasy brawler. " +
+      "Enter the world of Dungeons & Dragons: Shadow Over Mystara in Capcom’s epic fantasy brawler. " +
       "Choose from six RPG-inspired classes and fight dragons, undead, and sorcery. " +
       "Collect loot, level up, and explore branching story paths. " +
       "A rich, cooperative adventure blending D&D depth with arcade action.",
@@ -265,6 +302,7 @@ export const beatnupGames: Game[] = [
     developer: "Capcom",
     coverImage: "/assets/covers/dungeons&dragons.jpg",
     platform: "Arcade",
+    logo: 'https://gam.onl/user/arcade/logos/ddsom.png'
   },
   {
     id: "knights-of-the-round",
@@ -286,6 +324,8 @@ export const beatnupGames: Game[] = [
     developer: "Capcom",
     coverImage: "/assets/covers/knights.jpg",
     platform: "Super Nintendo",
+    logo:
+      "https://gam.onl/user/arcade/logos/knights.png",
   },
 
   {
@@ -309,6 +349,7 @@ export const beatnupGames: Game[] = [
     coverImage: "/assets/covers/alien.jpeg",
     embedUrl: "https://www.retrogames.cc/embed/7748-alien-vs-predator-940520-euro-phoenix-edition-bootleg.html",
     platform: "Arcade",
+    logo: "https://gam.onl/user/arcade/logos/avsp.png"
   },
   {
     id: "shinobi-iii",
@@ -327,6 +368,7 @@ export const beatnupGames: Game[] = [
     developer: "Sega",
     coverImage: "/assets/covers/shinobi.jpg",
     platform: "Sega Genesis",
+    logo: "https://gam.onl/user/segaMD/logos/Shinobi%20III%20-%20Return%20of%20the%20Ninja%20Master%20(U)%20[!].png"
   },
   {
     id: "robocop-2",
@@ -345,6 +387,7 @@ export const beatnupGames: Game[] = [
     developer: "Data East",
     coverImage: "/assets/covers/robocop2.jpg",
     platform: "Arcade",
+    logo: "https://gam.onl/user/arcade/logos/robocop2.png"
   },
   {
     id: "spiderman-maximum-carnage",
@@ -364,6 +407,91 @@ export const beatnupGames: Game[] = [
     coverImage: "/assets/covers/spider_carnage.jpg",
     embedUrl: "https://www.retrogames.cc/embed/23888-spider-man-venom-maximum-carnage-usa.html",
     platform: "Super Nintendo",
+    logo:
+      "https://gam.onl/user/segaMD/logos/Spider-Man%20&%20Venom%20-%20Maximum%20Carnage%20(W)%20[!].png",
+  },
+  {
+    id: "xmen-2-clone-wars",
+    title: "X-Men 2: Clone Wars",
+    slug: "x-men-2-clone-wars-usa-europe",
+    embedId: "29870",
+    year: 1995,
+    genre: "Marvel",
+    folder: "Marvel",
+    publisher: "Sega",
+    characters: ["Wolverine", "Cyclops", "Beast", "Gambit", "Nightcrawler", "Psylocke", "Magneto"],
+    description: "The X-Men face off against the Phalanx in this action-packed Genesis sequel!",
+    longDescription:
+      "X-Men 2: Clone Wars (1995) pushes the Sega Genesis to its limits. The heroes battle the techno-organic Phalanx threat across diverse environments. " +
+      "Each mutant has unique abilities, from Nightcrawler’s teleportation to Wolverine’s regeneration. " +
+      "Slick animations, challenging levels, and cooperative play make it one of the finest superhero games of the 16-bit era.",
+    players: "1-2 Players",
+    developer: "HeadGames / Sega Technical Institute",
+    coverImage: "/assets/covers/xmen2_clonewars.jpg",
+    platform: "Sega Genesis",
+    logo: "https://gam.onl/user/segaMD/logos/X-Men%202%20-%20Clone%20Wars%20(UE)%20[!].png",
+  },
+  {
+    id: "wolverine-adamantium-rage",
+    title: "Wolverine: Adamantium",
+    slug: "wolverine-adamantium-rage-usa",
+    embedId: "28548",
+    year: 1994,
+    genre: "Marvel",
+    folder: "Marvel",
+    publisher: "Acclaim",
+    characters: ["Wolverine", "Lady Deathstrike", "Sabretooth", "Cyber", "Shinobi Shaw"],
+    description: "Unleash Wolverine’s fury in this brutal SNES and Genesis side-scroller!",
+    longDescription:
+      "Wolverine: Adamantium Rage (1994) delivers fierce combat and platforming as Marvel’s most iconic mutant hunts his enemies. " +
+      "Slash through cybernetic foes, face Sabretooth, and follow a dark, introspective storyline. " +
+      "Featuring voice samples and detailed sprites, this is one of the most intense superhero games of the 16-bit generation.",
+    players: "1 Player",
+    developer: "Teeny Weeny Games / Bits Studios",
+    coverImage: "/assets/covers/wolverine_adamantium.jpg",
+    platform: "Sega Genesis",
+    logo: "https://gam.onl/user/segaMD/logos/Wolverine%20-%20Adamantium%20Rage%20(UE)%20[!].png",
+  },
+  {
+    id: "batman-forever",
+    title: "Batman Forever",
+    slug: "batman-forever-arcade",
+    embedId: "41599",
+    year: 1996,
+    genre: "DC Comics",
+    folder: "DC Comics",
+    publisher: "Acclaim",
+    characters: ["Batman", "Robin", "Two-Face", "Mr. Freeze", "Joker"],
+    description: "A fast-paced arcade beat-’em up in the Batman Forever era!",
+    longDescription:
+      "Batman Forever: The Arcade Game (1995) is a side-scrolling beat-’em up where Batman and Robin battle through Gotham’s gauntlet. " +
+      "Featuring bright visuals, chaotic enemy waves, and flashy combos, it channels 90s arcade energy in Gotham’s infamous streets.",
+    players: "1-2 Players",
+    developer: "Acclaim",
+    coverImage: "/assets/covers/batman_forever_arcade.jpg",
+    platform: "Arcade",
+    logo: "https://gam.onl/user/arcade/logos/batman.png",
+  },
+  {
+    id: "superman-world",
+    title: "Superman World",
+    slug: "superman-world-usa",
+    embedId: "10229",
+    year: 1989,
+    genre: "DC Comics",
+    folder: "DC Comics",
+    publisher: "Sunsoft / Taito",
+    characters: ["Superman", "Lex Luthor", "Darkseid", "General Zod"],
+    description: "Fly, punch, and save Metropolis in this classic arcade Superman game!",
+    longDescription:
+      "Superman World (also known as Superman: The Man of Steel) is an arcade platformer released in 1989 where you play as the Man of Steel himself. " +
+      "Use superpowers, fly between stages, battle iconic villains like Lex Luthor and Darkseid, and protect Metropolis from total destruction. " +
+      "It’s a rare arcade title that truly makes you feel like a superhero.",
+    players: "1 Player",
+    developer: "Sunsoft / Taito",
+    coverImage: "/assets/covers/superman_world.jpg",
+    platform: "Arcade",
+    logo: "https://gam.onl/user/segaMD/logos/Superman%20(U)%20[!].png",
   },
 
 
@@ -388,6 +516,8 @@ export const beatnupGames: Game[] = [
     coverImage: "/assets/covers/superman.png",
     embedUrl: "https://www.retrogames.cc/embed/24484-death-and-return-of-superman-the-usa.html",
     platform: "Super Nintendo",
+    logo:
+      "https://gam.onl/user/segaMD/logos/Death%20and%20Return%20of%20Superman%20(U)%20[!].png",
   },
   {
     id: "marvel-war-of-the-gems",
@@ -409,6 +539,8 @@ export const beatnupGames: Game[] = [
     developer: "Capcom",
     coverImage: "/assets/covers/marvel_war_gems.jpg",
     platform: "Super Nintendo",
+    logo:
+      "https://gam.onl/user/snes/logos/Marvel%20Super%20Heroes%20in%20War%20of%20the%20Gems%20(USA).png",
   },
   {
     id: "the-punisher",
@@ -431,6 +563,7 @@ export const beatnupGames: Game[] = [
     coverImage: "/assets/covers/the_punisher.jpg",
     embedUrl: "https://www.retrogames.cc/embed/10428-the-punisher-930422-etc.html",
     platform: "Arcade",
+    logo: "https://gam.onl/user/arcade/logos/punisher.png"
   },
   {
     id: "spawn-snes",
@@ -452,6 +585,8 @@ export const beatnupGames: Game[] = [
     developer: "Ukiyotei",
     coverImage: "/assets/covers/spaawn.jpg",
     platform: "Super Nintendo",
+    logo:
+      "https://gam.onl/user/snes/logos/Todd%20McFarlane's%20Spawn%20-%20The%20Video%20Game%20(USA).png",
   },
   {
     id: "night-slashers",
@@ -470,6 +605,7 @@ export const beatnupGames: Game[] = [
     developer: "Data East",
     coverImage: "/assets/covers/night_slashers.jpeg",
     platform: "Arcade",
+    logo: "https://gam.onl/user/arcade/logos/nslasher.png"
   },
 
   {
@@ -489,6 +625,7 @@ export const beatnupGames: Game[] = [
     developer: "Capcom",
     coverImage: "/assets/covers/cadillacs.jpg",
     platform: "Arcade",
+    logo: 'https://gam.onl/user/arcade/logos/dino.png'
   },
   {
     id: "xmen-arcade",
@@ -507,6 +644,7 @@ export const beatnupGames: Game[] = [
     developer: "Konami",
     coverImage: "/assets/covers/xmen.jpg",
     platform: "Arcade",
+    logo: "https://gam.onl/user/segaMD/logos/X-Men%20(U)%20[!].png",
   },
   {
     id: "xmen-mutant-apocalypse",
@@ -529,7 +667,32 @@ export const beatnupGames: Game[] = [
     coverImage: "/assets/covers/xmen_apocalipse.jpg",
     embedUrl: "https://www.retrogames.cc/embed/22926-x-men-mutant-apocalypse-usa.html",
     platform: "Super Nintendo",
+    logo:
+      "https://gam.onl/user/snes/logos/X-Men%20-%20Mutant%20Apocalypse%20(USA).png",
   },
+  {
+    id: "dd-tower-of-doom",
+    title: "D&D: Tower of Doom",
+    slug: "dungeons-dragons-tower-of-doom-euro",
+    embedId: "940113",
+    year: 1994,
+    genre: "Fantasy",
+    folder: "Dungeons & Dragons",
+    publisher: "Capcom / US Gold",
+    characters: ["Fighter", "Cleric", "Thief", "Elf"],
+    description: "Legendary side-scrolling fantasy brawler in the D&D world!",
+    longDescription:
+      "Dungeons & Dragons: Tower of Doom (1994) mixes beat-’em up combat with tabletop RPG elements. " +
+      "Choose classes, equip items, and fight through monsters, traps, and bosses across multiple paths. " +
+      "It set a benchmark for co-op action RPGs in arcades and remains a cult favorite today.",
+    players: "1-4 Players",
+    developer: "Capcom",
+    coverImage: "/assets/covers/dd_tower_of_doom.jpg",
+    embedUrl: "https://www.retrogames.cc/embed/8390-dungeons-dragons-tower-of-doom-940113-usa.html",
+    platform: "Arcade",
+    logo: "https://gam.onl/user/arcade/logos/ddtod.png",
+  },
+
 ];
 
 export const beatnupFilters = [

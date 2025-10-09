@@ -1,27 +1,6 @@
 import { Game } from "../index";
 
 export const raceGames: Game[] = [
-    /*{
-        id: "lamborghini-american-challenge",
-        title: "Lamborghini Challenge",
-        slug: "lamborghini-american-challenge-usa",
-        embedId: "24643",
-        year: 1992,
-        genre: "Fight Race",
-        folder: "Racing",
-        publisher: "Todd-LucasArts / Titus",
-        characters: ["Pam", "Joe", "Sly"],
-        description: "Exotic car racing in America!",
-        longDescription:
-            "Race across iconic American highways in sleek Lamborghinis built for speed and showmanship. " +
-  "Outrun rivals, dodge traffic, and master time trials across diverse cityscapes. " +
-  "Bet cash between races and tune your car for ultimate performance. " +
-  "An early ’90s blend of arcade racing and competitive street flair.",
-        players: "1 Player",
-        developer: "Titus",
-        coverImage: "/assets/covers/lamborghini.jpg",
-        platform: "Super Nintendo",
-    }, */
     {
         id: "rock-n-roll-racing",
         title: "Rock N’ Roll Racing",
@@ -41,6 +20,7 @@ export const raceGames: Game[] = [
         players: "1-2 Players",
         developer: "Silicon & Synapse",
         coverImage: "/assets/covers/rock.png",
+        logo: "https://gam.onl/user/snes/logos/Rock%20n'%20Roll%20Racing%20(USA).png",
         platform: "Super Nintendo",
     },
     {
@@ -62,6 +42,7 @@ export const raceGames: Game[] = [
         players: "1-2 Players",
         developer: "Konami",
         coverImage: "/assets/covers/bike.jpg",
+        logo: "https://gam.onl/user/snes/logos/Biker%20Mice%20from%20Mars%20(USA).png",
         platform: "Super Nintendo",
     },
 ];
