@@ -256,7 +256,7 @@ export const fightGames: Game[] = [
     },
     {
         id: "justice-league-task-force",
-        title: "Justice League Task Force",
+        title: "Justice League",
         slug: "justice-league-task-force-usa",
         embedId: "20205",
         year: 1995,
@@ -274,7 +274,7 @@ export const fightGames: Game[] = [
     },
     {
         id: "vampire-hunter",
-        title: "Vampire Hunter: Darkstalkers",
+        title: "Vampire Hunter",
         slug: "vampire-hunter-darkstalkers-revenge-950302-japan",
         embedId: "10578",
         year: 1995,

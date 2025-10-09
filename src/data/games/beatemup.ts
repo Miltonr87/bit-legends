@@ -510,7 +510,7 @@ export const beatnupGames: Game[] = [
   },
   {
     id: "xmen-mutant-apocalypse",
-    title: "X-Men: Mutant Apocalypse",
+    title: "X-Men: Apocalypse",
     slug: "x-men-mutant-apocalypse-usa",
     embedId: "22926",
     year: 1994,
