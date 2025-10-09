@@ -26,7 +26,7 @@ export const AboutDialog = () => {
           About
         </Button>
       </DialogTrigger>
-      <DialogContent className="max-w-[40vh] max-h-[90vh] overflow-y-auto bg-gradient-to-b from-background to-secondary/30 border border-border/50 shadow-lg">
+      <DialogContent className="max-w-[40vh] max-h-[90vh] bg-gradient-to-b from-background to-secondary/30 border border-border/50 shadow-lg">
         <DialogHeader>
           <DialogTitle className=" text-center text-2xl font-bold text-primary mb-4">
             About
