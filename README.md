@@ -12,12 +12,11 @@ Bit Legends provides a seamless emulation experience using embedded game ROMs an
 
 ## 🚀 Features
 
-- 🎮 Play retro games directly in the browser (via EmulatorJS)
+- 🎮 Play retro games directly in the browser (via EmulatorJS) and save state locally or on storage
 - 🕹️ Integrated virtual controller with keyboard mapping
-- 🧠 Game history and favorites stored locally
-- 🌙 Dark Mode and responsive layout
+- 🧠 Game history and favorites stored in Firebase
 - 📱 Mobile-friendly interface with auto-detection
-- 🏆 Player stats and star rating system
+- 💾 Cloud sync for favorites games and user profile
 - 🔗 Social sharing and community integration
 
 ---
@@ -28,8 +27,9 @@ Bit Legends provides a seamless emulation experience using embedded game ROMs an
 | ---------------- | ---------------------------------------------------- |
 | **Frontend**     | React 18, TypeScript, Vite                           |
 | **UI & Styling** | Tailwind CSS, Shadcn/UI, Framer Motion, Lucide Icons |
-| **State & Data** | React Query, Local Storage API                       |
-| **Auth**         | Google OAuth (Auth, Database, Storage)               |
+| **State & Data** | React Query, Local Storage API, Firebase Firestore   |
+| **Auth**         | Firebase Auth (Google OAuth)                         |
+| **Backend**      | Firebase (Auth, Firestore, Storage)                  |
 | **Emulation**    | EmulatorJS (via CDN)                                 |
 | **Hosting**      | Vercel                                               |
 
@@ -37,26 +37,12 @@ Bit Legends provides a seamless emulation experience using embedded game ROMs an
 
 ## 🧠 Architecture
 
-Bit Legends is structured as a modern single-page application (SPA) using Vite for bundling and fast development. EmulatorJS is integrated dynamically via CDN, allowing flexible loading of multiple ROM sources while maintaining strong performance.
+Bit Legends is a modern **Single-Page Application (SPA)** built with **Vite**.  
+It integrates **Firebase Authentication** and **Cloud Firestore** for user data, favorites, and progress tracking.
 
-## ⚙️ Installation
+Game content is dynamically loaded via EmulatorJS CDN, ensuring fast performance and flexibility.
 
-```bash
-# Clone the repository
-git clone https://github.com/yourusername/bit-legends.git
-cd bit-legends
-
-# Install dependencies
-yarn install
-
-# Run locally
-yarn dev
-
-# Build for production
-yarn build
-```
-
-Then open `http://localhost:5173` in your browser.
+---
 
 ---
 
@@ -78,6 +64,68 @@ Default keyboard mapping:
 | R      | E           |
 | Start  | Enter       |
 | Select | Right Shift |
+
+---
+
+## ⚙️ Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/bit-legends.git
+cd bit-legends
+
+# Install dependencies
+yarn install
+
+# Run locally
+yarn dev
+
+# Build for production
+yarn build
+```
+
+Then open [http://localhost:5173](http://localhost:5173) in your browser.
+
+---
+
+## 🔐 Environment Setup
+
+Create a `.env` file in the project root with the following example values to run locally:
+
+```bash
+# Google OAuth
+VITE_GOOGLE_CLIENT_ID
+
+# RetroArch API (optional)
+VITE_RA_USER
+VITE_RA_KEY
+
+# Firebase Configuration
+VITE_FIREBASE_API_KEY
+VITE_FIREBASE_AUTH_DOMAIN
+VITE_FIREBASE_PROJECT_ID
+VITE_FIREBASE_STORAGE_BUCKET
+VITE_FIREBASE_SENDER_ID
+VITE_FIREBASE_APP_ID
+VITE_FIREBASE_MEASUREMENT_ID
+```
+
+> 💡 **Tip:** Never commit your `.env` file to GitHub.  
+> In production (e.g. Vercel), define these variables via **Project → Settings → Environment Variables**.
+
+## 🔧 Deployment (Vercel + Firebase)
+
+1. Push your project to GitHub.
+2. Connect the repo to **Vercel**.
+3. Add all `.env` variables to **Vercel → Settings → Environment Variables**.
+4. Redeploy your main branch.
+5. In Firebase Console → Authentication → add:
+   ```
+   localhost
+   ```
+   to **Authorized Domains**.
+
+That’s it — your deployment is live 🎮
 
 ---
 
