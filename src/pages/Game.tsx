@@ -140,9 +140,12 @@ const Game = () => {
     );
   }
 
-  const iframeUrl =
+  const cleanUrl = encodeURIComponent(
     game.embedUrl ||
-    `https://www.retrogames.cc/embed/${game.embedId}-${game.slug}.html`;
+      `https://www.retrogames.cc/embed/${game.embedId}-${game.slug}.html`
+  );
+
+  const iframeUrl = `/api/proxy-cleaner?url=${cleanUrl}`;
 
   return (
     <div className="min-h-screen flex flex-col">
