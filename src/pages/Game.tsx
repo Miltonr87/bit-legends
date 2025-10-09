@@ -135,17 +135,14 @@ const Game = () => {
             </Button>
           </Link>
         </div>
-        <Footer /> {/* ✅ Added footer here too */}
+        <Footer />
       </div>
     );
   }
 
-  const cleanUrl = encodeURIComponent(
+  const iframeUrl =
     game.embedUrl ||
-      `https://www.retrogames.cc/embed/${game.embedId}-${game.slug}.html`
-  );
-
-  const iframeUrl = `/api/proxy-cleaner?url=${cleanUrl}`;
+    `https://www.retrogames.cc/embed/${game.embedId}-${game.slug}.html`;
 
   return (
     <div className="min-h-screen flex flex-col">
