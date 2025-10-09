@@ -7,21 +7,14 @@ import {
   type GameHistory,
 } from '@/lib/localStorage';
 import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
+import { HistoryCard } from '@/components/HistoryCard';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Card } from '@/components/ui/card';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
-import {
-  User,
-  Upload,
-  Clock,
-  Gamepad2,
-  Trash2,
-  LogIn,
-  LogOut,
-  Mail,
-} from 'lucide-react';
+import { User, Upload, LogIn, LogOut, Mail } from 'lucide-react';
 import { toast } from 'sonner';
 import {
   AlertDialog,
@@ -33,7 +26,6 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
 } from '@/components/ui/alert-dialog';
-
 import { auth } from '@/lib/firebase';
 import { GoogleAuthProvider, signInWithPopup, signOut } from 'firebase/auth';
 
@@ -64,7 +56,7 @@ export default function Profile() {
 
   const loadGameHistory = () => {
     const history = getGameHistory();
-    setGameHistory(history.slice(0, 10));
+    setGameHistory(history);
   };
 
   const handleGoogleLogin = async () => {
@@ -242,9 +234,9 @@ export default function Profile() {
 
   // --- PROFILE SCREEN ---
   return (
-    <div className="min-h-screen">
+    <div className="overflow-x-hidden flex flex-col">
       <Header />
-      <div className="container mx-auto px-4 py-12">
+      <main className="flex-grow container mx-auto px-4 py-12">
         <div className="grid md:grid-cols-3 gap-8">
           <ProfileCard
             user={user}
@@ -261,7 +253,7 @@ export default function Profile() {
             formatTime={formatTime}
           />
         </div>
-      </div>
+      </main>
       <DeleteDialog
         open={deleteDialogOpen}
         setOpen={setDeleteDialogOpen}
@@ -332,66 +324,6 @@ function ProfileCard({
         </div>
       </div>
       <br />
-    </Card>
-  );
-}
-
-function HistoryCard({ gameHistory, handleDeleteHistory, formatTime }: any) {
-  return (
-    <Card className="md:col-span-2 p-6 border-2 border-accent/30 bg-card">
-      <div className="flex items-center gap-3 mb-6">
-        <Clock className="h-6 w-6 text-accent" />
-        <h2 className="text-2xl font-bold">Game History</h2>
-      </div>
-      {gameHistory.length === 0 ? (
-        <div className="text-center py-12">
-          <Gamepad2 className="h-16 w-16 text-muted-foreground mx-auto mb-4" />
-          <p className="text-muted-foreground">
-            No games played yet. Start playing to see your history!
-          </p>
-        </div>
-      ) : (
-        <div className="space-y-3">
-          {gameHistory.map((history: GameHistory) => (
-            <div
-              key={history.id}
-              className="flex items-center justify-between p-4 rounded-lg bg-muted/30 border border-accent/20 hover:border-accent/40 transition-colors"
-            >
-              <div className="flex-1">
-                <p className="font-semibold">{history.gameTitle}</p>
-                <div className="flex items-center gap-4 mt-1 flex-wrap">
-                  <p className="text-sm text-muted-foreground">
-                    {new Date(history.playedAt).toLocaleDateString()} •{' '}
-                    <span className="text-accent">
-                      {new Date(history.playedAt).toLocaleTimeString([], {
-                        hour: '2-digit',
-                        minute: '2-digit',
-                      })}
-                    </span>
-                  </p>
-                  <div className="flex items-center gap-1 text-sm text-muted-foreground">
-                    <Clock className="w-3 h-3" />
-                    {formatTime(history.timeSpent)}
-                  </div>
-                  {history.score && (
-                    <p className="text-sm text-accent font-semibold">
-                      Score: {history.score.toLocaleString()}
-                    </p>
-                  )}
-                </div>
-              </div>
-              <Button
-                variant="ghost"
-                size="icon"
-                onClick={() => handleDeleteHistory(history.id)}
-                className="hover:bg-destructive/10 hover:text-destructive"
-              >
-                <Trash2 className="w-4 h-4" />
-              </Button>
-            </div>
-          ))}
-        </div>
-      )}
     </Card>
   );
 }

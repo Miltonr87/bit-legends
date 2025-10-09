@@ -12,6 +12,7 @@ import Game from './pages/Game';
 import Profile from './pages/Profile';
 import NotFound from './pages/NotFound';
 import FavoriteGames from './pages/FavoriteGames';
+import { Footer } from '@/components/Footer';
 
 const queryClient = new QueryClient();
 const googleClientId = import.meta.env.VITE_GOOGLE_CLIENT_ID;
@@ -29,14 +30,18 @@ const App = () => (
               v7_relativeSplatPath: true,
             }}
           >
-            <Routes>
-              <Route path="/" element={<Index />} />
-              <Route path="/game/:id" element={<Game />} />
-              <Route path="/profile" element={<Profile />} />
-              <Route path="/favorites" element={<FavoriteGames />} />{' '}
-              {/* ✅ NEW */}
-              <Route path="*" element={<NotFound />} />
-            </Routes>
+            <div className="min-h-screen flex flex-col">
+              <div className="flex-grow">
+                <Routes>
+                  <Route path="/" element={<Index />} />
+                  <Route path="/game/:id" element={<Game />} />
+                  <Route path="/profile" element={<Profile />} />
+                  <Route path="/favorites" element={<FavoriteGames />} />
+                  <Route path="*" element={<NotFound />} />
+                </Routes>
+              </div>
+              <Footer />
+            </div>
           </BrowserRouter>
         </TooltipProvider>
       </ThemeProvider>

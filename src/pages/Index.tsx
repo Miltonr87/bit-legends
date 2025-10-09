@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { allGames, seriesFilters } from '../data';
 import { GameCard } from '@/components/GameCard';
 import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Search } from 'lucide-react';
@@ -32,7 +33,6 @@ const Index = () => {
   }, []);
 
   let filteredGames = shuffledGames;
-
   if (selectedSeries !== 'All Games') {
     filteredGames = filteredGames.filter((game) => {
       const normalizedGenre = game.genre.toLowerCase();
@@ -101,21 +101,6 @@ const Index = () => {
             Classic fighters, iconic stages, and timeless duels reborn for the
             modern age.
           </p>
-          <div className="flex flex-wrap justify-center gap-2 sm:gap-4 text-xs sm:text-sm text-muted-foreground px-4">
-            <div className="flex items-center gap-2 px-3 sm:px-4 py-2 bg-card/50 rounded-lg border border-border">
-              <div className="h-2 w-2 rounded-full bg-accent animate-pulse" />
-              <span>Play Online</span>
-            </div>
-            <div className="flex items-center gap-2 px-3 sm:px-4 py-2 bg-card/50 rounded-lg border border-border">
-              <div className="h-2 w-2 rounded-full bg-primary animate-pulse" />
-              <span>Save Progress</span>
-            </div>
-            <div className="flex items-center gap-2 px-3 sm:px-4 py-2 bg-card/50 rounded-lg border border-border">
-              <div className="h-2 w-2 rounded-full bg-accent animate-pulse" />
-              <span className="hidden sm:inline">High Quality</span>
-              <span className="sm:hidden">Full Screen</span>
-            </div>
-          </div>
         </div>
       </section>
       <section className="container mx-auto px-4 py-8 sm:py-12">
@@ -216,24 +201,6 @@ const Index = () => {
           </div>
         )}
       </section>
-      <footer className="border-t border-border/50 mt-12 sm:mt-20 py-6 sm:py-8">
-        <div className="container mx-auto px-4 text-center">
-          <p className="text-muted-foreground text-xs sm:text-sm">
-            Bit Legends •{' '}
-            <a
-              href="https://miltonr87.vercel.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-accent hover:underline"
-            >
-              Milton Rodrigues - 2025
-            </a>
-          </p>
-          <p className="text-muted-foreground/60 text-xs mt-2">
-            All games are property of their respective owners!
-          </p>
-        </div>
-      </footer>
     </div>
   );
 };
