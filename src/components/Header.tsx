@@ -4,6 +4,8 @@ import { Button } from '@/components/ui/button';
 import { useEffect, useState } from 'react';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 import { AboutDialog } from '@/components/AboutDialog';
+import { onAuthStateChanged } from 'firebase/auth';
+import { auth } from '@/lib/firebase';
 
 export const Header = () => {
   const [user, setUser] = useState<{
@@ -20,12 +22,25 @@ export const Header = () => {
         console.error('Error parsing user data:', e);
       }
     }
+    const unsubscribe = onAuthStateChanged(auth, (firebaseUser) => {
+      if (firebaseUser) {
+        const updatedUser = {
+          username: firebaseUser.displayName || 'Player',
+          avatar_url: firebaseUser.photoURL,
+        };
+        localStorage.setItem('bitlegends_user', JSON.stringify(updatedUser));
+        setUser(updatedUser);
+      } else {
+        localStorage.removeItem('bitlegends_user');
+        setUser(null);
+      }
+    });
+    return () => unsubscribe();
   }, []);
 
   return (
     <header className="sticky top-0 z-50 border-b border-border/50 backdrop-blur-md bg-background/80">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-        {/* Logo */}
         <Link to="/" className="flex items-center gap-3 sm:gap-4 group">
           <div className="relative">
             <Gamepad2 className="h-6 w-6 sm:h-8 sm:w-8 text-accent group-hover:text-accent/80 transition-colors" />
@@ -35,12 +50,8 @@ export const Header = () => {
             Bit Legends
           </h1>
         </Link>
-
-        {/* Navigation */}
         <nav className="flex items-center gap-4 sm:gap-6">
           <AboutDialog />
-
-          {/* ✅ Show only if logged in */}
           {user && (
             <Link to="/favorites">
               <Button
@@ -53,8 +64,6 @@ export const Header = () => {
               </Button>
             </Link>
           )}
-
-          {/* Profile / Sign in */}
           <Link to="/profile">
             <Button
               variant="outline"
