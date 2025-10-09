@@ -44,8 +44,6 @@ Game content is dynamically loaded via EmulatorJS CDN, ensuring fast performance
 
 ---
 
----
-
 ## 🕹️ Controls
 
 Default keyboard mapping:
@@ -113,6 +111,8 @@ VITE_FIREBASE_MEASUREMENT_ID
 > 💡 **Tip:** Never commit your `.env` file to GitHub.  
 > In production (e.g. Vercel), define these variables via **Project → Settings → Environment Variables**.
 
+---
+
 ## 🔧 Deployment (Vercel + Firebase)
 
 1. Push your project to GitHub.
@@ -126,6 +126,13 @@ VITE_FIREBASE_MEASUREMENT_ID
    to **Authorized Domains**.
 
 That’s it — your deployment is live 🎮
+
+---
+
+## 🎵 Music Credits
+
+Background music used in this project:  
+**"Intro Theme"** — Music by [Andrii Poradovskyi](https://pixabay.com/users/poradovskyi-22915070/) from [Pixabay](https://pixabay.com/).
 
 ---
 
