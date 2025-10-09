@@ -2,7 +2,6 @@ import { useParams, Link } from 'react-router-dom';
 import { useEffect, useRef, useState } from 'react';
 import { allGames } from '../data';
 import { Header } from '@/components/Header';
-import { Footer } from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import {
   ArrowLeft,
@@ -339,7 +338,6 @@ const Game = () => {
           </div>
         </div>
       </main>
-      <Footer />
     </div>
   );
 };
