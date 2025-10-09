@@ -29,7 +29,7 @@ export const fightGames: Game[] = [
         title: "Ultimate Mortal Kombat",
         slug: "ultimate-mortal-kombat-3-usa",
         embedId: "23432",
-        year: 1995,
+        year: 1996,
         genre: "Horror",
         folder: "Mortal Kombat",
         publisher: "Acclaim",
