@@ -53,6 +53,7 @@ export const AboutDialog = () => {
                   'Radix UI',
                   'Lucide React',
                   'EmulatorJS',
+                  'Firebase',
                 ].map((tech) => (
                   <motion.span
                     key={tech}
