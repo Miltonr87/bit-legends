@@ -13,13 +13,9 @@ const firebaseConfig = {
     appId: import.meta.env.VITE_FIREBASE_APP_ID,
 };
 
-// ✅ Evita inicialização duplicada em hot reload (Vite/React)
 const app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
-
 export const db = getFirestore(app);
 export const auth = getAuth(app);
-
-// ✅ Analytics opcional
 export const analyticsPromise = isSupported().then((yes) =>
     yes ? getAnalytics(app) : null
 );

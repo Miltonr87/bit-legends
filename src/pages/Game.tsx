@@ -37,7 +37,7 @@ const Game = () => {
   const { toast } = useToast();
   const deviceInfo = useDisplayDevice();
 
-  // ✅ Detect mobile
+  // Detect mobile
   useEffect(() => {
     const mm = window.matchMedia('(max-width: 639px)');
     const apply = () => setIsMobile(mm.matches);
@@ -46,7 +46,7 @@ const Game = () => {
     return () => mm.removeEventListener('change', apply);
   }, []);
 
-  // ✅ Track game play time
+  // Track game play time
   useEffect(() => {
     if (game) startTimeRef.current = Date.now();
     return () => {
@@ -61,7 +61,7 @@ const Game = () => {
     };
   }, [game]);
 
-  // ✅ Check if game is already favorite
+  // Check if game is already favorite
   useEffect(() => {
     const checkFavorite = async () => {
       const user = auth.currentUser;
@@ -73,7 +73,6 @@ const Game = () => {
     checkFavorite();
   }, [game]);
 
-  // ✅ Save game to favorites
   const handleSaveFavorite = async () => {
     const user = auth.currentUser;
     if (!user) {
@@ -89,16 +88,12 @@ const Game = () => {
 
     try {
       const favRef = doc(db, 'favorites', user.uid, 'games', game.id);
-
-      // ✅ Prevent undefined values
       const gameData = {
         title: game.title || 'Unknown Game',
         cover: game.cover ?? null,
         addedAt: new Date().toISOString(),
       };
-
       await setDoc(favRef, gameData);
-
       setIsFavorite(true);
       toast({
         title: 'Saved!',
@@ -114,21 +109,18 @@ const Game = () => {
     }
   };
 
-  // ✅ Share via WhatsApp
   const handleWhatsAppShare = () => {
     if (!game) return;
     const text = `Check out ${game.title} on Bit Legends! ${window.location.href}`;
     window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');
   };
 
-  // ✅ Toggle fullscreen on mobile
   const toggleFullscreen = () => {
     const container = gameIframeRef.current;
     if (!container) return;
     container.classList.toggle('fullscreen-sim');
   };
 
-  // ✅ Handle not found
   if (!game) {
     return (
       <div className="min-h-screen">
@@ -165,9 +157,7 @@ const Game = () => {
             </Button>
           </Link>
         </div>
-
         <div className="grid lg:grid-cols-3 gap-4 sm:gap-8">
-          {/* LEFT SIDE */}
           <div className="lg:col-span-2 space-y-4 sm:space-y-6">
             <Card className="overflow-hidden border-2 border-accent/30 bg-card">
               <div className="bg-gradient-to-r from-primary/20 to-accent/20 p-3 sm:p-4 border-b border-accent/30">
@@ -180,27 +170,29 @@ const Game = () => {
                       {game.developer} • {game.year}
                     </p>
                   </div>
-
-                  {/* ✅ Save to Favorites */}
                   <div className="flex items-center gap-2">
                     <Button
                       onClick={handleSaveFavorite}
                       disabled={isFavorite}
-                      className={`flex items-center gap-2 ${
-                        isFavorite
-                          ? 'bg-green-500/20 text-green-400 border-green-400'
-                          : 'bg-gradient-to-r from-primary to-accent'
-                      }`}
+                      variant="outline"
+                      size="icon"
+                      className={`h-8 w-8 sm:h-10 sm:w-10 border-accent/50 transition-all duration-300 
+                             ${
+                               isFavorite
+                                 ? 'bg-green-500/10 hover:bg-green-500/20'
+                                 : 'hover:bg-accent/10'
+                             }`}
+                      title={'Added to favorites'}
                     >
                       <Heart
-                        className={`h-5 w-5 ${
-                          isFavorite ? 'fill-green-400' : 'text-white'
-                        }`}
+                        className={`h-4 w-4 transition-all duration-300 
+                             ${
+                               isFavorite
+                                 ? 'fill-green-400 text-green-400 drop-shadow-[0_0_6px_rgba(0,255,0,0.6)]'
+                                 : 'text-accent hover:fill-accent'
+                             }`}
                       />
-                      {isFavorite ? 'Saved' : 'Save to Favorites'}
                     </Button>
-
-                    {/* Share button */}
                     <DropdownMenu>
                       <DropdownMenuTrigger asChild>
                         <Button
@@ -221,8 +213,6 @@ const Game = () => {
                   </div>
                 </div>
               </div>
-
-              {/* ✅ Game Embed */}
               <div
                 ref={gameIframeRef}
                 className="relative bg-black rounded-lg overflow-hidden"
@@ -243,7 +233,6 @@ const Game = () => {
                   }}
                   sandbox="allow-scripts allow-same-origin allow-pointer-lock allow-forms allow-presentation"
                 ></iframe>
-
                 {isMobile && (
                   <button
                     onClick={toggleFullscreen}
@@ -254,8 +243,6 @@ const Game = () => {
                   </button>
                 )}
               </div>
-
-              {/* Device Info */}
               <div className="p-3 sm:p-4 bg-muted/30 border-t border-accent/20">
                 <div className="flex items-center gap-2 text-sm sm:text-base text-foreground/80">
                   <Gamepad2 className="h-4 w-4 text-accent" />
@@ -263,8 +250,6 @@ const Game = () => {
                 </div>
               </div>
             </Card>
-
-            {/* ABOUT SECTION */}
             <Card className="p-4 sm:p-6 border-2 border-border bg-card">
               <h2 className="text-xl sm:text-2xl font-bold mb-4 text-accent">
                 About This Game
@@ -273,8 +258,6 @@ const Game = () => {
                 {game.longDescription}
               </p>
             </Card>
-
-            {/* CHARACTERS */}
             {game.characters?.length > 0 && (
               <Card className="p-4 sm:p-6 border-2 border-accent/30 bg-gradient-to-br from-accent/5 to-transparent">
                 <h2 className="text-xl sm:text-2xl font-bold mb-4 text-accent flex items-center gap-2">
@@ -293,8 +276,6 @@ const Game = () => {
               </Card>
             )}
           </div>
-
-          {/* RIGHT SIDE */}
           <div className="space-y-4 sm:space-y-6">
             <Card className="p-4 sm:p-6 border-2 border-accent/30 bg-gradient-to-br from-card to-card/50">
               <div className="space-y-4">
@@ -332,7 +313,6 @@ const Game = () => {
                 </div>
               </div>
             </Card>
-
             <Card className="p-6 border-2 border-primary/30 bg-gradient-to-br from-primary/10 to-transparent">
               <h3 className="font-bold text-lg mb-3 text-primary">Platform</h3>
               <div className="flex items-center gap-3">
@@ -347,7 +327,6 @@ const Game = () => {
                 </div>
               </div>
             </Card>
-
             {!isMobile && <ControllerSetup />}
           </div>
         </div>

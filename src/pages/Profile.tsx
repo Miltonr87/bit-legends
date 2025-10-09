@@ -67,7 +67,6 @@ export default function Profile() {
     setGameHistory(history.slice(0, 10));
   };
 
-  // ✅ Firebase Google Sign-In
   const handleGoogleLogin = async () => {
     try {
       toast('Logging in with Google...', { description: 'Please wait' });
@@ -272,8 +271,6 @@ export default function Profile() {
   );
 }
 
-// ✅ Helper Components
-
 function ProfileCard({
   user,
   uploading,
@@ -308,7 +305,6 @@ function ProfileCard({
             className="hidden"
           />
         </div>
-
         <div className="w-full space-y-3 text-center">
           <h2 className="text-2xl font-bold text-accent">{user.username}</h2>
           <p className="text-sm text-muted-foreground">{user.email}</p>
