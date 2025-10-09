@@ -13,7 +13,10 @@ export const raceGames: Game[] = [
         characters: ["Pam", "Joe", "Sly"],
         description: "Exotic car racing in America!",
         longDescription:
-            "Race Lamborghinis across iconic American highways, fighting rivals for glory through intense time trials and circuit challenges.",
+            "Race across iconic American highways in sleek Lamborghinis built for speed and showmanship. " +
+  "Outrun rivals, dodge traffic, and master time trials across diverse cityscapes. " +
+  "Bet cash between races and tune your car for ultimate performance. " +
+  "An early ’90s blend of arcade racing and competitive street flair.",
         players: "1 Player",
         developer: "Titus",
         coverImage: "/assets/covers/lamborghini.jpg",
@@ -31,7 +34,10 @@ export const raceGames: Game[] = [
         characters: ["Snake Sanders", "Cyberhawk", "Jake Badlands", "Tarquinn", "Ivanzypher", "Katarina Lyons"],
         description: "Racing with rock soundtrack!",
         longDescription:
-            "Rock N’ Roll Racing features vehicular combat and a licensed rock soundtrack as you race across planets.",
+            "Rock N’ Roll Racing roars with high-octane combat and an electrifying licensed rock soundtrack. " +
+            "Blast opponents with missiles and mines while drifting through interplanetary circuits. " +
+            "Each victory earns cash to upgrade your car’s weapons and armor. " +
+            "Heavy metal meets explosive racing in this cult Blizzard classic.",
         players: "1-2 Players",
         developer: "Silicon & Synapse",
         coverImage: "/assets/covers/rock.png",
@@ -49,7 +55,10 @@ export const raceGames: Game[] = [
         characters: ["Throttle", "Vinnie", "Modo", "Limburger", "Greasepit", "Dr.Karbunkle"],
         description: "Cartoon motorcycle racing on Mars!",
         longDescription:
-            "Based on the animated series, Biker Mice from Mars lets you race motorbikes across cosmic tracks and perform stunts.",
+            "Rev up as the radical rodents from Mars in this action-packed racing brawler. " +
+            "Speed through wild tracks, dodge hazards, and launch attacks against rival bikers. " +
+            "Vivid graphics, tight controls, and cartoon humor capture the show’s spirit. " +
+            "A cosmic, adrenaline-fueled ride from Konami’s golden SNES era.",
         players: "1-2 Players",
         developer: "Konami",
         coverImage: "/assets/covers/bike.jpg",

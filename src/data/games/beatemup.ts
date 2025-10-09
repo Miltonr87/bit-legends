@@ -13,7 +13,10 @@ export const beatnupGames: Game[] = [
     characters: ["Adam Hunter", "Axel Stone", "Blaze Fielding"],
     description: "The start of the legendary beat 'em up trilogy!",
     longDescription:
-      "Three young police officers fight a syndicate that controls a crime-ridden city in this Genesis classic.",
+      "Three ex-cops take justice into their own hands to clean up a corrupt city. " +
+      "Punch, kick, and throw your way through waves of thugs and bosses. " +
+      "Legendary music, gritty visuals, and co-op mayhem define this Sega classic. " +
+      "The origin of one of the greatest beat ’em up trilogies ever made.",
     players: "1-2 Players",
     developer: "Sega",
     coverImage: "/assets/covers/sor1.png",
@@ -31,7 +34,10 @@ export const beatnupGames: Game[] = [
     characters: ["Axel Stone", "Blaze Fielding", "Eddie Hunter", "Max Thunder"],
     description: "The legendary beat 'em up masterpiece!",
     longDescription:
-      "The legendary beat 'em up returns with improved graphics, gameplay, and an unforgettable soundtrack.",
+      "Streets of Rage 2 raises the bar with sharper controls, vibrant graphics, and an unforgettable Yuzo Koshiro soundtrack. " +
+      "Join Axel, Blaze, Max, and Skate to stop Mr. X’s criminal empire. " +
+      "Every hit feels heavy, every combo satisfying, every level iconic. " +
+      "A true masterpiece of the 16-bit era.",
     players: "1-2 Players",
     developer: "Sega",
     coverImage: "/assets/covers/sor2.png",
@@ -49,7 +55,10 @@ export const beatnupGames: Game[] = [
     characters: ["Axel Stone", "Blaze Fielding", "Eddie Hunter", "Zan", "Victy"],
     description: "The epic conclusion to the trilogy!",
     longDescription:
-      "The third installment adds new moves, multiple storylines, and a challenging difficulty curve.",
+      "The final battle against Mr. X brings branching stories, new moves, and explosive difficulty. " +
+      "Axel, Blaze, Skate, and Dr. Zan face an army of cyborgs threatening the city. " +
+      "Dynamic combat, dramatic pacing, and multiple endings keep tension high. " +
+      "A bold, challenging conclusion to the Streets of Rage trilogy.",
     players: "1-2 Players",
     developer: "Sega",
     coverImage: "/assets/covers/sor3.png",
@@ -67,7 +76,10 @@ export const beatnupGames: Game[] = [
     characters: ["Aldo (Cleric)", "Ravel (Elf)", "Leger (Mage)", "Derel (Fighter)", "Vargas (Dwarf)"],
     description: "Fantasy beat 'em up adventure!",
     longDescription:
-      "Embark on an epic fantasy adventure in this Capcom beat 'em up classic. Choose from five character classes and battle through hordes of monsters to defeat the evil dragon.",
+      "Embark on a quest through medieval lands to slay the red dragon Gildiss. " +
+      "Choose from five heroes—each with unique powers and upgrades. " +
+      "Hack, slash, and cast spells through dungeons, forests, and castles. " +
+      "Capcom’s fantasy brawler blends RPG progression with classic arcade action.",
     players: "1-2 Players",
     developer: "Capcom",
     coverImage: "/assets/covers/the-king-of-dragons.png",
@@ -86,7 +98,10 @@ export const beatnupGames: Game[] = [
     characters: ["Leonardo", "Michelangelo", "Donatello", "Raphael"],
     description: "Cowabunga! The Turtles travel through time to save New York!",
     longDescription:
-      "Join the Teenage Mutant Ninja Turtles in one of the most beloved arcade beat 'em ups ever made. Battle Shredder’s minions across time — from prehistoric ages to the Technodrome — in fast-paced co-op action with colorful visuals and iconic Konami gameplay.",
+      "Cowabunga! Travel through time with the Turtles to stop Shredder’s evil plan. " +
+      "Battle Foot Soldiers in prehistoric eras, pirate ships, and futuristic cities. " +
+      "Fast, colorful, and full of humor, it’s co-op perfection from Konami. " +
+      "One of the most beloved beat ’em ups ever created.",
     players: "1-2 Players",
     developer: "Konami",
     coverImage: "/assets/covers/tnt.png",
@@ -104,7 +119,10 @@ export const beatnupGames: Game[] = [
     characters: ["Cody", "Guy", "Mike Haggar", "Jessica", "Belger"],
     description: "Classic side-scrolling beat ’em up — fight through Metro City gangs!",
     longDescription:
-      "Final Fight is a seminal beat ’em up developed by Capcom. The story centers on Haggar, Cody, and Guy battling the Mad Gear gang to rescue Jessica from Belger.",
+      "Mayor Mike Haggar joins Cody and Guy to rescue his daughter from the Mad Gear gang. " +
+      "Smash your way through Metro City’s slums, subways, and skyscrapers. " +
+      "Powerful grabs, huge sprites, and pure arcade energy define every brawl. " +
+      "Capcom’s gritty classic that set the gold standard for the genre.",
     players: "1-2 Players",
     developer: "Capcom",
     coverImage: "/assets/covers/final_fight.jpg",
@@ -123,7 +141,10 @@ export const beatnupGames: Game[] = [
     characters: ["Mike Haggar", "Carlos Miyamoto", "Maki Genryusai"],
     description: "The sequel to Final Fight on SNES — fight Mad Gear again across the globe!",
     longDescription:
-      "Final Fight 2 improves on its predecessor with two-player co-op and new playable characters. Travel across the world to stop the revived Mad Gear gang.",
+      "The Mad Gear gang returns—this time terrorizing cities across the globe. " +
+      "Team up as Haggar, Maki, or Carlos to clean up the streets once more. " +
+      "Improved visuals and smoother combat refine the SNES experience. " +
+      "A globe-trotting sequel that keeps the fists flying.",
     players: "1-2 Players",
     developer: "Capcom",
     coverImage: "/assets/covers/final_fight2.jpg",
@@ -142,7 +163,10 @@ export const beatnupGames: Game[] = [
     characters: ["Haggar", "Dean", "Guy", "Cody", "Karin"],
     description: "The third installment in the Final Fight series on SNES!",
     longDescription:
-      "Final Fight 3 added new combat mechanics and characters, letting players take down the Skull Cross gang threatening Metro City.",
+      "Metro City faces new chaos from the Skull Cross gang, and the fight begins anew. " +
+      "Haggar, Guy, Dean, and Lucia join forces in intense co-op combat. " +
+      "Dash moves, super combos, and branching stages add new depth. " +
+      "A worthy send-off to Capcom’s legendary brawler trilogy.",
     players: "1-2 Players",
     developer: "Capcom",
     coverImage: "/assets/covers/final_fight3.jpg",
@@ -161,7 +185,10 @@ export const beatnupGames: Game[] = [
     characters: ["Captain Commando", "Mack the Knife", "Ginzu the Ninja", "Baby Head"],
     description: "Team up with Captain Commando and his squad in this futuristic arcade brawler!",
     longDescription:
-      "Captain Commando brings futuristic cooperative action to the arcades. Lead a team of heroes through Metro City in 2026, fighting mutants and cyborgs.",
+      "In the year 2026, Captain Commando leads a bizarre team of heroes through futuristic Metro City. " +
+      "Battle mutants, cyborgs, and aliens with blazing co-op action. " +
+      "Four unique characters bring diverse combat styles and personality. " +
+      "A fast, stylish Capcom classic bursting with sci-fi energy.",
     players: "1-4 Players",
     developer: "Capcom",
     coverImage: "/assets/covers/captain_comando.jpg",
@@ -187,7 +214,10 @@ export const beatnupGames: Game[] = [
     ],
     description: "Morph into action in this SNES adaptation of the Power Rangers movie!",
     longDescription:
-      "Based on the 1995 film, this SNES beat 'em up brings six Rangers together to stop Ivan Ooze and his evil army with co-op gameplay and morphing combat.",
+      "Morph into action as the Mighty Morphin Power Rangers take on Ivan Ooze’s army. " +
+      "Switch between human and Ranger forms, unleashing powerful team attacks. " +
+      "Bright visuals, tight controls, and nostalgic music light up every stage. " +
+      "A faithful movie adaptation packed with co-op fun and heroics.",
     players: "1-2 Players",
     developer: "Natsume",
     coverImage: "/assets/covers/power-rangers.jpg",
@@ -206,7 +236,10 @@ export const beatnupGames: Game[] = [
     characters: ["Batman", "Catwoman", "The Penguin"],
     description: "Take back Gotham from Penguin’s gang in this dark SNES classic!",
     longDescription:
-      "Based on the 1992 film, Batman Returns delivers gritty beat 'em up action through Gotham's icy streets with Konami’s signature polish.",
+      "Step into Tim Burton’s Gotham as Batman to stop the Penguin’s criminal uprising. " +
+      "Dark, atmospheric stages showcase Konami’s cinematic detail. " +
+      "Use grapples, combos, and gadgets to deliver brutal justice. " +
+      "One of the finest movie-based beat ’em ups ever made.",
     players: "1 Player",
     developer: "Konami",
     coverImage: "/assets/covers/batman.png",
@@ -224,7 +257,10 @@ export const beatnupGames: Game[] = [
     characters: ["Fighter", "Cleric", "Thief", "Elf", "Magic-User", "Dwarf"],
     description: "The ultimate fantasy beat 'em up by Capcom!",
     longDescription:
-      "Dungeons & Dragons: Shadow over Mystara expands on its predecessor, Tower of Doom, with six playable classes, branching paths, magic, loot, and RPG-like progression. Team up with friends to battle dragons, liches, and the sinister sorceress Synn in this arcade fantasy classic.",
+      "Enter the world of Mystara in Capcom’s epic fantasy brawler. " +
+      "Choose from six RPG-inspired classes and fight dragons, undead, and sorcery. " +
+      "Collect loot, level up, and explore branching story paths. " +
+      "A rich, cooperative adventure blending D&D depth with arcade action.",
     players: "1-4 Players",
     developer: "Capcom",
     coverImage: "/assets/covers/dungeons&dragons.jpg",
@@ -242,7 +278,10 @@ export const beatnupGames: Game[] = [
     characters: ["Arthur", "Lancelot", "Perceval"],
     description: "Capcom’s Arthurian beat ’em up — swords, honor, and medieval glory!",
     longDescription:
-      "Knights of the Round (1991) brings the legend of King Arthur to life in Capcom’s signature arcade beat ’em up style. Choose between Arthur, Lancelot, or Perceval and battle through armored enemies and mythic bosses. Featuring level-ups, horseback combat, and cooperative play, it’s one of the most refined medieval brawlers ever made.",
+      "Take up arms as Arthur, Lancelot, or Perceval to reclaim Britain’s honor. " +
+      "Fight armored knights and mythical beasts across medieval lands. " +
+      "Earn experience, upgrade weapons, and ride into battle on horseback. " +
+      "A noble and beautifully crafted Capcom arcade legend.",
     players: "1-2 Players",
     developer: "Capcom",
     coverImage: "/assets/covers/knights.jpg",
@@ -261,7 +300,10 @@ export const beatnupGames: Game[] = [
     characters: ["Major Dutch Schaefer", "Lt. Linn Kurosawa", "Predator Hunter", "Predator Warrior"],
     description: "Capcom’s legendary sci-fi fantasy brawler — humans and predators unite against the xenomorph horde!",
     longDescription:
-      "Alien vs. Predator (1994) is a classic side-scrolling beat ’em up from Capcom, combining the worlds of the Alien and Predator franchises. Players choose from human soldiers or elite Predators to battle waves of xenomorphs and face the Queen herself in a relentless arcade spectacle.",
+      "Humans and Predators join forces against the Xenomorph invasion. " +
+      "Slash through hordes of aliens using plasma cannons and blades. " +
+      "Cinematic cutscenes and fast co-op gameplay make every moment intense. " +
+      "One of Capcom’s most celebrated sci-fi arcade experiences.",
     players: "1-3 Players",
     developer: "Capcom",
     coverImage: "/assets/covers/alien.jpeg",
@@ -337,7 +379,10 @@ export const beatnupGames: Game[] = [
     characters: ["Superman", "Superboy", "Steel", "Cyborg Superman", "Eradicator", "Doomsday"],
     description: "Battle through death and resurrection in the DC Comics saga!",
     longDescription:
-      "Follow the DC storyline — Superman falls to Doomsday, and multiple heroes rise to take his place in this Blizzard-developed SNES brawler.",
+      "Relive the epic DC saga of Superman’s fall and resurrection. " +
+      "Play as the Man of Steel and his successors—Superboy, Steel, and others. " +
+      "Battle Doomsday and an army of villains threatening Metropolis. " +
+      "A heroic, story-driven brawler with Blizzard’s signature polish.",
     players: "1 Player",
     developer: "Blizzard",
     coverImage: "/assets/covers/superman.png",
@@ -356,7 +401,10 @@ export const beatnupGames: Game[] = [
     characters: ["Captain America", "Iron Man", "Wolverine", "Spider-Man", "Hulk", "Thanos"],
     description: "The Avengers unite to recover the Infinity Gems before Thanos does!",
     longDescription:
-      "Travel across Earth and space as one of five Marvel heroes—Captain America, Iron Man, Wolverine, Spider-Man, or Hulk—in Capcom’s SNES adaptation of the Infinity Gauntlet saga. Collect powerful gems and battle iconic villains in this fast-paced platforming brawler.",
+      "Assemble Earth’s mightiest heroes to recover the Infinity Gems before Thanos. " +
+      "Switch between five Marvel icons, each with distinct powers and abilities. " +
+      "Battle cosmic threats across Earth, space, and distant worlds. " +
+      "A vibrant SNES brawler packed with superhero spectacle.",
     players: "1 Player",
     developer: "Capcom",
     coverImage: "/assets/covers/marvel_war_gems.jpg",
@@ -374,7 +422,10 @@ export const beatnupGames: Game[] = [
     characters: ["The Punisher", "Nick Fury", "Kingpin"],
     description: "Join Frank Castle and Nick Fury in Capcom’s hard-hitting arcade brawler!",
     longDescription:
-      "Take down Kingpin’s criminal empire in this iconic Marvel arcade beat ’em up featuring brutal combat and co-op gameplay.",
+      "Join Frank Castle and Nick Fury in a brutal mission to destroy Kingpin’s empire. " +
+      "Use guns, knives, and sheer force to crush waves of mobsters. " +
+      "Sharp animation and gritty violence define Capcom’s arcade hit. " +
+      "Pure comic-book vengeance brought to life.",
     players: "1-2 Players",
     developer: "Capcom",
     coverImage: "/assets/covers/the_punisher.jpg",
@@ -393,7 +444,10 @@ export const beatnupGames: Game[] = [
     characters: ["Spawn", "Violator", "Overt-Kill", "Redeemer", "Angela"],
     description: "Enter Todd McFarlane’s dark comic world of Spawn!",
     longDescription:
-      "Spawn is a dark, side-scrolling action game based on Todd McFarlane’s cult comic series, developed by Ukiyotei and published by Acclaim. You play as Al Simmons, a murdered soldier resurrected as the hellspawn Spawn, struggling between his demonic curse and lingering humanity.",
+      "Al Simmons returns from hell as Spawn, trapped between humanity and damnation. " +
+      "Battle demons and corrupted foes in gothic cityscapes. " +
+      "Dark art, heavy atmosphere, and stylish combat define the journey. " +
+      "A haunting adaptation of Todd McFarlane’s antihero saga.",
     players: "1 Player",
     developer: "Ukiyotei",
     coverImage: "/assets/covers/spaawn.jpg",
@@ -466,7 +520,10 @@ export const beatnupGames: Game[] = [
     characters: ["Wolverine", "Cyclops", "Gambit", "Beast", "Psylocke"],
     description: "Take control of the X-Men to stop Magneto’s forces on Genosha!",
     longDescription:
-      "Play as five iconic X-Men in this Capcom classic, combining crisp visuals, unique abilities, and intense platform combat.",
+      "Five X-Men take on Magneto’s forces on the island of Genosha. " +
+      "Each hero’s unique abilities create varied, skill-based gameplay. " +
+      "Capcom’s crisp pixel art and tight mechanics shine throughout. " +
+      "A solo masterpiece blending action, precision, and superhero flair.",
     players: "1 Player",
     developer: "Capcom",
     coverImage: "/assets/covers/xmen_apocalipse.jpg",

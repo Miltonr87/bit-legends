@@ -13,7 +13,11 @@ export const fightGames: Game[] = [
         characters: ["Liu Kang", "Kung Lao", "Sub-Zero", "Scorpion", "Shang Tsung"],
         description: "Run button and combo system!",
         longDescription:
-            "Introducing run button and combination system to the series with even more brutal combat.",
+            "Mortal Kombat 3 revolutionized the saga with its new Run button and fast-paced combo system. " +
+            "Battle through intense arenas filled with traps, gore, and the haunting screams of Outworld. " +
+            "Classic warriors return alongside new challengers, each wielding devastating finishing moves. " +
+            "Speed, brutality, and chaos collide in this ultimate test of reflexes and fatal mastery.",
+
         players: "1-2 Players",
         developer: "Midway",
         coverImage: "/assets/covers/Mortal_Kombat_3_cover.jpeg",
@@ -31,7 +35,11 @@ export const fightGames: Game[] = [
         characters: ["Liu Kang", "Kung Lao", "Sub-Zero", "Scorpion", "Shang Tsung", "Noob Saibot", "Strider", "Sonya Blade"],
         description: "The ultimate MK3!",
         longDescription:
-            "The ultimate version with more characters and refined gameplay mechanics.",
+            "Ultimate Mortal Kombat 3 pushes the series to its brutal peak: faster, bloodier, and packed with secrets. " +
+            "Choose from a massive roster of warriors, each with deadly combos and signature fatalities. " +
+            "Face the relentless AI or challenge friends in fierce head-to-head combat across iconic arenas. " +
+            "From Outworld to Earthrealm, the fate of all realms is decided in the ultimate tournament.",
+
         players: "1-2 Players",
         developer: "Midway",
         coverImage: "/assets/covers/Ultimate_MK3.png",
@@ -49,7 +57,10 @@ export const fightGames: Game[] = [
         characters: ["Ryu", "Ken", "Chun-li", "Guile", "M. Bison", "Vega", "Dhalsim", "Sagat", "Blanka", "Zangief"],
         description: "The game that revolutionized fighting games!",
         longDescription:
-            "The game that revolutionized fighting games forever with 16 world warriors and legendary gameplay.",
+            "Street Fighter II redefined the fighting genre with precision controls, tactical depth, and iconic world warriors. " +
+            "Face Ryu, Chun-Li, Guile, and others across global stages in intense one-on-one battles. " +
+            "Every move, combo, and special attack demands mastery and timing. " +
+            "The legend that built the foundation for every modern fighting game.",
         players: "1-2 Players",
         developer: "Capcom",
         coverImage: "/assets/covers/street_fighter_2.png",
@@ -67,7 +78,10 @@ export const fightGames: Game[] = [
         characters: ["Ryu", "Ken", "Chun-li", "Guile", "M. Bison", "Vega", "Dhalsim", "Sagat", "Blanka", "Zangief"],
         description: "The Alpha series!",
         longDescription:
-            "The Alpha series brings a new fighting style and new characters to the Street Fighter universe.",
+            "Street Fighter Alpha 2 brings cinematic flair, air combos, and the dramatic 'Alpha Counter' system. " +
+            "Meet younger versions of classic fighters and newcomers like Sakura and Rose. " +
+            "Its anime-inspired visuals and smooth controls defined Capcom’s 90s arcade style. " +
+            "A stylish, technical evolution of the Street Fighter legacy.",
         players: "1-2 Players",
         developer: "Capcom",
         coverImage: "/assets/covers/sf_aplha_2.jpeg",
@@ -133,7 +147,10 @@ export const fightGames: Game[] = [
         characters: ["Iori Yagami", "Kyo Kusanagi", "Rugal Bernstein", "Joe Higashi", "Terry Bogard", "Andy Bogard", "Chang Koehan", "Blue Mary"],
         description: "The Dream Match!",
         longDescription:
-            "Dream Match - No story, just pure fighting perfection. Considered by many the best KOF game.",
+            "The King of Fighters ’98 unites every fighter from previous tournaments in one Dream Match. " +
+            "No story—just pure competition, refined mechanics, and unmatched balance. " +
+            "Teams of three clash in legendary showdowns filled with precision and style. " +
+            "The ultimate expression of SNK’s classic fighting brilliance.",
         players: "1-2 Players",
         developer: "SNK",
         coverImage: "/assets/covers/kof_98.jpg",
@@ -297,7 +314,10 @@ export const fightGames: Game[] = [
         characters: [],
         description: "Infinity Gem powered battles!",
         longDescription:
-            "Marvel's mightiest heroes and villains clash in this fighting game featuring the powerful Infinity Gems.",
+            "Marvel Super Heroes pits legendary icons like Spider-Man and Iron Man against cosmic foes. " +
+            "Wield the Infinity Gems to enhance strength, speed, or defense mid-battle. " +
+            "Dynamic visuals and explosive combos capture comic book energy. " +
+            "A larger-than-life fighter that set the stage for Marvel vs. Capcom.",
         players: "1-2 Players",
         developer: "Capcom",
         coverImage: "/assets/covers/marvelheroes.png",
@@ -315,7 +335,10 @@ export const fightGames: Game[] = [
         characters: ["Wolverine", "Ryu", "Ciclope", "Ken", "Juggernaut", "Zangief", "Akuma", "Apocalypse"],
         description: "Marvel vs Capcom begins!",
         longDescription:
-            "Marvel mutants clash with Capcom's World Warriors in epic tag battles that started the crossover craze.",
+            "X-Men vs. Street Fighter merges mutants and world warriors in fast tag-team duels. " +
+            "Swap characters mid-combo, unleash supers, and dominate the screen. " +
+            "Vibrant sprites and chaotic energy defined late-90s arcades. " +
+            "The groundbreaking start of Capcom’s crossover legacy.",
         players: "1-2 Players",
         developer: "Capcom",
         coverImage: "/assets/covers/xmen_vs_street.jpg",
@@ -361,7 +384,10 @@ export const fightGames: Game[] = [
         characters: [],
         description: "The ultimate crossover!",
         longDescription:
-            "The ultimate crossover featuring Marvel and Capcom's greatest heroes in explosive 2v2 battles.",
+            "Marvel vs. Capcom: Clash of Super Heroes unites legends from both universes in explosive 2v2 fights. " +
+            "Summon assists, chain supers, and dominate with insane tag combos. " +
+            "Comic energy meets arcade precision in every vibrant frame. " +
+            "The ultimate crossover that defined an entire generation of fighters.",
         players: "1-2 Players",
         developer: "Capcom",
         coverImage: "/assets/covers/marvel_vs_capcom.jpg",
