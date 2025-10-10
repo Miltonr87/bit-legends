@@ -13,7 +13,6 @@ import {
   Heart,
 } from 'lucide-react';
 import { Card } from '@/components/ui/card';
-import { ControllerSetup } from '@/components/ControllerSetup';
 import { useToast } from '@/hooks/use-toast';
 import { addGameHistory } from '@/lib/localStorage';
 import {
@@ -333,7 +332,6 @@ const Game = () => {
                   </div>
                 </div>
               </Card>
-              {!isMobile && <ControllerSetup />}
             </div>
           </div>
         </div>

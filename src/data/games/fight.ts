@@ -189,7 +189,7 @@ export const fightGames: Game[] = [
         developer: "Avalanche Software / Midway",
         coverImage: "/assets/covers/mk_trilogy.jpg",
         platform: "Nintendo 64",
-        logo: "https://gam.onl/user/segaMD/logos/Ultimate%20Mortal%20Kombat%203%20(U)%20[!].png",
+        logo: "https://gam.onl/user/n64/logos/Mortal%20Kombat%20Trilogy%20(U)%20(V1.2)%20[!].png",
     }
     ,
     {
@@ -312,7 +312,8 @@ export const fightGames: Game[] = [
             "Samurai Shodown II (1994) refines the original with smoother animation, new moves, and deeper combat. Set in feudal Japan, this Neo Geo classic emphasizes timing, patience, and devastating swordplay. A masterpiece of traditional weapon-based dueling that defined SNK’s golden era.",
         players: "1-2 Players",
         developer: "SNK",
-        coverImage: "https://gam.onl/user/arcade/logos/samsho2.png",
+        coverImage: "/assets/covers/samurai.jpg",
+        logo: "https://gam.onl/user/arcade/logos/samsho2.png",
         platform: "Neo Geo",
     },
     {

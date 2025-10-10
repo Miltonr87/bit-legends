@@ -453,31 +453,55 @@ export const beatnupGames: Game[] = [
     logo: "https://gam.onl/user/segaMD/logos/Wolverine%20-%20Adamantium%20Rage%20(UE)%20[!].png",
   },
   {
-    id: "batman-forever",
-    title: "Batman Forever",
-    slug: "batman-forever-arcade",
-    embedId: "41599",
-    year: 1996,
+    id: "batman-arcade-1989",
+    title: "Batman",
+    slug: "batman-arcade-1989",
+    embedId: "44870",
+    year: 1989,
     genre: "DC Comics",
     folder: "DC Comics",
-    publisher: "Acclaim",
-    characters: ["Batman", "Robin", "Two-Face", "Mr. Freeze", "Joker"],
-    description: "A fast-paced arcade beat-’em up in the Batman Forever era!",
+    publisher: "Atari Games",
+    characters: ["Batman", "The Joker", "Vicki Vale", "Bob the Goon"],
+    description: "A dark and stylish arcade action game inspired by Tim Burton’s 1989 Batman film.",
     longDescription:
-      "Batman Forever: The Arcade Game (1995) is a side-scrolling beat-’em up where Batman and Robin battle through Gotham’s gauntlet. " +
-      "Featuring bright visuals, chaotic enemy waves, and flashy combos, it channels 90s arcade energy in Gotham’s infamous streets.",
-    players: "1-2 Players",
-    developer: "Acclaim",
-    coverImage: "/assets/covers/batman_forever_arcade.jpg",
+      "Batman (1989) is a beat 'em up arcade game developed by Atari Games, based on Tim Burton’s hit movie. " +
+      "Players take control of the Dark Knight through Gotham’s gritty streets, the Flugelheim Museum, and Axis Chemical Plant. " +
+      "Armed with his Batarang and Batmobile, Batman faces off against the Joker’s goons in explosive, cinematic stages. " +
+      "With sharp pixel art, atmospheric music, and film-inspired cutscenes, it captures the gothic tone and heroic intensity of the iconic movie adaptation.",
+    players: "1 Player",
+    developer: "Atari Games",
+    coverImage: "/assets/covers/batman_arcade_1989.jpg",
     platform: "Arcade",
     logo: "https://gam.onl/user/arcade/logos/batman.png",
+  },
+  {
+    id: "robo-army-arcade",
+    title: "Robo Army",
+    slug: "robo-army-arcade",
+    embedId: "9681",
+    year: 1991,
+    genre: "Sci-Fi",
+    folder: "SNK / Neo Geo",
+    publisher: "SNK",
+    characters: ["Maxima", "Rocky", "Dr. Jeed", "Robot Minions"],
+    description: "A futuristic side-scrolling brawler where cyborg heroes fight an army of robots.",
+    longDescription:
+      "Robo Army (1991) is an arcade beat-’em up developed by SNK for the Neo Geo MVS / AES system. " +
+      "Players control cyborgs Maxima and Rocky as they battle through six stages full of robotic foes and mechanical hazards. " +
+      "They can pick up makeshift weapons, unleash charged power moves, or briefly transform into invulnerable vehicles. " +
+      "The gritty sci-fi visuals, thumping soundtrack, and high-intensity boss encounters deliver a tough but satisfying brawl through a dystopian future.",
+    players: "1-2 Players",
+    developer: "SNK",
+    coverImage: "/assets/covers/robo_army_arcade.jpg",
+    platform: "Arcade",
+    logo: "https://gam.onl/user/arcade/logos/roboarmy.png",
   },
   {
     id: "superman-world",
     title: "Superman World",
     slug: "superman-world-usa",
     embedId: "10229",
-    year: 1989,
+    year: 1988,
     genre: "DC Comics",
     folder: "DC Comics",
     publisher: "Sunsoft / Taito",
@@ -502,7 +526,7 @@ export const beatnupGames: Game[] = [
     embedId: "24484",
     year: 1994,
     genre: "DC Comics",
-    folder: "DC",
+    folder: "DC Comics",
     publisher: "Sunsoft",
     characters: ["Superman", "Superboy", "Steel", "Cyborg Superman", "Eradicator", "Doomsday"],
     description: "Battle through death and resurrection in the DC Comics saga!",
@@ -571,7 +595,7 @@ export const beatnupGames: Game[] = [
     slug: "spawn-usa",
     embedId: "22470",
     year: 1995,
-    genre: "Horror",
+    genre: "Image",
     folder: "Image Comics",
     publisher: "Acclaim",
     characters: ["Spawn", "Violator", "Overt-Kill", "Redeemer", "Angela"],
@@ -588,6 +612,29 @@ export const beatnupGames: Game[] = [
     logo:
       "https://gam.onl/user/snes/logos/Todd%20McFarlane's%20Spawn%20-%20The%20Video%20Game%20(USA).png",
   },
+  {
+    id: "jim-lees-wildcats-snes",
+    title: "Jim Lee’s WildC.A.T.S",
+    slug: "wildcats-snes",
+    embedId: "19588",
+    year: 1995,
+    genre: "Image",
+    folder: "Image Comics",
+    publisher: "Playmates Interactive",
+    characters: ["Spartan", "Maul", "Warblade", "Helspont", "Daemonites"],
+    description: "A comic-based SNES beat-’em up with the WildC.A.T.S team confronting alien threats.",
+    longDescription:
+      "Jim Lee’s WildC.A.T.S: Covert Action Teams (1995) is a side-scrolling action game for the Super Nintendo, loosely adapting the WildC.A.T.S comics and cartoon. " +
+      "Players alternate between Spartan, Maul, and Warblade, each with unique fighting styles, to battle the Daemonite menace across multiple stages. " +
+      "The game emphasizes team dynamics and power synergy, requiring strategic use of each hero’s abilities to progress. " +
+      "With comic-inspired visuals, pulpy sci-fi atmosphere, and throwbacks to 90s pop culture, the title appeals to fans of both comics and retro beat-’em ups.",
+    players: "1 Player",
+    developer: "Beam Software",
+    coverImage: "/assets/covers/wildcats_snes.jpg",
+    platform: "Super Nintendo",
+    logo: "https://gam.onl/user/snes/logos/Jim%20Lee's%20WildC.A.T.S%20-%20Covert-Action-Teams%20(USA).png",
+  }
+  ,
   {
     id: "night-slashers",
     title: "Night Slashers",
@@ -701,5 +748,6 @@ export const beatnupFilters = [
   "Urban",
   "Sci-Fi",
   "Marvel",
-  "DC Comics"
+  "DC Comics",
+  'Image'
 ];
