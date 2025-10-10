@@ -310,30 +310,6 @@ export const fightGames: Game[] = [
         logo: "https://gam.onl/user/psx/logos/Samurai%20Shodown%20IV%20(Japan).png"
     },
     {
-        id: "double-dragon-neo-geo",
-        title: "Double Dragon",
-        slug: "double-dragon-neo-geo",
-        embedId: "8328",
-        year: 1995,
-        genre: "Tournament",
-        folder: "Technōs",
-        publisher: "Technōs",
-        characters: ["Billy Lee", "Jimmy Lee", "Abobo", "Linda", "Enemies"],
-        description: "A classic side-scrolling brawler where the Lee brothers fight through gangs in a dystopian city.",
-        longDescription:
-            "Double Dragon (Neo-Geo) captures the essence of the original arcade classic with upgraded visuals and tighter controls. " +
-            "Players control Billy and Jimmy Lee through urban stages filled with street gangs, weapons, and boss showdowns. " +
-            "This version delivers strong sprite art, smooth animations, and nostalgic action in an arcade-perfect package. " +
-            "With cooperative play, pick-ups, and rhythmic combat, it remains a staple of the beat ’em up genre.",
-        players: "1-2 Players",
-        developer: "Technōs",
-        coverImage: "/assets/covers/double_dragon_neo_geo.jpg",
-        platform: "Neo Geo",
-        embedUrl: "https://www.retrogames.cc/embed/8328-double-dragon-neo-geo.html",
-        logo: "https://gam.onl/user/segaMD/logos/Double%20Dragon%20(UE)%20(Unl)%20[!].png"
-    }
-    ,
-    {
         id: "realbout-fatalfury",
         title: "Fatal Fury",
         slug: "real-bout-fatal-fury",

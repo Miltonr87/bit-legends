@@ -41,6 +41,50 @@ export const actionGames: Game[] = [
         coverImage: "/assets/covers/shinobi.jpg",
         platform: "Sega Genesis",
         logo: "https://gam.onl/user/segaMD/logos/Shinobi%20III%20-%20Return%20of%20the%20Ninja%20Master%20(U)%20[!].png"
+    },
+    {
+        id: "sunset-riders-snes",
+        title: "Sunset Riders",
+        slug: "sunset-riders-snes",
+        embedId: "19970",
+        year: 1993,
+        genre: "Action",
+        folder: "Konami",
+        publisher: "Konami",
+        characters: ["Billy", "Cormano", "Bob", "Steve"],
+        description: "A colorful Western shootout classic — ride, shoot, and collect bounties!",
+        longDescription:
+            "Sunset Riders (1993) is a side-scrolling run-and-gun game by Konami for the SNES, based on their hit arcade title. " +
+            "Players choose one of four bounty hunters — Billy, Cormano, Bob, or Steve — and blaze through the Wild West battling outlaws and notorious bosses. " +
+            "Featuring horseback chases, multi-directional shooting, and two-player co-op, it mixes humor and classic Konami flair with vibrant visuals and an unforgettable soundtrack. " +
+            "A true gem of the 16-bit era that captures the thrill of Western arcade action.",
+        players: "1-2 Players",
+        developer: "Konami",
+        coverImage: "/assets/covers/sunset_riders_snes.jpg",
+        platform: "Super Nintendo",
+        logo: "https://gam.onl/user/arcade/logos/ssriders.png"
+    },
+    {
+        id: "x-kaliber-2097-snes",
+        title: "X-Kaliber 2097",
+        slug: "x-kaliber-2097-snes",
+        embedId: "24939",
+        year: 1994,
+        genre: "Action",
+        folder: "Activision",
+        publisher: "Activision",
+        characters: ["Slash", "Raptor", "Spuke", "Chainsaw", "Kane"],
+        description: "A futuristic sword-fighting action game set in a cyberpunk world ruled by violence.",
+        longDescription:
+            "X-Kaliber 2097 (1994) is a stylish side-scrolling action game for the Super Nintendo, developed by Fupac/Winds and published by Activision. " +
+            "Set in a dystopian future dominated by gangs and corrupt corporations, players take control of Slash, a sword-wielding hero battling through techno-infested cityscapes. " +
+            "Featuring high-energy combat, a gritty cyberpunk atmosphere, and an acclaimed electronic soundtrack by Psykosonik in the US version, it’s one of the SNES’s hidden action gems. " +
+            "Fluid animation, tight controls, and boss duels make X-Kaliber 2097 a standout among futuristic beat-’em-up titles of its era.",
+        players: "1 Player",
+        developer: "Fupac / Winds",
+        coverImage: "/assets/covers/x_kaliber_2097_snes.jpg",
+        platform: "Super Nintendo",
+        logo: "https://gam.onl/user/snes/logos/X-Kaliber%202097%20(USA).png"
     }
 ];
 
