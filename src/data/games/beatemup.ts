@@ -633,6 +633,49 @@ export const beatnupGames: Game[] = [
     coverImage: "/assets/covers/wildcats_snes.jpg",
     platform: "Super Nintendo",
     logo: "https://gam.onl/user/snes/logos/Jim%20Lee's%20WildC.A.T.S%20-%20Covert-Action-Teams%20(USA).png",
+  }, {
+    id: "castlevania-bloodlines-genesis",
+    title: "Castlevania: Bloodlines",
+    slug: "castlevania-bloodlines-genesis",
+    embedId: "30108",
+    year: 1994,
+    genre: "Action / Platform",
+    folder: "Konami / Genesis",
+    publisher: "Konami",
+    characters: ["John Morris", "Eric Lecarde", "Elizabeth Bartley", "Dracula", "Drolta Tzuentes"],
+    description: "A gothic action platformer where two vampire hunters fight to stop Dracula’s resurrection.",
+    longDescription:
+      "Castlevania: Bloodlines (1994) is a side-scrolling action platformer for the Sega Genesis developed and published by Konami. " +
+      "Set during World War I, the story follows John Morris and Eric Lecarde as they travel across Europe to thwart Elizabeth Bartley’s scheme to resurrect Dracula. " +
+      "The game features multiple branching paths, special weapons (axe, boomerang, holy water), and stage gimmicks like inverted rooms and reflections. " +
+      "With rich visuals, a sweeping soundtrack by Michiru Yamane, and fast-paced gameplay, it stands out as the only Castlevania title made specifically for the Genesis. :contentReference[oaicite:1]{index=1}",
+    players: "1 Player",
+    developer: "Konami",
+    coverImage: "/assets/covers/castlevania_bloodlines_genesis.jpg",
+    platform: "Genesis / Mega Drive",
+    logo: "https://gam.onl/user/psx/logos/Castlevania%20-%20Symphony%20of%20the%20Night%20(Europe).png"
+  },
+  {
+    id: "castlevania-bloodlines-genesis",
+    title: "Castlevania: Bloodlines",
+    slug: "castlevania-bloodlines-genesis",
+    embedId: "30108",
+    year: 1994,
+    genre: "Horror",
+    folder: "Konami",
+    publisher: "Konami",
+    characters: ["John Morris", "Eric Lecarde", "Elizabeth Bartley", "Dracula", "Drolta Tzuentes"],
+    description: "A gothic action platformer where two vampire hunters fight to stop Dracula’s resurrection.",
+    longDescription:
+      "Castlevania: Bloodlines (1994) is a beat n' up for the Sega Genesis developed and published by Konami. " +
+      "Set during World War I, the story follows John Morris and Eric Lecarde as they travel across Europe to thwart Elizabeth Bartley’s scheme to resurrect Dracula. " +
+      "The game features multiple branching paths, special weapons (axe, boomerang, holy water), and stage gimmicks like inverted rooms and reflections. " +
+      "With rich visuals, a sweeping soundtrack by Michiru Yamane, and fast-paced gameplay, it stands out as the only Castlevania title made specifically for the Genesis. :contentReference[oaicite:1]{index=1}",
+    players: "1 Player",
+    developer: "Konami",
+    coverImage: "/assets/covers/castlevania_bloodlines_genesis.jpg",
+    platform: "Sega Genesis",
+    logo: "https://gam.onl/user/segaMD/logos/Castlevania%20-%20Bloodlines%20(U)%20[!].png"
   },
   {
     id: "64th-street-arcade",
