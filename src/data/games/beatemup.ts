@@ -648,7 +648,7 @@ export const beatnupGames: Game[] = [
       "Castlevania: Bloodlines (1994) is a side-scrolling action platformer for the Sega Genesis developed and published by Konami. " +
       "Set during World War I, the story follows John Morris and Eric Lecarde as they travel across Europe to thwart Elizabeth Bartley’s scheme to resurrect Dracula. " +
       "The game features multiple branching paths, special weapons (axe, boomerang, holy water), and stage gimmicks like inverted rooms and reflections. " +
-      "With rich visuals, a sweeping soundtrack by Michiru Yamane, and fast-paced gameplay, it stands out as the only Castlevania title made specifically for the Genesis. :contentReference[oaicite:1]{index=1}",
+      "With rich visuals, a sweeping soundtrack by Michiru Yamane, and fast-paced gameplay, it stands out as the only Castlevania title made specifically for the Genesis.",
     players: "1 Player",
     developer: "Konami",
     coverImage: "/assets/covers/castlevania_bloodlines_genesis.jpg",
@@ -670,7 +670,7 @@ export const beatnupGames: Game[] = [
       "Castlevania: Bloodlines (1994) is a beat n' up for the Sega Genesis developed and published by Konami. " +
       "Set during World War I, the story follows John Morris and Eric Lecarde as they travel across Europe to thwart Elizabeth Bartley’s scheme to resurrect Dracula. " +
       "The game features multiple branching paths, special weapons (axe, boomerang, holy water), and stage gimmicks like inverted rooms and reflections. " +
-      "With rich visuals, a sweeping soundtrack by Michiru Yamane, and fast-paced gameplay, it stands out as the only Castlevania title made specifically for the Genesis. :contentReference[oaicite:1]{index=1}",
+      "With rich visuals, a sweeping soundtrack by Michiru Yamane, and fast-paced gameplay, it stands out as the only Castlevania title made specifically for the Genesis.",
     players: "1 Player",
     developer: "Konami",
     coverImage: "/assets/covers/castlevania_bloodlines_genesis.jpg",
