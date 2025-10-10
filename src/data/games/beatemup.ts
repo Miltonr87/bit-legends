@@ -136,24 +136,46 @@ export const beatnupGames: Game[] = [
     logo: "https://gam.onl/user/snes/logos/Final%20Fight%20(USA).png"
   },
   {
+    id: "golden-axe-revenge-death-adder",
+    title: "Golden Axe",
+    slug: "golden-axe-revenge-of-death-adder-arcade",
+    embedId: "42459",
+    year: 1992,
+    genre: "Fantasy",
+    folder: "Sega",
+    publisher: "Sega",
+    characters: ["Goah", "Stern Blade", "Dora", "Little Trix", "Death Adder"],
+    description: "A brutal fantasy brawler featuring four new heroes taking on Death Adder’s tyranny.",
+    longDescription:
+      "Golden Axe: Revenge of Death Adder (1992) is an arcade sequel in the Golden Axe series, powered by Sega’s System. " +
+      "This chapter introduces four new playable characters — Goah, Stern Blade, Dora, and Little Trix — each with distinct abilities and styles. " +
+      "Players battle through branching paths across multiple levels, using classic magic, mounted creatures, and cooperative attacks. " +
+      "With richer visuals, faster gameplay, and the ability to support up to four simultaneous players, it’s a landmark in arcade beat ’em ups. ",
+    players: "1-4 Players",
+    developer: "Sega AM1",
+    coverImage: "/assets/covers/golden_axe_revenge_of_death_adder.jpg",
+    platform: "Arcade",
+    embedUrl: "https://www.retrogames.cc/embed/42459-golden-axe-the-revenge-of-death-adder-world-rev-b.html",
+    logo: "https://gam.onl/user/arcade/logos/goldnaxe.png"
+  },
+  {
     id: "final-fight-guy",
     title: "Final Fight Guy",
     slug: "final-fight-guy-usa",
-    embedId: "22638",
-    year: 1994,
+    embedId: "23139",
+    year: 1992,
     genre: "Urban",
     folder: "Beat 'em Up",
     publisher: "Capcom",
     characters: ["Guy", "Haggar", "Jessica", "Belger"],
     description: "The SNES-exclusive edition starring Guy — Metro City never sleeps!",
     longDescription:
-      "Final Fight Guy (1994) is a refined SNES release featuring Guy instead of Cody, bringing new balance and difficulty adjustments. " +
+      "Final Fight Guy (1992) is a refined SNES release featuring Guy instead of Cody, bringing new balance and difficulty adjustments. " +
       "Team up with Haggar to clean the streets from Mad Gear once again. " +
       "Sharper combat, redone palette, and SNES polish make this a collector’s favorite version of the arcade hit.",
     players: "1-2 Players",
     developer: "Capcom",
     coverImage: "/assets/covers/final_fight_guy.jpg",
-    embedUrl: "https://www.retrogames.cc/embed/22638-final-fight-guy-usa.html",
     platform: "Super Nintendo",
     logo: "https://gam.onl/user/snes/logos/Final%20Fight%20Guy%20(USA).png",
   },

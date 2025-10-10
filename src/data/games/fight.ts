@@ -155,44 +155,6 @@ export const fightGames: Game[] = [
         logo: "https://gam.onl/user/arcade/logos/xmcota.png",
     },
     {
-        id: "mortal-kombat-trilogy",
-        title: "Mortal Kombat Trilogy",
-        slug: "mortal-kombat-trilogy-europe",
-        embedId: "32167",
-        year: 1996,
-        genre: "Horror",
-        folder: "Mortal Kombat",
-        publisher: "Midway",
-        characters: [
-            "Scorpion",
-            "Sub-Zero",
-            "Liu Kang",
-            "Raiden",
-            "Kitana",
-            "Mileena",
-            "Sonya",
-            "Shao Kahn",
-            "Jax",
-            "Kung Lao",
-            "Smoke",
-            "Reptile",
-            "Ermac",
-            "Rain",
-            "Noob Saibot",
-        ],
-        description: "The ultimate Mortal Kombat experience — all fighters, all fatalities, one brutal collection!",
-        longDescription:
-            "Mortal Kombat Trilogy (1996) is the definitive version of the series’ 16-bit and arcade era, featuring every fighter and arena from Mortal Kombat 1, 2, and 3. " +
-            "Unleash every Fatality, Brutality, and Friendship move across iconic stages. " +
-            "Refined mechanics, blazing speed, and pure nostalgia make this one of the most complete fighting games of its time.",
-        players: "1-2 Players",
-        developer: "Avalanche Software / Midway",
-        coverImage: "/assets/covers/mk_trilogy.jpg",
-        platform: "Nintendo 64",
-        logo: "https://gam.onl/user/n64/logos/Mortal%20Kombat%20Trilogy%20(U)%20(V1.2)%20[!].png",
-    }
-    ,
-    {
         id: "darkstalkers",
         title: "Darkstalkers",
         slug: "darkstalkers-the-night-warriors-940705-usa-phoenix-edition-bootleg",
@@ -316,6 +278,61 @@ export const fightGames: Game[] = [
         logo: "https://gam.onl/user/arcade/logos/samsho2.png",
         platform: "Neo Geo",
     },
+    {
+        id: "samurai-shodown-iv",
+        title: "Samurai Shodown IV",
+        slug: "samurai-shodown-iv-amakusas-revenge-arcade",
+        embedId: "9732",
+        year: 1996,
+        genre: "Tournament",
+        folder: "SNK",
+        publisher: "SNK",
+        characters: [
+            "Haohmaru",
+            "Nakoruru",
+            "Ukyo Tachibana",
+            "Hanzo Hattori",
+            "Galford",
+            "Amakusa Shiro Tokisada",
+            "Kazuki Kazama",
+            "Sogetsu Kazama"
+        ],
+        description: "A legendary Neo Geo sword-fighting game where honor and vengeance clash in feudal Japan.",
+        longDescription:
+            "Samurai Shodown IV: Amakusa’s Revenge (1996) is a weapon-based 2D fighting game developed by SNK for the Neo Geo arcade system. " +
+            "Set after the events of Samurai Shodown II, it follows warriors from across Japan and beyond as they face Amakusa’s dark resurrection. " +
+            "The game refines its predecessors with faster combat, combo finishers, and a refined Rage system, emphasizing precision and timing over brute strength. " +
+            "With beautiful sprite work, cinematic sword duels, and a haunting soundtrack, it remains one of SNK’s most polished and atmospheric fighters.",
+        players: "1-2 Players",
+        developer: "SNK",
+        coverImage: "/assets/covers/samurai_shodown_iv_arcade.jpg",
+        platform: "Neo Geo",
+        logo: "https://gam.onl/user/psx/logos/Samurai%20Shodown%20IV%20(Japan).png"
+    },
+    {
+        id: "double-dragon-neo-geo",
+        title: "Double Dragon",
+        slug: "double-dragon-neo-geo",
+        embedId: "8328",
+        year: 1995,
+        genre: "Tournament",
+        folder: "Technōs",
+        publisher: "Technōs",
+        characters: ["Billy Lee", "Jimmy Lee", "Abobo", "Linda", "Enemies"],
+        description: "A classic side-scrolling brawler where the Lee brothers fight through gangs in a dystopian city.",
+        longDescription:
+            "Double Dragon (Neo-Geo) captures the essence of the original arcade classic with upgraded visuals and tighter controls. " +
+            "Players control Billy and Jimmy Lee through urban stages filled with street gangs, weapons, and boss showdowns. " +
+            "This version delivers strong sprite art, smooth animations, and nostalgic action in an arcade-perfect package. " +
+            "With cooperative play, pick-ups, and rhythmic combat, it remains a staple of the beat ’em up genre.",
+        players: "1-2 Players",
+        developer: "Technōs",
+        coverImage: "/assets/covers/double_dragon_neo_geo.jpg",
+        platform: "Neo Geo",
+        embedUrl: "https://www.retrogames.cc/embed/8328-double-dragon-neo-geo.html",
+        logo: "https://gam.onl/user/segaMD/logos/Double%20Dragon%20(UE)%20(Unl)%20[!].png"
+    }
+    ,
     {
         id: "realbout-fatalfury",
         title: "Fatal Fury",
