@@ -574,7 +574,7 @@ export const beatnupGames: Game[] = [
     slug: "spawn-usa",
     embedId: "22470",
     year: 1995,
-    genre: "Image",
+    genre: "Image Comics",
     folder: "Image Comics",
     publisher: "Acclaim",
     characters: ["Spawn", "Violator", "Overt-Kill", "Redeemer", "Angela"],
@@ -597,7 +597,7 @@ export const beatnupGames: Game[] = [
     slug: "wildcats-snes",
     embedId: "19588",
     year: 1995,
-    genre: "Image",
+    genre: "Image Comics",
     folder: "Image Comics",
     publisher: "Playmates Interactive",
     characters: ["Spartan", "Maul", "Warblade", "Helspont", "Daemonites"],
@@ -749,5 +749,5 @@ export const beatnupFilters = [
   "Sci-Fi",
   "Marvel",
   "DC Comics",
-  'Image'
+  'Image Comics'
 ];
