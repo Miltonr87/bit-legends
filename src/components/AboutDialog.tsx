@@ -20,22 +20,22 @@ export const AboutDialog = () => {
         <Button
           variant="ghost"
           size="lg"
-          className="text-center hover:text-accent px-2 sm:px-4"
+          className="text-center hover:text-accent px-3 sm:px-4 sm:text-base text-sm"
         >
-          <Info className="h-5 w-5 sm:mr-2" />
-          About
+          <Info className="h-6 w-6 sm:h-5 sm:w-5 sm:mr-2" />
+          <span className="hidden sm:inline">About</span>
         </Button>
       </DialogTrigger>
       <DialogContent className="max-w-[40vh] max-h-[90vh] bg-gradient-to-b from-background to-secondary/30 border border-border/50 shadow-lg">
         <DialogHeader>
-          <DialogTitle className=" text-center text-2xl font-bold text-primary mb-4">
+          <DialogTitle className="text-center text-2xl font-bold text-primary mb-4">
             About
           </DialogTitle>
           <DialogDescription className="text-base text-muted-foreground space-y-5 leading-relaxed text-left">
             <p>
               <strong className="text-primary">Bit Legends</strong> is a
               retro-inspired gaming platform that revives the nostalgia of
-              arcade and console classics. All playable directly in your
+              arcade and console classics — all playable directly in your
               browser. Built for dreamers who grew up with the 16-bit era of
               adventures.
             </p>
