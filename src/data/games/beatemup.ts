@@ -480,26 +480,27 @@ export const beatnupGames: Game[] = [
     logo: "https://gam.onl/user/segaMD/logos/Wolverine%20-%20Adamantium%20Rage%20(UE)%20[!].png",
   },
   {
-    id: "batman-arcade-1989",
-    title: "Batman",
-    slug: "batman-arcade-1989",
-    embedId: "44870",
-    year: 1989,
-    genre: "DC Comics",
-    folder: "DC Comics",
-    publisher: "Atari Games",
-    characters: ["Batman", "The Joker", "Vicki Vale", "Bob the Goon"],
-    description: "A dark and stylish arcade action game inspired by Tim Burton’s 1989 Batman film.",
+    id: "the-ninja-warriors-snes",
+    title: "The Ninja Warriors",
+    slug: "the-ninja-warriors-snes",
+    embedId: "",
+    embedUrl: "https://f.kbhgames.com/emujs/play.php?c=snes&f=the-ninja-warriors.smc",
+    year: 1994,
+    genre: "Urban",
+    folder: "Taito",
+    publisher: "Taito",
+    characters: ["Kunoichi", "Ninja", "Kamaitachi"],
+    description: "A cybernetic ninja sidescroller — brutal, stylish, and unforgettable.",
     longDescription:
-      "Batman (1989) is a beat 'em up arcade game developed by Atari Games, based on Tim Burton’s hit movie. " +
-      "Players take control of the Dark Knight through Gotham’s gritty streets, the Flugelheim Museum, and Axis Chemical Plant. " +
-      "Armed with his Batarang and Batmobile, Batman faces off against the Joker’s goons in explosive, cinematic stages. " +
-      "With sharp pixel art, atmospheric music, and film-inspired cutscenes, it captures the gothic tone and heroic intensity of the iconic movie adaptation.",
-    players: "1 Player",
-    developer: "Atari Games",
-    coverImage: "/assets/covers/batman_arcade_1989.jpg",
-    platform: "Arcade",
-    logo: "https://gam.onl/user/arcade/logos/batman.png",
+      "The Ninja Warriors (1994) is a side-scrolling beat-’em-up developed by Natsume and published by Taito for the Super Nintendo. " +
+      "Players control one of three android ninjas — Kunoichi, Ninja, or Kamaitachi — in a rebellion against a tyrannical regime. " +
+      "The game expands on the original arcade hit with new characters, deeper combat mechanics, and cinematic presentation. " +
+      "Featuring gorgeous sprite work, a legendary soundtrack by Zuntata, and fluid co-op action, it remains one of the SNES’s most impressive 2D action experiences.",
+    players: "1-2 Players",
+    developer: "Natsume / Taito",
+    coverImage: "/assets/covers/the_ninja_warriors_snes.jpg",
+    platform: "SNES",
+    logo: "https://gam.onl/user/segaCD/logos/Ninja%20Warriors,%20The.png"
   },
   {
     id: "robo-army-arcade",
