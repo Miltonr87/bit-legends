@@ -159,6 +159,30 @@ export const beatnupGames: Game[] = [
     logo: "https://gam.onl/user/arcade/logos/goldnaxe.png"
   },
   {
+    id: "violent-storm",
+    title: "Violent Storm",
+    slug: "violent-storm-arcade",
+    embedId: "34692",
+    year: 1993,
+    genre: "Sci-Fi",
+    folder: "Konami",
+    publisher: "Konami",
+    characters: ["Boris", "Wade", "Kyle", "The Geld Gang", "Various Bosses"],
+    description: "A gritty urban brawler where vigilantes take on brutal gangs across the ruins of society.",
+    longDescription:
+      "Violent Storm (1993) is a side-scrolling arcade beat ’em up from Konami, built on the Mystic Warriors hardware. " +
+      "Set in a post-war dystopia, three heroes—Boris, Wade, and Kyle—fight the corrupt Geld Gang through multiple stages full of vicious thugs and environmental hazards." +
+      "Each character has slightly different playstyles and movesets, encouraging cooperative combat and tactical positioning. " +
+      "With energetic pixel art, a driving soundtrack, and tough boss battles, Violent Storm delivers a classic arcade adrenaline rush in a broken cityscape. ",
+    players: "1-2 Players",
+    developer: "Konami",
+    coverImage: "/assets/covers/violent_storm.png",
+    platform: "Arcade",
+    embedUrl: "https://www.retrogames.cc/embed/34692-violent-storm-ver-eab.html",
+    logo: "https://gam.onl/user/arcade/logos/viostorm.png"
+  }
+  ,
+  {
     id: "final-fight-guy",
     title: "Final Fight Guy",
     slug: "final-fight-guy-usa",
