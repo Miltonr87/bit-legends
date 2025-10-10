@@ -633,8 +633,29 @@ export const beatnupGames: Game[] = [
     coverImage: "/assets/covers/wildcats_snes.jpg",
     platform: "Super Nintendo",
     logo: "https://gam.onl/user/snes/logos/Jim%20Lee's%20WildC.A.T.S%20-%20Covert-Action-Teams%20(USA).png",
-  }
-  ,
+  },
+  {
+    id: "64th-street-arcade",
+    title: "64th Street",
+    slug: "64th-street-arcade",
+    embedId: "33053",
+    year: 1991,
+    genre: "Urban",
+    folder: "Arcade",
+    publisher: "Jaleco",
+    characters: ["Rick Anderson", "Allen Tombs", "Legacy Thugs", "Bosses"],
+    description: "A gritty detective-style beat ’em up where two detectives fight through crime-ridden streets.",
+    longDescription:
+      "64th Street: A Detective Story (1991) is a side-scrolling arcade beat ’em up by Jaleco, following detectives Rick and Allen on a bold rescue mission. " +
+      "When the daughter of a wealthy businessman is kidnapped by the shadowy ‘Legacy’ organization, the duo traverse six tough stages filled with street gangs and mechanical hazards. " +
+      "They can grab objects, throw enemies into backgrounds, and unleash combo assaults to push forward. " +
+      "With bleak urban visuals, hard-hitting music, and cinematic flair, it captures a raw 90s arcade detective vibe. ",
+    players: "1-2 Players",
+    developer: "C.P. Brain",
+    coverImage: "/assets/covers/64th_street_arcade.jpg",
+    platform: "Arcade",
+    logo: "https://gam.onl/user/arcade/logos/64street.png",
+  },
   {
     id: "night-slashers",
     title: "Night Slashers",
