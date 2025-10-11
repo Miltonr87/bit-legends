@@ -26,7 +26,12 @@ export const AboutDialog = () => {
           <span className="hidden sm:inline">About</span>
         </Button>
       </DialogTrigger>
-      <DialogContent className="max-w-[40vh] max-h-[90vh] bg-gradient-to-b from-background to-secondary/30 border border-border/50 shadow-lg">
+
+      <DialogContent
+        className="w-[90vw] max-w-md sm:max-w-lg bg-gradient-to-b from-background to-secondary/30 
+                   border border-border/50 shadow-lg rounded-2xl overflow-y-auto max-h-[85vh] 
+                   p-6 sm:p-8 scrollbar-thin scrollbar-thumb-border/50 scrollbar-track-transparent"
+      >
         <DialogHeader>
           <DialogTitle className="text-center text-2xl font-bold text-primary mb-4">
             About
