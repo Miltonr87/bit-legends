@@ -157,8 +157,8 @@ export const fightGames: Game[] = [
     {
         id: "darkstalkers",
         title: "Darkstalkers",
-        slug: "darkstalkers-the-night-warriors-940705-usa-phoenix-edition-bootleg",
-        embedId: "940705",
+        slug: "8227-darkstalkers-the-night-warriors-940705-euro.html",
+        embedId: "8227",
         year: 1994,
         genre: "Horror",
         folder: "Darkstalkers",
@@ -170,7 +170,6 @@ export const fightGames: Game[] = [
         players: "1-2 Players",
         developer: "Capcom",
         coverImage: "/assets/covers/darkstalkers_night_warriors.jpg",
-        embedUrl: "https://gam.onl/user/psx/logos/Darkstalkers%20-%20The%20Night%20Warriors%20(USA).png",
         platform: "Arcade",
         logo: "https://gam.onl/user/psx/logos/Darkstalkers%20-%20The%20Night%20Warriors%20(USA).png"
     },
