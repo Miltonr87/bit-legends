@@ -9,44 +9,15 @@ export const Footer = () => {
   const location = useLocation();
 
   useEffect(() => {
-    const savedPlay = localStorage.getItem('bitlegends_music_playing');
-    const savedStop = localStorage.getItem('bitlegends_user_stopped_music');
-    setUserStoppedMusic(savedStop === 'true');
-    setIsPlaying(savedPlay === 'true');
+    const stopped =
+      localStorage.getItem('bitlegends_user_stopped_music') === 'true';
+    setUserStoppedMusic(stopped);
   }, []);
-
-  useEffect(() => {
-    const hasAutoPlayed = sessionStorage.getItem('bitlegends_music_autoplayed');
-    const audio = audioRef.current;
-    if (!audio || userStoppedMusic) return;
-
-    const startMusic = async () => {
-      try {
-        await audio.play();
-        setIsPlaying(true);
-        localStorage.setItem('bitlegends_music_playing', 'true');
-        sessionStorage.setItem('bitlegends_music_autoplayed', 'true');
-      } catch {
-        const handleUserGesture = async () => {
-          try {
-            await audio.play();
-            setIsPlaying(true);
-            localStorage.setItem('bitlegends_music_playing', 'true');
-            sessionStorage.setItem('bitlegends_music_autoplayed', 'true');
-            window.removeEventListener('click', handleUserGesture);
-          } catch {}
-        };
-        window.addEventListener('click', handleUserGesture);
-      }
-    };
-
-    if (!hasAutoPlayed) startMusic();
-  }, [userStoppedMusic]);
 
   useEffect(() => {
     const audio = audioRef.current;
     if (!audio) return;
-
+    const isHomePage = location.pathname === '/';
     const isGamePage = location.pathname.startsWith('/game/');
 
     if (userStoppedMusic) {
@@ -55,27 +26,36 @@ export const Footer = () => {
       return;
     }
 
-    if (isGamePage) {
-      audio.pause();
-      setIsPlaying(false);
-    } else if (!isGamePage && !audio.paused) {
-      setIsPlaying(true);
-    } else if (!isGamePage && audio.paused && !userStoppedMusic) {
+    if (isHomePage) {
       audio
         .play()
-        .then(() => setIsPlaying(true))
-        .catch(() => {});
+        .then(() => {
+          setIsPlaying(true);
+        })
+        .catch(() => {
+          const handleUserGesture = async () => {
+            try {
+              await audio.play();
+              setIsPlaying(true);
+              window.removeEventListener('click', handleUserGesture);
+            } catch {}
+          };
+          window.addEventListener('click', handleUserGesture);
+        });
+    } else if (isGamePage || !isHomePage) {
+      audio.pause();
+      setIsPlaying(false);
     }
-  }, [location, userStoppedMusic]);
+  }, [location.pathname, userStoppedMusic]);
 
   const toggleMusic = () => {
     const audio = audioRef.current;
     if (!audio) return;
+
     if (isPlaying) {
       audio.pause();
       setIsPlaying(false);
       setUserStoppedMusic(true);
-      localStorage.setItem('bitlegends_music_playing', 'false');
       localStorage.setItem('bitlegends_user_stopped_music', 'true');
     } else {
       audio
@@ -83,7 +63,6 @@ export const Footer = () => {
         .then(() => {
           setIsPlaying(true);
           setUserStoppedMusic(false);
-          localStorage.setItem('bitlegends_music_playing', 'true');
           localStorage.setItem('bitlegends_user_stopped_music', 'false');
         })
         .catch(() => {});
