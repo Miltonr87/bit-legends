@@ -157,8 +157,8 @@ export const fightGames: Game[] = [
     {
         id: "darkstalkers",
         title: "Darkstalkers",
-        slug: "8227-darkstalkers-the-night-warriors-940705-euro.html",
-        embedId: "8227",
+        slug: "8228-darkstalkers-the-night-warriors-940705-usa-phoenix-edition-bootleg",
+        embedId: "8228",
         year: 1994,
         genre: "Horror",
         folder: "Darkstalkers",
