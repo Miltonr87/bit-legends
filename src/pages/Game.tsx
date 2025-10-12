@@ -23,6 +23,7 @@ import {
 } from '@/components/ui/dropdown-menu';
 import { LogoGame } from '@/components/LogoGame';
 import { useDisplayDevice } from '@/hooks/useDisplayDevice';
+import { ControllerSetup } from '@/components/ControllerSetup';
 import { db, auth } from '@/lib/firebase';
 import { doc, setDoc, getDoc } from 'firebase/firestore';
 import type { Game } from '../data';
@@ -77,12 +78,11 @@ const Game = () => {
         title: 'Sign in required',
         description: 'You need to log in to save favorites.',
         variant: 'destructive',
+        duration: 3000,
       });
       return;
     }
-
     if (!game) return;
-
     try {
       const favRef = doc(db, 'favorites', user.uid, 'games', game.id);
       await setDoc(favRef, {
@@ -94,6 +94,7 @@ const Game = () => {
       toast({
         title: 'Saved!',
         description: `${game.title} added to your favorites.`,
+        duration: 3000,
       });
     } catch (error) {
       console.error('Error saving favorite:', error);
@@ -101,6 +102,7 @@ const Game = () => {
         title: 'Error',
         description: 'Could not save this game.',
         variant: 'destructive',
+        duration: 3000,
       });
     }
   };
@@ -332,6 +334,7 @@ const Game = () => {
                   </div>
                 </div>
               </Card>
+              {!isMobile && <ControllerSetup />}
             </div>
           </div>
         </div>
