@@ -34,7 +34,7 @@ export const VisitorsCounter = () => {
         } else {
           const { data } = await axios.get(
             'https://simpleanalytics.com/bitlegends.vercel.app.json?version=5',
-            { timeout: 8000 }
+            { timeout: 3000 }
           );
           if (
             !data.pageviews?.value ||
@@ -92,7 +92,7 @@ export const VisitorsCounter = () => {
               </span>
             ) : (
               <>
-                Data provided by{' '}
+                Retro players around the world
                 <a
                   href="https://simpleanalytics.com"
                   target="_blank"
