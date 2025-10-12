@@ -2,7 +2,12 @@ import type { Config } from "tailwindcss";
 
 export default {
   darkMode: ["class"],
-  content: ["./pages/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}", "./app/**/*.{ts,tsx}", "./src/**/*.{ts,tsx}"],
+  content: [
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+  ],
   prefix: "",
   theme: {
     container: {
@@ -73,28 +78,26 @@ export default {
           to: { height: "0" },
         },
         "glow-pulse": {
-          "0%, 100%": { 
+          "0%, 100%": {
             boxShadow: "0 0 20px hsl(180 100% 50% / 0.3)",
-            borderColor: "hsl(180 100% 50%)"
+            borderColor: "hsl(180 100% 50%)",
           },
-          "50%": { 
+          "50%": {
             boxShadow: "0 0 40px hsl(180 100% 50% / 0.6)",
-            borderColor: "hsl(180 100% 60%)"
+            borderColor: "hsl(180 100% 60%)",
           },
         },
         "slide-up": {
-          from: { 
-            opacity: "0", 
-            transform: "translateY(30px)" 
-          },
-          to: { 
-            opacity: "1", 
-            transform: "translateY(0)" 
-          },
+          from: { opacity: "0", transform: "translateY(30px)" },
+          to: { opacity: "1", transform: "translateY(0)" },
         },
         "fade-in": {
           from: { opacity: "0" },
           to: { opacity: "1" },
+        },
+        "bounce-slow": {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-4px)" },
         },
       },
       animation: {
@@ -103,6 +106,7 @@ export default {
         "glow-pulse": "glow-pulse 2s ease-in-out infinite",
         "slide-up": "slide-up 0.5s ease-out",
         "fade-in": "fade-in 0.3s ease-out",
+        "bounce-slow": "bounce-slow 3s infinite ease-in-out",
       },
     },
   },

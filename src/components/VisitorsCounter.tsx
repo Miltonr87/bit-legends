@@ -5,7 +5,8 @@ import { Globe2, Users } from 'lucide-react';
 type Countries = Record<string, number>;
 
 export const VisitorsCounter = () => {
-  const [total, setTotal] = useState<number | null>(null);
+  const [total, setTotal] = useState<number>(0);
+  const [displayTotal, setDisplayTotal] = useState<number>(0);
   const [countries, setCountries] = useState<Countries>({});
   const [loading, setLoading] = useState(true);
 
@@ -26,26 +27,32 @@ export const VisitorsCounter = () => {
   };
 
   useEffect(() => {
+    if (total > 0) {
+      const duration = 1500; // 1.5s
+      const startTime = performance.now();
+
+      const animate = (time: number) => {
+        const progress = Math.min((time - startTime) / duration, 1);
+        setDisplayTotal(Math.floor(progress * total));
+        if (progress < 1) requestAnimationFrame(animate);
+      };
+      requestAnimationFrame(animate);
+    }
+  }, [total]);
+
+  useEffect(() => {
     const fetchAnalytics = async () => {
       try {
-        if (isLocalhost) {
+        const { data } = await axios.get('/api/visitors', { timeout: 5000 });
+        if (
+          !data.pageviews?.value ||
+          !Object.keys(data.countries || {}).length
+        ) {
           setTotal(mockData.pageviews.value);
           setCountries(mockData.countries);
         } else {
-          const { data } = await axios.get(
-            'https://simpleanalytics.com/bitlegends.vercel.app.json?version=5',
-            { timeout: 3000 }
-          );
-          if (
-            !data.pageviews?.value ||
-            !Object.keys(data.countries || {}).length
-          ) {
-            setTotal(mockData.pageviews.value);
-            setCountries(mockData.countries);
-          } else {
-            setTotal(data.pageviews.value);
-            setCountries(data.countries);
-          }
+          setTotal(data.pageviews.value);
+          setCountries(data.countries);
         }
       } catch (error) {
         console.error('Error fetching analytics:', error);
@@ -57,7 +64,7 @@ export const VisitorsCounter = () => {
     };
 
     fetchAnalytics();
-  }, [isLocalhost]);
+  }, []);
 
   const getFlag = (country: string) => {
     const flags: Record<string, string> = {
@@ -78,27 +85,24 @@ export const VisitorsCounter = () => {
         <Globe2 className="text-accent w-5 h-5 animate-pulse" />
         <h3 className="text-lg font-bold text-accent">Global Visitors</h3>
       </div>
+
       {loading ? (
         <p className="text-muted-foreground text-sm italic">Loading stats...</p>
       ) : (
         <>
-          <div className="text-5xl sm:text-6xl font-black text-primary mb-2 animate-bounce-slow">
-            {total?.toLocaleString() ?? '--'}
+          <div className="text-5xl sm:text-6xl font-black text-primary mb-2 animate-bounce-slow transition-all duration-700">
+            {displayTotal.toLocaleString()}
           </div>
           <p className="text-muted-foreground text-xs mb-4">
-            {isLocalhost ? (
-              <span className="text-yellow-400 font-semibold">
-                Retro players around the world
-              </span>
-            ) : (
-              <>Retro players around the world</>
-            )}
+            Retro players around the world
           </p>
+
           <div className="border-t border-accent/20 mt-3 pt-3">
             <div className="flex justify-center items-center gap-2 text-xs text-muted-foreground mb-2">
               <Users className="w-4 h-4" />
               <span>Top Countries</span>
             </div>
+
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
               {Object.entries(countries)
                 .sort(([, a], [, b]) => b - a)
