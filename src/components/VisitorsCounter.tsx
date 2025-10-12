@@ -10,10 +10,6 @@ export const VisitorsCounter = () => {
   const [countries, setCountries] = useState<Countries>({});
   const [loading, setLoading] = useState(true);
 
-  const isLocalhost =
-    window.location.hostname === 'localhost' ||
-    window.location.hostname === '127.0.0.1';
-
   const mockData = {
     pageviews: { value: 4821 },
     countries: {

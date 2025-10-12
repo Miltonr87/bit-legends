@@ -16,22 +16,23 @@ Bit Legends provides a seamless emulation experience using embedded game ROMs an
 - 🕹️ Integrated virtual controller with keyboard mapping
 - 🧠 Game history and favorites stored in Firebase
 - 📱 Mobile-friendly interface with auto-detection
-- 💾 Cloud sync for favorites games and user profile
+- 💾 Cloud sync for favorite games and user profile
+- 📊 **New:** Analytics dashboard powered by Simple Analytics API (Axios)
 - 🔗 Social sharing and community integration
 
 ---
 
 ## 🧩 Technologies Used
 
-| Category         | Technologies                                         |
-| ---------------- | ---------------------------------------------------- |
-| **Frontend**     | React 18, TypeScript, Vite                           |
-| **UI & Styling** | Tailwind CSS, Shadcn/UI, Framer Motion, Lucide Icons |
-| **State & Data** | React Query, Local Storage API, Firebase Firestore   |
-| **Auth**         | Firebase Auth (Google OAuth)                         |
-| **Backend**      | Firebase (Auth, Firestore, Storage)                  |
-| **Emulation**    | EmulatorJS (via CDN)                                 |
-| **Hosting**      | Vercel                                               |
+| Category         | Technologies                                              |
+| ---------------- | --------------------------------------------------------- |
+| **Frontend**     | React 18, TypeScript, Vite                                |
+| **UI & Styling** | Tailwind CSS, Shadcn/UI, Framer Motion, Lucide Icons      |
+| **State & Data** | React Query, Local Storage API, Firebase Firestore        |
+| **Auth**         | Firebase Auth (Google OAuth)                              |
+| **Backend**      | Firebase (Auth, Firestore, Storage), Simple Analytics API |
+| **Emulation**    | EmulatorJS (via CDN)                                      |
+| **Hosting**      | Vercel                                                    |
 
 ---
 
@@ -42,26 +43,31 @@ It integrates **Firebase Authentication** and **Cloud Firestore** for user data,
 
 Game content is dynamically loaded via EmulatorJS CDN, ensuring fast performance and flexibility.
 
+The project now also includes a **serverless API route** that fetches pageview and country analytics using [Simple Analytics](https://simpleanalytics.com/), with an intelligent fallback to mock data when the service is unavailable.
+
 ---
 
-## 🕹️ Controls
+## 📊 API Endpoints
 
-Default keyboard mapping:
+### `/api/analytics`
 
-| Action | Key         |
-| ------ | ----------- |
-| Up     | ↑           |
-| Down   | ↓           |
-| Left   | ←           |
-| Right  | →           |
-| A      | Z           |
-| B      | X           |
-| X      | A           |
-| Y      | S           |
-| L      | Q           |
-| R      | E           |
-| Start  | Enter       |
-| Select | Right Shift |
+Retrieves live traffic and country stats from Simple Analytics.
+
+#### Example Response:
+
+```json
+{
+  "pageviews": { "value": 4821 },
+  "countries": {
+    "Brazil": 1950,
+    "United States": 1320,
+    "Germany": 640,
+    "Japan": 410
+  }
+}
+```
+
+If the external API call fails, mock data is returned automatically to keep the dashboard functional.
 
 ---
 
@@ -88,15 +94,11 @@ Then open [http://localhost:5173](http://localhost:5173) in your browser.
 
 ## 🔐 Environment Setup
 
-Create a `.env` file in the project root with the following example values to run locally:
+Create a `.env` file in the project root with the following example values:
 
 ```bash
 # Google OAuth
 VITE_GOOGLE_CLIENT_ID
-
-# RetroArch API (optional)
-VITE_RA_USER
-VITE_RA_KEY
 
 # Firebase Configuration
 VITE_FIREBASE_API_KEY
@@ -129,10 +131,24 @@ That’s it — your deployment is live 🎮
 
 ---
 
-## 🎵 Music Credits
+## 🕹️ Controls
 
-Background music used in this project:  
-**"Intro Theme"** — Music by [Andrii Poradovskyi](https://pixabay.com/users/poradovskyi-22915070/) from [Pixabay](https://pixabay.com/).
+Default keyboard mapping:
+
+| Action | Key         |
+| ------ | ----------- |
+| Up     | ↑           |
+| Down   | ↓           |
+| Left   | ←           |
+| Right  | →           |
+| A      | Z           |
+| B      | X           |
+| X      | A           |
+| Y      | S           |
+| L      | Q           |
+| R      | E           |
+| Start  | Enter       |
+| Select | Right Shift |
 
 ---
 

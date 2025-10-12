@@ -1,6 +1,10 @@
+import type { NextApiRequest, NextApiResponse } from "next";
 import axios from "axios";
 
-export default async function handler(req, res) {
+export default async function handler(
+    _req: NextApiRequest,
+    res: NextApiResponse
+) {
     const mockData = {
         pageviews: { value: 4821 },
         countries: {
@@ -27,17 +31,17 @@ export default async function handler(req, res) {
             }
         );
 
-        if (!data?.pageviews?.value || !Object.keys(data.countries || {}).length) {
-            res.writeHead(200, { "Content-Type": "application/json" });
-            res.end(JSON.stringify(mockData));
-            return;
-        }
+        const response = {
+            ...data,
+            countries:
+                data.countries && Object.keys(data.countries).length > 0
+                    ? data.countries
+                    : mockData.countries,
+        };
 
-        res.writeHead(200, { "Content-Type": "application/json" });
-        res.end(JSON.stringify(data));
-    } catch (error) {
+        res.status(200).json(response);
+    } catch (error: any) {
         console.error("SimpleAnalytics API error:", error.message);
-        res.writeHead(200, { "Content-Type": "application/json" });
-        res.end(JSON.stringify(mockData));
+        res.status(200).json(mockData);
     }
 }
