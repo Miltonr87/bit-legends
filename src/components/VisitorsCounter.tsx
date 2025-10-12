@@ -91,17 +91,7 @@ export const VisitorsCounter = () => {
                 Retro players around the world
               </span>
             ) : (
-              <>
-                Retro players around the world
-                <a
-                  href="https://simpleanalytics.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="underline text-accent hover:text-primary"
-                >
-                  Simple Analytics
-                </a>
-              </>
+              <>Retro players around the world</>
             )}
           </p>
           <div className="border-t border-accent/20 mt-3 pt-3">
