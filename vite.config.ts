@@ -2,13 +2,33 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
 
-// https://vitejs.dev/config/
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
   server: {
     host: "::",
     port: 8080,
   },
-  plugins: [react()],
+  plugins: [
+    react(),
+    {
+      name: "simpleanalytics",
+      transformIndexHtml(html) {
+        const file = mode === "development" ? "latest.dev.js" : "latest.js";
+        return {
+          html,
+          tags: [
+            {
+              tag: "script",
+              attrs: {
+                async: true,
+                src: `https://scripts.simpleanalyticscdn.com/${file}`,
+              },
+              injectTo: "head",
+            },
+          ],
+        };
+      },
+    },
+  ],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
@@ -18,4 +38,4 @@ export default defineConfig({
   optimizeDeps: {
     include: ["react", "react-dom", "@tanstack/react-query"],
   },
-});
+}));

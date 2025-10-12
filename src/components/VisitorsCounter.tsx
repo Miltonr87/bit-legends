@@ -1,0 +1,140 @@
+import { useEffect, useState } from 'react';
+import axios from 'axios';
+import { Globe2, Users } from 'lucide-react';
+
+type Countries = Record<string, number>;
+
+export const VisitorsCounter = () => {
+  const [total, setTotal] = useState<number | null>(null);
+  const [countries, setCountries] = useState<Countries>({});
+  const [loading, setLoading] = useState(true);
+
+  const isLocalhost =
+    window.location.hostname === 'localhost' ||
+    window.location.hostname === '127.0.0.1';
+
+  const mockData = {
+    pageviews: { value: 4821 },
+    countries: {
+      Brazil: 1950,
+      'United States': 1320,
+      Germany: 640,
+      Japan: 410,
+      France: 290,
+      'United Kingdom': 211,
+    },
+  };
+
+  useEffect(() => {
+    const fetchAnalytics = async () => {
+      try {
+        if (isLocalhost) {
+          setTotal(mockData.pageviews.value);
+          setCountries(mockData.countries);
+        } else {
+          const { data } = await axios.get(
+            'https://simpleanalytics.com/bitlegends.vercel.app.json?version=5',
+            { timeout: 8000 }
+          );
+          if (
+            !data.pageviews?.value ||
+            !Object.keys(data.countries || {}).length
+          ) {
+            setTotal(mockData.pageviews.value);
+            setCountries(mockData.countries);
+          } else {
+            setTotal(data.pageviews.value);
+            setCountries(data.countries);
+          }
+        }
+      } catch (error) {
+        console.error('Error fetching analytics:', error);
+        setTotal(mockData.pageviews.value);
+        setCountries(mockData.countries);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchAnalytics();
+  }, [isLocalhost]);
+
+  const getFlag = (country: string) => {
+    const flags: Record<string, string> = {
+      Brazil: 'BR',
+      'United States': 'US',
+      Germany: 'DE',
+      Japan: 'JP',
+      France: 'FR',
+      'United Kingdom': 'GB',
+    };
+    const code = flags[country] || 'UN';
+    return `https://flagsapi.com/${code}/flat/32.png`;
+  };
+
+  return (
+    <div className="mt-8 mb-4 mx-auto w-[90%] sm:max-w-md text-center bg-card/40 backdrop-blur-md rounded-2xl border border-accent/30 p-5 shadow-md animate-fade-in">
+      <div className="flex items-center justify-center gap-2 mb-3">
+        <Globe2 className="text-accent w-5 h-5 animate-pulse" />
+        <h3 className="text-lg font-bold text-accent">Global Visitors</h3>
+      </div>
+      {loading ? (
+        <p className="text-muted-foreground text-sm italic">Loading stats...</p>
+      ) : (
+        <>
+          <div className="text-5xl sm:text-6xl font-black text-primary mb-2 animate-bounce-slow">
+            {total?.toLocaleString() ?? '--'}
+          </div>
+          <p className="text-muted-foreground text-xs mb-4">
+            {isLocalhost ? (
+              <span className="text-yellow-400 font-semibold">
+                Retro players around the world
+              </span>
+            ) : (
+              <>
+                Data provided by{' '}
+                <a
+                  href="https://simpleanalytics.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline text-accent hover:text-primary"
+                >
+                  Simple Analytics
+                </a>
+              </>
+            )}
+          </p>
+          <div className="border-t border-accent/20 mt-3 pt-3">
+            <div className="flex justify-center items-center gap-2 text-xs text-muted-foreground mb-2">
+              <Users className="w-4 h-4" />
+              <span>Top Countries</span>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+              {Object.entries(countries)
+                .sort(([, a], [, b]) => b - a)
+                .slice(0, 6)
+                .map(([country, visits]) => (
+                  <div
+                    key={country}
+                    className="flex items-center justify-between bg-accent/10 rounded-md px-2 py-2 hover:bg-accent/20 transition-all duration-200"
+                  >
+                    <div className="flex items-center gap-2 text-left">
+                      <img
+                        src={getFlag(country)}
+                        alt={country}
+                        className="w-5 h-4 rounded-sm shadow-sm"
+                      />
+                      <span className="truncate max-w-[80px] sm:max-w-[100px]">
+                        {country}
+                      </span>
+                    </div>
+                    <span className="font-bold text-accent">{visits}</span>
+                  </div>
+                ))}
+            </div>
+          </div>
+        </>
+      )}
+    </div>
+  );
+};

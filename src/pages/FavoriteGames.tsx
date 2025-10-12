@@ -91,7 +91,6 @@ export default function FavoriteGames() {
           <div className="absolute inset-0 bg-gradient-to-b from-accent/5 via-transparent to-transparent" />
           <div className="container mx-auto text-center relative z-10">
             <h1 className="text-4xl sm:text-6xl font-black mb-2">
-              <Heart className="h-10 w-10 text-accent mx-auto mb-4 animate-pulse" />
               <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent glow-text">
                 Favorite Games
               </span>
