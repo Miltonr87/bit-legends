@@ -21,7 +21,7 @@ export const beatnupGames: Game[] = [
     developer: "Sega",
     coverImage: "/assets/covers/sor1.png",
     platform: "Sega Genesis",
-    logo: "https://gam.onl/user/segaMD/logos/Streets%20of%20Rage%20(W)%20(REV01)%20[!].png",
+    logo: "/assets/logos/streets_of_rage.png",
   },
   {
     id: "sor2",
@@ -43,7 +43,7 @@ export const beatnupGames: Game[] = [
     developer: "Sega",
     coverImage: "/assets/covers/sor2.png",
     platform: "Sega Genesis",
-    logo: "https://gam.onl/user/segaMD/logos/Streets%20of%20Rage%202%20(U)%20[!].png"
+    logo: "/assets/logos/streets_of_rage_2.png"
   },
   {
     id: "sor3",
@@ -65,7 +65,7 @@ export const beatnupGames: Game[] = [
     developer: "Sega",
     coverImage: "/assets/covers/sor3.png",
     platform: "Sega Genesis",
-    logo: "https://gam.onl/user/segaMD/logos/Streets%20of%20Rage%203.png"
+    logo: "/assets/logos/streets_of_rage_3.png"
   },
   {
     id: "kingdragons",
@@ -88,7 +88,7 @@ export const beatnupGames: Game[] = [
     coverImage: "/assets/covers/the-king-of-dragons.png",
     embedUrl: "https://www.retrogames.cc/embed/10347-the-king-of-dragons.html",
     platform: "Arcade",
-    logo: "https://gam.onl/user/arcade/logos/kod.png"
+    logo: "/assets/logos/knights.png"
   },
   {
     id: "tmnt-turtles-in-time",
@@ -110,7 +110,7 @@ export const beatnupGames: Game[] = [
     developer: "Konami",
     coverImage: "/assets/covers/tnt.png",
     platform: "Arcade",
-    logo: "https://gam.onl/user/arcade/logos/tmnt2.png"
+    logo: "/assets/logos/tmnt2.png"
   },
   {
     id: "final-fight",
@@ -133,7 +133,7 @@ export const beatnupGames: Game[] = [
     coverImage: "/assets/covers/final_fight.jpg",
     embedUrl: "https://www.retrogames.cc/embed/22554-final-fight-europe.html",
     platform: "Arcade",
-    logo: "https://gam.onl/user/snes/logos/Final%20Fight%20(USA).png"
+    logo: "/assets/logos/final_fight.png"
   },
   {
     id: "golden-axe-revenge-death-adder",
@@ -156,7 +156,7 @@ export const beatnupGames: Game[] = [
     coverImage: "/assets/covers/golden_axe_revenge_of_death_adder.jpg",
     platform: "Arcade",
     embedUrl: "https://www.retrogames.cc/embed/42459-golden-axe-the-revenge-of-death-adder-world-rev-b.html",
-    logo: "https://gam.onl/user/arcade/logos/goldnaxe.png"
+    logo: "/assets/logos/golden_axe_revenge_of_death_adder.png"
   },
   {
     id: "violent-storm",
@@ -179,7 +179,7 @@ export const beatnupGames: Game[] = [
     coverImage: "/assets/covers/violent_storm.png",
     platform: "Arcade",
     embedUrl: "https://www.retrogames.cc/embed/34692-violent-storm-ver-eab.html",
-    logo: "https://gam.onl/user/arcade/logos/viostorm.png"
+    logo: "/assets/logos/viostorm.png"
   }
   ,
   {
@@ -201,7 +201,7 @@ export const beatnupGames: Game[] = [
     developer: "Capcom",
     coverImage: "/assets/covers/final_fight_guy.jpg",
     platform: "Super Nintendo",
-    logo: "https://gam.onl/user/snes/logos/Final%20Fight%20Guy%20(USA).png",
+    logo: "/assets/logos/final_fight_guy.png",
   },
   {
     id: "final-fight-2",
@@ -225,7 +225,7 @@ export const beatnupGames: Game[] = [
     embedUrl: "https://www.retrogames.cc/embed/23436-final-fight-2-europe.html",
     platform: "Super Nintendo",
     logo:
-      "https://gam.onl/user/snes/logos/Final%20Fight%202%20(USA).png",
+      "/assets/logos/final_fight_2.png",
   },
   {
     id: "final-fight-3",
@@ -249,7 +249,7 @@ export const beatnupGames: Game[] = [
     embedUrl: "https://www.retrogames.cc/embed/24623-final-fight-3-usa.html",
     platform: "Super Nintendo",
     logo:
-      "https://gam.onl/user/snes/logos/Final%20Fight%203%20(USA).png",
+      "/assets/logos/final_fight_3.png",
   },
   {
     id: "captain-commando",
@@ -272,7 +272,7 @@ export const beatnupGames: Game[] = [
     coverImage: "/assets/covers/captain_comando.jpg",
     embedUrl: "https://www.retrogames.cc/embed/8065-captain-commando-910928-usa.html",
     platform: "Arcade",
-    logo: "https://gam.onl/user/arcade/logos/captcomm.png"
+    logo: "/assets/logos/captain_commando.png"
   },
   {
     id: "mmpr-movie",
@@ -303,7 +303,7 @@ export const beatnupGames: Game[] = [
     embedUrl: "https://www.retrogames.cc/embed/19560-mighty-morphin-power-rangers-the-movie-usa.html",
     platform: "Super Nintendo",
     logo:
-      "https://gam.onl/user/snes/logos/Mighty%20Morphin%20Power%20Rangers%20-%20The%20Movie%20(USA).png",
+      "/assets/logos/powerangers.png",
   },
   {
     id: "batmanreturns",
@@ -326,7 +326,7 @@ export const beatnupGames: Game[] = [
     coverImage: "/assets/covers/batman.png",
     platform: "Super Nintendo",
     logo:
-      "https://gam.onl/user/segaMD/logos/Batman%20Returns%20(W)%20[!].png",
+      "/assets/logos/batman_returns.png",
   },
   {
     id: "dd-shadow-over-mystara",
@@ -348,7 +348,7 @@ export const beatnupGames: Game[] = [
     developer: "Capcom",
     coverImage: "/assets/covers/dungeons&dragons.jpg",
     platform: "Arcade",
-    logo: 'https://gam.onl/user/arcade/logos/ddsom.png'
+    logo: '/assets/logos/ddsom.png'
   },
   {
     id: "knights-of-the-round",
@@ -371,7 +371,7 @@ export const beatnupGames: Game[] = [
     coverImage: "/assets/covers/knights.jpg",
     platform: "Super Nintendo",
     logo:
-      "https://gam.onl/user/arcade/logos/knights.png",
+      "/assets/logos/knights.png",
   },
 
   {
@@ -395,7 +395,7 @@ export const beatnupGames: Game[] = [
     coverImage: "/assets/covers/alien.jpeg",
     embedUrl: "https://www.retrogames.cc/embed/7748-alien-vs-predator-940520-euro-phoenix-edition-bootleg.html",
     platform: "Arcade",
-    logo: "https://gam.onl/user/arcade/logos/avsp.png"
+    logo: "/assets/logos/avp.png"
   },
   {
     id: "robocop-2",
@@ -414,7 +414,7 @@ export const beatnupGames: Game[] = [
     developer: "Data East",
     coverImage: "/assets/covers/robocop2.jpg",
     platform: "Arcade",
-    logo: "https://gam.onl/user/arcade/logos/robocop2.png"
+    logo: "/assets/logos/robocop2.png"
   },
   {
     id: "spiderman-maximum-carnage",
@@ -435,7 +435,7 @@ export const beatnupGames: Game[] = [
     embedUrl: "https://www.retrogames.cc/embed/23888-spider-man-venom-maximum-carnage-usa.html",
     platform: "Super Nintendo",
     logo:
-      "https://gam.onl/user/segaMD/logos/Spider-Man%20&%20Venom%20-%20Maximum%20Carnage%20(W)%20[!].png",
+      "/assets/logos/spiderman_maximum_carnage.png",
   },
   {
     id: "xmen-2-clone-wars",
@@ -456,7 +456,7 @@ export const beatnupGames: Game[] = [
     developer: "HeadGames / Sega Technical Institute",
     coverImage: "/assets/covers/xmen2_clonewars.jpg",
     platform: "Sega Genesis",
-    logo: "https://gam.onl/user/segaMD/logos/X-Men%202%20-%20Clone%20Wars%20(UE)%20[!].png",
+    logo: "/assets/logos/xmen2_clonewars.png",
   },
   {
     id: "wolverine-adamantium-rage",
@@ -477,7 +477,7 @@ export const beatnupGames: Game[] = [
     developer: "Teeny Weeny Games / Bits Studios",
     coverImage: "/assets/covers/wolverine_adamantium.jpg",
     platform: "Sega Genesis",
-    logo: "https://gam.onl/user/segaMD/logos/Wolverine%20-%20Adamantium%20Rage%20(UE)%20[!].png",
+    logo: "/assets/logos/wolverine_adamantium.png",
   },
   {
     id: "the-ninja-warriors-snes",
@@ -500,7 +500,7 @@ export const beatnupGames: Game[] = [
     developer: "Natsume / Taito",
     coverImage: "/assets/covers/the_ninja_warriors_snes.jpg",
     platform: "SNES",
-    logo: "https://gam.onl/user/segaCD/logos/Ninja%20Warriors,%20The.png"
+    logo: "/assets/logos/the_ninja_warriors_snes.png",
   },
   {
     id: "robo-army-arcade",
@@ -522,7 +522,7 @@ export const beatnupGames: Game[] = [
     developer: "SNK",
     coverImage: "/assets/covers/robo_army_arcade.jpg",
     platform: "Arcade",
-    logo: "https://gam.onl/user/arcade/logos/roboarmy.png",
+    logo: "/assets/logos/roboarmy.png",
   },
   {
     id: "superman-world",
@@ -543,7 +543,7 @@ export const beatnupGames: Game[] = [
     developer: "Sunsoft / Taito",
     coverImage: "/assets/covers/superman_world.jpg",
     platform: "Arcade",
-    logo: "https://gam.onl/user/segaMD/logos/Superman%20(U)%20[!].png",
+    logo: "/assets/logos/superman.png",
   },
   {
     id: "death-return-superman",
@@ -567,7 +567,7 @@ export const beatnupGames: Game[] = [
     embedUrl: "https://www.retrogames.cc/embed/24484-death-and-return-of-superman-the-usa.html",
     platform: "Super Nintendo",
     logo:
-      "https://gam.onl/user/segaMD/logos/Death%20and%20Return%20of%20Superman%20(U)%20[!].png",
+      "/assets/logos/death_of_superman.png",
   },
   {
     id: "marvel-war-of-the-gems",
@@ -590,7 +590,7 @@ export const beatnupGames: Game[] = [
     coverImage: "/assets/covers/marvel_war_gems.jpg",
     platform: "Super Nintendo",
     logo:
-      "https://gam.onl/user/snes/logos/Marvel%20Super%20Heroes%20in%20War%20of%20the%20Gems%20(USA).png",
+      "/assets/logos/marvel_war_of_the_gems.png",
   },
   {
     id: "the-punisher",
@@ -613,7 +613,7 @@ export const beatnupGames: Game[] = [
     coverImage: "/assets/covers/the_punisher.jpg",
     embedUrl: "https://www.retrogames.cc/embed/10428-the-punisher-930422-etc.html",
     platform: "Arcade",
-    logo: "https://gam.onl/user/arcade/logos/punisher.png"
+    logo: "/assets/logos/punisher.png"
   },
   {
     id: "spawn-snes",
@@ -636,7 +636,7 @@ export const beatnupGames: Game[] = [
     coverImage: "/assets/covers/spaawn.jpg",
     platform: "Super Nintendo",
     logo:
-      "https://gam.onl/user/snes/logos/Todd%20McFarlane's%20Spawn%20-%20The%20Video%20Game%20(USA).png",
+      "/assets/logos/spawn.png",
   },
   {
     id: "jim-lees-wildcats-snes",
@@ -658,7 +658,7 @@ export const beatnupGames: Game[] = [
     developer: "Beam Software",
     coverImage: "/assets/covers/wildcats_snes.jpg",
     platform: "Super Nintendo",
-    logo: "https://gam.onl/user/snes/logos/Jim%20Lee's%20WildC.A.T.S%20-%20Covert-Action-Teams%20(USA).png",
+    logo: "/assets/logos/wildcats.png",
   },
   {
     id: "64th-street-arcade",
@@ -680,7 +680,7 @@ export const beatnupGames: Game[] = [
     developer: "C.P. Brain",
     coverImage: "/assets/covers/64th_street_arcade.jpg",
     platform: "Arcade",
-    logo: "https://gam.onl/user/arcade/logos/64street.png",
+    logo: "/assets/logos/64.png",
   },
   {
     id: "night-slashers",
@@ -699,7 +699,7 @@ export const beatnupGames: Game[] = [
     developer: "Data East",
     coverImage: "/assets/covers/night_slashers.jpeg",
     platform: "Arcade",
-    logo: "https://gam.onl/user/arcade/logos/nslasher.png"
+    logo: "/assets/logos/nslasher.png"
   },
 
   {
@@ -719,7 +719,7 @@ export const beatnupGames: Game[] = [
     developer: "Capcom",
     coverImage: "/assets/covers/cadillacs.jpg",
     platform: "Arcade",
-    logo: 'https://gam.onl/user/arcade/logos/dino.png'
+    logo: '/assets/logos/dino.png'
   },
   {
     id: "xmen-arcade",
@@ -738,7 +738,7 @@ export const beatnupGames: Game[] = [
     developer: "Konami",
     coverImage: "/assets/covers/xmen.jpg",
     platform: "Arcade",
-    logo: "https://gam.onl/user/segaMD/logos/X-Men%20(U)%20[!].png",
+    logo: "/assets/logos/xmen.png",
   },
   {
     id: "xmen-mutant-apocalypse",
@@ -762,7 +762,7 @@ export const beatnupGames: Game[] = [
     embedUrl: "https://www.retrogames.cc/embed/22926-x-men-mutant-apocalypse-usa.html",
     platform: "Super Nintendo",
     logo:
-      "https://gam.onl/user/snes/logos/X-Men%20-%20Mutant%20Apocalypse%20(USA).png",
+      "/assets/logos/xmen_apocalypse.png",
   },
   {
     id: "dd-tower-of-doom",
@@ -784,7 +784,7 @@ export const beatnupGames: Game[] = [
     coverImage: "/assets/covers/dd_tower_of_doom.jpg",
     embedUrl: "https://www.retrogames.cc/embed/8390-dungeons-dragons-tower-of-doom-940113-usa.html",
     platform: "Arcade",
-    logo: "https://gam.onl/user/arcade/logos/ddtod.png",
+    logo: "/assets/logos/ddtod.png",
   },
 
 ];

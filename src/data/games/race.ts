@@ -20,7 +20,7 @@ export const raceGames: Game[] = [
         players: "1-2 Players",
         developer: "Silicon & Synapse",
         coverImage: "/assets/covers/rock.png",
-        logo: "https://gam.onl/user/snes/logos/Rock%20n'%20Roll%20Racing%20(USA).png",
+        logo: "/assets/logos/rock.png",
         platform: "Super Nintendo",
     },
     {
@@ -42,7 +42,7 @@ export const raceGames: Game[] = [
         players: "1-2 Players",
         developer: "Konami",
         coverImage: "/assets/covers/bike.jpg",
-        logo: "https://gam.onl/user/snes/logos/Biker%20Mice%20from%20Mars%20(USA).png",
+        logo: "/assets/logos/bike.png",
         platform: "Super Nintendo",
     },
 ];

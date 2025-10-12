@@ -21,7 +21,7 @@ export const actionGames: Game[] = [
         developer: "Konami",
         coverImage: "/assets/covers/castlevania_bloodlines_genesis.jpg",
         platform: "Sega Genesis",
-        logo: "https://gam.onl/user/segaMD/logos/Castlevania%20-%20Bloodlines%20(U)%20[!].png"
+        logo: "/assets/logos/castlevania_bloodlines.png"
     },
     {
         id: "shinobi-iii",
@@ -40,7 +40,7 @@ export const actionGames: Game[] = [
         developer: "Sega",
         coverImage: "/assets/covers/shinobi.jpg",
         platform: "Sega Genesis",
-        logo: "https://gam.onl/user/segaMD/logos/Shinobi%20III%20-%20Return%20of%20the%20Ninja%20Master%20(U)%20[!].png"
+        logo: "/assets/logos/shinobi_3.png"
     },
     {
         id: "sunset-riders-snes",
@@ -62,7 +62,7 @@ export const actionGames: Game[] = [
         developer: "Konami",
         coverImage: "/assets/covers/sunset_riders_snes.jpg",
         platform: "Super Nintendo",
-        logo: "https://gam.onl/user/arcade/logos/ssriders.png"
+        logo: "/assets/logos/ssriders.png"
     },
     {
         id: "x-kaliber-2097-snes",
@@ -84,7 +84,7 @@ export const actionGames: Game[] = [
         developer: "Fupac / Winds",
         coverImage: "/assets/covers/x_kaliber_2097_snes.jpg",
         platform: "Super Nintendo",
-        logo: "https://gam.onl/user/snes/logos/X-Kaliber%202097%20(USA).png"
+        logo: "/assets/logos/x_kaliber.png"
     }
 ];
 

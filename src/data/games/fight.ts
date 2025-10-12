@@ -22,13 +22,13 @@ export const fightGames: Game[] = [
         developer: "Midway",
         coverImage: "/assets/covers/Mortal_Kombat_3_cover.jpeg",
         platform: "Super Nintendo",
-        logo: "https://gam.onl/user/psx/logos/Mortal%20Kombat%203%20(USA).png"
+        logo: "/assets/logos/mk3.png"
     },
     {
         id: "umk3",
         title: "Ultimate Mortal Kombat",
         slug: "ultimate-mortal-kombat-3-usa",
-        embedId: "23432",
+        embedId: "42493",
         year: 1996,
         genre: "Horror",
         folder: "Mortal Kombat",
@@ -44,8 +44,8 @@ export const fightGames: Game[] = [
         players: "1-2 Players",
         developer: "Midway",
         coverImage: "/assets/covers/Ultimate_MK3.png",
-        platform: "Super Nintendo",
-        logo: "https://gam.onl/user/snes/logos/Ultimate%20Mortal%20Kombat%203%20(USA)%20SNES.png"
+        platform: "Arcade",
+        logo: "/assets/logos/umk3.png"
     },
     {
         id: "sf2",
@@ -67,7 +67,7 @@ export const fightGames: Game[] = [
         developer: "Capcom",
         coverImage: "/assets/covers/street_fighter_2.png",
         platform: "Super Nintendo",
-        logo: "https://gam.onl/user/segaMD/logos/Super%20Street%20Fighter%20II%20(U)%20[c][!].png"
+        logo: "/assets/logos/sf2.png"
     },
     {
         id: "sfa2",
@@ -119,7 +119,7 @@ export const fightGames: Game[] = [
         developer: "Capcom",
         coverImage: "/assets/covers/street_fighter_zero_3.jpeg",
         platform: "Arcade",
-        logo: "https://gam.onl/user/psx/logos/Street%20Fighter%20Alpha%203%20(USA).png"
+        logo: "/assets/logos/sf3.png"
     },
     {
         id: "xmen-children-of-the-atom",
@@ -152,7 +152,7 @@ export const fightGames: Game[] = [
         developer: "Capcom",
         coverImage: "/assets/covers/xmen_children_of_atom.jpg",
         platform: "Arcade",
-        logo: "https://gam.onl/user/arcade/logos/xmcota.png",
+        logo: "/assets/logos/xmcota.png",
     },
     {
         id: "darkstalkers",
@@ -171,7 +171,7 @@ export const fightGames: Game[] = [
         developer: "Capcom",
         coverImage: "/assets/covers/darkstalkers_night_warriors.jpg",
         platform: "Arcade",
-        logo: "https://gam.onl/user/psx/logos/Darkstalkers%20-%20The%20Night%20Warriors%20(USA).png"
+        logo: "/assets/logos/darkstalkers.png"
     },
     {
         id: "kof98",
@@ -193,7 +193,7 @@ export const fightGames: Game[] = [
         developer: "SNK",
         coverImage: "/assets/covers/kof_98.jpg",
         platform: "Neo Geo",
-        logo: "https://gam.onl/user/arcade/logos/kof98.png",
+        logo: "/assets/logos/kof98.png",
     },
     {
         id: "kof2002",
@@ -221,7 +221,7 @@ export const fightGames: Game[] = [
         developer: "Eolith / SNK Playmore",
         coverImage: "/assets/covers/kof_2002.jpg",
         platform: "Neo Geo",
-        logo: "https://gam.onl/user/arcade/logos/kof2002.png"
+        logo: "/assets/logos/kof2002.png"
     },
     {
         id: "kof2004",
@@ -249,7 +249,7 @@ export const fightGames: Game[] = [
         developer: "SNK Playmore (Bootleg Edition)",
         coverImage: "/assets/covers/kof_2004.jpeg",
         platform: "Neo Geo",
-        logo: "https://gam.onl/user/arcade/logos/kof2k4se.png"
+        logo: "/assets/logos/kof2k4se.png"
     },
     {
         id: "samurai-shodown-ii",
@@ -274,7 +274,7 @@ export const fightGames: Game[] = [
         players: "1-2 Players",
         developer: "SNK",
         coverImage: "/assets/covers/samurai.jpg",
-        logo: "https://gam.onl/user/arcade/logos/samsho2.png",
+        logo: "/assets/logos/samurai2.png",
         platform: "Neo Geo",
     },
     {
@@ -306,7 +306,7 @@ export const fightGames: Game[] = [
         developer: "SNK",
         coverImage: "/assets/covers/samurai_shodown_iv_arcade.jpg",
         platform: "Neo Geo",
-        logo: "https://gam.onl/user/psx/logos/Samurai%20Shodown%20IV%20(Japan).png"
+        logo: "/assets/logos/samurai_shodown_iv_arcade.png"
     },
     {
         id: "realbout-fatalfury",
@@ -326,7 +326,7 @@ export const fightGames: Game[] = [
         coverImage: "/assets/covers/faltal_fury.jpg",
         embedUrl: "https://www.retrogames.cc/embed/9648-real-bout-fatal-fury.html",
         platform: "Neo Geo",
-        logo: "https://gam.onl/user/arcade/logos/rbffspec.png"
+        logo: "/assets/logos/realbout.png"
     },
     {
         id: "justice-league-task-force",
@@ -345,7 +345,7 @@ export const fightGames: Game[] = [
         developer: "Blizzard Entertainment",
         coverImage: "/assets/covers/justice_league.jpg",
         platform: "Super Nintendo",
-        logo: "https://gam.onl/user/segaMD/logos/Justice%20League%20Task%20Force%20(W)%20[!].png"
+        logo: "/assets/logos/justice_league.png"
     },
     {
         id: "vampire-hunter",
@@ -376,7 +376,7 @@ export const fightGames: Game[] = [
         developer: "Capcom",
         coverImage: "/assets/covers/vampire_hunter.jpg",
         platform: "Arcade",
-        logo: "https://gam.onl/user/arcade/logos/vhunt2.png"
+        logo: "/assets/logos/vhunt2.png"
     },
     {
         id: "marvelsuperheroes",
@@ -398,7 +398,7 @@ export const fightGames: Game[] = [
         developer: "Capcom",
         coverImage: "/assets/covers/marvelheroes.png",
         platform: "Arcade",
-        logo: "https://gam.onl/user/psx/logos/Marvel%20Super%20Heroes%20(USA).png"
+        logo: "/assets/logos/marvelheroes.png"
     },
     {
         id: "xmvsf",
@@ -420,7 +420,7 @@ export const fightGames: Game[] = [
         developer: "Capcom",
         coverImage: "/assets/covers/xmen_vs_street.jpg",
         platform: "Arcade",
-        logo: "https://gam.onl/user/arcade/logos/xmvsf.png"
+        logo: "/assets/logos/xmvsf.png"
     },
     {
         id: "marvel-vs-streetfighter",
@@ -449,7 +449,7 @@ export const fightGames: Game[] = [
         coverImage: "/assets/covers/marvel_street.jpg",
         embedUrl: "https://www.retrogames.cc/embed/9101-marvel-super-heroes-vs-street-fighter-970625-usa-phoenix-edition-bootleg.html",
         platform: "Arcade",
-        logo: "https://gam.onl/user/arcade/logos/mshvsf.png"
+        logo: "/assets/logos/mshvsf.png"
     },
     {
         id: "mvc",
@@ -471,7 +471,7 @@ export const fightGames: Game[] = [
         developer: "Capcom",
         coverImage: "/assets/covers/marvel_vs_capcom.jpg",
         platform: "Arcade",
-        logo: "https://gam.onl/user/arcade/logos/mvsc.png"
+        logo: "/assets/logos/mvsc.png"
     },]
 
 export const fightFilters = [

@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import { allGames, seriesFilters } from '../data';
 import { GameCard } from '@/components/GameCard';
 import { Header } from '@/components/Header';
-import { VisitorsCounter } from '@/components/VisitorsCounter';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Search } from 'lucide-react';
@@ -201,7 +200,6 @@ const Index = () => {
           </div>
         )}
       </section>
-      <VisitorsCounter />
     </div>
   );
 };
