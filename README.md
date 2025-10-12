@@ -17,7 +17,6 @@ Bit Legends provides a seamless emulation experience using embedded game ROMs an
 - 🧠 Game history and favorites stored in Firebase
 - 📱 Mobile-friendly interface with auto-detection
 - 💾 Cloud sync for favorite games and user profile
-- 📊 **New:** Analytics dashboard powered by Simple Analytics API (Axios)
 - 🔗 Social sharing and community integration
 
 ---
@@ -44,30 +43,6 @@ It integrates **Firebase Authentication** and **Cloud Firestore** for user data,
 Game content is dynamically loaded via EmulatorJS CDN, ensuring fast performance and flexibility.
 
 The project now also includes a **serverless API route** that fetches pageview and country analytics using [Simple Analytics](https://simpleanalytics.com/), with an intelligent fallback to mock data when the service is unavailable.
-
----
-
-## 📊 API Endpoints
-
-### `/api/analytics`
-
-Retrieves live traffic and country stats from Simple Analytics.
-
-#### Example Response:
-
-```json
-{
-  "pageviews": { "value": 4821 },
-  "countries": {
-    "Brazil": 1950,
-    "United States": 1320,
-    "Germany": 640,
-    "Japan": 410
-  }
-}
-```
-
-If the external API call fails, mock data is returned automatically to keep the dashboard functional.
 
 ---
 
