@@ -26,7 +26,7 @@ export const beatnupGames: Game[] = [
   {
     id: "sor2",
     title: "Streets of Rage 2",
-    slug: "streets-of-rage-2",
+    slug: "Streets of Rage 2 (USA)",
     embedId: "28481",
     year: 1992,
     genre: "Urban",
@@ -136,7 +136,7 @@ export const beatnupGames: Game[] = [
   {
     id: "tmnt-turtles-in-time",
     title: "Teenage Mutant Ninja",
-    slug: "teenage-mutant-ninja-turtles-turtles-in-time-2-players-ver-uda",
+    slug: "tmnt2",
     embedId: "10260",
     year: 1991,
     genre: "Urban",
@@ -158,8 +158,8 @@ export const beatnupGames: Game[] = [
   {
     id: "final-fight",
     title: "Final Fight",
-    slug: "final-fight-europe",
-    embedId: "22554",
+    slug: "ffight",
+    embedId: "",
     year: 1989,
     genre: "Urban",
     folder: "Arcade",
@@ -205,7 +205,7 @@ export const beatnupGames: Game[] = [
   {
     id: "final-fight-guy",
     title: "Final Fight Guy",
-    slug: "final-fight-guy-usa",
+    slug: "23139_final-fight-guy-usa",
     embedId: "23139",
     year: 1992,
     genre: "Urban",
@@ -373,7 +373,7 @@ export const beatnupGames: Game[] = [
   {
     id: "vendetta",
     title: "Vendetta",
-    slug: "vendetta-world-2-players-ver-w",
+    slug: "vendetta",
     embedId: "10611",
     year: 1991,
     genre: "Urban",

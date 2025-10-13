@@ -15,6 +15,7 @@ export function EmulatorCDN({ romUrl, core = 'arcade' }: EmulatorCDNProps) {
     let mounted = true;
     const win = window as any;
     const CDN_BASE = 'https://emulatorjs.vercel.app/data/';
+    // oficial const CDN_BASE = 'https://cdn.emulatorjs.org/latest/data/';
 
     try {
       if (win.EJS_emulator) {
