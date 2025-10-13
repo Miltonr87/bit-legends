@@ -192,7 +192,7 @@ export const fightGames: Game[] = [
         players: "1-2 Players",
         developer: "SNK",
         coverImage: "/assets/covers/kof_98.jpg",
-        platform: "Neo Geo",
+        platform: "Arcade",
         logo: "/assets/logos/kof98.png",
     },
     {
@@ -220,7 +220,7 @@ export const fightGames: Game[] = [
         players: "1-2 Players",
         developer: "Eolith / SNK Playmore",
         coverImage: "/assets/covers/kof_2002.jpg",
-        platform: "Neo Geo",
+        platform: "Arcade",
         logo: "/assets/logos/kof2002.png"
     },
     {
@@ -248,7 +248,7 @@ export const fightGames: Game[] = [
         players: "1-2 Players",
         developer: "SNK Playmore (Bootleg Edition)",
         coverImage: "/assets/covers/kof_2004.jpeg",
-        platform: "Neo Geo",
+        platform: "Arcade",
         logo: "/assets/logos/kof2k4se.png"
     },
     {
@@ -275,7 +275,7 @@ export const fightGames: Game[] = [
         developer: "SNK",
         coverImage: "/assets/covers/samurai.jpg",
         logo: "/assets/logos/samurai2.png",
-        platform: "Neo Geo",
+        platform: "Arcade",
     },
     {
         id: "samurai-shodown-iv",
@@ -305,7 +305,7 @@ export const fightGames: Game[] = [
         players: "1-2 Players",
         developer: "SNK",
         coverImage: "/assets/covers/samurai_shodown_iv_arcade.jpg",
-        platform: "Neo Geo",
+        platform: "Arcade",
         logo: "/assets/logos/samurai_shodown_iv_arcade.png"
     },
     {
@@ -325,8 +325,30 @@ export const fightGames: Game[] = [
         developer: "SNK",
         coverImage: "/assets/covers/faltal_fury.jpg",
         embedUrl: "https://www.retrogames.cc/embed/9648-real-bout-fatal-fury.html",
-        platform: "Neo Geo",
+        platform: "Arcade",
         logo: "/assets/logos/realbout.png"
+    },
+    {
+        id: "double-dragon-neo-geo",
+        title: "Double Dragon",
+        slug: "double-dragon-neo-geo",
+        embedId: "8328",
+        year: 1995,
+        genre: "Tournament",
+        folder: "Technōs",
+        publisher: "Technōs",
+        characters: ["Billy Lee", "Jimmy Lee", "Abobo", "Linda", "Enemies"],
+        description: "A classic side-scrolling brawler where the Lee brothers fight through gangs in a dystopian city.",
+        longDescription:
+            "Double Dragon (Neo-Geo) captures the essence of the original arcade classic with upgraded visuals and tighter controls. " +
+            "Players control Billy and Jimmy Lee through urban stages filled with street gangs, weapons, and boss showdowns. " +
+            "This version delivers strong sprite art, smooth animations, and nostalgic action in an arcade-perfect package. " +
+            "With cooperative play, pick-ups, and rhythmic combat, it remains a staple of the beat ’em up genre.",
+        players: "1-2 Players",
+        developer: "Technōs",
+        coverImage: "/assets/covers/double_dragon.jpg",
+        platform: "Arcade",
+        logo: "/assets/logos/double_dragon.png"
     },
     {
         id: "justice-league-task-force",

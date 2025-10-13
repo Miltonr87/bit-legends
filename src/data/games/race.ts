@@ -45,8 +45,28 @@ export const raceGames: Game[] = [
         logo: "/assets/logos/bike.png",
         platform: "Super Nintendo",
     },
+    {
+        id: "riding-fight",
+        title: "Riding Fight",
+        slug: "riding-fight-ver-1-0a",
+        embedId: "36661",
+        year: 1992,
+        genre: "Race",
+        folder: "Racing",
+        publisher: "Taito",
+        characters: ["Ryu", "Billy", "Gary", "Burt", "Lisa"],
+        description: "High-speed futuristic combat on the streets!",
+        longDescription:
+            "Riding Fight combines racing and brawling in a fast-paced futuristic city. " +
+            "Battle rival riders while zooming through neon-lit highways and sky roads. " +
+            "A showcase of Taito’s arcade flair, this 1992 gem blends speed, combat, and style " +
+            "in an unforgettable ride through cyberpunk chaos.",
+        players: "1-2 Players",
+        developer: "Taito",
+        coverImage: "/assets/covers/ridingfight.jpg",
+        logo: "/assets/logos/ridingf.png",
+        platform: "Arcade",
+    },
 ];
 
-export const raceFilters = [
-    "Race",
-];
+export const raceFilters = ["Race"];

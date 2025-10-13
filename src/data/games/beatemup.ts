@@ -41,9 +41,52 @@ export const beatnupGames: Game[] = [
       "A true masterpiece of the 16-bit era.",
     players: "1-2 Players",
     developer: "Sega",
-    coverImage: "/assets/covers/sor2.png",
+    coverImage: "/assets/covers/streets_of_rage_2.jpg",
     platform: "Sega Genesis",
     logo: "/assets/logos/streets_of_rage_2.png"
+  },
+  {
+    id: "blade-master",
+    title: "Blade Master",
+    slug: "blade-master-world-imperfect-sound-and-graphics",
+    embedId: "7951",
+    year: 1991,
+    genre: "Fantasy",
+    folder: "RPG",
+    publisher: "Irem",
+    characters: ["Roy", "Arnold"],
+    description: "Epic sword-swinging fantasy adventure.",
+    longDescription:
+      "Blade Master (1991) immerses you in a high-fantasy world of knights, monsters, and dark sorcery. " +
+      "Join Roy and Arnold as they battle across enchanted forests, cursed villages, and fiery dungeons. " +
+      "With fluid combat, detailed sprites, and powerful magic attacks, Irem’s 1991 arcade classic delivers " +
+      "fast-paced, co-op fantasy action at its finest.",
+    players: "1-2 Players",
+    developer: "Irem",
+    coverImage: "/assets/covers/blademaster.jpg",
+    logo: "/assets/logos/blademaster.png",
+    platform: "Arcade",
+  },
+  {
+    id: "riot-city",
+    title: "Riot City",
+    slug: "riot-city-japan",
+    embedId: "36575",
+    year: 1991,
+    genre: "Urban",
+    folder: "Urban",
+    publisher: "Sega",
+    characters: ["Paul", "Bobby"],
+    description: "Clean up the streets in classic Sega beat ’em up style!",
+    longDescription:
+      "Riot City brings fast-paced street fighting to the arcade with Sega’s signature flair. " +
+      "Play as Paul or Bobby, two tough cops on a mission to rescue a kidnapped friend and bring down a violent crime syndicate. " +
+      "Colorful sprites, catchy music, and smooth co-op action make this a quintessential early ’90s urban brawler.",
+    players: "1-2 Players",
+    developer: "Sega AM7",
+    coverImage: "/assets/covers/riotcity.jpg",
+    logo: "/assets/logos/riotcity.png",
+    platform: "Arcade",
   },
   {
     id: "sor3",
@@ -63,7 +106,7 @@ export const beatnupGames: Game[] = [
       "A bold, challenging conclusion to the Streets of Rage trilogy.",
     players: "1-2 Players",
     developer: "Sega",
-    coverImage: "/assets/covers/sor3.png",
+    coverImage: "/assets/covers/streets_of_rage_3.jpg",
     platform: "Sega Genesis",
     logo: "/assets/logos/streets_of_rage_3.png"
   },
@@ -280,7 +323,7 @@ export const beatnupGames: Game[] = [
     slug: "mighty-morphin-power-rangers-the-movie-usa",
     embedId: "19560",
     year: 1995,
-    genre: "Urban",
+    genre: "Sci-Fi",
     folder: "Power Rangers",
     publisher: "Bandai",
     characters: [
@@ -351,10 +394,31 @@ export const beatnupGames: Game[] = [
     logo: '/assets/logos/ddsom.png'
   },
   {
+    id: "vendetta",
+    title: "Vendetta",
+    slug: "vendetta-world-2-players-ver-w",
+    embedId: "10611",
+    year: 1991,
+    genre: "Urban",
+    folder: "Urban",
+    publisher: "Konami",
+    characters: ["Blood", "Hawk", "Boomer", "Sledge"],
+    description: "Street justice in the toughest city around.",
+    longDescription:
+      "Vendetta delivers hard-hitting arcade action as four vigilantes fight to reclaim the streets from the Dead End Gang. " +
+      "Punch, kick, and slam your way through gritty alleys and neon-lit clubs in Konami’s classic urban brawler. " +
+      "Fluid animation, brutal combos, and co-op chaos make it one of the most iconic beat ’em ups of the early ’90s.",
+    players: "1-2 Players",
+    developer: "Konami",
+    coverImage: "/assets/covers/vendetta.jpg",
+    logo: "/assets/logos/vendetta.png",
+    platform: "Arcade",
+  },
+  {
     id: "knights-of-the-round",
     title: "Knights of the Round",
     slug: "knights-of-the-round-europe",
-    embedId: "19936",
+    embedId: "24135",
     year: 1991,
     genre: "Fantasy",
     folder: "Capcom Classics",
@@ -373,7 +437,69 @@ export const beatnupGames: Game[] = [
     logo:
       "/assets/logos/knights.png",
   },
-
+  {
+    id: "shadow-force",
+    title: "Shadow Force",
+    slug: "shadow-force-us-version-2",
+    embedId: "34316",
+    year: 1993,
+    genre: "Sci-Fi",
+    folder: "Technōs Japan",
+    publisher: "Technōs Japan",
+    characters: ["Roy", "Arnold", "Cyborg", "Blanca"],
+    description: "Arcade brawler with supernatural transformation powers!",
+    longDescription:
+      "Shadow Force mixes martial arts and supernatural mayhem in a fast-paced arcade experience. " +
+      "Fight enemies across futuristic arenas and morph into powerful shadow forms to unleash devastating attacks. " +
+      "With smooth animations and co-op play, it stands as one of Technōs Japan’s most underrated action gems.",
+    players: "1-2 Players",
+    developer: "Technōs Japan",
+    coverImage: "/assets/covers/shadow.jpg",
+    logo: "/assets/logos/shadfrce.png",
+    platform: "Arcade",
+  },
+  {
+    id: "undercover-cops",
+    title: "Undercover Cops",
+    slug: "undercover-cops-alpha-renewal-version-imperfect-sound-and-graphics",
+    embedId: "36581",
+    year: 1992,
+    genre: "sci-Fi",
+    folder: "Irem",
+    publisher: "Irem",
+    characters: ["Zan Takahara", "Matt Gables", "Rosa Felmonde"],
+    description: "Futuristic street brawling with style and grit.",
+    longDescription:
+      "Undercover Cops throws players into a post-apocalyptic urban wasteland where law enforcement is done by fists and iron pipes. " +
+      "Choose one of three unique heroes and clean up the city through brutal hand-to-hand combat. " +
+      "With striking pixel art and detailed animation, Irem delivered one of the most stylish arcade beat ’em ups of the early ’90s.",
+    players: "1-2 Players",
+    developer: "Irem",
+    coverImage: "/assets/covers/undercovercops.jpg",
+    logo: "/assets/logos/uccops.png",
+    platform: "Arcade",
+  },
+  {
+    id: "light-bringer",
+    title: "Light Bringer",
+    slug: "light-bringer-ver-2-2o-1994-04-08",
+    embedId: "33815",
+    year: 1994,
+    genre: "Fantasy",
+    folder: "Taito",
+    publisher: "Taito",
+    characters: ["Warrior", "Amazon", "Thief", "Monk"],
+    description: "Arcade fantasy action in an isometric world.",
+    longDescription:
+      "Light Bringer (also known as Dungeon Magic) brings fast-paced cooperative dungeon crawling to the arcade. " +
+      "Battle through labyrinthine stages filled with traps, treasures, and monsters in an isometric fantasy world. " +
+      "Choose your hero and fight together to restore the light against the forces of darkness.",
+    players: "1-2 Players",
+    developer: "Taito",
+    coverImage: "/assets/covers/lightbringer.jpg",
+    logo: "/assets/logos/lightbr.png",
+    platform: "Arcade",
+  },
   {
     id: "alien-vs-predator",
     title: "Alien vs. Predator",
