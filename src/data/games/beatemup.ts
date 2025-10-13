@@ -459,10 +459,31 @@ export const beatnupGames: Game[] = [
     platform: "Arcade",
   },
   {
+    id: "splatterhouse-3",
+    title: "Splatterhouse 3",
+    slug: "splatterhouse-3-usa",
+    embedId: "29959",
+    year: 1993,
+    genre: "Horror",
+    folder: "Horror",
+    publisher: "Namco",
+    characters: ["Rick Taylor", "Jennifer", "The Mask"],
+    description: "Pure terror and brutal combat return home.",
+    longDescription:
+      "Splatterhouse 3 continues Rick Taylor’s gruesome fight against the forces of evil — this time within his own mansion. " +
+      "Navigate nonlinear rooms, rescue your family, and unleash brutal attacks using the power of the Terror Mask. " +
+      "With cinematic storytelling, eerie atmosphere, and visceral brawling, this Sega Genesis classic remains a cult horror legend.",
+    players: "1 Player",
+    developer: "Now Production / Namco",
+    coverImage: "/assets/covers/splat.jpg",
+    logo: "/assets/logos/splat.png",
+    platform: "Sega Genesis",
+  },
+  {
     id: "undercover-cops",
     title: "Undercover Cops",
     slug: "undercover-cops-alpha-renewal-version-imperfect-sound-and-graphics",
-    embedId: "36581",
+    embedId: "10560",
     year: 1992,
     genre: "sci-Fi",
     folder: "Irem",
@@ -627,6 +648,48 @@ export const beatnupGames: Game[] = [
     coverImage: "/assets/covers/the_ninja_warriors_snes.jpg",
     platform: "SNES",
     logo: "/assets/logos/the_ninja_warriors_snes.png",
+  },
+  {
+    id: "warriors-of-fate",
+    title: "Warriors of Fate",
+    slug: "warriors-of-fate-921002-etc",
+    embedId: "10654",
+    year: 1992,
+    genre: "Fantasy",
+    folder: "Fantasy",
+    publisher: "Capcom",
+    characters: ["Kadan", "Portor", "Subutai", "Abaka", "Kassar"],
+    description: "Legendary warriors battle for honor and destiny.",
+    longDescription:
+      "Warriors of Fate brings ancient legends to life in a sweeping fantasy brawler from Capcom. " +
+      "Choose fantasy archetypes from five mighty heroes and carve your path through war-torn lands filled with enemy soldiers and towering bosses from Chinese culture. " +
+      "Featuring gorgeous art, mounted combat, and deep co-op gameplay, it stands among the greatest side-scrolling beat ’em ups ever made.",
+    players: "1-2 Players",
+    developer: "Capcom",
+    coverImage: "/assets/covers/warriorsoffate.jpg",
+    logo: "/assets/logos/wof.png",
+    platform: "Arcade",
+  },
+  {
+    id: "silent-dragon",
+    title: "Silent Dragon",
+    slug: "silent-dragon-us",
+    embedId: "9835",
+    year: 1992,
+    genre: "Sci-Fi",
+    folder: "Sci-Fi",
+    publisher: "Taito",
+    characters: ["Johnny", "Tommy", "Chris", "Fred"],
+    description: "High-tech martial arts mayhem in the future!",
+    longDescription:
+      "Silent Dragon thrusts you into a dystopian future where cyber-enhanced warriors battle for justice. " +
+      "Choose your fighter and unleash devastating combos and super attacks against gangs and mutant enemies. " +
+      "With Taito’s sharp pixel art, sci-fi setting, and satisfying co-op brawling, Silent Dragon stands as an electrifying arcade classic of 1992.",
+    players: "1-2 Players",
+    developer: "Taito",
+    coverImage: "/assets/covers/silentd.jpg",
+    logo: "/assets/logos/silentd.png",
+    platform: "Arcade",
   },
   {
     id: "robo-army-arcade",
