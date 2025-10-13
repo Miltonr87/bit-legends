@@ -43,28 +43,6 @@ export const actionGames: Game[] = [
         logo: "/assets/logos/shinobi_3.png"
     },
     {
-        id: "sunset-riders-snes",
-        title: "Sunset Riders",
-        slug: "sunset-riders-snes",
-        embedId: "19970",
-        year: 1993,
-        genre: "Action",
-        folder: "Konami",
-        publisher: "Konami",
-        characters: ["Billy", "Cormano", "Bob", "Steve"],
-        description: "A colorful Western shootout classic — ride, shoot, and collect bounties!",
-        longDescription:
-            "Sunset Riders (1993) is a side-scrolling run-and-gun game by Konami for the SNES, based on their hit arcade title. " +
-            "Players choose one of four bounty hunters — Billy, Cormano, Bob, or Steve — and blaze through the Wild West battling outlaws and notorious bosses. " +
-            "Featuring horseback chases, multi-directional shooting, and two-player co-op, it mixes humor and classic Konami flair with vibrant visuals and an unforgettable soundtrack. " +
-            "A true gem of the 16-bit era that captures the thrill of Western arcade action.",
-        players: "1-2 Players",
-        developer: "Konami",
-        coverImage: "/assets/covers/sunset_riders_snes.jpg",
-        platform: "Super Nintendo",
-        logo: "/assets/logos/ssriders.png"
-    },
-    {
         id: "x-kaliber-2097-snes",
         title: "X-Kaliber 2097",
         slug: "x-kaliber-2097-snes",
@@ -85,6 +63,28 @@ export const actionGames: Game[] = [
         coverImage: "/assets/covers/x_kaliber_2097_snes.jpg",
         platform: "Super Nintendo",
         logo: "/assets/logos/x_kaliber.png"
+    },
+    {
+        id: "actraiser-2-snes",
+        title: "ActRaiser 2",
+        slug: "actraiser-2-usa",
+        embedId: "23088",
+        year: 1993,
+        genre: "Action",
+        folder: "Enix",
+        publisher: "Enix",
+        characters: ["The Master", "Tanzra"],
+        description: "A divine side-scrolling adventure blending myth, challenge, and breathtaking visuals.",
+        longDescription:
+            "ActRaiser 2 (1993) is an action platformer developed by Quintet and published by Enix for the Super Nintendo. " +
+            "The sequel to the cult classic ActRaiser, this title abandons the city-building mechanics of its predecessor to focus purely on refined, challenging side-scrolling action. " +
+            "Players once again take on the role of The Master, a divine warrior battling the fallen angel Tanzra and his legions across richly painted levels. " +
+            "With orchestral music by Yuzo Koshiro and some of the most beautiful visuals on the SNES, ActRaiser 2 stands as a demanding yet majestic 16-bit masterpiece.",
+        players: "1 Player",
+        developer: "Quintet",
+        coverImage: "/assets/covers/actraiser.jpg",
+        platform: "Super Nintendo",
+        logo: "/assets/logos/actraiser.png"
     }
 ];
 
