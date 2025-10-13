@@ -9,17 +9,10 @@ export function EmulatorCDN({ romUrl, core = 'arcade' }: EmulatorCDNProps) {
   const outerRef = useRef<HTMLDivElement>(null);
   const innerRef = useRef<HTMLDivElement>(null);
   const [isLoaded, setIsLoaded] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     if (!romUrl) return;
     let mounted = true;
-
-    // 📱 Detect mobile
-    const mm = window.matchMedia('(max-width: 639px)');
-    const apply = () => setIsMobile(mm.matches);
-    apply();
-    mm.addEventListener('change', apply);
 
     const win = window as any;
     const CDN_BASE = 'https://emulatorjs.vercel.app/data/';
@@ -46,10 +39,39 @@ export function EmulatorCDN({ romUrl, core = 'arcade' }: EmulatorCDNProps) {
     win.EJS_buttons = true;
     win.usingVersion = '0.5.49';
 
+    // 🔇 Silence emulator noise
+    const originalLog = console.log;
+    console.log = (...args) => {
+      if (
+        typeof args[0] === 'string' &&
+        args[0].includes('Using emulatorjs version')
+      )
+        return;
+      originalLog(...args);
+    };
+    const originalWarn = console.warn;
+    console.warn = (msg, ...rest) => {
+      if (typeof msg === 'string' && msg.includes('Enlarging memory arrays'))
+        return;
+      originalWarn(msg, ...rest);
+    };
+    const originalError = console.error;
+    console.error = (...args) => {
+      if (
+        args[0] &&
+        typeof args[0] === 'string' &&
+        args[0].includes('Unable to preventDefault')
+      )
+        return;
+      originalError(...args);
+    };
+
     // 📦 Load fresh EmulatorJS script for every ROM
     const loadEmulatorScript = () => {
       const oldScript = document.querySelector('script[data-emulatorjs]');
       if (oldScript) oldScript.remove();
+
+      if (win._babelPolyfill) delete win._babelPolyfill;
 
       const script = document.createElement('script');
       script.src = `${CDN_BASE}loader.js`;
@@ -76,8 +98,6 @@ export function EmulatorCDN({ romUrl, core = 'arcade' }: EmulatorCDNProps) {
     // 🧹 Cleanup on unmount
     return () => {
       mounted = false;
-      mm.removeEventListener('change', apply);
-
       try {
         if (win.EJS_emulator) {
           win.EJS_emulator.pause?.();
@@ -96,6 +116,11 @@ export function EmulatorCDN({ romUrl, core = 'arcade' }: EmulatorCDNProps) {
       } catch (err) {
         console.warn('⚠️ Failed to clean up EmulatorJS:', err);
       }
+
+      // Restore console
+      console.log = originalLog;
+      console.warn = originalWarn;
+      console.error = originalError;
     };
   }, [romUrl, core]);
 
@@ -104,7 +129,7 @@ export function EmulatorCDN({ romUrl, core = 'arcade' }: EmulatorCDNProps) {
       ref={outerRef}
       style={{
         width: '100%',
-        height: isMobile ? '88vh' : '100%',
+        height: '100%',
         background: 'black',
         position: 'relative',
         borderRadius: '0.5rem',
