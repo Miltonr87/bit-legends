@@ -49,7 +49,7 @@ export const raceGames: Game[] = [
         id: "riding-fight",
         title: "Riding Fight",
         slug: "riding-fight-ver-1-0a",
-        embedId: "36661",
+        embedId: "34209",
         year: 1992,
         genre: "Race",
         folder: "Racing",
