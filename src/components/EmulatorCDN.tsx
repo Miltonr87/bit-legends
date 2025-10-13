@@ -13,11 +13,9 @@ export function EmulatorCDN({ romUrl, core = 'arcade' }: EmulatorCDNProps) {
   useEffect(() => {
     if (!romUrl) return;
     let mounted = true;
-
     const win = window as any;
     const CDN_BASE = 'https://emulatorjs.vercel.app/data/';
 
-    // 🧹 Stop previous emulator
     try {
       if (win.EJS_emulator) {
         win.EJS_emulator.pause?.();
@@ -28,7 +26,6 @@ export function EmulatorCDN({ romUrl, core = 'arcade' }: EmulatorCDNProps) {
       console.warn('⚠️ Cleanup before reload failed:', e);
     }
 
-    // 🧹 Clear only the inner container (React-safe)
     if (innerRef.current) innerRef.current.innerHTML = '';
 
     // ⚙️ Define globals BEFORE script load
@@ -39,7 +36,6 @@ export function EmulatorCDN({ romUrl, core = 'arcade' }: EmulatorCDNProps) {
     win.EJS_buttons = true;
     win.usingVersion = '0.5.49';
 
-    // 🔇 Silence emulator noise
     const originalLog = console.log;
     console.log = (...args) => {
       if (
@@ -66,7 +62,6 @@ export function EmulatorCDN({ romUrl, core = 'arcade' }: EmulatorCDNProps) {
       originalError(...args);
     };
 
-    // 📦 Load fresh EmulatorJS script for every ROM
     const loadEmulatorScript = () => {
       const oldScript = document.querySelector('script[data-emulatorjs]');
       if (oldScript) oldScript.remove();
@@ -95,7 +90,6 @@ export function EmulatorCDN({ romUrl, core = 'arcade' }: EmulatorCDNProps) {
 
     loadEmulatorScript();
 
-    // 🧹 Cleanup on unmount
     return () => {
       mounted = false;
       try {
@@ -117,7 +111,6 @@ export function EmulatorCDN({ romUrl, core = 'arcade' }: EmulatorCDNProps) {
         console.warn('⚠️ Failed to clean up EmulatorJS:', err);
       }
 
-      // Restore console
       console.log = originalLog;
       console.warn = originalWarn;
       console.error = originalError;

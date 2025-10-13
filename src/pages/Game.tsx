@@ -235,7 +235,7 @@ const Game = () => {
                   ref={gameIframeRef}
                   className="relative bg-black rounded-lg overflow-hidden"
                   style={
-                    isMobile ? { height: 'calc(68vh)' } : { aspectRatio: '4/3' }
+                    isMobile ? { height: 'calc(72vh)' } : { aspectRatio: '4/3' }
                   }
                 >
                   <EmulatorCDN

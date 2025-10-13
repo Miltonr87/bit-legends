@@ -48,7 +48,7 @@ export const beatnupGames: Game[] = [
   {
     id: "blade-master",
     title: "Blade Master",
-    slug: "blade-master-world-imperfect-sound-and-graphics",
+    slug: "bmaster",
     embedId: "7951",
     year: 1991,
     genre: "Fantasy",
@@ -113,7 +113,7 @@ export const beatnupGames: Game[] = [
   {
     id: "kingdragons",
     title: "The King of Dragons",
-    slug: "the-king-of-dragons",
+    slug: "kod",
     embedId: "the-king-of-dragons",
     year: 1991,
     genre: "Fantasy",
@@ -131,7 +131,7 @@ export const beatnupGames: Game[] = [
     coverImage: "/assets/covers/the-king-of-dragons.png",
     embedUrl: "https://www.retrogames.cc/embed/10347-the-king-of-dragons.html",
     platform: "Arcade",
-    logo: "/assets/logos/knights.png"
+    logo: "/assets/logos/the_king_of_dragons.png"
   },
   {
     id: "tmnt-turtles-in-time",
@@ -177,29 +177,6 @@ export const beatnupGames: Game[] = [
     embedUrl: "https://www.retrogames.cc/embed/22554-final-fight-europe.html",
     platform: "Arcade",
     logo: "/assets/logos/final_fight.png"
-  },
-  {
-    id: "golden-axe-revenge-death-adder",
-    title: "Golden Axe",
-    slug: "golden-axe-revenge-of-death-adder-arcade",
-    embedId: "42459",
-    year: 1992,
-    genre: "Fantasy",
-    folder: "Sega",
-    publisher: "Sega",
-    characters: ["Goah", "Stern Blade", "Dora", "Little Trix", "Death Adder"],
-    description: "A brutal fantasy brawler featuring four new heroes taking on Death Adder’s tyranny.",
-    longDescription:
-      "Golden Axe: Revenge of Death Adder (1992) is an arcade sequel in the Golden Axe series, powered by Sega’s System. " +
-      "This chapter introduces four new playable characters — Goah, Stern Blade, Dora, and Little Trix — each with distinct abilities and styles. " +
-      "Players battle through branching paths across multiple levels, using classic magic, mounted creatures, and cooperative attacks. " +
-      "With richer visuals, faster gameplay, and the ability to support up to four simultaneous players, it’s a landmark in arcade beat ’em ups. ",
-    players: "1-4 Players",
-    developer: "Sega AM1",
-    coverImage: "/assets/covers/golden_axe_revenge_of_death_adder.jpg",
-    platform: "Arcade",
-    embedUrl: "https://www.retrogames.cc/embed/42459-golden-axe-the-revenge-of-death-adder-world-rev-b.html",
-    logo: "/assets/logos/golden_axe_revenge_of_death_adder.png"
   },
   {
     id: "violent-storm",
@@ -374,7 +351,7 @@ export const beatnupGames: Game[] = [
   {
     id: "dd-shadow-over-mystara",
     title: "D&D: Mystara",
-    slug: "dungeons-dragons-shadow-over-mystara-960208-euro",
+    slug: "ddsom",
     embedId: "8378",
     year: 1996,
     genre: "Fantasy",
@@ -503,7 +480,7 @@ export const beatnupGames: Game[] = [
   {
     id: "light-bringer",
     title: "Light Bringer",
-    slug: "light-bringer-ver-2-2o-1994-04-08",
+    slug: "lightbr",
     embedId: "33815",
     year: 1994,
     genre: "Fantasy",
@@ -652,7 +629,7 @@ export const beatnupGames: Game[] = [
   {
     id: "warriors-of-fate",
     title: "Warriors of Fate",
-    slug: "warriors-of-fate-921002-etc",
+    slug: "wof",
     embedId: "10654",
     year: 1992,
     genre: "Fantasy",
@@ -956,7 +933,7 @@ export const beatnupGames: Game[] = [
   {
     id: "dd-tower-of-doom",
     title: "D&D: Tower of Doom",
-    slug: "dungeons-dragons-tower-of-doom-euro",
+    slug: "ddtod",
     embedId: "940113",
     year: 1994,
     genre: "Fantasy",
