@@ -627,29 +627,6 @@ export const beatnupGames: Game[] = [
     logo: "/assets/logos/wolverine_adamantium.png",
   },
   {
-    id: "the-ninja-warriors-snes",
-    title: "The Ninja Warriors",
-    slug: "the-ninja-warriors-snes",
-    embedId: "",
-    embedUrl: "https://f.kbhgames.com/emujs/play.php?c=snes&f=the-ninja-warriors.smc",
-    year: 1994,
-    genre: "Urban",
-    folder: "Taito",
-    publisher: "Taito",
-    characters: ["Kunoichi", "Ninja", "Kamaitachi"],
-    description: "A cybernetic ninja sidescroller — brutal, stylish, and unforgettable.",
-    longDescription:
-      "The Ninja Warriors (1994) is a side-scrolling beat-’em-up developed by Natsume and published by Taito for the Super Nintendo. " +
-      "Players control one of three android ninjas — Kunoichi, Ninja, or Kamaitachi — in a rebellion against a tyrannical regime. " +
-      "The game expands on the original arcade hit with new characters, deeper combat mechanics, and cinematic presentation. " +
-      "Featuring gorgeous sprite work, a legendary soundtrack by Zuntata, and fluid co-op action, it remains one of the SNES’s most impressive 2D action experiences.",
-    players: "1-2 Players",
-    developer: "Natsume / Taito",
-    coverImage: "/assets/covers/the_ninja_warriors_snes.jpg",
-    platform: "SNES",
-    logo: "/assets/logos/the_ninja_warriors_snes.png",
-  },
-  {
     id: "warriors-of-fate",
     title: "Warriors of Fate",
     slug: "warriors-of-fate-921002-etc",
