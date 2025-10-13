@@ -221,7 +221,7 @@ const Game = () => {
                   }
                 >
                   <iframe
-                    src={iframeUrl}
+                    src={`/api/proxy?url=${encodeURIComponent(iframeUrl)}`}
                     className="absolute inset-0 w-full h-full rounded-lg"
                     title={game.title}
                     allow="gamepad; fullscreen; autoplay; encrypted-media; picture-in-picture"
