@@ -15,7 +15,7 @@ export const ControllerSetup = () => {
 
   const middle = [
     { action: 'Start', key: 'ENTER' },
-    { action: 'Coin', key: 'R SHIFT' },
+    { action: 'Coin', key: 'SHIFT' },
   ];
 
   return (
