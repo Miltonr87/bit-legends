@@ -238,7 +238,11 @@ const Game = () => {
                     isMobile ? { height: 'calc(68vh)' } : { aspectRatio: '4/3' }
                   }
                 >
-                  <EmulatorCDN romUrl={romUrl} core={core} key={game.id} />
+                  <EmulatorCDN
+                    key={`${game.id}-${romUrl}`}
+                    romUrl={romUrl}
+                    core={core}
+                  />
                   {isMobile && (
                     <button
                       onClick={toggleFullscreen}
