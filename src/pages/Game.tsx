@@ -26,6 +26,7 @@ import { useDisplayDevice } from '@/hooks/useDisplayDevice';
 import { ControllerSetup } from '@/components/ControllerSetup';
 import { db, auth } from '@/lib/firebase';
 import { doc, setDoc, getDoc } from 'firebase/firestore';
+import { EmulatorCDN } from '@/components/EmulatorCDN';
 import type { Game } from '../data';
 
 const Game = () => {
@@ -137,9 +138,26 @@ const Game = () => {
     );
   }
 
-  const iframeUrl =
-    game.embedUrl ||
-    `https://www.retrogames.cc/embed/${game.embedId}-${game.slug}.html`;
+  const getCoreByPlatform = (platform: string) =>
+    ({
+      'Super Nintendo': 'snes',
+      SNES: 'snes',
+      Genesis: 'segaMD',
+      'Mega Drive': 'segaMD',
+      NES: 'nes',
+      Nintendo: 'nes',
+      GBA: 'gba',
+      'Game Boy Advance': 'gba',
+      Arcade: 'arcade',
+    }[platform] ?? 'arcade');
+
+  const defaultCore = getCoreByPlatform(game.platform);
+  const core = game.core || defaultCore;
+
+  // 🧠 Resolve rom path
+  const romUrl = game.romUrl
+    ? `${window.location.origin}${game.romUrl}`
+    : `${window.location.origin}/rom/${game.slug}.zip`;
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -220,19 +238,7 @@ const Game = () => {
                     isMobile ? { height: 'calc(68vh)' } : { aspectRatio: '4/3' }
                   }
                 >
-                  <iframe
-                    src={iframeUrl}
-                    className="absolute inset-0 w-full h-full rounded-lg"
-                    title={game.title}
-                    allow="gamepad; fullscreen; autoplay; encrypted-media; picture-in-picture"
-                    allowFullScreen
-                    style={{
-                      border: 'none',
-                      overflow: 'hidden',
-                      backgroundColor: 'black',
-                    }}
-                    sandbox="allow-scripts allow-same-origin allow-pointer-lock allow-forms allow-presentation"
-                  />
+                  <EmulatorCDN romUrl={romUrl} core={core} key={game.id} />
                   {isMobile && (
                     <button
                       onClick={toggleFullscreen}

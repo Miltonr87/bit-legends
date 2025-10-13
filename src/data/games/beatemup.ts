@@ -417,7 +417,7 @@ export const beatnupGames: Game[] = [
   {
     id: "knights-of-the-round",
     title: "Knights of the Round",
-    slug: "knights-of-the-round-europe",
+    slug: "24135_knights-of-the-round-usa",
     embedId: "24135",
     year: 1991,
     genre: "Fantasy",
@@ -852,7 +852,7 @@ export const beatnupGames: Game[] = [
   {
     id: "64th-street-arcade",
     title: "64th Street",
-    slug: "64th-street-arcade",
+    slug: "64street",
     embedId: "33053",
     year: 1991,
     genre: "Urban",
