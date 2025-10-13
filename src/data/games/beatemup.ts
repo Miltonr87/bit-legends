@@ -131,7 +131,7 @@ export const beatnupGames: Game[] = [
     coverImage: "/assets/covers/the-king-of-dragons.png",
     embedUrl: "https://www.retrogames.cc/embed/10347-the-king-of-dragons.html",
     platform: "Arcade",
-    logo: "/assets/logos/knights.png"
+    logo: "/assets/logos/king_of_dragons.png"
   },
   {
     id: "tmnt-turtles-in-time",
