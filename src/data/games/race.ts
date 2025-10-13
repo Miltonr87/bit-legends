@@ -7,7 +7,7 @@ export const raceGames: Game[] = [
         slug: "rock-n-roll-racing-usa",
         embedId: "24053",
         year: 1993,
-        genre: "Race",
+        genre: "Fight Race",
         folder: "Racing",
         publisher: "Interplay",
         characters: ["Snake Sanders", "Cyberhawk", "Jake Badlands", "Tarquinn", "Ivanzypher", "Katarina Lyons"],
@@ -29,8 +29,8 @@ export const raceGames: Game[] = [
         slug: "biker-mice-from-mars-usa",
         embedId: "20158",
         year: 1994,
-        genre: "Race",
-        folder: "Racing",
+        genre: "Fight Race",
+        folder: "Race",
         publisher: "Konami",
         characters: ["Throttle", "Vinnie", "Modo", "Limburger", "Greasepit", "Dr.Karbunkle"],
         description: "Cartoon motorcycle racing on Mars!",
@@ -51,8 +51,8 @@ export const raceGames: Game[] = [
         slug: "riding-fight-ver-1-0a",
         embedId: "34209",
         year: 1992,
-        genre: "Race",
-        folder: "Racing",
+        genre: "Fight Race",
+        folder: "Race",
         publisher: "Taito",
         characters: ["Ryu", "Billy", "Gary", "Burt", "Lisa"],
         description: "High-speed futuristic combat on the streets!",
@@ -69,4 +69,4 @@ export const raceGames: Game[] = [
     },
 ];
 
-export const raceFilters = ["Race"];
+export const raceFilters = ["Fight Race"];
