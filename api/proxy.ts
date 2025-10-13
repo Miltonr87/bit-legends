@@ -29,7 +29,6 @@ export default async function handler(
 
         // Basic sanitization to remove ad & tracking scripts
         let cleanHtml = response.data
-            .replace(/<script[^>]*>[\s\S]*?<\/script>/gi, '') // remove all <script> tags
             .replace(/adsbygoogle|doubleclick\.net|googlesyndication|popads/gi, ''); // strip ad domains
 
         res.setHeader('Content-Type', 'text/html; charset=utf-8');
