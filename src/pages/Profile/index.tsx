@@ -1,12 +1,5 @@
-import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { ProfileData } from '@/types';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import {
-  getGameHistory,
-  deleteGameHistory,
-  type GameHistory,
-} from '@/lib/localStorage';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { HistoryCard } from '@/components/HistoryCard';
@@ -16,7 +9,6 @@ import { Label } from '@/components/ui/label';
 import { Card } from '@/components/ui/card';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 import { User, Upload, LogIn, LogOut, Mail } from 'lucide-react';
-import { toast } from 'sonner';
 import {
   AlertDialog,
   AlertDialogAction,
@@ -27,130 +19,45 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
 } from '@/components/ui/alert-dialog';
-import { auth } from '@/lib/firebase';
-import { GoogleAuthProvider, signInWithPopup, signOut } from 'firebase/auth';
+import { useUserProfile } from '@/hooks/useUserProfile';
+import { useGameHistory } from '@/hooks/useGameHistory';
+import type { DeleteDialogProps, ProfileCardProps } from '@/types';
 
 export default function Profile() {
-  const navigate = useNavigate();
-  const [user, setUser] = useState<ProfileData | null>(null);
-  const [username, setUsername] = useState('');
-  const [emailInput, setEmailInput] = useState('');
-  const [uploading, setUploading] = useState(false);
-  const [gameHistory, setGameHistory] = useState<GameHistory[]>([]);
+  const {
+    user,
+    username,
+    uploading,
+    loginWithGoogle,
+    loginWithEmail,
+    logout,
+    uploadAvatar,
+    updateProfile,
+    setUsername,
+  } = useUserProfile();
+
+  const { gameHistory, deleteHistory, formatTime } = useGameHistory();
+
   const [useEmail, setUseEmail] = useState(false);
+  const [emailInput, setEmailInput] = useState('');
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
-  const [historyToDelete, setHistoryToDelete] = useState<string | null>(null);
+  const [pendingDeleteId, setPendingDeleteId] = useState<string | null>(null);
 
-  useEffect(() => {
-    const savedUser = localStorage.getItem('bitlegends_user');
-    if (savedUser) setUser(JSON.parse(savedUser));
-    loadGameHistory();
-  }, []);
-
-  const loadGameHistory = () => {
-    const history = getGameHistory();
-    setGameHistory(history);
-  };
-
-  const handleGoogleLogin = async () => {
-    try {
-      toast('Logging in with Google...', { description: 'Please wait' });
-      const provider = new GoogleAuthProvider();
-      const userCred = await signInWithPopup(auth, provider);
-      const firebaseUser = userCred.user;
-
-      const googleUser: ProfileData = {
-        username: firebaseUser.displayName || 'Player',
-        email: firebaseUser.email || '',
-        avatar_url: firebaseUser.photoURL,
-        provider: 'google',
-        uid: firebaseUser.uid,
-      };
-
-      localStorage.setItem('bitlegends_user', JSON.stringify(googleUser));
-      setUser(googleUser);
-      toast.success(`Welcome, ${googleUser.username}!`);
-    } catch (err) {
-      console.error(err);
-      toast.error('Google login failed');
-    }
-  };
-
-  const handleLocalLogin = () => {
-    if (!emailInput.includes('@')) {
-      toast.error('Enter a valid email address');
-      return;
-    }
-    const localUser: ProfileData = {
-      username: emailInput.split('@')[0],
-      email: emailInput,
-      avatar_url: null,
-      provider: 'local',
-    };
-    localStorage.setItem('bitlegends_user', JSON.stringify(localUser));
-    setUser(localUser);
-    toast.success(`Welcome, ${localUser.username}!`);
-  };
-
-  const handleSignOut = async () => {
-    try {
-      await signOut(auth);
-    } catch {}
-    localStorage.removeItem('bitlegends_user');
-    setUser(null);
-    toast.success('Signed out successfully');
-    navigate('/');
-  };
-
-  const uploadAvatar = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (!e.target.files?.length || !user) return;
-    setUploading(true);
-    const file = e.target.files[0];
-    const reader = new FileReader();
-    reader.onload = () => {
-      const newUser = { ...user, avatar_url: reader.result as string };
-      setUser(newUser);
-      localStorage.setItem('bitlegends_user', JSON.stringify(newUser));
-      toast.success('Avatar updated!');
-      setUploading(false);
-    };
-    reader.readAsDataURL(file);
-  };
-
-  const updateProfile = () => {
-    if (!user) return;
-    const updated = { ...user, username };
-    setUser(updated);
-    localStorage.setItem('bitlegends_user', JSON.stringify(updated));
-    toast.success('Profile updated successfully!');
-  };
-
-  const formatTime = (seconds: number): string => {
-    const hours = Math.floor(seconds / 3600);
-    const minutes = Math.floor((seconds % 3600) / 60);
-    return hours > 0 ? `${hours}h ${minutes}m` : `${minutes}m`;
-  };
-
-  const handleDeleteHistory = (id: string) => {
-    setHistoryToDelete(id);
+  const handleDeleteRequest = (id: string) => {
+    setPendingDeleteId(id);
     setDeleteDialogOpen(true);
   };
 
   const confirmDelete = () => {
-    if (historyToDelete) {
-      deleteGameHistory(historyToDelete);
-      loadGameHistory();
-      toast.success('Game history deleted');
-    }
+    if (pendingDeleteId) deleteHistory(pendingDeleteId);
     setDeleteDialogOpen(false);
-    setHistoryToDelete(null);
+    setPendingDeleteId(null);
   };
 
-  // --- LOGIN SCREEN ---
   if (!user) {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center px-4 py-10 text-center">
-        <Header className="mb-8" />
+        <Header />
         <Card className="w-[90%] max-w-sm sm:max-w-md p-6 sm:p-10 border-2 border-accent/30 bg-card rounded-2xl shadow-md space-y-6">
           <User className="h-14 w-14 sm:h-16 sm:w-16 mx-auto text-accent mb-1" />
           <h2 className="text-2xl sm:text-3xl font-bold mb-1">Welcome</h2>
@@ -160,25 +67,14 @@ export default function Profile() {
           </p>
 
           <div className="flex justify-center mb-4">
-            {!useEmail ? (
-              <Button
-                onClick={() => setUseEmail(true)}
-                variant="outline"
-                className="text-xs sm:text-sm"
-              >
-                Use Email Instead
-              </Button>
-            ) : (
-              <Button
-                onClick={() => setUseEmail(false)}
-                variant="outline"
-                className="text-xs sm:text-sm"
-              >
-                Use Google Instead
-              </Button>
-            )}
+            <Button
+              onClick={() => setUseEmail(!useEmail)}
+              variant="outline"
+              className="text-xs sm:text-sm"
+            >
+              {useEmail ? 'Use Google Instead' : 'Use Email Instead'}
+            </Button>
           </div>
-
           <AnimatePresence mode="wait">
             {!useEmail ? (
               <motion.div
@@ -189,7 +85,7 @@ export default function Profile() {
                 transition={{ duration: 0.3 }}
               >
                 <Button
-                  onClick={handleGoogleLogin}
+                  onClick={loginWithGoogle}
                   className="w-full bg-gradient-to-r from-primary to-accent text-base sm:text-lg py-5"
                 >
                   <LogIn className="mr-2 h-5 w-5" /> Sign in with Google
@@ -211,7 +107,7 @@ export default function Profile() {
                   className="w-full sm:w-56"
                 />
                 <Button
-                  onClick={handleLocalLogin}
+                  onClick={() => loginWithEmail(emailInput)}
                   variant="outline"
                   className="w-full sm:w-auto mt-2 sm:mt-0"
                 >
@@ -224,8 +120,6 @@ export default function Profile() {
       </div>
     );
   }
-
-  // --- PROFILE SCREEN ---
   return (
     <div className="overflow-x-hidden flex flex-col">
       <Header />
@@ -234,23 +128,23 @@ export default function Profile() {
           <ProfileCard
             user={user}
             uploading={uploading}
-            uploadAvatar={uploadAvatar}
             username={username}
-            setUsername={setUsername}
-            updateProfile={updateProfile}
-            handleSignOut={handleSignOut}
+            onAvatarUpload={uploadAvatar}
+            onUsernameChange={setUsername}
+            onUpdateProfile={updateProfile}
+            onSignOut={logout}
           />
           <HistoryCard
             gameHistory={gameHistory}
-            handleDeleteHistory={handleDeleteHistory}
+            handleDeleteHistory={handleDeleteRequest}
             formatTime={formatTime}
           />
         </div>
       </main>
       <DeleteDialog
         open={deleteDialogOpen}
-        setOpen={setDeleteDialogOpen}
-        confirmDelete={confirmDelete}
+        onOpenChange={setDeleteDialogOpen}
+        onConfirmDelete={confirmDelete}
       />
       <Footer />
     </div>
@@ -260,12 +154,12 @@ export default function Profile() {
 function ProfileCard({
   user,
   uploading,
-  uploadAvatar,
   username,
-  setUsername,
-  updateProfile,
-  handleSignOut,
-}: any) {
+  onAvatarUpload,
+  onUsernameChange,
+  onUpdateProfile,
+  onSignOut,
+}: ProfileCardProps) {
   return (
     <Card className="p-6 border-2 border-accent/30 bg-card">
       <div className="flex flex-col items-center space-y-4">
@@ -286,7 +180,7 @@ function ProfileCard({
             id="avatar-upload"
             type="file"
             accept="image/*"
-            onChange={uploadAvatar}
+            onChange={onAvatarUpload}
             disabled={uploading}
             className="hidden"
           />
@@ -298,18 +192,18 @@ function ProfileCard({
           <Input
             id="username"
             value={username || user.username}
-            onChange={(e) => setUsername(e.target.value)}
+            onChange={(e) => onUsernameChange(e.target.value)}
             placeholder="Enter new username"
             className="mt-1"
           />
           <Button
-            onClick={updateProfile}
+            onClick={onUpdateProfile}
             className="w-full bg-gradient-to-r from-primary to-accent"
           >
             Update Profile
           </Button>
           <Button
-            onClick={handleSignOut}
+            onClick={onSignOut}
             variant="outline"
             className="w-full border-destructive text-destructive hover:bg-destructive/10"
           >
@@ -317,14 +211,17 @@ function ProfileCard({
           </Button>
         </div>
       </div>
-      <br />
     </Card>
   );
 }
 
-function DeleteDialog({ open, setOpen, confirmDelete }: any) {
+function DeleteDialog({
+  open,
+  onOpenChange,
+  onConfirmDelete,
+}: DeleteDialogProps) {
   return (
-    <AlertDialog open={open} onOpenChange={setOpen}>
+    <AlertDialog open={open} onOpenChange={onOpenChange}>
       <AlertDialogContent className="w-[90vw] max-w-sm sm:max-w-md p-6 rounded-2xl border border-accent/30 bg-card shadow-xl mx-auto text-center">
         <AlertDialogHeader>
           <AlertDialogTitle className="text-lg sm:text-xl font-bold">
@@ -336,7 +233,7 @@ function DeleteDialog({ open, setOpen, confirmDelete }: any) {
         </AlertDialogHeader>
         <AlertDialogFooter className="flex flex-col gap-2 mt-6">
           <AlertDialogAction
-            onClick={confirmDelete}
+            onClick={onConfirmDelete}
             className="w-full py-2.5 sm:py-3 text-base sm:text-sm"
           >
             Delete
