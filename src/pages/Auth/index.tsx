@@ -31,11 +31,8 @@ const Auth = () => {
 
   return (
     <div className="min-h-screen flex items-center justify-center p-4">
-      {/* Retro scanline background */}
       <div className="absolute inset-0 scanline pointer-events-none" />
-
       <Card className="w-full max-w-md p-8 bg-card border-2 border-accent/30 relative z-10">
-        {/* Header */}
         <div className="flex flex-col items-center mb-8">
           <div className="relative mb-4">
             <Gamepad2 className="h-12 w-12 text-accent" />
@@ -48,8 +45,6 @@ const Auth = () => {
             Sign in with Google to continue
           </p>
         </div>
-
-        {/* Google Login Button */}
         <Button
           type="button"
           variant="outline"
