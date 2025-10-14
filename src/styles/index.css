@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Global Design Tokens — all in HSL */
+/* Global Design Tokens */
 @layer base {
   :root {
     --background: 220 20% 8%;
