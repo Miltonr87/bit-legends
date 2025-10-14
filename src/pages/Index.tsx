@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { allGames, seriesFilters } from '../data';
 import { GameCard } from '@/components/GameCard';
 import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Search } from 'lucide-react';
@@ -72,10 +73,11 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen overflow-x-hidden">
+    <div className="min-h-screen overflow-x-hidden flex flex-col">
       <Header />
+
       <section
-        className="relative py-12 sm:py-20 px-4 overflow-hidden bg-cover bg-bottom"
+        className="relative py-12 sm:py-20 px-4 overflow-hidden bg-cover bg-bottom flex-grow"
         style={{
           backgroundImage:
             "url('/assets/backgrounds/streets-of-rage-city.png')",
@@ -102,6 +104,7 @@ const Index = () => {
           </p>
         </div>
       </section>
+
       <section className="container mx-auto px-4 py-8 sm:py-12">
         <div className="mb-6 sm:mb-8">
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4 sm:mb-6 gap-3">
@@ -114,6 +117,8 @@ const Index = () => {
               </p>
             </div>
           </div>
+
+          {/* Search */}
           <div className="mb-4 sm:mb-6">
             <div className="relative max-w-full sm:max-w-md">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 sm:h-5 sm:w-5 text-muted-foreground" />
@@ -126,6 +131,8 @@ const Index = () => {
               />
             </div>
           </div>
+
+          {/* Filters */}
           <div className="flex flex-wrap gap-2 sm:gap-3">
             {seriesFilters.map((series) => (
               <Button
@@ -144,6 +151,8 @@ const Index = () => {
             ))}
           </div>
         </div>
+
+        {/* Game grid */}
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3 sm:gap-6 animate-slide-up">
           {paginatedGames.map((game, index) => (
             <div
@@ -155,6 +164,8 @@ const Index = () => {
             </div>
           ))}
         </div>
+
+        {/* Pagination */}
         {totalPages > 1 && (
           <div className="mt-8 sm:mt-12">
             <Pagination>
@@ -169,6 +180,7 @@ const Index = () => {
                     }
                   />
                 </PaginationItem>
+
                 {Array.from({ length: Math.min(5, totalPages) }, (_, i) => {
                   const page = i + 1;
                   return (
@@ -183,6 +195,7 @@ const Index = () => {
                     </PaginationItem>
                   );
                 })}
+
                 <PaginationItem>
                   <PaginationNext
                     onClick={() =>
@@ -200,6 +213,7 @@ const Index = () => {
           </div>
         )}
       </section>
+      <Footer />
     </div>
   );
 };

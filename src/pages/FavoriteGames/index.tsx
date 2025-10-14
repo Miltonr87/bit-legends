@@ -4,9 +4,10 @@ import { FavoriteGame } from '@/types';
 import { db, auth } from '@/lib/firebase';
 import { collection, getDocs, doc, deleteDoc } from 'firebase/firestore';
 import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
 import { GameCard } from '@/components/GameCard';
 import { Button } from '@/components/ui/button';
-import { Trash2, Gamepad2, Heart } from 'lucide-react';
+import { Trash2, Gamepad2 } from 'lucide-react';
 import { toast } from 'sonner';
 import { allGames } from '@/data';
 
@@ -67,9 +68,8 @@ export default function FavoriteGames() {
   }
 
   return (
-    <div className="overflow-x-hidden flex flex-col">
+    <div className="min-h-screen flex flex-col overflow-x-hidden">
       <Header />
-
       <main className="flex-grow">
         <section
           className="relative py-10 sm:py-14 px-4 overflow-hidden bg-cover bg-center"
@@ -95,7 +95,6 @@ export default function FavoriteGames() {
             </p>
           </div>
         </section>
-
         <section className="container mx-auto px-4 py-8 sm:py-10">
           {favorites.length === 0 ? (
             <div className="text-center py-12">
@@ -137,6 +136,7 @@ export default function FavoriteGames() {
           )}
         </section>
       </main>
+      <Footer />
     </div>
   );
 }
