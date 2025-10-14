@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { FavoriteGame } from '@/types';
 import { db, auth } from '@/lib/firebase';
 import { collection, getDocs, doc, deleteDoc } from 'firebase/firestore';
 import { Header } from '@/components/Header';
@@ -8,12 +9,6 @@ import { Button } from '@/components/ui/button';
 import { Trash2, Gamepad2, Heart } from 'lucide-react';
 import { toast } from 'sonner';
 import { allGames } from '@/data';
-
-interface FavoriteGame {
-  id: string;
-  title: string;
-  addedAt?: string;
-}
 
 export default function FavoriteGames() {
   const [favorites, setFavorites] = useState<FavoriteGame[]>([]);

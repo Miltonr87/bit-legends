@@ -1,6 +1,6 @@
 import { useParams, Link } from 'react-router-dom';
 import { useEffect, useRef, useState } from 'react';
-import { allGames } from '../data';
+import { allGames } from '@/data';
 import { Header } from '@/components/Header';
 import { Button } from '@/components/ui/button';
 import {
@@ -26,7 +26,7 @@ import { useDisplayDevice } from '@/hooks/useDisplayDevice';
 import { ControllerSetup } from '@/components/ControllerSetup';
 import { db, auth } from '@/lib/firebase';
 import { doc, setDoc, getDoc } from 'firebase/firestore';
-import type { Game } from '../data';
+import type { Game } from '@/data';
 
 const Game = () => {
   const { id } = useParams();

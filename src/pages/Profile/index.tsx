@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { ProfileData } from '@/types';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   getGameHistory,
@@ -7,7 +8,6 @@ import {
   type GameHistory,
 } from '@/lib/localStorage';
 import { Header } from '@/components/Header';
-import { Footer } from '@/components/Footer';
 import { HistoryCard } from '@/components/HistoryCard';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -28,14 +28,6 @@ import {
 } from '@/components/ui/alert-dialog';
 import { auth } from '@/lib/firebase';
 import { GoogleAuthProvider, signInWithPopup, signOut } from 'firebase/auth';
-
-interface ProfileData {
-  username: string;
-  email: string;
-  avatar_url: string | null;
-  provider?: 'google' | 'local';
-  uid?: string;
-}
 
 export default function Profile() {
   const navigate = useNavigate();
