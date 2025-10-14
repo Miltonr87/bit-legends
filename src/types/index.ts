@@ -17,6 +17,25 @@ export interface Game {
     embedUrl?: string;
     logo: string;
 }
+
+export interface GameHistory {
+    id: string;
+    gameId: string;
+    gameTitle: string;
+    playedAt: string;
+    timeSpent: number;
+    score?: number;
+}
+
+export interface GameSave {
+    id: string;
+    gameId: string;
+    gameTitle: string;
+    saveName: string;
+    createdAt: string;
+    saveData: unknown;
+}
+
 export interface FavoriteGame {
     id: string;
     title: string;

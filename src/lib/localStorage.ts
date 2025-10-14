@@ -1,27 +1,9 @@
-// Local storage utilities for game data
-
-export interface GameHistory {
-  id: string;
-  gameId: string;
-  gameTitle: string;
-  playedAt: string;
-  timeSpent: number;
-  score?: number;
-}
-
-export interface GameSave {
-  id: string;
-  gameId: string;
-  gameTitle: string;
-  saveName: string;
-  createdAt: string;
-  saveData: any;
-}
+import { GameHistory } from "@/types";
+import { GameSave } from "@/types";
 
 const GAME_HISTORY_KEY = 'bitlegends_game_history';
 const GAME_SAVES_KEY = 'bitlegends_game_saves';
 
-// Game History
 export const getGameHistory = (): GameHistory[] => {
   try {
     const data = localStorage.getItem(GAME_HISTORY_KEY);
@@ -46,7 +28,6 @@ export const deleteGameHistory = (id: string): void => {
   localStorage.setItem(GAME_HISTORY_KEY, JSON.stringify(filtered));
 };
 
-// Game Saves
 export const getGameSaves = (): GameSave[] => {
   try {
     const data = localStorage.getItem(GAME_SAVES_KEY);
