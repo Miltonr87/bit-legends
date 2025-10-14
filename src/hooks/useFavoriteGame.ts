@@ -1,7 +1,7 @@
 import { useEffect, useState, useCallback } from 'react';
 import { doc, getDoc, setDoc } from 'firebase/firestore';
 import { db, auth } from '@/lib/firebase';
-import { useToast } from '@/hooks/use-toast';
+import { useToast } from '@/hooks/useToast';
 import type { Game } from '@/types';
 
 export function useFavoriteGame(game?: Game) {

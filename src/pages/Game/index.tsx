@@ -1,7 +1,7 @@
 import { useParams, Link } from 'react-router-dom';
 import { allGames } from '@/data';
-import { Header } from '@/components/Header';
-import { Footer } from '@/components/Footer';
+import { Header } from '@/components/Layout/Header';
+import { Footer } from '@/components/Layout/Footer';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft, Share2, MessageCircle, Heart, Users } from 'lucide-react';
 import { Card } from '@/components/ui/card';

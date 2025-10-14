@@ -1,35 +1,41 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useAuth } from '@/contexts/AuthContext';
+import { useUserProfile } from '@/hooks/useUserProfile';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Gamepad2 } from 'lucide-react';
 import { toast } from 'sonner';
 
 const Auth = () => {
-  const [loading, setLoading] = useState(false);
-  const { signInWithGoogle, user } = useAuth();
   const navigate = useNavigate();
+  const [loading, setLoading] = useState(false);
+  const { user, loginWithGoogle } = useUserProfile();
 
   useEffect(() => {
-    if (user) {
-      navigate('/');
-    }
+    if (user) navigate('/');
   }, [user, navigate]);
 
-  const handleGoogleSignIn = async () => {
-    setLoading(true);
-    const { error } = await signInWithGoogle();
-    if (error) {
-      toast.error('Failed to sign in with Google');
+  const handleGoogleLogin = async () => {
+    try {
+      setLoading(true);
+      await loginWithGoogle();
+      toast.success('Welcome to Bit Legends!');
+      navigate('/');
+    } catch (error) {
+      console.error('Google login failed:', error);
+      toast.error('Failed to sign in with Google. Please try again.');
+    } finally {
       setLoading(false);
     }
   };
 
   return (
     <div className="min-h-screen flex items-center justify-center p-4">
+      {/* Retro scanline background */}
       <div className="absolute inset-0 scanline pointer-events-none" />
+
       <Card className="w-full max-w-md p-8 bg-card border-2 border-accent/30 relative z-10">
+        {/* Header */}
         <div className="flex flex-col items-center mb-8">
           <div className="relative mb-4">
             <Gamepad2 className="h-12 w-12 text-accent" />
@@ -38,13 +44,17 @@ const Auth = () => {
           <h1 className="text-3xl font-bold glow-text bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">
             Bit Legends
           </h1>
-          <p className="text-muted-foreground mt-2">Sign in with Google</p>
+          <p className="text-muted-foreground mt-2">
+            Sign in with Google to continue
+          </p>
         </div>
+
+        {/* Google Login Button */}
         <Button
           type="button"
           variant="outline"
           className="w-full border-accent/50 hover:bg-accent/10"
-          onClick={handleGoogleSignIn}
+          onClick={handleGoogleLogin}
           disabled={loading}
         >
           <svg className="mr-2 h-4 w-4" viewBox="0 0 24 24">
@@ -65,7 +75,7 @@ const Auth = () => {
               d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
             />
           </svg>
-          Continue with Google
+          {loading ? 'Signing in...' : 'Continue with Google'}
         </Button>
       </Card>
     </div>

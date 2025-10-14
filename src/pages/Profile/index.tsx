@@ -1,14 +1,13 @@
 import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Header } from '@/components/Header';
-import { Footer } from '@/components/Footer';
+import { Header } from '@/components/Layout/Header';
+import { Footer } from '@/components/Layout/Footer';
 import { HistoryCard } from '@/components/HistoryCard';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Card } from '@/components/ui/card';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
-import { User, Upload, LogIn, LogOut, Mail } from 'lucide-react';
+import { User, Upload, LogIn, LogOut } from 'lucide-react';
 import {
   AlertDialog,
   AlertDialogAction,
@@ -29,7 +28,6 @@ export default function Profile() {
     username,
     uploading,
     loginWithGoogle,
-    loginWithEmail,
     logout,
     uploadAvatar,
     updateProfile,
@@ -38,8 +36,6 @@ export default function Profile() {
 
   const { gameHistory, deleteHistory, formatTime } = useGameHistory();
 
-  const [useEmail, setUseEmail] = useState(false);
-  const [emailInput, setEmailInput] = useState('');
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
   const [pendingDeleteId, setPendingDeleteId] = useState<string | null>(null);
 
@@ -62,60 +58,15 @@ export default function Profile() {
           <User className="h-14 w-14 sm:h-16 sm:w-16 mx-auto text-accent mb-1" />
           <h2 className="text-2xl sm:text-3xl font-bold mb-1">Welcome</h2>
           <p className="text-sm sm:text-base text-muted-foreground mb-4 max-w-xs sm:max-w-md mx-auto">
-            Sign in with Google or use your email to save progress, avatar, and
-            game history.
+            Sign in with Google to save progress, avatar, and game history.
           </p>
 
-          <div className="flex justify-center mb-4">
-            <Button
-              onClick={() => setUseEmail(!useEmail)}
-              variant="outline"
-              className="text-xs sm:text-sm"
-            >
-              {useEmail ? 'Use Google Instead' : 'Use Email Instead'}
-            </Button>
-          </div>
-          <AnimatePresence mode="wait">
-            {!useEmail ? (
-              <motion.div
-                key="google"
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -10 }}
-                transition={{ duration: 0.3 }}
-              >
-                <Button
-                  onClick={loginWithGoogle}
-                  className="w-full bg-gradient-to-r from-primary to-accent text-base sm:text-lg py-5"
-                >
-                  <LogIn className="mr-2 h-5 w-5" /> Sign in with Google
-                </Button>
-              </motion.div>
-            ) : (
-              <motion.div
-                key="email"
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -10 }}
-                transition={{ duration: 0.3 }}
-                className="flex flex-col sm:flex-row items-center justify-center gap-2"
-              >
-                <Input
-                  placeholder="Enter your email"
-                  value={emailInput}
-                  onChange={(e) => setEmailInput(e.target.value)}
-                  className="w-full sm:w-56"
-                />
-                <Button
-                  onClick={() => loginWithEmail(emailInput)}
-                  variant="outline"
-                  className="w-full sm:w-auto mt-2 sm:mt-0"
-                >
-                  <Mail className="h-4 w-4 mr-1" /> Login
-                </Button>
-              </motion.div>
-            )}
-          </AnimatePresence>
+          <Button
+            onClick={loginWithGoogle}
+            className="w-full bg-gradient-to-r from-primary to-accent text-base sm:text-lg py-5"
+          >
+            <LogIn className="mr-2 h-5 w-5" /> Sign in with Google
+          </Button>
         </Card>
       </div>
     );

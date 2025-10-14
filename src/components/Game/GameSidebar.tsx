@@ -1,6 +1,6 @@
 import { Calendar, Users, Gamepad2 } from 'lucide-react';
 import { Card } from '@/components/ui/card';
-import { LogoGame } from '@/components/LogoGame';
+import { LogoGame } from '@/components/Layout/LogoGame';
 import { GameController } from '@/components/Game/GameController';
 import { useIsMobile } from '@/hooks/useIsMobile';
 import type { Game } from '@/types';

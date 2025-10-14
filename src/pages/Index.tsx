@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import { allGames, seriesFilters } from '../data';
 import { GameCard } from '@/components/GameCard';
-import { Header } from '@/components/Header';
-import { Footer } from '@/components/Footer';
+import { Header } from '@/components/Layout/Header';
+import { Footer } from '@/components/Layout/Footer';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Search } from 'lucide-react';
