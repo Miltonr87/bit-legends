@@ -1,18 +1,9 @@
 import { useParams, Link } from 'react-router-dom';
-import { useRef } from 'react';
 import { allGames } from '@/data';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Button } from '@/components/ui/button';
-import {
-  ArrowLeft,
-  Calendar,
-  Users,
-  Gamepad2,
-  Share2,
-  MessageCircle,
-  Heart,
-} from 'lucide-react';
+import { ArrowLeft, Share2, MessageCircle, Heart, Users } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 import {
   DropdownMenu,
@@ -20,21 +11,16 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
-import { LogoGame } from '@/components/LogoGame';
-import { useDisplayDevice } from '@/hooks/useDisplayDevice';
-import { ControllerSetup } from '@/components/ControllerSetup';
+import { GameIframe } from '@/components/Game/GameIframe';
+import { GameSidebar } from '@/components/Game/GameSidebar';
 import { useFavoriteGame } from '@/hooks/useFavoriteGame';
 import { useGameSession } from '@/hooks/useGameSession';
-import { useIsMobile } from '@/hooks/useIsMobile';
 import type { Game } from '@/types';
 
 const Game = () => {
   const { id } = useParams();
   const game: Game | undefined = allGames.find((g) => g.id === id);
-  const gameIframeRef = useRef<HTMLDivElement>(null);
-  const isMobile = useIsMobile();
   const { isFavorite, saveFavorite } = useFavoriteGame(game);
-  const deviceInfo = useDisplayDevice();
 
   useGameSession(game);
 
@@ -42,12 +28,6 @@ const Game = () => {
     if (!game) return;
     const text = `Check out ${game.title} on Bit Legends! ${window.location.href}`;
     window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');
-  };
-
-  const toggleFullscreen = () => {
-    const container = gameIframeRef.current;
-    if (!container) return;
-    container.classList.toggle('fullscreen-sim');
   };
 
   if (!game) {
@@ -67,10 +47,6 @@ const Game = () => {
       </div>
     );
   }
-
-  const iframeUrl =
-    game.embedUrl ||
-    `https://www.retrogames.cc/embed/${game.embedId}-${game.slug}.html`;
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -144,42 +120,7 @@ const Game = () => {
                     </div>
                   </div>
                 </div>
-                <div
-                  ref={gameIframeRef}
-                  className="relative bg-black rounded-lg overflow-hidden"
-                  style={
-                    isMobile ? { height: 'calc(68vh)' } : { aspectRatio: '4/3' }
-                  }
-                >
-                  <iframe
-                    src={iframeUrl}
-                    className="absolute inset-0 w-full h-full rounded-lg"
-                    title={game.title}
-                    allow="gamepad; fullscreen; autoplay; encrypted-media; picture-in-picture"
-                    allowFullScreen
-                    style={{
-                      border: 'none',
-                      overflow: 'hidden',
-                      backgroundColor: 'black',
-                    }}
-                    sandbox="allow-scripts allow-same-origin allow-pointer-lock allow-forms allow-presentation"
-                  />
-                  {isMobile && (
-                    <button
-                      onClick={toggleFullscreen}
-                      className="absolute bottom-0 right-0 z-10 bg-black/60 text-white rounded px-3 py-1 text-xs sm:text-sm border border-white/20 hover:bg-black/10 transition-all"
-                      title="Fullscreen"
-                    >
-                      ⛶
-                    </button>
-                  )}
-                </div>
-                <div className="p-3 sm:p-4 bg-muted/30 border-t border-accent/20">
-                  <div className="flex items-center gap-2 text-sm sm:text-base text-foreground/80">
-                    <Gamepad2 className="h-4 w-4 text-accent" />
-                    Playing On: {deviceInfo}
-                  </div>
-                </div>
+                <GameIframe game={game} />
               </Card>
               <Card className="p-4 sm:p-6 border-2 border-border bg-card">
                 <h2 className="text-xl sm:text-2xl font-bold mb-4 text-accent">
@@ -207,66 +148,7 @@ const Game = () => {
                 </Card>
               )}
             </div>
-            <div className="space-y-4 sm:space-y-6">
-              <LogoGame
-                logoUrl={game.logo}
-                title={game.title}
-                backgroundColor="linear-gradient(135deg, #0f172a, #1e293b)"
-              />
-              <Card className="p-4 sm:p-6 border-2 border-accent/30 bg-gradient-to-br from-card to-card/50">
-                <div className="space-y-4">
-                  <div className="flex items-start gap-3 pb-4 border-b border-border">
-                    <Calendar className="h-5 w-5 text-accent mt-1" />
-                    <div>
-                      <p className="text-sm text-muted-foreground">
-                        Release Year
-                      </p>
-                      <p className="font-semibold text-lg">{game.year}</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-3 pb-4 border-b border-border">
-                    <Gamepad2 className="h-5 w-5 text-accent mt-1" />
-                    <div>
-                      <p className="text-sm text-muted-foreground">Genre</p>
-                      <p className="font-semibold text-lg">{game.genre}</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-3 pb-4 border-b border-border">
-                    <Users className="h-5 w-5 text-accent mt-1" />
-                    <div>
-                      <p className="text-sm text-muted-foreground">Players</p>
-                      <p className="font-semibold text-lg">{game.players}</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <div className="h-5 w-5 flex items-center justify-center mt-1">
-                      <div className="h-3 w-3 rounded-full bg-accent animate-glow-pulse" />
-                    </div>
-                    <div>
-                      <p className="text-sm text-muted-foreground">Developer</p>
-                      <p className="font-semibold">{game.developer}</p>
-                    </div>
-                  </div>
-                </div>
-              </Card>
-              <Card className="p-6 border-2 border-primary/30 bg-gradient-to-br from-primary/10 to-transparent">
-                <h3 className="font-bold text-lg mb-3 text-primary">
-                  Platform
-                </h3>
-                <div className="flex items-center gap-3">
-                  <div className="h-12 w-12 rounded-lg bg-primary/20 flex items-center justify-center border border-primary/30">
-                    <Gamepad2 className="h-6 w-6 text-primary" />
-                  </div>
-                  <div>
-                    <p className="font-bold text-primary">{game.platform}</p>
-                    <p className="text-xs text-muted-foreground">
-                      {game.publisher}
-                    </p>
-                  </div>
-                </div>
-              </Card>
-              {!isMobile && <ControllerSetup />}
-            </div>
+            <GameSidebar game={game} />
           </div>
         </div>
       </main>
