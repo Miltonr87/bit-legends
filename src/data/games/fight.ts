@@ -477,7 +477,7 @@ export const fightGames: Game[] = [
         genre: "Marvel",
         folder: "Marvel vs Capcom",
         publisher: "Capcom",
-        characters: [],
+        characters: ["Captain America", "Iron Man", "Wolverine", "Spider-Man", "Hulk", "Thanos", "Doctor Doom", "Magneto"],
         description: "Infinity Gem powered battles!",
         longDescription:
             "Marvel Super Heroes pits legendary icons like Spider-Man and Iron Man against cosmic foes. " +
@@ -550,7 +550,7 @@ export const fightGames: Game[] = [
         genre: "Marvel",
         folder: "Marvel vs Capcom",
         publisher: "Capcom",
-        characters: [],
+        characters: ["Captain Commando", "Captain America", "Spider-Man", "Gambit", "Ryu", "Chun-Li", "Hulk", "Megaman", "Wolverine", "Strider", "Venom", "Zangief"],
         description: "The ultimate crossover!",
         longDescription:
             "Marvel vs. Capcom: Clash of Super Heroes unites legends from both universes in explosive 2v2 fights. " +

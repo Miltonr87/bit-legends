@@ -2,41 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-
-@keyframes parallaxScroll {
-  from {
-    background-position-x: 0;
-  }
-  to {
-    background-position-x: -2048px; /* adjust if image width differs */
-  }
-}
-
-iframe[src*='ad.html'],
-iframe[src*='emulatorjs.com/ad.html'],
-iframe[src*='retrogames.cc/ad.html'] {
-  display: none !important;
-  visibility: hidden !important;
-  opacity: 0 !important;
-  pointer-events: none !important;
-}
-
-.fullscreen-sim {
-  position: fixed !important;
-  inset: 0 !important;
-  width: 100vw !important;
-  height: 100vh !important;
-  z-index: 9999 !important;
-  background: black !important;
-}
-.fullscreen-sim iframe {
-  width: 100% !important;
-  height: 100% !important;
-}
-
+/* Global Design Tokens — all in HSL */
 @layer base {
   :root {
     --background: 220 20% 8%;
@@ -96,19 +62,12 @@ iframe[src*='retrogames.cc/ad.html'] {
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
@@ -116,9 +75,7 @@ iframe[src*='retrogames.cc/ad.html'] {
     --background: 220 20% 6%;
     --foreground: 180 100% 95%;
   }
-}
 
-@layer base {
   * {
     @apply border-border;
   }
@@ -130,6 +87,35 @@ iframe[src*='retrogames.cc/ad.html'] {
   }
 }
 
+/* Keyframes */
+@keyframes parallaxScroll {
+  from {
+    background-position-x: 0;
+  }
+  to {
+    background-position-x: -2048px;
+  }
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes scanline {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 100%;
+  }
+}
+
+/* Utilities */
 @layer utilities {
   .scanline {
     background: linear-gradient(
@@ -162,11 +148,33 @@ iframe[src*='retrogames.cc/ad.html'] {
   }
 }
 
-@keyframes scanline {
-  0% {
-    background-position: 0 0;
-  }
-  100% {
-    background-position: 0 100%;
-  }
+/* Emulator iframe ad suppression */
+iframe[src*='ad.html'],
+iframe[src*='emulatorjs.com/ad.html'],
+iframe[src*='retrogames.cc/ad.html'] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+/* Optional legacy styles (logo/card) */
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
 }
