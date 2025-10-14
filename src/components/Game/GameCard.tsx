@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
-import { Game } from '@/data/games';
-import { Calendar, Users, Gamepad } from 'lucide-react';
+import { Game } from '@/types';
+import { Calendar, Gamepad } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 
 interface GameCardProps {

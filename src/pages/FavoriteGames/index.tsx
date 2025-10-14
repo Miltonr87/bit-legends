@@ -5,7 +5,7 @@ import { db, auth } from '@/lib/firebase';
 import { collection, getDocs, doc, deleteDoc } from 'firebase/firestore';
 import { Header } from '@/components/Layout/Header';
 import { Footer } from '@/components/Layout/Footer';
-import { GameCard } from '@/components/GameCard';
+import { GameCard } from '@/components/Game/GameCard';
 import { Button } from '@/components/ui/button';
 import { Trash2, Gamepad2 } from 'lucide-react';
 import { toast } from 'sonner';

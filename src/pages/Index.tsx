@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { allGames, seriesFilters } from '../data';
-import { GameCard } from '@/components/GameCard';
+import { GameCard } from '@/components/Game/GameCard';
 import { Header } from '@/components/Layout/Header';
 import { Footer } from '@/components/Layout/Footer';
 import { Button } from '@/components/ui/button';
