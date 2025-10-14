@@ -20,7 +20,6 @@ export const HistoryCard = ({
   const ITEMS_PER_PAGE = 6;
   const [currentPage, setCurrentPage] = useState(1);
   const [confirmingErase, setConfirmingErase] = useState(false);
-
   const totalPages = Math.ceil(gameHistory.length / ITEMS_PER_PAGE);
 
   useEffect(() => {
