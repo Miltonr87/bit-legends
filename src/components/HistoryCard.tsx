@@ -2,7 +2,7 @@ import { useState, useMemo, useEffect } from 'react';
 import { Clock, Gamepad2, Trash2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
-import type { GameHistory } from '@/lib/localStorage';
+import { GameHistory } from '@/types';
 
 interface HistoryCardProps {
   gameHistory: GameHistory[];
