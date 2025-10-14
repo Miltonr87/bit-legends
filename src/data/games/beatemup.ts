@@ -71,7 +71,7 @@ export const beatnupGames: Game[] = [
     id: "riot-city",
     title: "Riot City",
     slug: "riot-city-japan",
-    embedId: "36575",
+    embedId: "9679",
     year: 1991,
     genre: "Urban",
     folder: "Urban",
