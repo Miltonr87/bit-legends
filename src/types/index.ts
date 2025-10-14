@@ -1,4 +1,5 @@
 export interface Game {
+    cover: null;
     id: string;
     title: string;
     slug: string;

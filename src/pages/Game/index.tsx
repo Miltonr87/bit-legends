@@ -1,7 +1,8 @@
 import { useParams, Link } from 'react-router-dom';
-import { useEffect, useRef, useState } from 'react';
+import { useRef } from 'react';
 import { allGames } from '@/data';
 import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import {
   ArrowLeft,
@@ -13,8 +14,6 @@ import {
   Heart,
 } from 'lucide-react';
 import { Card } from '@/components/ui/card';
-import { useToast } from '@/hooks/use-toast';
-import { addGameHistory } from '@/lib/localStorage';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -24,89 +23,20 @@ import {
 import { LogoGame } from '@/components/LogoGame';
 import { useDisplayDevice } from '@/hooks/useDisplayDevice';
 import { ControllerSetup } from '@/components/ControllerSetup';
-import { Footer } from '@/components/Footer';
-import { db, auth } from '@/lib/firebase';
-import { doc, setDoc, getDoc } from 'firebase/firestore';
+import { useFavoriteGame } from '@/hooks/useFavoriteGame';
+import { useGameSession } from '@/hooks/useGameSession';
+import { useIsMobile } from '@/hooks/useIsMobile';
 import type { Game } from '@/types';
 
 const Game = () => {
   const { id } = useParams();
   const game: Game | undefined = allGames.find((g) => g.id === id);
-  const [isMobile, setIsMobile] = useState(false);
-  const [isFavorite, setIsFavorite] = useState(false);
-  const startTimeRef = useRef<number>(Date.now());
   const gameIframeRef = useRef<HTMLDivElement>(null);
-  const { toast } = useToast();
+  const isMobile = useIsMobile();
+  const { isFavorite, saveFavorite } = useFavoriteGame(game);
   const deviceInfo = useDisplayDevice();
 
-  useEffect(() => {
-    const mm = window.matchMedia('(max-width: 639px)');
-    const apply = () => setIsMobile(mm.matches);
-    apply();
-    mm.addEventListener('change', apply);
-    return () => mm.removeEventListener('change', apply);
-  }, []);
-
-  useEffect(() => {
-    if (game) startTimeRef.current = Date.now();
-    return () => {
-      if (!game) return;
-      const timeSpent = Math.floor((Date.now() - startTimeRef.current) / 1000);
-      addGameHistory({
-        gameId: game.id,
-        gameTitle: game.title,
-        timeSpent,
-        playedAt: new Date().toISOString(),
-      });
-    };
-  }, [game]);
-
-  useEffect(() => {
-    const checkFavorite = async () => {
-      const user = auth.currentUser;
-      if (!user || !game) return;
-      const favRef = doc(db, 'favorites', user.uid, 'games', game.id);
-      const snapshot = await getDoc(favRef);
-      setIsFavorite(snapshot.exists());
-    };
-    checkFavorite();
-  }, [game]);
-
-  const handleSaveFavorite = async () => {
-    const user = auth.currentUser;
-    if (!user) {
-      toast({
-        title: 'Sign in required',
-        description: 'You need to log in to save favorites.',
-        variant: 'destructive',
-        duration: 3000,
-      });
-      return;
-    }
-    if (!game) return;
-    try {
-      const favRef = doc(db, 'favorites', user.uid, 'games', game.id);
-      await setDoc(favRef, {
-        title: game.title,
-        cover: game.cover ?? null,
-        addedAt: new Date().toISOString(),
-      });
-      setIsFavorite(true);
-      toast({
-        title: 'Saved!',
-        description: `${game.title} added to your favorites.`,
-        duration: 3000,
-      });
-    } catch (error) {
-      console.error('Error saving favorite:', error);
-      toast({
-        title: 'Error',
-        description: 'Could not save this game.',
-        variant: 'destructive',
-        duration: 3000,
-      });
-    }
-  };
+  useGameSession(game);
 
   const handleWhatsAppShare = () => {
     if (!game) return;
@@ -173,7 +103,7 @@ const Game = () => {
                     </div>
                     <div className="flex items-center gap-2">
                       <Button
-                        onClick={handleSaveFavorite}
+                        onClick={saveFavorite}
                         disabled={isFavorite}
                         variant="outline"
                         size="icon"
