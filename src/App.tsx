@@ -21,10 +21,8 @@ const App = () => (
     <QueryClientProvider client={queryClient}>
       <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
         <TooltipProvider>
-          {/* Global UI utilities */}
           <Toaster />
           <Sonner />
-          {/* App routing */}
           <BrowserRouter
             future={{
               v7_startTransition: true,

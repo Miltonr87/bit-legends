@@ -24,9 +24,10 @@ import {
 import { LogoGame } from '@/components/LogoGame';
 import { useDisplayDevice } from '@/hooks/useDisplayDevice';
 import { ControllerSetup } from '@/components/ControllerSetup';
+import { Footer } from '@/components/Footer';
 import { db, auth } from '@/lib/firebase';
 import { doc, setDoc, getDoc } from 'firebase/firestore';
-import type { Game } from '@/data';
+import type { Game } from '@/types';
 
 const Game = () => {
   const { id } = useParams();
@@ -339,6 +340,7 @@ const Game = () => {
           </div>
         </div>
       </main>
+      <Footer />
     </div>
   );
 };

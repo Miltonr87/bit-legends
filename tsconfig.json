@@ -36,11 +36,12 @@
         "./src/styles/*"
       ]
     },
-    "noImplicitAny": false,
-    "noUnusedParameters": false,
     "skipLibCheck": true,
     "allowJs": true,
+    "strict": false,
     "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noImplicitAny": false,
     "strictNullChecks": false
   }
 }

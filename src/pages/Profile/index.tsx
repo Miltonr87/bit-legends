@@ -8,6 +8,7 @@ import {
   type GameHistory,
 } from '@/lib/localStorage';
 import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
 import { HistoryCard } from '@/components/HistoryCard';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -251,6 +252,7 @@ export default function Profile() {
         setOpen={setDeleteDialogOpen}
         confirmDelete={confirmDelete}
       />
+      <Footer />
     </div>
   );
 }
