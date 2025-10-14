@@ -1,7 +1,7 @@
 import { Calendar, Users, Gamepad2 } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 import { LogoGame } from '@/components/LogoGame';
-import { ControllerSetup } from './ControllerSetup';
+import { GameController } from '@/components/Game/GameController';
 import { useIsMobile } from '@/hooks/useIsMobile';
 import type { Game } from '@/types';
 
@@ -65,7 +65,7 @@ export const GameSidebar = ({ game }: GameSidebarProps) => {
           </div>
         </div>
       </Card>
-      {!isMobile && <ControllerSetup />}
+      {!isMobile && <GameController />}
     </aside>
   );
 };

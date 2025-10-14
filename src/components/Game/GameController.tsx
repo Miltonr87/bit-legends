@@ -1,7 +1,7 @@
 import { Card } from '@/components/ui/card';
 import { Gamepad2, Keyboard } from 'lucide-react';
 
-export const ControllerSetup = () => {
+export const GameController = () => {
   const dpad = {
     up: '↑',
     down: '↓',
