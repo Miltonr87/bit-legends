@@ -504,7 +504,7 @@ export const beatnupGames: Game[] = [
     id: "Dungeon Magic",
     title: "Dungeon Magic",
     slug: "dungeon-magic-ver-2-1o-1994-02-18",
-    embedId: "33427",
+    embedId: "33426",
     year: 1994,
     genre: "Fantasy",
     folder: "Taito",
