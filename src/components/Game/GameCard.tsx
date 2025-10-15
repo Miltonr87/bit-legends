@@ -26,12 +26,10 @@ export const GameCard = ({ game }: GameCardProps) => {
             </div>
           </div>
         </div>
-
         <div className="p-3 space-y-2 flex-1 flex flex-col">
           <h3 className="text-base font-bold text-foreground group-hover:text-accent transition-colors line-clamp-2">
             {game.title}
           </h3>
-
           <div className="flex items-center gap-3 text-xs text-muted-foreground mt-auto">
             <div className="flex items-center gap-1">
               <Calendar className="h-3 w-3" />
