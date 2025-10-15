@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
-import { GameCard } from './GameCard';
+import { GameCard } from '../GameCard';
 import type { Game } from '@/types';
 import '@testing-library/jest-dom';
 

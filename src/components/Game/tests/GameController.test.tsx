@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import { GameController } from './GameController';
+import { GameController } from '../GameController';
 
 jest.mock('lucide-react', () => ({
   Gamepad2: ({ className }: { className?: string }) => (
