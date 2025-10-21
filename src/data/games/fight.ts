@@ -438,11 +438,11 @@ export const fightGames: Game[] = [
         logo: "/assets/logos/justice_league.png"
     },
     {
-        id: "vampire-hunter",
-        title: "Vampire Hunter 2",
-        slug: "vampire-hunter-darkstalkers-revenge-950302-japan",
-        embedId: "10578",
-        year: 1995,
+        id: "vampire-savior",
+        title: "Vampire Savior",
+        slug: "vampire-savior-the-lord-of-vampire-970519-japan",
+        embedId: "10590",
+        year: 1997,
         genre: "Horror",
         folder: "Darkstalkers",
         publisher: "Capcom",
@@ -450,23 +450,26 @@ export const fightGames: Game[] = [
             "Morrigan",
             "Demitri",
             "Felicia",
-            "Donovan",
+            "Lilith",
+            "Jedah",
+            "Q-Bee",
+            "Sasquatch",
             "Hsien-Ko",
             "Anakaris",
             "Bishamon",
             "Victor",
             "Jon Talbain",
             "Lord Raptor",
-            "Pyron"
+            "Donovan"
         ],
-        description: "The sequel to Darkstalkers — faster, flashier, and deadlier than ever!",
+        description: "The third entry in the Darkstalkers saga — faster, darker, and more brutal than ever before.",
         longDescription:
-            "Vampire Hunter: Darkstalkers’ Revenge refines Capcom’s monster-filled fighting series with fluid animation, balanced mechanics, and a darker tone. Choose from 14 supernatural warriors, each with unique powers, and face off in the ultimate battle of night creatures.",
+            "Vampire Savior: The Lord of Vampire marks the pinnacle of Capcom’s gothic fighting series, merging supernatural speed, haunting atmosphere, and fluid 2D artistry. As the sinister noble Jedah Dohma resurrects the realm of Makai, the world’s most fearsome night creatures clash for dominance of life and death itself. Every battle drips with dark elegance, from Morrigan’s seductive power to Lilith’s fragile rage. With revamped life mechanics, lightning-fast pacing, and breathtaking animation, Vampire Savior redefines the boundaries of arcade horror combat.",
         players: "1-2 Players",
         developer: "Capcom",
-        coverImage: "/assets/covers/vampire_hunter.jpg",
+        coverImage: "/assets/covers/vamp.jpg",
         platform: "Arcade",
-        logo: "/assets/logos/vhunt2.png"
+        logo: "/assets/logos/vsav.png"
     },
     {
         id: "marvelsuperheroes",
