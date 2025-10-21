@@ -122,6 +122,70 @@ export const fightGames: Game[] = [
         logo: "/assets/logos/sf3.png"
     },
     {
+        id: "power-rangers-fighting-edition",
+        title: "Power Rangers: Fighting",
+        slug: "mighty-morphin-power-rangers-the-fighting-edition-europe",
+        embedId: "19834",
+        year: 1995,
+        genre: "Sci-Fi",
+        folder: "Bandai",
+        publisher: "Bandai",
+        characters: [
+            "Megazord",
+            "Dragonzord",
+            "Thunder Megazord",
+            "Lipsyncher",
+            "Goldar",
+            "Lord Zedd"
+        ],
+        description: "Zord vs Zord battles in pure SNES fighting style!",
+        longDescription:
+            "Mighty Morphin Power Rangers: The Fighting Edition (1995) brings giant Zord battles to the Super Nintendo in classic 2D fighting form. " +
+            "Choose from the most powerful Megazords and villains in the Power Rangers universe and clash across explosive arenas filled with energy and destruction. " +
+            "With fluid animation, intense special moves, and cinematic transformations, every duel feels like an episode come to life. " +
+            "Its fast-paced combat and striking visuals made it one of the most impressive SNES fighters of its era.",
+        players: "1-2 Players",
+        developer: "Natsume",
+        coverImage: "/assets/covers/power_rangers_fighting.jpg",
+        platform: "Super Nintendo",
+        logo: "/assets/logos/powerangers_robot.png"
+    },
+    {
+        id: "tmnt-tournament-fighters",
+        title: "TMNT: Tournament",
+        slug: "teenage-mutant-hero-turtles-tournament-fighters-europe",
+        embedId: "19823",
+        year: 1993,
+        genre: "Tournament",
+        folder: "Konami",
+        publisher: "Konami",
+        characters: [
+            "Leonardo",
+            "Raphael",
+            "Donatello",
+            "Michelangelo",
+            "Shredder",
+            "Aska",
+            "Armaggon",
+            "Chrome Dome",
+            "War",
+            "Wingnut",
+            "Rat King",
+            "Karai"
+        ],
+        description: "The ultimate TMNT showdown on the Super Nintendo!",
+        longDescription:
+            "Teenage Mutant Ninja Turtles: Tournament Fighters (1993) delivers intense one-on-one combat starring the heroes in a half shell. " +
+            "Developed by Konami exclusively for the SNES, it features detailed sprite work, unique super moves, and fast, responsive gameplay. " +
+            "Players can battle across multiple arenas, facing classic TMNT villains and new challengers alike. " +
+            "With its deep combat system and distinctive art style, it remains one of the best 16-bit fighting games ever released.",
+        players: "1-2 Players",
+        developer: "Konami",
+        coverImage: "/assets/covers/tmnt_tournament_fighters.jpg",
+        platform: "Super Nintendo",
+        logo: "/assets/logos/tmnt_tournament.png"
+    },
+    {
         id: "xmen-children-of-the-atom",
         title: "X-Men: Atom",
         slug: "x-men-children-of-the-atom-950105-euro-phoenix-edition-bootleg",
@@ -570,6 +634,7 @@ export const fightGames: Game[] = [
 export const fightFilters = [
     "Marvel",
     "DC Comics",
+    "Sci-Fi",
     "Horror",
     "Tournament",
 ];

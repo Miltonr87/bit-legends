@@ -137,7 +137,7 @@ export const beatnupGames: Game[] = [
     id: "tmnt-turtles-in-time",
     title: "Teenage Mutant Ninja",
     slug: "teenage-mutant-ninja-turtles-turtles-in-time-2-players-ver-uda",
-    embedId: "10260",
+    embedId: "24621",
     year: 1991,
     genre: "Urban",
     folder: "Teenage Mutant Ninja Turtles",
@@ -145,14 +145,14 @@ export const beatnupGames: Game[] = [
     characters: ["Leonardo", "Michelangelo", "Donatello", "Raphael"],
     description: "Cowabunga! The Turtles travel through time to save New York!",
     longDescription:
-      "Cowabunga! Travel through time with the Turtles to stop Shredder’s evil plan. " +
-      "Battle Foot Soldiers in prehistoric eras, pirate ships, and futuristic cities. " +
-      "Fast, colorful, and full of humor, it’s co-op perfection from Konami. " +
-      "One of the most beloved beat ’em ups ever created.",
+      "Teenage Mutant Ninja Turtles: Turtles in Time (1992) brings the arcade classic to the Super Nintendo with enhanced visuals and smoother gameplay. " +
+      "Join the four turtles as they chase Shredder across time — from prehistoric battles to neon-filled futures and pirate ship brawls. " +
+      "Each level bursts with personality, humor, and cooperative chaos. " +
+      "Praised for its fast-paced combat and iconic soundtrack, it remains one of the greatest side-scrolling beat ’em ups ever made.",
     players: "1-2 Players",
     developer: "Konami",
     coverImage: "/assets/covers/tnt.png",
-    platform: "Arcade",
+    platform: "Super Nintendo",
     logo: "/assets/logos/tmnt2.png"
   },
   {
@@ -520,6 +520,28 @@ export const beatnupGames: Game[] = [
     coverImage: "/assets/covers/dungeon_magic.jpg",
     logo: "/assets/logos/dungeonm.png",
     platform: "Arcade",
+  },
+  {
+    id: "Legend",
+    title: "Legend",
+    slug: "legend-usa-beta",
+    embedId: "19586",
+    year: 1994,
+    genre: "Fantasy",
+    folder: "Arcade Zone",
+    publisher: "Seika",
+    characters: ["Kaor", "Psybor"],
+    description: "Side-scrolling medieval combat with brutal swordplay.",
+    longDescription:
+      "Legend (1994) for the Super Nintendo is a gritty side-scrolling brawler set in the war-torn kingdom of Sellech. " +
+      "Players take the role of two heroic knights, Kaor and Psybor, battling hordes of demonic creatures across castles, dungeons, and cursed villages. " +
+      "With heavy sword combat, magic attacks, and a dark medieval atmosphere, it stands as one of the most intense beat-'em-ups on the SNES. " +
+      "Each level delivers a mix of brutal action and moody fantasy that recalls the arcade spirit of the early '90s, testing reflexes and endurance alike.",
+    players: "1-2 Players",
+    developer: "Arcade Zone",
+    coverImage: "/assets/covers/legend.jpg",
+    logo: "/assets/logos/legend.png",
+    platform: "Super Nintendo",
   },
   {
     id: "alien-vs-predator",
