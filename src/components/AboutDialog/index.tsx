@@ -56,7 +56,6 @@ export const AboutDialog = () => {
                   'Shadcn UI',
                   'Framer Motion',
                   'Radix UI',
-                  'Lucide React',
                   'EmulatorJS',
                   'Firebase',
                 ].map((tech) => (

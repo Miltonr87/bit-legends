@@ -52,7 +52,6 @@ describe('AboutDialog Component', () => {
       'Shadcn UI',
       'Framer Motion',
       'Radix UI',
-      'Lucide React',
       'EmulatorJS',
       'Firebase',
     ];
