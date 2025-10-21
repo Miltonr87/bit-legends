@@ -586,6 +586,28 @@ export const beatnupGames: Game[] = [
     logo: "/assets/logos/robocop2.png"
   },
   {
+    id: "super-double-dragon-snes",
+    title: "Super Double Dragon",
+    slug: "super-double-dragon-europe",
+    embedId: "18630",
+    year: 1992,
+    genre: "Urban",
+    folder: "Technōs Japan",
+    publisher: "Tradewest",
+    characters: ["Billy Lee", "Jimmy Lee"],
+    description: "The Lee brothers return to clean up the streets in classic SNES style!",
+    longDescription:
+      "Super Double Dragon (1992) brings the legendary martial arts duo Billy and Jimmy Lee to the Super Nintendo in a refined, technical beat-’em-up. " +
+      "Players brawl through city streets, docks, and enemy hideouts using new defensive maneuvers, counterattacks, and charged punches. " +
+      "Its slower, more deliberate combat emphasizes timing and mastery of moves, setting it apart from its arcade predecessors. " +
+      "With crisp animations, energetic music, and cooperative two-player action, it stands as one of the finest entries in the Double Dragon legacy.",
+    players: "1-2 Players",
+    developer: "Technōs Japan",
+    coverImage: "/assets/covers/super_double_dragon.jpg",
+    platform: "Super Nintendo",
+    logo: "/assets/logos/super_double_dragon.png"
+  },
+  {
     id: "spiderman-maximum-carnage",
     title: "Spider-Man & Venom",
     slug: "spider-man-venom-maximum-carnage-usa",

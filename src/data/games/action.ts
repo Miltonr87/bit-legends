@@ -43,6 +43,28 @@ export const actionGames: Game[] = [
         logo: "/assets/logos/shinobi_3.png"
     },
     {
+        id: "robocop-vs-terminator-genesis",
+        title: "RoboCop vs Terminator",
+        slug: "robocop-versus-the-terminator-usa",
+        embedId: "30351",
+        year: 1993,
+        genre: "Action",
+        folder: "Virgin Games",
+        publisher: "Virgin Games",
+        characters: ["RoboCop", "The Terminator", "Skynet Drones", "Cyborg Soldiers"],
+        description: "The ultimate battle of man versus machine begins!",
+        longDescription:
+            "RoboCop Versus The Terminator (1993) for the Sega Genesis delivers explosive run-and-gun action inspired by both legendary sci-fi franchises. " +
+            "As RoboCop, players wage a one-man war against Skynet and its mechanical army through futuristic Detroit and post-apocalyptic battlefields. " +
+            "Armed with devastating weapons and brutal finishing moves, the game blends gritty violence, detailed sprites, and atmospheric sound design. " +
+            "One of the most intense shooters on the Genesis, it perfectly captures the chaos of two cinematic universes colliding.",
+        players: "1 Player",
+        developer: "Virgin Games USA",
+        coverImage: "/assets/covers/robocop_terminator.jpg",
+        platform: "Sega Genesis",
+        logo: "/assets/logos/robocop_terminator.png"
+    },
+    {
         id: "x-kaliber-2097-snes",
         title: "X-Kaliber 2097",
         slug: "x-kaliber-2097-snes",
