@@ -40,9 +40,9 @@ export const AboutDialog = () => {
             <p>
               <strong className="text-primary">Bit Legends</strong> is a
               retro-inspired gaming platform that revives the nostalgia of
-              arcade and console classics — all playable directly in your
+              arcade and console classics: all playable directly in your
               browser. Built for dreamers who grew up with the 16-bit era of
-              adventures.
+              fighting games.
             </p>
             <div>
               <h4 className="font-semibold text-accent mb-3">

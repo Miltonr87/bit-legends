@@ -55,7 +55,11 @@ export default function Profile() {
       <div className="min-h-screen flex flex-col items-center justify-center px-4 py-10 text-center">
         <Header />
         <Card className="w-[90%] max-w-sm sm:max-w-md p-6 sm:p-10 border-2 border-accent/30 bg-card rounded-2xl shadow-md space-y-6">
-          <User className="h-14 w-14 sm:h-16 sm:w-16 mx-auto text-accent mb-1" />
+          <img
+            src="/assets/backgrounds/bitlegends.png"
+            alt="Bit Legends Background"
+            className="w-full h-auto object-cover rounded-xl border-2 border-accent/40 shadow-md"
+          />
           <h2 className="text-2xl sm:text-3xl font-bold mb-1">Welcome</h2>
           <p className="text-sm sm:text-base text-muted-foreground mb-4 max-w-xs sm:max-w-md mx-auto">
             Sign in with Google to save progress, avatar, and game history.
@@ -161,6 +165,11 @@ function ProfileCard({
             <LogOut className="mr-2 h-4 w-4" /> Sign Out
           </Button>
         </div>
+        <img
+          src="/assets/backgrounds/bitlegends.png"
+          alt="Bit Legends Background"
+          className="w-full h-auto object-cover rounded-xl border-2 border-accent/40 shadow-md"
+        />
       </div>
     </Card>
   );
