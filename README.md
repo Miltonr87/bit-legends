@@ -1,5 +1,7 @@
 # Bit Legends
 
+![Banner Preview](./public/assets/backgrounds/bitlegends.png)
+
 **Bit Legends** is a retro gaming portal that revives the golden age of arcade and console classics. Built for nostalgia lovers, it lets players relive timeless games like _Streets of Rage 2_ directly in their browser.
 
 ---
