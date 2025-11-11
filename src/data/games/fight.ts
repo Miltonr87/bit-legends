@@ -28,7 +28,7 @@ export const fightGames: Game[] = [
         id: "umk3",
         title: "Ultimate Mortal Kombat",
         slug: "ultimate-mortal-kombat-3-usa",
-        embedId: "42493",
+        embedId: "23432",
         year: 1996,
         genre: "Horror",
         folder: "Mortal Kombat",
@@ -44,7 +44,7 @@ export const fightGames: Game[] = [
         players: "1-2 Players",
         developer: "Midway",
         coverImage: "/assets/covers/Ultimate_MK3.png",
-        platform: "Arcade",
+        platform: "Super Nintendo",
         logo: "/assets/logos/umk3.png"
     },
     {
