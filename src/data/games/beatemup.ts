@@ -564,7 +564,7 @@ export const beatnupGames: Game[] = [
     coverImage: "/assets/covers/alien.jpeg",
     embedUrl: "https://www.retrogames.cc/embed/7748-alien-vs-predator-940520-euro-phoenix-edition-bootleg.html",
     platform: "Arcade",
-    logo: "/assets/logos/avp.png"
+    logo: "/assets/logos/avsp.png"
   },
   {
     id: "robocop-2",
