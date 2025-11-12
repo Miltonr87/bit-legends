@@ -178,3 +178,13 @@ iframe[src*='retrogames.cc/ad.html'] {
 .read-the-docs {
   color: #888;
 }
+
+.fullscreen-sim {
+  position: fixed !important;
+  inset: 0 !important;
+  z-index: 9999 !important;
+  background: black !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  border: none !important;
+}

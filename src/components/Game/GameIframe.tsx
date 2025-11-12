@@ -22,17 +22,18 @@ export const GameIframe = ({ game }: GameIframeProps) => {
   const toggleFullscreen = () => {
     const container = iframeRef.current;
     if (!container) return;
-    const el: any = container;
-    if (!document.fullscreenElement) {
-      if (el.requestFullscreen) el.requestFullscreen();
-      else if (el.webkitRequestFullscreen) el.webkitRequestFullscreen();
-      else if (el.msRequestFullscreen) el.msRequestFullscreen();
+    const iframe = container.querySelector('iframe') as any;
+    const el: any = iframe || container;
+    if (el.requestFullscreen) {
+      el.requestFullscreen().catch(() => {
+        container.classList.toggle('fullscreen-sim');
+      });
+    } else if (el.webkitRequestFullscreen) {
+      el.webkitRequestFullscreen();
+    } else if (el.msRequestFullscreen) {
+      el.msRequestFullscreen();
     } else {
-      if (document.exitFullscreen) document.exitFullscreen();
-      else if ((document as any).webkitExitFullscreen)
-        (document as any).webkitExitFullscreen();
-      else if ((document as any).msExitFullscreen)
-        (document as any).msExitFullscreen();
+      container.classList.toggle('fullscreen-sim');
     }
   };
 
