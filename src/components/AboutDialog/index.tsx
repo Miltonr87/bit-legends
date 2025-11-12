@@ -39,10 +39,9 @@ export const AboutDialog = () => {
           <DialogDescription className="text-base text-muted-foreground space-y-5 leading-relaxed text-left">
             <p>
               <strong className="text-primary">Bit Legends</strong> is a
-              retro-inspired gaming platform that revives the nostalgia of
-              arcade and console classics: all playable directly in your
-              browser. Built for dreamers who grew up with the 16-bit era of
-              fighting games.
+              retro-gaming platform that revives the nostalgia of arcade and
+              console classics: all playable directly in your browser. Built for
+              dreamers who grew up with the 16-bit era of fighting games.
             </p>
             <div>
               <h4 className="font-semibold text-accent mb-3">
@@ -53,9 +52,7 @@ export const AboutDialog = () => {
                   'ReactJS',
                   'TypeScript',
                   'Tailwind CSS',
-                  'Shadcn UI',
                   'Framer Motion',
-                  'Radix UI',
                   'EmulatorJS',
                   'Firebase',
                 ].map((tech) => (

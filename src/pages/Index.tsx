@@ -79,8 +79,7 @@ const Index = () => {
       <section
         className="relative py-12 sm:py-20 px-4 overflow-hidden bg-cover bg-bottom flex-grow"
         style={{
-          backgroundImage:
-            "url('/assets/backgrounds/streets-of-rage-city.png')",
+          backgroundImage: "url('/assets/backgrounds/retro-grid.png')",
           backgroundRepeat: 'repeat-x',
           backgroundSize: 'auto 100%',
           animation: 'parallaxScroll 60s linear infinite',
