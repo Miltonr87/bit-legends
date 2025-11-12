@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { allGames } from '@/data';
 import { Header } from '@/components/Layout/Header';
@@ -23,6 +24,10 @@ const Game = () => {
   const { isFavorite, saveFavorite } = useFavoriteGame(game);
 
   useGameSession(game);
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'auto' });
+  }, []);
 
   const handleWhatsAppShare = () => {
     if (!game) return;
