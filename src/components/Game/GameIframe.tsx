@@ -22,18 +22,18 @@ export const GameIframe = ({ game }: GameIframeProps) => {
   const toggleFullscreen = () => {
     const container = iframeRef.current;
     if (!container) return;
-    if (!document.fullscreenElement) {
-      if (container.requestFullscreen) container.requestFullscreen();
-      else if ((container as any).webkitRequestFullscreen)
-        (container as any).webkitRequestFullscreen();
-      else if ((container as any).msRequestFullscreen)
-        (container as any).msRequestFullscreen();
+    const iframe = container.querySelector('iframe') as any;
+    const el: any = iframe || container;
+    if (el.requestFullscreen) {
+      el.requestFullscreen().catch(() => {
+        container.classList.toggle('fullscreen-sim');
+      });
+    } else if (el.webkitRequestFullscreen) {
+      el.webkitRequestFullscreen();
+    } else if (el.msRequestFullscreen) {
+      el.msRequestFullscreen();
     } else {
-      if (document.exitFullscreen) document.exitFullscreen();
-      else if ((document as any).webkitExitFullscreen)
-        (document as any).webkitExitFullscreen();
-      else if ((document as any).msExitFullscreen)
-        (document as any).msExitFullscreen();
+      container.classList.toggle('fullscreen-sim');
     }
   };
 
@@ -60,14 +60,14 @@ export const GameIframe = ({ game }: GameIframeProps) => {
         {isMobile && (
           <button
             onClick={toggleFullscreen}
-            className="absolute bottom-1 right-1 z-50 bg-black/60 text-white rounded px-3 py-1 
-                       text-xs sm:text-sm border border-white/20 hover:bg-black/10 transition-all"
-            title="Toggle Fullscreen"
+            className="absolute bottom-0 right-0 z-10 bg-black/60 text-white rounded px-3 py-1 text-xs sm:text-sm border border-white/20 hover:bg-black/10 transition-all"
+            title="Fullscreen"
           >
             ⛶
           </button>
         )}
       </div>
+
       <div className="p-3 sm:p-4 bg-muted/30 border-t border-accent/20">
         <div className="flex items-center gap-2 text-sm sm:text-base text-foreground/80">
           <Gamepad2 className="h-4 w-4 text-accent" />
