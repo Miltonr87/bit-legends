@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useRef } from 'react';
 import { Gamepad2 } from 'lucide-react';
 import { Card } from '@/components/ui/card';
@@ -21,7 +22,18 @@ export const GameIframe = ({ game }: GameIframeProps) => {
   const toggleFullscreen = () => {
     const container = iframeRef.current;
     if (!container) return;
-    container.classList.toggle('fullscreen-sim');
+    const el: any = container;
+    if (!document.fullscreenElement) {
+      if (el.requestFullscreen) el.requestFullscreen();
+      else if (el.webkitRequestFullscreen) el.webkitRequestFullscreen();
+      else if (el.msRequestFullscreen) el.msRequestFullscreen();
+    } else {
+      if (document.exitFullscreen) document.exitFullscreen();
+      else if ((document as any).webkitExitFullscreen)
+        (document as any).webkitExitFullscreen();
+      else if ((document as any).msExitFullscreen)
+        (document as any).msExitFullscreen();
+    }
   };
 
   return (
