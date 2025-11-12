@@ -56,7 +56,7 @@ export default function Profile() {
         <Header />
         <Card className="w-[90%] max-w-sm sm:max-w-md p-6 sm:p-10 border-2 border-accent/30 bg-card rounded-2xl shadow-md space-y-6">
           <img
-            src="/assets/backgrounds/bitlegends.png"
+            src="/assets/backgrounds/bitlegends_min.jpg"
             alt="Bit Legends Background"
             className="w-full h-auto object-cover rounded-xl border-2 border-accent/40 shadow-md"
           />
@@ -166,7 +166,7 @@ function ProfileCard({
           </Button>
         </div>
         <img
-          src="/assets/backgrounds/bitlegends.png"
+          src="/assets/backgrounds/bitlegends_min.jpg"
           alt="Bit Legends Background"
           className="w-full h-auto object-cover rounded-xl border-2 border-accent/40 shadow-md"
         />

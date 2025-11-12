@@ -25,9 +25,19 @@ export interface GameHistory {
     id: string;
     gameId: string;
     gameTitle: string;
+    platform: string;
     playedAt: string;
-    timeSpent: number;
+    playTime?: number;
+    timeSpent?: number;
     score?: number;
+}
+
+export interface UseGameHistory {
+    gameHistory: GameHistory[];
+    loadGameHistory: () => void;
+    deleteHistory: (id: string) => void;
+    addHistory: (game: GameHistory) => void;
+    formatTime: (seconds: number) => string;
 }
 
 export interface GameSave {
