@@ -192,7 +192,7 @@ export const fightGames: Game[] = [
         slug: "x-men-children-of-the-atom-950105-euro-phoenix-edition-bootleg",
         embedId: "10740",
         year: 1994,
-        genre: "Marvel",
+        genre: "Marvel Comics",
         folder: "Marvel",
         publisher: "Capcom",
         characters: [
@@ -285,7 +285,6 @@ export const fightGames: Game[] = [
             "The King of Fighters 2002 stands as one of the most celebrated entries in the franchise, returning to the classic 3-on-3 team format with an enormous character lineup and buttery-smooth gameplay. " +
             "Fast-paced offense, iconic MAX mode juggles, and precision-based neutral play make it a tournament favorite worldwide. " +
             "Loved by competitive fans and arcade purists alike, KOF 2002 captures the golden era of SNK fighting brilliance.",
-        players: "1-2 Players",
         players: "1-2 Players",
         developer: "Eolith / SNK Playmore",
         coverImage: "/assets/covers/kof_2002.jpg",
@@ -560,8 +559,8 @@ export const fightGames: Game[] = [
         slug: "marvel-super-heroes",
         embedId: "9097-marvel-super-heroes-951117-brazil",
         year: 1995,
-        genre: "Marvel",
-        folder: "Marvel vs Capcom",
+        genre: "Marvel Comics",
+        folder: "Marvel",
         publisher: "Capcom",
         characters: ["Captain America", "Iron Man", "Wolverine", "Spider-Man", "Hulk", "Thanos", "Doctor Doom", "Magneto"],
         description: "Infinity Gem powered battles!",
@@ -582,8 +581,8 @@ export const fightGames: Game[] = [
         slug: "x-men-vs-street-fighter",
         embedId: "34755",
         year: 1996,
-        genre: "Marvel",
-        folder: "Marvel vs Capcom",
+        genre: "Marvel Comics",
+        folder: "Marvel",
         publisher: "Capcom",
         characters: ["Wolverine", "Ryu", "Cyclops", "Ken", "Juggernaut", "Zangief", "Akuma", "Apocalypse"],
         description: "Marvel vs Capcom begins!",
@@ -604,8 +603,8 @@ export const fightGames: Game[] = [
         slug: "marvel-super-heroes-vs-street-fighter-970625-usa-phoenix-edition-bootleg",
         embedId: "9101",
         year: 1997,
-        genre: "Marvel",
-        folder: "Marvel vs Capcom",
+        genre: "Marvel Comics",
+        folder: "Marvel",
         publisher: "Capcom",
         characters: [
             "Ryu",
@@ -635,8 +634,8 @@ export const fightGames: Game[] = [
         slug: "marvel-vs-capcom-clash-of-super-heroes",
         embedId: "9123",
         year: 1998,
-        genre: "Marvel",
-        folder: "Marvel vs Capcom",
+        genre: "Marvel Comics",
+        folder: "Marvel",
         publisher: "Capcom",
         characters: ["Captain Commando", "Captain America", "Spider-Man", "Gambit", "Ryu", "Chun-Li", "Hulk", "Megaman", "Wolverine", "Strider", "Venom", "Zangief"],
         description: "The ultimate crossover!",
@@ -652,7 +651,7 @@ export const fightGames: Game[] = [
     },]
 
 export const fightFilters = [
-    "Marvel",
+    "Marvel Comics",
     "DC Comics",
     "Sci-Fi",
     "Horror",
