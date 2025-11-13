@@ -585,7 +585,7 @@ export const fightGames: Game[] = [
         genre: "Marvel",
         folder: "Marvel vs Capcom",
         publisher: "Capcom",
-        characters: ["Wolverine", "Ryu", "Ciclope", "Ken", "Juggernaut", "Zangief", "Akuma", "Apocalypse"],
+        characters: ["Wolverine", "Ryu", "Cyclops", "Ken", "Juggernaut", "Zangief", "Akuma", "Apocalypse"],
         description: "Marvel vs Capcom begins!",
         longDescription:
             "X-Men vs. Street Fighter (1996) ignites Capcom’s crossover revolution, merging mutant powers with world warrior technique in blazing-fast tag-team combat. " +
