@@ -13,10 +13,10 @@ export const raceGames: Game[] = [
         characters: ["Snake Sanders", "Cyberhawk", "Jake Badlands", "Tarquinn", "Ivanzypher", "Katarina Lyons"],
         description: "Racing with rock soundtrack!",
         longDescription:
-            "Rock N’ Roll Racing roars with high-octane combat and an electrifying licensed rock soundtrack. " +
-            "Blast opponents with missiles and mines while drifting through interplanetary circuits. " +
-            "Each victory earns cash to upgrade your car’s weapons and armor. " +
-            "Heavy metal meets explosive racing in this cult Blizzard classic.",
+            "Rock N’ Roll Racing (1993) fuses explosive vehicular combat with an iconic licensed rock soundtrack that defined a generation. " +
+            "Tear through interplanetary tracks, launch missiles, drop mines, and shred rivals in chaotic isometric battles. " +
+            "Win races to upgrade engines, armor, and weapons as you carve your way through the galaxy’s deadliest circuits. " +
+            "A loud, rebellious, high-octane Blizzard classic — where every race feels like a metal concert on wheels.",
         players: "1-2 Players",
         developer: "Silicon & Synapse",
         coverImage: "/assets/covers/rock.png",
@@ -35,10 +35,10 @@ export const raceGames: Game[] = [
         characters: ["Throttle", "Vinnie", "Modo", "Limburger", "Greasepit", "Dr.Karbunkle"],
         description: "Cartoon motorcycle racing on Mars!",
         longDescription:
-            "Rev up as the radical rodents from Mars in this action-packed racing brawler. " +
-            "Speed through wild tracks, dodge hazards, and launch attacks against rival bikers. " +
-            "Vivid graphics, tight controls, and cartoon humor capture the show’s spirit. " +
-            "A cosmic, adrenaline-fueled ride from Konami’s golden SNES era.",
+            "Biker Mice from Mars (1994) puts players behind the handlebars of the galaxy’s most radical rodent trio. " +
+            "Fight through twisting tracks, dodge environmental hazards, and fire weapons at rival bikers as you try to take down the villainous Limburger. " +
+            "Konami’s colorful graphics, fast gameplay, and cartoon humor perfectly capture the spirit of the TV show. " +
+            "A wild, high-energy SNES classic packed with personality and turbo-charged mayhem.",
         players: "1-2 Players",
         developer: "Konami",
         coverImage: "/assets/covers/bike.jpg",
@@ -57,10 +57,10 @@ export const raceGames: Game[] = [
         characters: ["Ryu", "Billy", "Gary", "Burt", "Lisa"],
         description: "High-speed futuristic combat on the streets!",
         longDescription:
-            "Riding Fight combines racing and brawling in a fast-paced futuristic city. " +
-            "Battle rival riders while zooming through neon-lit highways and sky roads. " +
-            "A showcase of Taito’s arcade flair, this 1992 gem blends speed, combat, and style " +
-            "in an unforgettable ride through cyberpunk chaos.",
+            "Riding Fight (1992) is Taito’s cyberpunk fusion of racing and brawling — a kinetic ride through neon-lit megacities and high-tech sky highways. " +
+            "Punch, kick, and clash with rival riders at breakneck speeds while weaving through traffic and futuristic landscapes. " +
+            "Its smooth scaling effects, fast action, and arcade flair make it a standout hybrid of combat and speed. " +
+            "A stylish, adrenaline-pumping sprint through a world where every race is a street fight.",
         players: "1-2 Players",
         developer: "Taito",
         coverImage: "/assets/covers/ridingfight.jpg",
