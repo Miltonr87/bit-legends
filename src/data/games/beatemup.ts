@@ -13,10 +13,10 @@ export const beatnupGames: Game[] = [
     characters: ["Adam Hunter", "Axel Stone", "Blaze Fielding"],
     description: "The start of the legendary beat 'em up trilogy!",
     longDescription:
-      "Three ex-cops take justice into their own hands to clean up a corrupt city. " +
-      "Punch, kick, and throw your way through waves of thugs and bosses. " +
-      "Legendary music, gritty visuals, and co-op mayhem define this Sega classic. " +
-      "The origin of one of the greatest beat ’em up trilogies ever made.",
+      "Streets of Rage (1991) launches Sega’s iconic beat ’em up saga with raw style and relentless street combat. " +
+      "Three ex-police officers—Axel, Blaze, and Adam—walk away from a corrupt force to bring justice back to their fallen city. " +
+      "Players brawl through neon alleys, nightclubs, industrial zones, and criminal hideouts while facing waves of thugs, martial artists, and brutal bosses. " +
+      "Driven by Yuzo Koshiro’s groundbreaking electronic soundtrack and tight co-op gameplay, it set a new standard for urban action titles on the Genesis.",
     players: "1-2 Players",
     developer: "Sega",
     coverImage: "/assets/covers/sor1.png",
@@ -35,10 +35,10 @@ export const beatnupGames: Game[] = [
     characters: ["Axel Stone", "Blaze Fielding", "Eddie Hunter", "Max Thunder"],
     description: "The legendary beat 'em up masterpiece!",
     longDescription:
-      "Streets of Rage 2 raises the bar with sharper controls, vibrant graphics, and an unforgettable Yuzo Koshiro soundtrack. " +
-      "Join Axel, Blaze, Max, and Skate to stop Mr. X’s criminal empire. " +
-      "Every hit feels heavy, every combo satisfying, every level iconic. " +
-      "A true masterpiece of the 16-bit era.",
+      "Streets of Rage 2 (1992) stands as one of the most celebrated beat ’em ups of all time, raising the series to new heights. " +
+      "With larger sprites, refined combat, and a thunderous Yuzo Koshiro soundtrack, every punch feels powerful and every level instantly iconic. " +
+      "Axel and Blaze return alongside newcomers Max and Skate on a mission to dismantle Mr. X’s revived criminal empire. " +
+      "From vibrant amusement parks to neon-lit streets and underground arenas, every stage delivers unforgettable 16-bit action perfection.",
     players: "1-2 Players",
     developer: "Sega",
     coverImage: "/assets/covers/streets_of_rage_2.jpg",
@@ -57,10 +57,10 @@ export const beatnupGames: Game[] = [
     characters: ["Roy", "Arnold"],
     description: "Epic sword-swinging fantasy adventure.",
     longDescription:
-      "Blade Master (1991) immerses you in a high-fantasy world of knights, monsters, and dark sorcery. " +
-      "Join Roy and Arnold as they battle across enchanted forests, cursed villages, and fiery dungeons. " +
-      "With fluid combat, detailed sprites, and powerful magic attacks, Irem’s 1991 arcade classic delivers " +
-      "fast-paced, co-op fantasy action at its finest.",
+      "Blade Master (1991) thrusts players into a medieval realm overflowing with monsters, dark wizards, and ancient evil. " +
+      "Heroes Roy and Arnold set out to reclaim the land from demonic forces, battling through enchanted forests, cursed castles, fiery caverns, and towering fortresses. " +
+      "With fast-paced swordplay, powerful magical abilities, and beautifully animated arcade sprites, the adventure captures the high-energy intensity of early ’90s fantasy arcade games. " +
+      "A hidden gem for fans of co-op action with a heroic flair.",
     players: "1-2 Players",
     developer: "Irem",
     coverImage: "/assets/covers/blademaster.jpg",
@@ -79,9 +79,10 @@ export const beatnupGames: Game[] = [
     characters: ["Paul", "Bobby"],
     description: "Clean up the streets in classic Sega beat ’em up style!",
     longDescription:
-      "Riot City brings fast-paced street fighting to the arcade with Sega’s signature flair. " +
-      "Play as Paul or Bobby, two tough cops on a mission to rescue a kidnapped friend and bring down a violent crime syndicate. " +
-      "Colorful sprites, catchy music, and smooth co-op action make this a quintessential early ’90s urban brawler.",
+      "Riot City (1991) delivers fast, energetic street brawling with Sega’s signature arcade punch. " +
+      "Paul and Bobby, two determined officers, storm through crime-ridden districts to rescue a kidnapped friend and dismantle a powerful mob syndicate. " +
+      "Featuring colorful sprites, upbeat music, and smooth co-op gameplay, Riot City embodies the pure early ’90s arcade beat ’em up energy. " +
+      "Simple, fast, stylish, and packed with over-the-top action.",
     players: "1-2 Players",
     developer: "Sega AM7",
     coverImage: "/assets/covers/riotcity.jpg",
@@ -100,10 +101,11 @@ export const beatnupGames: Game[] = [
     characters: ["Axel Stone", "Blaze Fielding", "Eddie Hunter", "Zan", "Victy"],
     description: "The epic conclusion to the trilogy!",
     longDescription:
-      "The final battle against Mr. X brings branching stories, new moves, and explosive difficulty. " +
-      "Axel, Blaze, Skate, and Dr. Zan face an army of cyborgs threatening the city. " +
-      "Dynamic combat, dramatic pacing, and multiple endings keep tension high. " +
-      "A bold, challenging conclusion to the Streets of Rage trilogy.",
+      "Streets of Rage 3 (1994) closes the iconic trilogy with its most intense, fast-paced, and ambitious entry yet. " +
+      "A new threat emerges as Mr. X’s syndicate plots to replace key city officials with deadly cyborg clones. " +
+      "Axel, Blaze, Skate, and newcomer Dr. Zan fight across labs, industrial zones, underground facilities, and chaotic city streets in a branching narrative with multiple endings. " +
+      "Enhanced mobility, expanded movesets, aggressive AI, and a darker tone push the Genesis hardware to its limits. " +
+      "A bold and challenging finale that delivers non-stop urban warfare in pure 16-bit style.",
     players: "1-2 Players",
     developer: "Sega",
     coverImage: "/assets/covers/streets_of_rage_3.jpg",
@@ -122,10 +124,11 @@ export const beatnupGames: Game[] = [
     characters: ["Aldo (Cleric)", "Ravel (Elf)", "Leger (Mage)", "Derel (Fighter)", "Vargas (Dwarf)"],
     description: "Fantasy beat 'em up adventure!",
     longDescription:
-      "Embark on a quest through medieval lands to slay the red dragon Gildiss. " +
-      "Choose from five heroes—each with unique powers and upgrades. " +
-      "Hack, slash, and cast spells through dungeons, forests, and castles. " +
-      "Capcom’s fantasy brawler blends RPG progression with classic arcade action.",
+      "The King of Dragons (1991) delivers a heroic fantasy quest filled with monsters, magic, and mythical beasts. " +
+      "Choose from five distinct heroes—each with unique abilities, fighting styles, and RPG-style upgrades—as you journey across medieval villages, shadowy forests, ancient ruins, and towering fortresses. " +
+      "Battle hordes of orcs, wyverns, ogres, and enchanted creatures while collecting gold, leveling up, and unlocking stronger equipment. " +
+      "Fast-paced arcade combat blends perfectly with light RPG progression, culminating in an epic showdown against the red dragon Gildiss. " +
+      "A true Capcom classic that defined co-op fantasy action in the early ’90s.",
     players: "1-2 Players",
     developer: "Capcom",
     coverImage: "/assets/covers/the-king-of-dragons.png",
@@ -167,10 +170,10 @@ export const beatnupGames: Game[] = [
     characters: ["Cody", "Guy", "Mike Haggar", "Jessica", "Belger"],
     description: "Classic side-scrolling beat ’em up — fight through Metro City gangs!",
     longDescription:
-      "Mayor Mike Haggar joins Cody and Guy to rescue his daughter from the Mad Gear gang. " +
-      "Smash your way through Metro City’s slums, subways, and skyscrapers. " +
-      "Powerful grabs, huge sprites, and pure arcade energy define every brawl. " +
-      "Capcom’s gritty classic that set the gold standard for the genre.",
+      "Final Fight (1989) is Capcom’s groundbreaking brawler that redefined urban beat ’em ups with huge sprites, brutal combat, and nonstop arcade intensity. " +
+      "When the ruthless Mad Gear gang kidnaps Jessica, Metro City’s new mayor — and former pro-wrestler — Mike Haggar teams up with Cody and Guy to take the fight directly to the streets. " +
+      "Battle through violent slums, neon-soaked alleys, toxic factories, subways, and towering high-rises in a relentless mission to topple Belger’s criminal empire. " +
+      "With powerful grabs, crowd-control moves, iconic enemies, and co-op mayhem, Final Fight set the gold standard for arcade action and became one of the most influential beat ’em ups ever made.",
     players: "1-2 Players",
     developer: "Capcom",
     coverImage: "/assets/covers/final_fight.jpg",
@@ -213,18 +216,19 @@ export const beatnupGames: Game[] = [
     characters: ["Boris", "Wade", "Kyle", "The Geld Gang", "Various Bosses"],
     description: "A gritty urban brawler where vigilantes take on brutal gangs across the ruins of society.",
     longDescription:
-      "Violent Storm (1993) is a side-scrolling arcade beat ’em up from Konami, built on the Mystic Warriors hardware. " +
-      "Set in a post-war dystopia, three heroes—Boris, Wade, and Kyle—fight the corrupt Geld Gang through multiple stages full of vicious thugs and environmental hazards." +
-      "Each character has slightly different playstyles and movesets, encouraging cooperative combat and tactical positioning. " +
-      "With energetic pixel art, a driving soundtrack, and tough boss battles, Violent Storm delivers a classic arcade adrenaline rush in a broken cityscape. ",
+      "Violent Storm (1993) unleashes one of Konami’s wildest and most explosive beat ’em ups. " +
+      "Set in a post-war, near-future wasteland, society is crumbling under the control of violent gangs and deranged warlords. " +
+      "Three street warriors—Boris, Wade, and Kyle—step forward to crush the ruthless Geld Gang and rescue a kidnapped friend, battling across devastated cities, industrial ruins, abandoned subways, amusement parks, and gang-controlled strongholds. " +
+      "Each hero boasts unique combos, throws, mobility options, and brutal finishers, making co-op play dynamic and strategic. " +
+      "With flashy animations, over-the-top villains, high-energy music, and relentless arcade chaos, Violent Storm stands as one of Konami’s last—and most intense—golden-age brawlers.",
+    players: "1-2 Players",
     players: "1-2 Players",
     developer: "Konami",
     coverImage: "/assets/covers/violent_storm.png",
     platform: "Arcade",
     embedUrl: "https://www.retrogames.cc/embed/34692-violent-storm-ver-eab.html",
     logo: "/assets/logos/viostorm.png"
-  }
-  ,
+  },
   {
     id: "final-fight-guy",
     title: "Final Fight Guy",
@@ -237,9 +241,10 @@ export const beatnupGames: Game[] = [
     characters: ["Guy", "Haggar", "Jessica", "Belger"],
     description: "The SNES-exclusive edition starring Guy — Metro City never sleeps!",
     longDescription:
-      "Final Fight Guy (1992) is a refined SNES release featuring Guy instead of Cody, bringing new balance and difficulty adjustments. " +
-      "Team up with Haggar to clean the streets from Mad Gear once again. " +
-      "Sharper combat, redone palette, and SNES polish make this a collector’s favorite version of the arcade hit.",
+      "Final Fight Guy (1992) delivers a refined SNES adaptation of Capcom’s legendary brawler, replacing Cody with the fan-favorite Bushin-ryu ninja, Guy. " +
+      "Haggar and Guy once again hit the streets to crush the Mad Gear gang and rescue Jessica, battling through slums, subways, industrial zones, and high-rise strongholds. " +
+      "Sharper character balance, adjusted enemy patterns, and an updated palette give this version its own identity. " +
+      "A rare and sought-after edition that stands as a unique slice of Final Fight history.",
     players: "1-2 Players",
     developer: "Capcom",
     coverImage: "/assets/covers/final_fight_guy.jpg",
@@ -258,10 +263,10 @@ export const beatnupGames: Game[] = [
     characters: ["Mike Haggar", "Carlos Miyamoto", "Maki Genryusai"],
     description: "The sequel to Final Fight on SNES — fight Mad Gear again across the globe!",
     longDescription:
-      "The Mad Gear gang returns—this time terrorizing cities across the globe. " +
-      "Team up as Haggar, Maki, or Carlos to clean up the streets once more. " +
-      "Improved visuals and smoother combat refine the SNES experience. " +
-      "A globe-trotting sequel that keeps the fists flying.",
+      "Final Fight 2 (1993) expands the series beyond Metro City, sending players on a global pursuit of the revived Mad Gear gang. " +
+      "Haggar teams up with martial artist Maki Genryusai and swordsman Carlos Miyamoto as they battle across Hong Kong, Europe, and beyond in a quest to rescue Maki’s sister and mentor. " +
+      "Enhanced SNES visuals, smoother animation, and refined enemy variety give the sequel a stronger, more polished feel. " +
+      "A globe-spanning adventure that keeps Capcom’s signature beat ’em up intensity alive.",
     players: "1-2 Players",
     developer: "Capcom",
     coverImage: "/assets/covers/final_fight2.jpg",
@@ -282,10 +287,10 @@ export const beatnupGames: Game[] = [
     characters: ["Haggar", "Dean", "Guy", "Cody", "Karin"],
     description: "The third installment in the Final Fight series on SNES!",
     longDescription:
-      "Metro City faces new chaos from the Skull Cross gang, and the fight begins anew. " +
-      "Haggar, Guy, Dean, and Lucia join forces in intense co-op combat. " +
-      "Dash moves, super combos, and branching stages add new depth. " +
-      "A worthy send-off to Capcom’s legendary brawler trilogy.",
+      "Final Fight 3 (1995) pushes the franchise into its most advanced and mechanically deep form on the SNES. " +
+      "Metro City is once again under siege — this time by the ruthless Skull Cross gang — and Haggar joins forces with Guy, Dean, and police officer Lucia (not Karin) to break the syndicate’s hold. " +
+      "Dash mechanics, super moves, branching paths, and improved co-op systems give the game an arcade-like feel with fresh replayability. " +
+      "A powerful finale that closes Capcom’s legendary street-brawling trilogy with style and intensity.",
     players: "1-2 Players",
     developer: "Capcom",
     coverImage: "/assets/covers/final_fight3.jpg",
@@ -306,10 +311,10 @@ export const beatnupGames: Game[] = [
     characters: ["Captain Commando", "Mack the Knife", "Ginzu the Ninja", "Baby Head"],
     description: "Team up with Captain Commando and his squad in this futuristic arcade brawler!",
     longDescription:
-      "In the year 2026, Captain Commando leads a bizarre team of heroes through futuristic Metro City. " +
-      "Battle mutants, cyborgs, and aliens with blazing co-op action. " +
-      "Four unique characters bring diverse combat styles and personality. " +
-      "A fast, stylish Capcom classic bursting with sci-fi energy.",
+      "Captain Commando (1991) blasts players into the neon future of 2026, where crime, mutants, and cybernetic killers plague Metro City. " +
+      "A four-hero commando team — the cyber-ninja Ginzu, the mummy-powered Mack, the genius mech-riding Baby Head, and the superhuman Captain Commando — battles through labs, spaceports, carnivals, and alien-infested streets. " +
+      "Fast action, creative character designs, violent finishers, and Capcom’s signature arcade polish make this one of the era’s most stylish sci-fi beat ’em ups. " +
+      "A loud, colorful, chaotic classic that helped define Capcom’s golden age.",
     players: "1-4 Players",
     developer: "Capcom",
     coverImage: "/assets/covers/captain_comando.jpg",
@@ -336,10 +341,10 @@ export const beatnupGames: Game[] = [
     ],
     description: "Morph into action in this SNES adaptation of the Power Rangers movie!",
     longDescription:
-      "Morph into action as the Mighty Morphin Power Rangers take on Ivan Ooze’s army. " +
-      "Switch between human and Ranger forms, unleashing powerful team attacks. " +
-      "Bright visuals, tight controls, and nostalgic music light up every stage. " +
-      "A faithful movie adaptation packed with co-op fun and heroics.",
+      "Mighty Morphin Power Rangers: The Movie (1995) brings the full heroic energy of the film to the SNES with fast-paced brawling and iconic Ranger transformations. " +
+      "Battle Ivan Ooze and his monstrous legions across city streets, industrial zones, snowy mountains, and alien landscapes. " +
+      "Switch between civilian and Ranger forms, unleash team attacks, and call upon signature weapons for explosive combo finishers. " +
+      "Colorful visuals, energetic animations, and nostalgic soundtrack cues make this one of the most memorable licensed beat ’em ups of the era.",
     players: "1-2 Players",
     developer: "Natsume",
     coverImage: "/assets/covers/power-rangers.jpg",
@@ -360,10 +365,10 @@ export const beatnupGames: Game[] = [
     characters: ["Batman", "Catwoman", "The Penguin"],
     description: "Take back Gotham from Penguin’s gang in this dark SNES classic!",
     longDescription:
-      "Step into Tim Burton’s Gotham as Batman to stop the Penguin’s criminal uprising. " +
-      "Dark, atmospheric stages showcase Konami’s cinematic detail. " +
-      "Use grapples, combos, and gadgets to deliver brutal justice. " +
-      "One of the finest movie-based beat ’em ups ever made.",
+      "Batman Returns (1993) delivers a brooding, cinematic beat ’em up experience inspired by Tim Burton’s gothic vision of Gotham City. " +
+      "As Batman, fight through snow-covered streets, derelict buildings, sewers, and chaotic rooftops to dismantle the Penguin’s Red Triangle Circus Gang. " +
+      "Konami’s signature polish shines in fluid animations, dramatic lighting, and brutal combat that mixes grapples, batarangs, slides, and gadget takedowns. " +
+      "A dark, atmospheric masterpiece — widely considered one of the best movie-based action games ever created.",
     players: "1 Player",
     developer: "Konami",
     coverImage: "/assets/covers/batman.png",
@@ -383,10 +388,11 @@ export const beatnupGames: Game[] = [
     characters: ["Fighter", "Cleric", "Thief", "Elf", "Magic-User", "Dwarf"],
     description: "The ultimate fantasy beat 'em up by Capcom!",
     longDescription:
-      "Enter the world of Dungeons & Dragons: Shadow Over Mystara in Capcom’s epic fantasy brawler. " +
-      "Choose from six RPG-inspired classes and fight dragons, undead, and sorcery. " +
-      "Collect loot, level up, and explore branching story paths. " +
-      "A rich, cooperative adventure blending D&D depth with arcade action.",
+      "Dungeons & Dragons: Shadow Over Mystara (1996) blends arcade action with deep RPG mechanics, creating one of Capcom’s richest and most ambitious beat ’em ups. " +
+      "Choose from six iconic classes and embark on a sprawling quest across forests, caverns, ancient ruins, and magical kingdoms. " +
+      "Cast spells, find treasure, gather equipment, and navigate branching story paths that reward replayability. " +
+      "From dragon battles to undead hordes and arcane traps, Mystara brings classic tabletop fantasy to life in spectacular cooperative action.",
+    players: "1-4 Players",
     players: "1-4 Players",
     developer: "Capcom",
     coverImage: "/assets/covers/dungeons&dragons.jpg",
@@ -405,9 +411,11 @@ export const beatnupGames: Game[] = [
     characters: ["Blood", "Hawk", "Boomer", "Sledge"],
     description: "Street justice in the toughest city around.",
     longDescription:
-      "Vendetta delivers hard-hitting arcade action as four vigilantes fight to reclaim the streets from the Dead End Gang. " +
-      "Punch, kick, and slam your way through gritty alleys and neon-lit clubs in Konami’s classic urban brawler. " +
-      "Fluid animation, brutal combos, and co-op chaos make it one of the most iconic beat ’em ups of the early ’90s.",
+      "Vendetta (1991) throws players into a violent gang-ridden underworld as four vigilantes battle the ruthless Dead End Gang. " +
+      "Fight through back alleys, docks, bars, nightclubs, and neon city streets in an intense arcade brawler filled with brutal slams, improvised weapons, and chaotic co-op action. " +
+      "Each character brings unique animations and personality, while Konami’s fast gameplay and gritty art style deliver a raw, over-the-top beat ’em up experience. " +
+      "A cult-favorite classic that embodies the wild spirit of early ’90s arcade street combat.",
+    players: "1-2 Players",
     players: "1-2 Players",
     developer: "Konami",
     coverImage: "/assets/covers/vendetta.jpg",
@@ -426,10 +434,10 @@ export const beatnupGames: Game[] = [
     characters: ["Arthur", "Lancelot", "Perceval"],
     description: "Capcom’s Arthurian beat ’em up — swords, honor, and medieval glory!",
     longDescription:
-      "Take up arms as Arthur, Lancelot, or Perceval to reclaim Britain’s honor. " +
-      "Fight armored knights and mythical beasts across medieval lands. " +
-      "Earn experience, upgrade weapons, and ride into battle on horseback. " +
-      "A noble and beautifully crafted Capcom arcade legend.",
+      "Knights of the Round (1991) transforms the legend of King Arthur into a stylish Capcom beat ’em up filled with swords, armor, and noble quests. " +
+      "Play as Arthur, Lancelot, or Perceval and fight across medieval villages, war-torn battlegrounds, dark forests, and fortified castles. " +
+      "Gain experience, upgrade your armor, unlock stronger weapons, and even charge into battle on horseback. " +
+      "With elegant visuals and heroic pacing, it stands as one of Capcom’s most polished and memorable fantasy arcade adventures.",
     players: "1-2 Players",
     developer: "Capcom",
     coverImage: "/assets/covers/knights.jpg",
@@ -449,9 +457,10 @@ export const beatnupGames: Game[] = [
     characters: ["Roy", "Arnold", "Cyborg", "Blanca"],
     description: "Arcade brawler with supernatural transformation powers!",
     longDescription:
-      "Shadow Force mixes martial arts and supernatural mayhem in a fast-paced arcade experience. " +
-      "Fight enemies across futuristic arenas and morph into powerful shadow forms to unleash devastating attacks. " +
-      "With smooth animations and co-op play, it stands as one of Technōs Japan’s most underrated action gems.",
+      "Shadow Force (1993) delivers a unique blend of martial arts combat and supernatural shapeshifting in one of Technōs Japan’s most inventive arcade titles. " +
+      "Players choose from four enhanced fighters who can morph into shadow-beast forms, gaining new abilities, brutal finishers, and devastating movement options. " +
+      "Battle across futuristic arenas, secret labs, cybernetic fortresses, and occult-infused battlegrounds as you crush waves of mutants, soldiers, and biomechanical monsters. " +
+      "Fast pacing, fluid animation, and a stylish transformation mechanic make Shadow Force a hidden gem of early ’90s arcade action.",
     players: "1-2 Players",
     developer: "Technōs Japan",
     coverImage: "/assets/covers/shadow.jpg",
@@ -470,9 +479,10 @@ export const beatnupGames: Game[] = [
     characters: ["Rick Taylor", "Jennifer", "The Mask"],
     description: "Pure terror and brutal combat return home.",
     longDescription:
-      "Splatterhouse 3 continues Rick Taylor’s gruesome fight against the forces of evil — this time within his own mansion. " +
-      "Navigate nonlinear rooms, rescue your family, and unleash brutal attacks using the power of the Terror Mask. " +
-      "With cinematic storytelling, eerie atmosphere, and visceral brawling, this Sega Genesis classic remains a cult horror legend.",
+      "Splatterhouse 3 (1993) unleashes a darker, more cinematic chapter in Rick Taylor’s war against eldritch horrors. " +
+      "Set entirely within Rick’s cursed mansion, players must navigate nonlinear rooms, fight grotesque creatures, and rescue Rick’s family before time runs out. " +
+      "The Terror Mask grants monstrous strength, enabling bone-crushing combos and violent finishing moves against demons and abominations. " +
+      "With branching endings, atmospheric cutscenes, and visceral Genesis combat, Splatterhouse 3 stands as a cult icon of horror-action gaming.",
     players: "1 Player",
     developer: "Now Production / Namco",
     coverImage: "/assets/covers/splat.jpg",
@@ -491,9 +501,11 @@ export const beatnupGames: Game[] = [
     characters: ["Zan Takahara", "Matt Gables", "Rosa Felmonde"],
     description: "Futuristic street brawling with style and grit.",
     longDescription:
-      "Undercover Cops throws players into a post-apocalyptic urban wasteland where law enforcement is done by fists and iron pipes. " +
-      "Choose one of three unique heroes and clean up the city through brutal hand-to-hand combat. " +
-      "With striking pixel art and detailed animation, Irem delivered one of the most stylish arcade beat ’em ups of the early ’90s.",
+      "Undercover Cops (1992) drops players into a grim, post-apocalyptic metropolis where traditional law enforcement has collapsed. " +
+      "A trio of elite enforcers—Zan, Matt, and Rosa—fight mutated criminals, rogue machines, and grotesque bosses using brutal street combat and improvised weapons like girders, manhole covers, and wrecking machinery. " +
+      "Irem’s signature hand-drawn pixel art, detailed animations, and gritty atmosphere give the game a unique, industrial sci-fi flavor. " +
+      "Stylish, tough, and visually striking, Undercover Cops remains one of the most distinctive beat ’em ups of the early ’90s arcade scene.",
+    developer: "Irem",
     players: "1-2 Players",
     developer: "Irem",
     coverImage: "/assets/covers/undercovercops.jpg",
@@ -512,9 +524,10 @@ export const beatnupGames: Game[] = [
     characters: ["Warrior", "Amazon", "Thief", "Monk"],
     description: "Arcade fantasy action in an isometric world.",
     longDescription:
-      "Light Bringer (also known as Dungeon Magic) brings fast-paced cooperative dungeon crawling to the arcade. " +
-      "Battle through labyrinthine stages filled with traps, treasures, and monsters in an isometric fantasy world. " +
-      "Choose your hero and fight together to restore the light against the forces of darkness.",
+      "Dungeon Magic (also known as Light Bringer, 1994) blends beat ’em up combat with fast-paced dungeon crawling in a striking isometric world. " +
+      "Players choose from four heroes and traverse labyrinthine stages filled with traps, treasure rooms, secret pathways, and fantastical monsters. " +
+      "Smash stone guardians, evade magical hazards, and solve environmental puzzles as you fight to restore the world’s lost light. " +
+      "Taito’s impressive sprite work, atmospheric music, and cooperative exploration make it a standout gem among arcade fantasy adventures.",
     players: "1-2 Players",
     developer: "Taito",
     coverImage: "/assets/covers/dungeon_magic.jpg",
@@ -555,10 +568,11 @@ export const beatnupGames: Game[] = [
     characters: ["Major Dutch Schaefer", "Lt. Linn Kurosawa", "Predator Hunter", "Predator Warrior"],
     description: "Capcom’s legendary sci-fi fantasy brawler — humans and predators unite against the xenomorph horde!",
     longDescription:
-      "Humans and Predators join forces against the Xenomorph invasion. " +
-      "Slash through hordes of aliens using plasma cannons and blades. " +
-      "Cinematic cutscenes and fast co-op gameplay make every moment intense. " +
-      "One of Capcom’s most celebrated sci-fi arcade experiences.",
+      "Alien vs. Predator (1994) stands as one of Capcom’s most iconic arcade beat ’em ups, blending brutal melee combat with explosive sci-fi firepower. " +
+      "When a Xenomorph outbreak threatens Earth, an unlikely alliance forms between elite human soldiers and honorable Predator warriors. " +
+      "Fight through infested streets, military bases, underground labs, and hive-like alien strongholds using blades, plasma weapons, energy cannons, and devastating combo attacks. " +
+      "Fluid animations, atmospheric cutscenes, and chaotic three-player co-op elevate the action into a nonstop cinematic war for survival. " +
+      "A definitive masterpiece of ’90s arcade sci-fi — stylish, aggressive, and endlessly replayable.",
     players: "1-3 Players",
     developer: "Capcom",
     coverImage: "/assets/covers/alien.jpeg",
@@ -682,9 +696,11 @@ export const beatnupGames: Game[] = [
     characters: ["Kadan", "Portor", "Subutai", "Abaka", "Kassar"],
     description: "Legendary warriors battle for honor and destiny.",
     longDescription:
-      "Warriors of Fate brings ancient legends to life in a sweeping fantasy brawler from Capcom. " +
-      "Choose fantasy archetypes from five mighty heroes and carve your path through war-torn lands filled with enemy soldiers and towering bosses from Chinese culture. " +
-      "Featuring gorgeous art, mounted combat, and deep co-op gameplay, it stands among the greatest side-scrolling beat ’em ups ever made.",
+      "Warriors of Fate (1992) brings ancient Eastern legends to life in one of Capcom’s grandest fantasy beat ’em ups. " +
+      "Five mighty heroes ride into battle across vast war-torn kingdoms inspired by the epic Romance of the Three Kingdoms saga. " +
+      "Hack through enemy armies, clash with towering generals, and fight atop galloping warhorses as the campaign unfolds across deserts, forts, mountains, and burning cities. " +
+      "Gorgeous artwork, cinematic battle scenes, and deep cooperative mechanics elevate Warriors of Fate into a sweeping battlefield adventure — a defining masterpiece of the golden arcade era.",
+    players: "1-2 Players",
     players: "1-2 Players",
     developer: "Capcom",
     coverImage: "/assets/covers/warriorsoffate.jpg",
@@ -703,9 +719,10 @@ export const beatnupGames: Game[] = [
     characters: ["Johnny", "Tommy", "Chris", "Fred"],
     description: "High-tech martial arts mayhem in the future!",
     longDescription:
-      "Silent Dragon thrusts you into a dystopian future where cyber-enhanced warriors battle for justice. " +
-      "Choose your fighter and unleash devastating combos and super attacks against gangs and mutant enemies. " +
-      "With Taito’s sharp pixel art, sci-fi setting, and satisfying co-op brawling, Silent Dragon stands as an electrifying arcade classic of 1992.",
+      "Silent Dragon (1992) drops players into a neon-drenched dystopia where cyber-enhanced heroes wage war against violent gangs and mutated abominations. " +
+      "Choose from four fighters, each armed with unique martial arts styles and over-the-top cybernetic techniques, then battle across futuristic slums, tech labs, industrial fortresses, and enemy strongholds. " +
+      "Explosive super attacks, high-energy animation, and Taito’s signature sci-fi flair make every encounter feel intense and stylish. " +
+      "A sleek, underrated co-op brawler that captures the chaotic spirit of early ’90s arcade action.",
     players: "1-2 Players",
     developer: "Taito",
     coverImage: "/assets/covers/silentd.jpg",
@@ -767,10 +784,10 @@ export const beatnupGames: Game[] = [
     characters: ["Superman", "Superboy", "Steel", "Cyborg Superman", "Eradicator", "Doomsday"],
     description: "Battle through death and resurrection in the DC Comics saga!",
     longDescription:
-      "Relive the epic DC saga of Superman’s fall and resurrection. " +
-      "Play as the Man of Steel and his successors—Superboy, Steel, and others. " +
-      "Battle Doomsday and an army of villains threatening Metropolis. " +
-      "A heroic, story-driven brawler with Blizzard’s signature polish.",
+      "The Death and Return of Superman (1994) retells one of DC’s most iconic storylines with dramatic, hard-hitting SNES action. " +
+      "Face the unstoppable Doomsday in a catastrophic showdown, fall as the Man of Steel, and rise again through his successors — Superboy, Steel, the Eradicator, and the sinister Cyborg Superman. " +
+      "Fight across Metropolis, labs, streets, and alien-infested zones as the legacy of Superman unfolds through cutscenes inspired by the comics. " +
+      "Developed by Blizzard before their rise to fame, this story-driven brawler blends heroic spectacle with tight 16-bit combat.",
     players: "1 Player",
     developer: "Blizzard",
     coverImage: "/assets/covers/superman.png",
@@ -791,10 +808,10 @@ export const beatnupGames: Game[] = [
     characters: ["Captain America", "Iron Man", "Wolverine", "Spider-Man", "Hulk", "Thanos"],
     description: "The Avengers unite to recover the Infinity Gems before Thanos does!",
     longDescription:
-      "Assemble Earth’s mightiest heroes to recover the Infinity Gems before Thanos. " +
-      "Switch between five Marvel icons, each with distinct powers and abilities. " +
-      "Battle cosmic threats across Earth, space, and distant worlds. " +
-      "A vibrant SNES brawler packed with superhero spectacle.",
+      "Marvel: War of the Gems (1996) assembles Earth’s mightiest heroes in a globe-spanning mission to recover the Infinity Gems before Thanos unleashes cosmic annihilation. " +
+      "Switch between Captain America, Iron Man, Wolverine, Spider-Man, and the Hulk — each with unique moves, abilities, and combat styles. " +
+      "Battle across jungles, cities, asteroid bases, and alien worlds as the threat escalates toward a final confrontation with the Mad Titan. " +
+      "Capcom’s vibrant art, crisp animation, and comic-book flair deliver a powerhouse SNES superhero experience.",
     players: "1 Player",
     developer: "Capcom",
     coverImage: "/assets/covers/marvel_war_gems.jpg",
@@ -814,10 +831,10 @@ export const beatnupGames: Game[] = [
     characters: ["The Punisher", "Nick Fury", "Kingpin"],
     description: "Join Frank Castle and Nick Fury in Capcom’s hard-hitting arcade brawler!",
     longDescription:
-      "Join Frank Castle and Nick Fury in a brutal mission to destroy Kingpin’s empire. " +
-      "Use guns, knives, and sheer force to crush waves of mobsters. " +
-      "Sharp animation and gritty violence define Capcom’s arcade hit. " +
-      "Pure comic-book vengeance brought to life.",
+      "The Punisher (1993) unleashes one of Capcom’s grittiest arcade beat ’em ups, pairing Frank Castle with S.H.I.E.L.D. commander Nick Fury in a war against the Kingpin’s criminal empire. " +
+      "Gun down mobsters, slice through ninjas, and smash gangs with brutal combos and weapon-based takedowns across docks, mansions, warehouses, and city streets. " +
+      "Explosive set pieces, sharp comic-book art, and relentless pacing make The Punisher a standout example of ’90s arcade violence. " +
+      "Pure vigilante justice brought to life by Capcom’s golden-age craftsmanship.",
     players: "1-2 Players",
     developer: "Capcom",
     coverImage: "/assets/covers/the_punisher.jpg",
@@ -837,10 +854,10 @@ export const beatnupGames: Game[] = [
     characters: ["Spawn", "Violator", "Overt-Kill", "Redeemer", "Angela"],
     description: "Enter Todd McFarlane’s dark comic world of Spawn!",
     longDescription:
-      "Al Simmons returns from hell as Spawn, trapped between humanity and damnation. " +
-      "Battle demons and corrupted foes in gothic cityscapes. " +
-      "Dark art, heavy atmosphere, and stylish combat define the journey. " +
-      "A haunting adaptation of Todd McFarlane’s antihero saga.",
+      "Spawn (1995) plunges players into Todd McFarlane’s hell-forged universe, following Al Simmons as he rises from damnation with demonic power and a war-torn soul. " +
+      "Battle demonic forces, corrupted assassins, and twisted villains across gothic rooftops, alleys, churches, and infernal realms. " +
+      "Spawn’s living symbiotic suit grants chains, blasts, counters, and devastating special moves — but at the cost of draining his limited necro-energy. " +
+      "Dripping with atmosphere, dark art direction, and comic-book flair, Spawn delivers one of the most stylish supernatural brawlers on the SNES.",
     players: "1 Player",
     developer: "Ukiyotei",
     coverImage: "/assets/covers/spaawn.jpg",
@@ -962,10 +979,10 @@ export const beatnupGames: Game[] = [
     characters: ["Wolverine", "Cyclops", "Gambit", "Beast", "Psylocke"],
     description: "Take control of the X-Men to stop Magneto’s forces on Genosha!",
     longDescription:
-      "Five X-Men take on Magneto’s forces on the island of Genosha. " +
-      "Each hero’s unique abilities create varied, skill-based gameplay. " +
-      "Capcom’s crisp pixel art and tight mechanics shine throughout. " +
-      "A solo masterpiece blending action, precision, and superhero flair.",
+      "X-Men: Mutant Apocalypse (1994) delivers one of Capcom’s finest superhero beat ’em up hybrids, blending platforming, precision combat, and Street Fighter–style inputs. " +
+      "The X-Men are deployed to Genosha to rescue imprisoned mutants and dismantle Magneto’s sinister program. " +
+      "Each hero — Wolverine’s feral rush, Cyclops’ optic mastery, Gambit’s charged agility, Beast’s acrobatics, and Psylocke’s psychic blades — brings a dramatically different gameplay style. " +
+      "Gorgeous sprite work, challenging missions, and tight controls make this a standout solo X-Men experience on the SNES, dripping with ‘90s comic-book attitude.",
     players: "1 Player",
     developer: "Capcom",
     coverImage: "/assets/covers/xmen_apocalipse.jpg",
@@ -986,9 +1003,11 @@ export const beatnupGames: Game[] = [
     characters: ["Fighter", "Cleric", "Thief", "Elf"],
     description: "Legendary side-scrolling fantasy brawler in the D&D world!",
     longDescription:
-      "Dungeons & Dragons: Tower of Doom (1994) mixes beat-’em up combat with tabletop RPG elements. " +
-      "Choose classes, equip items, and fight through monsters, traps, and bosses across multiple paths. " +
-      "It set a benchmark for co-op action RPGs in arcades and remains a cult favorite today.",
+      "Dungeons & Dragons: Tower of Doom (1994) set a new standard for arcade fantasy action, fusing classic beat ’em up combat with rich tabletop-inspired mechanics. " +
+      "Choose from four iconic classes, each with unique spells, abilities, and playstyles, then journey across forests, caves, villages, strongholds, and cursed ruins. " +
+      "Collect items, equip gear, manage resources, and navigate branching routes that reshape the adventure with every playthrough. " +
+      "Packed with monsters, traps, story encounters, and co-op synergy, Tower of Doom remains one of Capcom’s most beloved and influential arcade experiences.",
+    players: "1-4 Players",
     players: "1-4 Players",
     developer: "Capcom",
     coverImage: "/assets/covers/dd_tower_of_doom.jpg",
