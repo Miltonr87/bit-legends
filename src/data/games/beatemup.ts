@@ -921,7 +921,10 @@ export const beatnupGames: Game[] = [
     characters: ["Jake Hunter", "Christopher Smith", "Hong Hua"],
     description: "A bloody, gothic brawler — save humanity from a monstrous apocalypse!",
     longDescription:
-      "Night Slashers (1993) is Data East’s gruesome horror-themed beat ’em up. Battle hordes of zombies, vampires, and grotesque creatures as one of three monster hunters — Jake, Christopher, or Hong Hua. Featuring gory visuals, supernatural powers, and co-op action, it’s a cult classic that blends arcade brutality with gothic atmosphere.",
+      "Night Slashers (1993) is Data East’s cult horror beat ’em up masterpiece, blending gory arcade action with a campy, over-the-top monster apocalypse. " +
+      "Play as Jake Hunter, a cyber-enhanced brawler; Christopher Smith, a cybernetic vampire hunter; or Hong Hua, a martial artist with mystic power. " +
+      "Carve through undead hordes, stitched abominations, werewolves, vampires, and grotesque bosses as you purge cities, graveyards, labs, and haunted castles. " +
+      "Explosive special moves, brutal finishers, and dripping gothic atmosphere make Night Slashers one of the most stylish and violent beat ’em ups ever created — a pure arcade bloodbath with a supernatural punch.",
     players: "1-2 Players",
     developer: "Data East",
     coverImage: "/assets/covers/night_slashers.jpeg",
@@ -941,7 +944,10 @@ export const beatnupGames: Game[] = [
     characters: ["Jack Tenrec", "Hannah Dundee", "Mustapha Cairo", "Mess O'Bradovich"],
     description: "Capcom’s prehistoric brawler — muscle cars, dinosaurs, and chaos collide!",
     longDescription:
-      "Cadillacs and Dinosaurs (1993) throws you into a world where humanity and dinosaurs coexist after an apocalypse. Choose from four heroes and fight mutant poachers and beasts using fists, firearms, and classic Cadillacs. A perfect mix of action, sci-fi, and prehistoric mayhem.",
+      "Cadillacs and Dinosaurs (1993) explodes with one of Capcom’s wildest concepts: a post-apocalyptic Earth where humanity, nature, and dinosaurs coexist in fragile chaos. " +
+      "Join Jack Tenrec, Hannah Dundee, Mustapha Cairo, and Mess O’Bradovich as they battle mutant poachers, bio-engineered monstrosities, and raging prehistoric beasts across jungles, deserts, labs, and ruined cities. " +
+      "Smash enemies with fists, rifles, explosives, and — of course — roaring Cadillacs built for survival. " +
+      "Featuring fast-paced co-op combat, vibrant pixel art, and unforgettable set pieces, this arcade classic remains one of Capcom’s greatest brawlers of the early ’90s.",
     players: "1-3 Players",
     developer: "Capcom",
     coverImage: "/assets/covers/cadillacs.jpg",

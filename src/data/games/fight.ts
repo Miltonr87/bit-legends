@@ -13,11 +13,10 @@ export const fightGames: Game[] = [
         characters: ["Liu Kang", "Kung Lao", "Sub-Zero", "Scorpion", "Shang Tsung"],
         description: "Run button and combo system!",
         longDescription:
-            "Mortal Kombat 3 revolutionized the saga with its new Run button and fast-paced combo system. " +
-            "Battle through intense arenas filled with traps, gore, and the haunting screams of Outworld. " +
-            "Classic warriors return alongside new challengers, each wielding devastating finishing moves. " +
-            "Speed, brutality, and chaos collide in this ultimate test of reflexes and fatal mastery.",
-
+            "Mortal Kombat 3 (1995) shattered expectations with its aggressive new Run button, breakneck speed, and devastating combo system. " +
+            "The forces of Outworld march on Earthrealm, filling the arenas with collapsing cities, deadly traps, and the screams of the fallen. " +
+            "Fan-favorite warriors return alongside new assassins and cyber ninjas, each armed with brutal finishers, ferocious juggles, and secret techniques. " +
+            "Fast, relentless, and unapologetically violent — MK3 remains one of the saga’s most intense battles for survival.",
         players: "1-2 Players",
         developer: "Midway",
         coverImage: "/assets/covers/Mortal_Kombat_3_cover.jpeg",
@@ -36,11 +35,10 @@ export const fightGames: Game[] = [
         characters: ["Liu Kang", "Kung Lao", "Sub-Zero", "Scorpion", "Shang Tsung", "Noob Saibot", "Strider", "Sonya Blade"],
         description: "The ultimate MK3!",
         longDescription:
-            "Ultimate Mortal Kombat 3 pushes the series to its brutal peak: faster, bloodier, and packed with secrets. " +
-            "Choose from a massive roster of warriors, each with deadly combos and signature fatalities. " +
-            "Face the relentless AI or challenge friends in fierce head-to-head combat across iconic arenas. " +
-            "From Outworld to Earthrealm, the fate of all realms is decided in the ultimate tournament.",
-
+            "Ultimate Mortal Kombat 3 (1996) refines and amplifies everything from MK3 — faster movement, smarter AI, hidden modes, brutal combos, and a massive roster of heroes and villains. " +
+            "Battle across iconic arenas like The Pit, The Graveyard, and the Portal as warriors from every realm clash for supremacy. " +
+            "Discover new fatalities, animalities, friendships, and secret fighters lurking in the shadows. " +
+            "From tournament play to couch rivalries, UMK3 stands as one of the most beloved and competitive entries in the Mortal Kombat legacy.",
         players: "1-2 Players",
         developer: "Midway",
         coverImage: "/assets/covers/Ultimate_MK3.png",
@@ -59,10 +57,10 @@ export const fightGames: Game[] = [
         characters: ["Ryu", "Ken", "Chun-li", "Guile", "M. Bison", "Vega", "Dhalsim", "Sagat", "Blanka", "Zangief"],
         description: "The game that revolutionized fighting games!",
         longDescription:
-            "Street Fighter II redefined the fighting genre with precision controls, tactical depth, and iconic world warriors. " +
-            "Face Ryu, Chun-Li, Guile, and others across global stages in intense one-on-one battles. " +
-            "Every move, combo, and special attack demands mastery and timing. " +
-            "The legend that built the foundation for every modern fighting game.",
+            "Street Fighter II (1992) forever transformed the fighting genre with precise controls, tactical matchups, and a roster of unforgettable world warriors. " +
+            "Travel the globe to face opponents like Ryu, Chun-Li, Guile, and M. Bison in tense one-on-one duels that demand mastery, timing, and strategy. " +
+            "Every move — from fireballs and spinning kicks to grapples and specials — helped define the DNA of modern competitive fighters. " +
+            "A historic landmark that ignited arcade culture and shaped gaming history.",
         players: "1-2 Players",
         developer: "Capcom",
         coverImage: "/assets/covers/street_fighter_2.png",
@@ -81,10 +79,10 @@ export const fightGames: Game[] = [
         characters: ["Ryu", "Ken", "Chun-li", "Guile", "M. Bison", "Vega", "Dhalsim", "Sagat", "Blanka", "Zangief"],
         description: "The Alpha series!",
         longDescription:
-            "Street Fighter Alpha 2 brings cinematic flair, air combos, and the dramatic 'Alpha Counter' system. " +
-            "Meet younger versions of classic fighters and newcomers like Sakura and Rose. " +
-            "Its anime-inspired visuals and smooth controls defined Capcom’s 90s arcade style. " +
-            "A stylish, technical evolution of the Street Fighter legacy.",
+            "Street Fighter Alpha 2 (1996) brings cinematic flair to the franchise with anime-style presentation, deep storytelling, and refined mechanics. " +
+            "Master the Alpha Counter system, air chains, custom combos, and momentum-driven neutral play. " +
+            "Meet younger versions of Ryu, Ken, Chun-Li, and M. Bison, along with new favorites like Sakura and Rose — each animated with Capcom’s flawless ‘90s arcade artistry. " +
+            "Fast, stylish, and technical, Alpha 2 stands as one of the most polished entries in the entire Street Fighter saga.",
         players: "1-2 Players",
         developer: "Capcom",
         coverImage: "/assets/covers/sf_aplha_2.jpg",
@@ -114,7 +112,10 @@ export const fightGames: Game[] = [
         ],
         description: "The ultimate evolution of the Alpha series — fast, stylish, and balanced for tournament play.",
         longDescription:
-            "Street Fighter Zero 3 (Alpha 3) perfects Capcom’s Alpha series with 30+ fighters, three combat modes (A-ISM, X-ISM, V-ISM), and refined balance that made it a staple of arcades and tournaments worldwide. Fluid animation, deep mechanics, and iconic matchups define this fan-favorite masterpiece.",
+            "Street Fighter Zero 3 (1998) delivers the definitive Alpha experience, pushing Capcom’s artistry and competitive depth to its peak with a massive roster exceeding 30 world warriors. " +
+            "A-ISM, X-ISM, and V-ISM introduce three unique fighting styles, opening up a universe of combos, custom juggles, pressure strings, and competitive strategies. " +
+            "Zero 3’s vibrant anime aesthetic, fluid animation, explosive supers, and character-defining movesets make every matchup feel cinematic and dynamic. " +
+            "From arcade cabinets to global tournaments, it remains one of the most beloved and technically rich Street Fighter entries ever created.",
         players: "1-2 Players",
         developer: "Capcom",
         coverImage: "/assets/covers/street_fighter_zero_3.jpeg",
@@ -230,7 +231,9 @@ export const fightGames: Game[] = [
         characters: ["Morrigan", "Demitri", "Felicia", "Lord Raptor", "Anakaris", "Jon Talbain", "Victor", "Bishamon"],
         description: "A gothic fighting masterpiece from Capcom’s golden era!",
         longDescription:
-            "Enter a dark world of monsters, vampires, and werewolves in this stylish 2D fighter. Darkstalkers: The Night Warriors combines fast-paced combat, fluid animation, and supernatural flair, introducing fan-favorite characters like Morrigan and Demitri in one of Capcom’s most iconic arcade titles.",
+            "Darkstalkers: The Night Warriors (1994) summons players into a supernatural tournament where monsters, demons, and undead legends clash under a moonlit sky. " +
+            "Capcom’s fluid animation, lightning-fast combos, and expressive character designs bring fighters like Morrigan, Demitri, Felicia, and Talbain to life in a stylish blend of horror and arcade flair. " +
+            "Fueled by gothic atmosphere, exaggerated movement, and monstrous special attacks, Darkstalkers became a cult phenomenon and one of Capcom’s most imaginative 2D fighters.",
         players: "1-2 Players",
         developer: "Capcom",
         coverImage: "/assets/covers/darkstalkers_night_warriors.jpg",
@@ -249,10 +252,9 @@ export const fightGames: Game[] = [
         characters: ["Iori Yagami", "Kyo Kusanagi", "Rugal Bernstein", "Joe Higashi", "Terry Bogard", "Andy Bogard", "Chang Koehan", "Blue Mary"],
         description: "The Dream Match!",
         longDescription:
-            "The King of Fighters ’98 unites every fighter from previous tournaments in one Dream Match. " +
-            "No story—just pure competition, refined mechanics, and unmatched balance. " +
-            "Teams of three clash in legendary showdowns filled with precision and style. " +
-            "The ultimate expression of SNK’s classic fighting brilliance.",
+            "The King of Fighters ’98 — the legendary Dream Match — unites every major fighter from previous tournaments with no storyline to restrict the chaos. " +
+            "Pure competitive focus, immaculate balance, and SNK’s smoothest mechanics turn every 3-on-3 battle into a high-stakes duel of reflexes and mind-games. " +
+            "Whether commanding the Bogard brothers, battling with Kyo and Iori’s eternal rivalry, or facing Omega Rugal’s tyranny, KOF ’98 stands as one of the greatest fighting games ever created.",
         players: "1-2 Players",
         developer: "SNK",
         coverImage: "/assets/covers/kof_98.jpg",
@@ -280,7 +282,10 @@ export const fightGames: Game[] = [
         ],
         description: "The ultimate 3-on-3 tournament featuring SNK’s legendary roster!",
         longDescription:
-            "The King of Fighters 2002 brings together the largest lineup of fighters in the series’ history, celebrating SNK’s legacy with fast-paced 3-on-3 combat, precise controls, and unforgettable matchups. A tournament classic that defined the golden era of arcade fighting.",
+            "The King of Fighters 2002 stands as one of the most celebrated entries in the franchise, returning to the classic 3-on-3 team format with an enormous character lineup and buttery-smooth gameplay. " +
+            "Fast-paced offense, iconic MAX mode juggles, and precision-based neutral play make it a tournament favorite worldwide. " +
+            "Loved by competitive fans and arcade purists alike, KOF 2002 captures the golden era of SNK fighting brilliance.",
+        players: "1-2 Players",
         players: "1-2 Players",
         developer: "Eolith / SNK Playmore",
         coverImage: "/assets/covers/kof_2002.jpg",
@@ -308,7 +313,9 @@ export const fightGames: Game[] = [
         ],
         description: "A fast-paced unofficial remix of the King of Fighters 2003 engine!",
         longDescription:
-            "The King of Fighters 2004: Special Edition Plus is an enhanced bootleg of the original 2003 entry, featuring tweaked move sets, faster gameplay, and expanded team options. A wild tournament remix beloved in arcades for its speed and chaos.",
+            "The King of Fighters 2004: Special Edition Plus is a wild, fast-running bootleg remix built upon the KOF 2003 engine. " +
+            "Featuring altered move sets, tweaked damage balances, enhanced EX-style attacks, and reimagined team formations, it became an underground arcade favorite for its chaotic, unpredictable matchups. " +
+            "Not official — but infamous for its speed, combo potential, and explosive gameplay.",
         players: "1-2 Players",
         developer: "SNK Playmore (Bootleg Edition)",
         coverImage: "/assets/covers/kof_2004.jpeg",
@@ -334,7 +341,10 @@ export const fightGames: Game[] = [
         ],
         description: "SNK’s legendary samurai fighting sequel — elegance, honor, and deadly precision.",
         longDescription:
-            "Samurai Shodown II (1994) refines the original with smoother animation, new moves, and deeper combat. Set in feudal Japan, this Neo Geo classic emphasizes timing, patience, and devastating swordplay. A masterpiece of traditional weapon-based dueling that defined SNK’s golden era.",
+            "Samurai Shodown II (1994) elevates the iconic blade-duel series with deeper mechanics, new techniques, and SNK’s crispest Neo Geo animation. " +
+            "Set in a stylized feudal Japan, the game rewards patience, precision, and perfectly timed strikes — where a single slash can shift the tide of battle. " +
+            "New defensive options, refined movement, and expanded special moves give masters of Haohmaru, Genjuro, Ukyo, and others the freedom to express true samurai skill. " +
+            "A masterpiece of atmosphere and weapon-based strategy that helped define SNK’s golden era.",
         players: "1-2 Players",
         developer: "SNK",
         coverImage: "/assets/covers/samurai.jpg",
@@ -384,7 +394,9 @@ export const fightGames: Game[] = [
         characters: ["Terry Bogard", "Andy Bogard", "Joe Higashi", "Mai Shiranui", "Geese Howard"],
         description: "The definitive Fatal Fury experience with ring-outs and cinematic combat!",
         longDescription:
-            "Real Bout Fatal Fury refines SNK’s classic fighting series with smoother animation, destructible environments, and the new ring-out system. Battle through South Town as Terry Bogard and face Geese Howard in this Neo Geo masterpiece.",
+            "Real Bout Fatal Fury (1995) reinvents the classic SNK series with explosive presentation, destructible arenas, and the dynamic ring-out system. " +
+            "Battle through South Town as Terry Bogard and face the towering threat of Geese Howard in a saga fueled by rivalries, style, and bone-crushing impact. " +
+            "Fast pacing, fluid combos, and Neo Geo visual flair make Real Bout an essential chapter in the Fatal Fury legacy.",
         players: "1-2 Players",
         developer: "SNK",
         coverImage: "/assets/covers/faltal_fury.jpg",
@@ -417,9 +429,9 @@ export const fightGames: Game[] = [
         ],
         description: "The battle for South Town continues!",
         longDescription:
-            "Fatal Fury 2 refines SNK’s signature fighting series with faster gameplay, smoother animation, and a diverse international roster. " +
-            "Join Terry, Andy, and Joe as they take on new rivals in intense one-on-one duels. " +
-            "Featuring stage transitions, dynamic backgrounds, and iconic characters like Mai Shiranui and Krauser, this sequel defined the golden era of arcade fighters.",
+            "Fatal Fury 2 (1993) sharpens SNK’s classic formula with smoother controls, faster duels, and a powerful lineup of international fighters. " +
+            "Join Terry, Andy, Joe, and newcomers like Kim Kaphwan as they challenge rising threats across iconic global stages. " +
+            "Featuring stage transitions, cinematic backgrounds, and the unforgettable debut of Wolfgang Krauser, this sequel became one of the defining fighters of the early ’90s arcade boom.",
         players: "1-2 Players",
         developer: "SNK",
         coverImage: "/assets/covers/fatalfury2.jpg",
@@ -451,9 +463,10 @@ export const fightGames: Game[] = [
         ],
         description: "The legendary sword duel begins.",
         longDescription:
-            "Samurai Shodown (Samurai Spirits) revolutionized the fighting genre with its weapon-based combat and feudal Japanese setting. " +
-            "Master unique sword techniques, deflect attacks, and harness your warrior’s rage to unleash devastating blows. " +
-            "With its stylish animation, deep strategy, and iconic characters, Samurai Shodown stands as one of SNK’s most revered classics.",
+            "Samurai Shodown (1993) transformed fighting games by introducing tactical weapon combat, dramatic pacing, and the striking aesthetic of feudal Japan. " +
+            "Every warrior has a unique blade style, from Haohmaru’s heavy strikes to Ukyo’s precision swipes and Galford’s ninja trickery. " +
+            "Deflect attacks, punish mistakes, and unleash Rage-powered slashes in battles where a single moment can decide victory. " +
+            "Stylish, atmospheric, and deeply strategic — a cornerstone of SNK’s legacy.",
         players: "1-2 Players",
         developer: "SNK",
         coverImage: "/assets/covers/samuraishodown.jpg",
@@ -472,10 +485,10 @@ export const fightGames: Game[] = [
         characters: ["Billy Lee", "Jimmy Lee", "Abobo", "Linda", "Enemies"],
         description: "A classic side-scrolling brawler where the Lee brothers fight through gangs in a dystopian city.",
         longDescription:
-            "Double Dragon (Neo-Geo) captures the essence of the original arcade classic with upgraded visuals and tighter controls. " +
-            "Players control Billy and Jimmy Lee through urban stages filled with street gangs, weapons, and boss showdowns. " +
-            "This version delivers strong sprite art, smooth animations, and nostalgic action in an arcade-perfect package. " +
-            "With cooperative play, pick-ups, and rhythmic combat, it remains a staple of the beat ’em up genre.",
+            "Double Dragon (Neo-Geo, 1995) reimagines the iconic beat ’em up as a competitive, high-impact fighter inspired by the 1994 movie adaptation. " +
+            "Billy and Jimmy Lee step once again into the chaos of a ravaged city, now battling in one-on-one combat against legendary foes like Abobo and Linda. " +
+            "Explosive special moves, heavy hits, and SNK-style presentation give the classic rivalry new life. " +
+            "With fluid sprites, dramatic arenas, and stylish combos, this Neo-Geo reboot stands as a bold evolution of Technōs’ legendary franchise.",
         players: "1-2 Players",
         developer: "Technōs",
         coverImage: "/assets/covers/double_dragon.jpg",
@@ -494,7 +507,10 @@ export const fightGames: Game[] = [
         characters: ["Superman", "Batman", "Wonder Woman", "The Flash", "Aquaman", "Green Arrow"],
         description: "The heroes of DC Comics face off in one-on-one combat!",
         longDescription:
-            "Justice League Task Force brings together DC’s most iconic heroes for head-to-head fighting action. Choose your champion — from Superman to Batman — and battle across the world in this classic SNES brawler developed by Blizzard Entertainment.",
+            "Justice League Task Force (1995) unites DC’s most iconic heroes in a series of intense one-on-one battles across the world. " +
+            "Developed by Blizzard Entertainment, the game features unique movesets for each hero — Superman’s raw force, Batman’s precision gadgets, Flash’s speed, and Wonder Woman’s divine might. " +
+            "Travel from Gotham rooftops to hidden temples as you uncover a mysterious threat manipulating the League. " +
+            "A nostalgic SNES fighter fueled by comic-book energy and classic mid-90s charm.",
         players: "1-2 Players",
         developer: "Blizzard Entertainment",
         coverImage: "/assets/covers/justice_league.jpg",
@@ -528,7 +544,10 @@ export const fightGames: Game[] = [
         ],
         description: "The third entry in the Darkstalkers saga — faster, darker, and more brutal than ever before.",
         longDescription:
-            "Vampire Savior: The Lord of Vampire marks the pinnacle of Capcom’s gothic fighting series, merging supernatural speed, haunting atmosphere, and fluid 2D artistry. As the sinister noble Jedah Dohma resurrects the realm of Makai, the world’s most fearsome night creatures clash for dominance of life and death itself. Every battle drips with dark elegance, from Morrigan’s seductive power to Lilith’s fragile rage. With revamped life mechanics, lightning-fast pacing, and breathtaking animation, Vampire Savior redefines the boundaries of arcade horror combat.",
+            "Vampire Savior (1997) is the peak of Capcom’s gothic 2D fighting legacy, blending supernatural speed, razor-sharp mechanics, and some of the most fluid animation ever created for the CPS-2 hardware. " +
+            "Jedah Dohma rises from the depths of Makai to rebuild the demon realm, summoning night creatures from every corner of existence. " +
+            "From Morrigan’s seductive power to Talbain’s feral strikes and Lilith’s chaotic energy, every character embodies dark style and personality. " +
+            "Featuring the innovative 'Damage Recovery' system and relentless pacing, Vampire Savior remains one of the most beautiful, fast-paced, and technically rich horror fighters ever made.",
         players: "1-2 Players",
         developer: "Capcom",
         coverImage: "/assets/covers/vamp.jpg",
@@ -547,10 +566,10 @@ export const fightGames: Game[] = [
         characters: ["Captain America", "Iron Man", "Wolverine", "Spider-Man", "Hulk", "Thanos", "Doctor Doom", "Magneto"],
         description: "Infinity Gem powered battles!",
         longDescription:
-            "Marvel Super Heroes pits legendary icons like Spider-Man and Iron Man against cosmic foes. " +
-            "Wield the Infinity Gems to enhance strength, speed, or defense mid-battle. " +
-            "Dynamic visuals and explosive combos capture comic book energy. " +
-            "A larger-than-life fighter that set the stage for Marvel vs. Capcom.",
+            "Marvel Super Heroes (1995) unleashes a comic-book battlefield where Earth's greatest heroes and villains fight for control of the Infinity Gems. " +
+            "Channel their cosmic power mid-match to boost strength, speed, defense, or unlock game-changing abilities. " +
+            "Iron Man’s Proton Cannon, Wolverine’s berserker fury, and Spider-Man’s acrobatics explode with CPS-2 style. " +
+            "With dazzling animation and over-the-top supers, this arcade classic paved the way for the entire Marvel vs. Capcom legacy.",
         players: "1-2 Players",
         developer: "Capcom",
         coverImage: "/assets/covers/marvelheroes.png",
@@ -569,10 +588,10 @@ export const fightGames: Game[] = [
         characters: ["Wolverine", "Ryu", "Ciclope", "Ken", "Juggernaut", "Zangief", "Akuma", "Apocalypse"],
         description: "Marvel vs Capcom begins!",
         longDescription:
-            "X-Men vs. Street Fighter merges mutants and world warriors in fast tag-team duels. " +
-            "Swap characters mid-combo, unleash supers, and dominate the screen. " +
-            "Vibrant sprites and chaotic energy defined late-90s arcades. " +
-            "The groundbreaking start of Capcom’s crossover legacy.",
+            "X-Men vs. Street Fighter (1996) ignites Capcom’s crossover revolution, merging mutant powers with world warrior technique in blazing-fast tag-team combat. " +
+            "Swap characters mid-combo, chain supers across partners, and unleash screen-filling attacks that redefine CPS-2 spectacle. " +
+            "Face iconic threats like Juggernaut and Apocalypse in some of the flashiest battles ever seen in 90s arcades. " +
+            "A groundbreaking title that launched the hyper-crossover era.",
         players: "1-2 Players",
         developer: "Capcom",
         coverImage: "/assets/covers/xmen_vs_street.jpg",
@@ -600,7 +619,9 @@ export const fightGames: Game[] = [
         ],
         description: "Marvel heroes clash with Capcom’s finest in the explosive sequel to X-Men vs. Street Fighter!",
         longDescription:
-            "Marvel Super Heroes vs. Street Fighter (1997) refines Capcom’s crossover formula with flashier combos, tag-team action, and the iconic Infinity special attacks. Play as your favorite Street Fighter legends or Marvel superheroes in this high-energy arcade classic.",
+            "Marvel Super Heroes vs. Street Fighter (1997) evolves Capcom’s crossover formula with smoother tag mechanics, new duo supers, and even flashier CPS-2 animation. " +
+            "Marvel icons and Street Fighter legends collide in high-energy battles packed with aerial raves, Infinity specials, and devastating crossovers. " +
+            "The chaotic charm, vibrant sprites, and explosive momentum set the stage for the legendary Marvel vs. Capcom era.",
         players: "1-2 Players",
         developer: "Capcom",
         coverImage: "/assets/covers/marvel_street.jpg",
@@ -620,10 +641,9 @@ export const fightGames: Game[] = [
         characters: ["Captain Commando", "Captain America", "Spider-Man", "Gambit", "Ryu", "Chun-Li", "Hulk", "Megaman", "Wolverine", "Strider", "Venom", "Zangief"],
         description: "The ultimate crossover!",
         longDescription:
-            "Marvel vs. Capcom: Clash of Super Heroes unites legends from both universes in explosive 2v2 fights. " +
-            "Summon assists, chain supers, and dominate with insane tag combos. " +
-            "Comic energy meets arcade precision in every vibrant frame. " +
-            "The ultimate crossover that defined an entire generation of fighters.",
+            "Marvel vs. Capcom: Clash of Super Heroes (1998) unites two legendary universes in explosive 2v2 combat filled with assists, tag supers, and screen-shattering combos. " +
+            "Heroes like Captain America, Wolverine, Ryu, and Strider team up in battles that overflow with comic-book spectacle and arcade intensity. " +
+            "Fast, chaotic, and endlessly stylish, MvC defined a generation of competitive fighters and became one of Capcom’s most iconic CPS-2 masterpieces.",
         players: "1-2 Players",
         developer: "Capcom",
         coverImage: "/assets/covers/marvel_vs_capcom.jpg",
