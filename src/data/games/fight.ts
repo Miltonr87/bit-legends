@@ -521,6 +521,30 @@ export const fightGames: Game[] = [
         logo: "/assets/logos/svc.png"
     },
     {
+        id: "lobo-snes",
+        title: "Lobo",
+        slug: "lobo-unreleased",
+        embedId: "",
+        year: 1996,
+        genre: "DC Comics / Rare",
+        folder: "DC Comics",
+        publisher: "Ocean Software",
+        characters: ["Lobo", "Space Dolphins", "Bosses", "Intergalactic Criminals"],
+        description:
+            "Play as Lobo — DC’s ultra-violent, cigar-smoking bounty hunter in a cancelled SNES brawler.",
+        longDescription:
+            "Lobo (Unreleased Prototype, 1996) adapts DC’s wildest anti-hero into a brutal, over-the-top 16-bit beat ’em up. " +
+            "Players take control of the Main Man himself, smashing through intergalactic scum with grapples, chain attacks and Lobo’s signature overkill swagger. " +
+            "Developed by Ocean Software but cancelled before launch, the prototype showcases raw pixel-art attitude, heavy combat animations and a chaotic arcade fighting style worthy of the Czarnian bounty hunter.",
+        players: "1-2 Players",
+        developer: "Ocean Software",
+        coverImage: "/assets/covers/lobo.jpeg",
+        embedUrl:
+            "/emulator.html?rom=https://ozequlizbaymnvzeqkyh.supabase.co/storage/v1/object/public/game-rom/Lobo.zip",
+        platform: "Super Nintendo",
+        logo: "/assets/logos/lobo.png"
+    },
+    {
         id: "justice-league-task-force",
         title: "Justice League",
         slug: "justice-league-task-force-usa",
@@ -679,6 +703,7 @@ export const fightGames: Game[] = [
 export const fightFilters = [
     "Marvel Comics",
     "DC Comics",
+    "Rare",
     "Sci-Fi",
     "Horror",
     "Tournament",

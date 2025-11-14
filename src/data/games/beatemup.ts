@@ -723,7 +723,6 @@ export const beatnupGames: Game[] = [
       "Hack through enemy armies, clash with towering generals, and fight atop galloping warhorses as the campaign unfolds across deserts, forts, mountains, and burning cities. " +
       "Gorgeous artwork, cinematic battle scenes, and deep cooperative mechanics elevate Warriors of Fate into a sweeping battlefield adventure — a defining masterpiece of the golden arcade era.",
     players: "1-2 Players",
-    players: "1-2 Players",
     developer: "Capcom",
     coverImage: "/assets/covers/warriorsoffate.jpg",
     logo: "/assets/logos/wof.png",
@@ -931,7 +930,6 @@ export const beatnupGames: Game[] = [
     coverImage: "/assets/covers/theshadow.jpg",
     embedUrl:
       "/emulator.html?rom=https://ozequlizbaymnvzeqkyh.supabase.co/storage/v1/object/public/game-rom/The_Shadow.zip",
-
     platform: "Super Nintendo",
     logo: "/assets/logos/theshadow.png"
   },
@@ -1151,14 +1149,12 @@ export const beatnupGames: Game[] = [
       "Collect items, equip gear, manage resources, and navigate branching routes that reshape the adventure with every playthrough. " +
       "Packed with monsters, traps, story encounters, and co-op synergy, Tower of Doom remains one of Capcom’s most beloved and influential arcade experiences.",
     players: "1-4 Players",
-    players: "1-4 Players",
     developer: "Capcom",
     coverImage: "/assets/covers/dd_tower_of_doom.jpg",
     embedUrl: "https://www.retrogames.cc/embed/8390-dungeons-dragons-tower-of-doom-940113-usa.html",
     platform: "Arcade",
     logo: "/assets/logos/ddtod.png",
   },
-
 ];
 
 export const beatnupFilters = [
