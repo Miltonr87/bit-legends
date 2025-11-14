@@ -74,15 +74,15 @@ const Index = () => {
 
   const genreDescriptions: Record<string, string> = {
     Fantasy: 'Epic RPG quests and magical realms',
-    Urban: 'Streets and gangs in pure beat ’em up mayhem',
+    Urban: 'Streets and gangs in pure mayhem',
     Horror: 'Dark atmospheres with terrifying creatures',
-    Tournament: 'Martial arts tournaments featuring diverse fighters',
-    'Image Comics': 'American independent anti-heroes with attitude',
+    Tournament: 'Martial arts tournaments and diverse fighters',
+    'Image Comics': 'American independent anti-heroes',
     'DC Comics': 'Legendary superheroes and iconic vigilantes',
     'Marvel Comics': 'Iconic superheroes facing cosmic threats',
-    Rare: 'Cancelled prototypes and titles that never launched',
+    Rare: 'Cancelled prototypes lost to time',
     'Sci-Fi': 'Futuristic worlds with advanced technology',
-    'Fight Race': 'High-speed racing with firepower and explosions',
+    'Fight Race': 'High-speed racing with firepower',
   };
 
   return (
