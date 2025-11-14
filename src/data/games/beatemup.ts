@@ -886,6 +886,54 @@ export const beatnupGames: Game[] = [
     platform: "Super Nintendo",
     logo:
       "/assets/logos/spawn.png",
+  }, {
+    id: "shadowhawk-snes",
+    title: "ShadowHawk",
+    slug: "shadowhawk-unreleased",
+    embedId: "",
+    year: 1995,
+    genre: "Image Comics / Rare",
+    folder: "Image Comics",
+    publisher: "Malibu / Image Comics",
+    characters: ["ShadowHawk", "Arson", "Nocturne", "Vigilante Gangs"],
+    description: "Step into the gritty world of ShadowHawk — justice delivered through fear and broken bones.",
+    longDescription:
+      "ShadowHawk (Unreleased Prototype, 1995) brings the dark, street-level vigilante of Image Comics to life in a raw side-scrolling action experience that mirrors the brutality of Jim Valentino’s original series. " +
+      "As ShadowHawk, players stalk crime-ridden alleys, subways, rooftops, and industrial zones while hunting down violent gangs and superpowered threats like Arson and Nocturne. " +
+      "The gameplay emphasizes counterattacks, grapples, and ShadowHawk’s signature bone-breaking justice, delivering a combat style that feels closer to the comic’s urban grit than most 16-bit heroes. " +
+      "Though unfinished, the prototype features moody pixel art, a brooding atmosphere, and a faithful adaptation of one of Image Comics’ most uncompromising vigilantes.",
+    players: "1 Player",
+    developer: "Malibu Interactive",
+    coverImage: "/assets/covers/shadowhawk.jpg",
+    embedUrl: "/emulator.html?rom=https://ozequlizbaymnvzeqkyh.supabase.co/storage/v1/object/public/game-rom/Shadowhawk.zip",
+    platform: "Super Nintendo",
+    logo: "/assets/logos/shadowhawk.png"
+  },
+  {
+    id: "the-shadow",
+    title: "The Shadow",
+    slug: "the-shadow-unreleased",
+    embedId: "",
+    year: 1994,
+    genre: "DC Comics / Rare",
+    folder: "DC Comics",
+    publisher: "Ocean Software",
+    characters: ["The Shadow", "Shiwan Khan", "Lamont Cranston", "Criminal Underworld"],
+    description:
+      "Become The Shadow — the mysterious vigilante who strikes fear into the hearts of criminals.",
+    longDescription:
+      "The Shadow (Unreleased Prototype, 1994) is a rare and atmospheric SNES action game based on the classic pulp hero, later published by DC Comics, who dominated radio dramas and noir literature. " +
+      "Players control Lamont Cranston, using martial arts, pistols, and his signature ability to cloud men's minds to dismantle Shiwan Khan’s criminal forces across dark alleys, clubs, rooftops, and art-deco environments. " +
+      "The game blends beat ’em up combat with projectile attacks and cinematic storytelling, reflecting the 1994 Universal Pictures film. " +
+      "Although cancelled before completion, the prototype reveals stylish pixel art, ambitious animations, and a moody pulp aesthetic worthy of the iconic vigilante.",
+    players: "1 Player",
+    developer: "Ocean Software",
+    coverImage: "/assets/covers/theshadow.jpg",
+    embedUrl:
+      "/emulator.html?rom=https://ozequlizbaymnvzeqkyh.supabase.co/storage/v1/object/public/game-rom/The_Shadow.zip",
+
+    platform: "Super Nintendo",
+    logo: "/assets/logos/theshadow.png"
   },
   {
     id: "jim-lees-wildcats-snes",
@@ -1120,5 +1168,6 @@ export const beatnupFilters = [
   "Sci-Fi",
   "Marvel Comics",
   "DC Comics",
-  'Image Comics'
+  'Image Comics',
+  "Rare",
 ];

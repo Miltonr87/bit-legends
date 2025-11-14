@@ -7,7 +7,7 @@ export const actionGames: Game[] = [
         slug: "castlevania-bloodlines-genesis",
         embedId: "30108",
         year: 1994,
-        genre: "Action",
+        genre: "Horror",
         folder: "Konami",
         publisher: "Konami",
         characters: ["John Morris", "Eric Lecarde", "Elizabeth Bartley", "Dracula", "Drolta Tzuentes"],
@@ -29,7 +29,7 @@ export const actionGames: Game[] = [
         slug: "shinobi-iii-return-of-the-ninja-master-europe",
         embedId: "30503",
         year: 1993,
-        genre: "Action",
+        genre: "Sci-fi",
         folder: "Ninja Legends",
         publisher: "Sega",
         characters: ["Joe Musashi"],
@@ -48,7 +48,7 @@ export const actionGames: Game[] = [
         slug: "robocop-versus-the-terminator-usa",
         embedId: "30351",
         year: 1993,
-        genre: "Action",
+        genre: "Sci-Fi",
         folder: "Virgin Games",
         publisher: "Virgin Games",
         characters: ["RoboCop", "The Terminator", "Skynet Drones", "Cyborg Soldiers"],
@@ -70,7 +70,7 @@ export const actionGames: Game[] = [
         slug: "x-kaliber-2097-snes",
         embedId: "24939",
         year: 1994,
-        genre: "Action",
+        genre: "Sci-Fi",
         folder: "Activision",
         publisher: "Activision",
         characters: ["Slash", "Raptor", "Spuke", "Chainsaw", "Kane"],
@@ -92,7 +92,7 @@ export const actionGames: Game[] = [
         slug: "actraiser-2-usa",
         embedId: "23088",
         year: 1993,
-        genre: "Action",
+        genre: "Horror",
         folder: "Enix",
         publisher: "Enix",
         characters: ["The Master", "Tanzra"],
@@ -114,13 +114,13 @@ export const actionGames: Game[] = [
         slug: "judge-dredd-world",
         embedId: "16931",
         year: 1995,
-        genre: "Action",
+        genre: "DC Comics",
         folder: "Acclaim",
         publisher: "Acclaim Entertainment",
         characters: ["Judge Dredd"],
         description: "Patrol Mega-City One as Judge Dredd in a gritty law-enforcement action platformer.",
         longDescription:
-            "Judge Dredd (1995) for the Sega Genesis is an action platformer based on both the classic British comic and the 1995 film adaptation. " +
+            "Judge Dredd (1995) for the Sega Genesis is an action platformer based on both the classic British DC Comics and the 1995 film adaptation. " +
             "Players step into the boots of the legendary lawman as he enforces justice across the sprawling, crime-ridden districts of Mega-City One. " +
             "The game blends run-and-gun combat, platforming challenges, and mission-based objectives, allowing Dredd to arrest criminals, interrogate suspects, and choose between lethal and non-lethal force. " +
             "With digitized visuals, atmospheric stage designs, and an arsenal of Lawgiver weapon modes, Judge Dredd delivers a gritty, dystopian 16-bit experience faithful to the tone of the franchise.",
@@ -135,5 +135,4 @@ export const actionGames: Game[] = [
 
 export const actionFilters = [
     "All Games",
-    "Action",
 ];

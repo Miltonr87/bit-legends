@@ -495,6 +495,32 @@ export const fightGames: Game[] = [
         logo: "/assets/logos/double_dragon.png"
     },
     {
+        id: "svc-chaos",
+        title: "SNK vs. Capcom",
+        slug: "snk-vs-capcom-svc-chaos-bootleg",
+        embedId: "9863",
+        year: 2003,
+        genre: "Tournament",
+        folder: "SNK vs Capcom",
+        publisher: "SNK Playmore",
+        characters: [
+            "Ryu", "Ken", "Akuma", "Chun-Li", "Guile", "Dhalsim",
+            "Kyo Kusanagi", "Iori Yagami", "Terry Bogard", "Mai Shiranui",
+            "Mr. Karate", "Geese Howard", "Violent Ken"
+        ],
+        description: "A crossover dream match where SNK and Capcom legends collide in brutal 1v1 combat.",
+        longDescription:
+            "SNK vs. Capcom: SVC Chaos (2003) throws fighters from both universes into an explosive, fast-paced tournament built on SNK’s signature arcade intensity. " +
+            "Ryu, Terry, Chun-Li, Iori, Mai, and many others clash in fierce one-on-one battles featuring tight controls, powerful supers, and aggressive pacing. " +
+            "Dark reimaginations like Violent Ken and Mr. Karate add fresh twists to the roster, while the gritty comic-book aesthetic sets a dramatic tone. " +
+            "With sharp sprite work, high-speed duels, and pure versus-fighter energy, SVC Chaos stands as one of the wildest and most electrifying crossover tournaments of the arcade era.",
+        players: "1-2 Players",
+        developer: "SNK Playmore",
+        coverImage: "/assets/covers/snk.jpg",
+        platform: "Arcade",
+        logo: "/assets/logos/svc.png"
+    },
+    {
         id: "justice-league-task-force",
         title: "Justice League",
         slug: "justice-league-task-force-usa",

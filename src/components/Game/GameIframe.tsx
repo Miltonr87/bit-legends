@@ -46,6 +46,7 @@ export const GameIframe = ({ game }: GameIframeProps) => {
       >
         <iframe
           src={iframeUrl}
+          scrolling="no"
           className="absolute inset-0 w-full h-full rounded-lg"
           title={game.title}
           allow="gamepad; fullscreen; autoplay; encrypted-media; picture-in-picture"

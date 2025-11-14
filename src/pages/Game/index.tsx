@@ -16,12 +16,14 @@ import { GameIframe } from '@/components/Game/GameIframe';
 import { GameSidebar } from '@/components/Game/GameSidebar';
 import { useFavoriteGame } from '@/hooks/useFavoriteGame';
 import { useGameSession } from '@/hooks/useGameSession';
+import { useIsMobile } from '@/hooks/useIsMobile';
 import type { Game } from '@/types';
 
 const Game = () => {
   const { id } = useParams();
   const game: Game | undefined = allGames.find((g) => g.id === id);
   const { isFavorite, saveFavorite } = useFavoriteGame(game);
+  const isMobile = useIsMobile();
 
   useGameSession(game);
 
@@ -135,7 +137,7 @@ const Game = () => {
                   {game.longDescription}
                 </p>
               </Card>
-              {game.characters?.length > 0 && (
+              {game.characters?.length > 0 && !isMobile ? (
                 <Card className="p-4 sm:p-6 border-2 border-accent/30 bg-gradient-to-br from-accent/5 to-transparent">
                   <h2 className="text-xl sm:text-2xl font-bold mb-4 text-accent flex items-center gap-2">
                     <Users className="h-5 w-5 sm:h-6 sm:w-6" /> Main Characters
@@ -151,7 +153,7 @@ const Game = () => {
                     ))}
                   </div>
                 </Card>
-              )}
+              ) : null}
             </div>
             <GameSidebar game={game} />
           </div>
