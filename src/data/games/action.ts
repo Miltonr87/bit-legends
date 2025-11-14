@@ -107,7 +107,30 @@ export const actionGames: Game[] = [
         coverImage: "/assets/covers/actraiser.jpg",
         platform: "Super Nintendo",
         logo: "/assets/logos/actraiser.png"
+    },
+    {
+        id: "judge-dredd-genesis",
+        title: "Judge Dredd",
+        slug: "judge-dredd-world",
+        embedId: "16931",
+        year: 1995,
+        genre: "Action",
+        folder: "Acclaim",
+        publisher: "Acclaim Entertainment",
+        characters: ["Judge Dredd"],
+        description: "Patrol Mega-City One as Judge Dredd in a gritty law-enforcement action platformer.",
+        longDescription:
+            "Judge Dredd (1995) for the Sega Genesis is an action platformer based on both the classic British comic and the 1995 film adaptation. " +
+            "Players step into the boots of the legendary lawman as he enforces justice across the sprawling, crime-ridden districts of Mega-City One. " +
+            "The game blends run-and-gun combat, platforming challenges, and mission-based objectives, allowing Dredd to arrest criminals, interrogate suspects, and choose between lethal and non-lethal force. " +
+            "With digitized visuals, atmospheric stage designs, and an arsenal of Lawgiver weapon modes, Judge Dredd delivers a gritty, dystopian 16-bit experience faithful to the tone of the franchise.",
+        players: "1 Player",
+        developer: "Probe Entertainment",
+        coverImage: "/assets/covers/judge.jpg",
+        platform: "Sega Genesis",
+        logo: "/assets/logos/judge.png"
     }
+
 ];
 
 export const actionFilters = [

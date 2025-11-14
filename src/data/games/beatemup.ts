@@ -68,6 +68,28 @@ export const beatnupGames: Game[] = [
     platform: "Arcade",
   },
   {
+    id: "comix-zone",
+    title: "Comix Zone",
+    slug: "comix-zone-usa",
+    embedId: "29773",
+    year: 1995,
+    genre: "Urban",
+    folder: "Comix Zone",
+    publisher: "Sega",
+    characters: ["Sketch Turner", "Roadkill", "Mortus"],
+    description: "A groundbreaking comic book beat ’em up brought to life—panel by panel.",
+    longDescription:
+      "Comix Zone (1995) is one of Sega’s most stylish and innovative beat ’em ups, placing players directly inside the pages of a living comic book. " +
+      "You play as Sketch Turner, a streetwise illustrator pulled into his own creation by the villainous Mortus, forced to fight through hand-drawn panels filled with mutants, punks, and hazards. " +
+      "Each stage feels like flipping through an underground graphic novel, complete with speech bubbles, panel transitions, and dynamic page effects. " +
+      "With tight combat, environmental interactions, grunge-era attitude, and Roadkill the rat as your trusty sidekick, Comix Zone stands as one of the most unique and iconic urban action games on the Sega Genesis.",
+    players: "1 Player",
+    developer: "Sega Technical Institute",
+    coverImage: "/assets/covers/comix.jpeg",
+    platform: "Sega Genesis",
+    logo: "/assets/logos/comix.png",
+  },
+  {
     id: "riot-city",
     title: "Riot City",
     slug: "riot-city-japan",
@@ -931,7 +953,28 @@ export const beatnupGames: Game[] = [
     platform: "Arcade",
     logo: "/assets/logos/nslasher.png"
   },
-
+  {
+    id: "altered-beast",
+    title: "Altered Beast",
+    slug: "altered-beast-arcade",
+    embedId: "7765",
+    year: 1988,
+    genre: "Horror",
+    folder: "Arcade Horror",
+    publisher: "Sega",
+    characters: ["Centurion", "Neff", "Zeus"],
+    description: "Rise from your grave! Transform into beasts and battle the forces of dark sorcery.",
+    longDescription:
+      "Altered Beast (1988) is Sega’s legendary monster-transformation brawler, fusing dark fantasy with arcade horror in a mythic battle between the living and the damned. " +
+      "Summoned by Zeus, a fallen Centurion rises from the grave to rescue Athena, fighting through crypts, temples, shadowed forests, and nightmarish realms under the control of the sorcerer Neff. " +
+      "Collect Spirit Balls to transform into powerful beast forms — including the Werewolf, Dragon, Bear, and Tiger — each with devastating supernatural attacks. " +
+      "Roaring voice samples, grotesque enemies, and iconic ‘80s arcade style make Altered Beast a timeless horror-action experience and one of Sega’s most unforgettable classics.",
+    players: "1-2 Players",
+    developer: "Sega",
+    coverImage: "/assets/covers/altered.jpeg",
+    platform: "Arcade",
+    logo: "/assets/logos/altbeast.png"
+  },
   {
     id: "cadillacs-and-dinosaurs",
     title: "Cadillacs and Dinosaurs",
@@ -996,6 +1039,52 @@ export const beatnupGames: Game[] = [
     platform: "Super Nintendo",
     logo:
       "/assets/logos/xmen_apocalypse.png",
+  },
+  {
+    id: "captain-america-and-the-avengers",
+    title: "Captain America",
+    slug: "captain-america-and-the-avengers-usa",
+    embedId: "24031",
+    year: 1993,
+    genre: "Marvel Comics",
+    folder: "Marvel",
+    publisher: "Data East",
+    characters: ["Captain America", "Iron Man", "Hawkeye", "Vision"],
+    description: "Assemble the Avengers and stop Red Skull’s world-domination plan!",
+    longDescription:
+      "Captain America and The Avengers (1993) on the SNES stands as one of the most charismatic 16-bit beat ’em ups, blending fast-paced action, huge bosses, and that unmistakable classic Marvel comic-book energy. " +
+      "Red Skull is gathering a lethal force of villains — including Ultron, Crossbones, Grim Reaper, and more — and only the Avengers can shut down his global assault. " +
+      "Each hero delivers a unique playstyle: Captain America’s tactical shield work, Iron Man’s energy blasts, Hawkeye’s precision attacks, and Vision’s graceful synthetic combat abilities. " +
+      "Digitized voice lines, explosive music, and a vibrant arcade-inspired presentation make this one of the most nostalgic and accessible Marvel experiences on the SNES.",
+    players: "1-2 Players",
+    developer: "Data East",
+    coverImage: "/assets/covers/capamerica.jpg",
+    embedUrl: "https://www.retrogames.cc/embed/24031-captain-america-and-the-avengers-usa.html",
+    platform: "Super Nintendo",
+    logo: "/assets/logos/captaven.png",
+  },
+  {
+    id: "batman-arcade",
+    title: "Batman",
+    slug: "batman-europe",
+    embedId: "29834",
+    year: 1990,
+    genre: "DC Comics",
+    folder: "DC Comics",
+    publisher: "Atari Games",
+    characters: ["Batman", "The Joker"],
+    description: "A dark action platformer inspired by Tim Burton’s 1989 Batman film.",
+    longDescription:
+      "Batman (1990) for the Arcade stands as one of Atari Games’ finest 16-bit action titles, mixing precise platforming, tight combat, and a visual style drawn directly from Tim Burton’s iconic film. " +
+      "The Dark Knight navigates Gotham’s decaying streets, industrial factories, and chaotic rooftops, taking down armed henchmen, dodging deadly traps, and facing brutal confrontations with the Joker. " +
+      "The gameplay blends acrobatic movement with signature gadgets like the Batarang, grappling hook, and other tools that expand Batman’s tactical options. " +
+      "A moody electronic soundtrack, striking sprite work, and a gritty noir atmosphere make this one of the most stylish and memorable Batman adaptations of the 16-bit era.",
+    players: "1 Player",
+    developer: "Sunsoft",
+    coverImage: "/assets/covers/batman.jpg",
+    embedUrl: "https://www.retrogames.cc/embed/44870-batman.html",
+    platform: "Arcade",
+    logo: "/assets/logos/batman.png",
   },
   {
     id: "dd-tower-of-doom",
