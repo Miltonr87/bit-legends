@@ -86,7 +86,7 @@ export const GameIframe = ({ game }: GameIframeProps) => {
               />
             </div>
             <h2 className="text-lg sm:text-xl font-semibold text-white mb-2">
-              Play with no ads and faster loading ⚡
+              Play with faster loading ⚡
             </h2>
             <p className="text-sm text-gray-300 max-w-md mb-4">
               For the best ad-free gaming experience, we recommend using{' '}
@@ -157,7 +157,7 @@ export const GameIframe = ({ game }: GameIframeProps) => {
       <div className="p-3 sm:p-4 bg-muted/30 border-t border-accent/20">
         <div className="flex items-center gap-2 text-sm sm:text-base text-foreground/80">
           <Gamepad2 className="h-4 w-4 text-accent" />
-          Playing On: {deviceInfo} {braveDetected && '🦁 (Brave)'}
+          Playing On: {deviceInfo} {braveDetected}
         </div>
       </div>
     </Card>
