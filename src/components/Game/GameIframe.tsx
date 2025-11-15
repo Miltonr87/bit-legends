@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Gamepad2 } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 import { useIsMobile } from '@/hooks/useIsMobile';
@@ -14,11 +14,42 @@ export const GameIframe = ({ game }: GameIframeProps) => {
   const iframeRef = useRef<HTMLDivElement>(null);
   const isMobile = useIsMobile();
   const deviceInfo = useDisplayDevice();
+
+  const [braveDetected, setBraveDetected] = useState(false);
   const [braveWarningDismissed, setBraveWarningDismissed] = useState(false);
 
   const iframeUrl =
     game.embedUrl ||
     `https://www.retrogames.cc/embed/${game.embedId}-${game.slug}.html`;
+
+  useEffect(() => {
+    const detectBrave = async () => {
+      try {
+        const nav: any = navigator;
+        if (nav.brave && (await nav.brave.isBrave())) {
+          setBraveDetected(true);
+          setBraveWarningDismissed(true);
+          return;
+        }
+        const ua = nav.userAgent.toLowerCase();
+        if (ua.includes('brave')) {
+          setBraveDetected(true);
+          setBraveWarningDismissed(true);
+          return;
+        }
+        if (
+          nav.userAgentData?.brands?.some((b: any) => b.brand.includes('Brave'))
+        ) {
+          setBraveDetected(true);
+          setBraveWarningDismissed(true);
+        }
+      } catch {
+        setBraveDetected(false);
+      }
+    };
+
+    detectBrave();
+  }, []);
 
   const toggleFullscreen = () => {
     const container = iframeRef.current;
@@ -59,8 +90,8 @@ export const GameIframe = ({ game }: GameIframeProps) => {
             </h2>
             <p className="text-sm text-gray-300 max-w-md mb-4">
               For the best ad-free gaming experience, we recommend using{' '}
-              <strong>Brave Browser</strong> — it blocks intrusive ads by
-              default and boosts performance on PC and Mobile.
+              <strong>Brave Browser</strong> — it blocks ads by default and
+              boosts performance on PC and Mobile.
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
               <a
@@ -123,11 +154,10 @@ export const GameIframe = ({ game }: GameIframeProps) => {
           </>
         )}
       </div>
-
       <div className="p-3 sm:p-4 bg-muted/30 border-t border-accent/20">
         <div className="flex items-center gap-2 text-sm sm:text-base text-foreground/80">
           <Gamepad2 className="h-4 w-4 text-accent" />
-          Playing On: {deviceInfo}
+          Playing On: {deviceInfo} {braveDetected && '🦁 (Brave)'}
         </div>
       </div>
     </Card>
