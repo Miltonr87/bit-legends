@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import { Gamepad2 } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 import { useIsMobile } from '@/hooks/useIsMobile';
@@ -14,6 +14,7 @@ export const GameIframe = ({ game }: GameIframeProps) => {
   const iframeRef = useRef<HTMLDivElement>(null);
   const isMobile = useIsMobile();
   const deviceInfo = useDisplayDevice();
+  const [braveWarningDismissed, setBraveWarningDismissed] = useState(false);
 
   const iframeUrl =
     game.embedUrl ||
@@ -44,28 +45,82 @@ export const GameIframe = ({ game }: GameIframeProps) => {
         className="relative bg-black rounded-lg overflow-hidden"
         style={isMobile ? { height: 'calc(68vh)' } : { aspectRatio: '4/3' }}
       >
-        <iframe
-          src={iframeUrl}
-          scrolling="no"
-          className="absolute inset-0 w-full h-full rounded-lg"
-          title={game.title}
-          allow="gamepad; fullscreen; autoplay; encrypted-media; picture-in-picture"
-          allowFullScreen
-          style={{
-            border: 'none',
-            overflow: 'hidden',
-            backgroundColor: 'black',
-          }}
-          sandbox="allow-scripts allow-same-origin allow-pointer-lock allow-forms allow-presentation"
-        />
-        {isMobile && (
-          <button
-            onClick={toggleFullscreen}
-            className="absolute bottom-1 right-1 z-10 bg-black/60 text-white rounded px-3 py-1 text-xs sm:text-sm border border-white/20 hover:bg-black/10 transition-all"
-            title="Fullscreen"
-          >
-            ⛶
-          </button>
+        {!braveWarningDismissed ? (
+          <div className="absolute inset-0 flex flex-col items-center justify-center text-center bg-gradient-to-b from-black via-neutral-900 to-black p-6">
+            <div className="w-16 h-16 mb-3">
+              <img
+                src="https://brave.com/static-assets/images/brave-logo-sans-text.svg"
+                alt="Brave Browser Logo"
+                className="w-full h-full object-contain"
+              />
+            </div>
+            <h2 className="text-lg sm:text-xl font-semibold text-white mb-2">
+              Play with no ads and faster loading ⚡
+            </h2>
+            <p className="text-sm text-gray-300 max-w-md mb-4">
+              For the best ad-free gaming experience, we recommend using{' '}
+              <strong>Brave Browser</strong> — it blocks intrusive ads by
+              default and boosts performance on PC and Mobile.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-3">
+              <a
+                href="https://brave.com/download/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-4 py-2 rounded-md bg-orange-500 hover:bg-orange-600 text-black font-semibold text-sm transition-all"
+              >
+                PC
+              </a>
+              <a
+                href="https://brave.com/ios/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-4 py-2 rounded-md bg-orange-500 hover:bg-orange-600 text-black font-semibold text-sm transition-all"
+              >
+                APPLE
+              </a>
+              <a
+                href="https://brave.com/android/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-4 py-2 rounded-md bg-orange-500 hover:bg-orange-600 text-black font-semibold text-sm transition-all"
+              >
+                ANDROID
+              </a>
+              <button
+                onClick={() => setBraveWarningDismissed(true)}
+                className="px-4 py-2 rounded-md border border-gray-400 text-gray-200 text-sm hover:bg-white/10 transition-all"
+              >
+                Continue without Brave
+              </button>
+            </div>
+          </div>
+        ) : (
+          <>
+            <iframe
+              src={iframeUrl}
+              scrolling="no"
+              className="absolute inset-0 w-full h-full rounded-lg"
+              title={game.title}
+              allow="gamepad; fullscreen; autoplay; encrypted-media; picture-in-picture"
+              allowFullScreen
+              style={{
+                border: 'none',
+                overflow: 'hidden',
+                backgroundColor: 'black',
+              }}
+              sandbox="allow-scripts allow-same-origin allow-pointer-lock allow-forms allow-presentation"
+            />
+            {isMobile && (
+              <button
+                onClick={toggleFullscreen}
+                className="absolute bottom-1 right-1 z-10 bg-black/60 text-white rounded px-3 py-1 text-xs sm:text-sm border border-white/20 hover:bg-black/10 transition-all"
+                title="Fullscreen"
+              >
+                ⛶
+              </button>
+            )}
+          </>
         )}
       </div>
 
