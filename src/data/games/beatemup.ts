@@ -1114,22 +1114,22 @@ export const beatnupGames: Game[] = [
     title: "Batman",
     slug: "batman-europe",
     embedId: "29834",
-    year: 1990,
+    year: 1991,
     genre: "DC Comics",
     folder: "DC Comics",
-    publisher: "Atari Games",
+    publisher: "Sunsoft",
     characters: ["Batman", "The Joker"],
-    description: "A dark action platformer inspired by Tim Burton’s 1989 Batman film.",
+    description: "A legendary Sunsoft classic: fast action, tight controls, and a dark, stylish atmosphere.",
     longDescription:
-      "Batman (1990) for the Arcade stands as one of Atari Games’ finest 16-bit action titles, mixing precise platforming, tight combat, and a visual style drawn directly from Tim Burton’s iconic film. " +
-      "The Dark Knight navigates Gotham’s decaying streets, industrial factories, and chaotic rooftops, taking down armed henchmen, dodging deadly traps, and facing brutal confrontations with the Joker. " +
-      "The gameplay blends acrobatic movement with signature gadgets like the Batarang, grappling hook, and other tools that expand Batman’s tactical options. " +
-      "A moody electronic soundtrack, striking sprite work, and a gritty noir atmosphere make this one of the most stylish and memorable Batman adaptations of the 16-bit era.",
+      "Batman (1991) by Sunsoft for the Sega Genesis stands as one of the earliest 16-bit Batman adaptations to follow the NES 8-Bit classic, marking a major leap in visuals, sound, and gameplay. " +
+      "Inspired directly by Tim Burton’s film, it blends fast side-scrolling action, sharp platforming, and extremely responsive controls. " +
+      "Batman moves through Gotham’s dark alleys, industrial zones, and neon-lit stages using the Batarang, Batrope, and special weapons while battling waves of henchmen on his way to the final confrontation with the Joker. " +
+      "Naoki Kodaka’s techno-dark soundtrack, detailed sprite work, and atmospheric art direction elevate this game into one of Sunsoft’s most respected and memorable releases.",
     players: "1 Player",
     developer: "Sunsoft",
     coverImage: "/assets/covers/batman.jpg",
-    embedUrl: "https://www.retrogames.cc/embed/44870-batman.html",
-    platform: "Arcade",
+    embedUrl: "https://www.retrogames.cc/embed/29834-batman-europe.html",
+    platform: "Sega Genesis",
     logo: "/assets/logos/batman.png",
   },
   {

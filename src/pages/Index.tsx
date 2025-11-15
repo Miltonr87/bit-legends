@@ -161,15 +161,16 @@ const Index = () => {
           genreDescriptions[selectedSeries] && (
             <div
               className="
-    mb-8 sm:mb-10 
-    p-4 sm:p-5 
-    rounded-xl 
-    bg-accent/5 
-    border border-accent/20 
-    shadow-[0_0_12px_rgba(0,0,0,0.4)]
-    backdrop-blur-sm
-    animate-fade-in
-  "
+        mb-8 sm:mb-10 
+        p-4 sm:p-5 
+        rounded-xl 
+        bg-accent/5 
+        border border-accent/20 
+        shadow-[0_0_12px_rgba(0,0,0,0.4)]
+        backdrop-blur-sm
+        animate-fade-in
+        text-center
+      "
             >
               <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
                 {genreDescriptions[selectedSeries]}
