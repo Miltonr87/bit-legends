@@ -170,7 +170,7 @@ export const beatnupGames: Game[] = [
     characters: ["Leonardo", "Michelangelo", "Donatello", "Raphael"],
     description: "Cowabunga! The Turtles travel through time to save New York!",
     longDescription:
-      "Teenage Mutant Ninja Turtles: Turtles in Time (1992) brings the arcade classic to the Super Nintendo with enhanced visuals and smoother gameplay. " +
+      "Teenage Mutant Ninja Turtles: Turtles in Time (1991) brings the arcade classic to the Super Nintendo with enhanced visuals and smoother gameplay. " +
       "Join the four turtles as they chase Shredder across time — from prehistoric battles to neon-filled futures and pirate ship brawls. " +
       "Each level bursts with personality, humor, and cooperative chaos. " +
       "Praised for its fast-paced combat and iconic soundtrack, it remains one of the greatest side-scrolling beat ’em ups ever made.",
@@ -345,12 +345,35 @@ export const beatnupGames: Game[] = [
     logo: "/assets/logos/captain_commando.png"
   },
   {
+    id: "ninja-warriors",
+    title: "The Ninja Warriors",
+    slug: "ninjawarriors-the-usa",
+    embedId: "20176",
+    year: 1994,
+    genre: "Sci-Fi",
+    folder: "Super Nintendo",
+    publisher: "Taito",
+    characters: ["Ninja", "Kunoichi", "Kamaitachi"],
+    description: "Side-scrolling cyber-ninja action where every strike slices through the regime’s machines.",
+    longDescription:
+      "The Ninja Warriors (1994) is Taito’s stylish cyberpunk side-scrolling beat ’n up — a fusion of mechanical fury and human resolve. " +
+      "Play as one of three android assassins — the stealthy Ninja, the swift Kunoichi, or the powerful Kamaitachi — unleashed to dismantle a tyrant’s robotic army. " +
+      "Smooth animations, heavy impact, and haunting synth melodies blend into a dystopian ballet of combat and rebellion. " +
+      "A dark, atmospheric masterpiece that turns every stage into a duel between steel and spirit.",
+    players: "1-2 Players",
+    developer: "Natsume / Taito",
+    coverImage: "/assets/covers/ninjawarriors.jpeg",
+    embedUrl: "https://www.retrogames.cc/embed/20176-ninjawarriors-the-usa.html",
+    platform: "Super Nintendo",
+    logo: "/assets/logos/ninjawarriors.png"
+  },
+  {
     id: "mmpr-movie",
     title: "Power Rangers",
     slug: "mighty-morphin-power-rangers-the-movie-usa",
     embedId: "19560",
     year: 1995,
-    genre: "Sci-Fi",
+    genre: "Urban",
     folder: "Power Rangers",
     publisher: "Bandai",
     characters: [
@@ -393,7 +416,7 @@ export const beatnupGames: Game[] = [
       "A dark, atmospheric masterpiece — widely considered one of the best movie-based action games ever created.",
     players: "1 Player",
     developer: "Konami",
-    coverImage: "/assets/covers/batman.png",
+    coverImage: "/assets/covers/batmanreturns.jpg",
     platform: "Super Nintendo",
     logo:
       "/assets/logos/batman_returns.png",
