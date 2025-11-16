@@ -818,6 +818,29 @@ export const beatnupGames: Game[] = [
     logo: "/assets/logos/superman.png",
   },
   {
+    id: "spider-man-x-men-arcades-revenge-snes",
+    title: "Spider-Man & X-Men",
+    slug: "spider-man-and-the-x-men-arcades-revenge-snes-usa",
+    embedId: "22747",
+    year: 1992,
+    genre: "Marvel Comics",
+    folder: "Marvel Comics",
+    publisher: "LJN / Acclaim",
+    characters: ["Spider-Man", "Wolverine", "Cyclops", "Storm", "Gambit"],
+    description: "Team up with Spider-Man and the X-Men in a high-stakes platformer inside Arcade’s deadly Murderworld!",
+    longDescription:
+      "Spider-Man and the X-Men in Arcade’s Revenge (1992) unites Marvel’s biggest heroes in a daring crossover adventure on the Super NES. " +
+      "When the twisted villain Arcade traps Spider-Man, Wolverine, Cyclops, Storm, and Gambit inside his lethal amusement park, Murderworld, each hero must face a series of deadly challenges tailored to their powers. " +
+      "Swing across skyscrapers, slash through sentinels, dive into underwater mazes, and blast through robotic enemies in levels bursting with traps and color. " +
+      "Each stage feels distinct — Spider-Man’s agility, Wolverine’s ferocity, Cyclops’s precision, Storm’s flight, and Gambit’s speed all come into play. " +
+      "Blending platforming, combat, and puzzle-like arenas, this ambitious 16-bit title captures the spirit of Marvel teamwork and the thrill of surviving Arcade’s chaotic game of death.",
+    players: "1 Player",
+    developer: "Software Creations Ltd.",
+    coverImage: "/assets/covers/spider&xmen.jpeg",
+    platform: "Super Nintendo",
+    logo: "/assets/logos/spider&xmen.png"
+  },
+  {
     id: "superman-genesis",
     title: "Superman: MoS",
     slug: "superman-genesis-usa",
