@@ -134,7 +134,7 @@ export const actionGames: Game[] = [
         id: "chakan-the-forever-man",
         title: "Chakan: The Forever Man",
         slug: "chakan-usa-europe",
-        embedId: "18520",
+        embedId: "30305",
         year: 1992,
         genre: "Horror",
         folder: "Fantasy",
