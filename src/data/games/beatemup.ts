@@ -797,7 +797,7 @@ export const beatnupGames: Game[] = [
   },
   {
     id: "superman-world",
-    title: "Superman World",
+    title: "Superman",
     slug: "superman-world-usa",
     embedId: "10229",
     year: 1988,
@@ -807,7 +807,7 @@ export const beatnupGames: Game[] = [
     characters: ["Superman", "Lex Luthor", "Darkseid", "General Zod"],
     description: "Fly, punch, and save Metropolis in this classic arcade Superman game!",
     longDescription:
-      "Superman World (1988) soars onto the arcade stage as one of the earliest true superhero experiences. " +
+      "Superman (1988) soars onto the arcade stage as one of the earliest true superhero experiences. " +
       "Take control of the Last Son of Krypton and use your strength, flight, and heat vision to defend Metropolis from chaos. " +
       "Battle through airborne assaults and side-scrolling stages against Lex Luthor, General Zod, and the dark tyrant Darkseid in an explosive showdown across city skylines and alien worlds. " +
       "Blending action, flight, and cinematic flair, it delivers the feeling of wielding Superman’s incredible power like never before on an arcade screen.",
