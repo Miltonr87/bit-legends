@@ -17,6 +17,8 @@ export const GameIframe = ({ game }: GameIframeProps) => {
 
   const [braveDetected, setBraveDetected] = useState(false);
   const [braveWarningDismissed, setBraveWarningDismissed] = useState(false);
+  const [braveLink, setBraveLink] = useState<string | null>(null);
+  const [braveLabel, setBraveLabel] = useState<string | null>(null);
 
   const iframeUrl =
     game.embedUrl ||
@@ -51,15 +53,36 @@ export const GameIframe = ({ game }: GameIframeProps) => {
     detectBrave();
   }, []);
 
+  useEffect(() => {
+    const ua = navigator.userAgent.toLowerCase();
+    if (ua.includes('windows') || ua.includes('linux')) {
+      setBraveLink('https://brave.com/download/');
+      setBraveLabel('PC');
+    } else if (
+      ua.includes('mac') ||
+      ua.includes('iphone') ||
+      ua.includes('ipad')
+    ) {
+      setBraveLink('https://brave.com/ios/');
+      setBraveLabel('APPLE');
+    } else if (ua.includes('android')) {
+      setBraveLink('https://brave.com/android/');
+      setBraveLabel('ANDROID');
+    } else {
+      setBraveLink(null);
+      setBraveLabel(null);
+    }
+  }, []);
+
   const toggleFullscreen = () => {
     const container = iframeRef.current;
     if (!container) return;
     const iframe = container.querySelector('iframe') as any;
     const el: any = iframe || container;
     if (el.requestFullscreen) {
-      el.requestFullscreen().catch(() => {
-        container.classList.toggle('fullscreen-sim');
-      });
+      el.requestFullscreen().catch(() =>
+        container.classList.toggle('fullscreen-sim')
+      );
     } else if (el.webkitRequestFullscreen) {
       el.webkitRequestFullscreen();
     } else if (el.msRequestFullscreen) {
@@ -94,30 +117,16 @@ export const GameIframe = ({ game }: GameIframeProps) => {
               boosts performance on PC and Mobile.
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
-              <a
-                href="https://brave.com/download/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-4 py-2 rounded-md bg-orange-500 hover:bg-orange-600 text-black font-semibold text-sm transition-all"
-              >
-                PC
-              </a>
-              <a
-                href="https://brave.com/ios/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-4 py-2 rounded-md bg-orange-500 hover:bg-orange-600 text-black font-semibold text-sm transition-all"
-              >
-                APPLE
-              </a>
-              <a
-                href="https://brave.com/android/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-4 py-2 rounded-md bg-orange-500 hover:bg-orange-600 text-black font-semibold text-sm transition-all"
-              >
-                ANDROID
-              </a>
+              {braveLink && braveLabel && (
+                <a
+                  href={braveLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 py-2 rounded-md bg-orange-500 hover:bg-orange-600 text-black font-semibold text-sm transition-all"
+                >
+                  {braveLabel}
+                </a>
+              )}
               <button
                 onClick={() => setBraveWarningDismissed(true)}
                 className="px-4 py-2 rounded-md border border-gray-400 text-gray-200 text-sm hover:bg-white/10 transition-all"
