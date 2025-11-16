@@ -752,6 +752,28 @@ export const beatnupGames: Game[] = [
     platform: "Arcade",
   },
   {
+    id: "blades-of-vengeance",
+    title: "Blades of Vengeance",
+    slug: "blades-of-vengeance-usa-europe",
+    embedId: "28264",
+    year: 1993,
+    genre: "Fantasy",
+    folder: "Fantasy",
+    publisher: "Electronic Arts",
+    characters: ["Huntress", "Warrior", "Sorcerer"],
+    description: "Three heroes rise against darkness in a doomed kingdom.",
+    longDescription:
+      "Blades of Vengeance (1993) invites players into a dark medieval world where evil sorcery has plunged the land into chaos. " +
+      "Choose between a fierce Huntress, a mighty Warrior, or a powerful Sorcerer — each with unique skills and weapons. " +
+      "Battle through haunted ruins, volcanic caverns, and cursed citadels as you confront the sinister Goddess of Destruction. " +
+      "With rich visuals, atmospheric music, and challenging gameplay, Blades of Vengeance stands as one of Sega Genesis’s most striking fantasy action adventures.",
+    players: "1-2 Players",
+    developer: "Beam Software",
+    coverImage: "/assets/covers/blades.jpg",
+    logo: "/assets/logos/blades.png",
+    platform: "Sega Genesis",
+  },
+  {
     id: "silent-dragon",
     title: "Silent Dragon",
     slug: "silent-dragon-us",

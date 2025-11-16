@@ -129,8 +129,29 @@ export const actionGames: Game[] = [
         coverImage: "/assets/covers/judge.jpg",
         platform: "Sega Genesis",
         logo: "/assets/logos/judge.png"
+    },
+    {
+        id: "chakan-the-forever-man",
+        title: "Chakan: The Forever Man",
+        slug: "chakan-usa-europe",
+        embedId: "18520",
+        year: 1992,
+        genre: "Horror",
+        folder: "Fantasy",
+        publisher: "Sega",
+        characters: ["Chakan"],
+        description: "An immortal warrior cursed to wander a world consumed by darkness.",
+        longDescription:
+            "Chakan: The Forever Man (1992) for the Sega Genesis descends into a haunting dark-fantasy world where the line between life and death has long faded. " +
+            "Once a proud swordsman who challenged Death itself, Chakan is now cursed with eternal life — doomed to destroy all supernatural evil before he can rest. " +
+            "Armed with twin enchanted blades and elemental powers, players traverse nightmarish realms filled with grotesque creatures, deadly traps, and eerie silence. " +
+            "With its gothic tone, chilling soundtrack, and unforgiving difficulty, Chakan stands as one of Sega’s most atmospheric and somber horror-action adventures — a true cult classic of the 16-bit era.",
+        players: "1 Player",
+        developer: "Extended Play Productions",
+        coverImage: "/assets/covers/chakan.jpg",
+        logo: "/assets/logos/chakan.png",
+        platform: "Sega Genesis",
     }
-
 ];
 
 export const actionFilters = [
