@@ -2,28 +2,6 @@ import { Game } from "../index";
 
 export const fightGames: Game[] = [
     {
-        id: "mk3",
-        title: "Mortal Kombat 3",
-        slug: "mortal-kombat-3-usa",
-        embedId: "24920",
-        year: 1995,
-        genre: "Horror",
-        folder: "Mortal Kombat",
-        publisher: "Acclaim",
-        characters: ["Liu Kang", "Kung Lao", "Sub-Zero", "Scorpion", "Shang Tsung"],
-        description: "Run button and combo system!",
-        longDescription:
-            "Mortal Kombat 3 (1995) shattered expectations with its aggressive new Run button, breakneck speed, and devastating combo system. " +
-            "The forces of Outworld march on Earthrealm, filling the arenas with collapsing cities, deadly traps, and the screams of the fallen. " +
-            "Fan-favorite warriors return alongside new assassins and cyber ninjas, each armed with brutal finishers, ferocious juggles, and secret techniques. " +
-            "Fast, relentless, and unapologetically violent — MK3 remains one of the saga’s most intense battles for survival.",
-        players: "1-2 Players",
-        developer: "Midway",
-        coverImage: "/assets/covers/Mortal_Kombat_3_cover.jpeg",
-        platform: "Super Nintendo",
-        logo: "/assets/logos/mk3.png"
-    },
-    {
         id: "umk3",
         title: "Ultimate Mortal Kombat",
         slug: "ultimate-mortal-kombat-3-usa",
@@ -290,6 +268,27 @@ export const fightGames: Game[] = [
         coverImage: "/assets/covers/kof_2002.jpg",
         platform: "Arcade",
         logo: "/assets/logos/kof2002.png"
+    },
+    {
+        id: "killer-instinct",
+        title: "Killer Instinct",
+        slug: "killer-instinct-usa",
+        embedId: "17355",
+        year: 1995,
+        genre: "Horror",
+        folder: "Killer Instinct",
+        publisher: "Nintendo",
+        characters: ["Jago", "Fulgore", "Orchid", "Sabrewulf", "Glacius", "Spinal", "Combo", "Thunder"],
+        description: "An ultra-combo fighting tournament where combatants clash for supremacy.",
+        longDescription:
+            "Killer Instinct (1995) brings to your 16-bit home console a high-octane fighting experience originally developed in the arcades by Rare. " +
+            "With a roster of fierce warriors, cyber-fighters and otherworldly beasts, each match is a spectacle of multi-hit combos, energy blasts and fearsome finishing moves. " +
+            "The home port retains the core mechanics of the arcade version while adapting the graphics and sound to the SNES hardware.",
+        players: "1-2 Players",
+        developer: "Rare Ltd.",
+        coverImage: "/assets/covers/killerinstinct.jpg",
+        logo: "/assets/logos/killerinstinct.png",
+        platform: "Super Nintendo",
     },
     {
         id: "kof2004",
