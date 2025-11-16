@@ -807,14 +807,80 @@ export const beatnupGames: Game[] = [
     characters: ["Superman", "Lex Luthor", "Darkseid", "General Zod"],
     description: "Fly, punch, and save Metropolis in this classic arcade Superman game!",
     longDescription:
-      "Superman World (also known as Superman: The Man of Steel) is an arcade platformer released in 1989 where you play as the Man of Steel himself. " +
-      "Use superpowers, fly between stages, battle iconic villains like Lex Luthor and Darkseid, and protect Metropolis from total destruction. " +
-      "It’s a rare arcade title that truly makes you feel like a superhero.",
+      "Superman World (1988) soars onto the arcade stage as one of the earliest true superhero experiences. " +
+      "Take control of the Last Son of Krypton and use your strength, flight, and heat vision to defend Metropolis from chaos. " +
+      "Battle through airborne assaults and side-scrolling stages against Lex Luthor, General Zod, and the dark tyrant Darkseid in an explosive showdown across city skylines and alien worlds. " +
+      "Blending action, flight, and cinematic flair, it delivers the feeling of wielding Superman’s incredible power like never before on an arcade screen.",
     players: "1 Player",
     developer: "Sunsoft / Taito",
     coverImage: "/assets/covers/superman_world.jpg",
     platform: "Arcade",
     logo: "/assets/logos/superman.png",
+  },
+  {
+    id: "superman-genesis",
+    title: "Superman: MoS",
+    slug: "superman-genesis-usa",
+    embedId: "30161",
+    year: 1992,
+    genre: "DC Comics",
+    folder: "DC Comics",
+    publisher: "Sunsoft",
+    characters: ["Superman", "Brainiac", "Metallo", "Mr. Mxyzptlk", "The Prankster"],
+    description: "Take on Super-villains in this side-scrolling Genesis adventure as the Man of Steel!",
+    longDescription:
+      "Superman: The Man of Steel (MoS), released in 1992 for the Sega Genesis, puts you in the boots of the Last Son of Krypton in a classic side-scrolling platform/beat ’em up adventure. " +
+      "You’ll battle through iconic foes such as Brainiac, Metallo, Mr. Mxyzptlk and The Prankster, each posing their own twisted brand of chaos. " +
+      "Unlike your usual flights over Metropolis, here you’ll punch, kick and jump your way through five intense stages, switching powers on the fly via collectible icons to turn the tide of battle. " +
+      "It’s a raw, nostalgic blast of 16-bit superhero action that tries to capture that feeling of being faster than a speeding bullet — even if your cape stays firmly grounded most of the time.",
+    players: "1 Player",
+    developer: "Sunsoft / Thinking Rabbit",
+    coverImage: "/assets/covers/superman_mos.jpg",
+    platform: "Sega Genesis",
+    logo: "/assets/logos/superman_mos.png"
+  },
+  {
+    id: "adventures-of-batman-robin-snes",
+    title: "Batman & Robin",
+    slug: "adventures-of-batman-robin-snes-usa",
+    embedId: "24075",
+    year: 1994,
+    genre: "DC Comics",
+    folder: "DC Comics",
+    publisher: "Konami",
+    characters: ["Batman", "Robin", "The Joker", "Catwoman", "Two-Face", "Mr. Freeze"],
+    description: "Jump into Gotham’s shadows and battle iconic villains in this action-platformer starring Batman and Robin!",
+    longDescription:
+      "The Adventures of Batman & Robin (1994) for the Super NES is an adaptation of the hit animated series that puts you in the cape of the Caped Crusader as he battles Gotham’s most dangerous villains. " +
+      "Navigate eight pulse-pounding stages inspired by actual episodes, swinging across rooftops, driving the Batmobile, and taking on legendary foes like The Joker, Catwoman and Mr. Freeze. " +
+      "Packed with gadgets, grappling hooks, and secret-lair gear, it’s a faithful dive into the dark, stylised world of Batman that thrills fans of the series and the 16-bit era alike.",
+    players: "1 Player",
+    developer: "Konami",
+    coverImage: "/assets/covers/batman&robin.jpg",
+    platform: "Super Nintendo",
+    logo: "/assets/logos/batman&robin.png"
+  },
+  {
+    id: "spider-man-snes",
+    title: "Spider-Man",
+    slug: "spider-man-snes-europe",
+    embedId: "20369",
+    year: 1995,
+    genre: "Marvel Comics",
+    folder: "Marvel Comics",
+    publisher: "LJN / Acclaim",
+    characters: ["Spider-Man", "Doc Ock", "Green Goblin", "Sandman", "Venom"],
+    description: "Swing through New York and battle iconic foes in this web-slinging SNES adventure!",
+    longDescription:
+      "Spider-Man (1995) swings onto the Super NES with fast-paced, web-slinging action straight from the pages of Marvel Comics. " +
+      "Take control of the wall-crawler himself and patrol the streets and skyscrapers of New York City to stop a wave of chaos unleashed by Doc Ock, the Green Goblin, Sandman, and Venom. " +
+      "Leap, punch, and swing through multi-layered stages filled with traps, thugs, and boss battles that demand quick reflexes and clever web use. " +
+      "Faithful to the tone of the 90s animated series, it delivers colorful visuals, energetic music, and that unmistakable feeling of being Spider-Man — agile, witty, and always one swing away from danger.",
+    players: "1 Player",
+    developer: "Western Technologies",
+    coverImage: "/assets/covers/spiderman.jpg",
+    platform: "Super Nintendo",
+    logo: "/assets/logos/spiderman.png"
   },
   {
     id: "death-return-superman",
