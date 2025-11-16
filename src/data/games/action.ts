@@ -137,7 +137,7 @@ export const actionGames: Game[] = [
         embedId: "30305",
         year: 1992,
         genre: "Horror",
-        folder: "Fantasy",
+        folder: "Sega",
         publisher: "Sega",
         characters: ["Chakan"],
         description: "An immortal warrior cursed to wander a world consumed by darkness.",
@@ -150,6 +150,48 @@ export const actionGames: Game[] = [
         developer: "Extended Play Productions",
         coverImage: "/assets/covers/chakan.jpg",
         logo: "/assets/logos/chakan.png",
+        platform: "Sega Genesis",
+    },
+    {
+        id: "doom-troopers",
+        title: "Doom Troopers",
+        slug: "doom-troopers-the-mutant-chronicles-usa",
+        embedId: "29775",
+        year: 1995,
+        genre: "Horror",
+        folder: "Horror",
+        publisher: "Playmates Interactive Entertainment",
+        characters: ["Mitch Hunter", "Max Steiner"],
+        description: "Two elite commandos battle the mutant-legions in a brutal action-shooter.",
+        longDescription:
+            "Doom Troopers: The Mutant Chronicles (1995) for the Sega Genesis pits the hardened Doomtroopers Mitch Hunter and Max Steiner against the vile Dark Legion — a mutant scourge threatening human outposts across the solar system. " +
+            "Run-and-gun gameplay meets savage horror visuals: decapitations, gory explosions, and relentless mutants stalk each of the eight levels." +
+            "With two-player cooperative mode, high-power weapon upgrades, and challenging action, this title stands out as one of the more intense horror-inflected shooters in the 16-bit era.",
+        players: "1-2 Players",
+        developer: "Adrenalin Entertainment",
+        coverImage: "/assets/covers/doomtroopers.jpg",
+        logo: "/assets/logos/doomtroopers.png",
+        platform: "Sega Genesis",
+    },
+    {
+        id: "gargoyles-genesis",
+        title: "Gargoyles",
+        slug: "gargoyles-usa",
+        embedId: "16982",
+        year: 1995,
+        genre: "Horror",
+        folder: "Horror",
+        publisher: "Buena Vista Interactive",
+        characters: ["Goliath", "Demona"],
+        description: "A gargoyle guardian battles through time to destroy the evil Eye of Odin.",
+        longDescription:
+            "Gargoyles (1995) for the Sega Genesis is a dark, gothic-platformer based on the Disney animated series. " +
+            "You play as Goliath, leader of the gargoyle clan, who must face ancient Viking sorcery and a modern robotic army after the evil Eye of Odin resurfaces. " +
+            "Climb walls, leap from skyscrapers, and take to the air on wings as you traverse medieval castles and 1990s Manhattan rooftops. With rich animation and challenging levels, it’s a standout in the horror-tinged action platform genre of the 16-bit era.",
+        players: "1 Player",
+        developer: "Disney Interactive",
+        coverImage: "/assets/covers/gargoyles.jpg",
+        logo: "/assets/logos/gargoyles.png",
         platform: "Sega Genesis",
     }
 ];
