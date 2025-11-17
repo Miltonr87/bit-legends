@@ -77,12 +77,12 @@ const Index = () => {
     Urban: 'Streets and gangs in pure mayhem',
     Horror: 'Dark atmospheres with terrifying creatures',
     Tournament: 'Martial arts tournaments and diverse fighters',
-    'Image Comics': 'American independent anti-heroes',
+    'Image Comics': 'American independent heroes and anti-heroes',
     'DC Comics': 'Legendary superheroes and iconic vigilantes',
     'Marvel Comics': 'Iconic superheroes facing cosmic threats',
     Rare: 'Cancelled prototypes lost to time',
     'Sci-Fi': 'Futuristic worlds with advanced technology',
-    'Fight Race': 'High-speed racing with firepower',
+    'Fight Race': 'High-speed combat racing with firepower',
   };
 
   return (
@@ -110,8 +110,8 @@ const Index = () => {
           </h1>
           <p className="text-base sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-6 sm:mb-8 px-4">
             Enter the ring and master the art of combat in different scenarios.
-            Classic fighters, iconic stages, and timeless duels reborn for the
-            modern age.
+            Classic superheroes, vigilantes and fighters in iconic stages reborn
+            for the modern age.
           </p>
         </div>
       </section>

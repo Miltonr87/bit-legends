@@ -637,12 +637,37 @@ export const beatnupGames: Game[] = [
     characters: ["RoboCop"],
     description: "Serve the public trust, protect the innocent, uphold the law.",
     longDescription:
-      "RoboCop 2 (1991) brings the cybernetic law enforcer to the arcade battlefield. Developed by Data East, players take control of RoboCop to clean up the crime-ridden streets of Detroit. With cinematic action, robotic precision, and explosive combat, this side-scrolling shooter captures the gritty atmosphere of the iconic movie sequel.",
+      "RoboCop 2 (1991) brings Detroit’s cybernetic law enforcer back into the line of fire in a gritty, explosive arcade adaptation. " +
+      "Developed by Data East, players guide RoboCop through crime-infested streets, industrial zones, and Nuke-fueled hideouts as he dismantles gangs with brutal precision. " +
+      "Cinematic animations, heavy firepower, and RoboCop’s trademark unstoppable march combine to deliver a metallic, high-impact side-scrolling shooter. " +
+      "Faithful to the dark tone of the film, this arcade classic captures the cold justice, corruption, and chaos at the heart of the RoboCop saga.",
     players: "1-2 Players",
     developer: "Data East",
     coverImage: "/assets/covers/robocop2.jpg",
     platform: "Arcade",
     logo: "/assets/logos/robocop2.png"
+  },
+  {
+    id: "battle-circuit",
+    title: "Battle Circuit",
+    slug: "battle-circuit-970319-euro-phoenix-edition-bootleg",
+    embedId: "7887",
+    year: 1997,
+    genre: "Sci-Fi",
+    folder: "Arcade Legends",
+    publisher: "Capcom",
+    characters: ["Cyber Blue", "Yellow Iris", "Pink Ostrich", "Captain Silver", "Alien Green"],
+    description: "Capcom’s futuristic bounty-hunter brawler bursting with style and chaos.",
+    longDescription:
+      "Battle Circuit (1997) is Capcom’s wild sci-fi beat ’em up set in a neon-drenched future where cyber-enhanced bounty hunters chase criminals across sprawling techno-cities. " +
+      "Play as Cyber Blue, Yellow Iris, Pink Ostrich, Captain Silver, or Alien Green as you unleash electrifying combos, energy attacks, and over-the-top special moves. " +
+      "From rogue A.I. networks to shape-shifting mutants, every stage explodes with comic-book flair, colorful animation, and high-speed arcade action. " +
+      "As one of Capcom’s final CPS-2 brawlers, Battle Circuit stands as a vibrant cult classic — stylish, frenetic, and packed with sci-fi personality.",
+    players: "1-4 Players",
+    developer: "Capcom",
+    coverImage: "/assets/covers/battle.jpg",
+    platform: "Arcade",
+    logo: "/assets/logos/battle.png"
   },
   {
     id: "super-double-dragon-snes",
@@ -686,6 +711,27 @@ export const beatnupGames: Game[] = [
     platform: "Super Nintendo",
     logo:
       "/assets/logos/spiderman_maximum_carnage.png",
+  },
+  {
+    id: "xmen-danger-zone",
+    title: "X-Men: Genesis",
+    slug: "x-men-usa",
+    embedId: "16944",
+    year: 1993,
+    genre: "Marvel Comics",
+    folder: "Marvel",
+    publisher: "Sega",
+    characters: ["Wolverine", "Cyclops", "Gambit", "Beast", "Nightcrawler", "Psylocke"],
+    description: "The X-Men battle Magneto’s forces in a classic 16-bit Danger Room showdown!",
+    longDescription:
+      "X-Men: Genesis (1993) for the Sega Genesis throws Marvel’s iconic mutants into a series of intense Danger Room simulations that spiral into a full-scale war against Magneto. " +
+      "Use each hero’s unique abilities — from Wolverine’s ferocity to Nightcrawler’s teleportation — to survive traps, Sentinels, and elite members of the Brotherhood of Evil Mutants. " +
+      "With challenging stages, atmospheric visuals, and a memorable twist that breaks the fourth wall, this early Genesis hit remains a cult favorite among X-Men fans.",
+    players: "1-2 Players",
+    developer: "Western Technologies / Sega",
+    coverImage: "/assets/covers/xmengenesis.jpg",
+    platform: "Sega Genesis",
+    logo: "/assets/logos/xmengenesis.png",
   },
   {
     id: "xmen-2-clone-wars",
@@ -1025,7 +1071,7 @@ export const beatnupGames: Game[] = [
     slug: "shadowhawk-unreleased",
     embedId: "",
     year: 1995,
-    genre: "Image Comics / Rare",
+    genre: "Image Comics",
     folder: "Image Comics",
     publisher: "Malibu / Image Comics",
     characters: ["ShadowHawk", "Arson", "Nocturne", "Vigilante Gangs"],
@@ -1048,7 +1094,7 @@ export const beatnupGames: Game[] = [
     slug: "the-shadow-unreleased",
     embedId: "",
     year: 1994,
-    genre: "DC Comics / Rare",
+    genre: "DC Comics",
     folder: "DC Comics",
     publisher: "Ocean Software",
     characters: ["The Shadow", "Shiwan Khan", "Lamont Cranston", "Criminal Underworld"],
@@ -1178,6 +1224,28 @@ export const beatnupGames: Game[] = [
     logo: '/assets/logos/dino.png'
   },
   {
+    id: "aliens-arcade",
+    title: "Aliens",
+    slug: "aliens-world-set-1",
+    embedId: "7757",
+    year: 1990,
+    genre: "Sci-Fi",
+    folder: "Konami Classics",
+    publisher: "Konami",
+    characters: ["Ellen Ripley", "Private Hicks"],
+    description: "Konami’s intense sci-fi shooter inspired by the iconic film!",
+    longDescription:
+      "Aliens (1990) is Konami’s explosive sci-fi adaptation of James Cameron’s legendary film, thrusting Ripley and Hicks into a relentless fight for survival. " +
+      "Blast through infested colonies, bio-mechanical hives, derelict ships, and alien breeding grounds as waves of Xenomorphs attack from every angle. " +
+      "Armed with pulse rifles, flamethrowers, smartguns, and heavy firepower, players push through dark corridors and shifting environments in a desperate forward assault. " +
+      "With atmospheric pixel art, pulse-pounding music, and some of Konami’s most aggressive enemy design, Aliens stands as one of the most iconic sci-fi shooters of the early arcade era.",
+    players: "1-2 Players",
+    developer: "Konami",
+    coverImage: "/assets/covers/aliens.jpg",
+    platform: "Arcade",
+    logo: "/assets/logos/aliens.png"
+  },
+  {
     id: "xmen-arcade",
     title: "X-Men",
     slug: "x-men-2-players-ver-aaa",
@@ -1267,6 +1335,28 @@ export const beatnupGames: Game[] = [
     logo: "/assets/logos/batman.png",
   },
   {
+    id: "gi-joe-arcade",
+    title: "G.I. Joe",
+    slug: "g-i-joe-us-uab",
+    embedId: "33534",
+    year: 1992,
+    genre: "Image Comics",
+    folder: "Image Comics",
+    publisher: "Konami",
+    characters: ["Duke", "Snake Eyes", "Scarlett", "Roadblock"],
+    description: "Elite military action in a high-speed forward assault!",
+    longDescription:
+      "G.I. Joe (1992) by Konami is a high-intensity assault shooter where an elite squad charges forward through explosive and cinematic battlefields. " +
+      "Based on the legendary heroes now published by Image Comics and Skybound Entertainment, the game lets you command Duke, Snake Eyes, Scarlett, or Roadblock as they unleash nonstop gunfire against Cobra’s forces across cities, jungles, and enemy fortresses. " +
+      "Its pseudo-3D forward movement, digitized voice work, and relentless firefights create an arcade spectacle that stands out as one of Konami’s most dynamic run-and-gun experiences. " +
+      "A pure surge of military adrenaline, built on teamwork, firepower, and rapid forward assault.",
+    players: "1-4 Players",
+    developer: "Konami",
+    coverImage: "/assets/covers/gijoe.jpg",
+    logo: "/assets/logos/gijoe.png",
+    platform: "Arcade",
+  },
+  {
     id: "dd-tower-of-doom",
     title: "D&D: Tower of Doom",
     slug: "dungeons-dragons-tower-of-doom-euro",
@@ -1299,5 +1389,4 @@ export const beatnupFilters = [
   "Marvel Comics",
   "DC Comics",
   'Image Comics',
-  "Rare",
 ];

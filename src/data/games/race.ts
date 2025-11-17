@@ -8,7 +8,7 @@ export const raceGames: Game[] = [
         embedId: "24053",
         year: 1993,
         genre: "Fight Race",
-        folder: "Racing",
+        folder: "Fight Race",
         publisher: "Interplay",
         characters: ["Snake Sanders", "Cyberhawk", "Jake Badlands", "Tarquinn", "Ivanzypher", "Katarina Lyons"],
         description: "Racing with rock soundtrack!",
@@ -30,7 +30,7 @@ export const raceGames: Game[] = [
         embedId: "20158",
         year: 1994,
         genre: "Fight Race",
-        folder: "Race",
+        folder: "Fight Race",
         publisher: "Konami",
         characters: ["Throttle", "Vinnie", "Modo", "Limburger", "Greasepit", "Dr.Karbunkle"],
         description: "Cartoon motorcycle racing on Mars!",
@@ -46,35 +46,13 @@ export const raceGames: Game[] = [
         platform: "Super Nintendo",
     },
     {
-        id: "riding-fight",
-        title: "Riding Fight",
-        slug: "riding-fight-ver-1-0a",
-        embedId: "34209",
-        year: 1992,
-        genre: "Fight Race",
-        folder: "Race",
-        publisher: "Taito",
-        characters: ["Ryu", "Billy", "Gary", "Burt", "Lisa"],
-        description: "High-speed futuristic combat on the streets!",
-        longDescription:
-            "Riding Fight (1992) is Taito’s cyberpunk fusion of racing and brawling — a kinetic ride through neon-lit megacities and high-tech sky highways. " +
-            "Punch, kick, and clash with rival riders at breakneck speeds while weaving through traffic and futuristic landscapes. " +
-            "Its smooth scaling effects, fast action, and arcade flair make it a standout hybrid of combat and speed. " +
-            "A stylish, adrenaline-pumping sprint through a world where every race is a street fight.",
-        players: "1-2 Players",
-        developer: "Taito",
-        coverImage: "/assets/covers/ridingfight.jpg",
-        logo: "/assets/logos/ridingf.png",
-        platform: "Arcade",
-    },
-    {
         id: "batman-returns",
         title: "Batman Returns CD",
         slug: "batman-returns-usa",
-        embedId: "40680",          // adjust embedId if needed
+        embedId: "40680",
         year: 1993,
         genre: "Fight Race",
-        folder: "Race",
+        folder: "Fight Race",
         publisher: "Sega",
         characters: ["Batman", "Catwoman", "The Penguin"],
         description: "Batmobile & Batskiboat driving levels from the Sega CD version of Batman Returns.",
@@ -88,7 +66,29 @@ export const raceGames: Game[] = [
         coverImage: "/assets/covers/batmanreturnscd.jpg",
         logo: "/assets/logos/batman_returns.png",
         platform: "Sega CD"
-    }
+    },
+    {
+        id: "riding-fight",
+        title: "Riding Fight",
+        slug: "riding-fight-ver-1-0a",
+        embedId: "34209",
+        year: 1992,
+        genre: "Fight Race",
+        folder: "Fight Race",
+        publisher: "Taito",
+        characters: ["Ryu", "Billy", "Gary", "Burt", "Lisa"],
+        description: "High-speed futuristic combat on the streets!",
+        longDescription:
+            "Riding Fight (1992) is Taito’s cyberpunk interpretation of Fight Race — a high-speed pursuit through neon-drenched megacities and skyway highways. " +
+            "Clash with rival riders using punches, kicks, and acrobatic strikes as you rocket forward at breakneck speed. " +
+            "Its fluid scaling effects, nonstop motion, and explosive arcade flair create a seamless fusion of combat and momentum. " +
+            "A pulse-pounding sprint where every encounter hits at full throttle.",
+        players: "1-2 Players",
+        developer: "Taito",
+        coverImage: "/assets/covers/ridingfight.jpg",
+        logo: "/assets/logos/ridingf.png",
+        platform: "Arcade",
+    },
 
 ];
 
