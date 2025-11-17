@@ -132,7 +132,7 @@ export const actionGames: Game[] = [
     },
     {
         id: "chakan-the-forever-man",
-        title: "Chakan: The Forever Man",
+        title: "Chakan",
         slug: "chakan-usa-europe",
         embedId: "30305",
         year: 1992,
@@ -193,7 +193,7 @@ export const actionGames: Game[] = [
         coverImage: "/assets/covers/gargoyles.jpg",
         logo: "/assets/logos/gargoyles.png",
         platform: "Sega Genesis",
-    }
+    },
 ];
 
 export const actionFilters = [
