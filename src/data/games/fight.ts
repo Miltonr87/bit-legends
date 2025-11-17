@@ -41,7 +41,7 @@ export const fightGames: Game[] = [
             "A historic landmark that ignited arcade culture and shaped gaming history.",
         players: "1-2 Players",
         developer: "Capcom",
-        coverImage: "/assets/covers/street_fighter_2.png",
+        coverImage: "/assets/covers/street_fighter_2.jpg",
         platform: "Super Nintendo",
         logo: "/assets/logos/sf2.png"
     },
