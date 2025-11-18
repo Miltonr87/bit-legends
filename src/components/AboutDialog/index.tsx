@@ -20,7 +20,7 @@ export const AboutDialog = () => {
         <Button
           variant="ghost"
           size="lg"
-          className="text-center hover:text-accent px-3 sm:px-4 sm:text-base text-sm"
+          className="text-center px-3 sm:px-4 sm:text-base text-sm text-accent hover:text-accent hover:bg-accent/10 transition-colors"
         >
           <Info className="h-6 w-6 sm:h-5 sm:w-5 sm:mr-2" />
           <span className="hidden sm:inline">About</span>
