@@ -5,7 +5,8 @@ import { Header } from '@/components/Layout/Header';
 import { Footer } from '@/components/Layout/Footer';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Search } from 'lucide-react';
+import { Search, Server, RadioTower } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 import {
   Pagination,
   PaginationContent,
@@ -16,12 +17,24 @@ import {
 } from '@/components/ui/pagination';
 
 const GAMES_PER_PAGE = 10;
+const GAME_COUNT_SIMULATED = allGames.length;
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 10, scale: 0.97 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: { duration: 0.1, ease: 'easeOut' },
+  },
+};
 
 const Index = () => {
   const [selectedSeries, setSelectedSeries] = useState<string>('All Games');
   const [searchQuery, setSearchQuery] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
   const [shuffledGames, setShuffledGames] = useState(allGames);
+  const [isServerActive, setIsServerActive] = useState<boolean | null>(null);
 
   useEffect(() => {
     const shuffled = [...allGames];
@@ -30,6 +43,26 @@ const Index = () => {
       [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
     }
     setShuffledGames(shuffled);
+  }, []);
+
+  useEffect(() => {
+    const checkServerStatus = async () => {
+      setIsServerActive(null);
+      const url = 'https://www.retrogames.cc/';
+      try {
+        const start = performance.now();
+        await fetch(url, {
+          method: 'HEAD',
+          mode: 'no-cors',
+        });
+        const end = performance.now();
+        setIsServerActive(true);
+        console.log('Retrogames latency:', Math.round(end - start), 'ms');
+      } catch (err) {
+        setIsServerActive(false);
+      }
+    };
+    checkServerStatus();
   }, []);
 
   let filteredGames = shuffledGames;
@@ -77,12 +110,57 @@ const Index = () => {
     Urban: 'Streets and gangs in pure mayhem',
     Horror: 'Dark atmospheres with terrifying creatures',
     Tournament: 'Martial arts tournaments and diverse fighters',
-    'Image Comics': 'American independent heroes and anti-heroes',
-    'DC Comics': 'Legendary superheroes and iconic vigilantes',
-    'Marvel Comics': 'Iconic superheroes facing cosmic threats',
-    Rare: 'Cancelled prototypes lost to time',
+    'Image Comics': 'American independent anti-heroes',
+    'DC Comics': 'Metahumans superheroes and vigilantes',
+    'Marvel Comics': 'Avengers and mutants facing cosmic threats',
+    Rare: 'Cancelled prototypes or limited releases',
     'Sci-Fi': 'Futuristic worlds with advanced technology',
     'Fight Race': 'High-speed combat racing with firepower',
+  };
+
+  const getServerStatusDisplay = () => {
+    let iconClass = 'h-5 w-5 animate-pulse';
+    let text = 'Checking Server Status...';
+    let color = 'text-yellow-400';
+    let ringClass = 'ring-yellow-400';
+    if (isServerActive === true) {
+      iconClass = 'h-5 w-5';
+      text = 'Online';
+      color = 'text-green-500';
+      ringClass = 'ring-green-500';
+    } else if (isServerActive === false) {
+      iconClass = 'h-5 w-5';
+      text = 'Offline';
+      color = 'text-red-500';
+      ringClass = 'ring-red-500';
+    }
+    const glowStyle = {
+      boxShadow: `0 0 10px 0 ${color
+        .replace('text-', '')
+        .replace('-500', '')
+        .replace('-400', '')}, inset 0 0 5px ${color
+        .replace('text-', '')
+        .replace('-500', '')
+        .replace('-400', '')}`,
+    };
+    return (
+      <div
+        className={`flex items-center gap-2 px-3 py-1 rounded-full bg-card/50 border border-current shadow-lg backdrop-blur-sm ${color} transition-all duration-500 hover:scale-[1.02]`}
+        style={glowStyle}
+      >
+        <RadioTower className={iconClass} />
+        <span className="text-sm font-semibold tracking-wider">{text}</span>
+        <span
+          className={`h-2 w-2 rounded-full ${
+            isServerActive === null
+              ? 'bg-yellow-400 animate-pulse'
+              : isServerActive
+              ? 'bg-green-500'
+              : 'bg-red-500'
+          } ring-1 ${ringClass} transition-colors`}
+        ></span>
+      </div>
+    );
   };
 
   return (
@@ -113,6 +191,38 @@ const Index = () => {
             Classic superheroes, vigilantes and fighters in iconic stages reborn
             for the modern age.
           </p>
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mt-6">
+            <AnimatePresence>
+              {isServerActive !== null && (
+                <motion.div
+                  key="server-status"
+                  initial="hidden"
+                  animate="visible"
+                  exit="hidden"
+                  variants={fadeUp}
+                >
+                  {getServerStatusDisplay()}
+                </motion.div>
+              )}
+            </AnimatePresence>
+            <AnimatePresence>
+              {isServerActive === true && (
+                <motion.div
+                  key="game-counter"
+                  initial="hidden"
+                  animate="visible"
+                  exit="hidden"
+                  variants={fadeUp}
+                  className="px-3 py-1 rounded-full bg-card/50 border border-primary/50 shadow-lg backdrop-blur-sm text-primary transition-all duration-500 hover:scale-[1.02]"
+                >
+                  <span className="text-sm font-semibold tracking-wider flex items-center gap-1">
+                    <Server className="h-5 w-5 animate-pulse" />
+                    {GAME_COUNT_SIMULATED} Games
+                  </span>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
         </div>
       </section>
       <section className="container mx-auto px-4 py-8 sm:py-12">
@@ -159,19 +269,7 @@ const Index = () => {
         </div>
         {selectedSeries !== 'All Games' &&
           genreDescriptions[selectedSeries] && (
-            <div
-              className="
-        mb-8 sm:mb-10 
-        p-4 sm:p-5 
-        rounded-xl 
-        bg-accent/5 
-        border border-accent/20 
-        shadow-[0_0_12px_rgba(0,0,0,0.4)]
-        backdrop-blur-sm
-        animate-fade-in
-        text-center
-      "
-            >
+            <div className="mb-8 sm:mb-10 p-4 sm:p-5 rounded-xl bg-accent/5 border border-accent/20 shadow-[0_0_12px_rgba(0,0,0,0.4)] backdrop-blur-sm animate-fade-in text-center">
               <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
                 {genreDescriptions[selectedSeries]}
               </p>

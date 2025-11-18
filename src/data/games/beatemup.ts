@@ -1070,7 +1070,7 @@ export const beatnupGames: Game[] = [
     slug: "shadowhawk-unreleased",
     embedId: "",
     year: 1995,
-    genre: "Image Comics",
+    genre: "Image Comics / Rare",
     folder: "Image Comics",
     publisher: "Malibu / Image Comics",
     characters: ["ShadowHawk", "Arson", "Nocturne", "Vigilante Gangs"],
@@ -1093,7 +1093,7 @@ export const beatnupGames: Game[] = [
     slug: "the-shadow-unreleased",
     embedId: "",
     year: 1994,
-    genre: "DC Comics",
+    genre: "DC Comics / Rare",
     folder: "DC Comics",
     publisher: "Ocean Software",
     characters: ["The Shadow", "Shiwan Khan", "Lamont Cranston", "Criminal Underworld"],
@@ -1339,16 +1339,16 @@ export const beatnupGames: Game[] = [
     slug: "g-i-joe-us-uab",
     embedId: "33534",
     year: 1992,
-    genre: "Image Comics",
+    genre: "Image Comics / Rare",
     folder: "Image Comics",
     publisher: "Konami",
     characters: ["Duke", "Snake Eyes", "Scarlett", "Roadblock"],
     description: "Elite military action in a high-speed forward assault!",
     longDescription:
       "G.I. Joe (1992) by Konami is a high-intensity assault shooter where an elite squad charges forward through explosive and cinematic battlefields. " +
-      "Based on the legendary heroes now published by Image Comics and Skybound Entertainment, the game lets you command Duke, Snake Eyes, Scarlett, or Roadblock as they unleash nonstop gunfire against Cobra’s forces across cities, jungles, and enemy fortresses. " +
+      "Based on the legendary heroes (now published by Image Comics and Skybound Entertainment), the game lets you command Duke, Snake Eyes, Scarlett, or Roadblock as they unleash nonstop gunfire against Cobra’s forces across cities, jungles, and enemy fortresses. " +
       "Its pseudo-3D forward movement, digitized voice work, and relentless firefights create an arcade spectacle that stands out as one of Konami’s most dynamic run-and-gun experiences. " +
-      "A pure surge of military adrenaline, built on teamwork, firepower, and rapid forward assault.",
+      "Because of the limited number released, finding an original G.I. Joe cabinet today is extremely difficult making it highly desirable and rare for collectors.",
     players: "1-4 Players",
     developer: "Konami",
     coverImage: "/assets/covers/gijoe.jpg",
@@ -1388,4 +1388,5 @@ export const beatnupFilters = [
   "Marvel Comics",
   "DC Comics",
   'Image Comics',
+  "Rare"
 ];

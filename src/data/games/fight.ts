@@ -525,7 +525,7 @@ export const fightGames: Game[] = [
         slug: "lobo-unreleased",
         embedId: "",
         year: 1996,
-        genre: "DC Comics",
+        genre: "DC Comics / Rare",
         folder: "DC Comics",
         publisher: "Ocean Software",
         characters: ["Lobo", "Space Dolphins", "Bosses", "Intergalactic Criminals"],
