@@ -1,5 +1,12 @@
 import { Card } from '@/components/ui/card';
-import { Gamepad2, Keyboard } from 'lucide-react';
+import {
+  Gamepad2,
+  Keyboard,
+  CornerDownLeft,
+  CornerUpLeft,
+  CornerUpRight,
+  CornerDownRight,
+} from 'lucide-react';
 
 export const GameController = () => {
   const dpad = {
@@ -8,10 +15,12 @@ export const GameController = () => {
     left: '←',
     right: '→',
     l1: 'Q',
-    r1: 'R',
+    r1: 'E',
+    l2: 'R',
+    r2: 'T',
   };
 
-  const actions = ['Z', 'X', 'A', 'S', 'E', 'T'];
+  const actions = ['A', 'S', 'Z', 'X'];
 
   const middle = [
     { action: 'Start', key: 'ENTER' },
@@ -95,12 +104,24 @@ export const GameController = () => {
             <h3 className="text-sm font-semibold text-accent uppercase tracking-wide mb-2">
               Triggers
             </h3>
-            <div className="flex gap-4">
-              <div className="h-9 w-9 flex items-center justify-center rounded-md bg-muted/40 border border-border font-semibold">
+            <div className="flex gap-4 mb-2">
+              <div className="h-9 w-9 flex items-center justify-center rounded-md bg-muted/60 border border-border font-semibold">
+                <CornerUpLeft className="h-5 w-5 text-accent" />
                 {dpad.l1}
               </div>
-              <div className="h-9 w-9 flex items-center justify-center rounded-md bg-muted/40 border border-border font-semibold">
+              <div className="h-9 w-9 flex items-center justify-center rounded-md bg-muted/60 border border-border font-semibold">
                 {dpad.r1}
+                <CornerUpRight className="h-5 w-5 text-accent" />
+              </div>
+            </div>
+            <div className="flex gap-4">
+              <div className="h-9 w-9 flex items-center justify-center rounded-md bg-muted/60 border border-border font-semibold">
+                <CornerDownLeft className="h-5 w-5 text-accent" />
+                {dpad.l2}
+              </div>
+              <div className="h-9 w-9 flex items-center justify-center rounded-md bg-muted/60 border border-border font-semibold">
+                {dpad.r2}
+                <CornerDownRight className="h-5 w-5 text-accent" />
               </div>
             </div>
           </div>

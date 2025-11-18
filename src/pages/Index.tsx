@@ -57,7 +57,7 @@ const Index = () => {
         });
         const end = performance.now();
         setIsServerActive(true);
-        console.log('Retrogames latency:', Math.round(end - start), 'ms');
+        console.log('Retrogames activated');
       } catch (err) {
         setIsServerActive(false);
       }
