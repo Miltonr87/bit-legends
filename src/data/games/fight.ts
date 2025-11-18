@@ -230,9 +230,10 @@ export const fightGames: Game[] = [
         characters: ["Iori Yagami", "Kyo Kusanagi", "Rugal Bernstein", "Joe Higashi", "Terry Bogard", "Andy Bogard", "Chang Koehan", "Blue Mary"],
         description: "The Dream Match!",
         longDescription:
-            "The King of Fighters ’98 — the legendary Dream Match — unites every major fighter from previous tournaments with no storyline to restrict the chaos. " +
-            "Pure competitive focus, immaculate balance, and SNK’s smoothest mechanics turn every 3-on-3 battle into a high-stakes duel of reflexes and mind-games. " +
-            "Whether commanding the Bogard brothers, battling with Kyo and Iori’s eternal rivalry, or facing Omega Rugal’s tyranny, KOF ’98 stands as one of the greatest fighting games ever created.",
+            "The King of Fighters ’98 (1998), known worldwide as the definitive Dream Match, gathers the entire saga’s iconic roster into one monumental, storyline-free celebration of pure competitive play. " +
+            "Without narrative constraints, SNK focuses entirely on balance, fluid mechanics, and technical excellence, delivering some of the smoothest and most satisfying 3-on-3 battles in fighting game history. " +
+            "Classic rivalries shine — from Kyo and Iori’s eternal clash to the Bogard brothers’ mastery — all culminating in the ultimate challenge against the overwhelming power of Omega Rugal. " +
+            "With its legendary roster, tight controls, expressive combos, and timeless arcade feel, KOF ’98 remains one of the most beloved and respected fighting games ever created, a true crown jewel of SNK’s golden era.",
         players: "1-2 Players",
         developer: "SNK",
         coverImage: "/assets/covers/kof_98.jpg",
@@ -260,9 +261,10 @@ export const fightGames: Game[] = [
         ],
         description: "The ultimate 3-on-3 tournament featuring SNK’s legendary roster!",
         longDescription:
-            "The King of Fighters 2002 stands as one of the most celebrated entries in the franchise, returning to the classic 3-on-3 team format with an enormous character lineup and buttery-smooth gameplay. " +
-            "Fast-paced offense, iconic MAX mode juggles, and precision-based neutral play make it a tournament favorite worldwide. " +
-            "Loved by competitive fans and arcade purists alike, KOF 2002 captures the golden era of SNK fighting brilliance.",
+            "The King of Fighters 2002 (2002) is widely regarded as one of the franchise’s most refined and enduring entries, bringing back the iconic 3-on-3 team format with razor-sharp gameplay and one of the strongest rosters in SNK history. " +
+            "Its fast-paced rhythm, signature MAX Mode mechanics, explosive juggles, and tight neutral game make every match a showcase of precision, creativity, and pure fighting fundamentals. " +
+            "Legends like Kyo, Iori, Terry, Mai, Ryo, K’, Athena, and Kim return with some of their most beloved move-sets, giving both veterans and newcomers a deep well of strategies to master. " +
+            "A cornerstone of competitive play and a defining highlight of the early 2000s arcade scene, KOF 2002 stands as one of the most celebrated and replayed fighting games of SNK’s legacy.",
         players: "1-2 Players",
         developer: "Eolith / SNK Playmore",
         coverImage: "/assets/covers/kof_2002.jpg",
@@ -339,10 +341,10 @@ export const fightGames: Game[] = [
         ],
         description: "SNK’s legendary samurai fighting sequel — elegance, honor, and deadly precision.",
         longDescription:
-            "Samurai Shodown II (1994) elevates the iconic blade-duel series with deeper mechanics, new techniques, and SNK’s crispest Neo Geo animation. " +
-            "Set in a stylized feudal Japan, the game rewards patience, precision, and perfectly timed strikes — where a single slash can shift the tide of battle. " +
-            "New defensive options, refined movement, and expanded special moves give masters of Haohmaru, Genjuro, Ukyo, and others the freedom to express true samurai skill. " +
-            "A masterpiece of atmosphere and weapon-based strategy that helped define SNK’s golden era.",
+            "Samurai Shodown II (1994) stands as one of SNK’s finest achievements, refining its iconic weapon-based formula with deeper mechanics, sharper animation, and an unmistakably atmospheric vision of feudal-era combat. " +
+            "The sequel introduces new techniques, advanced counters, improved movement, and expanded special attacks, giving each duel a tense rhythm where patience and precision rule over button-mashing. " +
+            "Haohmaru, Genjuro, Ukyo, Nakoruru, Galford, Hanzo, and others return with richer personalities and more expressive fighting styles, brought to life through some of the most elegant sprite work ever seen on the Neo Geo. " +
+            "Every clash of steel feels decisive, every strike carries weight, and a single mistake can determine victory — making Samurai Shodown II a masterclass in atmosphere, strategy, and weapon-based artistry at the height of SNK’s golden era.",
         players: "1-2 Players",
         developer: "SNK",
         coverImage: "/assets/covers/samurai.jpg",
@@ -392,9 +394,10 @@ export const fightGames: Game[] = [
         characters: ["Terry Bogard", "Andy Bogard", "Joe Higashi", "Mai Shiranui", "Geese Howard"],
         description: "The definitive Fatal Fury experience with ring-outs and cinematic combat!",
         longDescription:
-            "Real Bout Fatal Fury (1995) reinvents the classic SNK series with explosive presentation, destructible arenas, and the dynamic ring-out system. " +
-            "Battle through South Town as Terry Bogard and face the towering threat of Geese Howard in a saga fueled by rivalries, style, and bone-crushing impact. " +
-            "Fast pacing, fluid combos, and Neo Geo visual flair make Real Bout an essential chapter in the Fatal Fury legacy.",
+            "Real Bout Fatal Fury (1995) represents a major turning point for SNK’s flagship fighting franchise, pushing the series forward with bold visuals, cinematic flair, and a completely reimagined combat flow. " +
+            "Its standout features — destructible stages, multiple planes, and the iconic ring-out mechanic — transform each fight into a strategic showdown where spacing, pressure, and momentum matter as much as pure execution. " +
+            "The journey through South Town is fueled by classic rivalries, following Terry Bogard, Andy, Joe, Mai, and others as they clash against the overwhelming presence of Geese Howard in a story of power, revenge, and style. " +
+            "With fast-paced action, fluid combo routes, expressive sprite work, and that unmistakable Neo Geo punch in both sound and presentation, Real Bout Fatal Fury stands as one of the most celebrated and defining entries in the Fatal Fury legacy.",
         players: "1-2 Players",
         developer: "SNK",
         coverImage: "/assets/covers/faltal_fury.jpg",
@@ -689,9 +692,10 @@ export const fightGames: Game[] = [
         characters: ["Captain Commando", "Captain America", "Spider-Man", "Gambit", "Ryu", "Chun-Li", "Hulk", "Megaman", "Wolverine", "Strider", "Venom", "Zangief"],
         description: "The ultimate crossover!",
         longDescription:
-            "Marvel vs. Capcom: Clash of Super Heroes (1998) unites two legendary universes in explosive 2v2 combat filled with assists, tag supers, and screen-shattering combos. " +
-            "Heroes like Captain America, Wolverine, Ryu, and Strider team up in battles that overflow with comic-book spectacle and arcade intensity. " +
-            "Fast, chaotic, and endlessly stylish, MvC defined a generation of competitive fighters and became one of Capcom’s most iconic CPS-2 masterpieces.",
+            "Marvel vs. Capcom: Clash of Super Heroes (1998) delivers one of the most electrifying crossovers in arcade history, merging Capcom’s iconic fighters with Marvel’s legendary heroes in fast, over-the-top 2v2 battles. " +
+            "With dynamic assists, tag-team supers, air combos, and screen-filling hyper attacks, every match erupts into a vibrant spectacle of comic-book chaos and CPS-2 precision. " +
+            "Captain America, Wolverine, Spider-Man, Ryu, Chun-Li, Strider, and many others return with some of their flashiest movesets, each dripping with personality and style. " +
+            "Blending frantic pace, sharp controls, and unforgettable presentation, Marvel vs. Capcom stands as one of Capcom’s most celebrated arcade masterpieces and a cornerstone of the versus fighting legacy.",
         players: "1-2 Players",
         developer: "Capcom",
         coverImage: "/assets/covers/marvel_vs_capcom.jpg",
