@@ -30,7 +30,7 @@ export const GameController = () => {
               <img
                 src={gamepad}
                 alt="Gamepad Illustration"
-                className="object-cover w-full h-[300px] sm:h-[340px]"
+                className="object-cover w-full h-[300px] sm:h-full"
               />
             </div>
           </DialogTrigger>

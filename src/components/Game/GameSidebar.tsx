@@ -4,64 +4,62 @@ import { LogoGame } from '@/components/Game/LogoGame';
 import { GameController } from '@/components/Game/GameController';
 import { useIsMobile } from '@/hooks/useIsMobile';
 
+import arcadeLogo from '../../../public/assets/platforms/arcade.png';
+import genesisLogo from '../../../public/assets/platforms/genesis.png';
+import snesLogo from '../../../public/assets/platforms/snes.png';
+
 import { motion } from 'framer-motion';
 import type { Game } from '@/types';
 
-const PLATFORM_STYLES: Record<
-  string,
-  { border: string; bg: string; text: string; shadow: string }
-> = {
-  Arcade: {
-    border: 'border-green-500/50',
-    bg: 'from-green-900/60 via-green-800/40 to-green-950/60',
-    text: 'text-green-300',
-    shadow: 'shadow-[0_0_25px_rgba(74,222,128,0.35)]',
-  },
-  SNES: {
-    border: 'border-pink-500/50',
-    bg: 'from-pink-900/60 via-pink-800/40 to-pink-950/60',
-    text: 'text-pink-300',
-    shadow: 'shadow-[0_0_25px_rgba(249,168,212,0.35)]',
-  },
-  Genesis: {
-    border: 'border-blue-500/50',
-    bg: 'from-blue-900/60 via-blue-800/40 to-blue-950/60',
-    text: 'text-blue-300',
-    shadow: 'shadow-[0_0_25px_rgba(147,197,253,0.35)]',
-  },
+// ---------------------------
+// Platform Name → Logo Mapping
+// ---------------------------
+const PLATFORM_LOGO_MAP: Record<string, string> = {
+  Arcade: arcadeLogo,
+  SNES: snesLogo,
+  Genesis: genesisLogo,
 };
 
-const PLATFORM_MAP: Record<string, keyof typeof PLATFORM_STYLES> = {
+// ---------------------------
+// Platform Alias Mapping
+// ---------------------------
+const PLATFORM_MAP: Record<string, keyof typeof PLATFORM_LOGO_MAP> = {
   Nintendo: 'SNES',
   SNES: 'SNES',
-  NES: 'NES',
+  NES: 'SNES',
   'Sega CD': 'Genesis',
   Genesis: 'Genesis',
   'Mega Drive': 'Genesis',
   Arcade: 'Arcade',
-  GBA: 'GBA',
-  'Game Boy Advance': 'GBA',
-  PlayStation: 'PlayStation',
-  PSX: 'PlayStation',
-  PS1: 'PlayStation',
+  GBA: 'Arcade',
+  'Game Boy Advance': 'Arcade',
+  PlayStation: 'Arcade',
+  PSX: 'Arcade',
+  PS1: 'Arcade',
 };
 
-const getPlatformTheme = (platform: string) => {
-  const key =
-    PLATFORM_MAP[platform.trim()] ||
-    Object.keys(PLATFORM_MAP).find((p) =>
-      platform.toLowerCase().includes(p.toLowerCase())
-    );
-  return PLATFORM_STYLES[key ? PLATFORM_MAP[key] : 'Arcade'];
-};
+// Background used in LogoGame
+const PANEL_BACKGROUND = 'linear-gradient(135deg, #1e1e2f, #2c2c54)';
 
+// ---------------------------
+// Sidebar Component
+// ---------------------------
 interface GameSidebarProps {
   game: Game;
 }
 
 export const GameSidebar = ({ game }: GameSidebarProps) => {
   const isMobile = useIsMobile();
-  const theme = getPlatformTheme(game.platform);
+
+  // Resolve logo
+  const platformKey =
+    PLATFORM_MAP[game.platform.trim()] ||
+    Object.keys(PLATFORM_MAP).find((p) =>
+      game.platform.toLowerCase().includes(p.toLowerCase())
+    ) ||
+    'Arcade';
+
+  const platformLogo = PLATFORM_LOGO_MAP[platformKey] || arcadeLogo;
 
   return (
     <motion.div
@@ -73,8 +71,10 @@ export const GameSidebar = ({ game }: GameSidebarProps) => {
         <LogoGame
           logoUrl={game.logo}
           title={game.title}
-          backgroundColor="linear-gradient(135deg, #0f172a, #1e293b)"
+          backgroundColor="linear-gradient(135deg, #1e1e2f, #2c2c54)"
         />
+
+        {/* INFO CARD */}
         <Card className="p-4 sm:p-6 border-2 border-accent/30 bg-gradient-to-br from-card to-card/40 rounded-2xl backdrop-blur-sm hover:shadow-lg hover:shadow-accent/10 transition-all duration-300">
           <div className="space-y-4">
             <div className="flex items-start gap-3 pb-4 border-b border-border">
@@ -84,6 +84,7 @@ export const GameSidebar = ({ game }: GameSidebarProps) => {
                 <p className="font-semibold text-lg">{game.year}</p>
               </div>
             </div>
+
             <div className="flex items-start gap-3 pb-4 border-b border-border">
               <Gamepad2 className="h-5 w-5 text-accent mt-1" />
               <div>
@@ -91,6 +92,7 @@ export const GameSidebar = ({ game }: GameSidebarProps) => {
                 <p className="font-semibold text-lg">{game.genre}</p>
               </div>
             </div>
+
             <div className="flex items-start gap-3 pb-4 border-b border-border">
               <Users className="h-5 w-5 text-accent mt-1" />
               <div>
@@ -98,6 +100,7 @@ export const GameSidebar = ({ game }: GameSidebarProps) => {
                 <p className="font-semibold text-lg">{game.players}</p>
               </div>
             </div>
+
             <div className="flex items-start gap-3">
               <div className="h-5 w-5 flex items-center justify-center mt-1">
                 <div className="h-3 w-3 rounded-full bg-accent animate-glow-pulse" />
@@ -111,22 +114,14 @@ export const GameSidebar = ({ game }: GameSidebarProps) => {
         </Card>
         {!isMobile && (
           <Card
-            className={`p-6 border-2 ${theme.border} bg-gradient-to-br ${theme.bg} rounded-2xl ${theme.shadow} transition-all duration-500 hover:scale-[1.02] hover:shadow-xl hover:shadow-accent/20`}
+            className="p-6 border-2 border-accent/30 rounded-2xl backdrop-blur-sm hover:shadow-lg hover:shadow-accent/10 transition-all duration-300 flex justify-center"
+            style={{ background: PANEL_BACKGROUND }}
           >
-            <h3 className={`font-bold text-lg mb-3 ${theme.text}`}>Platform</h3>
-            <div className="flex items-center gap-3">
-              <div
-                className={`h-12 w-12 rounded-lg flex items-center justify-center border ${theme.border} bg-black/20`}
-              >
-                <Gamepad2 className={`h-6 w-6 ${theme.text}`} />
-              </div>
-              <div>
-                <p className={`font-bold text-lg ${theme.text}`}>
-                  {game.platform}
-                </p>
-                <p className="text-xs text-gray-300">{game.publisher}</p>
-              </div>
-            </div>
+            <img
+              src={platformLogo}
+              alt={`${game.platform} Logo`}
+              className="object-contain w-full h-12 drop-shadow-md"
+            />
           </Card>
         )}
         {!isMobile && <GameController />}

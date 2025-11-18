@@ -35,7 +35,10 @@ export const actionGames: Game[] = [
         characters: ["Joe Musashi"],
         description: "The ultimate ninja strikes back — fast, fluid, and stylish!",
         longDescription:
-            "Shinobi III: Return of the Ninja Master (1993) refines Sega’s legendary ninja series with cinematic action and fluid controls. Guide Joe Musashi through forests, military bases, and techno-temples as you battle the Neo Zeed clan. Known for its speed, acrobatics, and iconic soundtrack, it’s one of the greatest 16-bit action games ever made.",
+            "Shinobi III: Return of the Ninja Master (1993) represents the pinnacle of Sega’s iconic ninja franchise, sharpening every aspect of its gameplay with silky-smooth controls, acrobatic movement, and fast-paced stage design. " +
+            "Joe Musashi returns in a spectacular campaign that spans dense forests, high-tech laboratories, military strongholds, and cybernetic temples, battling the reborn Neo Zeed clan with precision and style. " +
+            "From wall-running and mid-air flips to devastating Ninjutsu techniques, every action flows with an elegance rarely matched in the 16-bit era. " +
+            "Powered by a legendary soundtrack and masterful level pacing, Shinobi III stands as one of the greatest action games of its generation — a true showcase of Sega’s technical and artistic peak.",
         players: "1 Player",
         developer: "Sega",
         coverImage: "/assets/covers/shinobi.jpg",
