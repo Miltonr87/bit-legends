@@ -30,9 +30,8 @@ const PLATFORM_STYLES: Record<
 };
 
 const PLATFORM_MAP: Record<string, keyof typeof PLATFORM_STYLES> = {
-  'Super Nintendo': 'SNES',
+  Nintendo: 'SNES',
   SNES: 'SNES',
-  Nintendo: 'NES',
   NES: 'NES',
   'Sega Genesis': 'Genesis',
   Genesis: 'Genesis',

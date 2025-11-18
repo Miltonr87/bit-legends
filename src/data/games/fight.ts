@@ -19,8 +19,8 @@ export const fightGames: Game[] = [
             "From tournament play to couch rivalries, UMK3 stands as one of the most beloved and competitive entries in the Mortal Kombat legacy.",
         players: "1-2 Players",
         developer: "Midway",
-        coverImage: "/assets/covers/Ultimate_MK3.png",
-        platform: "Super Nintendo",
+        coverImage: "/assets/covers/ultimate_mk3.jpg",
+        platform: "Nintendo",
         logo: "/assets/logos/umk3.png"
     },
     {
@@ -42,7 +42,7 @@ export const fightGames: Game[] = [
         players: "1-2 Players",
         developer: "Capcom",
         coverImage: "/assets/covers/street_fighter_2.jpg",
-        platform: "Super Nintendo",
+        platform: "Nintendo",
         logo: "/assets/logos/sf2.png"
     },
     {
@@ -64,7 +64,7 @@ export const fightGames: Game[] = [
         players: "1-2 Players",
         developer: "Capcom",
         coverImage: "/assets/covers/sf_aplha_2.jpg",
-        platform: "Super Nintendo",
+        platform: "Nintendo",
         logo: "https://gam.onl/user/arcade/logos/sfa2.png"
     },
     {
@@ -119,14 +119,14 @@ export const fightGames: Game[] = [
         ],
         description: "Zord vs Zord battles in pure SNES fighting style!",
         longDescription:
-            "Mighty Morphin Power Rangers: The Fighting Edition (1995) brings giant Zord battles to the Super Nintendo in classic 2D fighting form. " +
+            "Mighty Morphin Power Rangers: The Fighting Edition (1995) brings giant Zord battles to the Nintendo in classic 2D fighting form. " +
             "Choose from the most powerful Megazords and villains in the Power Rangers universe and clash across explosive arenas filled with energy and destruction. " +
             "With fluid animation, intense special moves, and cinematic transformations, every duel feels like an episode come to life. " +
             "Its fast-paced combat and striking visuals made it one of the most impressive SNES fighters of its era.",
         players: "1-2 Players",
         developer: "Natsume",
         coverImage: "/assets/covers/power_rangers_fighting.jpg",
-        platform: "Super Nintendo",
+        platform: "Nintendo",
         logo: "/assets/logos/powerangers_robot.png"
     },
     {
@@ -152,7 +152,7 @@ export const fightGames: Game[] = [
             "Rat King",
             "Karai"
         ],
-        description: "The ultimate TMNT showdown on the Super Nintendo!",
+        description: "The ultimate TMNT showdown on the Nintendo!",
         longDescription:
             "Teenage Mutant Ninja Turtles: Tournament Fighters (1993) delivers intense one-on-one combat starring the heroes in a half shell. " +
             "Developed by Konami exclusively for the SNES, it features detailed sprite work, unique super moves, and fast, responsive gameplay. " +
@@ -161,7 +161,7 @@ export const fightGames: Game[] = [
         players: "1-2 Players",
         developer: "Konami",
         coverImage: "/assets/covers/tmnt_tournament_fighters.jpg",
-        platform: "Super Nintendo",
+        platform: "Nintendo",
         logo: "/assets/logos/tmnt_tournament.png"
     },
     {
@@ -288,7 +288,7 @@ export const fightGames: Game[] = [
         developer: "Rare Ltd.",
         coverImage: "/assets/covers/killerinstinct.jpg",
         logo: "/assets/logos/killerinstinct.png",
-        platform: "Super Nintendo",
+        platform: "Nintendo",
     },
     {
         id: "kof2004",
@@ -434,7 +434,7 @@ export const fightGames: Game[] = [
         developer: "SNK",
         coverImage: "/assets/covers/fatalfury2.jpg",
         logo: "/assets/logos/fatfury2.png",
-        platform: "Super Nintendo",
+        platform: "Nintendo",
     },
     {
         id: "samurai-shodown",
@@ -469,7 +469,7 @@ export const fightGames: Game[] = [
         developer: "SNK",
         coverImage: "/assets/covers/samuraishodown.jpg",
         logo: "/assets/logos/samuraishodown.png",
-        platform: "Sega Genesis",
+        platform: "Genesis",
     },
     {
         id: "double-dragon-neo-geo",
@@ -540,7 +540,7 @@ export const fightGames: Game[] = [
         coverImage: "/assets/covers/lobo.jpeg",
         embedUrl:
             "/emulator.html?rom=https://ozequlizbaymnvzeqkyh.supabase.co/storage/v1/object/public/game-rom/Lobo.zip",
-        platform: "Super Nintendo",
+        platform: "Nintendo",
         logo: "/assets/logos/lobo.png"
     },
     {
@@ -562,7 +562,7 @@ export const fightGames: Game[] = [
         players: "1-2 Players",
         developer: "Blizzard Entertainment",
         coverImage: "/assets/covers/justice_league.jpg",
-        platform: "Super Nintendo",
+        platform: "Nintendo",
         logo: "/assets/logos/justice_league.png"
     },
     {

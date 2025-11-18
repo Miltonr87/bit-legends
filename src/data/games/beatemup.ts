@@ -19,8 +19,8 @@ export const beatnupGames: Game[] = [
       "Driven by Yuzo Koshiro’s groundbreaking electronic soundtrack and tight co-op gameplay, it set a new standard for urban action titles on the Genesis.",
     players: "1-2 Players",
     developer: "Sega",
-    coverImage: "/assets/covers/sor1.png",
-    platform: "Sega Genesis",
+    coverImage: "/assets/covers/sor1.jpg",
+    platform: "Genesis",
     logo: "/assets/logos/streets_of_rage.png",
   },
   {
@@ -42,7 +42,7 @@ export const beatnupGames: Game[] = [
     players: "1-2 Players",
     developer: "Sega",
     coverImage: "/assets/covers/streets_of_rage_2.jpg",
-    platform: "Sega Genesis",
+    platform: "Genesis",
     logo: "/assets/logos/streets_of_rage_2.png"
   },
   {
@@ -82,11 +82,11 @@ export const beatnupGames: Game[] = [
       "Comix Zone (1995) is one of Sega’s most stylish and innovative beat ’em ups, placing players directly inside the pages of a living comic book. " +
       "You play as Sketch Turner, a streetwise illustrator pulled into his own creation by the villainous Mortus, forced to fight through hand-drawn panels filled with mutants, punks, and hazards. " +
       "Each stage feels like flipping through an underground graphic novel, complete with speech bubbles, panel transitions, and dynamic page effects. " +
-      "With tight combat, environmental interactions, grunge-era attitude, and Roadkill the rat as your trusty sidekick, Comix Zone stands as one of the most unique and iconic urban action games on the Sega Genesis.",
+      "With tight combat, environmental interactions, grunge-era attitude, and Roadkill the rat as your trusty sidekick, Comix Zone stands as one of the most unique and iconic urban action games on the Genesis.",
     players: "1 Player",
     developer: "Sega Technical Institute",
     coverImage: "/assets/covers/comix.jpeg",
-    platform: "Sega Genesis",
+    platform: "Genesis",
     logo: "/assets/logos/comix.png",
   },
   {
@@ -131,7 +131,7 @@ export const beatnupGames: Game[] = [
     players: "1-2 Players",
     developer: "Sega",
     coverImage: "/assets/covers/streets_of_rage_3.jpg",
-    platform: "Sega Genesis",
+    platform: "Genesis",
     logo: "/assets/logos/streets_of_rage_3.png"
   },
   {
@@ -170,14 +170,14 @@ export const beatnupGames: Game[] = [
     characters: ["Leonardo", "Michelangelo", "Donatello", "Raphael"],
     description: "Cowabunga! The Turtles travel through time to save New York!",
     longDescription:
-      "Teenage Mutant Ninja Turtles: Turtles in Time (1991) brings the arcade classic to the Super Nintendo with enhanced visuals and smoother gameplay. " +
+      "Teenage Mutant Ninja Turtles: Turtles in Time (1991) brings the arcade classic to the Nintendo with enhanced visuals and smoother gameplay. " +
       "Join the four turtles as they chase Shredder across time — from prehistoric battles to neon-filled futures and pirate ship brawls. " +
       "Each level bursts with personality, humor, and cooperative chaos. " +
       "Praised for its fast-paced combat and iconic soundtrack, it remains one of the greatest side-scrolling beat ’em ups ever made.",
     players: "1-2 Players",
     developer: "Konami",
     coverImage: "/assets/covers/tnt.png",
-    platform: "Super Nintendo",
+    platform: "Nintendo",
     logo: "/assets/logos/tmnt2.png"
   },
   {
@@ -244,7 +244,6 @@ export const beatnupGames: Game[] = [
       "Each hero boasts unique combos, throws, mobility options, and brutal finishers, making co-op play dynamic and strategic. " +
       "With flashy animations, over-the-top villains, high-energy music, and relentless arcade chaos, Violent Storm stands as one of Konami’s last—and most intense—golden-age brawlers.",
     players: "1-2 Players",
-    players: "1-2 Players",
     developer: "Konami",
     coverImage: "/assets/covers/violent_storm.png",
     platform: "Arcade",
@@ -270,7 +269,7 @@ export const beatnupGames: Game[] = [
     players: "1-2 Players",
     developer: "Capcom",
     coverImage: "/assets/covers/final_fight_guy.jpg",
-    platform: "Super Nintendo",
+    platform: "Nintendo",
     logo: "/assets/logos/final_fight_guy.png",
   },
   {
@@ -293,7 +292,7 @@ export const beatnupGames: Game[] = [
     developer: "Capcom",
     coverImage: "/assets/covers/final_fight2.jpg",
     embedUrl: "https://www.retrogames.cc/embed/23436-final-fight-2-europe.html",
-    platform: "Super Nintendo",
+    platform: "Nintendo",
     logo:
       "/assets/logos/final_fight_2.png",
   },
@@ -317,7 +316,7 @@ export const beatnupGames: Game[] = [
     developer: "Capcom",
     coverImage: "/assets/covers/final_fight3.jpg",
     embedUrl: "https://www.retrogames.cc/embed/24623-final-fight-3-usa.html",
-    platform: "Super Nintendo",
+    platform: "Nintendo",
     logo:
       "/assets/logos/final_fight_3.png",
   },
@@ -351,7 +350,7 @@ export const beatnupGames: Game[] = [
     embedId: "20176",
     year: 1994,
     genre: "Sci-Fi",
-    folder: "Super Nintendo",
+    folder: "Nintendo",
     publisher: "Taito",
     characters: ["Ninja", "Kunoichi", "Kamaitachi"],
     description: "Side-scrolling cyber-ninja action where every strike slices through the regime’s machines.",
@@ -364,7 +363,7 @@ export const beatnupGames: Game[] = [
     developer: "Natsume / Taito",
     coverImage: "/assets/covers/ninjawarriors.jpeg",
     embedUrl: "https://www.retrogames.cc/embed/20176-ninjawarriors-the-usa.html",
-    platform: "Super Nintendo",
+    platform: "Nintendo",
     logo: "/assets/logos/ninjawarriors.png"
   },
   {
@@ -394,7 +393,7 @@ export const beatnupGames: Game[] = [
     developer: "Natsume",
     coverImage: "/assets/covers/power-rangers.jpg",
     embedUrl: "https://www.retrogames.cc/embed/19560-mighty-morphin-power-rangers-the-movie-usa.html",
-    platform: "Super Nintendo",
+    platform: "Nintendo",
     logo:
       "/assets/logos/powerangers.png",
   },
@@ -417,7 +416,7 @@ export const beatnupGames: Game[] = [
     players: "1 Player",
     developer: "Konami",
     coverImage: "/assets/covers/batmanreturns.jpg",
-    platform: "Super Nintendo",
+    platform: "Nintendo",
     logo:
       "/assets/logos/batman_returns.png",
   },
@@ -486,7 +485,7 @@ export const beatnupGames: Game[] = [
     players: "1-2 Players",
     developer: "Capcom",
     coverImage: "/assets/covers/knights.jpg",
-    platform: "Super Nintendo",
+    platform: "Nintendo",
     logo:
       "/assets/logos/knights.png",
   },
@@ -532,7 +531,7 @@ export const beatnupGames: Game[] = [
     developer: "Now Production / Namco",
     coverImage: "/assets/covers/splat.jpg",
     logo: "/assets/logos/splat.png",
-    platform: "Sega Genesis",
+    platform: "Genesis",
   },
   {
     id: "undercover-cops",
@@ -591,7 +590,7 @@ export const beatnupGames: Game[] = [
     characters: ["Kaor", "Psybor"],
     description: "Side-scrolling medieval combat with brutal swordplay.",
     longDescription:
-      "Legend (1994) for the Super Nintendo is a gritty side-scrolling brawler set in the war-torn kingdom of Sellech. " +
+      "Legend (1994) for the Nintendo is a gritty side-scrolling brawler set in the war-torn kingdom of Sellech. " +
       "Players take the role of two heroic knights, Kaor and Psybor, battling hordes of demonic creatures across castles, dungeons, and cursed villages. " +
       "With heavy sword combat, magic attacks, and a dark medieval atmosphere, it stands as one of the most intense beat-'em-ups on the SNES. " +
       "Each level delivers a mix of brutal action and moody fantasy that recalls the arcade spirit of the early '90s, testing reflexes and endurance alike.",
@@ -599,7 +598,7 @@ export const beatnupGames: Game[] = [
     developer: "Arcade Zone",
     coverImage: "/assets/covers/legend.jpg",
     logo: "/assets/logos/legend.png",
-    platform: "Super Nintendo",
+    platform: "Nintendo",
   },
   {
     id: "alien-vs-predator",
@@ -620,7 +619,7 @@ export const beatnupGames: Game[] = [
       "A definitive masterpiece of ’90s arcade sci-fi — stylish, aggressive, and endlessly replayable.",
     players: "1-3 Players",
     developer: "Capcom",
-    coverImage: "/assets/covers/alien.jpeg",
+    coverImage: "/assets/covers/alien.jpg",
     embedUrl: "https://www.retrogames.cc/embed/7748-alien-vs-predator-940520-euro-phoenix-edition-bootleg.html",
     platform: "Arcade",
     logo: "/assets/logos/avsp.png"
@@ -681,14 +680,14 @@ export const beatnupGames: Game[] = [
     characters: ["Billy Lee", "Jimmy Lee"],
     description: "The Lee brothers return to clean up the streets in classic SNES style!",
     longDescription:
-      "Super Double Dragon (1992) brings the legendary martial arts duo Billy and Jimmy Lee to the Super Nintendo in a refined, technical beat-’em-up. " +
+      "Super Double Dragon (1992) brings the legendary martial arts duo Billy and Jimmy Lee to the Nintendo in a refined, technical beat-’em-up. " +
       "Players brawl through city streets, docks, and enemy hideouts using new defensive maneuvers, counterattacks, and charged punches. " +
       "Its slower, more deliberate combat emphasizes timing and mastery of moves, setting it apart from its arcade predecessors. " +
       "With crisp animations, energetic music, and cooperative two-player action, it stands as one of the finest entries in the Double Dragon legacy.",
     players: "1-2 Players",
     developer: "Technōs Japan",
     coverImage: "/assets/covers/super_double_dragon.jpg",
-    platform: "Super Nintendo",
+    platform: "Nintendo",
     logo: "/assets/logos/super_double_dragon.png"
   },
   {
@@ -708,7 +707,7 @@ export const beatnupGames: Game[] = [
     developer: "Software Creations",
     coverImage: "/assets/covers/spider_carnage.jpg",
     embedUrl: "https://www.retrogames.cc/embed/23888-spider-man-venom-maximum-carnage-usa.html",
-    platform: "Super Nintendo",
+    platform: "Nintendo",
     logo:
       "/assets/logos/spiderman_maximum_carnage.png",
   },
@@ -724,13 +723,13 @@ export const beatnupGames: Game[] = [
     characters: ["Wolverine", "Cyclops", "Gambit", "Beast", "Nightcrawler", "Psylocke"],
     description: "The X-Men battle Magneto’s forces in a classic 16-bit Danger Room showdown!",
     longDescription:
-      "X-Men: Genesis (1993) for the Sega Genesis throws Marvel’s iconic mutants into a series of intense Danger Room simulations that spiral into a full-scale war against Magneto. " +
+      "X-Men: Genesis (1993) for the Genesis throws Marvel’s iconic mutants into a series of intense Danger Room simulations that spiral into a full-scale war against Magneto. " +
       "Use each hero’s unique abilities — from Wolverine’s ferocity to Nightcrawler’s teleportation — to survive traps, Sentinels, and elite members of the Brotherhood of Evil Mutants. " +
       "With challenging stages, atmospheric visuals, and a memorable twist that breaks the fourth wall, this early Genesis hit remains a cult favorite among X-Men fans.",
     players: "1-2 Players",
     developer: "Western Technologies / Sega",
     coverImage: "/assets/covers/xmengenesis.jpg",
-    platform: "Sega Genesis",
+    platform: "Genesis",
     logo: "/assets/logos/xmengenesis.png",
   },
   {
@@ -745,13 +744,13 @@ export const beatnupGames: Game[] = [
     characters: ["Wolverine", "Cyclops", "Beast", "Gambit", "Nightcrawler", "Psylocke", "Magneto"],
     description: "The X-Men face off against the Phalanx in this action-packed Genesis sequel!",
     longDescription:
-      "X-Men 2: Clone Wars (1995) pushes the Sega Genesis to its limits. The heroes battle the techno-organic Phalanx threat across diverse environments. " +
+      "X-Men 2: Clone Wars (1995) pushes the Genesis to its limits. The heroes battle the techno-organic Phalanx threat across diverse environments. " +
       "Each mutant has unique abilities, from Nightcrawler’s teleportation to Wolverine’s regeneration. " +
       "Slick animations, challenging levels, and cooperative play make it one of the finest superhero games of the 16-bit era.",
     players: "1-2 Players",
     developer: "HeadGames / Sega Technical Institute",
     coverImage: "/assets/covers/xmen2_clonewars.jpg",
-    platform: "Sega Genesis",
+    platform: "Genesis",
     logo: "/assets/logos/xmen2_clonewars.png",
   },
   {
@@ -772,7 +771,7 @@ export const beatnupGames: Game[] = [
     players: "1 Player",
     developer: "Teeny Weeny Games / Bits Studios",
     coverImage: "/assets/covers/wolverine_adamantium.jpg",
-    platform: "Sega Genesis",
+    platform: "Genesis",
     logo: "/assets/logos/wolverine_adamantium.png",
   },
   {
@@ -812,12 +811,12 @@ export const beatnupGames: Game[] = [
       "Blades of Vengeance (1993) invites players into a dark medieval world where evil sorcery has plunged the land into chaos. " +
       "Choose between a fierce Huntress, a mighty Warrior, or a powerful Sorcerer — each with unique skills and weapons. " +
       "Battle through haunted ruins, volcanic caverns, and cursed citadels as you confront the sinister Goddess of Destruction. " +
-      "With rich visuals, atmospheric music, and challenging gameplay, Blades of Vengeance stands as one of Sega Genesis’s most striking fantasy action adventures.",
+      "With rich visuals, atmospheric music, and challenging gameplay, Blades of Vengeance stands as one of Genesis’s most striking fantasy action adventures.",
     players: "1-2 Players",
     developer: "Beam Software",
     coverImage: "/assets/covers/blades.jpg",
     logo: "/assets/logos/blades.png",
-    platform: "Sega Genesis",
+    platform: "Genesis",
   },
   {
     id: "silent-dragon",
@@ -905,7 +904,7 @@ export const beatnupGames: Game[] = [
     players: "1 Player",
     developer: "Software Creations Ltd.",
     coverImage: "/assets/covers/spider&xmen.jpeg",
-    platform: "Super Nintendo",
+    platform: "Nintendo",
     logo: "/assets/logos/spider&xmen.png"
   },
   {
@@ -920,14 +919,14 @@ export const beatnupGames: Game[] = [
     characters: ["Superman", "Brainiac", "Metallo", "Mr. Mxyzptlk", "The Prankster"],
     description: "Take on Super-villains in this side-scrolling Genesis adventure as the Man of Steel!",
     longDescription:
-      "Superman: The Man of Steel (MoS), released in 1992 for the Sega Genesis, puts you in the boots of the Last Son of Krypton in a classic side-scrolling platform/beat ’em up adventure. " +
+      "Superman: The Man of Steel (MoS), released in 1992 for the Genesis, puts you in the boots of the Last Son of Krypton in a classic side-scrolling platform/beat ’em up adventure. " +
       "You’ll battle through iconic foes such as Brainiac, Metallo, Mr. Mxyzptlk and The Prankster, each posing their own twisted brand of chaos. " +
       "Unlike your usual flights over Metropolis, here you’ll punch, kick and jump your way through five intense stages, switching powers on the fly via collectible icons to turn the tide of battle. " +
       "It’s a raw, nostalgic blast of 16-bit superhero action that tries to capture that feeling of being faster than a speeding bullet — even if your cape stays firmly grounded most of the time.",
     players: "1 Player",
     developer: "Sunsoft / Thinking Rabbit",
     coverImage: "/assets/covers/superman_mos.jpg",
-    platform: "Sega Genesis",
+    platform: "Genesis",
     logo: "/assets/logos/superman_mos.png"
   },
   {
@@ -948,7 +947,7 @@ export const beatnupGames: Game[] = [
     players: "1 Player",
     developer: "Konami",
     coverImage: "/assets/covers/batman&robin.jpg",
-    platform: "Super Nintendo",
+    platform: "Nintendo",
     logo: "/assets/logos/batman&robin.png"
   },
   {
@@ -970,7 +969,7 @@ export const beatnupGames: Game[] = [
     players: "1 Player",
     developer: "Western Technologies",
     coverImage: "/assets/covers/spiderman.jpg",
-    platform: "Super Nintendo",
+    platform: "Nintendo",
     logo: "/assets/logos/spiderman.png"
   },
   {
@@ -993,7 +992,7 @@ export const beatnupGames: Game[] = [
     developer: "Blizzard",
     coverImage: "/assets/covers/superman.png",
     embedUrl: "https://www.retrogames.cc/embed/24484-death-and-return-of-superman-the-usa.html",
-    platform: "Super Nintendo",
+    platform: "Nintendo",
     logo:
       "/assets/logos/death_of_superman.png",
   },
@@ -1016,7 +1015,7 @@ export const beatnupGames: Game[] = [
     players: "1 Player",
     developer: "Capcom",
     coverImage: "/assets/covers/marvel_war_gems.jpg",
-    platform: "Super Nintendo",
+    platform: "Nintendo",
     logo:
       "/assets/logos/marvel_war_of_the_gems.png",
   },
@@ -1062,7 +1061,7 @@ export const beatnupGames: Game[] = [
     players: "1 Player",
     developer: "Ukiyotei",
     coverImage: "/assets/covers/spaawn.jpg",
-    platform: "Super Nintendo",
+    platform: "Nintendo",
     logo:
       "/assets/logos/spawn.png",
   }, {
@@ -1085,7 +1084,7 @@ export const beatnupGames: Game[] = [
     developer: "Malibu Interactive",
     coverImage: "/assets/covers/shadowhawk.jpg",
     embedUrl: "/emulator.html?rom=https://ozequlizbaymnvzeqkyh.supabase.co/storage/v1/object/public/game-rom/Shadowhawk.zip",
-    platform: "Super Nintendo",
+    platform: "Nintendo",
     logo: "/assets/logos/shadowhawk.png"
   },
   {
@@ -1110,7 +1109,7 @@ export const beatnupGames: Game[] = [
     coverImage: "/assets/covers/theshadow.jpg",
     embedUrl:
       "/emulator.html?rom=https://ozequlizbaymnvzeqkyh.supabase.co/storage/v1/object/public/game-rom/The_Shadow.zip",
-    platform: "Super Nintendo",
+    platform: "Nintendo",
     logo: "/assets/logos/theshadow.png"
   },
   {
@@ -1125,14 +1124,14 @@ export const beatnupGames: Game[] = [
     characters: ["Spartan", "Maul", "Warblade", "Helspont", "Daemonites"],
     description: "A comic-based SNES beat-’em up with the WildC.A.T.S team confronting alien threats.",
     longDescription:
-      "Jim Lee’s WildC.A.T.S: Covert Action Teams (1995) is a side-scrolling action game for the Super Nintendo, loosely adapting the WildC.A.T.S comics and cartoon. " +
+      "Jim Lee’s WildC.A.T.S: Covert Action Teams (1995) is a side-scrolling action game for the Nintendo, loosely adapting the WildC.A.T.S comics and cartoon. " +
       "Players alternate between Spartan, Maul, and Warblade, each with unique fighting styles, to battle the Daemonite menace across multiple stages. " +
       "The game emphasizes team dynamics and power synergy, requiring strategic use of each hero’s abilities to progress. " +
       "With comic-inspired visuals, pulpy sci-fi atmosphere, and throwbacks to 90s pop culture, the title appeals to fans of both comics and retro beat-’em ups.",
     players: "1 Player",
     developer: "Beam Software",
     coverImage: "/assets/covers/wildcats_snes.jpg",
-    platform: "Super Nintendo",
+    platform: "Nintendo",
     logo: "/assets/logos/wildcats.png",
   },
   {
@@ -1284,7 +1283,7 @@ export const beatnupGames: Game[] = [
     developer: "Capcom",
     coverImage: "/assets/covers/xmen_apocalipse.jpg",
     embedUrl: "https://www.retrogames.cc/embed/22926-x-men-mutant-apocalypse-usa.html",
-    platform: "Super Nintendo",
+    platform: "Nintendo",
     logo:
       "/assets/logos/xmen_apocalypse.png",
   },
@@ -1308,7 +1307,7 @@ export const beatnupGames: Game[] = [
     developer: "Data East",
     coverImage: "/assets/covers/capamerica.jpg",
     embedUrl: "https://www.retrogames.cc/embed/24031-captain-america-and-the-avengers-usa.html",
-    platform: "Super Nintendo",
+    platform: "Nintendo",
     logo: "/assets/logos/captaven.png",
   },
   {
@@ -1323,7 +1322,7 @@ export const beatnupGames: Game[] = [
     characters: ["Batman", "The Joker"],
     description: "A legendary Sunsoft classic: fast action, tight controls, and a dark, stylish atmosphere.",
     longDescription:
-      "Batman (1991) by Sunsoft for the Sega Genesis stands as one of the earliest 16-bit Batman adaptations to follow the NES 8-Bit classic, marking a major leap in visuals, sound, and gameplay. " +
+      "Batman (1991) by Sunsoft for the Genesis stands as one of the earliest 16-bit Batman adaptations to follow the NES 8-Bit classic, marking a major leap in visuals, sound, and gameplay. " +
       "Inspired directly by Tim Burton’s film, it blends fast side-scrolling action, sharp platforming, and extremely responsive controls. " +
       "Batman moves through Gotham’s dark alleys, industrial zones, and neon-lit stages using the Batarang, Batrope, and special weapons while battling waves of henchmen on his way to the final confrontation with the Joker. " +
       "Naoki Kodaka’s techno-dark soundtrack, detailed sprite work, and atmospheric art direction elevate this game into one of Sunsoft’s most respected and memorable releases.",
@@ -1331,7 +1330,7 @@ export const beatnupGames: Game[] = [
     developer: "Sunsoft",
     coverImage: "/assets/covers/batman.jpg",
     embedUrl: "https://www.retrogames.cc/embed/29834-batman-europe.html",
-    platform: "Sega Genesis",
+    platform: "Genesis",
     logo: "/assets/logos/batman.png",
   },
   {

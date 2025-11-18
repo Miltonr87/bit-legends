@@ -1,4 +1,4 @@
-import { Game } from "../game";
+import { Game } from "../index";
 
 export const actionGames: Game[] = [
     {
@@ -13,14 +13,14 @@ export const actionGames: Game[] = [
         characters: ["John Morris", "Eric Lecarde", "Elizabeth Bartley", "Dracula", "Drolta Tzuentes"],
         description: "A gothic action platformer where two vampire hunters fight to stop Dracula’s resurrection.",
         longDescription:
-            "Castlevania: Bloodlines (1994) is an action adventure for the Sega Genesis developed and published by Konami. " +
+            "Castlevania: Bloodlines (1994) is an action adventure for the Genesis developed and published by Konami. " +
             "Set during World War I, the story follows John Morris and Eric Lecarde as they travel across Europe to thwart Elizabeth Bartley’s scheme to resurrect Dracula. " +
             "The game features multiple branching paths, special weapons (axe, boomerang, holy water), and stage gimmicks like inverted rooms and reflections. " +
             "With rich visuals, a sweeping soundtrack by Michiru Yamane, and fast-paced gameplay, it stands out as the only Castlevania title made specifically for the Genesis.",
         players: "1 Player",
         developer: "Konami",
         coverImage: "/assets/covers/castlevania_bloodlines_genesis.jpg",
-        platform: "Sega Genesis",
+        platform: "Genesis",
         logo: "/assets/logos/castlevania_bloodlines.png"
     },
     {
@@ -39,7 +39,7 @@ export const actionGames: Game[] = [
         players: "1 Player",
         developer: "Sega",
         coverImage: "/assets/covers/shinobi.jpg",
-        platform: "Sega Genesis",
+        platform: "Genesis",
         logo: "/assets/logos/shinobi_3.png"
     },
     {
@@ -54,14 +54,14 @@ export const actionGames: Game[] = [
         characters: ["RoboCop", "The Terminator", "Skynet Drones", "Cyborg Soldiers"],
         description: "The ultimate battle of man versus machine begins!",
         longDescription:
-            "RoboCop Versus The Terminator (1993) for the Sega Genesis delivers explosive run-and-gun action inspired by both legendary sci-fi franchises. " +
+            "RoboCop Versus The Terminator (1993) for the Genesis delivers explosive run-and-gun action inspired by both legendary sci-fi franchises. " +
             "As RoboCop, players wage a one-man war against Skynet and its mechanical army through futuristic Detroit and post-apocalyptic battlefields. " +
             "Armed with devastating weapons and brutal finishing moves, the game blends gritty violence, detailed sprites, and atmospheric sound design. " +
             "One of the most intense shooters on the Genesis, it perfectly captures the chaos of two cinematic universes colliding.",
         players: "1 Player",
         developer: "Virgin Games USA",
         coverImage: "/assets/covers/robocop_terminator.jpg",
-        platform: "Sega Genesis",
+        platform: "Genesis",
         logo: "/assets/logos/robocop_terminator.png"
     },
     {
@@ -76,14 +76,14 @@ export const actionGames: Game[] = [
         characters: ["Slash", "Raptor", "Spuke", "Chainsaw", "Kane"],
         description: "A futuristic sword-fighting action game set in a cyberpunk world ruled by violence.",
         longDescription:
-            "X-Kaliber 2097 (1994) is a stylish side-scrolling action game for the Super Nintendo, developed by Fupac/Winds and published by Activision. " +
+            "X-Kaliber 2097 (1994) is a stylish side-scrolling action game for the Nintendo, developed by Fupac/Winds and published by Activision. " +
             "Set in a dystopian future dominated by gangs and corrupt corporations, players take control of Slash, a sword-wielding hero battling through techno-infested cityscapes. " +
             "Featuring high-energy combat, a gritty cyberpunk atmosphere, and an acclaimed electronic soundtrack by Psykosonik in the US version, it’s one of the SNES’s hidden action gems. " +
             "Fluid animation, tight controls, and boss duels make X-Kaliber 2097 a standout among futuristic beat-’em-up titles of its era.",
         players: "1 Player",
         developer: "Fupac / Winds",
         coverImage: "/assets/covers/x_kaliber_2097_snes.jpg",
-        platform: "Super Nintendo",
+        platform: "Nintendo",
         logo: "/assets/logos/x_kaliber.png"
     },
     {
@@ -98,14 +98,14 @@ export const actionGames: Game[] = [
         characters: ["The Master", "Tanzra"],
         description: "A divine side-scrolling adventure blending myth, challenge, and breathtaking visuals.",
         longDescription:
-            "ActRaiser 2 (1993) is an action platformer developed by Quintet and published by Enix for the Super Nintendo. " +
+            "ActRaiser 2 (1993) is an action platformer developed by Quintet and published by Enix for the Nintendo. " +
             "The sequel to the cult classic ActRaiser, this title abandons the city-building mechanics of its predecessor to focus purely on refined, challenging side-scrolling action. " +
             "Players once again take on the role of The Master, a divine warrior battling the fallen angel Tanzra and his legions across richly painted levels. " +
             "With orchestral music by Yuzo Koshiro and some of the most beautiful visuals on the SNES, ActRaiser 2 stands as a demanding yet majestic 16-bit masterpiece.",
         players: "1 Player",
         developer: "Quintet",
         coverImage: "/assets/covers/actraiser.jpg",
-        platform: "Super Nintendo",
+        platform: "Nintendo",
         logo: "/assets/logos/actraiser.png"
     },
     {
@@ -120,14 +120,14 @@ export const actionGames: Game[] = [
         characters: ["Judge Dredd"],
         description: "Patrol Mega-City One as Judge Dredd in a gritty law-enforcement action platformer.",
         longDescription:
-            "Judge Dredd (1995) for the Sega Genesis is an action platformer based on both the classic British DC Comics and the 1995 film adaptation. " +
+            "Judge Dredd (1995) for the Genesis is an action platformer based on both the classic British DC Comics and the 1995 film adaptation. " +
             "Players step into the boots of the legendary lawman as he enforces justice across the sprawling, crime-ridden districts of Mega-City One. " +
             "The game blends run-and-gun combat, platforming challenges, and mission-based objectives, allowing Dredd to arrest criminals, interrogate suspects, and choose between lethal and non-lethal force. " +
             "With digitized visuals, atmospheric stage designs, and an arsenal of Lawgiver weapon modes, Judge Dredd delivers a gritty, dystopian 16-bit experience faithful to the tone of the franchise.",
         players: "1 Player",
         developer: "Probe Entertainment",
         coverImage: "/assets/covers/judge.jpg",
-        platform: "Sega Genesis",
+        platform: "Genesis",
         logo: "/assets/logos/judge.png"
     },
     {
@@ -142,7 +142,7 @@ export const actionGames: Game[] = [
         characters: ["Chakan"],
         description: "An immortal warrior cursed to wander a world consumed by darkness.",
         longDescription:
-            "Chakan: The Forever Man (1992) for the Sega Genesis descends into a haunting dark-fantasy world where the line between life and death has long faded. " +
+            "Chakan: The Forever Man (1992) for the Genesis descends into a haunting dark-fantasy world where the line between life and death has long faded. " +
             "Once a proud swordsman who challenged Death itself, Chakan is now cursed with eternal life — doomed to destroy all supernatural evil before he can rest. " +
             "Armed with twin enchanted blades and elemental powers, players traverse nightmarish realms filled with grotesque creatures, deadly traps, and eerie silence. " +
             "With its gothic tone, chilling soundtrack, and unforgiving difficulty, Chakan stands as one of Sega’s most atmospheric and somber horror-action adventures — a true cult classic of the 16-bit era.",
@@ -150,7 +150,7 @@ export const actionGames: Game[] = [
         developer: "Extended Play Productions",
         coverImage: "/assets/covers/chakan.jpg",
         logo: "/assets/logos/chakan.png",
-        platform: "Sega Genesis",
+        platform: "Genesis",
     },
     {
         id: "doom-troopers",
@@ -164,14 +164,14 @@ export const actionGames: Game[] = [
         characters: ["Mitch Hunter", "Max Steiner"],
         description: "Two elite commandos battle the mutant-legions in a brutal action-shooter.",
         longDescription:
-            "Doom Troopers: The Mutant Chronicles (1995) for the Sega Genesis pits the hardened Doomtroopers Mitch Hunter and Max Steiner against the vile Dark Legion — a mutant scourge threatening human outposts across the solar system. " +
+            "Doom Troopers: The Mutant Chronicles (1995) for the Genesis pits the hardened Doomtroopers Mitch Hunter and Max Steiner against the vile Dark Legion — a mutant scourge threatening human outposts across the solar system. " +
             "Run-and-gun gameplay meets savage horror visuals: decapitations, gory explosions, and relentless mutants stalk each of the eight levels." +
             "With two-player cooperative mode, high-power weapon upgrades, and challenging action, this title stands out as one of the more intense horror-inflected shooters in the 16-bit era.",
         players: "1-2 Players",
         developer: "Adrenalin Entertainment",
         coverImage: "/assets/covers/doomtroopers.jpg",
         logo: "/assets/logos/doomtroopers.png",
-        platform: "Sega Genesis",
+        platform: "Genesis",
     },
     {
         id: "gargoyles-genesis",
@@ -185,14 +185,14 @@ export const actionGames: Game[] = [
         characters: ["Goliath", "Demona"],
         description: "A gargoyle guardian battles through time to destroy the evil Eye of Odin.",
         longDescription:
-            "Gargoyles (1995) for the Sega Genesis is a dark, gothic-platformer based on the Disney animated series. " +
+            "Gargoyles (1995) for the Genesis is a dark, gothic-platformer based on the Disney animated series. " +
             "You play as Goliath, leader of the gargoyle clan, who must face ancient Viking sorcery and a modern robotic army after the evil Eye of Odin resurfaces. " +
             "Climb walls, leap from skyscrapers, and take to the air on wings as you traverse medieval castles and 1990s Manhattan rooftops. With rich animation and challenging levels, it’s a standout in the horror-tinged action platform genre of the 16-bit era.",
         players: "1 Player",
         developer: "Disney Interactive",
         coverImage: "/assets/covers/gargoyles.jpg",
         logo: "/assets/logos/gargoyles.png",
-        platform: "Sega Genesis",
+        platform: "Genesis",
     },
 ];
 

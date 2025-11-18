@@ -14,7 +14,7 @@ export const mockCastlevania: Game = {
     longDescription: 'Two vampire hunters fight to stop Dracula’s resurrection.',
     players: '1 Player',
     developer: 'Konami',
-    platform: 'Sega Genesis',
+    platform: 'Genesis',
     coverImage: '/assets/covers/cv-bloodlines.png',
     logo: '/assets/logos/cv.png',
     cover: '/assets/covers/cv-bloodlines.png',

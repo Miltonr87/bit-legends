@@ -21,7 +21,7 @@ export const raceGames: Game[] = [
         developer: "Silicon & Synapse",
         coverImage: "/assets/covers/rock.png",
         logo: "/assets/logos/rock.png",
-        platform: "Super Nintendo",
+        platform: "Nintendo",
     },
     {
         id: "biker-mice-from-mars",
@@ -43,7 +43,7 @@ export const raceGames: Game[] = [
         developer: "Konami",
         coverImage: "/assets/covers/bike.jpg",
         logo: "/assets/logos/bike.png",
-        platform: "Super Nintendo",
+        platform: "Nintendo",
     },
     {
         id: "batman-returns",

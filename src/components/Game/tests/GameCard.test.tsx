@@ -20,7 +20,7 @@ describe('GameCard Component', () => {
       'Two vampire hunters fight to stop Dracula’s resurrection.',
     players: '1 Player',
     developer: 'Konami',
-    platform: 'Sega Genesis',
+    platform: 'Genesis',
     coverImage: '/assets/covers/cv-bloodlines.png',
     logo: '/assets/logos/cv.png',
     cover: '/assets/covers/cv-bloodlines.png',
@@ -40,7 +40,7 @@ describe('GameCard Component', () => {
     expect(screen.getByText(/Castlevania: Bloodlines/i)).toBeInTheDocument();
     expect(screen.getByText(/1994/i)).toBeInTheDocument();
     expect(screen.getByText(/Action/i)).toBeInTheDocument();
-    expect(screen.getByText(/Sega Genesis/i)).toBeInTheDocument();
+    expect(screen.getByText(/Genesis/i)).toBeInTheDocument();
   });
 
   it('renders the cover image with correct alt text', () => {
