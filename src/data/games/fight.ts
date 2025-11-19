@@ -7,7 +7,7 @@ export const fightGames: Game[] = [
         slug: "ultimate-mortal-kombat-3-usa",
         embedId: "23432",
         year: 1996,
-        genre: "Horror",
+        genre: "Horror / Tournament",
         folder: "Mortal Kombat",
         publisher: "Acclaim",
         characters: ["Liu Kang", "Kung Lao", "Sub-Zero", "Scorpion", "Shang Tsung", "Noob Saibot", "Strider", "Sonya Blade"],
