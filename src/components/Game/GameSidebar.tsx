@@ -112,16 +112,18 @@ export const GameSidebar = ({ game }: GameSidebarProps) => {
             </div>
           </div>
         </Card>
-        <Card
-          className="p-6 border-2 border-accent/30 rounded-2xl backdrop-blur-sm hover:shadow-lg hover:shadow-accent/10 transition-all duration-300 flex justify-center"
-          style={{ background: PANEL_BACKGROUND }}
-        >
-          <img
-            src={platformLogo}
-            alt={`${game.platform} Logo`}
-            className="object-contain w-full h-12 drop-shadow-md"
-          />
-        </Card>
+        {!isMobile && (
+          <Card
+            className="p-6 border-2 border-accent/30 rounded-2xl backdrop-blur-sm hover:shadow-lg hover:shadow-accent/10 transition-all duration-300 flex justify-center"
+            style={{ background: PANEL_BACKGROUND }}
+          >
+            <img
+              src={platformLogo}
+              alt={`${game.platform} Logo`}
+              className="object-contain w-full h-12 drop-shadow-md"
+            />
+          </Card>
+        )}
         {!isMobile && <GameController />}
       </aside>
     </motion.div>

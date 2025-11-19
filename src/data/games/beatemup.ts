@@ -1300,10 +1300,8 @@ export const beatnupGames: Game[] = [
     description: "Capcom’s prehistoric brawler — muscle cars, dinosaurs, and chaos collide!",
     longDescription:
       "Cadillacs and Dinosaurs (1993) is Capcom's explosive arcade adaptation of Mark Schultz's cult comic book series, initially called Xenozoic Tales and later published by Topps Comics as Cadillacs and Dinosaurs. " +
-      "Set in a post-apocalyptic future where dinosaurs have reclaimed the Earth, players join Jack Tenrec, Hannah Dundee, Mustapha Cairo, and Mess O’Bradovich in a desperate fight to preserve the fragile balance between humanity and nature. " +
-      "Battle mutant poachers, cyber-enhanced thugs, and rampaging prehistoric beasts across jungles, deserts, underground labs, and ruined megacities. " +
-      "Punch through hordes of enemies, blast through waves of mutants, and tear across the wasteland in Tenrec’s iconic high-powered Cadillac. " +
-      "With blazing co-op action, expressive pixel art, and unforgettable set pieces, this remains one of Capcom’s most stylish and beloved beat ’em ups.",
+      "Set in a post-apocalyptic future where dinosaurs have reclaimed the Earth, players join Jack Tenrec, Hannah Dundee, Mustapha Cairo, and Mess O’Bradovich in a desperate fight to preserve the fragile balance between humanity and nature." +
+      " Punch through hordes of enemies, blast through waves of mutants, and tear across the wasteland in Tenrec’s iconic high-powered Cadillac. ",
     players: "1-3 Players",
     developer: "Capcom",
     coverImage: "/assets/covers/cadillacs.jpg",
