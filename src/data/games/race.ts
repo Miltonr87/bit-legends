@@ -13,15 +13,38 @@ export const raceGames: Game[] = [
         characters: ["Snake Sanders", "Cyberhawk", "Jake Badlands", "Tarquinn", "Ivanzypher", "Katarina Lyons"],
         description: "Racing with rock soundtrack!",
         longDescription:
-            "Rock N’ Roll Racing (1993) fuses explosive vehicular combat with an iconic licensed rock soundtrack that defined a generation. " +
-            "Tear through interplanetary tracks, launch missiles, drop mines, and shred rivals in chaotic isometric battles. " +
-            "Win races to upgrade engines, armor, and weapons as you carve your way through the galaxy’s deadliest circuits. " +
-            "A loud, rebellious, high-octane Blizzard classic — where every race feels like a metal concert on wheels.",
+            "Rock N’ Roll Racing (1993) amps up the chaos with explosive vehicular combat, sharp isometric handling, and a legendary lineup of licensed rock and heavy-metal tracks blasting in the background. " +
+            "Race across hostile planets filled with hazards, traps, and vicious opponents who will ram, blast, and sabotage you at every turn. " +
+            "Upgrade engines, tires, armor, and weapons to dominate the circuit — from missile volleys to land mines and brutal side-swipes that send rivals flying off the track. " +
+            "Its energetic commentary, rebellious attitude, and unforgettable soundtrack make it one of Blizzard’s earliest cult classics, turning every race into a roaring, intergalactic metal showdown.",
         players: "1-2 Players",
         developer: "Silicon & Synapse",
         coverImage: "/assets/covers/rock.png",
         logo: "/assets/logos/rock.png",
         platform: "Nintendo",
+    },
+    {
+        id: "battle-cars-snes",
+        title: "Battle Cars",
+        slug: "battle-cars-usa",
+        embedId: "19832",
+        year: 1993,
+        genre: "Combat Race",
+        folder: "Fight Race",
+        publisher: "Namco Hometek",
+        characters: ["Spike Vehicle", "Hot Rod", "Formula-Car", "Boss Car 1", "Boss Car 2"],
+        description: "Armored vehicles battle it out on futuristic circuits!",
+        longDescription:
+            "Battle Cars (1993) thrusts players into a post-apocalyptic racing arena where speed alone isn’t enough because you must fight to win. " +
+            "Developed by Malibu Interactive and published by Namco Hometek for the SNES, the game blends Mode 7 track visuals with vehicular combat: missiles, bouncing discs, grenades, and brutal head-on clashes across hazardous tracks." +
+            "Choose from radically different vehicles — the spiked muscle car, the hot rod, or the formula-style racer — upgrade your weapons and armor with earnings from cross-country and boss races, and adapt quickly: each weapon behaves differently and each track demands quick reflexes." +
+            "With its blend of high-octane racing and ruthless combat, Battle Cars stands as a distinctive entry in the 16-bit era’s vehicular brawlers — equal parts speed and destruction."
+        ,
+        players: "1-2 Players",
+        developer: "Malibu Interactive",
+        coverImage: "/assets/covers/battle_cars.jpg",
+        platform: "Nintendo",
+        logo: "/assets/logos/battle_cars.png"
     },
     {
         id: "biker-mice-from-mars",
@@ -67,28 +90,7 @@ export const raceGames: Game[] = [
         logo: "/assets/logos/batman_returns.png",
         platform: "Sega CD"
     },
-    {
-        id: "riding-fight",
-        title: "Riding Fight",
-        slug: "riding-fight-ver-1-0a",
-        embedId: "34209",
-        year: 1992,
-        genre: "Combat Race",
-        folder: "Fight Race",
-        publisher: "Taito",
-        characters: ["Ryu", "Billy", "Gary", "Burt", "Lisa"],
-        description: "High-speed futuristic combat on the streets!",
-        longDescription:
-            "Riding Fight (1992) is Taito’s cyberpunk interpretation of Fight Race — a high-speed pursuit through neon-drenched megacities and skyway highways. " +
-            "Clash with rival riders using punches, kicks, and acrobatic strikes as you rocket forward at breakneck speed. " +
-            "Its fluid scaling effects, nonstop motion, and explosive arcade flair create a seamless fusion of combat and momentum. " +
-            "A pulse-pounding sprint where every encounter hits at full throttle.",
-        players: "1-2 Players",
-        developer: "Taito",
-        coverImage: "/assets/covers/ridingfight.jpg",
-        logo: "/assets/logos/ridingf.png",
-        platform: "Arcade",
-    },
+
 
 ];
 

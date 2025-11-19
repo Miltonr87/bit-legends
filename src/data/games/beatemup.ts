@@ -839,6 +839,28 @@ export const beatnupGames: Game[] = [
     platform: "Genesis",
   },
   {
+    id: "riding-fight",
+    title: "Riding Fight",
+    slug: "riding-fight-ver-1-0a",
+    embedId: "34209",
+    year: 1992,
+    genre: "Sci-Fi / Rare",
+    folder: "Sci-Fi / Rare",
+    publisher: "Taito",
+    characters: ["Ryu", "Billy", "Gary", "Burt", "Lisa"],
+    description: "High-speed futuristic combat on the streets!",
+    longDescription:
+      "Riding Fight (1992) is a stylish cyberpunk brawler from Taito, built as an original sci-fi arcade property. " +
+      "Set in a neon-lit future, the game blends hand-to-hand combat with high-speed traversal through elevated walkways, moving platforms, and futuristic city structures, all showcased with the Taito F3 board’s impressive sprite-scaling effects. " +
+      "Enemies ambush from all sides as you strike, dodge, vault, and advance through constantly shifting environments that never let the action slow down. " +
+      "Because it saw extremely limited distribution (especially outside Japan) Riding Fight is considered a very rare arcade title making it a sought-after gem among arcade enthusiasts.",
+    players: "1-2 Players",
+    developer: "Taito",
+    coverImage: "/assets/covers/ridingfight.jpg",
+    logo: "/assets/logos/ridingf.png",
+    platform: "Arcade",
+  },
+  {
     id: "silent-dragon",
     title: "Silent Dragon",
     slug: "silent-dragon-us",
