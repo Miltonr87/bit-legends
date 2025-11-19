@@ -51,12 +51,16 @@ export const actionGames: Game[] = [
         slug: "robocop-versus-the-terminator-usa",
         embedId: "30351",
         year: 1993,
-        genre: "Sci-Fi",
-        folder: "Sci-Fi",
+        genre: "Indie Comics / Sci-Fi",
+        folder: "Indie Comics / Sci-Fi",
         publisher: "Virgin Games",
         characters: ["RoboCop", "The Terminator", "Skynet Drones", "Cyborg Soldiers"],
         description: "The ultimate battle of man versus machine begins!",
-        longDescription: "RoboCop Versus The Terminator (1993) for the Genesis delivers explosive run-and-gun action inspired by both legendary sci-fi franchises. " + "As RoboCop, players wage a one-man war against Skynet and its mechanical army through futuristic Detroit and post-apocalyptic battlefields. " + "Armed with devastating weapons and brutal finishing moves, the game blends gritty violence, detailed sprites, and atmospheric sound design. " + "One of the most intense shooters on the Genesis, it perfectly captures the chaos of two cinematic universes colliding.",
+        longDescription:
+            "RoboCop vs. Terminator (1993), inspired by the brutal Dark Horse Comics crossover, brings two of sci-fi’s most iconic killing machines into a relentless, hyper-violent showdown on the Sega Genesis. " +
+            "As RoboCop, players battle Skynet’s rising mechanical empire across dystopian Detroit streets, corrupted tech labs, and scorched post-apocalyptic warzones, carving a path through Terminators, drones, and cyborg soldiers. " +
+            "Armed with heavy-grade firepower, explosive upgrades, and devastating execution shots, every encounter feels raw, gritty, and unapologetically intense. " +
+            "With detailed sprite work, pounding sound design, and some of the most outrageous carnage on 16-bit hardware, RoboCop vs. Terminator stands as a cult classic — a brutal fusion of two cinematic universes at their most chaotic and iconic.",
         players: "1 Player",
         developer: "Virgin Games USA",
         coverImage: "/assets/covers/robocop_terminator.jpg",
@@ -113,13 +117,13 @@ export const actionGames: Game[] = [
         slug: "judge-dredd-world",
         embedId: "16931",
         year: 1995,
-        genre: "DC Comics",
-        folder: "Acclaim",
+        genre: "Indie Comics / Sci-Fi",
+        folder: "Indie Comics / Sci-Fi",
         publisher: "Acclaim Entertainment",
         characters: ["Judge Dredd"],
         description: "Patrol Mega-City One as Judge Dredd in a gritty law-enforcement action platformer.",
         longDescription:
-            "Judge Dredd (1995) for the Genesis is an action platformer based on both the classic British DC Comics and the 1995 film adaptation. " +
+            "Judge Dredd (1995) for the Genesis is an action platformer based on both the classic 2000 AD Comics and the 1995 film adaptation. " +
             "Players step into the boots of the legendary lawman as he enforces justice across the sprawling, crime-ridden districts of Mega-City One. " +
             "The game blends run-and-gun combat, platforming challenges, and mission-based objectives, allowing Dredd to arrest criminals, interrogate suspects, and choose between lethal and non-lethal force. " +
             "With digitized visuals, atmospheric stage designs, and an arsenal of Lawgiver weapon modes, Judge Dredd delivers a gritty, dystopian 16-bit experience faithful to the tone of the franchise.",
@@ -130,21 +134,44 @@ export const actionGames: Game[] = [
         logo: "/assets/logos/judge.png"
     },
     {
+        id: "batman-revenge-joker-genesis",
+        title: "Batman: The Joker",
+        slug: "batman-revenge-of-the-joker-usa",
+        embedId: "30034",
+        year: 1992,
+        genre: "DC Comics",
+        folder: "DC Comics",
+        publisher: "Sunsoft",
+        characters: ["Batman", "The Joker"],
+        description: "Batman faces the Clown Prince of Crime in a stylized, high-impact action platformer by Sunsoft.",
+        longDescription:
+            "Batman: Revenge of The Joker (1992) for the Genesis is a fast-paced action platformer where the Dark Knight battles his arch-nemesis across Gotham City. " +
+            "Inspired by the DC Comics aesthetic rather than the film universe, the game features bold sprite work, exaggerated animations, and a distinct Sunsoft art direction that gives the adventure a graphic-novel edge. " +
+            "Players guide Batman through factories, rooftops, laboratories, and fortified Joker hideouts using batarangs, special projectiles, and ranged combat. " +
+            "Known for its colorful stages, challenging bosses, and a stylish soundtrack, Revenge of The Joker offers a unique interpretation of the Batman mythos on 16-bit first hardwares and stands as one of Sunsoft’s most visually memorable DC titles.",
+        players: "1 Player",
+        developer: "Ringler Studios / Sunsoft",
+        coverImage: "/assets/covers/batman_revenge_joker.jpg",
+        platform: "Genesis",
+        logo: "/assets/logos/batman_revenge_joker.png"
+    },
+    {
         id: "chakan-the-forever-man",
         title: "Chakan",
         slug: "chakan-usa-europe",
         embedId: "30305",
         year: 1992,
-        genre: "Horror",
-        folder: "Sega",
+        genre: "Indie Comics / Horror",
+        folder: "Indie Comics / Horror",
         publisher: "Sega",
         characters: ["Chakan"],
         description: "An immortal warrior cursed to wander a world consumed by darkness.",
         longDescription:
-            "Chakan: The Forever Man (1992) for the Genesis descends into a haunting dark-fantasy world where the line between life and death has long faded. " +
-            "Once a proud swordsman who challenged Death itself, Chakan is now cursed with eternal life — doomed to destroy all supernatural evil before he can rest. " +
-            "Armed with twin enchanted blades and elemental powers, players traverse nightmarish realms filled with grotesque creatures, deadly traps, and eerie silence. " +
-            "With its gothic tone, chilling soundtrack, and unforgiving difficulty, Chakan stands as one of Sega’s most atmospheric and somber horror-action adventures — a true cult classic of the 16-bit era.",
+            "Chakan: The Forever Man (1992) is based on the independent comic series created by Robert A. Kraus and published through his studio R.A.K. Graphics. " +
+            "The game faithfully adapts Chakan’s tragic lore: once a master swordsman who arrogantly challenged Death to combat, he won but was cursed with eternal life until all supernatural evil in every realm is destroyed. " +
+            "Armed with twin enchanted blades and the ability to forge elemental weapons, Chakan journeys through surreal nightmare worlds filled with demons, spirits, grotesque creatures, and deadly traps. " +
+            "Sega’s adaptation is infamous for its oppressive atmosphere, eerie soundtrack, minimal storytelling, and brutal difficulty which capture the dark and existential weight of the original indie comic. " +
+            "A somber, haunting 16-bit classic, Chakan remains one of the most unique and uncompromising horror-action titles ever released.",
         players: "1 Player",
         developer: "Extended Play Productions",
         coverImage: "/assets/covers/chakan.jpg",
@@ -157,15 +184,16 @@ export const actionGames: Game[] = [
         slug: "doom-troopers-the-mutant-chronicles-usa",
         embedId: "29775",
         year: 1995,
-        genre: "Horror",
-        folder: "Horror",
+        genre: "Indie Comics / Sci-Fi",
+        folder: "Indie Comics / Sci-Fi",
         publisher: "Playmates Interactive Entertainment",
         characters: ["Mitch Hunter", "Max Steiner"],
         description: "Two elite commandos battle the mutant-legions in a brutal action-shooter.",
         longDescription:
-            "Doom Troopers: The Mutant Chronicles (1995) for the Genesis pits the hardened Doomtroopers Mitch Hunter and Max Steiner against the vile Dark Legion — a mutant scourge threatening human outposts across the solar system. " +
-            "Run-and-gun gameplay meets savage horror visuals: decapitations, gory explosions, and relentless mutants stalk each of the eight levels." +
-            "With two-player cooperative mode, high-power weapon upgrades, and challenging action, this title stands out as one of the more intense horror-inflected shooters in the 16-bit era.",
+            "Doom Troopers: The Mutant Chronicles (1995) for the Genesis is based on the Swedish dark sci-fi universe created by Target Games and expanded through the Mutant Chronicles comics and graphic novels. " +
+            "Players step into the boots of Mitch Hunter and Max Steiner — elite commandos from rival megacorporations united against the monstrous Dark Legion. " +
+            "Run-and-gun action meets savage horror: mutants swarm from every direction, gore splashes across industrial battlefields, and each mission pushes humanity one step closer to annihilation. " +
+            "With two-player co-op, devastating weapon upgrades, and some of the most brutal visuals on the 16-bit hardware, Doom Troopers stands as a gritty, relentless adaptation of one of the most iconic indie sci-fi comic universes ever created.",
         players: "1-2 Players",
         developer: "Adrenalin Entertainment",
         coverImage: "/assets/covers/doomtroopers.jpg",
@@ -178,16 +206,16 @@ export const actionGames: Game[] = [
         slug: "gargoyles-usa",
         embedId: "16982",
         year: 1995,
-        genre: "Horror",
-        folder: "Horror",
+        genre: "Indie Comics / Horror",
+        folder: "Indie Comics / Horror",
         publisher: "Buena Vista Interactive",
         characters: ["Goliath", "Demona"],
         description: "A gargoyle guardian battles through time to destroy the evil Eye of Odin.",
         longDescription:
-            "Gargoyles (1995) for the Genesis is a dark, gothic-platformer based on the Disney animated series. " +
-            "You play as Goliath, leader of the gargoyle clan, who must face ancient Viking sorcery and a modern robotic army after the evil Eye of Odin resurfaces. " +
-            "Climb walls, leap from skyscrapers, and take to the air on wings as you traverse medieval castles and 1990s Manhattan rooftops. With rich animation and challenging levels, it’s a standout in the horror-tinged action platform genre of the 16-bit era.",
-        players: "1 Player",
+            "Gargoyles (1995) for the Genesis draws from the dark, brooding world of Disney’s animated series, which later expanded into an official comic-book line published by Slave Labor Graphics and Creature Comics, and more recently revived by Dynamite Entertainment. " +
+            "Players step into the talons of Goliath, leader of the Manhattan Clan, as he confronts ancient Viking sorcery, ruthless modern conspiracies, and a rising techno-army linked to the sinister Eye of Odin. " +
+            "Scale walls, glide across rooftops, and unleash powerful strikes as you battle through gothic castles and 1990s New York skyscrapers in a faithful adaptation of the show's intense atmosphere. " +
+            "With fluid animation, moody environments, and challenging platforming, Gargoyles stands as one of the Genesis era’s most stylish dark-fantasy action titles.",
         developer: "Disney Interactive",
         coverImage: "/assets/covers/gargoyles.jpg",
         logo: "/assets/logos/gargoyles.png",

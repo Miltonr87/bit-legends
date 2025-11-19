@@ -29,13 +29,13 @@ export const raceGames: Game[] = [
         slug: "biker-mice-from-mars-usa",
         embedId: "20158",
         year: 1994,
-        genre: "Combat Race",
-        folder: "Fight Race",
+        genre: "Indie Comics / Combat Race",
+        folder: "Indie Comics / Combat Race",
         publisher: "Konami",
         characters: ["Throttle", "Vinnie", "Modo", "Limburger", "Greasepit", "Dr.Karbunkle"],
         description: "Cartoon motorcycle racing on Mars!",
         longDescription:
-            "Biker Mice from Mars (1994) puts players behind the handlebars of the galaxy’s most radical rodent trio. " +
+            "Biker Mice from Mars (1994) created by Rick Ungar and published by Oni Press as and independent comics book puts players behind the handlebars of the galaxy’s most radical rodent trio. " +
             "Fight through twisting tracks, dodge environmental hazards, and fire weapons at rival bikers as you try to take down the villainous Limburger. " +
             "Konami’s colorful graphics, fast gameplay, and cartoon humor perfectly capture the spirit of the TV show. " +
             "A wild, high-energy SNES classic packed with personality and turbo-charged mayhem.",
@@ -51,7 +51,7 @@ export const raceGames: Game[] = [
         slug: "batman-returns-usa",
         embedId: "40680",
         year: 1993,
-        genre: "Combat Race",
+        genre: "DC Comics / Combat Race",
         folder: "Fight Race",
         publisher: "Sega",
         characters: ["Batman", "Catwoman", "The Penguin"],

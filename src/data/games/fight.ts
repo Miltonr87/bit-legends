@@ -135,8 +135,8 @@ export const fightGames: Game[] = [
         slug: "teenage-mutant-hero-turtles-tournament-fighters-europe",
         embedId: "19823",
         year: 1993,
-        genre: "Tournament",
-        folder: "Konami",
+        genre: "Indie Comics / Tournament",
+        folder: "Indie Comics / Tournament",
         publisher: "Konami",
         characters: [
             "Leonardo",
@@ -154,10 +154,11 @@ export const fightGames: Game[] = [
         ],
         description: "The ultimate TMNT showdown on the Nintendo!",
         longDescription:
-            "Teenage Mutant Ninja Turtles: Tournament Fighters (1993) delivers intense one-on-one combat starring the heroes in a half shell. " +
-            "Developed by Konami exclusively for the SNES, it features detailed sprite work, unique super moves, and fast, responsive gameplay. " +
-            "Players can battle across multiple arenas, facing classic TMNT villains and new challengers alike. " +
-            "With its deep combat system and distinctive art style, it remains one of the best 16-bit fighting games ever released.",
+            "Teenage Mutant Ninja Turtles: Tournament Fighters (1993) brings the Mirage Studios comic legacy into the competitive fighting arena, turning the TMNT universe into a vibrant 1-on-1 battleground. " +
+            "Long before their animated adaptations took center stage, the Turtles originated in Kevin Eastman and Peter Laird’s Mirage Studios Comics. " +
+            "Tournament Fighters channels that spirit with intense duels, sharp character designs, and a roster that includes both classic villains and deep-cut comic characters like Armaggon and Karai, making it one of Konami’s most lore-faithful TMNT projects. " +
+            "With fluid controls, special attacks, super moves, and richly detailed pixel art, the game stands out as one of the finest 16-bit fighting titles. " +
+            "Its competitive depth, unique character abilities, and strong comic-inspired identity ensure it remains a standout TMNT experience to this day.",
         players: "1-2 Players",
         developer: "Konami",
         coverImage: "/assets/covers/tmnt_tournament_fighters.jpg",

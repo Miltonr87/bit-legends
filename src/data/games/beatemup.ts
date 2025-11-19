@@ -73,16 +73,16 @@ export const beatnupGames: Game[] = [
     slug: "comix-zone-usa",
     embedId: "29773",
     year: 1995,
-    genre: "Urban",
-    folder: "Comix Zone",
+    genre: "Indie Comics",
+    folder: "Indie Comics",
     publisher: "Sega",
     characters: ["Sketch Turner", "Roadkill", "Mortus"],
     description: "A groundbreaking comic book beat ’em up brought to life—panel by panel.",
     longDescription:
-      "Comix Zone (1995) is one of Sega’s most stylish and innovative beat ’em ups, placing players directly inside the pages of a living comic book. " +
-      "You play as Sketch Turner, a streetwise illustrator pulled into his own creation by the villainous Mortus, forced to fight through hand-drawn panels filled with mutants, punks, and hazards. " +
-      "Each stage feels like flipping through an underground graphic novel, complete with speech bubbles, panel transitions, and dynamic page effects. " +
-      "With tight combat, environmental interactions, grunge-era attitude, and Roadkill the rat as your trusty sidekick, Comix Zone stands as one of the most unique and iconic urban action games on the Genesis.",
+      "Comix Zone (1995) is Sega’s groundbreaking attempt to create a fully original, interactive comic book universe (not adapted from any existing print series), but designed from the ground up as a Digital Comic experience. " +
+      "Players step into the shoes of Sketch Turner, a rebellious illustrator dragged into his own graphic novel by the sinister Mortus. Inside this living comic world, every punch, jump, and explosion unfolds across hand-drawn panels complete with onomatopoeia, speech bubbles, and dramatic page transitions. " +
+      "The game blends urban grit, underground comic-book aesthetics, and environmental puzzles, letting Sketch tear through pages, rip panels apart, or use objects embedded in the artwork itself. " +
+      "Supported by Roadkill — his loyal pet rat — and powered by Sega Technical Institute’s expressive animation and grunge-era style, Comix Zone remains one of the most innovative and visually striking action games of the 16-bit era.",
     players: "1 Player",
     developer: "Sega Technical Institute",
     coverImage: "/assets/covers/comix.jpeg",
@@ -164,16 +164,17 @@ export const beatnupGames: Game[] = [
     slug: "teenage-mutant-ninja-turtles-turtles-in-time-2-players-ver-uda",
     embedId: "24621",
     year: 1991,
-    genre: "Urban",
-    folder: "Teenage Mutant Ninja Turtles",
+    genre: "Indie Comics / Urban",
+    folder: "Indie Comics / Urban",
     publisher: "Konami",
     characters: ["Leonardo", "Michelangelo", "Donatello", "Raphael"],
     description: "Cowabunga! The Turtles travel through time to save New York!",
     longDescription:
-      "Teenage Mutant Ninja Turtles: Turtles in Time (1991) brings the arcade classic to the Nintendo with enhanced visuals and smoother gameplay. " +
-      "Join the four turtles as they chase Shredder across time — from prehistoric battles to neon-filled futures and pirate ship brawls. " +
-      "Each level bursts with personality, humor, and cooperative chaos. " +
-      "Praised for its fast-paced combat and iconic soundtrack, it remains one of the greatest side-scrolling beat ’em ups ever made.",
+      "Teenage Mutant Ninja Turtles: Turtles in Time (1991) is the definitive arcade beat ’n up adaptation of Kevin Eastman and Peter Laird’s cult-classic Mirage Studios Comic series. " +
+      "Before their cartoon fame, the Turtles began as a dark, indie black-and-white comic with gritty ninja action, street-level battles, and a sharp sense of underground attitude. " +
+      "Turtles in Time brings that energy to life with vibrant animations, expressive sprites, and a time-travel storyline that sends the brothers smashing through prehistoric jungles, pirate coves, wild west towns, and a neon-soaked future under Shredder’s rule. " +
+      "Each stage is packed with humor, environmental interactions, and cooperative mayhem, while the gameplay refines Konami’s signature TMNT formula with throws, dashes, and smoother combat rhythms. " +
+      "Praised as one of the greatest beat ’n ups ever created, Turtles in Time perfectly blends the Mirage comic spirit with arcade spectacle, making it an essential piece of TMNT history.",
     players: "1-2 Players",
     developer: "Konami",
     coverImage: "/assets/covers/tnt.png",
@@ -606,12 +607,17 @@ export const beatnupGames: Game[] = [
     slug: "alien-vs-predator-940520-euro",
     embedId: "940520",
     year: 1994,
-    genre: "Sci-Fi",
-    folder: "Sci-Fi",
+    genre: "Indie Comics / Sci-Fi",
+    folder: "Indie Comics / Sci-Fi",
     publisher: "Capcom",
     characters: ["Major Dutch Schaefer", "Lt. Linn Kurosawa", "Predator Hunter", "Predator Warrior"],
     description: "Capcom’s legendary sci-fi fantasy brawler — humans and predators unite against the xenomorph horde!",
-    longDescription: "Alien vs. Predator (1994) stands as one of Capcom’s most iconic arcade beat ’em ups, blending brutal melee combat with explosive sci-fi firepower. " + "When a Xenomorph outbreak threatens Earth, an unlikely alliance forms between elite human soldiers and honorable Predator warriors. " + "Fight through infested streets, military bases, underground labs, and hive-like alien strongholds using blades, plasma weapons, energy cannons, and devastating combo attacks. " + "Fluid animations, atmospheric cutscenes, and chaotic three-player co-op elevate the action into a nonstop cinematic war for survival. " + "A definitive masterpiece of ’90s arcade sci-fi — stylish, aggressive, and endlessly replayable.",
+    longDescription:
+      "Alien vs. Predator (1994) draws heavily from the fierce mythology popularized by Dark Horse Comics, delivering one of Capcom’s most explosive and stylish arcade beat ’em ups. " +
+      "When a Xenomorph infestation spirals out of control, elite human soldiers join forces with honorable Predator warriors in a desperate alliance straight out of the iconic comic crossover. " +
+      "Players battle through infested city streets, corrupted military facilities, subterranean labs, and hive-like alien strongholds using plasma casters, energy blades, rifles, and devastating combo chains. " +
+      "Fluid animation, atmospheric storytelling, and chaotic three-player co-op drive the experience, capturing the gritty, high-stakes intensity of the Dark Horse universe. " +
+      "A defining masterpiece of ’90s arcade sci-fi — aggressive, cinematic, and endlessly replayable.",
     players: "1-3 Players",
     developer: "Capcom",
     coverImage: "/assets/covers/alien.jpg",
@@ -680,6 +686,29 @@ export const beatnupGames: Game[] = [
     coverImage: "/assets/covers/super_double_dragon.jpg",
     platform: "Nintendo",
     logo: "/assets/logos/super_double_dragon.png"
+  },
+  {
+    id: "iron-commando-snes",
+    title: "Iron Commando",
+    slug: "iron-commando-europe-proto",
+    embedId: "23782",
+    year: 1995,
+    genre: "Urban / Rare",
+    folder: "Urban / Rare",
+    publisher: "Arcade Zone",
+    characters: ["Jack", "Chang Li"],
+    description: "A rough, fast-paced urban beat ’n up rescued from prototype status.",
+    longDescription:
+      "Iron Commando (1995) is a rare SNES beat ’n up prototype developed by Arcade Zone, blending gritty street combat with over-the-top arcade action. " +
+      "You play as Jack or Chang Li, smashing through waves of thugs, bikers, soldiers, and mutants while moving across urban back alleys, mines, deserts, and even a runaway train. " +
+      "Because this is the *prototype* version, players can expect uneven difficulty, experimental enemy placements, unfinished transitions, and some unpolished sprites—yet these quirks offer a fascinating glimpse into a nearly-lost SNES title. " +
+      "Despite its prototype state, it delivers heavy impacts, chaotic encounters, and a unique European beat ’n up identity. " +
+      "Iron Commando stands today as a cult classic and a preserved piece of SNES history.",
+    players: "1-2 Players",
+    developer: "Arcade Zone",
+    coverImage: "/assets/covers/iron_commando.jpg",
+    platform: "Nintendo",
+    logo: "/assets/logos/iron_commando.png"
   },
   {
     id: "spiderman-maximum-carnage",
@@ -815,13 +844,13 @@ export const beatnupGames: Game[] = [
     slug: "silent-dragon-us",
     embedId: "9835",
     year: 1992,
-    genre: "Sci-Fi",
+    genre: "Urban / Sci-Fi",
     folder: "Sci-Fi",
     publisher: "Taito",
     characters: ["Johnny", "Tommy", "Chris", "Fred"],
     description: "High-tech martial arts mayhem in the future!",
     longDescription:
-      "Silent Dragon (1992) drops players into a neon-drenched dystopia where cyber-enhanced heroes wage war against violent gangs and mutated abominations. " +
+      "Silent Dragon (1992) drops players into a neon-drenched urban dystopia where cyber-enhanced heroes wage war against violent gangs and mutated abominations. " +
       "Choose from four fighters, each armed with unique martial arts styles and over-the-top cybernetic techniques, then battle across futuristic slums, tech labs, industrial fortresses, and enemy strongholds. " +
       "Explosive super attacks, high-energy animation, and Taito’s signature sci-fi flair make every encounter feel intense and stylish. " +
       "A sleek, underrated co-op brawler that captures the chaotic spirit of early ’90s arcade action.",
@@ -1039,8 +1068,8 @@ export const beatnupGames: Game[] = [
     slug: "spawn-usa",
     embedId: "22470",
     year: 1995,
-    genre: "Image Comics",
-    folder: "Image Comics",
+    genre: "Indie Comics / Horror",
+    folder: "Indie Comics / Horror",
     publisher: "Acclaim",
     characters: ["Spawn", "Violator", "Overt-Kill", "Redeemer", "Angela"],
     description: "Enter Todd McFarlane’s dark comic world of Spawn!",
@@ -1055,15 +1084,60 @@ export const beatnupGames: Game[] = [
     platform: "Nintendo",
     logo:
       "/assets/logos/spawn.png",
-  }, {
+  },
+  {
+    id: "ultraverse-prime-segacd",
+    title: "Ultraverse Prime",
+    slug: "ultraverse-prime",
+    embedId: "40767",
+    year: 1994,
+    genre: "Indie Comics / Rare",
+    folder: "Indie Comics",
+    publisher: "Malibu",
+    characters: ["Prime", "Kevin Green", "Rogue Agents", "Ultraverse Villains"],
+    description: "Become Prime — Malibu Comics’ powerhouse hero brought to life in a rare, experimental Sega CD prototype.",
+    longDescription:
+      "Ultraverse Prime (Prototype, 1994) adapts Malibu Comics’ flagship superhero into a hybrid FMV/side-scrolling experience built during the Ultraverse boom of the early ’90s. " +
+      "In the comics, Kevin Green transforms into a bio-organic superhuman formed from raw muscle mass and unstoppable strength. " +
+      "The game mirrors this mythology with digitized actors, comic-style cutscenes, and FMV transitions that attempt to capture the explosive tone of the series. " +
+      "As a prototype, it features incomplete levels, placeholder combat sequences, and early FMV testing, giving players a glimpse into an ambitious but ultimately unfinished Sega CD project. " +
+      "For fans of the Ultraverse, this rare build stands as a fascinating relic from Malibu’s short-lived yet highly creative era.",
+    players: "1 Player",
+    developer: "Malibu Interactive",
+    coverImage: "/assets/covers/ultraverse_prime.jpg",
+    platform: "Sega CD",
+    logo: "/assets/logos/ultraverse_prime.png"
+  },
+  {
+    id: "ninja-gaiden-arcade",
+    title: "Ninja Gaiden",
+    slug: "ninja-gaiden-us",
+    embedId: "9335",
+    year: 1988,
+    genre: "Indie Comics / Urban",
+    folder: "Arcade Classics",
+    publisher: "Tecmo",
+    characters: ["Ryu Hayabusa"],
+    description: "Ryu Hayabusa strikes first in Tecmo’s brutal arcade beat ’n up with cinematic flair.",
+    longDescription:
+      "Ninja Gaiden (1988) is the original Japanese arcade game adaptation of the franchise, developed by Tecmo. It's an intense and frenetic fighting game where Ryu Hayabusa faces street thugs, assassins, mutant warriors, and supernatural threats in urban areas of the United States. " +
+      "The game is also historically notable for expanding the series’ mythology beyond the screen: Ninja Gaiden received its own comic book adaptation published by Dark Horse Comics, exploring Ryu Hayabusa’s lineage, ninja clans, and the demonic forces tied to the franchise’s lore. " +
+      "With stylish FMV-style transitions, gritty backgrounds, and challenging gameplay, the arcade version stands as a unique, hard-hitting foundation for one of gaming’s most iconic ninja sagas.",
+    players: "1-2 Players",
+    developer: "Tecmo",
+    coverImage: "/assets/covers/ninja_gaiden.jpg",
+    platform: "Arcade",
+    logo: "/assets/logos/ninja_gaiden.png"
+  },
+  {
     id: "shadowhawk-snes",
     title: "ShadowHawk",
     slug: "shadowhawk-unreleased",
     embedId: "",
     year: 1995,
-    genre: "Image Comics / Rare",
-    folder: "Image Comics",
-    publisher: "Malibu / Image Comics",
+    genre: "Indie Comics / Rare",
+    folder: "Indie Comics",
+    publisher: "Malibu",
     characters: ["ShadowHawk", "Arson", "Nocturne", "Vigilante Gangs"],
     description: "Step into the gritty world of ShadowHawk — justice delivered through fear and broken bones.",
     longDescription:
@@ -1084,14 +1158,14 @@ export const beatnupGames: Game[] = [
     slug: "the-shadow-unreleased",
     embedId: "",
     year: 1994,
-    genre: "DC Comics / Rare",
-    folder: "DC Comics",
+    genre: "Indie Comics / Rare",
+    folder: "Indie Comics / Rare",
     publisher: "Ocean Software",
     characters: ["The Shadow", "Shiwan Khan", "Lamont Cranston", "Criminal Underworld"],
     description:
       "Become The Shadow — the mysterious vigilante who strikes fear into the hearts of criminals.",
     longDescription:
-      "The Shadow (Unreleased Prototype, 1994) is a rare and atmospheric SNES action game based on the classic pulp hero, later published by DC Comics, who dominated radio dramas and noir literature. " +
+      "The Shadow (Unreleased Prototype, 1994) is a rare and atmospheric SNES action game based on the classic pulp hero, published by Street & Smith Comics, who dominated radio dramas and noir literature. " +
       "Players control Lamont Cranston, using martial arts, pistols, and his signature ability to cloud men's minds to dismantle Shiwan Khan’s criminal forces across dark alleys, clubs, rooftops, and art-deco environments. " +
       "The game blends beat ’em up combat with projectile attacks and cinematic storytelling, reflecting the 1994 Universal Pictures film. " +
       "Although cancelled before completion, the prototype reveals stylish pixel art, ambitious animations, and a moody pulp aesthetic worthy of the iconic vigilante.",
@@ -1109,8 +1183,8 @@ export const beatnupGames: Game[] = [
     slug: "wildcats-snes",
     embedId: "19588",
     year: 1995,
-    genre: "Image Comics",
-    folder: "Image Comics",
+    genre: "Indie Comics",
+    folder: "Indie Comics",
     publisher: "Playmates Interactive",
     characters: ["Spartan", "Maul", "Warblade", "Helspont", "Daemonites"],
     description: "A comic-based SNES beat-’em up with the WildC.A.T.S team confronting alien threats.",
@@ -1197,16 +1271,17 @@ export const beatnupGames: Game[] = [
     slug: "cadillacs-and-dinosaurs-bootleg-set-1-with-pic16c57-930201-etc-bootleg-no-sound",
     embedId: "33244",
     year: 1993,
-    genre: "Sci-Fi",
-    folder: "Capcom Classics",
+    genre: "Indie Comics / Sci-Fi",
+    folder: "Indie Comics / Sci-Fi",
     publisher: "Capcom",
     characters: ["Jack Tenrec", "Hannah Dundee", "Mustapha Cairo", "Mess O'Bradovich"],
     description: "Capcom’s prehistoric brawler — muscle cars, dinosaurs, and chaos collide!",
     longDescription:
-      "Cadillacs and Dinosaurs (1993) explodes with one of Capcom’s wildest concepts: a post-apocalyptic Earth where humanity, nature, and dinosaurs coexist in fragile chaos. " +
-      "Join Jack Tenrec, Hannah Dundee, Mustapha Cairo, and Mess O’Bradovich as they battle mutant poachers, bio-engineered monstrosities, and raging prehistoric beasts across jungles, deserts, labs, and ruined cities. " +
-      "Smash enemies with fists, rifles, explosives, and — of course — roaring Cadillacs built for survival. " +
-      "Featuring fast-paced co-op combat, vibrant pixel art, and unforgettable set pieces, this arcade classic remains one of Capcom’s greatest brawlers of the early ’90s.",
+      "Cadillacs and Dinosaurs (1993) is Capcom's explosive arcade adaptation of Mark Schultz's cult comic book series, initially called Xenozoic Tales and later published by Topps Comics as Cadillacs and Dinosaurs. " +
+      "Set in a post-apocalyptic future where dinosaurs have reclaimed the Earth, players join Jack Tenrec, Hannah Dundee, Mustapha Cairo, and Mess O’Bradovich in a desperate fight to preserve the fragile balance between humanity and nature. " +
+      "Battle mutant poachers, cyber-enhanced thugs, and rampaging prehistoric beasts across jungles, deserts, underground labs, and ruined megacities. " +
+      "Punch through hordes of enemies, blast through waves of mutants, and tear across the wasteland in Tenrec’s iconic high-powered Cadillac. " +
+      "With blazing co-op action, expressive pixel art, and unforgettable set pieces, this remains one of Capcom’s most stylish and beloved beat ’em ups.",
     players: "1-3 Players",
     developer: "Capcom",
     coverImage: "/assets/covers/cadillacs.jpg",
@@ -1326,8 +1401,8 @@ export const beatnupGames: Game[] = [
     slug: "g-i-joe-us-uab",
     embedId: "33534",
     year: 1992,
-    genre: "Image Comics / Rare",
-    folder: "Image Comics",
+    genre: "Indie Comics / Rare",
+    folder: "Indie Comics",
     publisher: "Konami",
     characters: ["Duke", "Snake Eyes", "Scarlett", "Roadblock"],
     description: "Elite military action in a high-speed forward assault!",
@@ -1373,6 +1448,6 @@ export const beatnupFilters = [
   "Sci-Fi",
   "Marvel Comics",
   "DC Comics",
-  'Image Comics',
+  'Indie Comics',
   "Rare"
 ];
