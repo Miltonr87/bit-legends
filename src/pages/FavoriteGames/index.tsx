@@ -7,7 +7,7 @@ import { Header } from '@/components/Layout/Header';
 import { Footer } from '@/components/Layout/Footer';
 import { GameCard } from '@/components/Game/GameCard';
 import { Button } from '@/components/ui/button';
-import { Trash2, Gamepad2 } from 'lucide-react';
+import { Trash2, Gamepad2, ScanHeart } from 'lucide-react';
 import { toast } from 'sonner';
 import { allGames } from '@/data';
 
@@ -84,6 +84,7 @@ export default function FavoriteGames() {
           <div className="absolute inset-0 scanline pointer-events-none" />
           <div className="absolute inset-0 bg-gradient-to-b from-accent/5 via-transparent to-transparent" />
           <div className="container mx-auto text-center relative z-10">
+            <ScanHeart className="inline-block h-20 w-20 text-accent mb-1 mr-2 animate-pulse" />
             <h1 className="text-4xl sm:text-6xl font-black mb-2">
               <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent glow-text">
                 Favorite Games
