@@ -7,7 +7,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Card } from '@/components/ui/card';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
-import { User, Upload, LogIn, LogOut } from 'lucide-react';
+import { User, Upload, LogOut } from 'lucide-react';
 import {
   AlertDialog,
   AlertDialogAction,
@@ -64,12 +64,33 @@ export default function Profile() {
           <p className="text-sm sm:text-base text-muted-foreground mb-4 max-w-xs sm:max-w-md mx-auto">
             Sign in with Google to save progress, avatar, and game history.
           </p>
-
           <Button
             onClick={loginWithGoogle}
-            className="w-full bg-gradient-to-r from-primary to-accent text-base sm:text-lg py-5"
+            className="w-full bg-primary text-primary-foreground text-base sm:text-lg py-5 hover:bg-primary/80 transition"
           >
-            <LogIn className="mr-2 h-5 w-5" /> Sign in with Google
+            <svg
+              className="mr-2 h-5 w-5"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 488 512"
+            >
+              <path
+                fill="#4285F4"
+                d="M488 261.8c0-17.4-1.6-34-4.7-50.2H249v95.1h134.3c-5.8 31.4-23.3 58-49.5 75.8v62.7h80.1c46.8-43.1 73.1-106.7 73.1-183.4z"
+              />
+              <path
+                fill="#34A853"
+                d="M249 512c66.7 0 122.7-22.1 163.6-60.2l-80.1-62.7c-22.2 15-50.6 23.7-83.5 23.7-64 0-118.2-43.2-137.5-101.4H29.7v63.6C70.1 464 153.3 512 249 512z"
+              />
+              <path
+                fill="#FBBC04"
+                d="M111.5 311.5c-4.9-14.8-7.7-30.6-7.7-46.5s2.8-31.7 7.7-46.5v-63.6H29.7C10.6 192.7 0 220.8 0 250.9s10.6 58.2 29.7 95.9l81.8-63.6z"
+              />
+              <path
+                fill="#EA4335"
+                d="M249 142.3c35.9 0 68.2 12.4 93.6 36.8l70.2-70.2C371.7 59.6 315.7 37.4 249 37.4 153.3 37.4 70.1 85 29.7 161.4l81.8 63.6c19.3-58.2 73.5-101.4 137.5-101.4z"
+              />
+            </svg>
+            Sign in with Google
           </Button>
         </Card>
       </div>

@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Gamepad2, User, Heart } from 'lucide-react';
+import { Gamepad2, User, FolderHeart } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useEffect, useState } from 'react';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
@@ -40,7 +40,7 @@ export const Header = () => {
 
   return (
     <header className="sticky top-0 z-50 border-b border-border/50 backdrop-blur-md bg-background/80">
-      <div className="container mx-auto px-4 h-16 flex items-center justify-between">
+      <div className="container mx-auto px-4 h-16 flex items-center justify-between gap-4 sm:gap-8">
         <Link to="/" className="flex items-center gap-3 sm:gap-4 group">
           <div className="relative">
             <Gamepad2 className="h-6 w-6 sm:h-8 sm:w-8 text-accent group-hover:text-accent/80 transition-colors" />
@@ -59,7 +59,7 @@ export const Header = () => {
                 size="sm"
                 className="border-accent/50 hover:bg-accent/10 px-2 sm:px-3 flex items-center gap-2"
               >
-                <Heart className="h-4 w-4 text-accent" />
+                <FolderHeart className="h-4 w-4 text-accent" />
                 <span className="hidden sm:inline font-medium">Favorites</span>
               </Button>
             </Link>
