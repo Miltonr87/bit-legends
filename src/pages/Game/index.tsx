@@ -133,7 +133,7 @@ const Game = () => {
                 <h2 className="text-xl sm:text-2xl font-bold mb-4 text-accent">
                   About This Game
                 </h2>
-                <p className="text-sm sm:text-base text-foreground/90 leading-relaxed">
+                <p className="text-sm sm:text-base text-foreground/90 leading-relaxed text-justify hyphens-auto">
                   {game.longDescription}
                 </p>
               </Card>
