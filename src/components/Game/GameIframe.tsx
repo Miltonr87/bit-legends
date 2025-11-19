@@ -55,22 +55,24 @@ export const GameIframe = ({ game }: GameIframeProps) => {
 
   useEffect(() => {
     const ua = navigator.userAgent.toLowerCase();
-    if (ua.includes('windows') || ua.includes('linux')) {
+    const isPC =
+      ua.includes('windows') ||
+      (ua.includes('linux') && !ua.includes('android')) ||
+      ua.includes('mac');
+    const isAppleMobile = ua.includes('iphone') || ua.includes('ipad');
+    const isAndroid = ua.includes('android');
+    if (isPC) {
       setBraveLink('https://brave.com/download/');
-      setBraveLabel('PC');
-    } else if (
-      ua.includes('mac') ||
-      ua.includes('iphone') ||
-      ua.includes('ipad')
-    ) {
+      setBraveLabel('DOWNLOAD DESKTOP');
+    } else if (isAppleMobile) {
       setBraveLink('https://brave.com/ios/');
-      setBraveLabel('APPLE');
-    } else if (ua.includes('android')) {
+      setBraveLabel('DOWNLOAD APPLE');
+    } else if (isAndroid) {
       setBraveLink('https://brave.com/android/');
-      setBraveLabel('ANDROID');
+      setBraveLabel('DOWNLOAD ANDROID');
     } else {
-      setBraveLink(null);
-      setBraveLabel(null);
+      setBraveLink('https://brave.com/');
+      setBraveLabel('DOWNLOAD BRAVE');
     }
   }, []);
 
@@ -101,7 +103,7 @@ export const GameIframe = ({ game }: GameIframeProps) => {
       >
         {!braveWarningDismissed ? (
           <div className="absolute inset-0 flex flex-col items-center justify-center text-center bg-gradient-to-b from-black via-neutral-900 to-black p-6">
-            <div className="w-16 h-16 mb-3">
+            <div className="w-20 h-20 mb-3">
               <img
                 src="https://brave.com/static-assets/images/brave-logo-sans-text.svg"
                 alt="Brave Browser Logo"
@@ -109,12 +111,12 @@ export const GameIframe = ({ game }: GameIframeProps) => {
               />
             </div>
             <h2 className="text-lg sm:text-xl font-semibold text-white mb-2">
-              Play with faster loading ⚡
+              The Fastest browser for Games
             </h2>
             <p className="text-sm text-gray-300 max-w-md mb-4">
-              For the best ad-free gaming experience, we recommend using{' '}
-              <strong>Brave Browser</strong> — it blocks ads by default and
-              boosts performance on PC and Mobile.
+              For the best ad-free gaming experience, download{' '}
+              <strong>Brave Browser</strong>, it blocks ads by default and
+              boosts performance for Bit Legends on PC and Mobile.
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
               {braveLink && braveLabel && (
@@ -131,7 +133,7 @@ export const GameIframe = ({ game }: GameIframeProps) => {
                 onClick={() => setBraveWarningDismissed(true)}
                 className="px-4 py-2 rounded-md border border-gray-400 text-gray-200 text-sm hover:bg-white/10 transition-all"
               >
-                Continue without Brave
+                CONTINUE
               </button>
             </div>
           </div>
