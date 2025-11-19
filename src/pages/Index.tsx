@@ -110,7 +110,7 @@ const Index = () => {
     Urban: 'Streets and gangs in pure mayhem',
     Horror: 'Dark atmospheres with terrifying creatures',
     Tournament: 'Martial arts tournaments and diverse fighters',
-    'Image Comics': 'American independent anti-heroes',
+    'Image Comics': 'American independent comics heroes',
     'DC Comics': 'Metahumans superheroes and vigilantes',
     'Marvel Comics': 'Avengers and mutants facing cosmic threats',
     Rare: 'Cancelled prototypes or limited releases',

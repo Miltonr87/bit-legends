@@ -51,8 +51,8 @@ export const actionGames: Game[] = [
         slug: "robocop-versus-the-terminator-usa",
         embedId: "30351",
         year: 1993,
-        genre: "Dark Horse Comics",
-        folder: "Dark Horse Comics",
+        genre: "Sci-Fi",
+        folder: "Sci-Fi",
         publisher: "Virgin Games",
         characters: ["RoboCop", "The Terminator", "Skynet Drones", "Cyborg Soldiers"],
         description: "The ultimate battle of man versus machine begins!",
@@ -203,6 +203,5 @@ export const actionFilters = [
     "All Games",
     "Horror",
     "Sci-Fi",
-    "Dark Horse Comics",
     "DC Comics"
 ];
