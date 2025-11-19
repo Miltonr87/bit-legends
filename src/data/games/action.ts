@@ -29,7 +29,7 @@ export const actionGames: Game[] = [
         slug: "shinobi-iii-return-of-the-ninja-master-europe",
         embedId: "30503",
         year: 1993,
-        genre: "Sci-fi",
+        genre: "Sci-Fi",
         folder: "Ninja Legends",
         publisher: "Sega",
         characters: ["Joe Musashi"],
@@ -51,16 +51,16 @@ export const actionGames: Game[] = [
         slug: "robocop-versus-the-terminator-usa",
         embedId: "30351",
         year: 1993,
-        genre: "Sci-Fi",
-        folder: "Virgin Games",
+        genre: "Dark Horse Comics",
+        folder: "Dark Horse Comics",
         publisher: "Virgin Games",
         characters: ["RoboCop", "The Terminator", "Skynet Drones", "Cyborg Soldiers"],
         description: "The ultimate battle of man versus machine begins!",
         longDescription:
-            "RoboCop Versus The Terminator (1993) for the Genesis delivers explosive run-and-gun action inspired by both legendary sci-fi franchises. " +
-            "As RoboCop, players wage a one-man war against Skynet and its mechanical army through futuristic Detroit and post-apocalyptic battlefields. " +
-            "Armed with devastating weapons and brutal finishing moves, the game blends gritty violence, detailed sprites, and atmospheric sound design. " +
-            "One of the most intense shooters on the Genesis, it perfectly captures the chaos of two cinematic universes colliding.",
+            "RoboCop vs. Terminator (1993), inspired by the brutal Dark Horse Comics crossover, brings two of sci-fi’s most iconic killing machines into a relentless, hyper-violent showdown on the Sega Genesis. " +
+            "As RoboCop, players battle Skynet’s rising mechanical empire across dystopian Detroit streets, corrupted tech labs, and scorched post-apocalyptic warzones, carving a path through Terminators, drones, and cyborg soldiers. " +
+            "Armed with heavy-grade firepower, explosive upgrades, and devastating execution shots, every encounter feels raw, gritty, and unapologetically intense. " +
+            "With detailed sprite work, pounding sound design, and some of the most outrageous carnage on 16-bit hardware, RoboCop vs. Terminator stands as a cult classic — a brutal fusion of two cinematic universes at their most chaotic and iconic.",
         players: "1 Player",
         developer: "Virgin Games USA",
         coverImage: "/assets/covers/robocop_terminator.jpg",
@@ -201,4 +201,8 @@ export const actionGames: Game[] = [
 
 export const actionFilters = [
     "All Games",
+    "Horror",
+    "Sci-Fi",
+    "Dark Horse Comics",
+    "DC Comics"
 ];

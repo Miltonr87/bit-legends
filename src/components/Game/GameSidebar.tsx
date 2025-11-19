@@ -88,7 +88,7 @@ export const GameSidebar = ({ game }: GameSidebarProps) => {
             <div className="flex items-start gap-3 pb-4 border-b border-border">
               <Gamepad2 className="h-5 w-5 text-accent mt-1" />
               <div>
-                <p className="text-sm text-muted-foreground">Genre</p>
+                <p className="text-sm text-muted-foreground">Category</p>
                 <p className="font-semibold text-lg">{game.genre}</p>
               </div>
             </div>

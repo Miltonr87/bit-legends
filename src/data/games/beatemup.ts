@@ -539,7 +539,7 @@ export const beatnupGames: Game[] = [
     slug: "undercover-cops-alpha-renewal-version-imperfect-sound-and-graphics",
     embedId: "10560",
     year: 1992,
-    genre: "sci-Fi",
+    genre: "Sci-Fi",
     folder: "Irem",
     publisher: "Irem",
     characters: ["Zan Takahara", "Matt Gables", "Rosa Felmonde"],
@@ -606,17 +606,17 @@ export const beatnupGames: Game[] = [
     slug: "alien-vs-predator-940520-euro",
     embedId: "940520",
     year: 1994,
-    genre: "Sci-Fi",
-    folder: "Alien vs Predator",
+    genre: "Dark Horse Comics",
+    folder: "Dark Horse Comics",
     publisher: "Capcom",
     characters: ["Major Dutch Schaefer", "Lt. Linn Kurosawa", "Predator Hunter", "Predator Warrior"],
     description: "Capcom’s legendary sci-fi fantasy brawler — humans and predators unite against the xenomorph horde!",
     longDescription:
-      "Alien vs. Predator (1994) stands as one of Capcom’s most iconic arcade beat ’em ups, blending brutal melee combat with explosive sci-fi firepower. " +
-      "When a Xenomorph outbreak threatens Earth, an unlikely alliance forms between elite human soldiers and honorable Predator warriors. " +
-      "Fight through infested streets, military bases, underground labs, and hive-like alien strongholds using blades, plasma weapons, energy cannons, and devastating combo attacks. " +
-      "Fluid animations, atmospheric cutscenes, and chaotic three-player co-op elevate the action into a nonstop cinematic war for survival. " +
-      "A definitive masterpiece of ’90s arcade sci-fi — stylish, aggressive, and endlessly replayable.",
+      "Alien vs. Predator (1994) draws heavily from the fierce mythology popularized by Dark Horse Comics, delivering one of Capcom’s most explosive and stylish arcade beat ’em ups. " +
+      "When a Xenomorph infestation spirals out of control, elite human soldiers join forces with honorable Predator warriors in a desperate alliance straight out of the iconic comic crossover. " +
+      "Players battle through infested city streets, corrupted military facilities, subterranean labs, and hive-like alien strongholds using plasma casters, energy blades, rifles, and devastating combo chains. " +
+      "Fluid animation, atmospheric storytelling, and chaotic three-player co-op drive the experience, capturing the gritty, high-stakes intensity of the Dark Horse universe. " +
+      "A defining masterpiece of ’90s arcade sci-fi — aggressive, cinematic, and endlessly replayable.",
     players: "1-3 Players",
     developer: "Capcom",
     coverImage: "/assets/covers/alien.jpg",
@@ -630,16 +630,16 @@ export const beatnupGames: Game[] = [
     slug: "robocop-2-euroasia-v0-10",
     embedId: "9691",
     year: 1991,
-    genre: "Sci-Fi",
-    folder: "Arcade Legends",
+    genre: "Dark Horse Comics",
+    folder: "Dark Horse Comics",
     publisher: "Data East",
     characters: ["RoboCop"],
     description: "Serve the public trust, protect the innocent, uphold the law.",
     longDescription:
-      "RoboCop 2 (1991) brings Detroit’s cybernetic law enforcer back into the line of fire in a gritty, explosive arcade adaptation. " +
-      "Developed by Data East, players guide RoboCop through crime-infested streets, industrial zones, and Nuke-fueled hideouts as he dismantles gangs with brutal precision. " +
-      "Cinematic animations, heavy firepower, and RoboCop’s trademark unstoppable march combine to deliver a metallic, high-impact side-scrolling shooter. " +
-      "Faithful to the dark tone of the film, this arcade classic captures the cold justice, corruption, and chaos at the heart of the RoboCop saga.",
+      "RoboCop 2 (1991) brings Detroit’s cybernetic officer back into action in a gritty, explosive arcade experience that echoes the darker tone later explored in Dark Horse Comics. " +
+      "Data East delivers high-impact side-scrolling combat as RoboCop marches through crime-ridden streets, industrial complexes, and Nuke-infested hideouts, dismantling gangs with cold precision. " +
+      "Cinematic sprite animations, heavy weapon feedback, and RoboCop’s trademark unstoppable advance capture the metallic brutality at the core of the character. " +
+      "Blending the film’s grim atmosphere with the raw edge associated with its Dark Horse-era stories, RoboCop 2 stands as a memorable arcade classic of cybernetic justice and dystopian violence.",
     players: "1-2 Players",
     developer: "Data East",
     coverImage: "/assets/covers/robocop2.jpg",
@@ -759,7 +759,7 @@ export const beatnupGames: Game[] = [
     slug: "wolverine-adamantium-rage-usa",
     embedId: "28548",
     year: 1994,
-    genre: "Marve Comics",
+    genre: "Marvel Comics",
     folder: "Marvel",
     publisher: "Acclaim",
     characters: ["Wolverine", "Lady Deathstrike", "Sabretooth", "Cyber", "Shinobi Shaw"],
@@ -1228,16 +1228,17 @@ export const beatnupGames: Game[] = [
     slug: "aliens-world-set-1",
     embedId: "7757",
     year: 1990,
-    genre: "Sci-Fi",
-    folder: "Konami Classics",
+    genre: "Dark Horse Comics",
+    folder: "Dark Horse Comics",
     publisher: "Konami",
     characters: ["Ellen Ripley", "Private Hicks"],
     description: "Konami’s intense sci-fi shooter inspired by the iconic film!",
     longDescription:
-      "Aliens (1990) is Konami’s explosive sci-fi adaptation of James Cameron’s legendary film, thrusting Ripley and Hicks into a relentless fight for survival. " +
-      "Blast through infested colonies, bio-mechanical hives, derelict ships, and alien breeding grounds as waves of Xenomorphs attack from every angle. " +
-      "Armed with pulse rifles, flamethrowers, smartguns, and heavy firepower, players push through dark corridors and shifting environments in a desperate forward assault. " +
-      "With atmospheric pixel art, pulse-pounding music, and some of Konami’s most aggressive enemy design, Aliens stands as one of the most iconic sci-fi shooters of the early arcade era.",
+      "Aliens (1990) channels both James Cameron’s iconic film and the expanded universe popularized by Dark Horse Comics, delivering one of Konami’s most intense sci-fi arcade shooters. " +
+      "Ripley and Hicks lead a desperate assault through overrun colonies, derelict starships, biomechanical hives, and grotesque breeding chambers as Xenomorphs swarm from every direction. " +
+      "Armed with pulse rifles, flamethrowers, smartguns, and heavy explosives, players battle through shifting corridors and hostile environments that echo the darker, more brutal tone of the Dark Horse adaptations. " +
+      "Atmospheric pixel art, pounding audio design, and relentless enemy encounters combine to create a fast-paced, high-pressure experience. " +
+      "A standout masterpiece of early ’90s arcade action — brutal, cinematic, and unmistakably faithful to the Aliens legacy.",
     players: "1-2 Players",
     developer: "Konami",
     coverImage: "/assets/covers/aliens.jpg",
@@ -1388,5 +1389,6 @@ export const beatnupFilters = [
   "Marvel Comics",
   "DC Comics",
   'Image Comics',
+  "Dark Horse Comics",
   "Rare"
 ];

@@ -115,7 +115,8 @@ const Index = () => {
     'Marvel Comics': 'Avengers and mutants facing cosmic threats',
     Rare: 'Cancelled prototypes or limited releases',
     'Sci-Fi': 'Futuristic worlds with advanced technology',
-    'Fight Race': 'High-speed combat racing with firepower',
+    'Combat Race': 'High-speed combat vehicles with firepower',
+    'Dark Horse Comics': 'Gritty universes with brutal crossovers',
   };
 
   const getServerStatusDisplay = () => {

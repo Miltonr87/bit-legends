@@ -8,14 +8,19 @@ export const allGames: Game[] = [
     ...beatnupGames,
     ...fightGames,
     ...raceGames,
-    ...actionGames
+    ...actionGames,
 ];
 
-export const seriesFilters = Array.from(
+const rawFilters = Array.from(
     new Set([
         ...beatnupFilters,
         ...fightFilters,
         ...raceFilters,
-        ...actionFilters
+        ...actionFilters,
     ])
 );
+
+export const seriesFilters = [
+    ...rawFilters.filter((f) => f !== "Rare"),
+    "Rare",
+];
