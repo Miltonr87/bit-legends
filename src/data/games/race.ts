@@ -69,9 +69,9 @@ export const raceGames: Game[] = [
         platform: "Nintendo",
     },
     {
-        id: "batman-returns",
-        title: "Batman Returns CD",
-        slug: "batman-returns-usa",
+        id: "batman-vehicles",
+        title: "Batman Vehicles",
+        slug: "batman-vehicles-usa",
         embedId: "40680",
         year: 1993,
         genre: "DC Comics / Combat Race",
@@ -80,7 +80,7 @@ export const raceGames: Game[] = [
         characters: ["Batman", "Catwoman", "The Penguin"],
         description: "Batmobile & Batskiboat driving levels from the Sega CD version of Batman Returns.",
         longDescription:
-            "Batman Returns CD (1993) turns Gotham’s dark winter into a high-speed battleground — a fusion of cinematic racing and explosive combat across snow-soaked streets and icy riverways. " +
+            "Batman Vehicles in Batman Returns CD (1993) turns Gotham’s dark winter into a high-speed battleground — a fusion of cinematic racing and explosive combat across snow-soaked streets and icy riverways. " +
             "Command the Batmobile and Batskiboat through neon-lit chaos, smashing enemy vehicles, dodging hazards, and unleashing gadgets at breakneck speed. " +
             "Its behind-view arcade perspective, movie-grade cutscenes, and fluid action create a unique hybrid of superhero drama and pure driving adrenaline. " +
             "A sleek, atmospheric sprint through Gotham where every chase feels like a showdown in the shadows.",
