@@ -109,7 +109,7 @@ const Index = () => {
     Fantasy: 'Epic RPG quests and magical realms',
     Urban: 'Streets and gangs in pure mayhem',
     Horror: 'Dark atmospheres with terrifying creatures',
-    Tournament: 'Martial arts tournaments and diverse fighters',
+    Tournament: 'Head-to-head battles with unique fighters',
     'Indie Comics': 'Global characters from independent comics',
     'DC Comics': 'Metahumans superheroes and vigilantes',
     'Marvel Comics': 'Avengers and mutants facing cosmic threats',
