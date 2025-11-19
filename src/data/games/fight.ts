@@ -106,7 +106,7 @@ export const fightGames: Game[] = [
         slug: "mighty-morphin-power-rangers-the-fighting-edition-europe",
         embedId: "19834",
         year: 1995,
-        genre: "Sci-Fi",
+        genre: "Sci-Fi / Tournament",
         folder: "Bandai",
         publisher: "Bandai",
         characters: [
