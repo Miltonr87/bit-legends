@@ -640,10 +640,11 @@ export const fightGames: Game[] = [
         characters: ["Wolverine", "Ryu", "Cyclops", "Ken", "Juggernaut", "Zangief", "Akuma", "Apocalypse"],
         description: "Marvel vs Capcom begins!",
         longDescription:
-            "X-Men vs. Street Fighter (1996) ignites Capcom’s crossover revolution, merging mutant powers with world warrior technique in blazing-fast tag-team combat. " +
-            "Swap characters mid-combo, chain supers across partners, and unleash screen-filling attacks that redefine CPS-2 spectacle. " +
-            "Face iconic threats like Juggernaut and Apocalypse in some of the flashiest battles ever seen in 90s arcades. " +
-            "A groundbreaking title that launched the hyper-crossover era.",
+            "X-Men vs. Street Fighter (1996) ignites Capcom’s crossover revolution, fusing mutant abilities with world-warrior mastery in blistering tag-team combat. " +
+            "Swap characters mid-combo, chain supers between partners, and unleash screen-shaking attacks that pushed the CPS-2 16-bit hardware to its limits. " +
+            "Battle iconic foes like Juggernaut and Apocalypse in some of the most explosive, hyper-stylized clashes of the 90s arcade scene. " +
+            "A groundbreaking title that defined the birth of the modern crossover era, introducing the tag mechanics and fast-paced synergy that later evolved into the Marvel vs. Capcom series. " +
+            "Its fluid animation, bold comic-book energy, and competitive depth cemented it as one of Capcom’s most influential fighters.",
         players: "1-2 Players",
         developer: "Capcom",
         coverImage: "/assets/covers/xmen_vs_street.jpg",
