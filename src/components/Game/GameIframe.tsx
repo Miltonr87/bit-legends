@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { useEffect, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import { Gamepad2 } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 import { useIsMobile } from '@/hooks/useIsMobile';
@@ -14,67 +14,14 @@ export const GameIframe = ({ game }: GameIframeProps) => {
   const iframeRef = useRef<HTMLDivElement>(null);
   const isMobile = useIsMobile();
   const deviceInfo = useDisplayDevice();
-
-  const [braveDetected, setBraveDetected] = useState(false);
+  const [braveDetected] = useState(false);
   const [braveWarningDismissed, setBraveWarningDismissed] = useState(false);
-  const [braveLink, setBraveLink] = useState<string | null>(null);
-  const [braveLabel, setBraveLabel] = useState<string | null>(null);
+  const braveLink = 'https://brave.com/download/';
+  const braveLabel = 'DOWNLOAD';
 
   const iframeUrl =
     game.embedUrl ||
     `https://www.retrogames.cc/embed/${game.embedId}-${game.slug}.html`;
-
-  useEffect(() => {
-    const detectBrave = async () => {
-      try {
-        const nav: any = navigator;
-        if (nav.brave && (await nav.brave.isBrave())) {
-          setBraveDetected(true);
-          setBraveWarningDismissed(true);
-          return;
-        }
-        const ua = nav.userAgent.toLowerCase();
-        if (ua.includes('brave')) {
-          setBraveDetected(true);
-          setBraveWarningDismissed(true);
-          return;
-        }
-        if (
-          nav.userAgentData?.brands?.some((b: any) => b.brand.includes('Brave'))
-        ) {
-          setBraveDetected(true);
-          setBraveWarningDismissed(true);
-        }
-      } catch {
-        setBraveDetected(false);
-      }
-    };
-
-    detectBrave();
-  }, []);
-
-  useEffect(() => {
-    const ua = navigator.userAgent.toLowerCase();
-    const isPC =
-      ua.includes('windows') ||
-      (ua.includes('linux') && !ua.includes('android')) ||
-      ua.includes('mac');
-    const isAppleMobile = ua.includes('iphone') || ua.includes('ipad');
-    const isAndroid = ua.includes('android');
-    if (isPC) {
-      setBraveLink('https://brave.com/download/');
-      setBraveLabel('DOWNLOAD DESKTOP');
-    } else if (isAppleMobile) {
-      setBraveLink('https://brave.com/ios/');
-      setBraveLabel('DOWNLOAD APPLE');
-    } else if (isAndroid) {
-      setBraveLink('https://brave.com/android/');
-      setBraveLabel('DOWNLOAD ANDROID');
-    } else {
-      setBraveLink('https://brave.com/');
-      setBraveLabel('DOWNLOAD BRAVE');
-    }
-  }, []);
 
   const toggleFullscreen = () => {
     const container = iframeRef.current;
@@ -119,16 +66,15 @@ export const GameIframe = ({ game }: GameIframeProps) => {
               boosts performance for Bit Legends on PC and Mobile.
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
-              {braveLink && braveLabel && (
-                <a
-                  href={braveLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-4 py-2 rounded-md bg-orange-500 hover:bg-orange-600 text-black font-semibold text-sm transition-all"
-                >
-                  {braveLabel}
-                </a>
-              )}
+              <a
+                href={braveLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-4 py-2 rounded-md bg-orange-500 hover:bg-orange-600 text-black font-semibold text-sm transition-all"
+              >
+                {braveLabel}
+              </a>
+
               <button
                 onClick={() => setBraveWarningDismissed(true)}
                 className="px-4 py-2 rounded-md border border-gray-400 text-gray-200 text-sm hover:bg-white/10 transition-all"
