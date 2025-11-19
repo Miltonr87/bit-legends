@@ -701,7 +701,7 @@ export const beatnupGames: Game[] = [
     longDescription:
       "Iron Commando (1995) is a rare SNES beat ’n up prototype developed by Arcade Zone, blending gritty street combat with over-the-top arcade action. " +
       "You play as Jack or Chang Li, smashing through waves of thugs, bikers, soldiers, and mutants while moving across urban back alleys, mines, deserts, and even a runaway train. " +
-      "Because this is the *prototype* version, players can expect uneven difficulty, experimental enemy placements, unfinished transitions, and some unpolished sprites—yet these quirks offer a fascinating glimpse into a nearly-lost SNES title. " +
+      "Because this is the prototype version, players can expect uneven difficulty, experimental enemy placements, unfinished transitions, and some unpolished sprites—yet these quirks offer a fascinating glimpse into a nearly-lost SNES title. " +
       "Despite its prototype state, it delivers heavy impacts, chaotic encounters, and a unique European beat ’n up identity. " +
       "Iron Commando stands today as a cult classic and a preserved piece of SNES history.",
     players: "1-2 Players",
