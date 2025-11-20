@@ -78,7 +78,7 @@ export const GameIframe = ({ game }: GameIframeProps) => {
               />
             </div>
             <h2 className="text-lg sm:text-xl font-semibold text-white mb-2">
-              The Fastest browser for Games
+              The Fastest Browser
             </h2>
             <p className="text-sm text-gray-300 max-w-md mb-4">
               For the best ad-free gaming experience, download{' '}
