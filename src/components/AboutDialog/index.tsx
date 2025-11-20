@@ -39,7 +39,7 @@ export const AboutDialog = () => {
 
           {/* FIX: asChild + wrapper div prevents <p> inside <p> issue */}
           <DialogDescription asChild>
-            <div className="text-base text-muted-foreground space-y-5 leading-relaxed text-left">
+            <div className="text-base text-muted-foreground space-y-5 leading-relaxed text-justify hyphens-auto break-words">
               <p>
                 <strong className="text-primary">Bit Legends</strong> is a
                 retro-gaming platform that revives the nostalgia of arcade and
