@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Gamepad2 } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 import { useIsMobile } from '@/hooks/useIsMobile';
@@ -14,14 +14,34 @@ export const GameIframe = ({ game }: GameIframeProps) => {
   const iframeRef = useRef<HTMLDivElement>(null);
   const isMobile = useIsMobile();
   const deviceInfo = useDisplayDevice();
-  const [braveDetected] = useState(false);
+  const [isBrave, setIsBrave] = useState(false);
   const [braveWarningDismissed, setBraveWarningDismissed] = useState(false);
   const braveLink = 'https://brave.com/download/';
-  const braveLabel = 'DOWNLOAD';
-
+  const braveLabel = 'DOWNLOAD BRAVE';
   const iframeUrl =
     game.embedUrl ||
     `https://www.retrogames.cc/embed/${game.embedId}-${game.slug}.html`;
+
+  // Detect Brave Browser
+  useEffect(() => {
+    const detectBrave = async () => {
+      const nav: any = navigator;
+      if (nav.brave && nav.brave.isBrave) {
+        const result = await nav.brave.isBrave();
+        if (result) {
+          setIsBrave(true);
+          setBraveWarningDismissed(true);
+          return;
+        }
+      }
+      if (navigator.userAgent.toLowerCase().includes('brave')) {
+        setIsBrave(true);
+        setBraveWarningDismissed(true);
+      }
+    };
+
+    detectBrave();
+  }, []);
 
   const toggleFullscreen = () => {
     const container = iframeRef.current;
@@ -48,7 +68,7 @@ export const GameIframe = ({ game }: GameIframeProps) => {
         className="relative bg-black rounded-lg overflow-hidden"
         style={isMobile ? { height: 'calc(68vh)' } : { aspectRatio: '4/3' }}
       >
-        {!braveWarningDismissed ? (
+        {!braveWarningDismissed && !isBrave ? (
           <div className="absolute inset-0 flex flex-col items-center justify-center text-center bg-gradient-to-b from-black via-neutral-900 to-black p-6">
             <div className="w-20 h-20 mb-3">
               <img
@@ -58,12 +78,12 @@ export const GameIframe = ({ game }: GameIframeProps) => {
               />
             </div>
             <h2 className="text-lg sm:text-xl font-semibold text-white mb-2">
-              The Fastest Browser
+              The Fastest browser for Games
             </h2>
             <p className="text-sm text-gray-300 max-w-md mb-4">
               For the best ad-free gaming experience, download{' '}
               <strong>Brave Browser</strong>, it blocks ads by default and
-              boosts performance for Bit Legends on PC and Mobile.
+              boosts performance for Bit Legends.
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
               <a
@@ -74,7 +94,6 @@ export const GameIframe = ({ game }: GameIframeProps) => {
               >
                 {braveLabel}
               </a>
-
               <button
                 onClick={() => setBraveWarningDismissed(true)}
                 className="px-4 py-2 rounded-md border border-gray-400 text-gray-200 text-sm hover:bg-white/10 transition-all"
@@ -114,7 +133,7 @@ export const GameIframe = ({ game }: GameIframeProps) => {
       <div className="p-3 sm:p-4 bg-muted/30 border-t border-accent/20">
         <div className="flex items-center gap-2 text-sm sm:text-base text-foreground/80">
           <Gamepad2 className="h-4 w-4 text-accent" />
-          Playing On: {deviceInfo} {braveDetected}
+          Playing On: {deviceInfo}
         </div>
       </div>
     </Card>
