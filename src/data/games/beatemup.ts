@@ -1178,7 +1178,6 @@ export const beatnupGames: Game[] = [
     id: "the-shadow",
     title: "The Shadow",
     slug: "the-shadow-unreleased",
-    embedId: "",
     year: 1994,
     genre: "Indie Comics / Rare",
     folder: "Indie Comics / Rare",
@@ -1242,6 +1241,28 @@ export const beatnupGames: Game[] = [
     coverImage: "/assets/covers/64th_street_arcade.jpg",
     platform: "Arcade",
     logo: "/assets/logos/64.png",
+  },
+  {
+    id: "the-peace-keepers",
+    title: "The Peace Keepers",
+    slug: "the-peace-keepers-snes",
+    embedId: "24164",
+    year: 1994,
+    genre: "Urban",
+    folder: "Super Nintendo",
+    publisher: "Jaleco",
+    characters: ["Flynn", "Al", "Prokop", "Echo", "Orbot", "Norton"],
+    description: "A gritty urban beat ’n up where enhanced fighters battle a corrupt megacorp across chaotic streets and arenas.",
+    longDescription:
+      "The Peace Keepers (1994), the third entry in the Rushing Beat series, is an urban beat ’n up packed with alternate routes, multiple endings, and a more intense combat system than its predecessors. " +
+      "The story revolves around the militarized DECO corporation, which controls the city from the shadows, while a group of genetically enhanced fighters joins forces to bring it down. " +
+      "Each character features unique special moves, ability transformations depending on the chosen routes, and battles against experimental boss units. " +
+      "With its dark atmosphere, post-industrial tone, and branching narrative, it stands as one of the boldest and most distinct beat ’n ups in the SNES catalog.",
+    players: "1-2 Players",
+    developer: "Jaleco",
+    coverImage: "/assets/covers/the_peace_keepers.jpg",
+    platform: "Super Nintendo",
+    logo: "/assets/logos/peacekeepers.png",
   },
   {
     id: "night-slashers",

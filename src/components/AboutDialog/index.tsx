@@ -36,8 +36,6 @@ export const AboutDialog = () => {
           <DialogTitle className="text-center text-2xl font-bold text-primary mb-4">
             About
           </DialogTitle>
-
-          {/* FIX: asChild + wrapper div prevents <p> inside <p> issue */}
           <DialogDescription asChild>
             <div className="text-base text-muted-foreground space-y-5 leading-relaxed text-justify hyphens-auto break-words">
               <p>
@@ -46,7 +44,6 @@ export const AboutDialog = () => {
                 console classics: all playable directly in your browser. Built
                 for dreamers who grew up with the 16-bit golden era.
               </p>
-
               <div>
                 <h4 className="font-semibold text-accent mb-3">
                   Project Tech Stack
@@ -71,7 +68,6 @@ export const AboutDialog = () => {
                   ))}
                 </div>
               </div>
-
               <div className="pt-6 border-t border-border">
                 <p className="text-center text-sm text-muted-foreground flex items-center justify-center gap-1">
                   <a
