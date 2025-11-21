@@ -732,6 +732,30 @@ export const beatnupGames: Game[] = [
       "/assets/logos/spiderman_maximum_carnage.png",
   },
   {
+    id: "spider-man-venom-separation-anxiety",
+    title: "Venom: Anxiety",
+    slug: "spider-man-venom-separation-anxiety-snes",
+    embedId: "23351",
+    year: 1995,
+    genre: "Marvel Comics",
+    folder: "Marvel Comics",
+    publisher: "Acclaim Entertainment",
+    characters: ["Spider-Man", "Venom", "The Jury", "Life Foundation Symbiotes"],
+    description:
+      "Join Spider-Man and Venom in a two-player urban beat ’n up as they battle the Life Foundation’s symbiote army.",
+    longDescription:
+      "Spider-Man & Venom: Separation Anxiety (1995) is a side-scrolling urban beat ’n up sequel that puts Venom with Spider-Man on the same side against the Life Foundation’s invading symbiote forces. " +
+      "The action takes players through street fights, corporate strongholds and subterranean facilities, facing off against The Jury, symbiote offspring and industrial mayhem. " +
+      "With playable modes for one or two players, massive groups of enemies on-screen and cameo heroes like Daredevil and Ghost Rider lending a hand, it brings comic-book chaos to the SNES. " +
+      "Though criticized for repetition and lack of innovation, it remains a cult favorite among fans of 16-bit superhero beat ’n ups.",
+    players: "1-2 Players",
+    developer: "Software Creations",
+    coverImage: "/assets/covers/venom.jpg",
+    platform: "Nintendo",
+    logo: "/assets/logos/venom.png"
+  },
+
+  {
     id: "xmen-danger-zone",
     title: "X-Men: Genesis",
     slug: "x-men-usa",
@@ -1261,7 +1285,7 @@ export const beatnupGames: Game[] = [
     players: "1-2 Players",
     developer: "Jaleco",
     coverImage: "/assets/covers/the_peace_keepers.jpg",
-    platform: "Super Nintendo",
+    platform: "Nintendo",
     logo: "/assets/logos/peacekeepers.png",
   },
   {
