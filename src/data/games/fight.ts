@@ -68,7 +68,7 @@ export const fightGames: Game[] = [
         logo: "https://gam.onl/user/arcade/logos/sfa2.png"
     },
     {
-        id: "sf-zero3",
+        id: "sf-alpha3",
         title: "Street Fighter Alpha 3",
         slug: "street-fighter-alpha-3-brazil",
         embedId: "9968",
