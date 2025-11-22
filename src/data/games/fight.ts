@@ -25,7 +25,7 @@ export const fightGames: Game[] = [
     },
     {
         id: "sf2",
-        title: "Street Fighter II",
+        title: "Super Street Fighter II",
         slug: "street-fighter-ii-the-world-warrior-usa",
         embedId: "23550",
         year: 1992,
@@ -35,7 +35,7 @@ export const fightGames: Game[] = [
         characters: ["Ryu", "Ken", "Chun-li", "Guile", "M. Bison", "Vega", "Dhalsim", "Sagat", "Blanka", "Zangief"],
         description: "The game that revolutionized fighting games!",
         longDescription:
-            "Street Fighter II (1992) forever transformed the fighting genre with precise controls, tactical matchups, and a roster of unforgettable world warriors. " +
+            "Super Street Fighter II (1992) forever transformed the fighting genre with precise controls, tactical matchups, and a roster of unforgettable world warriors. " +
             "Travel the globe to face opponents like Ryu, Chun-Li, Guile, and M. Bison in tense one-on-one duels that demand mastery, timing, and strategy. " +
             "Every move — from fireballs and spinning kicks to grapples and specials — helped define the DNA of modern competitive fighters. " +
             "A historic landmark that ignited arcade culture and shaped gaming history.",
