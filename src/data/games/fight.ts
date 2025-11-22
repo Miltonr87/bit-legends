@@ -69,9 +69,9 @@ export const fightGames: Game[] = [
     },
     {
         id: "sf-zero3",
-        title: "Street Fighter Zero 3",
-        slug: "street-fighter-zero-3-980904-asia",
-        embedId: "10091",
+        title: "Street Fighter Alpha 3",
+        slug: "street-fighter-alpha-3-brazil",
+        embedId: "9968",
         year: 1998,
         genre: "Tournament",
         folder: "Tournament",
@@ -90,9 +90,9 @@ export const fightGames: Game[] = [
         ],
         description: "The ultimate evolution of the Alpha series — fast, stylish, and balanced for tournament play.",
         longDescription:
-            "Street Fighter Zero 3 (1998) delivers the definitive Alpha experience, pushing Capcom’s artistry and competitive depth to its peak with a massive roster exceeding 30 world warriors. " +
+            "Street Fighter Alpha 3 (1998) delivers the definitive Alpha experience, pushing Capcom’s artistry and competitive depth to its peak with a massive roster exceeding 30 world warriors. " +
             "A-ISM, X-ISM, and V-ISM introduce three unique fighting styles, opening up a universe of combos, custom juggles, pressure strings, and competitive strategies. " +
-            "Zero 3’s vibrant anime aesthetic, fluid animation, explosive supers, and character-defining movesets make every matchup feel cinematic and dynamic. " +
+            "Alpha 3’s vibrant anime aesthetic, fluid animation, explosive supers, and character-defining movesets make every matchup feel cinematic and dynamic. " +
             "From arcade cabinets to global tournaments, it remains one of the most beloved and technically rich Street Fighter entries ever created.",
         players: "1-2 Players",
         developer: "Capcom",
