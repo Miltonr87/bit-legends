@@ -2,6 +2,7 @@ import { GoogleOAuthProvider } from '@react-oauth/google';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ThemeProvider } from 'next-themes';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Analytics } from '@vercel/analytics/react';
 
 import { TooltipProvider } from '@/components/ui/tooltip';
 import { Toaster } from '@/components/ui/toaster';
@@ -39,6 +40,7 @@ const App = () => (
                   <Route path="*" element={<NotFound />} />
                 </Routes>
               </div>
+              <Analytics />
             </div>
           </BrowserRouter>
         </TooltipProvider>
