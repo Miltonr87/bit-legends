@@ -221,6 +221,29 @@ export const actionGames: Game[] = [
         logo: "/assets/logos/gargoyles.png",
         platform: "Genesis",
     },
+    {
+        id: "dick-tracy-genesis",
+        title: "Dick Tracy",
+        slug: "dick-tracy-genesis",
+        embedId: "28229",
+        year: 1990,
+        genre: "Indie Comics / Urban Action",
+        folder: "Indie Comics / Urban",
+        publisher: "Sega",
+        characters: ["Dick Tracy", "Big Boy Caprice", "Flattop", "Itchy", "Influence", "The Brow"],
+        description:
+            "Put on the yellow coat and bring justice to the criminal underworld of Tracy’s noir city.",
+        longDescription:
+            "Dick Tracy (1990) for the Sega Genesis draws heavily from the bold, graphic style of Chester Gould’s legendary comic strip—one of the longest-running and most influential crime comics in American history. " +
+            "Since its 1931 debut, the Dick Tracy series expanded into radio dramas, novels, serials, animated shows, and a rich line of comic-book adaptations published over the decades by Dell Comics, Harvey Comics, and later IDW Publishing, all preserving its gritty, hard-edged noir identity. " +
+            "In this Sega adaptation, players become Tracy himself as he dismantles Big Boy Caprice’s criminal empire, taking on grotesque mobsters and larger-than-life villains straight out of the original strips. " +
+            "The game blends side-scrolling action with Tracy’s signature detective flair, wrapped in the franchise’s iconic art-deco aesthetic, sharp silhouettes, and 1930s jazz ambience. ",
+        players: "1 Player",
+        developer: "Sega Technical Institute",
+        coverImage: "/assets/covers/dick_tracy_genesis.jpg",
+        platform: "Genesis",
+        logo: "/assets/logos/dick_tracy.png"
+    }
 ];
 
 export const actionFilters = [
