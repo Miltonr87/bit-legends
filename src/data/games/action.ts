@@ -242,6 +242,29 @@ export const actionGames: Game[] = [
         coverImage: "/assets/covers/dick_tracy_genesis.jpg",
         platform: "Genesis",
         logo: "/assets/logos/dick_tracy.png"
+    },
+    {
+        id: "swat-kats-snes",
+        title: "SWAT Kats",
+        slug: "swat-kats-the-radical-squadron-usa",
+        embedId: "24957",
+        year: 1995,
+        genre: "Indie Comics",
+        folder: "Indie Comics",
+        publisher: "Hudson Soft",
+        characters: ["T-Bone", "Razor", "Commander Feral", "Dark Kat", "Dr. Viper", "The Metallikats"],
+        description: "Take flight as the SWAT Kats and defend Megakat City from its most dangerous villains!",
+        longDescription:
+            "SWAT Kats: The Radical Squadron (1995) for the Super Nintendo adapts the cult Hanna-Barbera animated series known for its comic-book energy, sharp silhouettes, and explosive 90s attitude. " +
+            "While the show itself inspired a dedicated fanbase, SWAT Kats expanded into tie-in comics, promotional issues, and licensed artwork that embraced bold linework, dynamic poses, and the superhero aesthetic of the era. " +
+            "In the game, players take control of T-Bone and Razor as they battle through industrial zones, toxic labs, and airborne firefights in the iconic TurboKat, facing villains like Dark Kat, Dr. Viper, and the Metallikats. " +
+            "The SNES adaptation captures the series’ comic-inspired style with expressive sprites, punchy animations, and colorful action sequences that feel lifted straight from a graphic adventure. " +
+            "Fast, stylish, and drenched in 90s hero flair, SWAT Kats stands as a rare gem that brings the show's comic-book spirit to life in playable form.",
+        players: "1 Player",
+        developer: "AIM",
+        coverImage: "/assets/covers/swat_kats_snes.jpg",
+        platform: "Nintendo",
+        logo: "/assets/logos/swat_kats.png"
     }
 ];
 

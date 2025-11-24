@@ -216,10 +216,10 @@ export const beatnupGames: Game[] = [
     characters: ["Goah", "Stern Blade", "Dora", "Little Trix", "Death Adder"],
     description: "A brutal fantasy brawler featuring four new heroes taking on Death Adder’s tyranny.",
     longDescription:
-      "Golden Axe: Revenge of Death Adder (1992) is an arcade sequel in the Golden Axe series, powered by Sega’s System. " +
-      "This chapter introduces four new playable characters — Goah, Stern Blade, Dora, and Little Trix — each with distinct abilities and styles. " +
-      "Players battle through branching paths across multiple levels, using classic magic, mounted creatures, and cooperative attacks. " +
-      "With richer visuals, faster gameplay, and the ability to support up to four simultaneous players, it’s a landmark in arcade beat ’em ups. ",
+      "Golden Axe: Revenge of Death Adder (1992) elevates Sega’s legendary fantasy saga to its peak with a darker tone, massive sprites, and branching quests powered by the System 32 arcade hardware. " +
+      "This long-awaited sequel abandons the original cast to introduce four new warriors: Stern Blade, the armored hero; Goah, the giant carrying a gnome mage; Dora, the centaur warrior; and Little Trix, the nimble forest child. " +
+      "Players carve through twisted forests, cursed villages, burning fortresses, and underground citadels as they battle Death Adder’s resurrected armies in a campaign far more cinematic and expansive than its predecessors. " +
+      "With lush hand-drawn backgrounds, brutal hack-and-slash combat, and support for up to four simultaneous players, Revenge of Death Adder stands as one of the most ambitious and visually striking arcade beat ’em ups ever created.",
     players: "1-4 Players",
     developer: "Sega AM1",
     coverImage: "/assets/covers/golden_axe_revenge_of_death_adder.jpg",
@@ -373,7 +373,7 @@ export const beatnupGames: Game[] = [
     slug: "mighty-morphin-power-rangers-the-movie-usa",
     embedId: "19560",
     year: 1995,
-    genre: "Urban",
+    genre: "Urban / Sci-Fi",
     folder: "Power Rangers",
     publisher: "Bandai",
     characters: [
@@ -1063,6 +1063,28 @@ export const beatnupGames: Game[] = [
       "/assets/logos/death_of_superman.png",
   },
   {
+    id: "the-incredible-hulk-genesis",
+    title: "The Incredible Hulk",
+    slug: "incredible-hulk-the-usa-europe",
+    embedId: "29797",
+    year: 1994,
+    genre: "Marvel Comics",
+    folder: "Marvel Comics",
+    publisher: "U.S. Gold",
+    characters: ["Hulk", "Bruce Banner", "The Leader", "Abomination", "Rhino", "Absorbing Man"],
+    description: "Unleash the unstoppable rage of the Hulk against Marvel’s most brutal villains!",
+    longDescription:
+      "The Incredible Hulk (1994) for the Sega Genesis brings Marvel’s green behemoth to life in a hybrid of brawler combat and action-platforming. " +
+      "Players smash through military bases, abandoned labs, city streets, and subterranean lairs while facing an iconic rogues’ gallery including The Leader, Abomination, Rhino, and Absorbing Man. " +
+      "Hulk’s raw power defines the gameplay — punches crack walls, leaps shake the screen, and rage-fueled attacks devastate enemies, while weakened moments force a vulnerable Bruce Banner to evade danger. " +
+      "With its comic-book panel transitions, bold sprites, and faithful Marvel atmosphere, The Incredible Hulk stands as one of the Genesis era’s most stylish superhero adaptations.",
+    players: "1 Player",
+    developer: "Probe Entertainment",
+    coverImage: "/assets/covers/incredible_hulk_genesis.jpg",
+    platform: "Genesis",
+    logo: "/assets/logos/incredible_hulk.png"
+  },
+  {
     id: "marvel-war-of-the-gems",
     title: "Marvel: War of the Gems",
     slug: "marvel-super-heroes-war-of-the-gems",
@@ -1383,7 +1405,10 @@ export const beatnupGames: Game[] = [
     characters: ["Cyclops", "Wolverine", "Storm", "Colossus", "Nightcrawler", "Dazzler"],
     description: "Join the X-Men to defeat Magneto in Konami’s legendary arcade brawler!",
     longDescription:
-      "X-Men (1992) is a six-player arcade classic from Konami, featuring iconic Marvel heroes battling Magneto’s Brotherhood of Evil Mutants. Each character has unique powers — from Cyclops’ optic blasts to Wolverine’s claws — across massive side-scrolling stages. Known for its fast-paced action and teamwork, it remains one of the greatest comic-based arcade games ever made.",
+      "X-Men (1992) is Konami’s legendary six-player arcade spectacle, bringing Marvel’s iconic mutants to life with massive sprites, explosive special attacks, and nonstop cooperative action. " +
+      "Players assemble a classic roster (Cyclops, Wolverine, Storm, Colossus, Nightcrawler, and Dazzler) each wielding signature mutant powers as they battle Sentinels, subterranean monsters, and Magneto’s Brotherhood across sprawling side-scrolling stages. " +
+      "Based on the 1989 animated pilot Pryde of the X-Men, the game channels the bold comic-book energy of Marvel’s early ’90s first era, complete with vivid colors, dramatic poses, and panel-inspired cutscenes. " +
+      "Decades later, X-Men remains a towering example of Konami’s golden age of arcade design: a heroic fusion of spectacle, teamwork, and pure mutant mayhem.",
     players: "1-6 Players",
     developer: "Konami",
     coverImage: "/assets/covers/xmen.jpg",
