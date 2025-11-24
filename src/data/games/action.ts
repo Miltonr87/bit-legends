@@ -227,7 +227,7 @@ export const actionGames: Game[] = [
         slug: "dick-tracy-genesis",
         embedId: "28229",
         year: 1990,
-        genre: "Indie Comics / Urban Action",
+        genre: "Indie Comics / Urban",
         folder: "Indie Comics / Urban",
         publisher: "Sega",
         characters: ["Dick Tracy", "Big Boy Caprice", "Flattop", "Itchy", "Influence", "The Brow"],
