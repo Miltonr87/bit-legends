@@ -234,10 +234,9 @@ export const actionGames: Game[] = [
         description:
             "Put on the yellow coat and bring justice to the criminal underworld of Tracy’s noir city.",
         longDescription:
-            "Dick Tracy (1990) for the Sega Genesis draws heavily from the bold, graphic style of Chester Gould’s legendary comic strip—one of the longest-running and most influential crime comics in American history. " +
+            "Dick Tracy (1991) for the Sega Genesis blends beat-'em-up action with run-and-gun mechanics, all wrapped in the bold graphic style of Chester Gould’s legendary comic strip (one of the longest-running and most influential crime comics in American history). " +
             "Since its 1931 debut, the Dick Tracy series expanded into radio dramas, novels, serials, animated shows, and a rich line of comic-book adaptations published over the decades by Dell Comics, Harvey Comics, and later IDW Publishing, all preserving its gritty, hard-edged noir identity. " +
-            "In this Sega adaptation, players become Tracy himself as he dismantles Big Boy Caprice’s criminal empire, taking on grotesque mobsters and larger-than-life villains straight out of the original strips. " +
-            "The game blends side-scrolling action with Tracy’s signature detective flair, wrapped in the franchise’s iconic art-deco aesthetic, sharp silhouettes, and 1930s jazz ambience. ",
+            "In this Sega adaptation, players become Tracy himself as he dismantles Big Boy Caprice’s criminal empire, taking on grotesque mobsters and larger-than-life villains straight out of the original strips. ",
         players: "1 Player",
         developer: "Sega Technical Institute",
         coverImage: "/assets/covers/dick_tracy_genesis.jpg",
