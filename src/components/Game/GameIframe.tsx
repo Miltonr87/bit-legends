@@ -22,7 +22,7 @@ export const GameIframe = ({ game }: GameIframeProps) => {
       text: 'On mobile, tap ⛶ button to fullscreen or move the game box!',
     },
     {
-      text: 'Controls differ by console, but you can customize them inside the game!',
+      text: 'Controls may differ, but you can customize them inside the game!',
     },
     {
       text: "Save progress using the 'Save State' button inside the game!",
