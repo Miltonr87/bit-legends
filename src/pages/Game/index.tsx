@@ -42,20 +42,39 @@ const Game = () => {
       '_blank'
     );
   };
-
   if (!game) {
     return (
-      <div className="min-h-screen">
+      <div className="min-h-screen flex flex-col bg-black">
         <Header />
-        <div className="container mx-auto px-4 py-20 text-center">
-          <h1 className="text-4xl font-bold mb-4">Game Not Found</h1>
-          <Link to="/">
-            <Button variant="outline">
-              <ArrowLeft className="mr-2 h-4 w-4" />
-              Back
-            </Button>
-          </Link>
-        </div>
+        <main className="flex-grow relative flex items-center justify-center overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/90" />
+
+          <div className="relative z-10 text-center px-6 py-20 max-w-lg mx-auto">
+            <div className="mb-10 flex justify-center">
+              <img
+                src="/assets/backgrounds/notfoundgame.jpg"
+                alt="Bit Legends Banner"
+                className="w-full max-w-md rounded-lg border-2 border-accent/30 shadow-[0_0_30px_rgba(0,255,200,0.4)] object-cover"
+              />
+            </div>
+            <h1 className="text-4xl sm:text-5xl font-extrabold text-accent drop-shadow-[0_0_10px_rgba(0,255,200,0.3)] mb-4">
+              Game Not Found
+            </h1>
+            <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
+              We couldn’t locate this title in the Bit Legends database. It may
+              have been moved or never existed.
+            </p>
+            <Link to="/">
+              <Button
+                variant="outline"
+                className="border-accent/40 hover:bg-accent/10 text-accent font-semibold px-6 py-3 rounded-xl transition-all"
+              >
+                <ArrowLeft className="mr-2 h-5 w-5" />
+                Back
+              </Button>
+            </Link>
+          </div>
+        </main>
         <Footer />
       </div>
     );
