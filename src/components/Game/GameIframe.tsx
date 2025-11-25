@@ -55,7 +55,7 @@ export const GameIframe = ({ game }: GameIframeProps) => {
   useEffect(() => {
     const interval = setInterval(() => {
       setTipIndex((prev) => (prev + 1) % tips.length);
-    }, 12000);
+    }, 10000);
     return () => clearInterval(interval);
   }, [tips.length]);
 
