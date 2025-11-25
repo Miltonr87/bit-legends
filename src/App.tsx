@@ -3,6 +3,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ThemeProvider } from 'next-themes';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Analytics } from '@vercel/analytics/react';
+import { HelmetProvider } from 'react-helmet-async';
 
 import { TooltipProvider } from '@/components/ui/tooltip';
 import { Toaster } from '@/components/ui/toaster';
@@ -20,31 +21,33 @@ const googleClientId = import.meta.env.VITE_GOOGLE_CLIENT_ID;
 const App = () => (
   <GoogleOAuthProvider clientId={googleClientId}>
     <QueryClientProvider client={queryClient}>
-      <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
-        <TooltipProvider>
-          <Toaster />
-          <Sonner />
-          <BrowserRouter
-            future={{
-              v7_startTransition: true,
-              v7_relativeSplatPath: true,
-            }}
-          >
-            <div className="min-h-screen flex flex-col">
-              <div className="flex-grow">
-                <Routes>
-                  <Route path="/" element={<Index />} />
-                  <Route path="/game/:id" element={<Game />} />
-                  <Route path="/profile" element={<Profile />} />
-                  <Route path="/favorites" element={<FavoriteGames />} />
-                  <Route path="*" element={<NotFound />} />
-                </Routes>
+      <HelmetProvider>
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+          <TooltipProvider>
+            <Toaster />
+            <Sonner />
+            <BrowserRouter
+              future={{
+                v7_startTransition: true,
+                v7_relativeSplatPath: true,
+              }}
+            >
+              <div className="min-h-screen flex flex-col">
+                <div className="flex-grow">
+                  <Routes>
+                    <Route path="/" element={<Index />} />
+                    <Route path="/game/:id" element={<Game />} />
+                    <Route path="/profile" element={<Profile />} />
+                    <Route path="/favorites" element={<FavoriteGames />} />
+                    <Route path="*" element={<NotFound />} />
+                  </Routes>
+                </div>
+                <Analytics />
               </div>
-              <Analytics />
-            </div>
-          </BrowserRouter>
-        </TooltipProvider>
-      </ThemeProvider>
+            </BrowserRouter>
+          </TooltipProvider>
+        </ThemeProvider>
+      </HelmetProvider>
     </QueryClientProvider>
   </GoogleOAuthProvider>
 );

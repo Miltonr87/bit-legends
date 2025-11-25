@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { allGames } from '@/data';
 import { Header } from '@/components/Layout/Header';
 import { Footer } from '@/components/Layout/Footer';
@@ -33,8 +34,13 @@ const Game = () => {
 
   const handleWhatsAppShare = () => {
     if (!game) return;
-    const text = `Check out ${game.title} on Bit Legends! ${window.location.href}`;
-    window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');
+    const baseUrl = 'https://bitlegends.vercel.app';
+    const gameUrl = `${baseUrl}/game/${encodeURIComponent(game.id)}`;
+    const text = `🎮 Check out ${game.title} on Bit Legends!\n${gameUrl}`;
+    window.open(
+      `https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`,
+      '_blank'
+    );
   };
 
   if (!game) {
@@ -55,8 +61,29 @@ const Game = () => {
     );
   }
 
+  const baseUrl = 'https://bitlegends.vercel.app';
+  const gameUrl = `${baseUrl}/game/${encodeURIComponent(game.slug)}`;
+  const imageUrl =
+    game.coverImage ||
+    `${baseUrl}/public/assets/backgrounds/bitlegends_min.jpg`;
+  const description =
+    game.longDescription?.slice(0, 160) ||
+    'Play classic retro games online for free on Bit Legends.';
+
   return (
     <div className="min-h-screen flex flex-col">
+      <Helmet>
+        <title>{`${game.title} – Bit Legends`}</title>
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={`${game.title} – Bit Legends`} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content={imageUrl} />
+        <meta property="og:url" content={gameUrl} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={`${game.title} – Bit Legends`} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content={imageUrl} />
+      </Helmet>
       <Header />
       <main className="flex-grow">
         <div className="container mx-auto px-4 py-6 sm:py-8">
@@ -90,21 +117,19 @@ const Game = () => {
                         disabled={isFavorite}
                         variant="outline"
                         size="icon"
-                        className={`h-8 w-8 sm:h-10 sm:w-10 border-accent/50 transition-all duration-300 
-                          ${
-                            isFavorite
-                              ? 'bg-green-500/10 hover:bg-green-500/20'
-                              : 'hover:bg-accent/10'
-                          }`}
+                        className={`h-8 w-8 sm:h-10 sm:w-10 border-accent/50 transition-all duration-300 ${
+                          isFavorite
+                            ? 'bg-green-500/10 hover:bg-green-500/20'
+                            : 'hover:bg-accent/10'
+                        }`}
                         title="Add to favorites"
                       >
                         <Heart
-                          className={`h-4 w-4 transition-all duration-300 
-                            ${
-                              isFavorite
-                                ? 'fill-green-400 text-green-400 drop-shadow-[0_0_6px_rgba(0,255,0,0.6)]'
-                                : 'text-accent hover:fill-accent'
-                            }`}
+                          className={`h-4 w-4 transition-all duration-300 ${
+                            isFavorite
+                              ? 'fill-green-400 text-green-400 drop-shadow-[0_0_6px_rgba(0,255,0,0.6)]'
+                              : 'text-accent hover:fill-accent'
+                          }`}
                         />
                       </Button>
                       <DropdownMenu>
@@ -137,7 +162,7 @@ const Game = () => {
                   {game.longDescription}
                 </p>
               </Card>
-              {game.characters?.length > 0 && !isMobile ? (
+              {game.characters?.length > 0 && !isMobile && (
                 <Card className="p-4 sm:p-6 border-2 border-accent/30 bg-gradient-to-br from-accent/5 to-transparent">
                   <h2 className="text-xl sm:text-2xl font-bold mb-4 text-accent flex items-center gap-2">
                     <Users className="h-5 w-5 sm:h-6 sm:w-6" /> Main Characters
@@ -153,7 +178,7 @@ const Game = () => {
                     ))}
                   </div>
                 </Card>
-              ) : null}
+              )}
             </div>
             <GameSidebar game={game} />
           </div>
