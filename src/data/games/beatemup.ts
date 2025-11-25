@@ -185,7 +185,7 @@ export const beatnupGames: Game[] = [
     id: "final-fight",
     title: "Final Fight",
     slug: "final-fight-europe",
-    embedId: "22554",
+    embedId: "8497",
     year: 1989,
     genre: "Urban",
     folder: "Arcade",
@@ -200,7 +200,6 @@ export const beatnupGames: Game[] = [
     players: "1-2 Players",
     developer: "Capcom",
     coverImage: "/assets/covers/final_fight.jpg",
-    embedUrl: "https://www.retrogames.cc/embed/22554-final-fight-europe.html",
     platform: "Arcade",
     logo: "/assets/logos/final_fight.png"
   },
@@ -250,28 +249,6 @@ export const beatnupGames: Game[] = [
     platform: "Arcade",
     embedUrl: "https://www.retrogames.cc/embed/34692-violent-storm-ver-eab.html",
     logo: "/assets/logos/viostorm.png"
-  },
-  {
-    id: "final-fight-guy",
-    title: "Final Fight Guy",
-    slug: "final-fight-guy-usa",
-    embedId: "23139",
-    year: 1992,
-    genre: "Urban",
-    folder: "Beat 'em Up",
-    publisher: "Capcom",
-    characters: ["Guy", "Haggar", "Jessica", "Belger"],
-    description: "The SNES-exclusive edition starring Guy — Metro City never sleeps!",
-    longDescription:
-      "Final Fight Guy (1992) delivers a refined SNES adaptation of Capcom’s legendary brawler, replacing Cody with the fan-favorite Bushin-ryu ninja, Guy. " +
-      "Haggar and Guy once again hit the streets to crush the Mad Gear gang and rescue Jessica, battling through slums, subways, industrial zones, and high-rise strongholds. " +
-      "Sharper character balance, adjusted enemy patterns, and an updated palette give this version its own identity. " +
-      "A rare and sought-after edition that stands as a unique slice of Final Fight history.",
-    players: "1-2 Players",
-    developer: "Capcom",
-    coverImage: "/assets/covers/final_fight_guy.jpg",
-    platform: "Nintendo",
-    logo: "/assets/logos/final_fight_guy.png",
   },
   {
     id: "final-fight-2",
@@ -1414,6 +1391,29 @@ export const beatnupGames: Game[] = [
     coverImage: "/assets/covers/xmen.jpg",
     platform: "Arcade",
     logo: "/assets/logos/xmen.png",
+  },
+  {
+    id: "mutation-nation",
+    title: "Mutation Nation",
+    slug: "mutation-nation-neo-geo",
+    embedId: "9272",
+    year: 1992,
+    genre: "Sci-Fi / Urban",
+    folder: "SNK",
+    publisher: "SNK",
+    characters: ["Ricky Jones", "Johnny Hart", "Bio-Soldiers", "Mutant Bosses"],
+    description:
+      "A sci-fi brawler where mutants overrun the city and two heroes fight to restore humanity.",
+    longDescription:
+      "Mutation Nation (1992) for the Neo-Geo is SNK’s explosive sci-fi beat ’em up set in a dystopian city overrun by genetic abominations. " +
+      "Players control Ricky and Johnny as they battle mutant creatures created by a rogue scientist, using acrobatic combos, elemental power spheres, and high-impact special attacks. " +
+      "The game’s bold comic-book aesthetic, oversized sprites, and grotesque enemy designs embrace early ’90s sci-fi energy, blending mutation horror with superhero-style action. " +
+      "With cooperative play, dynamic stage hazards, and screen-filling transformations, Mutation Nation stands as one of the Neo-Geo’s most stylish and energetic brawlers — a cult favorite among arcade beat ’em ups.",
+    players: "1-2 Players",
+    developer: "SNK",
+    coverImage: "/assets/covers/mutation_nation.jpg",
+    platform: "Arcade",
+    logo: "/assets/logos/mutation_nation.png"
   },
   {
     id: "xmen-mutant-apocalypse",
