@@ -25,7 +25,13 @@ export const GameIframe = ({ game }: GameIframeProps) => {
       text: 'Controls may differ, but you can customize them inside the game!',
     },
     {
+      text: 'Playing at work? We won’t tell anyone!',
+    },
+    {
       text: "Save progress using the 'Save State' button inside the game!",
+    },
+    {
+      text: 'Bit Legends isn’t responsible for any finger calluses!',
     },
     {
       text: 'Log in to Bit Legends to save game favorites and track playtime!',
@@ -35,6 +41,9 @@ export const GameIframe = ({ game }: GameIframeProps) => {
     },
     {
       text: 'Joystick controls are detected automatically when connected!',
+    },
+    {
+      text: 'Some games can be tough, take a break before trying again!',
     },
   ];
 

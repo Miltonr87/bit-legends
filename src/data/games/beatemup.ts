@@ -699,7 +699,11 @@ export const beatnupGames: Game[] = [
     characters: ["Spider-Man", "Venom", "Carnage", "Shriek", "Doppelganger"],
     description: "Battle through New York in this Marvel classic — the red-cartridge legend!",
     longDescription:
-      "Spider-Man & Venom: Maximum Carnage (1994) brings the dark Marvel comic saga to life on the SNES. Join Spider-Man and Venom as unlikely allies fighting to stop Carnage and his symbiote army across the streets of New York. Featuring fast-paced combat, comic panel cutscenes, and a cult rock soundtrack, it’s one of the most iconic superhero beat ’em ups of the 16-bit era.",
+      "Spider-Man & Venom: Maximum Carnage (1994) adapts Marvel’s infamous 14-issue crossover into a relentlessly dark and stylish 16-bit beat ’em up. " +
+      "Spider-Man and Venom form an uneasy alliance as they hunt Carnage and his sadistic symbiote family through the streets, rooftops, subways, and back alleys of New York City. " +
+      "The game faithfully recreates the comic’s energy with panel-by-panel cutscenes from the original artwork, sharp red-and-black visuals, and encounters with iconic allies like Black Cat, Captain America, Cloak, and Dagger. " +
+      "Its explosive combat, sinister atmosphere, and cult rock soundtrack (featuring tracks by the band Green Jellÿ) make it one of the most memorable and ambitious superhero brawlers of the 16-bit era. " +
+      "Maximum Carnage remains a landmark in Marvel gaming history: bold, brutal, and unapologetically faithful to its comic roots.",
     players: "1 Player",
     developer: "Software Creations",
     coverImage: "/assets/covers/spider_carnage.jpg",
