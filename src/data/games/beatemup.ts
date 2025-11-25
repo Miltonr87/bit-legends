@@ -350,7 +350,7 @@ export const beatnupGames: Game[] = [
     slug: "mighty-morphin-power-rangers-the-movie-usa",
     embedId: "19560",
     year: 1995,
-    genre: "Urban / Sci-Fi",
+    genre: "Urban",
     folder: "Power Rangers",
     publisher: "Bandai",
     characters: [
