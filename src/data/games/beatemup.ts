@@ -1405,10 +1405,10 @@ export const beatnupGames: Game[] = [
     description:
       "A sci-fi brawler where mutants overrun the city and two heroes fight to restore humanity.",
     longDescription:
-      "Mutation Nation (1992) for the Neo-Geo is SNK’s explosive sci-fi beat ’em up set in a dystopian city overrun by genetic abominations. " +
+      "Mutation Nation (1992) for the Arcade is SNK’s explosive sci-fi beat ’em up set in a dystopian city overrun by genetic abominations. " +
       "Players control Ricky and Johnny as they battle mutant creatures created by a rogue scientist, using acrobatic combos, elemental power spheres, and high-impact special attacks. " +
       "The game’s bold comic-book aesthetic, oversized sprites, and grotesque enemy designs embrace early ’90s sci-fi energy, blending mutation horror with superhero-style action. " +
-      "With cooperative play, dynamic stage hazards, and screen-filling transformations, Mutation Nation stands as one of the Neo-Geo’s most stylish and energetic brawlers — a cult favorite among arcade beat ’em ups.",
+      "With cooperative play, dynamic stage hazards, and screen-filling transformations, Mutation Nation stands as one of the Arcades most stylish and energetic brawlers — a cult favorite among beat ’em ups.",
     players: "1-2 Players",
     developer: "SNK",
     coverImage: "/assets/covers/mutation_nation.jpg",
