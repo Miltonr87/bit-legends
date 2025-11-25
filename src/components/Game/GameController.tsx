@@ -16,7 +16,7 @@ export const GameController = () => {
           <div className="flex items-center gap-3">
             <Gamepad2 className="h-6 w-6 text-accent animate-pulse" />
             <h2 className="text-lg sm:text-xl font-bold text-foreground">
-              Keyboard
+              Keyboard Control
             </h2>
           </div>
           <div className="hidden sm:flex items-center gap-2 text-sm text-muted-foreground pr-2">
