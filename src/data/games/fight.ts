@@ -548,6 +548,74 @@ export const fightGames: Game[] = [
         logo: "/assets/logos/lobo.png"
     },
     {
+        id: "weaponlord-snes",
+        title: "Weaponlord",
+        slug: "weaponlord-snes",
+        embedId: "",
+        year: 1995,
+        genre: "Horror / Tournament / Rare",
+        folder: "Horror / Tournament / Rare",
+        publisher: "Namco / Visual Concepts",
+        characters: [
+            "Zarak the Barbarian",
+            "Talazia the Amazon",
+            "Divada the Sorceress",
+            "Jen-Tai",
+            "Korr",
+            "Zorn",
+            "Bane",
+            "Pagul"
+        ],
+        description:
+            "Wield your blade in the brutal and tactical 16-bit fighter that defined dark fantasy combat on SNES.",
+        longDescription:
+            "Weaponlord (1995) for the Super Nintendo is a gritty, dark fantasy fighting game that set itself apart from Street Fighter clones of its era with weapon-based combat, parries, and finishers years ahead of their time. " +
+            "Developed by Visual Concepts and published by Namco, each warrior fights for domination in a world of blood and sorcery, with detailed sprites, heavy metal atmosphere, and some of the most ambitious art direction of the 16-bit era. " +
+            "Its rarity stems from several factors: it was released late in 1995, around the time the PlayStation and Sega Saturn shifted the market toward 3D gaming, leaving WeaponLord overshadowed by newer technology. " +
+            "Its complex parry-heavy combat system and steep learning curve appealed to a niche audience, limiting mainstream success and resulting in lower production runs. ",
+        players: "1-2 Players",
+        developer: "Visual Concepts",
+        coverImage: "/assets/covers/weaponlord.jpg",
+        embedUrl:
+            "/emulator.html?platform=snes&rom=https://ozequlizbaymnvzeqkyh.supabase.co/storage/v1/object/public/game-rom/WeaponLord.zip",
+        platform: "Nintendo",
+        logo: "/assets/logos/weaponlord.png"
+    },
+    {
+        id: "darkstalkers-revenge-arcade",
+        title: "Darkstalkers’ Revenge",
+        slug: "night-warriors-darkstalkers-revenge-950403-brazil",
+        embedId: "9325",
+        year: 1995,
+        genre: "Horror / Tournament",
+        folder: "Horror / Tournament",
+        publisher: "Capcom",
+        characters: [
+            "Demitri Maximoff",
+            "Morrigan Aensland",
+            "Jon Talbain",
+            "Felicia",
+            "Bishamon",
+            "Aulbath",
+            "Anakaris",
+            "Donovan Baine",
+            "Pyron"
+        ],
+        description:
+            "Capcom’s gothic masterpiece returns — a visually stunning, supernatural fighter filled with monsters, charm, and chaos.",
+        longDescription:
+            "Night Warriors: Darkstalkers’ Revenge (1995) is the second installment in Capcom’s Darkstalkers series and one of the most visually dazzling 2D fighting games ever created. " +
+            "Built on the CPS-2 arcade board, it refined the original Darkstalkers with smoother animation, faster gameplay, chain combos, and two selectable fighting modes (Hunter and Savior). " +
+            "Each character brings distinct gothic horror flair — from Demitri’s vampiric elegance to Morrigan’s seductive agility — blending anime art direction with fluid sprite work and rich sound design. " +
+            "Darkstalkers’ Revenge also introduced Donovan Baine and Hsien-Ko, expanding its lore and cast with religious and supernatural symbolism that became iconic in Capcom’s fighting universe. " +
+            "Regarded as a cult classic, it remains a fan favorite among competitive players and sprite art enthusiasts. ",
+        players: "1-2 Players",
+        developer: "Capcom",
+        coverImage: "/assets/covers/darkstalkers-revenge.jpg",
+        platform: "Arcade",
+        logo: "/assets/logos/darkstalkers-revenge.png"
+    },
+    {
         id: "justice-league-task-force",
         title: "Justice League",
         slug: "justice-league-task-force-usa",

@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>SNES Emulator</title>
+    <title>Bit Legends Emulator</title>
     <style>
       html,
       body {
@@ -17,16 +17,29 @@
       }
     </style>
   </head>
-
   <body>
     <div id="game"></div>
     <script>
       const params = new URLSearchParams(window.location.search);
       const romUrl = params.get('rom');
+      const platform = params.get('platform') || 'snes';
+      // Supported cores by EmulatorJS:
+      const validCores = {
+        nes: 'nes',
+        snes: 'snes',
+        genesis: 'segaMD',
+        gba: 'gba',
+        gb: 'gb',
+        gbc: 'gbc',
+        n64: 'n64',
+        psx: 'psx',
+      };
+      const core = validCores[platform.toLowerCase()] || 'snes';
       window.EJS_player = '#game';
-      window.EJS_core = 'snes';
+      window.EJS_core = core;
       window.EJS_gameUrl = romUrl;
       window.EJS_pathtodata = 'https://www.emulatorjs.com/data/';
+      window.EJS_startOnLoaded = true;
     </script>
     <script src="https://www.emulatorjs.com/loader.js"></script>
   </body>
