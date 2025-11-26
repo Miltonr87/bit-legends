@@ -118,7 +118,7 @@ export const GameIframe = ({ game }: GameIframeProps) => {
               scrolling="no"
               className="absolute inset-0 w-full h-full rounded-lg"
               title={game.title}
-              referrerPolicy="no-referrer"
+              // referrerPolicy="no-referrer"
               allow="gamepad; fullscreen; autoplay; encrypted-media; picture-in-picture"
               allowFullScreen
               style={{
