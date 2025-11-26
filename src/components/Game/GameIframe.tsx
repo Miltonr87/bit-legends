@@ -113,10 +113,12 @@ export const GameIframe = ({ game }: GameIframeProps) => {
         ) : (
           <>
             <iframe
+              key={game.id}
               src={iframeUrl}
               scrolling="no"
               className="absolute inset-0 w-full h-full rounded-lg"
               title={game.title}
+              referrerPolicy="no-referrer"
               allow="gamepad; fullscreen; autoplay; encrypted-media; picture-in-picture"
               allowFullScreen
               style={{
