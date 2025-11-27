@@ -50,28 +50,27 @@ export default function Netplay() {
 
             <ul className="list-decimal list-inside space-y-3 text-muted-foreground/90 text-base leading-relaxed">
               <li>
-                <strong>Create or Join a Room</strong> inside the{' '}
-                <strong>Netplay</strong> tab of your selected game.
+                <strong>Create</strong> or <strong>Join</strong> a{' '}
+                <strong>Room</strong> inside the <strong>Netplay</strong> tab of
+                your selected game.
               </li>
-
               <li>
-                <strong>Share the Game link page</strong> with your friends or
-                tell them your <strong>room name</strong>.
+                <strong>Share</strong> the <strong>Lobby</strong> with your
+                friends and tell them your <strong>Room Name</strong>.
               </li>
-
               <li>
                 Once they open the game, they can access{' '}
                 <strong>Netplay</strong> to connect to your room.
               </li>
-
               <li>
-                The <strong>host</strong> is always <strong>Player 1</strong>{' '}
+                The <strong>Host</strong> is always <strong>Player 1</strong>{' '}
                 and manages player slots before the game begins.
               </li>
 
               <li>
-                Works seamlessly across <strong>desktop and mobile</strong>{' '}
-                (cross-platform play with zero setup required).
+                Works seamlessly across <strong>Desktop</strong> and{' '}
+                <strong>Mobile</strong> (cross-platform play with zero setup
+                required).
               </li>
             </ul>
           </Card>
