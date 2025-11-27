@@ -42,14 +42,7 @@ export default function Netplay() {
                 <span className="text-primary font-semibold">
                   EmulatorJS Netplay
                 </span>
-                ! Sign in below to see rooms and start playing.
               </p>
-              <button
-                onClick={loginWithGoogle}
-                className="px-6 py-3 rounded-md bg-primary text-primary-foreground text-base font-medium hover:bg-primary/80 transition-all shadow-lg"
-              >
-                Sign in with Google
-              </button>
             </>
           )}
         </section>
@@ -60,29 +53,30 @@ export default function Netplay() {
           <h3 className="text-2xl font-semibold text-accent flex items-center gap-2 mb-5">
             <Info className="h-5 w-5 text-primary" /> How Netplay Works
           </h3>
-
           <ul className="list-decimal list-inside space-y-3 text-muted-foreground/90 text-base">
             <li>
               <strong>Create or Join a Room</strong> — choose the nearest region
               for best latency (e.g., Brazil, USA, Japan).
             </li>
             <li>
-              Share your <strong>room link</strong> with friends to join
-              instantly.
+              Share your <strong>game link</strong> with friends. After that tey
+              need to open "Netplay" inside the emulator
             </li>
             <li>
-              Ensure everyone uses the same <strong>ROM version</strong> for
+              Ensure everyone uses the same <strong>Game version</strong> for
               sync.
             </li>
             <li>
               The <strong>host controls Player 1</strong> and can assign others
               before starting.
             </li>
-            <li>Works on desktop and mobile — no installs needed.</li>
+            <li>
+              Works on desktop and mobile (cross-plataform) so no installs
+              needed.
+            </li>
           </ul>
-
           <p className="mt-6 text-sm text-muted-foreground italic text-center">
-            💡 Tip: Bit Legends auto-detects the best region and ping for your
+            Tip: Bit Legends auto-detects the best region and ping for your
             connection.
           </p>
         </Card>

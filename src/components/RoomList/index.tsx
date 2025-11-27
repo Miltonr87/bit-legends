@@ -1,6 +1,6 @@
-'use client';
 import { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
+import { allGames } from '@/data';
 
 interface NetplayRoom {
   id: string;
@@ -8,9 +8,11 @@ interface NetplayRoom {
   server: string;
   password: boolean;
   players: number;
+  url: string;
+  rom: string;
+  system: string;
 }
 
-// ✅ Servers supported in your setup
 const regionFlags: Record<string, string> = {
   us: '🇺🇸',
   us2: '🇺🇸',
@@ -28,96 +30,133 @@ export function RoomList() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('https://lobby.emulatorjs.com/list')
-      .then((res) => res.json())
-      .then((data: NetplayRoom[] | { rooms?: NetplayRoom[] }) => {
+    let intervalId: NodeJS.Timeout;
+
+    const fetchRooms = async () => {
+      try {
+        const res = await fetch('https://lobby.emulatorjs.com/list');
+        const data: NetplayRoom[] | { rooms?: NetplayRoom[] } =
+          await res.json();
         const normalized = Array.isArray(data)
           ? data
           : Array.isArray(data.rooms)
           ? data.rooms
           : [];
-        setRooms(normalized);
+        const filtered = normalized.filter((room) =>
+          allGames.some((game) =>
+            game.embedUrl?.includes(room.url.split('/embed/')[1]?.split('?')[0])
+          )
+        );
+        setRooms(filtered);
         setLoading(false);
-      })
-      .catch(() => setLoading(false));
+      } catch {
+        setLoading(false);
+      }
+    };
+    fetchRooms();
+    // eslint-disable-next-line prefer-const
+    intervalId = setInterval(fetchRooms, 10000); // refresh every 10s
+    return () => clearInterval(intervalId);
   }, []);
 
   const getFlag = (region: string) => {
     const code = region?.toLowerCase().replace(/\d+/g, '');
     return regionFlags[code] || '🌍';
   };
-
   if (loading)
     return (
       <div className="w-full max-w-2xl text-center text-muted-foreground animate-pulse">
         Loading active rooms...
       </div>
     );
-
   if (!rooms.length)
     return (
       <div className="w-full max-w-2xl text-center text-muted-foreground">
-        No active rooms right now.
+        No active rooms matching your games right now.
       </div>
     );
 
   return (
-    <div className="mt-8 w-full max-w-3xl border border-border/70 rounded-2xl bg-card/60 backdrop-blur-sm shadow-[0_0_25px_rgba(0,255,255,0.05)] p-6 transition-all duration-300 hover:shadow-[0_0_25px_rgba(0,255,255,0.12)]">
-      <h3 className="text-2xl font-bold text-accent mb-6 text-center">
-        Active Rooms
+    <div className="mt-10 w-full max-w-5xl mx-auto border border-border/60 rounded-2xl bg-card/70 backdrop-blur-md shadow-[0_0_25px_rgba(0,255,255,0.08)] p-4 sm:p-6 transition-all duration-300 hover:shadow-[0_0_30px_rgba(0,255,255,0.15)]">
+      <h3 className="text-2xl sm:text-3xl font-bold text-accent mb-5 text-center tracking-tight">
+        Bit Legends Active Rooms
       </h3>
 
-      <div className="overflow-x-auto">
-        <table className="w-full text-sm sm:text-base border-collapse">
-          <thead className="text-muted-foreground border-b border-border/70">
+      <div className="overflow-x-auto rounded-xl border border-border/40">
+        <table className="w-full text-sm sm:text-base border-collapse min-w-[600px]">
+          <thead className="bg-accent/10 text-muted-foreground border-b border-border/50">
             <tr className="text-left">
-              <th className="py-3 px-2">Room</th>
-              <th className="py-3 px-2">Players</th>
-              <th className="py-3 px-2">Server</th>
-              <th className="py-3 px-2">Private</th>
-              <th className="py-3 px-2"></th>
+              <th className="py-3 px-3">Room</th>
+              <th className="py-3 px-3">Game</th>
+              <th className="py-3 px-3">Players</th>
+              <th className="py-3 px-3 text-center">Server</th>
+              <th className="py-3 px-3 text-center">Private</th>
+              <th className="py-3 px-3 text-right">Action</th>
             </tr>
           </thead>
 
           <tbody>
-            {rooms.map((room) => (
-              <tr
-                key={room.id}
-                className="border-b border-border/30 hover:bg-accent/5 transition-colors"
-              >
-                <td className="py-3 px-2 font-medium text-foreground/90 truncate">
-                  {room.name}
-                </td>
-                <td className="py-3 px-2 text-foreground/70">{room.players}</td>
-                <td className="py-3 px-2 flex items-center gap-2 text-foreground/80">
-                  <span className="text-lg">{getFlag(room.server)}</span>
-                  <span className="uppercase tracking-wide font-medium">
-                    {room.server}
-                  </span>
-                </td>
-                <td className="py-3 px-2 text-foreground/70">
-                  {room.password ? 'Yes' : 'No'}
-                </td>
-                <td className="py-3 px-2 text-right">
-                  <Button
-                    size="sm"
-                    variant="secondary"
-                    className="px-4 py-1.5 text-sm font-medium hover:scale-105 transition-transform"
-                    onClick={() => {
-                      // ✅ Redirect to retrogames or embed emulator
-                      const joinUrl = `https://www.retrogames.cc/?room=${encodeURIComponent(
-                        room.id
-                      )}`;
-                      window.open(joinUrl, '_blank');
-                    }}
-                  >
-                    Join
-                  </Button>
-                </td>
-              </tr>
-            ))}
+            {rooms.map((room) => {
+              const matchedGame = allGames.find((game) =>
+                game.embedUrl?.includes(
+                  room.url.split('/embed/')[1]?.split('?')[0]
+                )
+              );
+
+              if (!matchedGame) return null;
+
+              const gameLink = `${window.location.origin}/game/${matchedGame.id}`;
+
+              return (
+                <tr
+                  key={room.id}
+                  className="border-b border-border/30 hover:bg-accent/5 transition-colors"
+                >
+                  <td className="py-3 px-3 font-medium text-foreground truncate">
+                    {room.name || '—'}
+                  </td>
+                  <td className="py-3 px-3 flex items-center gap-3 min-w-[200px]">
+                    <img
+                      src={matchedGame.coverImage}
+                      alt={matchedGame.title}
+                      className="w-10 h-10 rounded-md border border-border/40 object-cover shadow-[0_0_10px_rgba(0,255,255,0.1)]"
+                    />
+                    <div className="flex flex-col">
+                      <span className="font-semibold text-foreground leading-tight">
+                        {matchedGame.title}
+                      </span>
+                      <span className="text-xs text-muted-foreground">
+                        {matchedGame.genre}
+                      </span>
+                    </div>
+                  </td>
+                  <td className="py-3 px-3 text-foreground/80">
+                    {room.players}
+                  </td>
+                  <td className="py-3 px-3 text-center">
+                    <span className="text-lg">{getFlag(room.server)}</span>
+                  </td>
+                  <td className="py-3 px-3 text-center text-foreground/70">
+                    {room.password ? 'Yes' : 'No'}
+                  </td>
+                  <td className="py-3 px-3 text-right">
+                    <Button
+                      size="sm"
+                      variant="secondary"
+                      className="px-5 py-1.5 text-sm font-medium bg-accent/20 hover:bg-accent/30 text-accent-foreground rounded-lg hover:scale-105 transition-transform"
+                      onClick={() => window.open(gameLink, '_blank')}
+                    >
+                      Join
+                    </Button>
+                  </td>
+                </tr>
+              );
+            })}
           </tbody>
         </table>
+      </div>
+      <div className="mt-3 text-center text-xs text-muted-foreground sm:hidden">
+        Scroll horizontally to see all columns →
       </div>
     </div>
   );
