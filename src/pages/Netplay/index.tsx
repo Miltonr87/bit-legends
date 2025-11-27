@@ -1,8 +1,6 @@
-'use client';
 import { Header } from '@/components/Layout/Header';
 import { Footer } from '@/components/Layout/Footer';
-import { Card } from '@/components/ui/card';
-import { Info, Globe } from 'lucide-react';
+import { Globe } from 'lucide-react';
 import { RoomList } from '@/components/RoomList';
 
 export default function Netplay() {
@@ -12,7 +10,7 @@ export default function Netplay() {
       <section
         className="relative py-10 sm:py-14 px-4 overflow-hidden bg-cover bg-center"
         style={{
-          backgroundImage: "url('/assets/backgrounds/retro-grid2.png')",
+          backgroundImage: "url('/assets/backgrounds/retro-grid.png')",
           backgroundRepeat: 'repeat-x',
           backgroundSize: 'auto 100%',
           animation: 'parallaxScroll 60s linear infinite',
@@ -29,51 +27,13 @@ export default function Netplay() {
             </span>
           </h1>
           <p className="text-sm sm:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Bit Legends supports{' '}
-            <span className="text-primary font-semibold">
-              EmulatorJS Netplay
-            </span>
-            : join or host live retro multiplayer sessions directly from your
-            browser in real time.
+            Host or join retro game sessions directly from your browser.
           </p>
         </div>
       </section>
       <main className="flex-grow">
-        <section className="container mx-auto px-4 py-10 sm:py-12 animate-fade-in-up">
+        <section className="animate-fade-in-up px-4 sm:px-6 md:px-10">
           <RoomList />
-        </section>
-        <section className="container mx-auto px-4 pb-16">
-          <Card className="w-full max-w-2xl mx-auto p-8 border border-border/60 bg-muted/10 rounded-2xl text-left leading-relaxed shadow-[0_0_25px_rgba(0,255,255,0.05)] backdrop-blur-sm">
-            <h3 className="text-2xl font-semibold text-accent flex items-center gap-2 mb-5">
-              <Info className="h-5 w-5 text-primary" /> How Netplay Works
-            </h3>
-
-            <ul className="list-decimal list-inside space-y-3 text-muted-foreground/90 text-base leading-relaxed">
-              <li>
-                <strong>Create</strong> or <strong>Join</strong> a{' '}
-                <strong>Room</strong> inside the <strong>Netplay</strong> tab of
-                your selected game.
-              </li>
-              <li>
-                <strong>Share</strong> the <strong>Lobby</strong> with your
-                friends and tell them your <strong>Room Name</strong>.
-              </li>
-              <li>
-                Once they open the game, they can access{' '}
-                <strong>Netplay</strong> to connect to your room.
-              </li>
-              <li>
-                The <strong>Host</strong> is always <strong>Player 1</strong>{' '}
-                and manages player slots before the game begins.
-              </li>
-
-              <li>
-                Works seamlessly across <strong>Desktop</strong> and{' '}
-                <strong>Mobile</strong> (cross-platform play with zero setup
-                required).
-              </li>
-            </ul>
-          </Card>
         </section>
       </main>
 
