@@ -42,8 +42,7 @@ export const Header = () => {
 
   return (
     <header className="sticky top-0 z-50 border-b border-border/50 backdrop-blur-md bg-background/80">
-      <div className="container mx-auto px-4 h-16 flex items-center justify-between gap-4 sm:gap-8">
-        {/* Brand */}
+      <div className="container mx-auto px-3 h-16 flex items-center justify-between gap-2 sm:gap-6 overflow-hidden">
         <Link to="/" className="flex items-center gap-3 sm:gap-4 group">
           <div className="relative">
             <Gamepad2 className="h-6 w-6 sm:h-8 sm:w-8 text-accent group-hover:text-accent/80 transition-colors" />
