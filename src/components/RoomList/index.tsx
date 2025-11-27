@@ -79,7 +79,7 @@ export function RoomList() {
   return (
     <div className="mt-10 w-full max-w-5xl mx-auto border border-border/60 rounded-2xl bg-card/70 backdrop-blur-md shadow-[0_0_25px_rgba(0,255,255,0.08)] p-4 sm:p-6 transition-all duration-300 hover:shadow-[0_0_30px_rgba(0,255,255,0.15)]">
       <h3 className="text-2xl sm:text-3xl font-bold text-accent mb-5 text-center tracking-tight">
-        Netplay Active Rooms
+        Active Rooms
       </h3>
       <div className="overflow-x-auto rounded-xl border border-border/40">
         <table className="w-full text-sm sm:text-base border-collapse min-w-[600px]">

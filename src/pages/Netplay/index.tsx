@@ -11,10 +11,10 @@ export default function Netplay() {
       <main className="flex-grow container mx-auto px-4 py-10 flex flex-col items-center text-center space-y-12">
         <section className="flex flex-col items-center justify-center space-y-5">
           <h1 className="text-4xl sm:text-5xl font-extrabold text-accent drop-shadow-md">
-            Multiplayer Games
+            Netplay Games
           </h1>
           <p className="max-w-2xl text-muted-foreground text-base sm:text-lg mx-auto leading-relaxed">
-            Bit Legends now supports{' '}
+            Bit Legends supports{' '}
             <span className="text-primary font-semibold">
               EmulatorJS Netplay
             </span>{' '}
