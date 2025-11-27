@@ -5,7 +5,7 @@ export const fightGames: Game[] = [
         id: "umk3",
         title: "Ultimate Mortal Kombat",
         slug: "ultimate-mortal-kombat-3-usa",
-        embedId: "23432",
+        embedUrl: "https://www.retrogames.cc/embed/23432-ultimate-mortal-kombat-3-usa.html",
         year: 1996,
         genre: "Horror / Tournament",
         folder: "Tournament",

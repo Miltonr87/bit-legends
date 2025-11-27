@@ -1,7 +1,7 @@
+'use client';
 import { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { allGames } from '@/data';
-import { Globe } from 'lucide-react';
 
 interface NetplayRoom {
   id: string;
@@ -43,17 +43,21 @@ export function RoomList() {
           : Array.isArray(data.rooms)
           ? data.rooms
           : [];
-        const filtered = normalized.filter((room) =>
-          allGames.some((game) =>
-            game.embedUrl?.includes(room.url.split('/embed/')[1]?.split('?')[0])
-          )
-        );
+        const filtered = normalized.filter((room) => {
+          const urlSegments = room.url.split('/');
+          const lastPart = urlSegments[urlSegments.length - 1]
+            ?.replace('#', '')
+            ?.trim();
+          return allGames.some((game) => game.embedUrl?.includes(lastPart));
+        });
+
         setRooms(filtered);
         setLoading(false);
       } catch {
         setLoading(false);
       }
     };
+
     fetchRooms();
     // eslint-disable-next-line prefer-const
     intervalId = setInterval(fetchRooms, 10000);
@@ -91,6 +95,7 @@ export function RoomList() {
       <h3 className="text-2xl sm:text-3xl font-bold text-accent mb-5 text-center tracking-tight">
         Active Rooms
       </h3>
+
       <div className="overflow-x-auto rounded-xl border border-border/40">
         <table className="w-full text-sm sm:text-base border-collapse min-w-[600px]">
           <thead className="bg-accent/10 text-muted-foreground border-b border-border/50">
@@ -105,10 +110,12 @@ export function RoomList() {
           </thead>
           <tbody>
             {rooms.map((room) => {
+              const urlSegments = room.url.split('/');
+              const lastPart = urlSegments[urlSegments.length - 1]
+                ?.replace('#', '')
+                ?.trim();
               const matchedGame = allGames.find((game) =>
-                game.embedUrl?.includes(
-                  room.url.split('/embed/')[1]?.split('?')[0]
-                )
+                game.embedUrl?.includes(lastPart)
               );
               if (!matchedGame) return null;
               const gameLink = `${window.location.origin}/game/${matchedGame.id}`;

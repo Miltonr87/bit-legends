@@ -25,7 +25,7 @@ export default function Netplay() {
           <Globe className="inline-block h-20 w-20 text-accent mb-2 animate-pulse" />
           <h1 className="text-4xl sm:text-6xl font-black mb-3">
             <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent glow-text">
-              Netplay Games
+              Netplay Lobby
             </span>
           </h1>
           <p className="text-sm sm:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
