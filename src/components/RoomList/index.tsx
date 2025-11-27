@@ -48,7 +48,7 @@ const steps = [
   },
   {
     image: '/assets/netplay/t3.png',
-    caption: '3. Create a room — choose your region and optional password',
+    caption: '3. Create a room, choose your region and optional password',
   },
   {
     image: '/assets/netplay/t4.png',
@@ -62,9 +62,19 @@ export function RoomList() {
   const [showRooms, setShowRooms] = useState(true);
   const [showGuide, setShowGuide] = useState(false);
   const [stepIndex, setStepIndex] = useState(0);
+  const [currentPage, setCurrentPage] = useState(1);
+  const roomsPerPage = 5;
+  const totalPages = Math.ceil(rooms.length / roomsPerPage);
+  const startIndex = (currentPage - 1) * roomsPerPage;
+  const endIndex = startIndex + roomsPerPage;
+  const currentRooms = rooms.slice(startIndex, endIndex);
+
   const next = () => setStepIndex((prev) => (prev + 1) % steps.length);
   const prev = () =>
     setStepIndex((prev) => (prev - 1 + steps.length) % steps.length);
+  const handlePrevPage = () => setCurrentPage((p) => Math.max(p - 1, 1));
+  const handleNextPage = () =>
+    setCurrentPage((p) => Math.min(p + 1, totalPages));
 
   useEffect(() => {
     let intervalId: NodeJS.Timeout;
@@ -151,7 +161,7 @@ export function RoomList() {
                     </tr>
                   </thead>
                   <tbody>
-                    {rooms.length === 0 ? (
+                    {currentRooms.length === 0 ? (
                       <tr>
                         <td
                           colSpan={6}
@@ -161,7 +171,7 @@ export function RoomList() {
                         </td>
                       </tr>
                     ) : (
-                      rooms.map((room) => {
+                      currentRooms.map((room) => {
                         const urlSegments = room.url.split('/');
                         const lastPart = urlSegments[urlSegments.length - 1]
                           ?.replace('#', '')
@@ -233,7 +243,7 @@ export function RoomList() {
                 </table>
               </div>
               <div className="sm:hidden grid grid-cols-1 gap-4 mt-4">
-                {rooms.map((room) => {
+                {currentRooms.map((room) => {
                   const urlSegments = room.url.split('/');
                   const lastPart = urlSegments[urlSegments.length - 1]
                     ?.replace('#', '')
@@ -305,6 +315,31 @@ export function RoomList() {
                   );
                 })}
               </div>
+              {rooms.length > roomsPerPage && (
+                <div className="flex justify-center items-center gap-4 mt-6">
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={handlePrevPage}
+                    disabled={currentPage === 1}
+                    className="flex items-center gap-1"
+                  >
+                    <ChevronLeft className="h-4 w-4" /> Prev
+                  </Button>
+                  <span className="text-sm text-muted-foreground">
+                    Page {currentPage} of {totalPages}
+                  </span>
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={handleNextPage}
+                    disabled={currentPage === totalPages}
+                    className="flex items-center gap-1"
+                  >
+                    Next <ChevronRight className="h-4 w-4" />
+                  </Button>
+                </div>
+              )}
             </motion.div>
           )}
         </AnimatePresence>
