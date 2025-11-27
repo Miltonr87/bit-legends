@@ -1,0 +1,110 @@
+[
+    {
+        "id": "3500ae42-0c5f-c4bf-d404-197cf3839e8d",
+        "name": "SEDETEC",
+        "server": "us3",
+        "password": true,
+        "players": 2,
+        "url": "https:\/\/www.retrogames.cc\/embed\/24792-super-bomberman-europe.html?mp_assets=https%3A%2F%2Fs2.minijuegosgratis.com%2F&mp_embed=0&mp_game_id=205776&mp_game_uid=super-bomberman&mp_game_url=https%3A%2F%2Fwww.minijuegos.mx%2Fjuego%2Fsuper-bomberman&mp_int=1&mp_locale=es_MX&mp_player_type=IFRAME&mp_site_https_url=https%3A%2F%2Fwww.minijuegos.mx%2F&mp_site_name=minijuegos.mx&mp_site_url=https%3A%2F%2Fwww.minijuegos.mx%2F&mp_timezone=America%2FMexico_City&mp_view_type=",
+        "rom": "\/Super Bomberman (Europe).sfc",
+        "crc32": "678501F2",
+        "system": "snes",
+        "nicknames": "[\"chiquiol\",\"YU\"]"
+    },
+    {
+        "id": "ae4df7b3-e007-c8bc-5aef-e530d70eb3db",
+        "name": "PARA EL LOBI",
+        "server": "us",
+        "password": true,
+        "players": 1,
+        "url": "https:\/\/www.retrogames.cc\/embed\/10391-the-king-of-fighters-2002-super-bootleg-bootleg.html?mp_assets=https%3A%2F%2Fs2.minijuegosgratis.com%2F&mp_embed=0&mp_game_id=213292&mp_game_uid=the-king-of-fighters-2002-challenge-to-ultimate-battle&mp_game_url=https%3A%2F%2Fwww.minijuegos.com%2Fjuego%2Fthe-king-of-fighters-2002-challenge-to-ultimate-battle&mp_int=1&mp_locale=es_ES&mp_player_type=IFRAME&mp_site_https_url=https%3A%2F%2Fwww.minijuegos.com%2F&mp_site_name=minijuegos.com&mp_site_url=https%3A%2F%2Fwww.minijuegos.com%2F&mp_timezone=America%2FGuayaquil&mp_view_type=",
+        "rom": "kf2k2plc.zip",
+        "crc32": "BBCD4CBE",
+        "system": "arcade",
+        "nicknames": "[\"DUBER\"]"
+    },
+    {
+        "id": "64947795-f8b5-b40a-492a-da1ee5e7de7c",
+        "name": "zahid x michell",
+        "server": "br",
+        "password": false,
+        "players": 2,
+        "url": "https:\/\/www.retrogames.cc\/arcade-games\/metal-slug-5-ngm-2680.html",
+        "rom": "mslug5.zip",
+        "crc32": "B8F4CC6E",
+        "system": "arcade",
+        "nicknames": "[\"aNDY\",\"michell\"]"
+    },
+    {
+        "id": "91fce76c-4308-e0dd-b14d-3a9b60bbfe01",
+        "name": "6",
+        "server": "nl",
+        "password": true,
+        "players": 2,
+        "url": "https:\/\/www.retrogames.cc\/arcade-games\/64th-street-a-detective-story-world.html",
+        "rom": "64street.zip",
+        "crc32": "BF58A7A6",
+        "system": "arcade",
+        "nicknames": "[\"6\",\"kuronja\"]"
+    },
+    {
+        "id": "845e86ae-6a67-4796-31e4-7c20a435c627",
+        "name": "T4rr4sch",
+        "server": "br",
+        "password": false,
+        "players": 2,
+        "url": "https:\/\/www.retrogames.cc\/arcade-games\/knights-of-the-round-911127-etc.html",
+        "rom": "knights.zip",
+        "crc32": "3228E413",
+        "system": "arcade",
+        "nicknames": "[\"T4rr4sch\",\"KNOLLIIGHT\"]"
+    },
+    {
+        "id": "b76e7e2a-1d07-f855-5449-f09e3bb8077b",
+        "name": "DORA",
+        "server": "br",
+        "password": false,
+        "players": 2,
+        "url": "https:\/\/www.retrogames.cc\/embed\/23833-dr-mario-japan-np.html?mp_assets=https%3A%2F%2Fs2.minijuegosgratis.com%2F&mp_embed=0&mp_game_id=223266&mp_game_uid=dr-mario-world&mp_game_url=https%3A%2F%2Fwww.minijuegos.com%2Fjuego%2Fdr-mario-world&mp_int=1&mp_locale=es_ES&mp_player_type=IFRAME&mp_site_https_url=https%3A%2F%2Fwww.minijuegos.com%2F&mp_site_name=minijuegos.com&mp_site_url=https%3A%2F%2Fwww.minijuegos.com%2F&mp_timezone=Europe%2FMadrid&mp_view_type=&from=lastPlayedGamesHome",
+        "rom": "\/Dr. Mario (Japan) (NP).sfc",
+        "crc32": "63CE5132",
+        "system": "snes",
+        "nicknames": "[\"ZOBA\",\"asd\"]"
+    },
+    {
+        "id": "a72ed0b1-f74d-2f19-244d-b02d964cbd7c",
+        "name": "03",
+        "server": "es",
+        "password": false,
+        "players": 2,
+        "url": "https:\/\/www.retrogames.cc\/arcade-games\/the-king-of-fighters-2002-magic-plus-ii-bootleg-bootleg.html",
+        "rom": "kf2k2mp2.zip",
+        "crc32": "BA1AFFAF",
+        "system": "arcade",
+        "nicknames": "[\"dali\",\"reta\"]"
+    },
+    {
+        "id": "dfa755ca-2243-c228-6a3d-aaa0840ebb0f",
+        "name": "mano",
+        "server": "br",
+        "password": true,
+        "players": 2,
+        "url": "https:\/\/www.retrogames.cc\/arcade-games\/the-king-of-fighters-2002-super-bootleg-bootleg.html",
+        "rom": "kf2k2plc.zip",
+        "crc32": "BBCD4CBE",
+        "system": "arcade",
+        "nicknames": "[\"prax\",\"pasiva agr\"]"
+    },
+    {
+        "id": "c49e8557-d5c3-b6ce-eb36-ac141d133075",
+        "name": "Tadeu",
+        "server": "br",
+        "password": true,
+        "players": 1,
+        "url": "https:\/\/www.retrogames.cc\/embed\/10727-x-men-2-players-ver-aaa.html",
+        "rom": "xmen2pe.zip",
+        "crc32": "D1700E10",
+        "system": "arcade",
+        "nicknames": "[\"Tadeu\"]"
+    }
+]

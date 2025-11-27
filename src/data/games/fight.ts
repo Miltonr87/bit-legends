@@ -244,8 +244,8 @@ export const fightGames: Game[] = [
     {
         id: "kof2002",
         title: "King of Fighters 2002",
-        slug: "the-king-of-fighters-2002-super-bootleg-bootleg",
-        embedId: "10385",
+        slug: "the-king-of-fighters-2002-magic-plus-ii-bootleg-bootleg",
+        embedId: "10383",
         year: 2002,
         genre: "Tournament",
         folder: "Tournament",

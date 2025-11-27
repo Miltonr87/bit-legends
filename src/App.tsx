@@ -10,6 +10,7 @@ import { Toaster } from '@/components/ui/toaster';
 import { Toaster as Sonner } from '@/components/ui/sonner';
 
 import FavoriteGames from './pages/FavoriteGames';
+import Netplay from './pages/Netplay';
 import Game from './pages/Game';
 import Index from './pages/Index';
 import NotFound from './pages/NotFound';
@@ -39,6 +40,7 @@ const App = () => (
                     <Route path="/game/:id" element={<Game />} />
                     <Route path="/profile" element={<Profile />} />
                     <Route path="/favorites" element={<FavoriteGames />} />
+                    <Route path="/netplay" element={<Netplay />} />
                     <Route path="*" element={<NotFound />} />
                   </Routes>
                 </div>
