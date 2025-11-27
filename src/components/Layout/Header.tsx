@@ -53,12 +53,8 @@ export const Header = () => {
             Bit Legends
           </h1>
         </Link>
-
-        {/* Navigation */}
         <nav className="flex items-center gap-4 sm:gap-6">
           <AboutDialog />
-
-          {/* ✅ Netplay Button */}
           <Link to="/netplay">
             <Button
               variant="outline"
@@ -69,7 +65,6 @@ export const Header = () => {
               <span className="hidden sm:inline font-medium">Netplay</span>
             </Button>
           </Link>
-
           {user && (
             <Link to="/favorites">
               <Button
@@ -82,7 +77,6 @@ export const Header = () => {
               </Button>
             </Link>
           )}
-
           <Link to="/profile">
             <Button
               variant="outline"

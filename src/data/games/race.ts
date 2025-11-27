@@ -72,7 +72,7 @@ export const raceGames: Game[] = [
         id: "batman-vehicles",
         title: "Batman Vehicles",
         slug: "batman-vehicles-usa",
-        embedId: "40680",
+        embedUrl: "https://www.retrogames.cc/embed/40680-batman-returns.html",
         year: 1993,
         genre: "DC Comics / Combat Race",
         folder: "Fight Race",
