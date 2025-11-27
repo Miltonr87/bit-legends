@@ -3,48 +3,24 @@ import { Footer } from '@/components/Layout/Footer';
 import { Card } from '@/components/ui/card';
 import { Info } from 'lucide-react';
 import { RoomList } from '@/components/RoomList';
-import { useUserProfile } from '@/hooks/useUserProfile';
 
 export default function Netplay() {
-  const { user, loginWithGoogle } = useUserProfile();
-
   return (
     <div className="flex flex-col min-h-screen bg-background text-foreground overflow-x-hidden">
       <Header />
-      <main className="flex-grow container mx-auto px-4 py-10 flex flex-col items-center text-center space-y-10">
+      <main className="flex-grow container mx-auto px-4 py-10 flex flex-col items-center text-center space-y-12">
         <section className="flex flex-col items-center justify-center space-y-5">
-          <img
-            src="/assets/backgrounds/bitlegends_min.jpg"
-            alt="Bit Legends Logo"
-            className="w-[180px] sm:w-[220px] rounded-xl shadow-[0_0_25px_rgba(0,255,255,0.15)] border border-border/50"
-          />
-          {user ? (
-            <>
-              <h1 className="text-3xl sm:text-4xl font-extrabold text-accent drop-shadow-lg tracking-tight">
-                Hi, {user.username}!
-              </h1>
-              <p className="max-w-2xl text-muted-foreground text-base sm:text-lg leading-relaxed">
-                Bit Legends now supports{' '}
-                <span className="text-primary font-semibold">
-                  EmulatorJS Netplay
-                </span>
-                . Team up with friends worldwide and play directly from your
-                browser!
-              </p>
-            </>
-          ) : (
-            <>
-              <h1 className="text-4xl sm:text-5xl font-extrabold text-accent drop-shadow-md">
-                Play Online with Friends
-              </h1>
-              <p className="max-w-2xl text-muted-foreground text-base sm:text-lg mx-auto">
-                Bit Legends now supports{' '}
-                <span className="text-primary font-semibold">
-                  EmulatorJS Netplay
-                </span>
-              </p>
-            </>
-          )}
+          <h1 className="text-4xl sm:text-5xl font-extrabold text-accent drop-shadow-md">
+            Multiplayer Games
+          </h1>
+          <p className="max-w-2xl text-muted-foreground text-base sm:text-lg mx-auto leading-relaxed">
+            Bit Legends now supports{' '}
+            <span className="text-primary font-semibold">
+              EmulatorJS Netplay
+            </span>{' '}
+            — join or host live retro multiplayer sessions, all directly from
+            your browser.
+          </p>
         </section>
         <section className="w-full max-w-3xl animate-fade-in-up">
           <RoomList />
@@ -53,34 +29,42 @@ export default function Netplay() {
           <h3 className="text-2xl font-semibold text-accent flex items-center gap-2 mb-5">
             <Info className="h-5 w-5 text-primary" /> How Netplay Works
           </h3>
-          <ul className="list-decimal list-inside space-y-3 text-muted-foreground/90 text-base">
+
+          <ul className="list-decimal list-inside space-y-3 text-muted-foreground/90 text-base leading-relaxed">
             <li>
-              <strong>Create or Join a Room</strong> — choose the nearest region
-              for best latency (e.g., Brazil, USA, Japan).
+              <strong>Create or Join a Room</strong> inside the{' '}
+              <strong>Netplay</strong> tab of the game and pick the closest
+              server region (e.g. Brazil, USA, Japan) for the lowest possible
+              latency.
             </li>
+
             <li>
-              Share your <strong>game link</strong> with friends. After that tey
-              need to open "Netplay" inside the emulator
+              <strong>Share your Game Link or this page</strong> with your
+              friends and tell them your <strong>room name</strong>.
             </li>
+
             <li>
-              Ensure everyone uses the same <strong>Game version</strong> for
-              sync.
+              Once they open the game link, they should start and then select
+              the <strong>Netplay</strong> option to find the same room.
             </li>
+
             <li>
-              The <strong>host controls Player 1</strong> and can assign others
-              before starting.
+              The <strong>host</strong> is always <strong>Player 1</strong> and
+              can manage player slots before starting the match.
             </li>
+
             <li>
-              Works on desktop and mobile (cross-plataform) so no installs
-              needed.
+              Enjoy seamless <strong>cross-platform play</strong>: works
+              flawlessly on both desktop and mobile with zero setup required.
             </li>
           </ul>
           <p className="mt-6 text-sm text-muted-foreground italic text-center">
-            Tip: Bit Legends auto-detects the best region and ping for your
-            connection.
+            Tip: Bit Legends automatically detects your best region for smoother
+            gameplay.
           </p>
         </Card>
       </main>
+
       <Footer />
     </div>
   );
