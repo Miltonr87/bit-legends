@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { allGames } from '@/data';
+import { Globe } from 'lucide-react';
 
 interface NetplayRoom {
   id: string;
@@ -55,7 +56,7 @@ export function RoomList() {
     };
     fetchRooms();
     // eslint-disable-next-line prefer-const
-    intervalId = setInterval(fetchRooms, 10000); // refresh every 10s
+    intervalId = setInterval(fetchRooms, 10000);
     return () => clearInterval(intervalId);
   }, []);
 
@@ -63,16 +64,25 @@ export function RoomList() {
     const code = region?.toLowerCase().replace(/\d+/g, '');
     return regionFlags[code] || '🌍';
   };
+
   if (loading)
     return (
       <div className="w-full max-w-2xl text-center text-muted-foreground animate-pulse">
         Loading active rooms...
       </div>
     );
+
   if (!rooms.length)
     return (
-      <div className="w-full max-w-2xl text-center text-muted-foreground">
-        No multiplayer rooms right now!
+      <div className="mt-10 w-full max-w-3xl mx-auto p-8 border border-border/60 rounded-2xl bg-card/70 backdrop-blur-md shadow-[0_0_25px_rgba(0,255,255,0.08)] flex flex-col items-center text-center space-y-5">
+        <h3 className="text-2xl font-bold text-accent">
+          No Active Rooms Found!
+        </h3>
+        <p className="text-muted-foreground text-base max-w-md leading-relaxed">
+          There are no multiplayer rooms right now. You can create one by
+          launching any game, opening the <strong>Netplay</strong> tab in the
+          emulator, and choosing a region to host your room.
+        </p>
       </div>
     );
 
