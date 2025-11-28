@@ -68,16 +68,14 @@ export function RoomList() {
   const endIndex = startIndex + roomsPerPage;
   const currentRooms = rooms.slice(startIndex, endIndex);
 
-  const next = () => setStepIndex((prev) => (prev + 1) % steps.length);
-  const prev = () =>
-    setStepIndex((prev) => (prev - 1 + steps.length) % steps.length);
+  const next = () => setStepIndex((p) => (p + 1) % steps.length);
+  const prev = () => setStepIndex((p) => (p - 1 + steps.length) % steps.length);
   const handlePrevPage = () => setCurrentPage((p) => Math.max(p - 1, 1));
   const handleNextPage = () =>
     setCurrentPage((p) => Math.min(p + 1, totalPages));
 
   useEffect(() => {
     let intervalId: NodeJS.Timeout;
-
     const fetchRooms = async () => {
       try {
         const res = await fetch('https://lobby.emulatorjs.com/list');
@@ -89,15 +87,16 @@ export function RoomList() {
           ? data.rooms
           : [];
         const filtered = normalized.filter((room) => {
-          const urlSegments = room.url.split('/');
-          const lastPart = urlSegments[urlSegments.length - 1]
-            ?.replace('#', '')
-            ?.trim();
-          return allGames.some((game) => game.embedUrl?.includes(lastPart));
+          const decodedUrl = decodeURIComponent(room.url)
+            .replace(/\\\//g, '/')
+            .toLowerCase();
+          return allGames.some(
+            (game) => game.slug && decodedUrl.includes(game.slug.toLowerCase())
+          );
         });
         setRooms(filtered);
-      } catch (error) {
-        console.error('Error fetching rooms:', error);
+      } catch (err) {
+        console.error('Error fetching rooms:', err);
         setRooms([]);
       }
     };
@@ -164,12 +163,13 @@ export function RoomList() {
                       </tr>
                     ) : (
                       currentRooms.map((room) => {
-                        const urlSegments = room.url.split('/');
-                        const lastPart = urlSegments[urlSegments.length - 1]
-                          ?.replace('#', '')
-                          ?.trim();
-                        const matchedGame = allGames.find((game) =>
-                          game.embedUrl?.includes(lastPart)
+                        const decodedUrl = decodeURIComponent(room.url)
+                          .replace(/\\\//g, '/')
+                          .toLowerCase();
+                        const matchedGame = allGames.find(
+                          (game) =>
+                            game.slug &&
+                            decodedUrl.includes(game.slug.toLowerCase())
                         );
                         if (!matchedGame) return null;
                         const gameLink = `${window.location.origin}/game/${matchedGame.id}`;
@@ -236,12 +236,12 @@ export function RoomList() {
               </div>
               <div className="sm:hidden grid grid-cols-1 gap-4 mt-4">
                 {currentRooms.map((room) => {
-                  const urlSegments = room.url.split('/');
-                  const lastPart = urlSegments[urlSegments.length - 1]
-                    ?.replace('#', '')
-                    ?.trim();
-                  const matchedGame = allGames.find((game) =>
-                    game.embedUrl?.includes(lastPart)
+                  const decodedUrl = decodeURIComponent(room.url)
+                    .replace(/\\\//g, '/')
+                    .toLowerCase();
+                  const matchedGame = allGames.find(
+                    (game) =>
+                      game.slug && decodedUrl.includes(game.slug.toLowerCase())
                   );
                   if (!matchedGame) return null;
                   const gameLink = `${window.location.origin}/game/${matchedGame.id}`;
