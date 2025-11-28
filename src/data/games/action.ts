@@ -264,12 +264,37 @@ export const actionGames: Game[] = [
         coverImage: "/assets/covers/swat_kats_snes.jpg",
         platform: "Nintendo",
         logo: "/assets/logos/swat_kats.png"
+    },
+    {
+        id: "magicsword",
+        title: "Magic Sword",
+        slug: "magic-sword-heroic-fantasy",
+        embedUrl: "https://www.retrogames.cc/embed/9043-magic-sword-heroic-fantasy-23-06-1990-other-country.html",
+        year: 1990,
+        genre: "Fantasy",
+        folder: "Arcade",
+        publisher: "Capcom",
+        characters: ["The Brave (Hero)"],
+        description: "Epic tower-climbing fantasy action!",
+        longDescription:
+            "Magic Sword: Heroic Fantasy (1990) is a high-fantasy side-scrolling action game with beat-'em-up element from Capcom that sends players on a perilous quest to the top of Dragon Tower. " +
+            "As the valiant hero known only as The Brave, you must battle through 50 treacherous floors filled with monsters, traps, and dark sorcery. " +
+            "Rescue companions locked in cells—each with unique combat abilities—to fight alongside you, from ninjas and priests to wizards and thieves. " +
+            "Collect keys, power-ups, and magical swords while managing your allies’ health and loyalty. " +
+            "With branching paths, co-op gameplay, and a climactic duel against the dark lord Drokmar, Magic Sword remains one of Capcom’s most ambitious arcade fantasies of the early ’90s.",
+        players: "1-2 Players",
+        developer: "Capcom",
+        coverImage: "/assets/covers/magic-sword.png",
+        platform: "Arcade",
+        logo: "/assets/logos/magic_sword.png"
     }
+
 ];
 
 export const actionFilters = [
     "All Games",
     "Horror",
     "Sci-Fi",
+    "Fantasy",
     "DC Comics"
 ];
