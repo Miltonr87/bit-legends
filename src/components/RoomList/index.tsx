@@ -58,7 +58,6 @@ const steps = [
 
 export function RoomList() {
   const [rooms, setRooms] = useState<NetplayRoom[]>([]);
-  const [loading, setLoading] = useState(true);
   const [showRooms, setShowRooms] = useState(true);
   const [showGuide, setShowGuide] = useState(false);
   const [stepIndex, setStepIndex] = useState(0);
@@ -97,9 +96,9 @@ export function RoomList() {
           return allGames.some((game) => game.embedUrl?.includes(lastPart));
         });
         setRooms(filtered);
-        setLoading(false);
-      } catch {
-        setLoading(false);
+      } catch (error) {
+        console.error('Error fetching rooms:', error);
+        setRooms([]);
       }
     };
     fetchRooms();
@@ -112,13 +111,6 @@ export function RoomList() {
     const code = region?.toLowerCase().replace(/\d+/g, '');
     return regionFlags[code] || '🌍';
   };
-
-  if (loading)
-    return (
-      <div className="w-full max-w-2xl text-center text-muted-foreground animate-pulse">
-        Loading active rooms...
-      </div>
-    );
 
   return (
     <div className="mt-10 w-full max-w-5xl mx-auto space-y-8">
