@@ -158,6 +158,28 @@ export const beatnupGames: Game[] = [
     logo: "/assets/logos/king_of_dragons.png"
   },
   {
+    id: "simpsons_arcade",
+    title: "The Simpsons: Arcade",
+    slug: "the-simpsons-arcade-game",
+    embedUrl: "https://www.retrogames.cc/embed/10439-the-simpsons-2-players-world-set-1.html",
+    year: 1991,
+    genre: "Urban",
+    folder: "Urban",
+    publisher: "Konami",
+    characters: ["Homer Simpson", "Marge Simpson", "Bart Simpson", "Lisa Simpson"],
+    description: "Cartoon-style, chaotic 4-player beat ’em up fun!",
+    longDescription:
+      "The Simpsons Arcade Game (1991) brings the entire Simpson family into a wild, side-scrolling beat ’em up adventure. " +
+      "Homer, Marge, Bart and Lisa must fight through the streets of Springfield to rescue Maggie, battling hordes of goons, bouncing between levels like Downtown Springfield, Krustyland, Moe’s Tavern, and even the nuclear power plant. " +
+      "Expect chaotic co-op action, wacky weapons (vacuum cleaners, skateboards, jump-ropes, etc.), classic cartoon humor, and boss fights ranging from masked bouncers to mobsters hired by Mr. Burns. " +
+      "A must-play arcade classic that helped define licensed beat-’em-ups of the early ’90s.",
+    players: "1–2 Players",
+    developer: "Konami",
+    coverImage: "/assets/covers/the-simpsons-arcade.jpg",
+    platform: "Arcade",
+    logo: "/assets/logos/the_simpsons_arcade.png"
+  },
+  {
     id: "tmnt-turtles-in-time",
     title: "Teenage Mutant Ninja",
     slug: "teenage-mutant-ninja-turtles-turtles-in-time-2-players-ver-uda",
