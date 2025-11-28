@@ -161,7 +161,7 @@ export const beatnupGames: Game[] = [
     id: "simpsons_arcade",
     title: "The Simpsons: Arcade",
     slug: "the-simpsons-arcade-game",
-    embedUrl: "https://www.retrogames.cc/embed/10439-the-simpsons-2-players-world-set-1.html",
+    embedUrl: "https://www.retrogames.cc/embed/34573-the-simpsons-2-players-world-set-3.html",
     year: 1991,
     genre: "Urban",
     folder: "Urban",
