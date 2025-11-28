@@ -749,7 +749,7 @@ export const fightGames: Game[] = [
         id: "mvc",
         title: "Marvel vs. Capcom",
         slug: "marvel-vs-capcom-clash-of-super-heroes",
-        embedUrl: "https://www.retrogames.cc/embed/9112-marvel-vs-capcom-clash-of-super-heroes-971222-usa.html",
+        embedUrl: "https://www.retrogames.cc/embed/9123-marvel-vs-capcom-clash-of-super-heroes-980123-usa.html",
         year: 1998,
         genre: "Marvel Comics / Tournament",
         folder: "Marvel Comics / Tournament",
