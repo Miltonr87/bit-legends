@@ -352,7 +352,7 @@ export function RoomList() {
           <div className="flex items-center gap-3">
             <Gamepad2 className="w-5 h-5 text-primary" />
             <h3 className="text-lg sm:text-xl font-semibold text-accent">
-              How Netplay Works
+              Create a Room
             </h3>
           </div>
           {showGuide ? (
