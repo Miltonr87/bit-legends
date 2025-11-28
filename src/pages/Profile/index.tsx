@@ -174,7 +174,7 @@ function ProfileCard({
           />
           <Button
             onClick={onUpdateProfile}
-            className="w-full bg-gradient-to-r from-primary to-accent"
+            className="w-full bg-primary text-primary-foreground text-base sm:text-lg py-5 hover:bg-primary/80 transition"
           >
             Update Profile
           </Button>
