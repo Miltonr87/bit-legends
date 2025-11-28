@@ -156,7 +156,7 @@ export function RoomList() {
                       <th className="py-3 px-3">Game</th>
                       <th className="py-3 px-3">Players</th>
                       <th className="py-3 px-3 text-center">Server</th>
-                      <th className="py-3 px-3 text-center">Private</th>
+                      <th className="py-3 px-3 text-center">Status</th>
                       <th className="py-3 px-3 text-right">Action</th>
                     </tr>
                   </thead>

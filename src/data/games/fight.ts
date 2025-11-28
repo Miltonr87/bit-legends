@@ -222,7 +222,7 @@ export const fightGames: Game[] = [
         id: "kof98",
         title: "King of Fighters '98",
         slug: "the-king-of-fighters-98",
-        embedUrl: "https://www.retrogames.cc/embed/10368-the-king-of-fighters-98-the-slugfest-king-of-fighters-98-dream-match-never-ends-ngm-2420.html",
+        embedUrl: "https://www.retrogames.cc/embed/34551-the-king-of-fighters-98-the-slugfest-king-of-figh.html",
         year: 1998,
         genre: "Tournament",
         folder: "Tournament",
