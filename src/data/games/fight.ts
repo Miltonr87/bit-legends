@@ -545,11 +545,11 @@ export const fightGames: Game[] = [
         logo: "/assets/logos/lobo.png"
     },
     {
-        id: "weaponlord-snes",
+        id: "weaponlord",
         title: "Weaponlord",
-        slug: "weaponlord-snes",
+        slug: "weaponlord",
         embedUrl:
-            "/emulator.html?platform=snes&rom=https://ozequlizbaymnvzeqkyh.supabase.co/storage/v1/object/public/game-rom/WeaponLord.zip",
+            "https://www.retrogames.cc/embed/28267-weaponlord-usa.html",
         year: 1995,
         genre: "Horror / Tournament / Rare",
         folder: "Horror / Tournament / Rare",
@@ -567,14 +567,14 @@ export const fightGames: Game[] = [
         description:
             "Wield your blade in the brutal and tactical 16-bit fighter that defined dark fantasy combat on SNES.",
         longDescription:
-            "Weaponlord (1995) for the Super Nintendo is a gritty, dark fantasy fighting game that set itself apart from Street Fighter clones of its era with weapon-based combat, parries, and finishers years ahead of their time. " +
+            "Weaponlord (1995) for the Genesis is a gritty, dark fantasy fighting game that set itself apart from Street Fighter clones of its era with weapon-based combat, parries, and finishers years ahead of their time. " +
             "Developed by Visual Concepts and published by Namco, each warrior fights for domination in a world of blood and sorcery, with detailed sprites, heavy metal atmosphere, and some of the most ambitious art direction of the 16-bit era. " +
             "Its rarity stems from several factors: it was released late in 1995, around the time the PlayStation and Sega Saturn shifted the market toward 3D gaming, leaving WeaponLord overshadowed by newer technology. " +
             "Its complex parry-heavy combat system and steep learning curve appealed to a niche audience, limiting mainstream success and resulting in lower production runs. ",
         players: "1-2 Players",
         developer: "Visual Concepts",
         coverImage: "/assets/covers/weaponlord.jpg",
-        platform: "Nintendo",
+        platform: "Genesis",
         logo: "/assets/logos/weaponlord.png"
     },
     {
