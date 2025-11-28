@@ -26,7 +26,7 @@ export const fightGames: Game[] = [
     {
         id: "sf2",
         title: "Super Street Fighter II",
-        slug: "street-fighter-ii-the-world-warrior-usa",
+        slug: "super-street-fighter-ii",
         embedUrl: "https://www.retrogames.cc/embed/23550-super-street-fighter-ii-the-new-challengers-usa.html",
         year: 1992,
         genre: "Tournament",
@@ -769,7 +769,7 @@ export const fightGames: Game[] = [
     },
     {
         id: "sfii_champion",
-        title: "Street Fighter II: CE",
+        title: "Street Fighter II",
         slug: "street-fighter-ii-champion-edition",
         embedUrl: "https://www.retrogames.cc/embed/10030-street-fighter-ii-champion-edition-street-fighter-2-920513-etc.html",
         year: 1992,
