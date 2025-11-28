@@ -41,9 +41,9 @@ export const fightGames: Game[] = [
             "A historic landmark that ignited arcade culture and shaped gaming history.",
         players: "1-2 Players",
         developer: "Capcom",
-        coverImage: "/assets/covers/street_fighter_2.jpg",
+        coverImage: "/assets/covers/super_street_fighter_2.jpg",
         platform: "Nintendo",
-        logo: "/assets/logos/sf2.png"
+        logo: "/assets/logos/ssf2.png"
     },
     {
         id: "sfa2",
@@ -766,7 +766,35 @@ export const fightGames: Game[] = [
         coverImage: "/assets/covers/marvel_vs_capcom.jpg",
         platform: "Arcade",
         logo: "/assets/logos/mvsc.png"
-    },]
+    },
+    {
+        id: "sfii_champion",
+        title: "Street Fighter II: CE",
+        slug: "street-fighter-ii-champion-edition",
+        embedUrl: "https://www.retrogames.cc/embed/10030-street-fighter-ii-champion-edition-street-fighter-2-920513-etc.html",
+        year: 1992,
+        genre: "Tournament",
+        folder: "Tournament",
+        publisher: "Capcom",
+        characters: [
+            "Ryu", "Ken", "Chun-Li", "Guile", "Zangief", "E. Honda", "Dhalsim", "Blanka",
+            "Balrog", "Vega", "Sagat", "M. Bison"
+        ],
+        description: "The iconic versus fighting game refined and rebalanced.",
+        longDescription:
+            "Street Fighter II: Champion Edition (1992) marked a major evolution in Capcom’s fighting franchise, introducing mirror matches and playable boss characters for the first time. " +
+            "This edition rebalances the cast, speeds up gameplay, and polishes every move for tighter, more competitive play. " +
+            "Players can now select M. Bison, Sagat, Balrog, and Vega, squaring off in fast-paced duels that defined arcade culture in the early ’90s. " +
+            "With improved visuals, smoother animations, and refined combo timing, Champion Edition remains a cornerstone of versus fighting history: the gold standard that inspired generations of fighters.",
+        players: "1–2 Players",
+        developer: "Capcom",
+        coverImage: "/assets/covers/street_fighter_2.jpg",
+        platform: "Arcade",
+        logo: "/assets/logos/street_fighter_ii_champion_edition.png"
+    }
+
+
+]
 
 export const fightFilters = [
     "Marvel Comics",
