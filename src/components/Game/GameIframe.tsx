@@ -31,6 +31,9 @@ export const GameIframe = ({ game }: GameIframeProps) => {
       text: "Save progress using the 'Save State' button inside the game!",
     },
     {
+      text: 'Use Netplay to play with friends in real time!',
+    },
+    {
       text: 'Bit Legends isn’t responsible for any finger calluses!',
     },
     {
