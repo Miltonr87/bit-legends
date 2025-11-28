@@ -52,7 +52,7 @@ const steps = [
   },
   {
     image: '/assets/netplay/t4.png',
-    caption: '4. Once created, your friends can join using the same game link',
+    caption: '4. Once created, your friends can join your room',
   },
 ];
 
