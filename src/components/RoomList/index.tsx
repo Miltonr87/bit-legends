@@ -372,7 +372,12 @@ export function RoomList() {
                       initial={{ opacity: 0, x: 40 }}
                       animate={{ opacity: 1, x: 0 }}
                       exit={{ opacity: 0, x: -40 }}
-                      transition={{ duration: 0.4 }}
+                      transition={{
+                        type: 'spring',
+                        stiffness: 100,
+                        damping: 20,
+                        mass: 0.8,
+                      }}
                       className="rounded-xl border border-accent/30 shadow-[0_0_20px_rgba(0,255,255,0.15)] mx-auto"
                     />
                   </AnimatePresence>
