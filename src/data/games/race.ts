@@ -7,8 +7,8 @@ export const raceGames: Game[] = [
         slug: "rock-n-roll-racing-usa",
         embedUrl: "https://www.retrogames.cc/embed/24053-rock-n-roll-racing-usa.html",
         year: 1993,
-        genre: "Combat Race",
-        folder: "Fight Race",
+        genre: "Race",
+        folder: "Race",
         publisher: "Interplay",
         characters: ["Snake Sanders", "Cyberhawk", "Jake Badlands", "Tarquinn", "Ivanzypher", "Katarina Lyons"],
         description: "Racing with rock soundtrack!",
@@ -29,8 +29,8 @@ export const raceGames: Game[] = [
         slug: "battle-cars-usa",
         embedUrl: "https://www.retrogames.cc/embed/19832-battle-cars-usa.html",
         year: 1993,
-        genre: "Combat Race",
-        folder: "Fight Race",
+        genre: "Race",
+        folder: "Race",
         publisher: "Namco Hometek",
         characters: ["Spike Vehicle", "Hot Rod", "Formula-Car", "Boss Car 1", "Boss Car 2"],
         description: "Armored vehicles battle it out on futuristic circuits!",
@@ -52,8 +52,8 @@ export const raceGames: Game[] = [
         slug: "biker-mice-from-mars-usa",
         embedUrl: "https://www.retrogames.cc/embed/20158-biker-mice-from-mars-usa.html",
         year: 1994,
-        genre: "Indie Comics / Combat Race",
-        folder: "Indie Comics / Combat Race",
+        genre: "Indie Comics / Race",
+        folder: "Indie Comics / Race",
         publisher: "Konami",
         characters: ["Throttle", "Vinnie", "Modo", "Limburger", "Greasepit", "Dr.Karbunkle"],
         description: "Cartoon motorcycle racing on Mars!",
@@ -74,8 +74,8 @@ export const raceGames: Game[] = [
         slug: "batman-vehicles-usa",
         embedUrl: "https://www.retrogames.cc/embed/40680-batman-returns.html",
         year: 1993,
-        genre: "DC Comics / Combat Race",
-        folder: "Fight Race",
+        genre: "DC Comics / Race",
+        folder: "Race",
         publisher: "Sega",
         characters: ["Batman", "Catwoman", "The Penguin"],
         description: "Batmobile & Batskiboat driving levels from the Sega CD version of Batman Returns.",
@@ -94,4 +94,4 @@ export const raceGames: Game[] = [
 
 ];
 
-export const raceFilters = ["Combat Race"];
+export const raceFilters = ["Race"];

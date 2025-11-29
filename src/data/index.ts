@@ -24,5 +24,6 @@ const rawFilters = Array.from(
 );
 
 export const seriesFilters = [
-    ...rawFilters
+    ...rawFilters.filter((f) => f !== "Rare"),
+    "Rare",
 ];
