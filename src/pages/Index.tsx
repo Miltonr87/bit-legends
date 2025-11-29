@@ -96,6 +96,7 @@ const Index = () => {
     'Sci-Fi': 'Futuristic worlds with advanced technology',
     'Combat Race': 'High-speed combat vehicles with firepower',
     'Dark Horse Comics': 'Gritty universes with brutal crossovers',
+    Sports: 'Classic sports and hacked 16-bit editions',
   };
 
   return (

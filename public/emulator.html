@@ -21,25 +21,48 @@
     <div id="game"></div>
     <script>
       const params = new URLSearchParams(window.location.search);
-      const romUrl = params.get('rom');
-      const platform = params.get('platform') || 'snes';
-      // Supported cores by EmulatorJS:
-      const validCores = {
-        nes: 'nes',
+      const romUrl = params.get('rom') || '';
+      const rawPlatform = (params.get('platform') || '').toLowerCase();
+      const PLATFORM_TO_CORE = {
         snes: 'snes',
+        supernintendo: 'snes',
+        'super-nes': 'snes',
+        supernes: 'snes',
         genesis: 'segaMD',
-        gba: 'gba',
-        gb: 'gb',
-        gbc: 'gbc',
-        n64: 'n64',
-        psx: 'psx',
+        segamd: 'segaMD',
+        megadrive: 'segaMD',
+        'mega-drive': 'segaMD',
+        md: 'segaMD',
+        gen: 'segaMD',
+        sega: 'segaMD',
       };
-      const core = validCores[platform.toLowerCase()] || 'snes';
+      function inferCoreFromRom(url) {
+        const lower = url.toLowerCase().split('?')[0];
+        if (/\.(smc|sfc)$/.test(lower)) return 'snes';
+        if (/\.(bin|gen|md)$/.test(lower)) return 'segaMD';
+        return 'snes'; // safe default
+      }
+      const requestedCore = PLATFORM_TO_CORE[rawPlatform];
+      const core = requestedCore || inferCoreFromRom(romUrl);
+
+      if (!romUrl) {
+        document.getElementById('game').innerHTML =
+          '<div style="color:#fff;font:16px/1.5 system-ui, sans-serif;padding:20px;">Missing "rom" query param.</div>';
+        throw new Error('Missing "rom" query param');
+      }
       window.EJS_player = '#game';
       window.EJS_core = core;
       window.EJS_gameUrl = romUrl;
       window.EJS_pathtodata = 'https://www.emulatorjs.com/data/';
       window.EJS_startOnLoaded = true;
+      console.info(
+        '[Bit Legends] core:',
+        core,
+        '| platformParam:',
+        rawPlatform,
+        '| rom:',
+        romUrl
+      );
     </script>
     <script src="https://www.emulatorjs.com/loader.js"></script>
   </body>

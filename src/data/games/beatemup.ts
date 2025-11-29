@@ -1548,5 +1548,4 @@ export const beatnupFilters = [
   "Marvel Comics",
   "DC Comics",
   'Indie Comics',
-  "Rare"
 ];

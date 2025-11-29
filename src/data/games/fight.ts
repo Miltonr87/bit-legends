@@ -815,8 +815,6 @@ export const fightGames: Game[] = [
         platform: "Arcade",
         logo: "/assets/logos/street_fighter_ii_champion_edition.png"
     }
-
-
 ]
 
 export const fightFilters = [

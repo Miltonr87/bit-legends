@@ -9,6 +9,7 @@ import {
   ChevronRight,
 } from 'lucide-react';
 import { motion } from 'framer-motion';
+
 interface NetplayRoom {
   id: string;
   name: string;
@@ -58,8 +59,19 @@ export function RoomList() {
           ? data.rooms
           : [];
         const filtered = normalized.filter((room) => {
-          const lastPart = room.url.split('/').pop()?.replace('#', '').trim();
-          return allGames.some((g) => g.embedUrl?.includes(lastPart));
+          const lastPart = room.url
+            .split('/')
+            .pop()
+            ?.replace('#', '')
+            .trim()
+            .toLowerCase();
+          const isKnownGame = allGames.some((g) =>
+            g.embedUrl?.toLowerCase().includes(lastPart || '')
+          );
+          const isSportsGame = allGames.some(
+            (g) => g.id.toLowerCase() === lastPart
+          );
+          return isKnownGame || isSportsGame;
         });
         setRooms(filtered);
       } catch {
@@ -122,10 +134,13 @@ export function RoomList() {
                       .split('/')
                       .pop()
                       ?.replace('#', '')
-                      .trim();
-                    const game = allGames.find((g) =>
-                      g.embedUrl?.includes(lastPart)
-                    );
+                      .trim()
+                      .toLowerCase();
+                    const game =
+                      allGames.find((g) =>
+                        g.embedUrl?.toLowerCase().includes(lastPart || '')
+                      ) ||
+                      allGames.find((g) => g.id.toLowerCase() === lastPart);
                     if (!game) return null;
                     const link = `${window.location.origin}/game/${game.id}`;
                     return (
@@ -187,9 +202,9 @@ export function RoomList() {
               </tbody>
             </table>
           </div>
-          <div className="sm:hidden grid grid-cols-1 gap-4 mt-4">
+          <div className="sm:hidden grid gap-4">
             {currentRooms.length === 0 ? (
-              <p className="text-center text-muted-foreground py-6 text-base">
+              <p className="text-center text-muted-foreground py-4">
                 No active rooms at the moment!
               </p>
             ) : (
@@ -198,70 +213,45 @@ export function RoomList() {
                   .split('/')
                   .pop()
                   ?.replace('#', '')
-                  .trim();
-                const game = allGames.find((g) =>
-                  g.embedUrl?.includes(lastPart)
-                );
+                  .trim()
+                  .toLowerCase();
+                const game =
+                  allGames.find((g) =>
+                    g.embedUrl?.toLowerCase().includes(lastPart || '')
+                  ) || allGames.find((g) => g.id.toLowerCase() === lastPart);
                 if (!game) return null;
-
                 const link = `${window.location.origin}/game/${game.id}`;
                 return (
                   <div
                     key={room.id}
-                    className={`p-4 rounded-xl border border-border/50 bg-background/60 backdrop-blur-sm flex flex-col gap-3 ${
-                      room.password ? 'border-red-500/60' : ''
-                    }`}
+                    className="border border-border/40 rounded-xl bg-card/60 p-4 flex items-center justify-between gap-3"
                   >
                     <div className="flex items-center gap-3">
                       <img
                         src={game.coverImage}
                         alt={game.title}
-                        className="w-14 h-14 rounded-md border border-border/40 object-cover"
+                        className="w-12 h-12 rounded-lg border border-border/30 object-cover"
                       />
                       <div>
-                        <h4 className="text-base font-semibold text-accent">
+                        <p className="font-semibold text-foreground text-sm">
                           {game.title}
-                        </h4>
+                        </p>
                         <p className="text-xs text-muted-foreground">
-                          {game.genre}
+                          {room.name || '—'}
                         </p>
-                      </div>
-                    </div>
-                    <div className="flex flex-col border-t border-border/30 pt-3 text-sm text-muted-foreground">
-                      <div className="flex justify-between mb-1">
-                        <p>
-                          <strong>Room:</strong> {room.name || '—'}
+                        <p className="text-xs text-muted-foreground">
+                          {getFlag(room.server)} · {room.players} players ·{' '}
+                          {room.password ? 'Private' : 'Public'}
                         </p>
-                        <p>
-                          <strong>Players:</strong> {room.players}
-                        </p>
-                      </div>
-                      <div className="flex justify-between">
-                        <p>
-                          <strong>Server:</strong> {getFlag(room.server)}
-                        </p>
-                        {room.password ? (
-                          <p className="flex items-center gap-1 text-red-400 font-medium">
-                            <Lock className="w-4 h-4" /> Private
-                          </p>
-                        ) : (
-                          <p className="flex items-center gap-1 text-emerald-400 font-medium">
-                            <Unlock className="w-4 h-4" /> Public
-                          </p>
-                        )}
                       </div>
                     </div>
                     <Button
                       size="sm"
                       variant="secondary"
-                      className={`w-full mt-2 rounded-lg hover:scale-105 transition-transform ${
-                        room.password
-                          ? 'bg-red-500/20 hover:bg-red-500/30 text-red-100'
-                          : 'bg-accent/20 hover:bg-accent/30 text-accent-foreground'
-                      }`}
+                      className="text-xs px-3 py-1 bg-accent/20 hover:bg-accent/30"
                       onClick={() => window.open(link, '_blank')}
                     >
-                      Join Game
+                      Join
                     </Button>
                   </div>
                 );
