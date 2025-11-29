@@ -24,6 +24,29 @@ export const fightGames: Game[] = [
         logo: "/assets/logos/umk3.png"
     },
     {
+        id: "mk2",
+        title: "Mortal Kombat II",
+        slug: "mortal-kombat-ii",
+        embedUrl: "https://www.retrogames.cc/embed/22440-mortal-kombat-ii-usa.html",
+        year: 1993,
+        genre: "Horror / Tournament",
+        folder: "Tournament",
+        publisher: "Acclaim",
+        characters: ["Liu Kang", "Sub-Zero", "Scorpion", "Kung Lao", "Mileena", "Kitana", "Raiden", "Baraka", "Shang Tsung"],
+        description: "The iconic MK sequel that defined the franchise.",
+        longDescription:
+            "Mortal Kombat II (1993) elevated the series into legend with deeper combat, faster gameplay, and even more brutal fatalities. " +
+            "Returning champions and new challengers meet in Outworld under the rule of the dark emperor Shao Kahn. " +
+            "Each fighter hides deadly secrets and finishing moves that shocked the arcade world. " +
+            "With its haunting soundtrack, iconic stages like The Dead Pool and The Portal, and the introduction of friendships and babalities, " +
+            "MKII became a cultural phenomenon that solidified Mortal Kombat as a cornerstone of fighting game history.",
+        players: "1-2 Players",
+        developer: "Midway",
+        coverImage: "/assets/covers/mk2.jpg",
+        platform: "Nintendo",
+        logo: "/assets/logos/mk2.png"
+    },
+    {
         id: "sf2",
         title: "Super Street Fighter II",
         slug: "super-street-fighter-ii",
