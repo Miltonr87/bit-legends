@@ -22,7 +22,6 @@ export const Header = () => {
         console.error('Error parsing user data:', e);
       }
     }
-
     const unsubscribe = onAuthStateChanged(auth, (firebaseUser) => {
       if (firebaseUser) {
         const updatedUser = {
@@ -36,23 +35,26 @@ export const Header = () => {
         setUser(null);
       }
     });
-
     return () => unsubscribe();
   }, []);
 
   return (
     <header className="sticky top-0 z-50 border-b border-border/50 backdrop-blur-md bg-background/80">
-      <div className="container mx-auto px-3 h-16 flex items-center justify-between gap-12 ">
-        <Link to="/" className="flex items-center gap-3 sm:gap-4 group">
-          <div className="relative">
+      <div className="container mx-auto px-3 h-16 flex items-center justify-between gap-3 sm:gap-10">
+        <Link to="/" className="flex items-center gap-2 sm:gap-4 group min-w-0">
+          <div className="relative shrink-0">
             <Gamepad2 className="h-6 w-6 sm:h-8 sm:w-8 text-accent group-hover:text-accent/80 transition-colors" />
             <div className="absolute inset-0 blur-xl bg-accent/30 group-hover:bg-accent/40 transition-all" />
           </div>
-          <h1 className="text-lg sm:text-2xl font-bold bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">
+          <h1
+            className="font-bold bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent 
+             text-lg sm:text-2xl leading-tight 
+             max-sm:text-[clamp(1rem,4vw,1.4rem)] max-sm:truncate"
+          >
             Bit Legends
           </h1>
         </Link>
-        <nav className="flex items-center gap-4 sm:gap-6">
+        <nav className="flex items-center gap-2 sm:gap-4 shrink-0">
           <AboutDialog />
           <Link to="/netplay">
             <Button
@@ -80,10 +82,10 @@ export const Header = () => {
             <Button
               variant="outline"
               size="sm"
-              className="border-accent/50 hover:bg-accent/10 px-2 sm:px-3 flex items-center gap-2"
+              className="border-accent/50 hover:bg-accent/10 px-2 sm:px-3 flex items-center gap-1 sm:gap-2 sm:max-w-none"
             >
               {user?.avatar_url ? (
-                <Avatar className="h-6 w-6 sm:h-8 sm:w-8">
+                <Avatar className="h-6 w-6 sm:h-8 sm:w-8 shrink-0">
                   <AvatarImage src={user.avatar_url} alt={user.username} />
                   <AvatarFallback>
                     {user.username?.charAt(0).toUpperCase() || (
@@ -92,9 +94,9 @@ export const Header = () => {
                   </AvatarFallback>
                 </Avatar>
               ) : (
-                <User className="h-4 w-4 sm:mr-1 text-accent" />
+                <User className="h-4 w-4 text-accent" />
               )}
-              <span className="hidden sm:inline font-medium">
+              <span className="hidden sm:inline font-medium truncate max-w-[120px]">
                 {user ? user.username || 'Profile' : 'Sign In'}
               </span>
             </Button>
