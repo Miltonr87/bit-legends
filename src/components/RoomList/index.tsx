@@ -65,11 +65,10 @@ export function RoomList() {
   const roomsPerPage = 5;
   const totalPages = Math.ceil(rooms.length / roomsPerPage);
   const startIndex = (currentPage - 1) * roomsPerPage;
-  const endIndex = startIndex + roomsPerPage;
-  const currentRooms = rooms.slice(startIndex, endIndex);
+  const currentRooms = rooms.slice(startIndex, startIndex + roomsPerPage);
 
-  const next = () => setStepIndex((prev) => (prev + 1) % steps.length);
-  const prev = () =>
+  const nextStep = () => setStepIndex((prev) => (prev + 1) % steps.length);
+  const prevStep = () =>
     setStepIndex((prev) => (prev - 1 + steps.length) % steps.length);
   const handlePrevPage = () => setCurrentPage((p) => Math.max(p - 1, 1));
   const handleNextPage = () =>
@@ -89,10 +88,7 @@ export function RoomList() {
           ? data.rooms
           : [];
         const filtered = normalized.filter((room) => {
-          const urlSegments = room.url.split('/');
-          const lastPart = urlSegments[urlSegments.length - 1]
-            ?.replace('#', '')
-            ?.trim();
+          const lastPart = room.url.split('/').pop()?.replace('#', '').trim();
           return allGames.some((game) => game.embedUrl?.includes(lastPart));
         });
         setRooms(filtered);
@@ -116,7 +112,7 @@ export function RoomList() {
     <div className="mt-10 w-full max-w-5xl mx-auto space-y-8">
       <div className="border border-border/60 rounded-2xl bg-card/70 backdrop-blur-md shadow-[0_0_20px_rgba(0,255,255,0.08)] overflow-hidden">
         <button
-          onClick={() => setShowRooms(!showRooms)}
+          onClick={() => setShowRooms((prev) => !prev)}
           className="w-full flex items-center justify-between px-6 py-4 bg-accent/10 hover:bg-accent/20 transition-colors"
         >
           <div className="flex items-center gap-3">
@@ -164,12 +160,13 @@ export function RoomList() {
                       </tr>
                     ) : (
                       currentRooms.map((room) => {
-                        const urlSegments = room.url.split('/');
-                        const lastPart = urlSegments[urlSegments.length - 1]
+                        const lastPart = room.url
+                          .split('/')
+                          .pop()
                           ?.replace('#', '')
-                          ?.trim();
-                        const matchedGame = allGames.find((game) =>
-                          game.embedUrl?.includes(lastPart)
+                          .trim();
+                        const matchedGame = allGames.find((g) =>
+                          g.embedUrl?.includes(lastPart)
                         );
                         if (!matchedGame) return null;
                         const gameLink = `${window.location.origin}/game/${matchedGame.id}`;
@@ -189,13 +186,13 @@ export function RoomList() {
                                 alt={matchedGame.title}
                                 className="w-10 h-10 rounded-md border border-border/40 object-cover"
                               />
-                              <div className="flex flex-col">
-                                <span className="font-semibold text-foreground">
+                              <div>
+                                <p className="font-semibold text-foreground">
                                   {matchedGame.title}
-                                </span>
-                                <span className="text-xs text-muted-foreground">
+                                </p>
+                                <p className="text-xs text-muted-foreground">
                                   {matchedGame.genre}
-                                </span>
+                                </p>
                               </div>
                             </td>
                             <td className="py-3 px-3 text-foreground/80">
@@ -235,77 +232,84 @@ export function RoomList() {
                 </table>
               </div>
               <div className="sm:hidden grid grid-cols-1 gap-4 mt-4">
-                {currentRooms.map((room) => {
-                  const urlSegments = room.url.split('/');
-                  const lastPart = urlSegments[urlSegments.length - 1]
-                    ?.replace('#', '')
-                    ?.trim();
-                  const matchedGame = allGames.find((game) =>
-                    game.embedUrl?.includes(lastPart)
-                  );
-                  if (!matchedGame) return null;
-                  const gameLink = `${window.location.origin}/game/${matchedGame.id}`;
-                  return (
-                    <div
-                      key={room.id}
-                      className={`p-4 rounded-xl border border-border/50 bg-background/60 backdrop-blur-sm flex flex-col gap-3 ${
-                        room.password ? 'border-red-500/60' : ''
-                      }`}
-                    >
-                      <div className="flex items-center gap-3">
-                        <img
-                          src={matchedGame.coverImage}
-                          alt={matchedGame.title}
-                          className="w-14 h-14 rounded-md border border-border/40 object-cover"
-                        />
-                        <div className="flex flex-col">
-                          <h4 className="text-base font-semibold text-accent">
-                            {matchedGame.title}
-                          </h4>
-                          <p className="text-xs text-muted-foreground">
-                            {matchedGame.genre}
-                          </p>
-                        </div>
-                      </div>
-                      <div className="flex flex-col border-t border-border/30 pt-3 text-sm text-muted-foreground">
-                        <div className="flex justify-between mb-1">
-                          <p>
-                            <strong>Room:</strong> {room.name || '—'}
-                          </p>
-                          <p>
-                            <strong>Players:</strong> {room.players}
-                          </p>
-                        </div>
-                        <div className="flex justify-between">
-                          <p>
-                            <strong>Server:</strong> {getFlag(room.server)}
-                          </p>
-                          {room.password ? (
-                            <p className="flex items-center gap-1 text-red-400 font-medium">
-                              <Lock className="w-4 h-4" /> Private
-                            </p>
-                          ) : (
-                            <p className="flex items-center gap-1 text-emerald-400 font-medium">
-                              <Unlock className="w-4 h-4" /> Public
-                            </p>
-                          )}
-                        </div>
-                      </div>
-                      <Button
-                        size="sm"
-                        variant="secondary"
-                        className={`w-full mt-2 rounded-lg hover:scale-105 transition-transform ${
-                          room.password
-                            ? 'bg-red-500/20 hover:bg-red-500/30 text-red-100'
-                            : 'bg-accent/20 hover:bg-accent/30 text-accent-foreground'
+                {currentRooms.length === 0 ? (
+                  <p className="text-center text-muted-foreground py-6 text-base">
+                    No active rooms at the moment!
+                  </p>
+                ) : (
+                  currentRooms.map((room) => {
+                    const lastPart = room.url
+                      .split('/')
+                      .pop()
+                      ?.replace('#', '')
+                      .trim();
+                    const matchedGame = allGames.find((g) =>
+                      g.embedUrl?.includes(lastPart)
+                    );
+                    if (!matchedGame) return null;
+                    const gameLink = `${window.location.origin}/game/${matchedGame.id}`;
+                    return (
+                      <div
+                        key={room.id}
+                        className={`p-4 rounded-xl border border-border/50 bg-background/60 backdrop-blur-sm flex flex-col gap-3 ${
+                          room.password ? 'border-red-500/60' : ''
                         }`}
-                        onClick={() => window.open(gameLink, '_blank')}
                       >
-                        Join Game
-                      </Button>
-                    </div>
-                  );
-                })}
+                        <div className="flex items-center gap-3">
+                          <img
+                            src={matchedGame.coverImage}
+                            alt={matchedGame.title}
+                            className="w-14 h-14 rounded-md border border-border/40 object-cover"
+                          />
+                          <div>
+                            <h4 className="text-base font-semibold text-accent">
+                              {matchedGame.title}
+                            </h4>
+                            <p className="text-xs text-muted-foreground">
+                              {matchedGame.genre}
+                            </p>
+                          </div>
+                        </div>
+                        <div className="flex flex-col border-t border-border/30 pt-3 text-sm text-muted-foreground">
+                          <div className="flex justify-between mb-1">
+                            <p>
+                              <strong>Room:</strong> {room.name || '—'}
+                            </p>
+                            <p>
+                              <strong>Players:</strong> {room.players}
+                            </p>
+                          </div>
+                          <div className="flex justify-between">
+                            <p>
+                              <strong>Server:</strong> {getFlag(room.server)}
+                            </p>
+                            {room.password ? (
+                              <p className="flex items-center gap-1 text-red-400 font-medium">
+                                <Lock className="w-4 h-4" /> Private
+                              </p>
+                            ) : (
+                              <p className="flex items-center gap-1 text-emerald-400 font-medium">
+                                <Unlock className="w-4 h-4" /> Public
+                              </p>
+                            )}
+                          </div>
+                        </div>
+                        <Button
+                          size="sm"
+                          variant="secondary"
+                          className={`w-full mt-2 rounded-lg hover:scale-105 transition-transform ${
+                            room.password
+                              ? 'bg-red-500/20 hover:bg-red-500/30 text-red-100'
+                              : 'bg-accent/20 hover:bg-accent/30 text-accent-foreground'
+                          }`}
+                          onClick={() => window.open(gameLink, '_blank')}
+                        >
+                          Join Game
+                        </Button>
+                      </div>
+                    );
+                  })
+                )}
               </div>
               {rooms.length > roomsPerPage && (
                 <div className="flex justify-center items-center gap-4 mt-6">
@@ -338,7 +342,7 @@ export function RoomList() {
       </div>
       <div className="border border-border/60 rounded-2xl bg-card/70 backdrop-blur-md shadow-[0_0_20px_rgba(0,255,255,0.08)] overflow-hidden">
         <button
-          onClick={() => setShowGuide(!showGuide)}
+          onClick={() => setShowGuide((prev) => !prev)}
           className="w-full flex items-center justify-between px-6 py-4 bg-accent/10 hover:bg-accent/20 transition-colors"
         >
           <div className="flex items-center gap-3">
@@ -382,13 +386,13 @@ export function RoomList() {
                     />
                   </AnimatePresence>
                   <button
-                    onClick={prev}
+                    onClick={prevStep}
                     className="absolute top-1/2 -left-4 sm:-left-10 transform -translate-y-1/2 bg-background/60 backdrop-blur-md border border-border/60 rounded-full p-2 hover:bg-accent/20 transition"
                   >
                     <ChevronLeft className="h-6 w-6 text-accent" />
                   </button>
                   <button
-                    onClick={next}
+                    onClick={nextStep}
                     className="absolute top-1/2 -right-4 sm:-right-10 transform -translate-y-1/2 bg-background/60 backdrop-blur-md border border-border/60 rounded-full p-2 hover:bg-accent/20 transition"
                   >
                     <ChevronRight className="h-6 w-6 text-accent" />
