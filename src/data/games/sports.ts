@@ -4,22 +4,22 @@ export const sportsGames: Game[] = [
     {
         id: "brasileiro2024-sports",
         title: "Brasileiro 2024",
-        slug: "international-super-star-soccer-brasileiro-2025",
+        slug: "brasileiro-2024",
         embedUrl:
             "/emulator.html?rom=https://ozequlizbaymnvzeqkyh.supabase.co/storage/v1/object/public/game-rom/br24c.sfc",
         year: 2024,
         genre: "Sports / Hack",
         folder: "Sports",
-        publisher: "Falcon Brasil",
+        publisher: "Falcon BR",
         characters: ["Brazilian Teams", "Classic Clubs", "Modern Stars", "Commentators"],
         description:
             "A modern hack of the legendary SNES football classic — fully updated for the 2025 Brazilian Championship.",
         longDescription:
-            "Brasileiro 2024 is a passionate fan-made hack that transforms the International Super Star Soccer classic into a modern celebration of Brazilian football. " +
+            "Brasileiro 2024 is a passionate fan-made hack made by Falcon BR that transforms the International Super Star Soccer classic into a modern celebration of Brazilian football. " +
             "Featuring updated kits, stadiums, and complete 2024 rosters from iconic clubs such as Flamengo and Palmeiras, this edition captures the real spirit of the Série A. " +
             "With enhanced AI, authentic Brazilian visuals, and the same fast-paced arcade feel that defined 16-bit football, this ROM hack blends nostalgia with today’s competitive energy: a true love letter to Brazil’s football legacy and its devoted fans.",
         players: "1-2 Players",
-        developer: "Falcon Brasil / Community Modders",
+        developer: "Falcon BR / Community Modders",
         coverImage: "/assets/covers/brasileirao2025.jpg",
         platform: "Nintendo",
         logo: "/assets/logos/Brasileirao2025.png"
