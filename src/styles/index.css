@@ -115,6 +115,18 @@
   }
 }
 
+/* Hide scrollbar ONLY on mobile screens */
+@media (max-width: 640px) {
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  * {
+    scrollbar-width: none;
+    -ms-overflow-style: none; /* IE / Edge */
+  }
+}
+
 /* Utilities */
 @layer utilities {
   .scanline {
