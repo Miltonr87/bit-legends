@@ -34,7 +34,6 @@ const Index = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
   const [shuffledGames, setShuffledGames] = useState(allGames);
-  const [isServerActive, setIsServerActive] = useState<boolean | null>(null);
 
   useEffect(() => {
     const shuffled = [...allGames];
@@ -43,26 +42,6 @@ const Index = () => {
       [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
     }
     setShuffledGames(shuffled);
-  }, []);
-
-  useEffect(() => {
-    const checkServerStatus = async () => {
-      setIsServerActive(null);
-      const url = 'https://www.retrogames.cc/';
-      try {
-        const start = performance.now();
-        await fetch(url, {
-          method: 'HEAD',
-          mode: 'no-cors',
-        });
-        const end = performance.now();
-        setIsServerActive(true);
-        console.log('Retrogames activated');
-      } catch (err) {
-        setIsServerActive(false);
-      }
-    };
-    checkServerStatus();
   }, []);
 
   let filteredGames = shuffledGames;
@@ -119,51 +98,6 @@ const Index = () => {
     'Dark Horse Comics': 'Gritty universes with brutal crossovers',
   };
 
-  const getServerStatusDisplay = () => {
-    let iconClass = 'h-5 w-5 animate-pulse';
-    let text = 'Checking Server Status...';
-    let color = 'text-yellow-400';
-    let ringClass = 'ring-yellow-400';
-    if (isServerActive === true) {
-      iconClass = 'h-5 w-5';
-      text = 'Online';
-      color = 'text-green-500';
-      ringClass = 'ring-green-500';
-    } else if (isServerActive === false) {
-      iconClass = 'h-5 w-5';
-      text = 'Offline';
-      color = 'text-red-500';
-      ringClass = 'ring-red-500';
-    }
-    const glowStyle = {
-      boxShadow: `0 0 10px 0 ${color
-        .replace('text-', '')
-        .replace('-500', '')
-        .replace('-400', '')}, inset 0 0 5px ${color
-        .replace('text-', '')
-        .replace('-500', '')
-        .replace('-400', '')}`,
-    };
-    return (
-      <div
-        className={`flex items-center gap-2 px-3 py-1 rounded-full bg-card/50 border border-current shadow-lg backdrop-blur-sm ${color} transition-all duration-500 hover:scale-[1.02]`}
-        style={glowStyle}
-      >
-        <RadioTower className={iconClass} />
-        <span className="text-sm font-semibold tracking-wider">{text}</span>
-        <span
-          className={`h-2 w-2 rounded-full ${
-            isServerActive === null
-              ? 'bg-yellow-400 animate-pulse'
-              : isServerActive
-              ? 'bg-green-500'
-              : 'bg-red-500'
-          } ring-1 ${ringClass} transition-colors`}
-        ></span>
-      </div>
-    );
-  };
-
   return (
     <div className="min-h-screen overflow-x-hidden flex flex-col">
       <Header />
@@ -194,34 +128,34 @@ const Index = () => {
           </p>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mt-6">
             <AnimatePresence>
-              {isServerActive !== null && (
-                <motion.div
-                  key="server-status"
-                  initial="hidden"
-                  animate="visible"
-                  exit="hidden"
-                  variants={fadeUp}
-                >
-                  {getServerStatusDisplay()}
-                </motion.div>
-              )}
+              <motion.div
+                key="server-status"
+                initial="hidden"
+                animate="visible"
+                exit="hidden"
+                variants={fadeUp}
+                className="flex items-center gap-2 px-3 py-1 rounded-full bg-card/50 border border-green-500/50 shadow-lg backdrop-blur-sm text-green-400 transition-all duration-500 hover:scale-[1.02]"
+              >
+                <RadioTower className="h-5 w-5" />
+                <span className="text-sm font-semibold tracking-wider">
+                  Online
+                </span>
+              </motion.div>
             </AnimatePresence>
             <AnimatePresence>
-              {isServerActive === true && (
-                <motion.div
-                  key="game-counter"
-                  initial="hidden"
-                  animate="visible"
-                  exit="hidden"
-                  variants={fadeUp}
-                  className="px-3 py-1 rounded-full bg-card/50 border border-primary/50 shadow-lg backdrop-blur-sm text-primary transition-all duration-500 hover:scale-[1.02]"
-                >
-                  <span className="text-sm font-semibold tracking-wider flex items-center gap-1">
-                    <Server className="h-5 w-5 animate-pulse" />
-                    {GAME_COUNT_SIMULATED} Games
-                  </span>
-                </motion.div>
-              )}
+              <motion.div
+                key="game-counter"
+                initial="hidden"
+                animate="visible"
+                exit="hidden"
+                variants={fadeUp}
+                className="px-3 py-1 rounded-full bg-card/50 border border-primary/50 shadow-lg backdrop-blur-sm text-primary transition-all duration-500 hover:scale-[1.02]"
+              >
+                <span className="text-sm font-semibold tracking-wider flex items-center gap-1">
+                  <Server className="h-5 w-5 animate-pulse" />
+                  {GAME_COUNT_SIMULATED} Games
+                </span>
+              </motion.div>
             </AnimatePresence>
           </div>
         </div>
