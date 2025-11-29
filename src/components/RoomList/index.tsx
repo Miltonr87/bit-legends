@@ -295,8 +295,8 @@ export function RoomList() {
       >
         <p className="max-w-2xl mx-auto text-sm sm:text-base leading-relaxed">
           The <b>Netplay Lobby</b> lets you discover and join world games
-          directly in your browser: anytime, anywhere. Create a room via
-          <strong> 🌐 Netplay</strong> in the emulator, and it’ll appear here!
+          directly in your browser: anytime, anywhere. Create a room and it’ll
+          appear here!
         </p>
       </motion.div>
     </div>

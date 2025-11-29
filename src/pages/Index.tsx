@@ -94,7 +94,7 @@ const Index = () => {
     'Marvel Comics': 'Avengers and mutants facing cosmic threats',
     Rare: 'Cancelled prototypes or limited releases',
     'Sci-Fi': 'Futuristic worlds with advanced technology',
-    Race: 'High-speed combat vehicles with firepower',
+    Race: 'Classic racing thrills with speed and style',
     'Dark Horse Comics': 'Gritty universes with brutal crossovers',
     Sports: 'Classic sports and hacked 16-bit editions',
   };

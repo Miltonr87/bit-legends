@@ -2,27 +2,75 @@ import { Game } from "../index";
 
 export const sportsGames: Game[] = [
     {
-        id: "brasileiro2025-sports",
-        title: "Brasileiro 2025",
+        id: "brasileiro2024-sports",
+        title: "Brasileiro 2024",
         slug: "international-super-star-soccer-brasileiro-2025",
         embedUrl:
-            "/emulator.html?rom=https://ozequlizbaymnvzeqkyh.supabase.co/storage/v1/object/public/game-rom/Brasileiro.smc",
-        year: 2025,
-        genre: "Sports / Football / Hack",
+            "/emulator.html?rom=https://ozequlizbaymnvzeqkyh.supabase.co/storage/v1/object/public/game-rom/br24c.sfc",
+        year: 2024,
+        genre: "Sports / Hack",
         folder: "Sports",
-        publisher: "B Star",
+        publisher: "Falcon Brasil",
         characters: ["Brazilian Teams", "Classic Clubs", "Modern Stars", "Commentators"],
         description:
             "A modern hack of the legendary SNES football classic — fully updated for the 2025 Brazilian Championship.",
         longDescription:
-            "Brasileiro 2025 is a passionate fan-made hack that transforms the International Super Star Soccer classic into a modern celebration of Brazilian football. " +
-            "Featuring updated kits, stadiums, and complete 2025 rosters from iconic clubs such as Flamengo and Palmeiras, this edition captures the real spirit of the Série A. " +
+            "Brasileiro 2024 is a passionate fan-made hack that transforms the International Super Star Soccer classic into a modern celebration of Brazilian football. " +
+            "Featuring updated kits, stadiums, and complete 2024 rosters from iconic clubs such as Flamengo and Palmeiras, this edition captures the real spirit of the Série A. " +
             "With enhanced AI, authentic Brazilian visuals, and the same fast-paced arcade feel that defined 16-bit football, this ROM hack blends nostalgia with today’s competitive energy: a true love letter to Brazil’s football legacy and its devoted fans.",
         players: "1-2 Players",
-        developer: "B Star / Community Modders",
+        developer: "Falcon Brasil / Community Modders",
         coverImage: "/assets/covers/brasileirao2025.jpg",
         platform: "Nintendo",
         logo: "/assets/logos/Brasileirao2025.png"
+    },
+    {
+        id: "worldcup70-sports",
+        title: "World Cup Mexico 70",
+        slug: "world-cup-mexico-70-hack",
+        embedUrl:
+            "/emulator.html?rom=https://ozequlizbaymnvzeqkyh.supabase.co/storage/v1/object/public/game-rom/Copa70.sfc&platform=snes",
+        year: 2025,
+        genre: "Sports / Hack",
+        folder: "Sports",
+        publisher: "Falcon BR",
+        characters: ["Brazil 1970 Squad", "Pelé", "Tostão", "Rivelino", "Jairzinho", "Carlos Alberto", "World Teams"],
+        description:
+            "A retro SNES hack celebrating the 1970 World Cup — relive Pelé’s golden era in 16-bit glory.",
+        longDescription:
+            "World Cup Mexico 70 (Hack) is a fan-crafted tribute made by Falcon BR that transports players back to the golden age of football. " +
+            "Built upon the classic SNES football engine, this ROM hack recreates the legendary 1970 FIFA World Cup in stunning 16-bit form, complete with authentic national teams, vintage uniforms, and Mexico’s sun-soaked stadiums. " +
+            "Step into the boots of Pelé, Tostão, Jairzinho, and Rivelino as they lead Brazil’s unforgettable squad to eternal glory, accompanied by nostalgic commentary and dynamic crowd chants. " +
+            "Every pass, goal, and celebration is infused with historical accuracy and emotional detail, capturing the fluid beauty and joy of the world’s most iconic tournament. " +
+            "From tactical duels to explosive counterattacks, this ROM hack reimagines the World Cup’s magic for retro enthusiasts.",
+        players: "1-2 Players",
+        developer: "Falcon BR / Community Modders",
+        coverImage: "/assets/covers/worldcup70.jpg",
+        platform: "Nintendo",
+        logo: "/assets/logos/worldcup70.png"
+    },
+    {
+        id: "nbajam-sports",
+        title: "NBA Jam",
+        slug: "nba-jam",
+        embedUrl: "https://www.retrogames.cc/embed/23381-nba-jam-tournament-edition-usa.html",
+        year: 1994,
+        genre: "Sports",
+        folder: "Sports",
+        publisher: "Midway / Acclaim",
+        characters: ["NBA Stars", "Classic Duos", "Commentators", "Crowd Effects"],
+        description:
+            "The legendary 2-on-2 basketball arcade hit that defined a generation — fast, flashy, and on fire!",
+        longDescription:
+            "NBA Jam (1994) is Midway’s explosive 2-on-2 basketball phenomenon that turned sports gaming into pure arcade spectacle. " +
+            "Featuring real NBA teams and players, exaggerated dunks, over-the-top commentary, and unforgettable catchphrases like ‘He’s on fire!’, it redefined how sports could feel on screen. " +
+            "This Super Nintendo edition enhances the experience with digitized audio, improved commentary, and a smoother presentation that captures the full 90s arcade energy. " +
+            "A timeless mix of competition and chaos, NBA Jam remains one of the greatest sports titles ever created — where skill meets pure showtime flair.",
+        players: "1-4 Players",
+        developer: "Midway",
+        coverImage: "/assets/covers/nba_jam.jpg",
+        platform: "Nintendo",
+        logo: "/assets/logos/nba_jam.png"
     },
     {
         id: "futebolbrasileiro96-sports",
@@ -30,7 +78,7 @@ export const sportsGames: Game[] = [
         slug: "futebol-brasileiro-96",
         embedUrl: "https://www.retrogames.cc/embed/46464-futebol-brasileiro-96.html",
         year: 1996,
-        genre: "Sports / Football / Retro",
+        genre: "Sports / Hack",
         folder: "Sports",
         publisher: "TecToy",
         characters: ["Brazilian Teams", "Classic Clubs", "Championship Squads", "Fans"],
@@ -53,7 +101,7 @@ export const sportsGames: Game[] = [
         slug: "mario-lemieux-hockey-usa-europe",
         embedUrl: "https://www.retrogames.cc/embed/29672-mario-lemieux-hockey-usa-europe.html",
         year: 1991,
-        genre: "Sports / Ice Hockey / Simulation",
+        genre: "Sports",
         folder: "Sports",
         publisher: "SEGA",
         characters: ["Mario Lemieux", "Pittsburgh Penguins", "All-Star Teams"],
@@ -78,7 +126,7 @@ export const sportsGames: Game[] = [
             "/emulator.html?rom=https://ozequlizbaymnvzeqkyh.supabase.co/storage/v1/object/public/game-rom/NHL2025.bin&platform=genesis",
         year: 2025,
         genre: "Sports",
-        folder: "Sports",
+        folder: "Sports / Hack",
         publisher: "EA Sports (Community Hack)",
         characters: ["Teams 2025", "Modern Rosters", "Updated Arenas", "Classic Commentary"],
         description:
@@ -93,7 +141,31 @@ export const sportsGames: Game[] = [
         coverImage: "/assets/covers/nhl2025.jpg",
         platform: "Genesis",
         logo: "/assets/logos/nhl.png"
+    },
+    {
+        id: "nhlopenice-sports",
+        title: "NHL Open Ice",
+        slug: "2-on-2-open-ice-challenge-rev-1-21",
+        embedUrl: "https://www.retrogames.cc/embed/44836-2-on-2-open-ice-challenge-rev-1-21.html",
+        year: 1995,
+        genre: "Sports",
+        folder: "Sports",
+        publisher: "Midway",
+        characters: ["NHL Stars", "Classic Teams", "Arcade Commentary", "Crowd Effects"],
+        description:
+            "Midway’s over-the-top arcade hockey classic — fast, loud, and full of 90s chaos.",
+        longDescription:
+            "NHL Open Ice: 2 on 2 Challenge (1995) is Midway’s wild, over-the-top take on professional hockey — a spiritual cousin to NBA Jam, swapping the court for the rink. " +
+            "Featuring official NHL teams and players from the mid-90s, it delivers pure arcade energy with exaggerated hits, blazing slapshots, and dynamic crowd reactions. " +
+            "Colorful commentary and big head-style animations make every match a spectacle of speed and style. " +
+            "This cabinet legend captures the golden age of sports arcades, where fun ruled over realism — pure, chaotic hockey joy.",
+        players: "1-4 Players",
+        developer: "Midway",
+        coverImage: "/assets/covers/nhl_open_ice.jpg",
+        platform: "Arcade",
+        logo: "/assets/logos/openice.png"
     }
+
 ];
 
 export const sportsFilters = ["Sports"];

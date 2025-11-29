@@ -90,8 +90,52 @@ export const raceGames: Game[] = [
         logo: "/assets/logos/batman_returns.png",
         platform: "Sega CD"
     },
-
-
+    {
+        id: "topgear",
+        title: "Top Gear",
+        slug: "top-gear",
+        embedUrl: "https://www.retrogames.cc/embed/23881-top-gear-usa.html",
+        year: 1992,
+        genre: "Race",
+        folder: "Race",
+        publisher: "Kemco",
+        characters: ["Racers", "Drivers", "Co-Drivers", "World Circuits"],
+        description:
+            "One of the most iconic SNES racing games ever — pure speed, tight turns, and timeless tracks.",
+        longDescription:
+            "Top Gear (1992) stands as one of the defining racing experiences of the 16-bit era, blending speed, precision, and unforgettable atmosphere. " +
+            "Developed by Gremlin Graphics and published by Kemco, this SNES classic takes players across international circuits filled with sharp corners, rival racers, and high-octane challenges. " +
+            "Its soundtrack by Barry Leitch became legendary, pulsing with energy that perfectly matches the sense of velocity and rhythm on screen. " +
+            "Featuring split-screen multiplayer, fuel strategy, and an addictive sense of progression, Top Gear remains a symbol of pure arcade racing: fast, stylish, and endlessly replayable.",
+        players: "1-2 Players",
+        developer: "Gremlin Graphics",
+        coverImage: "/assets/covers/top_gear.jpg",
+        platform: "Nintendo",
+        logo: "/assets/logos/top_gear.png"
+    },
+    {
+        id: "lamborghiniac",
+        title: "Lamborghini",
+        slug: "lamborghini-american-challenge-usa",
+        embedUrl: "https://www.retrogames.cc/embed/24643-lamborghini-american-challenge-usa.html",
+        year: 1993,
+        genre: "Race",
+        folder: "Race",
+        publisher: "Titus Interactive",
+        characters: ["Street Racers", "Police Pursuits", "Rival Drivers", "Luxury Cars"],
+        description:
+            "High-speed street racing with cash bets, cops, and pure 90s attitude — Lamborghini style.",
+        longDescription:
+            "Lamborghini American Challenge (1993) pushes the SNES to its limits with fast-paced, high-stakes street racing across the United States. " +
+            "A spin on the classic Titus racing formula, it lets players compete in underground tournaments where every win means more money — and more heat from the cops. " +
+            "Featuring smooth Mode 7 graphics, customizable cars, and a mix of arcade chaos and strategy, it delivers that unmistakable 90s rush of speed and risk. " +
+            "From neon cityscapes to desert highways, Lamborghini American Challenge captures the essence of outlaw racing — sleek, fast, and dangerously addictive.",
+        players: "1-2 Players",
+        developer: "Titus Interactive",
+        coverImage: "/assets/covers/lamborghini_american_challenge.jpg",
+        platform: "Nintendo",
+        logo: "/assets/logos/lamborghini_american_challenge.png"
+    }
 ];
 
 export const raceFilters = ["Race"];
