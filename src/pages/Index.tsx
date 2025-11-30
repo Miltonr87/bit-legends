@@ -25,7 +25,7 @@ const fadeUp = {
     opacity: 1,
     y: 0,
     scale: 1,
-    transition: { duration: 0.1, ease: 'easeOut' },
+    transition: { duration: 0.1, ease: 'easeInOut' },
   },
 };
 
@@ -89,14 +89,13 @@ const Index = () => {
     Urban: 'Streets and gangs in pure mayhem',
     Horror: 'Dark atmospheres with terrifying creatures',
     Tournament: 'Head-to-head battles with unique fighters',
-    'Indie Comics': 'Global characters from independent comics',
+    Indie: 'Global characters from independent comics',
     'DC Comics': 'Metahumans superheroes and vigilantes',
     'Marvel Comics': 'Avengers and mutants facing cosmic threats',
     Rare: 'Cancelled prototypes or limited releases',
     'Sci-Fi': 'Futuristic worlds with advanced technology',
-    Race: 'Classic racing thrills with speed and style',
-    'Dark Horse Comics': 'Gritty universes with brutal crossovers',
-    Sports: 'Classic sports and hacked 16-bit editions',
+    Race: 'High-speed races through classic tracks',
+    Sports: 'Retro sports clashes and hacked 16-bit',
   };
 
   return (
@@ -123,9 +122,9 @@ const Index = () => {
             <span className="text-foreground">16-Bit Game Collection</span>
           </h1>
           <p className="text-base sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-6 sm:mb-8 px-4">
-            Enter the ring and master the art of combat in different scenarios.
-            Classic superheroes, vigilantes and fighters in iconic stages reborn
-            for the modern age.
+            Step into a pixel-powered universe where every legend lives again:
+            fighters, heroes, racers, athletes and adventurers collide across
+            iconic worlds
           </p>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mt-6">
             <AnimatePresence>

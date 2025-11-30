@@ -19,7 +19,31 @@ export const sportsGames: Game[] = [
             "Featuring updated kits, stadiums, and complete 2024 rosters from iconic clubs such as Flamengo and Palmeiras, this edition captures the real spirit of the Série A. " +
             "With enhanced AI, authentic Brazilian visuals, and the same fast-paced arcade feel that defined 16-bit football, this ROM hack blends nostalgia with today’s competitive energy: a true love letter to Brazil’s football legacy and its devoted fans.",
         players: "1-2 Players",
-        developer: "Falcon BR / Community Modders",
+        developer: "Falcon BR",
+        coverImage: "/assets/covers/brasileirao2024.jpg",
+        platform: "Nintendo",
+        logo: "/assets/logos/Brasileirao2025.png"
+    },
+    {
+        id: "brasileiro2025-sports",
+        title: "Brasileiro 2025",
+        slug: "brasileiro-2025",
+        embedUrl:
+            "/emulator.html?rom=https://ozequlizbaymnvzeqkyh.supabase.co/storage/v1/object/public/game-rom/Brasileiro2025.smc",
+        year: 2025,
+        genre: "Sports / Hack",
+        folder: "Sports",
+        publisher: "BSTAR TEAM",
+        characters: ["Brazilian Teams", "Classic Clubs", "Modern Stars", "Commentators"],
+        description:
+            "A 2025 fan-made upgrade of the classic SNES football hit — fully rebuilt with new rosters, visuals, and Brazilian passion.",
+        longDescription:
+            "Brasileiro 2025 is a premium fan-made hack developed by the BSTAR TEAM, enhancing the legendary International Super Star Soccer with a complete 2025 Brazilian Championship overhaul. " +
+            "It features fully updated squads, refreshed kits, improved stadium atmospheres, and refined gameplay balancing that retains the iconic 16-bit football feel. " +
+            "Authentic club identities, modern player rosters, and community-driven polish come together to deliver the most up-to-date Brazilian football experience on the SNES. " +
+            "A faithful tribute to Brazil’s football culture, crafted by dedicated modders for passionate fans.",
+        players: "1-2 Players",
+        developer: "BSTAR TEAM",
         coverImage: "/assets/covers/brasileirao2025.jpg",
         platform: "Nintendo",
         logo: "/assets/logos/Brasileirao2025.png"
@@ -44,7 +68,7 @@ export const sportsGames: Game[] = [
             "Every pass, goal, and celebration is infused with historical accuracy and emotional detail, capturing the fluid beauty and joy of the world’s most iconic tournament. " +
             "From tactical duels to explosive counterattacks, this ROM hack reimagines the World Cup’s magic for retro enthusiasts.",
         players: "1-2 Players",
-        developer: "Falcon BR / Community Modders",
+        developer: "Falcon BR",
         coverImage: "/assets/covers/worldcup70.jpg",
         platform: "Nintendo",
         logo: "/assets/logos/worldcup70.png"
@@ -90,7 +114,7 @@ export const sportsGames: Game[] = [
             "With lively commentary, fast-paced gameplay, and the unmistakable style of Konami’s football engines, it delivers an authentic and vibrant snapshot of how Brazil played, celebrated, and lived football in the 90s. " +
             "A must-play for fans of retro sports and national football history.",
         players: "1-2 Players",
-        developer: "TecToy / Konami",
+        developer: "TecToy / Hack",
         coverImage: "/assets/covers/futebol_brasileiro_96.jpg",
         platform: "Nintendo",
         logo: "/assets/logos/futebol_brasileiro_96.png"
@@ -127,7 +151,7 @@ export const sportsGames: Game[] = [
         year: 2025,
         genre: "Sports",
         folder: "Sports / Hack",
-        publisher: "EA Sports (Community Hack)",
+        publisher: "Adam Catalyst",
         characters: ["Teams 2025", "Modern Rosters", "Updated Arenas", "Classic Commentary"],
         description:
             "A modernized hack of the legendary NHL 94, updated with 2025 teams, players, and visuals.",
@@ -137,7 +161,7 @@ export const sportsGames: Game[] = [
             "Fast-paced gameplay, timeless controls, and authentic broadcast-style presentation meet cutting-edge updates for a new generation of retro hockey fans.  " +
             "A faithful evolution of the original: the gameplay has been carefully re-balanced for a more realistic modern hockey feel, with harder to score goals, easier to hit crossbars and posts, more realistic speed burst! .",
         players: "1-2 Players",
-        developer: "Adam Catalyst / Community Modders",
+        developer: "Adam Catalyst",
         coverImage: "/assets/covers/nhl2025.jpg",
         platform: "Genesis",
         logo: "/assets/logos/nhl.png"

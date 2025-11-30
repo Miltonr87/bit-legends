@@ -158,8 +158,8 @@ export const fightGames: Game[] = [
         slug: "teenage-mutant-hero-turtles-tournament-fighters-europe",
         embedUrl: "https://www.retrogames.cc/embed/19823-teenage-mutant-hero-turtles-tournament-fighters-europe.html",
         year: 1993,
-        genre: "Indie Comics / Tournament",
-        folder: "Indie Comics / Tournament",
+        genre: "Indie / Tournament",
+        folder: "Indie / Tournament",
         publisher: "Konami",
         characters: [
             "Leonardo",
