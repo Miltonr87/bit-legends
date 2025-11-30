@@ -267,7 +267,7 @@ export const fightGames: Game[] = [
         id: "kof2002",
         title: "King of Fighters 2002",
         slug: "the-king-of-fighters-2002-magic-plus-ii-bootleg-bootleg",
-        embedUrl: "https://www.retrogames.cc/embed/10384-the-king-of-fighters-2002-ngm-2650-ngh-2650.html",
+        embedUrl: "https://www.retrogames.cc/embed/10387-the-king-of-fighters-2002-magic-plus-ii-bootleg-bootleg.html",
         year: 2002,
         genre: "Tournament",
         folder: "Tournament",
