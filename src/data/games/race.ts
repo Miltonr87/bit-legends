@@ -140,7 +140,7 @@ export const raceGames: Game[] = [
         id: "ayrtonsenna-gp2",
         title: "Ayrton Senna's GP",
         slug: "ayrton-sennas-super-monaco-gp-ii",
-        embedUrl: "https://www.retrogames.cc/embed/21661-ayrton-senna-s-super-monaco-gp-ii-usa-en-ja.html",
+        embedUrl: "https://www.retrogames.cc/embed/30471-ayrton-senna-s-super-monaco-gp-ii-usa-en-ja.html",
         year: 1992,
         genre: "Race",
         folder: "Race",
@@ -159,7 +159,76 @@ export const raceGames: Game[] = [
         platform: "Genesis",
         logo: "/assets/logos/ayrton_senna_gp2.png"
     },
-
+    {
+        id: "lotusturbo-race",
+        title: "Lotus Turbo Challenge",
+        slug: "lotus-turbo-challenge",
+        embedUrl: "https://www.retrogames.cc/embed/30337-lotus-turbo-challenge-usa-europe.html",
+        year: 1992,
+        genre: "Race",
+        folder: "Race",
+        publisher: "Electronic Arts / Gremlin",
+        characters: ["Lotus Cars", "Rival Drivers", "Coastal Tracks", "Off-Road Routes"],
+        description:
+            "Arcade-style racing at high speed, featuring iconic Lotus sports cars and diverse, fast-paced tracks.",
+        longDescription:
+            "Lotus Turbo Challenge brings exhilarating arcade racing to the Sega Genesis with smooth controls, rapid acceleration, and iconic Lotus sports machines. " +
+            "Race across a wide variety of environments — from coastal highways to off-road trails — each designed for fast reflexes and pure 16-bit adrenaline. " +
+            "With split-screen multiplayer, clean visuals, and a soundtrack that captures the spirit of early 90s racing games, Lotus Turbo Challenge remains a standout classic for fans of speed and precision driving. " +
+            "Its mix of varied tracks, dynamic weather conditions, and tight cornering creates an intense and constantly engaging racing experience that rewards skill and focus. " +
+            "Even decades later, its fast-paced gameplay and sharp design continue to impress, solidifying the Lotus series as a true icon of retro racing.",
+        players: "1-2 Players",
+        developer: "Magnetic Fields",
+        coverImage: "/assets/covers/lotus_turbo_challenge.jpg",
+        platform: "Genesis",
+        logo: "/assets/logos/lotus_turbo_challenge.png"
+    },
+    {
+        id: "lotus2-race",
+        title: "Lotus II: RECS",
+        slug: "lotus-ii-recs",
+        embedUrl: "/emulator.html?rom=https://ozequlizbaymnvzeqkyh.supabase.co/storage/v1/object/public/game-rom/lotus2.md&platform=genesis",
+        year: 1993,
+        genre: "Race",
+        folder: "Race",
+        publisher: "Electronic Arts / Gremlin",
+        characters: ["Lotus Cars", "Custom Tracks", "Rival Drivers", "Dynamic Environments"],
+        description:
+            "A customizable 16-bit racing classic featuring fast Lotus machines and the iconic RECS track generator.",
+        longDescription:
+            "Lotus II: RECS elevates the 16-bit racing formula with faster engines, smoother handling, and the legendary RECS system — allowing players to create custom tracks by adjusting terrain, curves, weather, and obstacles. " +
+            "Race through deserts, forests, snow-covered roads, and neon-lit cities, each designed for intense reflex-based driving and pure arcade speed. " +
+            "The game’s clean visuals, impactful sound design, and fluid sense of motion make it one of the finest racing experiences on the Sega Genesis. " +
+            "With multiple cars, diverse environments, and highly replayable track creation, Lotus II stands as a defining entry in the Lotus racing trilogy.",
+        players: "1-2 Players",
+        developer: "Magnetic Fields",
+        coverImage: "/assets/covers/lotus_ii_recs.jpg",
+        platform: "Genesis",
+        logo: "/assets/logos/lotusII.png"
+    },
+    {
+        id: "turbooutrun-race",
+        title: "Turbo OutRun",
+        slug: "turbo-outrun",
+        embedUrl: "https://www.retrogames.cc/embed/30115-turbo-outrun-japan-europe.html",
+        year: 1992,
+        genre: "Race",
+        folder: "Race",
+        publisher: "Sega",
+        characters: ["Ferrari F40", "Rival Drivers", "Police Pursuits", "Coastal Highways"],
+        description:
+            "A high-speed cross-country sprint in a turbo-charged Ferrari F40 — pure arcade racing energy.",
+        longDescription:
+            "Turbo OutRun brings Sega's legendary arcade racing energy to the Genesis with faster speeds, turbo boosts, and a coast-to-coast journey across the United States. " +
+            "Behind the wheel of a Ferrari F40, players blast through bustling cities, scorching deserts, snowy highways, and neon-lit streets while rival drivers and police cars push the intensity to the limit. " +
+            "The Genesis version retains the arcade spirit with responsive controls, upbeat music, and cinematic stage transitions that keep the adrenaline flowing. " +
+            "Turbo OutRun stands as a defining 16-bit racer — fast, stylish, and endlessly replayable for fans of pure high-speed action.",
+        players: "1 Player",
+        developer: "Sega",
+        coverImage: "/assets/covers/turbo_outrun.jpg",
+        platform: "Genesis",
+        logo: "/assets/logos/turbo_outrun.png"
+    }
 ];
 
 export const raceFilters = ["Race"];
