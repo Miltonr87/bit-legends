@@ -192,6 +192,28 @@ export const rpgsGames: Game[] = [
         platform: "Genesis",
         logo: "/assets/logos/shiningforceII.png"
     },
+    {
+        id: "alcahest-rpg",
+        title: "Alcahest",
+        slug: "alcahest",
+        embedUrl: "/emulator.html?rom=https://ozequlizbaymnvzeqkyh.supabase.co/storage/v1/object/public/game-rom/alcahest-eng.smc&platform=snes",
+        year: 1993,
+        genre: "Fantasy / RPG",
+        folder: "RPG",
+        publisher: "Square",
+        characters: ["Alen", "Guardians", "Garam", "Droma"],
+        description:
+            "A fast-paced action RPG from Square, blending elemental guardians, heroic quests, and cinematic 16-bit storytelling.",
+        longDescription:
+            "Alcahest is a Japan-exclusive fantasy Action RPG developed by Square that delivers real-time combat, richly animated cutscenes, and a heroic story centered on the warrior Alen. " +
+            "Harness the power of elemental Guardians, battle through diverse regions, and face powerful bosses in a game that blends fantasy adventure with classic 16-bit intensity. " +
+            "Featuring dynamic allies, stage-based progression, and polished presentation, Alcahest stands out as one of Square’s hidden gems on the Super Nintendo — a must-play for fans of action-driven RPGs.",
+        players: "1 Player",
+        developer: "HAL Laboratory / Square",
+        coverImage: "/assets/covers/alcahest.jpg",
+        platform: "Nintendo",
+        logo: "/assets/logos/alcahest.png"
+    }
 ];
 
 export const rpgsFilters = ["RPG"];

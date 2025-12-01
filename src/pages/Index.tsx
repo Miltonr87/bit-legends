@@ -85,7 +85,7 @@ const Index = () => {
   };
 
   const genreDescriptions: Record<string, string> = {
-    Fantasy: 'Epic quests and magical realms',
+    Fantasy: 'Epic quests and magical fighters',
     Urban: 'Streets and gangs in pure mayhem',
     Horror: 'Dark atmospheres with terrifying creatures',
     Tournament: 'Head-to-head battles with unique fighters',
