@@ -61,9 +61,9 @@ export const rpgsGames: Game[] = [
         description:
             "A versão totalmente traduzida para PT-BR do clássico RPG tático da era 16-bit.",
         longDescription:
-            "Shining Force (PT-BR) brings the legendary tactical RPG from the Sega Genesis fully translated into Portuguese, allowing new players to experience one of the most memorable campaigns of the 16-bit era. " +
-            "Lead Max and his band of heroes through strategic battles against the dark forces of the Kingdom of Runefaust, blending grid-based combat, class progression, and an epic storyline. " +
-            "The Brazilian translation preserves the original charm and enhances immersion, making this classic adventure even more accessible for modern players.",
+            "Shining Force (PT-BR) traz o lendário RPG tático do Sega Genesis totalmente traduzido para o português, permitindo que novos jogadores vivenciem uma das campanhas mais memoráveis da era 16-bit. " +
+            "Lidere Max e seu grupo de heróis em batalhas estratégicas contra as forças sombrias do Reino de Runefaust, combinando combate em grid, progressão de classes e uma história épica. " +
+            "A tradução brasileira preserva o charme original e aumenta a imersão, tornando esta aventura clássica ainda mais acessível para os jogadores modernos.",
         players: "1 Player",
         developer: "Climax Entertainment",
         coverImage: "/assets/covers/shining-force.jpg",
@@ -130,9 +130,9 @@ export const rpgsGames: Game[] = [
         description:
             "A versão totalmente traduzida para PT-BR do clássico épico de estratégia do Mega Drive.",
         longDescription:
-            "Shining Force II (PT-BR) brings the acclaimed tactical RPG from the Sega Genesis fully translated into Portuguese, allowing new players to dive into one of the grandest adventures of the 16-bit era. " +
-            "Lead Bowie and the new Shining Force through strategic battles, exploring a vast world filled with secrets, evolving classes, hidden characters, and memorable encounters. " +
-            "The Brazilian translation preserves the original spirit and makes this classic journey even more immersive and accessible for modern players.",
+            "Shining Force II (PT-BR) traz o aclamado RPG tático do Sega Genesis totalmente traduzido para o português, permitindo que novos jogadores mergulhem em uma das maiores aventuras da era 16-bit. " +
+            "Lidere Bowie e a nova Shining Force em batalhas estratégicas, explorando um vasto mundo repleto de segredos, classes evolutivas, personagens ocultos e encontros memoráveis. " +
+            "A tradução brasileira preserva o espírito original e torna essa jornada clássica ainda mais imersiva e acessível para os jogadores modernos.",
         players: "1 Player",
         developer: "Sonic! Software Planning",
         coverImage: "/assets/covers/shiningforce2.jpg",

@@ -135,7 +135,31 @@ export const raceGames: Game[] = [
         coverImage: "/assets/covers/lamborghini_american_challenge.jpg",
         platform: "Nintendo",
         logo: "/assets/logos/lamborghini_american_challenge.png"
-    }
+    },
+    {
+        id: "ayrtonsenna-gp2",
+        title: "Ayrton Senna's GP",
+        slug: "ayrton-sennas-super-monaco-gp-ii",
+        embedUrl: "https://www.retrogames.cc/embed/21661-ayrton-senna-s-super-monaco-gp-ii-usa-en-ja.html",
+        year: 1992,
+        genre: "Race",
+        folder: "Race",
+        publisher: "Sega",
+        characters: ["Ayrton Senna", "F1 Drivers", "Pit Crews", "Rival Teams"],
+        description:
+            "Ayrton Senna’s legendary racing legacy brought to the 16-bit era — fast, technical, and intensely authentic.",
+        longDescription:
+            "Ayrton Senna's Super Monaco GP II (1992) refines the iconic Sega Formula One experience with direct input from the three-time world champion himself. " +
+            "Featuring technical circuits, responsive controls, and Senna’s signature challenge mode, the game blends realism with arcade speed to deliver one of the most respected 16-bit racing titles ever made. " +
+            "From precision braking to high-speed overtakes, every race carries the intensity and finesse of true Formula One competition. " +
+            "A timeless tribute to Senna’s mastery on the track — fast, focused, and unforgettable.",
+        players: "1 Player",
+        developer: "Sega AM2",
+        coverImage: "/assets/covers/ayrton_senna_gp2.jpg",
+        platform: "Genesis",
+        logo: "/assets/logos/ayrton_senna_gp2.png"
+    },
+
 ];
 
 export const raceFilters = ["Race"];
