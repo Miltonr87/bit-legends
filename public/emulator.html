@@ -40,11 +40,10 @@
         const lower = url.toLowerCase().split('?')[0];
         if (/\.(smc|sfc)$/.test(lower)) return 'snes';
         if (/\.(bin|gen|md)$/.test(lower)) return 'segaMD';
-        return 'snes'; // safe default
+        return 'snes';
       }
       const requestedCore = PLATFORM_TO_CORE[rawPlatform];
       const core = requestedCore || inferCoreFromRom(romUrl);
-
       if (!romUrl) {
         document.getElementById('game').innerHTML =
           '<div style="color:#fff;font:16px/1.5 system-ui, sans-serif;padding:20px;">Missing "rom" query param.</div>';
@@ -55,6 +54,8 @@
       window.EJS_gameUrl = romUrl;
       window.EJS_pathtodata = 'https://www.emulatorjs.com/data/';
       window.EJS_startOnLoaded = true;
+      window.EJS_saveFiles = true;
+      window.EJS_Storage = window.localStorage;
     </script>
     <script src="https://www.emulatorjs.com/loader.js"></script>
   </body>
