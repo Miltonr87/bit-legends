@@ -96,7 +96,7 @@ const Index = () => {
     'Sci-Fi': 'Futuristic worlds with advanced technology',
     Race: 'High-speed races through challenging tracks',
     Sports: 'Retro 16-bit sports classics',
-    RPG: 'Adventures with exploration and strategy',
+    RPG: 'Long adventures with exploration and strategy',
     Hack: 'Fan-made mods with enhancements',
     'PT-BR': 'Jogos hackeados traduzidos para o Português',
   };
@@ -126,8 +126,8 @@ const Index = () => {
           </h1>
           <p className="text-base sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-6 sm:mb-8 px-4">
             Step into a pixel-powered universe where every legend lives again:
-            fighters, heroes, racers, athletes and adventurers collide across
-            iconic worlds
+            fighters, heroes, athletes and adventurers collide across iconic
+            worlds
           </p>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mt-6">
             <AnimatePresence>

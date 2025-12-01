@@ -94,6 +94,59 @@ export const rpgsGames: Game[] = [
         logo: "/assets/logos/shiningforce.png"
     },
     {
+        id: "chronotrigger-rpg",
+        title: "Chrono Trigger",
+        slug: "chrono-trigger",
+        embedUrl: "https://www.retrogames.cc/embed/22857-chrono-trigger-usa.html",
+        year: 1995,
+        genre: "RPG",
+        folder: "RPG",
+        publisher: "Square",
+        characters: ["Crono", "Marle", "Lucca", "Frog", "Robo", "Ayla", "Magus"],
+        description:
+            "One of the greatest RPGs ever made — time-traveling adventure, unforgettable characters, and legendary storytelling.",
+        longDescription:
+            "Chrono Trigger stands as a masterpiece of the 16-bit era, blending innovative time-travel mechanics with a rich cast of heroes and a gripping narrative that spans multiple eras. " +
+            "Developed by Square’s iconic ‘Dream Team,’ the game delivers strategic, fast-flowing combat, emotional storytelling, and branching paths that shape the fate of the world. " +
+            "From prehistoric battles to futuristic ruins, every chapter unfolds with charm, depth, and unforgettable moments, making Chrono Trigger a timeless RPG classic celebrated across generations.",
+        players: "1 Player",
+        developer: "Square",
+        coverImage: "/assets/covers/chrono_trigger.jpg",
+        platform: "Nintendo",
+        logo: "/assets/logos/chrono_trigger.png"
+    },
+    {
+        id: "finalfantasy6-rpg",
+        title: "Final Fantasy VI",
+        slug: "final-fantasy-vi",
+        embedUrl: "https://www.retrogames.cc/embed/20257-final-fantasy-vi-japan-en-by-rpgone-v1-2b-all-bug-fixes.html",
+        year: 1994,
+        genre: "Fantasy / RPG",
+        folder: "RPG",
+        publisher: "Square",
+        characters: [
+            "Terra Branford",
+            "Locke",
+            "Edgar",
+            "Sabin",
+            "Celes",
+            "Shadow",
+            "Setzer",
+            "Kefka"
+        ],
+        description:
+            "A legendary JRPG masterpiece — emotional storytelling, a vast cast, and one of the most iconic villains in gaming.",
+        longDescription:
+            "Final Fantasy VI redefines the 16-bit RPG experience with its ensemble cast, powerful emotional arcs, and cinematic storytelling. " +
+            "Set in a world where magic and technology collide, the narrative follows Terra and an unforgettable group of heroes as they rise against the tyranny of Kefka — one of gaming’s most iconic antagonists. " +
+            "Featuring an expansive world, deep character progression, Mode 7 airship exploration, and a hauntingly beautiful soundtrack, this fan-translated edition with bug fixes preserves everything that made FFVI a timeless RPG classic.",
+        players: "1 Player",
+        developer: "Square",
+        coverImage: "/assets/covers/final_fantasy_vi.jpg",
+        platform: "Nintendo",
+        logo: "/assets/logos/final_fantasy_vi.png"
+    },
+    {
         id: "shining-force2-genesis",
         title: "Shining Force II",
         slug: "shining-force-ii",
