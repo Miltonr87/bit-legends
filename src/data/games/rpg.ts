@@ -3,21 +3,21 @@ import { Game } from "../index";
 export const rpgsGames: Game[] = [
     {
         id: "shadowrun-snes-ptbr",
-        title: "Shadowrun (PT-BR)",
+        title: "Shadowrun (Brasil)",
         slug: "shadowrun-snes-ptbr",
         embedUrl:
             "/emulator.html?rom=https://ozequlizbaymnvzeqkyh.supabase.co/storage/v1/object/public/game-rom/shadowrun-ptbr.smc",
         year: 1993,
-        genre: "Hack / PT-BR",
-        folder: "Hack / PT-BR",
+        genre: "RPG / Brasil",
+        folder: "RPG / Brasil",
         publisher: "Data East / DougRPG",
         characters: ["Jake Armitage", "Deckers", "Riggers", "Shamans"],
         description:
-            "A versão traduzida para PT-BR do clássico cyberpunk investigativo do SNES — mergulhe no submundo sombrio de Seattle.",
+            "A versão traduzida para Brasil do clássico cyberpunk investigativo do SNES — mergulhe no submundo sombrio de Seattle.",
         longDescription:
-            "Shadowrun (PT-BR) brings the acclaimed cyberpunk RPG from the Super Nintendo fully translated into Brazilian Portuguese, allowing new players to experience one of the most unique narratives of the 16-bit era. " +
-            "Step into the role of Jake Armitage as you uncover conspiracies involving megacorporations, magic, cybernetic implants, and hackers known as Deckers. " +
-            "Featuring tactical combat, semi-open world exploration, and full access to the Matrix, this translated version makes the journey more accessible — while preserving the noir atmosphere, sharp humor, and gritty tone of the Shadowrun universe.",
+            "Shadowrun (Brasil) traz o aclamado RPG cyberpunk do Super Nintendo totalmente traduzido para o português brasileiro, permitindo que novos jogadores vivenciem uma das narrativas mais únicas da era 16-bit. " +
+            "Assuma o papel de Jake Armitage enquanto desvenda conspirações envolvendo megacorporações, magia, implantes cibernéticos e hackers conhecidos como Deckers. " +
+            "Com combate tático, exploração em mundo semiaberto e acesso completo à Matrix, esta versão traduzida torna a jornada mais acessível — preservando a atmosfera noir, o humor afiado e o tom sombrio que definem o universo Shadowrun.",
         players: "1 Player",
         developer: "Beam Software / DougRPG",
         coverImage: "/assets/covers/shadowrun.jpg",
@@ -49,19 +49,19 @@ export const rpgsGames: Game[] = [
     },
     {
         id: "shining-force-genesis-ptbr",
-        title: "Shining Force (PT-BR)",
+        title: "Shining Force (Brasil)",
         slug: "shining-force-ptbr",
         embedUrl:
             "/emulator.html?rom=https://ozequlizbaymnvzeqkyh.supabase.co/storage/v1/object/public/game-rom/Shining-ptbr.gen",
         year: 1992,
-        genre: "Hack / PT-BR",
-        folder: "Hack / PT-BR",
+        genre: "RPG / Brasil",
+        folder: "RPG / Brasil",
         publisher: "Sega / Lobo-FF",
         characters: ["Max", "Anri", "Mae", "Zylo", "Shining Force"],
         description:
-            "A versão totalmente traduzida para PT-BR do clássico RPG tático da era 16-bit.",
+            "A versão totalmente traduzida para Brasil do clássico RPG tático da era 16-bit.",
         longDescription:
-            "Shining Force (PT-BR) traz o lendário RPG tático do Sega Genesis totalmente traduzido para o português, permitindo que novos jogadores vivenciem uma das campanhas mais memoráveis da era 16-bit. " +
+            "Shining Force (Brasil) traz o lendário RPG tático do Sega Genesis totalmente traduzido para o português, permitindo que novos jogadores vivenciem uma das campanhas mais memoráveis da era 16-bit. " +
             "Lidere Max e seu grupo de heróis em batalhas estratégicas contra as forças sombrias do Reino de Runefaust, combinando combate em grid, progressão de classes e uma história épica. " +
             "A tradução brasileira preserva o charme original e aumenta a imersão, tornando esta aventura clássica ainda mais acessível para os jogadores modernos.",
         players: "1 Player",
@@ -121,7 +121,7 @@ export const rpgsGames: Game[] = [
         slug: "final-fantasy-vi",
         embedUrl: "https://www.retrogames.cc/embed/20257-final-fantasy-vi-japan-en-by-rpgone-v1-2b-all-bug-fixes.html",
         year: 1994,
-        genre: "Fantasy / RPG",
+        genre: "RPG",
         folder: "RPG",
         publisher: "Square",
         characters: [
@@ -171,19 +171,19 @@ export const rpgsGames: Game[] = [
     },
     {
         id: "shining-force2-genesis-ptbr",
-        title: "Shining Force II (PT-BR)",
+        title: "Shining Force II (Brasil)",
         slug: "shining-force-ii-ptbr",
         embedUrl:
             "/emulator.html?rom=https://ozequlizbaymnvzeqkyh.supabase.co/storage/v1/object/public/game-rom/shining-II-ptbr.gen",
         year: 1993,
-        genre: "Hack / PT-BR",
-        folder: "Hack / PT-BR",
+        genre: "RPG / Brasil",
+        folder: "RPG / Brasil",
         publisher: "Sega / Brazilian Team",
         characters: ["Bowie", "Sarah", "Jaha", "Kazín", "Peter", "Shining Force"],
         description:
-            "A versão totalmente traduzida para PT-BR do clássico épico de estratégia do Mega Drive.",
+            "A versão totalmente traduzida para Brasil do clássico épico de estratégia do Mega Drive.",
         longDescription:
-            "Shining Force II (PT-BR) traz o aclamado RPG tático do Sega Genesis totalmente traduzido para o português, permitindo que novos jogadores mergulhem em uma das maiores aventuras da era 16-bit. " +
+            "Shining Force II (Brasil) traz o aclamado RPG tático do Sega Genesis totalmente traduzido para o português, permitindo que novos jogadores mergulhem em uma das maiores aventuras da era 16-bit. " +
             "Lidere Bowie e a nova Shining Force em batalhas estratégicas, explorando um vasto mundo repleto de segredos, classes evolutivas, personagens ocultos e encontros memoráveis. " +
             "A tradução brasileira preserva o espírito original e torna essa jornada clássica ainda mais imersiva e acessível para os jogadores modernos.",
         players: "1 Player",

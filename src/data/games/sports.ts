@@ -8,8 +8,8 @@ export const sportsGames: Game[] = [
         embedUrl:
             "/emulator.html?rom=https://ozequlizbaymnvzeqkyh.supabase.co/storage/v1/object/public/game-rom/br24c.sfc",
         year: 2024,
-        genre: "Hack / PT-BR",
-        folder: "Hack / PT-BR",
+        genre: "Sports / Brasil",
+        folder: "Sports / Brasil",
         publisher: "Falcon BR",
         characters: ["Brazilian Teams", "Classic Clubs", "Modern Stars", "Commentators"],
         description:
@@ -31,8 +31,8 @@ export const sportsGames: Game[] = [
         embedUrl:
             "/emulator.html?rom=https://ozequlizbaymnvzeqkyh.supabase.co/storage/v1/object/public/game-rom/Brasileiro2025.smc",
         year: 2025,
-        genre: "Hack / PT-BR",
-        folder: "Hack / PT-BR",
+        genre: "Sports / Brasil",
+        folder: "Sports  / Brasil",
         publisher: "BSTAR TEAM",
         characters: ["Brazilian Teams", "Classic Clubs", "Modern Stars", "Commentators"],
         description:
@@ -55,8 +55,8 @@ export const sportsGames: Game[] = [
         embedUrl:
             "/emulator.html?rom=https://ozequlizbaymnvzeqkyh.supabase.co/storage/v1/object/public/game-rom/Copa70.sfc&platform=snes",
         year: 2025,
-        genre: "Hack / PT-BR",
-        folder: "Hack / PT-BR",
+        genre: "Sports / Brasil",
+        folder: "Sports / Brasil",
         publisher: "Falcon BR",
         characters: ["Brazil 1970 Squad", "Pelé", "Tostão", "Rivelino", "Jairzinho", "Carlos Alberto", "World Teams"],
         description:
@@ -215,8 +215,8 @@ export const sportsGames: Game[] = [
         slug: "futebol-brasileiro-96",
         embedUrl: "https://www.retrogames.cc/embed/46464-futebol-brasileiro-96.html",
         year: 1996,
-        genre: "Hack / PT-BR",
-        folder: "Hack / PT-BR",
+        genre: "Sports / Brasil",
+        folder: "Sports / Brasil",
         publisher: "TecToy",
         characters: ["Brazilian Teams", "Classic Clubs", "Championship Squads", "Fans"],
         description:
@@ -232,6 +232,30 @@ export const sportsGames: Game[] = [
         coverImage: "/assets/covers/futebol_brasileiro_96.jpg",
         platform: "Nintendo",
         logo: "/assets/logos/futebol_brasileiro_96.png"
+    },
+    {
+        id: "pernambucano2025-sports",
+        title: "Pernambucano 2025",
+        slug: "pernambucano-2025",
+        embedUrl:
+            "/emulator.html?rom=https://ozequlizbaymnvzeqkyh.supabase.co/storage/v1/object/public/game-rom/pernambucano.sfc",
+        year: 2025,
+        genre: "Sports / Brasil",
+        folder: "Sports / Brasil",
+        publisher: "Fan Hack BR",
+        characters: ["Sport", "Náutico", "Santa Cruz", "Afogados", "Central", "Retrô", "Petrolina", "Jaguar", "Decisão Sertânia", "Manguary"],
+        description:
+            "Uma edição moderna e regional, trazendo o Campeonato Pernambucano para o mundo 16-bit com paixão e rivalidade local.",
+        longDescription:
+            "Pernambucano 2025 é uma edição personalizada que traz o clima vibrante do futebol pernambucano para o SNES, recriando a intensidade e rivalidade entre Sport, Santa Cruz, Náutico e outras equipes tradicionais do estado. " +
+            "Com uniformes atualizados, estádios locais recriados em estilo 16-bit e uma gameplay acelerada inspirada nos clássicos da Konami, esta versão captura a essência do futebol nordestino com autenticidade e carisma. " +
+            "Além disso, apresenta detalhes regionais, cantos de arquibancada, identidade visual inspirada nos clubes e uma ambientação que remete aos grandes clássicos disputados no calor da torcida pernambucana. " +
+            "Uma celebração da cultura esportiva de Pernambuco, feita por fãs e para fãs que vivem o futebol local.",
+        players: "1-2 Players",
+        developer: "Falcon BR",
+        coverImage: "/assets/covers/pernambucano2025.jpg",
+        platform: "Nintendo",
+        logo: "/assets/logos/pernambucano2025.png"
     },
     {
         id: "mariolemieux-hockey-sports",
@@ -264,7 +288,7 @@ export const sportsGames: Game[] = [
             "/emulator.html?rom=https://ozequlizbaymnvzeqkyh.supabase.co/storage/v1/object/public/game-rom/NHL2025.bin&platform=genesis",
         year: 2025,
         genre: "Sports",
-        folder: "Sports / Hack",
+        folder: "Sports",
         publisher: "Adam Catalyst",
         characters: ["Teams 2025", "Modern Rosters", "Updated Arenas", "Classic Commentary"],
         description:

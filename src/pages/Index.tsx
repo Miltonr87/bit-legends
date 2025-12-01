@@ -96,9 +96,9 @@ const Index = () => {
     'Sci-Fi': 'Futuristic worlds with advanced technology',
     Race: 'High-speed races through challenging tracks',
     Sports: 'Retro 16-bit sports classics',
-    RPG: 'Long adventures with exploration and strategy',
+    RPG: 'Diverse RPG adventures with exploration',
     Hack: 'Fan-made mods with enhancements',
-    'PT-BR': 'Jogos hackeados traduzidos para o Português',
+    Brasil: 'Jogos hackeados e traduzidos para o PT-BR',
   };
 
   return (
