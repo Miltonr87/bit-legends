@@ -218,7 +218,7 @@ export const sportsGames: Game[] = [
         genre: "Sports / Brasil",
         folder: "Sports / Brasil",
         publisher: "TecToy",
-        characters: ["Brazilian Teams", "Classic Clubs", "Championship Squads", "Fans"],
+        characters: ["Palmeiras", "Vasco", "Bahia", "Flamengo", "Grêmio", "Fluminense"],
         description:
             "A vintage SNES football classic bringing Brazil’s 1996 season to life with local flair and arcade action.",
         longDescription:
@@ -226,7 +226,6 @@ export const sportsGames: Game[] = [
             "Desenvolvido e localizado pela TecToy, esta versão destaca a paixão das seleções nacionais e dos clubes icônicos do Brasil em meados dos anos 90. " +
             "Com narração empolgante, gameplay acelerado e o estilo inconfundível dos motores de futebol da Konami, entrega um retrato autêntico e vibrante de como o Brasil jogava, comemorava e vivia o futebol nos anos 90. " +
             "Indispensável para fãs de esportes retrô e da história do futebol nacional.",
-
         players: "1-2 Players",
         developer: "TecToy / Hack",
         coverImage: "/assets/covers/futebol_brasileiro_96.jpg",

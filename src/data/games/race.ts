@@ -52,13 +52,13 @@ export const raceGames: Game[] = [
         slug: "biker-mice-from-mars-usa",
         embedUrl: "https://www.retrogames.cc/embed/20158-biker-mice-from-mars-usa.html",
         year: 1994,
-        genre: "Indie / Race",
-        folder: "Indie / Race",
+        genre: "Global Comics / Race",
+        folder: "Global Comics / Race",
         publisher: "Konami",
         characters: ["Throttle", "Vinnie", "Modo", "Limburger", "Greasepit", "Dr.Karbunkle"],
         description: "Cartoon motorcycle racing on Mars!",
         longDescription:
-            "Biker Mice from Mars (1994) created by Rick Ungar and published by Oni Press as and independent comics book puts players behind the handlebars of the galaxy’s most radical rodent trio. " +
+            "Biker Mice from Mars (1994) created by Rick Ungar and published by Oni Press as and Global Comics book puts players behind the handlebars of the galaxy’s most radical rodent trio. " +
             "Fight through twisting tracks, dodge environmental hazards, and fire weapons at rival bikers as you try to take down the villainous Limburger. " +
             "Konami’s colorful graphics, fast gameplay, and cartoon humor perfectly capture the spirit of the TV show. " +
             "A wild, high-energy SNES classic packed with personality and turbo-charged mayhem.",

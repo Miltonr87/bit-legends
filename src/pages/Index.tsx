@@ -89,7 +89,7 @@ const Index = () => {
     Urban: 'Streets and gangs in pure mayhem',
     Horror: 'Dark atmospheres with terrifying creatures',
     Tournament: 'Head-to-head battles with unique fighters',
-    Indie: 'Global characters from independent comics',
+    'Global Comics': 'Characters from comic publishers worldwide',
     'DC Comics': 'Metahumans superheroes and vigilantes',
     'Marvel Comics': 'Avengers and mutants facing cosmic threats',
     Rare: 'Cancelled prototypes or limited releases',
@@ -125,9 +125,8 @@ const Index = () => {
             <span className="text-foreground">16-Bit Game Collection</span>
           </h1>
           <p className="text-base sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-6 sm:mb-8 px-4">
-            Step into a pixel-powered universe where every legend lives again:
-            fighters, heroes, athletes and adventurers collide across iconic
-            worlds
+            Step into a pixel-powered universe where every legend lives again
+            across classic consoles and arcades
           </p>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mt-6">
             <AnimatePresence>
