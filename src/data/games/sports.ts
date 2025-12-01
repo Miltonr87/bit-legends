@@ -243,7 +243,7 @@ export const sportsGames: Game[] = [
         genre: "Sports / Brasil",
         folder: "Sports / Brasil",
         publisher: "Fan Hack BR",
-        characters: ["Sport", "Náutico", "Santa Cruz", "Afogados", "Central", "Retrô", "Petrolina", "Jaguar", "Decisão Sertânia", "Manguary"],
+        characters: ["Sport", "Náutico", "Santa Cruz", "America", "Vera Cruz", "Ypiranga", "Ipojuca", "Aguia", "Afogados", "Porto"],
         description:
             "Uma edição moderna e regional, trazendo o Campeonato Pernambucano para o mundo 16-bit com paixão e rivalidade local.",
         longDescription:
