@@ -90,7 +90,7 @@ export const rpgsGames: Game[] = [
         players: "1 Player",
         developer: "Climax Entertainment",
         coverImage: "/assets/covers/shining-force.jpg",
-        platform: "Sega Genesis",
+        platform: "Genesis",
         logo: "/assets/logos/shiningforce.png"
     },
     {
@@ -191,6 +191,30 @@ export const rpgsGames: Game[] = [
         coverImage: "/assets/covers/shiningforce2.jpg",
         platform: "Genesis",
         logo: "/assets/logos/shiningforceII.png"
+    },
+    {
+        id: "dd-eternalsun-rpg",
+        title: "D&D: Eternal Sun",
+        slug: "dungeons-and-dragons-eternal-sun",
+        embedUrl:
+            "https://www.retrogames.cc/embed/30341-dungeons-dragons-warriors-of-the-eternal-sun-usa-europe.html",
+        year: 1992,
+        genre: "RPG",
+        folder: "RPG",
+        publisher: "TSR / Sega",
+        characters: ["Clerics", "Fighters", "Dwarves", "Elves", "Monsters of Mystara"],
+        description:
+            "A classic D&D adventure on the Genesis featuring exploration, dungeon crawling, and party-based strategy.",
+        longDescription:
+            "Dungeons & Dragons: Warriors of the Eternal Sun brings the iconic tabletop universe of Mystara to the Sega Genesis with a mix of overworld exploration, first-person dungeons, and classic party-based RPG mechanics. " +
+            "Create your party, battle monstrous creatures, and uncover the secrets of a strange valley trapped under an eternal sun. " +
+            "With turn-based combat, character progression, and faithful D&D classes and races, the game delivers a rich and atmospheric journey for fans of old-school role-playing. " +
+            "A unique blend of strategy, exploration, and fantasy storytelling that remains a standout RPG in the Genesis library.",
+        players: "1 Player",
+        developer: "Westwood Associates",
+        coverImage: "/assets/covers/dd_eternal_sun.jpg",
+        platform: "Genesis",
+        logo: "/assets/logos/dd_eternal_sun.png"
     },
     {
         id: "alcahest-rpg",
