@@ -283,6 +283,29 @@ export const rpgsGames: Game[] = [
         coverImage: "/assets/covers/alcahest.jpg",
         platform: "Nintendo",
         logo: "/assets/logos/alcahest.png"
+    },
+    {
+        id: "dbz-supersaiyadensetsu-ptbr",
+        title: "Dragon Ball Z (Brasil)",
+        slug: "dragon-ball-z-super-saiya-densetsu-ptbr",
+        embedUrl:
+            "/emulator.html?rom=https://ozequlizbaymnvzeqkyh.supabase.co/storage/v1/object/public/game-rom/dbz-ptbr.smc",
+        year: 1992,
+        genre: "Brasil",
+        folder: "Brasil",
+        publisher: "Bandai / Equipe Brasileira",
+        characters: ["Goku", "Gohan", "Vegeta", "Piccolo", "Kuririn", "Freeza"],
+        description:
+            "A versão traduzida para o Brasil do clássico RPG de Dragon Ball Z no Super Nintendo, cobrindo as sagas Saiyajin e Freeza.",
+        longDescription:
+            "Dragon Ball Z: Super Saiya Densetsu (Brasil) apresenta o lendário RPG do Super Nintendo totalmente traduzido para o português, permitindo que fãs vivenciem as sagas Saiyajin e Freeza com fidelidade e nostalgia. " +
+            "Acompanhe Goku, Gohan, Vegeta e os demais guerreiros Z em batalhas estratégicas baseadas em cartas, exploração por cenários icônicos e eventos que recriam momentos marcantes do anime. " +
+            "Com uma tradução dedicada que torna diálogos, menus e técnicas mais acessíveis, esta versão PT-BR oferece uma experiência envolvente e autêntica para novos jogadores e veteranos de Dragon Ball.",
+        players: "1 Player",
+        developer: "TOSE / Bandai",
+        coverImage: "/assets/covers/dbz_super_saiya_densetsu.jpg",
+        platform: "Nintendo",
+        logo: "/assets/logos/dbz_super_saiya_densetsu.png"
     }
 ];
 

@@ -814,7 +814,34 @@ export const fightGames: Game[] = [
         coverImage: "/assets/covers/street_fighter_2.jpg",
         platform: "Arcade",
         logo: "/assets/logos/street_fighter_ii_champion_edition.png"
-    }
+    },
+    {
+        id: "dbz-hyperdimension",
+        title: "Dragon Ball Z: Hyper Dimension",
+        slug: "dragon-ball-z-hyper-dimension",
+        embedUrl: "https://www.retrogames.cc/embed/24039-dragon-ball-z-hyper-dimension-france.html",
+        year: 1996,
+        genre: "Tournament",
+        folder: "Tournament",
+        publisher: "Bandai / TOSE",
+        characters: [
+            "Goku", "Vegeta", "Gohan", "Piccolo",
+            "Trunks", "Frieza", "Cell", "Majin Buu"
+        ],
+        description:
+            "A fast, stylish 16-bit Dragon Ball Z fighter with cinematic supers and anime-accurate combat.",
+        longDescription:
+            "Dragon Ball Z: Hyper Dimension (1996) delivers one of the most polished and visually striking fighting experiences on the Super Nintendo. " +
+            "Featuring fluid animations, dramatic special attacks, and a combat system inspired directly by the anime, the game showcases iconic battles across the Saiyan, Namek, Android, and Buu sagas. " +
+            "Each fighter has unique move sets, explosive supers, and stage transitions that push the SNES hardware to its limits. " +
+            "With its fast-paced action, clean presentation, and faithful recreation of DBZ’s intensity, Hyper Dimension stands as a fan-favorite tournament fighter and a showpiece 16-bit Dragon Ball experience.",
+        players: "1–2 Players",
+        developer: "TOSE",
+        coverImage: "/assets/covers/dbz_hyper_dimension.jpg",
+        platform: "Nintendo",
+        logo: "/assets/logos/dbz_hyper_dimension.png"
+    },
+
 ]
 
 export const fightFilters = [

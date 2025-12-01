@@ -165,11 +165,11 @@ export const sportsGames: Game[] = [
         logo: "/assets/logos/tecmo_super_nba.png"
     },
     {
-        id: "iss-deluxe-sports",
-        title: "ISS Deluxe",
-        slug: "iss-deluxe",
-        embedUrl: "https://www.retrogames.cc/embed/23714-international-superstar-soccer-deluxe-usa.html",
-        year: 1995,
+        id: "superstar-soccer",
+        title: "Superstar Soccer",
+        slug: "superstar-soccer",
+        embedUrl: "https://www.retrogames.cc/embed/19764-international-superstar-soccer-usa.html",
+        year: 1994,
         genre: "Sports",
         folder: "Sports",
         publisher: "Konami",
@@ -177,8 +177,8 @@ export const sportsGames: Game[] = [
         description:
             "The definitive 16-bit football experience — fast, polished, and iconic on every level.",
         longDescription:
-            "International Superstar Soccer Deluxe (1995) refines the classic SNES football formula with smoother animations, sharper controls, and an expanded roster of world teams. " +
-            "Featuring lively commentary, dynamic crowd reactions, strategic formations, and a variety of tournament modes, ISS Deluxe sets the gold standard for 16-bit sports games. " +
+            "International Superstar Soccer (1994) refines the classic SNES football formula with smoother animations, sharper controls, and an expanded roster of world teams. " +
+            "Featuring lively commentary, dynamic crowd reactions, strategic formations, and a variety of tournament modes, ISS sets the gold standard for 16-bit sports games. " +
             "Its blend of arcade action and tactical depth made it a worldwide favorite, capturing the excitement, flair, and competitive spirit of global football like no other game of its era. " +
             "A timeless masterpiece that continues to influence football games to this day.",
         players: "1-2 Players",
