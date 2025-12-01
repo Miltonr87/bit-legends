@@ -52,7 +52,7 @@ export const beatnupGames: Game[] = [
     embedUrl: "https://www.retrogames.cc/embed/7951-blade-master-world-imperfect-sound-and-graphics.html",
     year: 1991,
     genre: "Fantasy",
-    folder: "RPG",
+    folder: "Fantasy",
     publisher: "Irem",
     characters: ["Roy", "Arnold"],
     description: "Epic sword-swinging fantasy adventure.",
@@ -1548,4 +1548,5 @@ export const beatnupFilters = [
   "Marvel Comics",
   "DC Comics",
   'Indie',
+  "Rare"
 ];

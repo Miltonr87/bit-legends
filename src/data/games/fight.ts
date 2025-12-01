@@ -823,4 +823,5 @@ export const fightFilters = [
     "Sci-Fi",
     "Horror",
     "Tournament",
+    "Rare"
 ];

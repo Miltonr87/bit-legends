@@ -85,7 +85,7 @@ const Index = () => {
   };
 
   const genreDescriptions: Record<string, string> = {
-    Fantasy: 'Epic RPG quests and magical realms',
+    Fantasy: 'Epic quests and magical realms',
     Urban: 'Streets and gangs in pure mayhem',
     Horror: 'Dark atmospheres with terrifying creatures',
     Tournament: 'Head-to-head battles with unique fighters',
@@ -94,8 +94,11 @@ const Index = () => {
     'Marvel Comics': 'Avengers and mutants facing cosmic threats',
     Rare: 'Cancelled prototypes or limited releases',
     'Sci-Fi': 'Futuristic worlds with advanced technology',
-    Race: 'High-speed races through classic tracks',
-    Sports: 'Retro sports clashes and hacked 16-bit',
+    Race: 'High-speed races through challenging tracks',
+    Sports: 'Retro 16-bit sports classics',
+    RPG: 'Adventures with exploration and strategy',
+    Hack: 'Fan-made mods with enhancements',
+    'PT-BR': 'Jogos hackeados traduzidos para o Português',
   };
 
   return (

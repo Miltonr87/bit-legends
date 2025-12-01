@@ -8,16 +8,16 @@ export const sportsGames: Game[] = [
         embedUrl:
             "/emulator.html?rom=https://ozequlizbaymnvzeqkyh.supabase.co/storage/v1/object/public/game-rom/br24c.sfc",
         year: 2024,
-        genre: "Sports / Hack",
-        folder: "Sports",
+        genre: "Hack / PT-BR",
+        folder: "Hack / PT-BR",
         publisher: "Falcon BR",
         characters: ["Brazilian Teams", "Classic Clubs", "Modern Stars", "Commentators"],
         description:
             "A modern hack of the legendary SNES football classic — fully updated for the 2025 Brazilian Championship.",
         longDescription:
-            "Brasileiro 2024 is a passionate fan-made hack made by Falcon BR that transforms the International Super Star Soccer classic into a modern celebration of Brazilian football. " +
-            "Featuring updated kits, stadiums, and complete 2024 rosters from iconic clubs such as Flamengo and Palmeiras, this edition captures the real spirit of the Série A. " +
-            "With enhanced AI, authentic Brazilian visuals, and the same fast-paced arcade feel that defined 16-bit football, this ROM hack blends nostalgia with today’s competitive energy: a true love letter to Brazil’s football legacy and its devoted fans.",
+            "Brasileiro 2024 é um hack apaixonado criado por fãs da Falcon BR que transforma o clássico International Super Star Soccer em uma celebração moderna do futebol brasileiro. " +
+            "Com uniformes atualizados, novos estádios e elencos completos de 2024 de clubes icônicos como Flamengo e Palmeiras, esta edição captura o verdadeiro espírito da Série A. " +
+            "Com IA aprimorada, visuais brasileiros autênticos e o mesmo ritmo arcade acelerado que definiu o futebol 16-bit, este ROM hack mistura nostalgia com a energia competitiva atual — uma verdadeira carta de amor ao legado do futebol brasileiro e aos seus torcedores.",
         players: "1-2 Players",
         developer: "Falcon BR",
         coverImage: "/assets/covers/brasileirao2024.jpg",
@@ -31,17 +31,17 @@ export const sportsGames: Game[] = [
         embedUrl:
             "/emulator.html?rom=https://ozequlizbaymnvzeqkyh.supabase.co/storage/v1/object/public/game-rom/Brasileiro2025.smc",
         year: 2025,
-        genre: "Sports / Hack",
-        folder: "Sports",
+        genre: "Hack / PT-BR",
+        folder: "Hack / PT-BR",
         publisher: "BSTAR TEAM",
         characters: ["Brazilian Teams", "Classic Clubs", "Modern Stars", "Commentators"],
         description:
             "A 2025 fan-made upgrade of the classic SNES football hit — fully rebuilt with new rosters, visuals, and Brazilian passion.",
         longDescription:
-            "Brasileiro 2025 is a premium fan-made hack developed by the BSTAR TEAM, enhancing the legendary International Super Star Soccer with a complete 2025 Brazilian Championship overhaul. " +
-            "It features fully updated squads, refreshed kits, improved stadium atmospheres, and refined gameplay balancing that retains the iconic 16-bit football feel. " +
-            "Authentic club identities, modern player rosters, and community-driven polish come together to deliver the most up-to-date Brazilian football experience on the SNES. " +
-            "A faithful tribute to Brazil’s football culture, crafted by dedicated modders for passionate fans.",
+            "Brasileiro 2025 é um hack premium feito por fãs e desenvolvido pela BSTAR TEAM, aprimorando o lendário International Super Star Soccer com uma reformulação completa do Campeonato Brasileiro de 2025. " +
+            "Traz elencos totalmente atualizados, uniformes renovados, atmosferas de estádio aprimoradas e um balanceamento de gameplay refinado que mantém a icônica essência do futebol 16-bit. " +
+            "Identidade autêntica dos clubes, elencos modernos e um polimento guiado pela comunidade se unem para oferecer a experiência mais atualizada do futebol brasileiro no SNES. " +
+            "Um tributo fiel à cultura do futebol nacional, criado por modders dedicados para fãs apaixonados.",
         players: "1-2 Players",
         developer: "BSTAR TEAM",
         coverImage: "/assets/covers/brasileirao2025.jpg",
@@ -55,18 +55,18 @@ export const sportsGames: Game[] = [
         embedUrl:
             "/emulator.html?rom=https://ozequlizbaymnvzeqkyh.supabase.co/storage/v1/object/public/game-rom/Copa70.sfc&platform=snes",
         year: 2025,
-        genre: "Sports / Hack",
-        folder: "Sports",
+        genre: "Hack / PT-BR",
+        folder: "Hack / PT-BR",
         publisher: "Falcon BR",
         characters: ["Brazil 1970 Squad", "Pelé", "Tostão", "Rivelino", "Jairzinho", "Carlos Alberto", "World Teams"],
         description:
             "A retro SNES hack celebrating the 1970 World Cup — relive Pelé’s golden era in 16-bit glory.",
         longDescription:
-            "World Cup Mexico 70 (Hack) is a fan-crafted tribute made by Falcon BR that transports players back to the golden age of football. " +
-            "Built upon the classic SNES football engine, this ROM hack recreates the legendary 1970 FIFA World Cup in stunning 16-bit form, complete with authentic national teams, vintage uniforms, and Mexico’s sun-soaked stadiums. " +
-            "Step into the boots of Pelé, Tostão, Jairzinho, and Rivelino as they lead Brazil’s unforgettable squad to eternal glory, accompanied by nostalgic commentary and dynamic crowd chants. " +
-            "Every pass, goal, and celebration is infused with historical accuracy and emotional detail, capturing the fluid beauty and joy of the world’s most iconic tournament. " +
-            "From tactical duels to explosive counterattacks, this ROM hack reimagines the World Cup’s magic for retro enthusiasts.",
+            "World Cup Mexico 70 (Hack) é uma homenagem feita por fãs e criada por Falcon BR que transporta os jogadores de volta à era de ouro do futebol. " +
+            "Construído sobre o clássico motor de futebol do SNES, este ROM hack recria a lendária Copa do Mundo de 1970 em um impressionante formato 16-bit, com seleções autênticas, uniformes de época e os icônicos estádios ensolarados do México. " +
+            "Entre em campo como Pelé, Tostão, Jairzinho e Rivelino enquanto lideram a inesquecível seleção brasileira rumo à eternidade, acompanhados por narrações nostálgicas e cantos vibrantes da torcida. " +
+            "Cada passe, gol e comemoração é carregado de fidelidade histórica e emoção, capturando a beleza fluida e a alegria do torneio mais icônico do mundo. " +
+            "Dos duelos táticos aos contra-ataques explosivos, este ROM hack reinventa a magia da Copa para os fãs de retro games.",
         players: "1-2 Players",
         developer: "Falcon BR",
         coverImage: "/assets/covers/worldcup70.jpg",
@@ -82,7 +82,7 @@ export const sportsGames: Game[] = [
         genre: "Sports",
         folder: "Sports",
         publisher: "Midway / Acclaim",
-        characters: ["NBA Stars", "Classic Duos", "Commentators", "Crowd Effects"],
+        characters: ["NBA Stars", "Classic Duos"],
         description:
             "The legendary 2-on-2 basketball arcade hit that defined a generation — fast, flashy, and on fire!",
         longDescription:
@@ -97,22 +97,136 @@ export const sportsGames: Game[] = [
         logo: "/assets/logos/nba_jam.png"
     },
     {
+        id: "californiagames-sports",
+        title: "California Games",
+        slug: "california-games",
+        embedUrl: "https://www.retrogames.cc/embed/28452-california-games-usa-europe.html",
+        year: 1989,
+        genre: "Sports",
+        folder: "Sports",
+        publisher: "Epyx / Sega",
+        characters: ["Skaters", "Surfers", "BMX Riders", "Extreme Athletes"],
+        description:
+            "A sun-soaked collection of extreme sports challenges inspired by California’s iconic beach culture.",
+        longDescription:
+            "California Games delivers a vibrant mix of extreme sports brought to life through the classic 16-bit Sega Genesis flair. " +
+            "Compete in skateboarding, surfing, BMX, footbag, roller skating, and more — each event capturing the energy, attitude, and style of California’s golden coastal scene. " +
+            "With its upbeat presentation, colorful animations, and variety of arcade-style challenges, this edition became a nostalgic favorite for sports fans and retro players alike. " +
+            "Whether carving waves or pulling off tricks on pavement, California Games embodies the carefree spirit of West Coast competition.",
+        players: "1-2 Players",
+        developer: "Epyx",
+        coverImage: "/assets/covers/california_games.jpg",
+        platform: "Genesis",
+        logo: "/assets/logos/california_games.png"
+    },
+    {
+        id: "nbaaction94-sports",
+        title: "NBA Action '94",
+        slug: "nba-action-94",
+        embedUrl: "https://www.retrogames.cc/embed/19074-nba-action-94-usa.html",
+        year: 1994,
+        genre: "Sports",
+        folder: "Sports",
+        publisher: "Sega",
+        characters: ["NBA Stars", "Teams of the 90s"],
+        description:
+            "A fast, simulation-focused NBA experience packed with real teams, smooth gameplay, and authentic 90s style.",
+        longDescription:
+            "NBA Action '94 brings an energetic and simulation-driven basketball experience to the Sega Genesis, featuring real NBA teams and rosters from the 1993–94 season. " +
+            "With fluid animations, responsive controls, and a broadcast-style presentation, the game captures the excitement of 90s hardwood battles. " +
+            "From smooth jump shots to intense defensive plays, NBA Action balances arcade fun with a more strategic approach than many of its contemporaries. " +
+            "A standout for fans who want a classic NBA season wrapped in true 16-bit atmosphere.",
+        players: "1-2 Players",
+        developer: "Sega",
+        coverImage: "/assets/covers/nba_action94.jpg",
+        platform: "Genesis",
+        logo: "/assets/logos/nba_action.png"
+    },
+    {
+        id: "tecmosupernba-sports",
+        title: "Tecmo Super NBA",
+        slug: "tecmo-super-nba",
+        embedUrl: "https://www.retrogames.cc/embed/20235-tecmo-super-nba-basketball-usa.html",
+        year: 1992,
+        genre: "Sports",
+        folder: "Sports",
+        publisher: "Tecmo",
+        characters: ["NBA Stars", "90s Teams"],
+        description:
+            "Tecmo’s fast-paced, stat-rich take on 90s NBA basketball — smooth, lively, and authentically arcade.",
+        longDescription:
+            "Tecmo Super NBA Basketball brings the excitement of early 90s NBA action to the Super Nintendo with smooth gameplay, real teams, and iconic players of the era. " +
+            "Featuring digitized commentary, a full season mode, team stats, and Tecmo’s signature arcade-style presentation, the game strikes a balance between fast action and strategic depth. " +
+            "Whether sinking three-pointers, orchestrating fast breaks, or dominating in the paint, this SNES classic captures the spirit of NBA competition with style and energy.",
+        players: "1-2 Players",
+        developer: "Tecmo",
+        coverImage: "/assets/covers/tecmo_super_nba.jpg",
+        platform: "Nintendo",
+        logo: "/assets/logos/tecmo_super_nba.png"
+    },
+    {
+        id: "iss-deluxe-sports",
+        title: "ISS Deluxe",
+        slug: "iss-deluxe",
+        embedUrl: "https://www.retrogames.cc/embed/23714-international-superstar-soccer-deluxe-usa.html",
+        year: 1995,
+        genre: "Sports",
+        folder: "Sports",
+        publisher: "Konami",
+        characters: ["National Teams"],
+        description:
+            "The definitive 16-bit football experience — fast, polished, and iconic on every level.",
+        longDescription:
+            "International Superstar Soccer Deluxe (1995) refines the classic SNES football formula with smoother animations, sharper controls, and an expanded roster of world teams. " +
+            "Featuring lively commentary, dynamic crowd reactions, strategic formations, and a variety of tournament modes, ISS Deluxe sets the gold standard for 16-bit sports games. " +
+            "Its blend of arcade action and tactical depth made it a worldwide favorite, capturing the excitement, flair, and competitive spirit of global football like no other game of its era. " +
+            "A timeless masterpiece that continues to influence football games to this day.",
+        players: "1-2 Players",
+        developer: "Konami",
+        coverImage: "/assets/covers/iss_deluxe.jpg",
+        platform: "Nintendo",
+        logo: "/assets/logos/iss_deluxe.png"
+    },
+    {
+        id: "madden97-sports",
+        title: "Madden NFL 97",
+        slug: "madden-nfl-97",
+        embedUrl: "https://www.retrogames.cc/embed/23708-madden-nfl-97-usa.html",
+        year: 1996,
+        genre: "Sports",
+        folder: "Sports",
+        publisher: "EA Sports",
+        characters: ["NFL Teams"],
+        description:
+            "A major leap in 16-bit football realism, combining deep playbooks, real teams, and fast arcade action.",
+        longDescription:
+            "Madden NFL 97 pushes the Sega Genesis football formula to new heights with sharper AI, expanded playbooks, and fully licensed NFL teams from the 1996 season. " +
+            "Featuring smoother animations, improved player sprites, strategic depth, and authentic stadium presentation, it delivers one of the most polished Madden experiences on 16-bit hardware. " +
+            "From dramatic touchdowns to clutch defensive stops, Madden NFL 97 blends simulation accuracy with classic arcade intensity, securing its place among the franchise’s best early entries.",
+        players: "1-2 Players",
+        developer: "EA Sports",
+        coverImage: "/assets/covers/madden_97.jpg",
+        platform: "Nintendo",
+        logo: "/assets/logos/madden_97.png"
+    },
+    {
         id: "futebolbrasileiro96-sports",
         title: "Futebol Brasileiro 96",
         slug: "futebol-brasileiro-96",
         embedUrl: "https://www.retrogames.cc/embed/46464-futebol-brasileiro-96.html",
         year: 1996,
-        genre: "Sports / Hack",
-        folder: "Sports",
+        genre: "Hack / PT-BR",
+        folder: "Hack / PT-BR",
         publisher: "TecToy",
         characters: ["Brazilian Teams", "Classic Clubs", "Championship Squads", "Fans"],
         description:
             "A vintage SNES football classic bringing Brazil’s 1996 season to life with local flair and arcade action.",
         longDescription:
-            "Futebol Brasileiro 96 (1996)  is a nostalgic Brazilian edition of the 16-bit football era of Brazilian Championship 96, capturing the golden days of SNES sports games. " +
-            "Developed and localized by TecToy, this version highlights the passion of Brazil’s national teams and iconic clubs from the mid-90s. " +
-            "With lively commentary, fast-paced gameplay, and the unmistakable style of Konami’s football engines, it delivers an authentic and vibrant snapshot of how Brazil played, celebrated, and lived football in the 90s. " +
-            "A must-play for fans of retro sports and national football history.",
+            "Futebol Brasileiro 96 (1996) é uma edição brasileira nostálgica da era 16-bit do Campeonato Brasileiro de 96, capturando a época de ouro dos jogos de futebol no SNES. " +
+            "Desenvolvido e localizado pela TecToy, esta versão destaca a paixão das seleções nacionais e dos clubes icônicos do Brasil em meados dos anos 90. " +
+            "Com narração empolgante, gameplay acelerado e o estilo inconfundível dos motores de futebol da Konami, entrega um retrato autêntico e vibrante de como o Brasil jogava, comemorava e vivia o futebol nos anos 90. " +
+            "Indispensável para fãs de esportes retrô e da história do futebol nacional.",
+
         players: "1-2 Players",
         developer: "TecToy / Hack",
         coverImage: "/assets/covers/futebol_brasileiro_96.jpg",
