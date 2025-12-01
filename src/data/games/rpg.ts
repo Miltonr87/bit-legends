@@ -25,6 +25,52 @@ export const rpgsGames: Game[] = [
         logo: "/assets/logos/shadowrun.jpg"
     },
     {
+        id: "breathoffire2-snes-ptbr",
+        title: "Breath of Fire II (Brasil)",
+        slug: "breath-of-fire-ii-ptbr",
+        embedUrl:
+            "/emulator.html?rom=https://ozequlizbaymnvzeqkyh.supabase.co/storage/v1/object/public/game-rom/BFII-pt-br.sfc",
+        year: 1994,
+        genre: "Brasil",
+        folder: "Brasil",
+        publisher: "Capcom / Equipe Brasileira",
+        characters: ["Ryu", "Bow", "Nina", "Katt", "Rand", "Sten", "Jean", "Spar"],
+        description:
+            "A versão totalmente traduzida para o Brasil do lendário RPG da Capcom — épico, emocional e inesquecível.",
+        longDescription:
+            "Breath of Fire II (Brasil) traz o clássico RPG da Capcom totalmente traduzido para o português, permitindo que novos jogadores descubram uma das narrativas mais emocionantes e sombrias da era 16-bit. " +
+            "Acompanhe Ryu e seus aliados em uma jornada marcada por mistérios, conflitos espirituais, reviravoltas dramáticas e um mundo vivo repleto de personagens memoráveis. " +
+            "Com uma tradução dedicada que preserva o tom original, este clássico torna-se ainda mais imersivo e acessível para os fãs brasileiros de JRPG.",
+        players: "1 Player",
+        developer: "Capcom",
+        coverImage: "/assets/covers/breath_of_fire_ii.jpg",
+        platform: "Nintendo",
+        logo: "/assets/logos/breath_of_fire_ii.png"
+    },
+    {
+        id: "breathoffire2-snes",
+        title: "Breath of Fire II",
+        slug: "breath-of-fire-ii",
+        embedUrl:
+            "https://www.retrogames.cc/embed/19771-breath-of-fire-ii-usa.html",
+        year: 1994,
+        genre: "RPG",
+        folder: "RPG",
+        publisher: "Capcom",
+        characters: ["Ryu", "Bow", "Nina", "Katt", "Rand", "Sten", "Jean", "Spar"],
+        description:
+            "A beloved Capcom RPG filled with mystery, transformation powers, and an unforgettable 16-bit adventure.",
+        longDescription:
+            "Breath of Fire II (1994) delivers one of Capcom’s richest RPG experiences, following Ryu and his allies on a journey marked by faith, betrayal, and supernatural forces. " +
+            "Featuring unique party transformations, character-driven storytelling, challenging dungeons, and a world packed with secrets, the game builds upon the foundation of the original with deeper emotional stakes and a darker narrative tone. " +
+            "With its memorable cast, atmospheric music, and classic 16-bit charm, Breath of Fire II remains a cornerstone of the JRPG genre and a must-play for fans of timeless fantasy adventures.",
+        players: "1 Player",
+        developer: "Capcom",
+        coverImage: "/assets/covers/breath_of_fire_ii.jpg",
+        platform: "Nintendo",
+        logo: "/assets/logos/breath_of_fire_ii.png"
+    },
+    {
         id: "shadowrun-snes-usa",
         title: "Shadowrun",
         slug: "shadowrun-snes",

@@ -8,8 +8,8 @@ export const sportsGames: Game[] = [
         embedUrl:
             "/emulator.html?rom=https://ozequlizbaymnvzeqkyh.supabase.co/storage/v1/object/public/game-rom/br24c.sfc",
         year: 2024,
-        genre: "Sports / Brasil",
-        folder: "Sports / Brasil",
+        genre: "Brasil",
+        folder: "Brasil",
         publisher: "Falcon BR",
         characters: ["Brazilian Teams", "Classic Clubs", "Modern Stars", "Commentators"],
         description:
@@ -31,8 +31,8 @@ export const sportsGames: Game[] = [
         embedUrl:
             "/emulator.html?rom=https://ozequlizbaymnvzeqkyh.supabase.co/storage/v1/object/public/game-rom/Brasileiro2025.smc",
         year: 2025,
-        genre: "Sports / Brasil",
-        folder: "Sports  / Brasil",
+        genre: "Brasil",
+        folder: "Brasil",
         publisher: "BSTAR TEAM",
         characters: ["Brazilian Teams", "Classic Clubs", "Modern Stars", "Commentators"],
         description:
@@ -55,8 +55,8 @@ export const sportsGames: Game[] = [
         embedUrl:
             "/emulator.html?rom=https://ozequlizbaymnvzeqkyh.supabase.co/storage/v1/object/public/game-rom/Copa70.sfc&platform=snes",
         year: 2025,
-        genre: "Sports / Brasil",
-        folder: "Sports / Brasil",
+        genre: "Brasil",
+        folder: "Brasil",
         publisher: "Falcon BR",
         characters: ["Brazil 1970 Squad", "Pelé", "Tostão", "Rivelino", "Jairzinho", "Carlos Alberto", "World Teams"],
         description:
@@ -215,8 +215,8 @@ export const sportsGames: Game[] = [
         slug: "futebol-brasileiro-96",
         embedUrl: "https://www.retrogames.cc/embed/46464-futebol-brasileiro-96.html",
         year: 1996,
-        genre: "Sports / Brasil",
-        folder: "Sports / Brasil",
+        genre: "Brasil",
+        folder: "Brasil",
         publisher: "TecToy",
         characters: ["Palmeiras", "Vasco", "Bahia", "Flamengo", "Grêmio", "Fluminense"],
         description:
@@ -239,8 +239,8 @@ export const sportsGames: Game[] = [
         embedUrl:
             "/emulator.html?rom=https://ozequlizbaymnvzeqkyh.supabase.co/storage/v1/object/public/game-rom/pernambucano.sfc",
         year: 2025,
-        genre: "Sports / Brasil",
-        folder: "Sports / Brasil",
+        genre: "Brasil",
+        folder: "Brasil",
         publisher: "Fan Hack BR",
         characters: ["Sport", "Náutico", "Santa Cruz", "America", "Vera Cruz", "Ypiranga", "Ipojuca", "Aguia", "Afogados", "Porto"],
         description:
