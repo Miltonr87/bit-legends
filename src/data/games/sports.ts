@@ -165,7 +165,7 @@ export const sportsGames: Game[] = [
         logo: "/assets/logos/tecmo_super_nba.png"
     },
     {
-        id: "superstar-soccer",
+        id: "superstar-soccer-sports",
         title: "Superstar Soccer",
         slug: "superstar-soccer",
         embedUrl: "https://www.retrogames.cc/embed/19764-international-superstar-soccer-usa.html",

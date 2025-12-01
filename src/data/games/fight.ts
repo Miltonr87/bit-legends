@@ -817,9 +817,9 @@ export const fightGames: Game[] = [
     },
     {
         id: "dbz-hyperdimension",
-        title: "Dragon Ball Z: Hyper Dimension",
+        title: "Dragon Ball Z: Hyper",
         slug: "dragon-ball-z-hyper-dimension",
-        embedUrl: "https://www.retrogames.cc/embed/24039-dragon-ball-z-hyper-dimension-france.html",
+        embedUrl: "https://www.retrogames.cc/embed/23748-dragon-ball-z-hyper-dimension-france.html",
         year: 1996,
         genre: "Tournament",
         folder: "Tournament",
