@@ -223,8 +223,8 @@ export const sportsGames: Game[] = [
             "A vintage SNES football classic bringing Brazil’s 1996 season to life with local flair and arcade action.",
         longDescription:
             "Futebol Brasileiro 96 (1996) é uma edição brasileira nostálgica da era 16-bit do Campeonato Brasileiro de 96, capturando a época de ouro dos jogos de futebol no SNES. " +
-            "Desenvolvido e localizado pela TecToy, esta versão destaca a paixão das seleções nacionais e dos clubes icônicos do Brasil em meados dos anos 90. " +
-            "Com narração empolgante, gameplay acelerado e o estilo inconfundível dos motores de futebol da Konami, entrega um retrato autêntico e vibrante de como o Brasil jogava, comemorava e vivia o futebol nos anos 90. " +
+            "Desenvolvido pelo programador peruano, Lobsang Alvites (Mr.Byte), e localizado pela TecToy, esta versão destaca a paixão das seleções nacionais e dos clubes icônicos do Brasil em meados dos anos 90. " +
+            "Com narração empolgante — ainda que em espanhol — e um gameplay frenético baseado nos inconfundíveis motores de futebol da Konami, o jogo entrega um retrato autêntico e vibrante de como o Brasil jogava, comemorava e vivia o futebol nos anos 90. " +
             "Indispensável para fãs de esportes retrô e da história do futebol nacional.",
         players: "1-2 Players",
         developer: "TecToy / Hack",
