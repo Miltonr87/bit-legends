@@ -8,8 +8,8 @@ export const rpgsGames: Game[] = [
         embedUrl:
             "/emulator.html?rom=https://ozequlizbaymnvzeqkyh.supabase.co/storage/v1/object/public/game-rom/shadowrun-ptbr.smc",
         year: 1993,
-        genre: "RPG / Brasil",
-        folder: "RPG / Brasil",
+        genre: "Brasil",
+        folder: "Brasil",
         publisher: "Data East / DougRPG",
         characters: ["Jake Armitage", "Deckers", "Riggers", "Shamans"],
         description:
@@ -54,8 +54,8 @@ export const rpgsGames: Game[] = [
         embedUrl:
             "/emulator.html?rom=https://ozequlizbaymnvzeqkyh.supabase.co/storage/v1/object/public/game-rom/Shining-ptbr.gen",
         year: 1992,
-        genre: "RPG / Brasil",
-        folder: "RPG / Brasil",
+        genre: "Brasil",
+        folder: "Brasil",
         publisher: "Sega / Lobo-FF",
         characters: ["Max", "Anri", "Mae", "Zylo", "Shining Force"],
         description:
@@ -67,7 +67,7 @@ export const rpgsGames: Game[] = [
         players: "1 Player",
         developer: "Climax Entertainment",
         coverImage: "/assets/covers/shining-force.jpg",
-        platform: "Sega Genesis",
+        platform: "Genesis",
         logo: "/assets/logos/shiningforce.png"
     },
     {
@@ -176,8 +176,8 @@ export const rpgsGames: Game[] = [
         embedUrl:
             "/emulator.html?rom=https://ozequlizbaymnvzeqkyh.supabase.co/storage/v1/object/public/game-rom/shining-II-ptbr.gen",
         year: 1993,
-        genre: "RPG / Brasil",
-        folder: "RPG / Brasil",
+        genre: "Brasil",
+        folder: "Brasil",
         publisher: "Sega / Brazilian Team",
         characters: ["Bowie", "Sarah", "Jaha", "Kazín", "Peter", "Shining Force"],
         description:
