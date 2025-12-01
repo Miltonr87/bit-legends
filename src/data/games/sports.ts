@@ -15,7 +15,7 @@ export const sportsGames: Game[] = [
         description:
             "A modern hack of the legendary SNES football classic — fully updated for the 2025 Brazilian Championship.",
         longDescription:
-            "Brasileiro 2024 é um hack apaixonado criado por fãs da Falcon BR que transforma o clássico International Super Star Soccer em uma celebração moderna do futebol brasileiro. " +
+            "Brasileiro 2024 é um hack apaixonado criado por fãs da Falcon BR que transforma o clássico International Superstar Soccer em uma celebração moderna do futebol brasileiro. " +
             "Com uniformes atualizados, novos estádios e elencos completos de 2024 de clubes icônicos como Flamengo e Palmeiras, esta edição captura o verdadeiro espírito da Série A. " +
             "Com IA aprimorada, visuais brasileiros autênticos e o mesmo ritmo arcade acelerado que definiu o futebol 16-bit, este ROM hack mistura nostalgia com a energia competitiva atual — uma verdadeira carta de amor ao legado do futebol brasileiro e aos seus torcedores.",
         players: "1-2 Players",
@@ -166,10 +166,10 @@ export const sportsGames: Game[] = [
     },
     {
         id: "superstar-soccer-sports",
-        title: "Superstar Soccer",
-        slug: "superstar-soccer",
-        embedUrl: "https://www.retrogames.cc/embed/19764-international-superstar-soccer-usa.html",
-        year: 1994,
+        title: "Superstar Soccer Deluxe",
+        slug: "superstar-soccer-deluxe",
+        embedUrl: "https://www.retrogames.cc/embed/23714-international-superstar-soccer-deluxe-usa.html",
+        year: 1995,
         genre: "Sports",
         folder: "Sports",
         publisher: "Konami",
@@ -177,8 +177,8 @@ export const sportsGames: Game[] = [
         description:
             "The definitive 16-bit football experience — fast, polished, and iconic on every level.",
         longDescription:
-            "International Superstar Soccer (1994) refines the classic SNES football formula with smoother animations, sharper controls, and an expanded roster of world teams. " +
-            "Featuring lively commentary, dynamic crowd reactions, strategic formations, and a variety of tournament modes, ISS sets the gold standard for 16-bit sports games. " +
+            "International Superstar Soccer Deluxe (1995) refines the classic SNES football formula with smoother animations, sharper controls, and an expanded roster of world teams. " +
+            "Featuring lively commentary, dynamic crowd reactions, strategic formations, and a variety of tournament modes, ISS Deluxe sets the gold standard for 16-bit sports games. " +
             "Its blend of arcade action and tactical depth made it a worldwide favorite, capturing the excitement, flair, and competitive spirit of global football like no other game of its era. " +
             "A timeless masterpiece that continues to influence football games to this day.",
         players: "1-2 Players",
