@@ -151,7 +151,7 @@ export const rpgsGames: Game[] = [
         title: "Shining Force II",
         slug: "shining-force-ii",
         embedUrl:
-            "https://www.retrogames.cc/genesis-games/shining-force-ii-usa.html",
+            "https://www.retrogames.cc/embed/19064-shining-force-ii-usa.html",
         year: 1993,
         genre: "RPG",
         folder: "RPG",
