@@ -97,7 +97,7 @@ const Index = () => {
     Race: 'High-speed races through challenging tracks',
     Sports: 'Pixel sports legends in action',
     RPG: 'Diverse RPG adventures with exploration',
-    Guns: 'Fast-action shooters packed with many bullets',
+    Guns: 'Fast-paced shooters packed with bullets',
     Brasil: 'Jogos hackeados e traduzidos para o PT-BR',
   };
 

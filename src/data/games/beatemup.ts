@@ -783,7 +783,10 @@ export const beatnupGames: Game[] = [
     longDescription:
       "X-Men 2: Clone Wars (1995) pushes the Genesis to its limits. The heroes battle the techno-organic Phalanx threat across diverse environments. " +
       "Each mutant has unique abilities, from Nightcrawler’s teleportation to Wolverine’s regeneration. " +
-      "Slick animations, challenging levels, and cooperative play make it one of the finest superhero games of the 16-bit era.",
+      "Slick animations, challenging levels, and cooperative play make it one of the finest superhero games of the 16-bit era. " +
+      "The game opens mid-battle without menus or intros, dropping players straight into the action: a bold design choice that amplifies the intensity. " +
+      "Its soundtrack pulses with techno energy, perfectly complementing the dark sci-fi tone of the Phalanx invasion. " +
+      "With sharp controls, comic-accurate art, and seamless co-op, Clone Wars remains a standout entry in the X-Men’s gaming legacy.",
     players: "1-2 Players",
     developer: "HeadGames / Sega Technical Institute",
     coverImage: "/assets/covers/xmen2_clonewars.jpg",
