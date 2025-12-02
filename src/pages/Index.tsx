@@ -95,9 +95,9 @@ const Index = () => {
     Rare: 'Cancelled prototypes or limited releases',
     'Sci-Fi': 'Futuristic worlds with advanced technology',
     Race: 'High-speed races through challenging tracks',
-    Sports: 'Retro 16-bit sports classics',
+    Sports: 'Pixel sports legends in action',
     RPG: 'Diverse RPG adventures with exploration',
-    Hack: 'Fan-made mods with enhancements',
+    Guns: 'Fast-action shooters packed with many bullets',
     Brasil: 'Jogos hackeados e traduzidos para o PT-BR',
   };
 

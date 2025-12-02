@@ -620,8 +620,8 @@ export const beatnupGames: Game[] = [
     slug: "robocop-2-euroasia-v0-10",
     embedUrl: "https://www.retrogames.cc/embed/9685-robocop-us-revision-1.html",
     year: 1991,
-    genre: "Sci-Fi",
-    folder: "Sci-Fi",
+    genre: "Sci-Fi / Guns / Urban",
+    folder: "Sci-Fi / Guns / Urban",
     publisher: "Data East",
     characters: ["RoboCop"],
     description: "Serve the public trust, protect the innocent, uphold the law.",
@@ -1501,13 +1501,13 @@ export const beatnupGames: Game[] = [
     slug: "g-i-joe",
     embedUrl: "https://www.retrogames.cc/embed/33534-g-i-joe-us-uab.html",
     year: 1992,
-    genre: "Global Comics / Rare",
-    folder: "Global Comics",
+    genre: "Global Comics / Guns / Rare",
+    folder: "Global Comics / Guns / Rare",
     publisher: "Konami",
     characters: ["Duke", "Snake Eyes", "Scarlett", "Roadblock"],
     description: "Elite military action in a high-speed forward assault!",
     longDescription:
-      "G.I. Joe (1992) by Konami is a high-intensity assault shooter where an elite squad charges forward through explosive and cinematic battlefields. " +
+      "G.I. Joe (1992) by Konami is a high-intensity assault shooter (guns) where an elite squad charges forward through explosive and cinematic battlefields. " +
       "Based on the legendary heroes (now published by Image Comics and Skybound Entertainment), the game lets you command Duke, Snake Eyes, Scarlett, or Roadblock as they unleash nonstop gunfire against Cobra’s forces across cities, jungles, and enemy fortresses. " +
       "Because of the limited number released, finding an original G.I. Joe cabinet today is extremely difficult making it highly desirable and rare for collectors.",
     players: "1-4 Players",
@@ -1548,5 +1548,6 @@ export const beatnupFilters = [
   "Marvel Comics",
   "DC Comics",
   'Global Comics',
+  "Guns",
   "Rare"
 ];
