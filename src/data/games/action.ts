@@ -287,7 +287,105 @@ export const actionGames: Game[] = [
         coverImage: "/assets/covers/magic-sword.png",
         platform: "Arcade",
         logo: "/assets/logos/magic_sword.png"
-    }
+    },
+    {
+        id: "contra3-snes",
+        title: "Contra: The Alien Wars",
+        slug: "contra-iii-the-alien-wars",
+        embedUrl: "https://www.retrogames.cc/embed/23268-contra-iii-the-alien-wars-usa.html",
+        year: 1992,
+        genre: "Sci-fi / Guns",
+        folder: "Sci-fi / Guns",
+        publisher: "Konami",
+        characters: ["Bill Rizer", "Lance Bean", "Red Falcon Army", "Alien Forces"],
+        description:
+            "Run-and-gun chaos at its finest — explosive action, massive bosses, and pure 16-bit intensity.",
+        longDescription:
+            "Contra III: The Alien Wars (1992) delivers one of the most iconic and adrenaline-charged experiences on the Super Nintendo. " +
+            "Bill and Lance return to face a full-scale alien invasion, blasting through city ruins, highways, factories, and deadly top-down battlefields. " +
+            "With dual-wield weapons, screen-filling explosions, Mode 7 stages, and towering biomechanical bosses, this installment pushes the SNES hardware to its limits. " +
+            "Fast, brutal, and relentlessly stylish, Contra III remains a definitive run-and-gun classic — a true showcase of Konami’s 16-bit mastery. " +
+            "Each stage escalates the chaos with faster enemies, clever traps, and unforgettable set pieces such as high-speed motorcycle chases and intense escape sequences. " +
+            "Tight controls, energetic pacing, and a pounding soundtrack combine to create a relentless action experience that still feels sharp and exhilarating decades later.",
+        players: "1–2 Players",
+        developer: "Konami",
+        coverImage: "/assets/covers/contra3.jpg",
+        platform: "Nintendo",
+        logo: "/assets/logos/contra3.png"
+    },
+    {
+        id: "desert-assault-arcade",
+        title: "Desert Assault",
+        slug: "desert-assault",
+        embedUrl: "https://www.retrogames.cc/embed/8257-desert-assault-us.html",
+        year: 1991,
+        genre: "Guns",
+        folder: "Guns",
+        publisher: "Data East",
+        characters: ["Eagle", "Panther", "Bear", "Bison", "Enemy Commanders"],
+        description:
+            "A four-soldier run-and-gun assault packed with explosions, tanks, and nonstop arcade warfare.",
+        longDescription:
+            "Desert Assault (1991) brings classic run-and-gun arcade action to its peak with four elite soldiers deployed on a high-risk mission deep behind enemy lines. " +
+            "Players blast through fortified desert bases, missile installations, jungles, and mechanized war zones using rifles, grenades, and powerful heavy weapons. " +
+            "Featuring massive destructible environments, screen-filling explosions, and intense boss battles, the game delivers the signature 90s arcade chaos fans love. " +
+            "Whether solo or in cooperative play, Desert Assault stands out with fast pacing, satisfying firepower, and a military action vibe that rivals the biggest hits of the era. " +
+            "A relentless and explosive experience for anyone who loves Contra-style arcade shooters.",
+        players: "1–4 Players",
+        developer: "Data East",
+        coverImage: "/assets/covers/desert_assault.jpg",
+        platform: "Arcade",
+        logo: "/assets/logos/desert_assault.png"
+    },
+    {
+        id: "rambo3-arcade",
+        title: "Rambo III",
+        slug: "rambo-iii",
+        embedUrl: "https://www.retrogames.cc/embed/9636-rambo-iii-us.html",
+        year: 1989,
+        genre: "Guns",
+        folder: "Guns",
+        publisher: "Taito",
+        characters: ["John Rambo", "Soviet Forces", "Colonel Trautman"],
+        description:
+            "A fast-paced arcade adaptation of the blockbuster film — rescue Trautman and unleash Rambo’s full firepower.",
+        longDescription:
+            "Rambo III (1989) translates the explosive action of the film into an intense top-down arcade shooter. " +
+            "Armed with a bow, knives, grenades, and heavy artillery, Rambo charges through enemy bases, desert compounds, and fortified bunkers to rescue Colonel Trautman from Soviet captivity. " +
+            "The game features rapid-fire combat, destructible environments, and a barrage of enemy troops, vehicles, and armored bosses that keep the challenge constant. " +
+            "With responsive controls, cinematic stage transitions, and nonstop firefights, Rambo III stands as one of Taito’s most energetic military arcade titles — a must-play for fans of classic run-and-gun action.",
+        players: "1 Player",
+        developer: "Taito",
+        coverImage: "/assets/covers/rambo3.jpg",
+        platform: "Arcade",
+        logo: "/assets/logos/rambo3.png"
+    },
+    {
+        id: "sunset-riders-arcade",
+        title: "Sunset Riders",
+        slug: "sunset-riders",
+        embedUrl: "https://www.retrogames.cc/embed/10121-sunset-riders-2-players-ver-abd.html",
+        year: 1991,
+        genre: "Guns",
+        folder: "Guns",
+        publisher: "Konami",
+        characters: [
+            "Billy", "Cormano", "Bob", "Steve",
+            "Outlaws", "Bandit Bosses", "Wild West Gunmen"
+        ],
+        description:
+            "A wild, colorful run-and-gun ride through the American West — shootouts, horse chases, and pure Konami arcade magic.",
+        longDescription:
+            "Sunset Riders (1991) brings Konami’s unmistakable arcade flair to a Western setting filled with humor, charm, and explosive shootouts. " +
+            "Players choose from four bounty hunters — Billy, Cormano, Bob, and Steve — each battling through saloons, deserts, trains, mines, and outlaw hideouts in pursuit of wanted criminals. " +
+            "Featuring vibrant animations, fast run-and-gun gameplay, comedic boss battles, and memorable voice lines, the game delivers one of the most iconic multiplayer experiences of the early ’90s. " +
+            "Whether on foot or charging into battle on horseback, Sunset Riders blends tight controls, clever level design, and a colorful Wild West spirit into a timeless arcade classic.",
+        players: "1–2 Players",
+        developer: "Konami",
+        coverImage: "/assets/covers/sunset_riders.jpg",
+        platform: "Arcade",
+        logo: "/assets/logos/sunset_riders.png"
+    },
 
 ];
 
