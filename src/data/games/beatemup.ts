@@ -273,7 +273,7 @@ export const beatnupGames: Game[] = [
     id: "final-fight-2",
     title: "Final Fight 2",
     slug: "final-fight-2",
-    embedUrl: "https://www.retrogames.cc/embed/23436-final-fight-2-europe.html",
+    embedUrl: "https://www.retrogames.cc/embed/24742-final-fight-2-usa.html",
     year: 1993,
     genre: "Urban",
     folder: "Beat 'em Up",
