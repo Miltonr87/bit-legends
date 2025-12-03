@@ -41,9 +41,31 @@ export const GameIframe = ({ game }: GameIframeProps) => {
     const interval = setInterval(() => {
       setTipIndex((prev) => (prev + 1) % tips.length);
     }, 8000);
-
     return () => clearInterval(interval);
   }, [tips.length]);
+
+  useEffect(() => {
+    if (isMobile) {
+      let meta = document.querySelector(
+        'meta[name="viewport"]'
+      ) as HTMLMetaElement | null;
+      const originalContent = meta?.getAttribute('content') ?? '';
+      if (!meta) {
+        meta = document.createElement('meta');
+        meta.name = 'viewport';
+        document.head.appendChild(meta);
+      }
+      meta.setAttribute(
+        'content',
+        'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'
+      );
+      return () => {
+        if (meta && originalContent) {
+          meta.setAttribute('content', originalContent);
+        }
+      };
+    }
+  }, [isMobile]);
 
   const iframeUrl =
     game.embedUrl ||

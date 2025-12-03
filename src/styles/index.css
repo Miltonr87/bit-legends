@@ -170,6 +170,15 @@ iframe[src*='retrogames.cc/ad.html'] {
   pointer-events: none !important;
 }
 
+/* Prevent zoom when typing on mobile */
+iframe input,
+iframe textarea,
+input,
+textarea,
+select {
+  font-size: 16px !important;
+}
+
 /* Optional legacy styles (logo/card) */
 .logo {
   height: 6em;
