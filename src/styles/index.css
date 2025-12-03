@@ -196,10 +196,6 @@ select {
   padding: 2em;
 }
 
-.emulator-container {
-  overscroll-behavior: contain;
-}
-
 .read-the-docs {
   color: #888;
 }

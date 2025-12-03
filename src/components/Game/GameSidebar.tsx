@@ -11,18 +11,12 @@ import snesLogo from '../../../public/assets/platforms/snes.png';
 import { motion } from 'framer-motion';
 import type { Game } from '@/types';
 
-// ---------------------------
-// Platform Name → Logo Mapping
-// ---------------------------
 const PLATFORM_LOGO_MAP: Record<string, string> = {
   Arcade: arcadeLogo,
   SNES: snesLogo,
   Genesis: genesisLogo,
 };
 
-// ---------------------------
-// Platform Alias Mapping
-// ---------------------------
 const PLATFORM_MAP: Record<string, keyof typeof PLATFORM_LOGO_MAP> = {
   Nintendo: 'SNES',
   SNES: 'SNES',
@@ -38,27 +32,20 @@ const PLATFORM_MAP: Record<string, keyof typeof PLATFORM_LOGO_MAP> = {
   PS1: 'Arcade',
 };
 
-// Background used in LogoGame
 const PANEL_BACKGROUND = 'linear-gradient(135deg, #1e1e2f, #2c2c54)';
 
-// ---------------------------
-// Sidebar Component
-// ---------------------------
 interface GameSidebarProps {
   game: Game;
 }
 
 export const GameSidebar = ({ game }: GameSidebarProps) => {
   const isMobile = useIsMobile();
-
-  // Resolve logo
   const platformKey =
     PLATFORM_MAP[game.platform.trim()] ||
     Object.keys(PLATFORM_MAP).find((p) =>
       game.platform.toLowerCase().includes(p.toLowerCase())
     ) ||
     'Arcade';
-
   const platformLogo = PLATFORM_LOGO_MAP[platformKey] || arcadeLogo;
 
   return (
@@ -73,8 +60,6 @@ export const GameSidebar = ({ game }: GameSidebarProps) => {
           title={game.title}
           backgroundColor="linear-gradient(135deg, #1e1e2f, #2c2c54)"
         />
-
-        {/* INFO CARD */}
         <Card className="p-4 sm:p-6 border-2 border-accent/30 bg-gradient-to-br from-card to-card/40 rounded-2xl backdrop-blur-sm hover:shadow-lg hover:shadow-accent/10 transition-all duration-300">
           <div className="space-y-4">
             <div className="flex items-start gap-3 pb-4 border-b border-border">
@@ -84,7 +69,6 @@ export const GameSidebar = ({ game }: GameSidebarProps) => {
                 <p className="font-semibold text-lg">{game.year}</p>
               </div>
             </div>
-
             <div className="flex items-start gap-3 pb-4 border-b border-border">
               <Gamepad2 className="h-5 w-5 text-accent mt-1" />
               <div>
@@ -92,7 +76,6 @@ export const GameSidebar = ({ game }: GameSidebarProps) => {
                 <p className="font-semibold text-lg">{game.genre}</p>
               </div>
             </div>
-
             <div className="flex items-start gap-3 pb-4 border-b border-border">
               <Users className="h-5 w-5 text-accent mt-1" />
               <div>
