@@ -595,7 +595,7 @@ export const beatnupGames: Game[] = [
     id: "alien-vs-predator",
     title: "Alien vs. Predator",
     slug: "alien-vs-predator-940520-euro",
-    embedUrl: "https://www.retrogames.cc/embed/7748-alien-vs-predator-940520-euro-phoenix-edition-bootleg.html",
+    embedUrl: "https://www.retrogames.cc/embed/7752-alien-vs-predator-940520-usa.html",
     year: 1994,
     genre: "Global Comics / Sci-Fi",
     folder: "Global Comics / Sci-Fi",
