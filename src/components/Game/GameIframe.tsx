@@ -67,6 +67,35 @@ export const GameIframe = ({ game }: GameIframeProps) => {
     }
   }, [isMobile]);
 
+  useEffect(() => {
+    if (!isMobile) return;
+    const setVh = () => {
+      const vh =
+        (window.innerHeight || document.documentElement.clientHeight) * 0.01;
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
+    };
+    setVh();
+    const vv = (window as any).visualViewport as VisualViewport | undefined;
+    if (vv) {
+      vv.addEventListener('resize', setVh);
+      vv.addEventListener('scroll', setVh);
+      window.addEventListener('orientationchange', setVh);
+
+      return () => {
+        vv.removeEventListener('resize', setVh);
+        vv.removeEventListener('scroll', setVh);
+        window.removeEventListener('orientationchange', setVh);
+      };
+    } else {
+      window.addEventListener('resize', setVh);
+      window.addEventListener('orientationchange', setVh);
+      return () => {
+        window.removeEventListener('resize', setVh);
+        window.removeEventListener('orientationchange', setVh);
+      };
+    }
+  }, [isMobile]);
+
   const iframeUrl =
     game.embedUrl ||
     `https://www.retrogames.cc/embed/${game.embedId}-${game.slug}.html`;
@@ -82,6 +111,7 @@ export const GameIframe = ({ game }: GameIframeProps) => {
     if (!container) return;
     const iframe = container.querySelector('iframe') as any;
     const el: any = iframe || container;
+
     if (el.requestFullscreen) {
       el.requestFullscreen().catch(() => {
         container.classList.toggle('fullscreen-sim');
@@ -99,8 +129,12 @@ export const GameIframe = ({ game }: GameIframeProps) => {
     <Card className="overflow-hidden border-2 border-accent/30 bg-card">
       <div
         ref={iframeRef}
-        className="relative bg-black rounded-lg overflow-hidden"
-        style={isMobile ? { height: 'calc(68vh)' } : { aspectRatio: '4/3' }}
+        className="relative bg-black rounded-lg overflow-hidden emulator-container"
+        style={
+          isMobile
+            ? { height: 'calc(var(--vh, 1vh) * 68)' }
+            : { aspectRatio: '4/3' }
+        }
       >
         {!introDismissed ? (
           <div className="absolute inset-0 flex flex-col items-center justify-center text-center bg-gradient-to-b from-black via-neutral-900 to-black p-6">
