@@ -88,7 +88,7 @@ export const raceGames: Game[] = [
         developer: "Malibu Interactive",
         coverImage: "/assets/covers/batmanreturnscd.jpg",
         logo: "/assets/logos/batman_returns.png",
-        platform: "Sega CD"
+        platform: "Genesis"
     },
     {
         id: "topgear",

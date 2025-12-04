@@ -267,7 +267,7 @@ export const fightGames: Game[] = [
         id: "kof2002",
         title: "King of Fighters 2002",
         slug: "the-king-of-fighters-2002-magic-plus-ii-bootleg-bootleg",
-        embedUrl: "https://www.retrogames.cc/embed/10387-the-king-of-fighters-2002-magic-plus-ii-bootleg-bootleg.html",
+        embedUrl: "https://www.retrogames.cc/embed/10384-the-king-of-fighters-2002-ngm-2650-ngh-2650.html",
         year: 2002,
         genre: "Tournament",
         folder: "Tournament",
@@ -841,7 +841,33 @@ export const fightGames: Game[] = [
         platform: "Nintendo",
         logo: "/assets/logos/dbz_hyper_dimension.png"
     },
-
+    {
+        id: "eternal-champions-segacd",
+        title: "Eternal Champions",
+        slug: "eternal-champions-challenge-from-the-dark-side",
+        embedUrl: "https://www.retrogames.cc/embed/40704-eternal-champions-challenge-from-the-dark-side.html",
+        year: 1995,
+        genre: "Tournament / Horror",
+        folder: "Tournament / Horror",
+        publisher: "Sega Interactive",
+        characters: [
+            "Blade", "Shadow", "Jetta", "Rax",
+            "Midknight", "Larcen", "Trident", "Slash",
+            "Xavier", "Raven", "Chin Wo", "Riptide"
+        ],
+        description:
+            "A dark, brutal 2D fighter where warriors from across time battle for a second chance at life.",
+        longDescription:
+            "Eternal Champions: Challenge from the Dark Side (1995) expands Sega’s ambitious fighting saga with new characters, fatalities, and cinematic stage executions. " +
+            "Each fighter, pulled from different eras of human history, faces destiny in a deadly tournament orchestrated by the Eternal Champion himself. " +
+            "Featuring deep mechanics, multi-tiered arenas, and a uniquely gothic tone, this Sega CD version pushes the boundaries with digitized voices, animated cutscenes, and a haunting soundtrack. " +
+            "More than a fighting game, it’s a time-spanning duel between fate and redemption — a true cult classic of the 16-bit era.",
+        players: "1–2 Players",
+        developer: "Sega Interactive",
+        coverImage: "/assets/covers/eternal_champions.jpg",
+        platform: "Genesis",
+        logo: "/assets/logos/eternal_champions.png"
+    },
 ]
 
 export const fightFilters = [

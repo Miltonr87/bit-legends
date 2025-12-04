@@ -386,7 +386,60 @@ export const actionGames: Game[] = [
         platform: "Arcade",
         logo: "/assets/logos/sunset_riders.png"
     },
-
+    {
+        id: "metal-slug-x",
+        title: "Metal Slug X",
+        slug: "metal-slug-x",
+        embedUrl: "https://www.retrogames.cc/embed/9166-metal-slug-5-ngh-2680.html",
+        year: 1999,
+        genre: "Guns",
+        folder: "Guns",
+        publisher: "SNK",
+        characters: [
+            "Marco Rossi",
+            "Tarma Roving",
+            "Eri Kasamoto",
+            "Fio Germi",
+            "General Morden",
+            "Rebel Soldiers",
+            "Mars People"
+        ],
+        description:
+            "SNK’s explosive masterpiece — chaotic action, pixel-perfect humor, and nonstop firepower!",
+        longDescription:
+            "Metal Slug X (1999) refines and expands the high-octane formula of Metal Slug 2, delivering one of the most celebrated run-and-gun experiences in arcade history. " +
+            "Players blast through deserts, cities, and alien warzones armed with an arsenal of heavy weapons, vehicles, and power-ups — all wrapped in SNK’s hand-drawn pixel artistry. " +
+            "Enhanced performance, rebalanced difficulty, and new enemy placements turn every stage into a fresh challenge, while its humor, animations, and chaos remain unmatched. " +
+            "From rescuing POWs to fighting aliens and rebel armies, Metal Slug X stands as the definitive 2D shooter — fast, frantic, and endlessly replayable.",
+        players: "1–2 Players",
+        developer: "SNK / Nazca Corporation",
+        coverImage: "/assets/covers/metal_slug_x.jpg",
+        platform: "Arcade",
+        logo: "/assets/logos/metal_slug_x.png"
+    },
+    {
+        id: "zombies-ate-my-neighbors",
+        title: "Zombies Neighbors",
+        slug: "zombies-ate-my-neighbors",
+        embedUrl: "https://www.retrogames.cc/embed/22847-zombies-ate-my-neighbors-usa.html",
+        year: 1993,
+        genre: "Horror / Guns",
+        folder: "Horror / Guns",
+        publisher: "Konami",
+        characters: ["Zeke", "Julie", "Neighbors in peril", "Monsters & Zombies"],
+        description:
+            "Run-and-gun horror-comedy mayhem — save the neighborhood from creepy monsters and gobble up some 90s chaos!",
+        longDescription:
+            "Zombies Ate My Neighbors (1993) is a wild, over-the-top run-and-gun shooter where teenage heroes Zeke and Julie fight through suburbia overrun by zombies, vampires, mummies, aliens and other horror-movie monsters. " +
+            "Armed with a bizarre arsenal — from water pistols and soda-can grenades to weed-whackers and bazookas — players navigate shopping malls, haunted houses, pyramids, and more, trying to rescue terrified neighbors before they’re turned into monster chow. " +
+            "It supports 1–2 players and blends horror tropes with cartoonish graphics, humor, and frantic action, making it a cult classic that remains fun decades later. " +
+            "With 55 levels (plus secret bonus stages), tons of enemy types, cooperative gameplay and creative weapons, it’s a perfect fit for fans of chaotic shooters and retro fun.",
+        players: "1–2 Players",
+        developer: "LucasArts",
+        coverImage: "/assets/covers/zombies_ate_my_neighbors.jpg",
+        platform: "SNES",
+        logo: "/assets/logos/zombies_ate_my_neighbors.png"
+    },
 ];
 
 export const actionFilters = [

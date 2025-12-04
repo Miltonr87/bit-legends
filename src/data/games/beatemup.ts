@@ -1167,7 +1167,7 @@ export const beatnupGames: Game[] = [
     players: "1 Player",
     developer: "Malibu Interactive",
     coverImage: "/assets/covers/ultraverse_prime.jpg",
-    platform: "Sega CD",
+    platform: "Genesis",
     logo: "/assets/logos/ultraverse_prime.png"
   },
   {
