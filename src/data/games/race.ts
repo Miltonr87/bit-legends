@@ -24,27 +24,27 @@ export const raceGames: Game[] = [
         platform: "Nintendo",
     },
     {
-        id: "battle-cars-snes",
-        title: "Battle Cars",
-        slug: "battle-cars-usa",
-        embedUrl: "https://www.retrogames.cc/embed/19832-battle-cars-usa.html",
-        year: 1993,
-        genre: "Race",
-        folder: "Race",
-        publisher: "Namco Hometek",
-        characters: ["Spike Vehicle", "Hot Rod", "Formula-Car", "Boss Car 1", "Boss Car 2"],
-        description: "Armored vehicles battle it out on futuristic circuits!",
+        id: "f-zero-snes",
+        title: "F-Zero",
+        slug: "f-zero-usa",
+        embedUrl: "https://www.retrogames.cc/embed/20082-f-zero-usa.html",
+        year: 1990,
+        genre: "Sci-Fi / Race",
+        folder: "Sci-Fi / Race",
+        publisher: "Nintendo",
+        characters: ["Captain Falcon", "Dr. Stewart", "Pico", "Samurai Goroh"],
+        description: "High-speed hovercraft racing through the futuristic cities of the 26th century!",
         longDescription:
-            "Battle Cars (1993) thrusts players into a post-apocalyptic racing arena where speed alone isn’t enough because you must fight to win. " +
-            "Developed by Malibu Interactive and published by Namco Hometek for the SNES, the game blends Mode 7 track visuals with vehicular combat: missiles, bouncing discs, grenades, and brutal head-on clashes across hazardous tracks." +
-            "Choose from radically different vehicles — the spiked muscle car, the hot rod, or the formula-style racer — upgrade your weapons and armor with earnings from cross-country and boss races, and adapt quickly: each weapon behaves differently and each track demands quick reflexes." +
-            "With its blend of high-octane racing and ruthless combat, Battle Cars stands as a distinctive entry in the 16-bit era’s vehicular brawlers — equal parts speed and destruction."
-        ,
-        players: "1-2 Players",
-        developer: "Malibu Interactive",
-        coverImage: "/assets/covers/battle_cars.jpg",
+            "F-Zero (1990) revolutionized racing games on the Super Nintendo with its breathtaking sense of speed, futuristic world, and Mode 7 graphics that simulated full 3D movement. " +
+            "Players pilot advanced hovercrafts through 15 tracks spread across four leagues — from the neon sprawl of Mute City to the desolate wastelands of Fire Field. " +
+            "Each machine has unique handling, acceleration, and endurance, demanding precise control at over 400 km/h. " +
+            "With slick design, pulse-pounding music, and razor-sharp gameplay, F-Zero became a defining showcase of SNES technology and laid the foundation for the entire futuristic racing genre. " +
+            "Even decades later, its balance of speed, risk, and precision remains a masterclass in racing design.",
+        players: "1 Player",
+        developer: "Nintendo EAD",
+        coverImage: "/assets/covers/f-zero.jpg",
         platform: "Nintendo",
-        logo: "/assets/logos/battle_cars.png"
+        logo: "/assets/logos/f-zero.png",
     },
     {
         id: "biker-mice-from-mars",

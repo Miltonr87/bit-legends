@@ -1541,6 +1541,28 @@ export const beatnupGames: Game[] = [
     platform: "Arcade",
     logo: "/assets/logos/ddtod.png",
   },
+  {
+    id: "golden-axe-3",
+    title: "Golden Axe III",
+    slug: "golden-axe-iii-japan",
+    embedUrl: "https://www.retrogames.cc/embed/16714-golden-axe-iii-japan.html",
+    year: 1993,
+    genre: "Fantasy",
+    folder: "Golden Axe",
+    publisher: "Sega",
+    characters: ["Kain Grinder", "Sahra Burn", "Proud Cragger", "Chronos Lait"],
+    description: "The final 16-bit chapter of Sega’s legendary fantasy brawler!",
+    longDescription:
+      "Golden Axe III (1993) expands the mythic hack-and-slash saga with new heroes, branching stages, and refined combat mechanics. " +
+      "Battle across forests, mountains, and cursed castles to reclaim the legendary Golden Axe from the dark prince Damud Hellstrike. " +
+      "Each warrior wields unique weapons and magic — from devastating sword combos to elemental summons — while cooperative attacks and mounts return for classic brawler chaos. " +
+      "With improved animations, richer level variety, and multiple endings, this Japan-exclusive sequel delivers the most complete fantasy adventure of the trilogy, keeping the spirit of heroic arcade combat alive.",
+    players: "1-2 Players",
+    developer: "Sega",
+    coverImage: "/assets/covers/goldenaxe3.jpg",
+    platform: "Genesis",
+    logo: "/assets/logos/goldenaxe3.png",
+  },
 ];
 
 export const beatnupFilters = [
@@ -1552,5 +1574,4 @@ export const beatnupFilters = [
   "DC Comics",
   'Global Comics',
   "Guns",
-  "Rare"
 ];

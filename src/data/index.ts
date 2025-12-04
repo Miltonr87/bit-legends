@@ -5,6 +5,7 @@ import { raceGames, raceFilters } from "./games/race";
 import { actionGames, actionFilters } from "./games/action";
 import { sportsGames, sportsFilters } from "./games/sports";
 import { rpgsGames, rpgsFilters } from './games/rpg';
+import { childGames, childFilters } from "./games/child";
 
 export const allGames: Game[] = [
     ...beatnupGames,
@@ -13,6 +14,7 @@ export const allGames: Game[] = [
     ...actionGames,
     ...sportsGames,
     ...rpgsGames,
+    ...childGames,
 ];
 
 const rawFilters = Array.from(
@@ -23,11 +25,12 @@ const rawFilters = Array.from(
         ...actionFilters,
         ...sportsFilters,
         ...rpgsFilters,
+        ...childFilters,
     ])
 );
 
 export const seriesFilters = [
-    ...rawFilters.filter((f) => f !== "Rare" && "Brasil"),
-    "Rare", "Brasil"
+    ...rawFilters.filter((f) => f !== "Child" && "Brasil"),
+    "Child", "Brasil"
 
 ];

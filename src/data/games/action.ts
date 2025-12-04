@@ -394,6 +394,5 @@ export const actionFilters = [
     "Horror",
     "Sci-Fi",
     "Fantasy",
-    "Rare",
     "DC Comics"
 ];

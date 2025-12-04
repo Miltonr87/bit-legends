@@ -268,7 +268,7 @@ export const rpgsGames: Game[] = [
         slug: "alcahest",
         embedUrl: "/emulator.html?rom=https://ozequlizbaymnvzeqkyh.supabase.co/storage/v1/object/public/game-rom/alcahest-eng.smc&platform=snes",
         year: 1993,
-        genre: "Fantasy / RPG",
+        genre: "RPG",
         folder: "RPG",
         publisher: "Square",
         characters: ["Alen", "Guardians", "Garam", "Droma"],

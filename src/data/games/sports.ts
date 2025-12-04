@@ -257,27 +257,27 @@ export const sportsGames: Game[] = [
         logo: "/assets/logos/pernambucano2025.png"
     },
     {
-        id: "mariolemieux-hockey-sports",
-        title: "Mario Lemieux Hockey",
-        slug: "mario-lemieux-hockey-usa-europe",
-        embedUrl: "https://www.retrogames.cc/embed/29672-mario-lemieux-hockey-usa-europe.html",
-        year: 1991,
+        id: "the-ultimate-11",
+        title: "The Ultimate 11",
+        slug: "the-ultimate-11",
+        embedUrl: "https://www.retrogames.cc/embed/10448-the-ultimate-11-the-snk-football-championship-tokuten-ou-honoo-no-libero.html",
+        year: 1996,
         genre: "Sports",
         folder: "Sports",
-        publisher: "SEGA",
-        characters: ["Mario Lemieux", "Pittsburgh Penguins", "All-Star Teams"],
+        publisher: "SNK",
+        characters: ["World Teams", "Libero Heroes", "Super Shooters"],
         description:
-            "An early 16-bit hockey classic starring the legendary Mario Lemieux, blending arcade speed with simulation depth.",
+            "SNK’s flashy, high-energy arcade soccer sequel — faster, louder, and more intense than ever!",
         longDescription:
-            "Mario Lemieux Hockey (1991) brings the fast-paced excitement of ice hockey to the Sega Genesis with the flair of one of the sport’s greatest legends. " +
-            "Players can skate, pass, and shoot across intense matches featuring realistic penalties, goaltending, and even full-season play. " +
-            "Balancing simulation and arcade action, it delivers smooth controls, detailed rink animations, and authentic strategies inspired by real hockey. " +
-            "As both a showcase of early Genesis sports design and a tribute to ‘Super Mario’ Lemieux himself, this title remains a nostalgic favorite among sports fans.",
+            "The Ultimate 11: The SNK Football Championship (1996) is the final and most explosive entry in SNK’s cult Neo Geo soccer series. " +
+            "It refines the formula of Super Sidekicks with sharper animations, faster gameplay, and cinematic special shots that turn every goal into a spectacle. " +
+            "Players choose from national teams across the globe, executing blazing tackles, long-range volleys, and super kicks that can literally ignite the field. " +
+            "With SNK’s trademark arcade flair, booming commentary, and high-octane crowd energy, The Ultimate 11 stands as one of the most stylish and over-the-top football games of the 90s.",
         players: "1-2 Players",
-        developer: "SEGA",
-        coverImage: "/assets/covers/mario_lemieux_hockey.jpg",
-        platform: "Genesis",
-        logo: "/assets/logos/mario_lemieux_hockey.png"
+        developer: "SNK",
+        coverImage: "/assets/covers/the-ultimate-11.jpg",
+        platform: "Arcade",
+        logo: "/assets/logos/the-ultimate-11.png",
     },
     {
         id: "nhl2025-sports",
@@ -325,8 +325,31 @@ export const sportsGames: Game[] = [
         coverImage: "/assets/covers/nhl_open_ice.jpg",
         platform: "Arcade",
         logo: "/assets/logos/openice.png"
-    }
+    },
+    {
+        id: "mutant-league-hockey",
+        title: "Mutant League Hockey",
+        slug: "mutant-league-hockey-usa-europe",
+        embedUrl: "https://www.retrogames.cc/embed/28596-mutant-league-hockey-usa-europe.html",
+        year: 1994,
+        genre: "Horror / Sports",
+        folder: "Horror / Sports",
+        publisher: "Electronic Arts",
+        characters: ["Skeleton Crew", "Monsters", "Robots", "Mutants"],
+        description:
+            "Bone-crunching hockey carnage — where goals, gore, and ghouls collide!",
+        longDescription:
+            "Mutant League Hockey (1994) transforms ice hockey into a brutal, hilarious combat sport where mutant teams battle not only for goals but for survival. " +
+            "Players control undead, cyborgs, and beasts who can fight, cheat, and even kill opponents mid-match — turning every face-off into organized chaos. " +
+            "A spin-off of the cult hit Mutant League Football, it delivers over-the-top violence, deadly arenas with traps, and referees who can be bribed or attacked. " +
+            "Combining slapstick humor with arcade action, it’s a one-of-a-kind Genesis classic that captures 90s attitude in every bloody body check.",
+        players: "1-2 Players",
+        developer: "Electronic Arts",
+        coverImage: "/assets/covers/mutant-league-hockey.jpg",
+        platform: "Genesis",
+        logo: "/assets/logos/mutant-league-hockey.png",
+    },
 
 ];
 
-export const sportsFilters = ["Sports"];
+export const sportsFilters = ["Sports", "Horror"];

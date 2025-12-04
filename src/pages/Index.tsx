@@ -99,6 +99,7 @@ const Index = () => {
     RPG: 'Diverse RPG adventures with exploration',
     Guns: 'Fast-paced shooters packed with bullets',
     Brasil: 'Jogos hackeados e traduzidos para o PT-BR',
+    Child: 'Fun and colorful adventures for all ages',
   };
 
   return (
