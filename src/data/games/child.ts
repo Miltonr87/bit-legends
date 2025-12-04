@@ -133,6 +133,50 @@ export const childGames: Game[] = [
         logo: "/assets/logos/super-mario-allstars.png",
         platform: "Nintendo",
     },
+    {
+        id: "the-firemen",
+        title: "The Firemen",
+        slug: "firemen-the-europe-en-fr-de",
+        embedUrl: "https://www.retrogames.cc/embed/18654-firemen-the-europe-en-fr-de.html",
+        year: 1994,
+        genre: "Child",
+        folder: "Child",
+        publisher: "Human Entertainment",
+        characters: ["Pete Grey", "Danny McClean", "Max", "Walter", "Winona"],
+        description: "Brave firefighters take on raging infernos to save civilians in a high-rise blaze!",
+        longDescription:
+            "The Firemen (1994) puts you in the boots of Pete Grey, a veteran firefighter, as he and his partner Danny McClean race through a burning chemical-company skyscraper after a catastrophic fire breaks out during a Christmas party. " +
+            "Armed with an unlimited water hose and occasional water bombs, you must extinguish raging fires, clear hazardous rooms, and rescue trapped civilians before time — the smoke, flames, and collapsing building make every floor a life-or-death challenge. " +
+            "With a top-down view, cartoonish yet detailed visuals, tense fire effects and an urgent soundtrack, the game blends action, strategy and heroism into a unique SNES experience that stands out among platformers and shooters. " +
+            "Though designed for a single player (with an AI partner), its frantic pace, dramatic scenarios and simple but effective controls make it a heartfelt adventure — a tribute to real heroes fighting under impossible conditions.",
+        players: "1 Player",
+        developer: "Human Entertainment",
+        coverImage: "/assets/covers/the_firemen.jpg",
+        platform: "Nintendo",
+        logo: "/assets/logos/the_firemen.png"
+    },
+    {
+        id: "castle-of-illusion",
+        title: "Castle of Illusion",
+        slug: "castle-of-illusion",
+        embedUrl: "https://www.retrogames.cc/embed/30440-castle-of-illusion-starring-mickey-mouse-usa-europe.html",
+        year: 1990,
+        genre: "Child",
+        folder: "Child",
+        publisher: "Sega",
+        characters: ["Mickey Mouse", "Minnie Mouse", "Mizrabel", "Masters of Illusion"],
+        description: "Magical platform adventure with Mickey venturing into an enchanted castle!",
+        longDescription:
+            "Castle of Illusion (1990) sends Mickey Mouse into a surreal, dreamlike castle full of traps, enchanted forests, toy lands and creepy libraries to rescue Minnie from the evil witch Mizrabel. " +
+            "Players bounce, jump and toss apples or marbles to defeat enemies from enchanted toys to dark creatures, while collecting gems, extra lives and power-ups. " +
+            "With its vibrant 16-bit visuals, charming soundtrack, creative level design and classic platforming gameplay, the game blends fairy-tale magic with joyful action. " +
+            "A timeless platformer that captures the whimsy of Disney while delivering tight, satisfying controls — perfect for younger players and anyone who loves nostalgic 2D adventures.",
+        players: "1 Player",
+        developer: "Sega",
+        coverImage: "/assets/covers/castle_of_illusion.jpg",
+        platform: "Genesis",
+        logo: "/assets/logos/castle_of_illusion.png",
+    },
 ];
 
 export const childFilters = ["Child"];
