@@ -168,7 +168,7 @@ export const sportsGames: Game[] = [
         id: "superstar-soccer-sports",
         title: "Superstar Soccer Deluxe",
         slug: "superstar-soccer-deluxe",
-        embedUrl: "https://www.retrogames.cc/embed/23714-international-superstar-soccer-deluxe-usa.html",
+        embedUrl: "https://www.retrogames.cc/embed/24356-international-superstar-soccer-deluxe-europe.html",
         year: 1995,
         genre: "Sports",
         folder: "Sports",
