@@ -13,15 +13,12 @@ export const fightGames: Game[] = [
         characters: ["Liu Kang", "Kung Lao", "Sub-Zero", "Scorpion", "Shang Tsung", "Noob Saibot", "Strider", "Sonya Blade"],
         description: "The ultimate MK3!",
         longDescription:
-            "Ultimate Mortal Kombat 3 (1996) refines and amplifies everything from MK3 — faster movement, smarter AI, hidden modes, brutal combos, and a massive roster of heroes and villains. " +
-            "Battle across iconic arenas like The Pit, The Graveyard, and the Portal as warriors from every realm clash for supremacy. " +
-            "Discover new fatalities, animalities, friendships, and secret fighters lurking in the shadows. " +
-            "From tournament play to couch rivalries, UMK3 stands as one of the most beloved and competitive entries in the Mortal Kombat legacy.",
+            "Ultimate Mortal Kombat 3 (1996) refines and amplifies everything from MK3 — faster movement, smarter AI, hidden modes, brutal combos, and a massive roster of heroes and villains. Battle across iconic arenas like The Pit, The Graveyard, and the Portal as warriors from every realm clash for supremacy. Discover new fatalities, animalities, friendships, and secret fighters lurking in the shadows. From tournament play to couch rivalries, UMK3 stands as one of the most beloved and competitive entries in the Mortal Kombat legacy.",
         players: "1-2 Players",
         developer: "Midway",
         coverImage: "/assets/covers/ultimate_mk3.jpg",
         platform: "Nintendo",
-        logo: "/assets/logos/umk3.png"
+        logo: "/assets/logos/umk3.png",
     },
     {
         id: "mk2",
@@ -841,7 +838,6 @@ export const fightGames: Game[] = [
         platform: "Nintendo",
         logo: "/assets/logos/dbz_hyper_dimension.png"
     },
-
 ]
 
 export const fightFilters = [
