@@ -233,28 +233,39 @@ export const sportsGames: Game[] = [
         logo: "/assets/logos/futebol_brasileiro_96.png"
     },
     {
-        id: "pernambucano2025-sports",
-        title: "Pernambucano 2025",
-        slug: "pernambucano-2025",
+        id: "clubworldcup2025-sports",
+        title: "FIFA Club World Cup",
+        slug: "club-world-cup-2025",
         embedUrl:
-            "/emulator.html?rom=https://ozequlizbaymnvzeqkyh.supabase.co/storage/v1/object/public/game-rom/pernambucano.sfc",
+            "/emulator.html?rom=https://ozequlizbaymnvzeqkyh.supabase.co/storage/v1/object/public/game-rom/mundial2025.smc",
         year: 2025,
         genre: "Brasil",
         folder: "Brasil",
-        publisher: "Fan Hack BR",
-        characters: ["Sport", "Náutico", "Santa Cruz", "America", "Vera Cruz", "Ypiranga", "Ipojuca", "Aguia", "Afogados", "Porto"],
+        publisher: "EFRA 16bit",
+        characters: [
+            "PSG",
+            "Manchester City",
+            "Flamengo",
+            "Palmeiras",
+            "Fluminense",
+            "Boca Juniors",
+            "Inter Miami",
+            "Al Hilal",
+            "Benfica",
+            "Chelsea",
+        ],
         description:
-            "Uma edição moderna e regional, trazendo o Campeonato Pernambucano para o mundo 16-bit com paixão e rivalidade local.",
+            "Uma versão hackeada em 16-bit trazendo o Mundial de Clubes 2025 com times atualizados e clima de grande competição global.",
         longDescription:
-            "Pernambucano 2025 é uma edição personalizada que traz o clima vibrante do futebol pernambucano para o SNES, recriando a intensidade e rivalidade entre Sport, Santa Cruz, Náutico e outras equipes tradicionais do estado. " +
-            "Com uniformes atualizados, estádios locais recriados em estilo 16-bit e uma gameplay acelerada inspirada nos clássicos da Konami, esta versão captura a essência do futebol nordestino com autenticidade e carisma. " +
-            "Além disso, apresenta detalhes regionais, cantos de arquibancada, identidade visual inspirada nos clubes e uma ambientação que remete aos grandes clássicos disputados no calor da torcida pernambucana. " +
-            "Uma celebração da cultura esportiva de Pernambuco, feita por fãs e para fãs que vivem o futebol local.",
+            "FIFA Club World Cup 2025 é um rom hack baseado na engine clássica do EFRA 16bit, recriando o torneio mundial com elenco completo, visuais renovados e gameplay refinado no estilo Konami. " +
+            "A edição traz clubes de todos os continentes — de gigantes europeus como Real Madrid e Manchester City aos favoritos sul-americanos Flamengo e Palmeiras — reproduzidos com uniformes atualizados, escalações modernas e estádios estilizados em 16-bit. " +
+            "O jogo entrega uma experiência rápida, competitiva e cheia de atmosfera, capturando o peso do Mundial com animações vibrantes, torcida intensa e aquela dose de nostalgia típica dos hacks brasileiros. " +
+            "Uma celebração global do futebol adaptada para o estilo retrô, perfeita para quem ama torneios internacionais e o charme das edições modificadas.",
         players: "1-2 Players",
-        developer: "Falcon BR",
-        coverImage: "/assets/covers/pernambucano2025.jpg",
+        developer: "EFRA 16bit",
+        coverImage: "/assets/covers/club_world_cup_2025.jpg",
         platform: "Nintendo",
-        logo: "/assets/logos/pernambucano2025.png"
+        logo: "/assets/logos/club_world_cup_2025.png"
     },
     {
         id: "the-ultimate-11",
