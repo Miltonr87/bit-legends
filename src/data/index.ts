@@ -1,33 +1,57 @@
-import { Game } from "../types";
-import { beatnupGames, beatnupFilters } from "./games/beatemup";
-import { fightGames, fightFilters } from "./games/fight";
-import { raceGames, raceFilters } from "./games/race";
-import { actionGames, actionFilters } from "./games/action";
-import { sportsGames, sportsFilters } from "./games/sports";
-import { rpgsGames, rpgsFilters } from './games/rpg';
+import type { Game } from "../types";
 
-export const allGames: Game[] = [
-    ...beatnupGames,
-    ...fightGames,
-    ...raceGames,
-    ...actionGames,
-    ...sportsGames,
-    ...rpgsGames,
-];
+export const loadGames = async (): Promise<Game[]> => {
+    const [
+        { beatnupGames },
+        { fightGames },
+        { raceGames },
+        { actionGames },
+        { sportsGames },
+        { rpgsGames },
+    ] = await Promise.all([
+        import("./games/beatemup"),
+        import("./games/fight"),
+        import("./games/race"),
+        import("./games/action"),
+        import("./games/sports"),
+        import("./games/rpg"),
+    ]);
+    return [
+        ...beatnupGames,
+        ...fightGames,
+        ...raceGames,
+        ...actionGames,
+        ...sportsGames,
+        ...rpgsGames,
+    ];
+};
 
-const rawFilters = Array.from(
-    new Set([
-        ...beatnupFilters,
-        ...fightFilters,
-        ...raceFilters,
-        ...actionFilters,
-        ...sportsFilters,
-        ...rpgsFilters,
-    ])
-);
+export const loadFilters = async (): Promise<string[]> => {
+    const [
+        { beatnupFilters },
+        { fightFilters },
+        { raceFilters },
+        { actionFilters },
+        { sportsFilters },
+        { rpgsFilters },
+    ] = await Promise.all([
+        import("./games/beatemup"),
+        import("./games/fight"),
+        import("./games/race"),
+        import("./games/action"),
+        import("./games/sports"),
+        import("./games/rpg"),
+    ]);
+    const rawFilters = Array.from(
+        new Set([
+            ...beatnupFilters,
+            ...fightFilters,
+            ...raceFilters,
+            ...actionFilters,
+            ...sportsFilters,
+            ...rpgsFilters,
+        ])
+    );
 
-export const seriesFilters = [
-    ...rawFilters.filter((f) => f !== "Rare" && "Brasil"),
-    "Rare", "Brasil"
-
-];
+    return [...rawFilters.filter((f) => f !== "Rare" && "Brasil"), "Rare", "Brasil"];
+};
