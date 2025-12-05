@@ -295,6 +295,41 @@ export const fightGames: Game[] = [
         logo: "/assets/logos/kof2002.png"
     },
     {
+        id: "kof2002_magicplus2",
+        title: "King of Fighters: MP II",
+        slug: "the-king-of-fighters-2002-magic-plus-ii-bootleg-bootleg",
+        embedUrl: "https://www.retrogames.cc/embed/10387-the-king-of-fighters-2002-magic-plus-ii-bootleg-bootleg.html",
+        year: 2023,
+        genre: "Tournament / Hack",
+        folder: "Tournament",
+        publisher: "Bootleg",
+        characters: [
+            "Kyo Kusanagi",
+            "Iori Yagami",
+            "Terry Bogard",
+            "Mai Shiranui",
+            "Ryo Sakazaki",
+            "K'",
+            "Athena Asamiya",
+            "Kim Kaphwan",
+            "Orochi Iori",
+            "Orochi Leona",
+            "Kula Diamond",
+            "Zero (Clone)"
+        ],
+        description: "A wild and overpowered hack of KOF 2002 packed with boss characters, insane supers, and rebalanced chaos.",
+        longDescription:
+            "King of Fighters 2002: Magic Plus II (2023) is one of the most famous bootleg mods in the KOF community — a hacked edition built on top of the 2002 classic, turning the game into a fast, explosive, and unpredictably fun experience. " +
+            "This version unlocks boss characters, introduces instant MAX Mode activations, adds modified movesets, and delivers flashy, over-the-top supers that drastically change match flow. " +
+            "Magic Plus II is beloved in arcades for its chaotic balance, wild combos, and pure fan-service energy, offering a unique spin for players who want something more extreme than the official release. " +
+            "A cult favorite in casual and online play, it stands as one of the most recognized KOF hacks ever created.",
+        players: "1–2 Players",
+        developer: "Bootleg / Hack",
+        coverImage: "/assets/covers/kof2002_magicplus2.jpg",
+        platform: "Arcade",
+        logo: "/assets/logos/kof2002_magicplus2.png"
+    },
+    {
         id: "killer-instinct",
         title: "Killer Instinct",
         slug: "killer-instinct-usa",
