@@ -909,7 +909,7 @@ export const beatnupGames: Game[] = [
     embedUrl: "https://www.retrogames.cc/embed/9681-robo-army.html",
     year: 1991,
     genre: "Sci-Fi",
-    folder: "SNK / Neo Geo",
+    folder: "Sci-Fi",
     publisher: "SNK",
     characters: ["Maxima", "Rocky", "Dr. Jeed", "Robot Minions"],
     description: "A futuristic side-scrolling brawler where cyborg heroes fight an army of robots.",
@@ -923,6 +923,34 @@ export const beatnupGames: Game[] = [
     coverImage: "/assets/covers/robo_army_arcade.jpg",
     platform: "Arcade",
     logo: "/assets/logos/roboarmy.png",
+  },
+  {
+    id: "gaia-crusaders",
+    title: "Gaia Crusaders",
+    slug: "gaia-crusaders",
+    embedUrl: "https://www.retrogames.cc/embed/8568-gaia-crusaders.html",
+    year: 1999,
+    genre: "Sci-Fi",
+    folder: "Arcade",
+    publisher: "Noise Factory / Promat",
+    characters: [
+      "Jin",
+      "Gail",
+      "Sophia",
+      "J. Max",
+      "Kou"
+    ],
+    description: "A fast-paced post-apocalyptic beat ’em up where warriors battle supernatural forces to restore balance to the world.",
+    longDescription:
+      "Gaia Crusaders (1999) is a frantic arcade beat-’em up developed by Noise Factory, known for its energetic combat and flashy supernatural attacks. " +
+      "Set in a ruined world, players control one of five fighters as they confront mutated creatures, cultists, and elemental bosses across sprawling stages. " +
+      "The game blends martial arts with mystical abilities, offering combo-heavy action, screen-filling specials, and power-up transformations that amplify the chaos. " +
+      "With its bold visuals and relentless pace, Gaia Crusaders stands out as a hidden gem of late ’90s arcade action.",
+    players: "1–2 Players",
+    developer: "Noise Factory",
+    coverImage: "/assets/covers/gaia_crusaders.jpg",
+    platform: "Arcade",
+    logo: "/assets/logos/gaia_crusaders.png"
   },
   {
     id: "superman-world",
