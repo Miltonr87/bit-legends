@@ -34,3 +34,5 @@ export const seriesFilters = [
     "Child", "Brasil"
 
 ];
+
+// Last stable version of Bit legends without Lazy Loading and Minify
