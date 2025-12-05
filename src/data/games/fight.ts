@@ -356,8 +356,8 @@ export const fightGames: Game[] = [
         slug: "the-king-of-fighters-special-edition-2004-plus-bootleg-bootleg",
         embedUrl: "https://www.retrogames.cc/embed/10400-the-king-of-fighters-special-edition-2004-plus-bootleg-bootleg.html",
         year: 2004,
-        genre: "Tournament",
-        folder: "Tournament",
+        genre: "Tournament / Hack",
+        folder: "Tournament / hack",
         publisher: "SNK Playmore",
         characters: [
             "Kyo Kusanagi",
@@ -371,9 +371,10 @@ export const fightGames: Game[] = [
         ],
         description: "A fast-paced unofficial remix of the King of Fighters 2003 engine!",
         longDescription:
-            "The King of Fighters 2004: Special Edition Plus is a wild, fast-running bootleg remix built upon the KOF 2003 engine. " +
-            "Featuring altered move sets, tweaked damage balances, enhanced EX-style attacks, and reimagined team formations, it became an underground arcade favorite for its chaotic, unpredictable matchups. " +
-            "Not official — but infamous for its speed, combo potential, and explosive gameplay.",
+            "The King of Fighters 2004: Special Edition Plus is a wild, high-speed bootleg overhaul built on the KOF 2003 engine. " +
+            "It introduces reworked move sets, altered damage values, enhanced EX-style abilities, and unconventional team arrangements that completely reshape the meta. " +
+            "Unofficial yet legendary in underground arcades, this hack became notorious for its blazing pace, flashy combo routes, and explosive, unpredictable gameplay.",
+
         players: "1-2 Players",
         developer: "SNK Playmore (Bootleg Edition)",
         coverImage: "/assets/covers/kof_2004.jpeg",
