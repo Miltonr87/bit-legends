@@ -816,6 +816,33 @@ export const fightGames: Game[] = [
         logo: "/assets/logos/street_fighter_ii_champion_edition.png"
     },
     {
+        id: "garou_motw",
+        title: "Mark of the Wolves",
+        slug: "garou-mark-of-the-wolves-ngm-2530",
+        embedUrl: "https://www.retrogames.cc/embed/8608-garou-mark-of-the-wolves-ngm-2530.html",
+        year: 1999,
+        genre: "Tournament",
+        folder: "Tournament",
+        publisher: "SNK",
+        characters: [
+            "Rock Howard", "Terry Bogard", "Hotaru Futaba", "Gato", "B. Jenet",
+            "Hokutomaru", "Grant", "Kain R. Heinlein", "Tizoc", "Freeman",
+            "Kevin Rian", "Khushnood Butt", "Marco Rodrigues", "Kim Dong Hwan",
+            "Kim Jae Hoon"
+        ],
+        description: "SNK’s legendary evolution of the Fatal Fury series, built for high-level competitive play.",
+        longDescription:
+            "Garou: Mark of the Wolves (1999) is one of SNK’s most celebrated fighting games, representing the pinnacle of the Fatal Fury saga. " +
+            "Set years after Real Bout, it introduces a brand-new generation of fighters led by Rock Howard, trained by Geese and mentored by Terry Bogard. " +
+            "The game features the innovative T.O.P. System, Just Defend mechanic, and some of the smoothest hand-drawn animations ever seen in a 2D fighter. " +
+            "Its tight balance, stylish presentation, and tournament-ready mechanics make Garou a staple of competitive play and a beloved classic in the Neo Geo library.",
+        players: "1–2 Players",
+        developer: "SNK",
+        coverImage: "/assets/covers/mark_of_the_wolves.jpg",
+        platform: "Arcade",
+        logo: "/assets/logos/mark_of_the_wolves.png"
+    },
+    {
         id: "dbz-hyperdimension",
         title: "Dragon Ball Z: Hyper",
         slug: "dragon-ball-z-hyper-dimension",
