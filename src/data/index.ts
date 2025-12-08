@@ -30,7 +30,7 @@ const rawFilters = Array.from(
 );
 
 export const seriesFilters = [
-    ...rawFilters.filter((f) => f !== "Child" && "Brasil"),
-    "Child", "Brasil"
+    ...rawFilters.filter((f) => f !== "Rare"),
+    "Rare",
 
 ];

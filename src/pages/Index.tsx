@@ -89,17 +89,18 @@ const Index = () => {
     Urban: 'Streets and gangs in pure mayhem',
     Horror: 'Dark atmospheres with terrifying creatures',
     Tournament: 'Head-to-head battles with unique fighters',
-    'Global Comics': 'Characters from comic publishers worldwide',
     'DC Comics': 'Metahumans superheroes and vigilantes',
     'Marvel Comics': 'Avengers and mutants facing cosmic threats',
     Rare: 'Cancelled prototypes or limited releases',
     'Sci-Fi': 'Futuristic worlds with advanced technology',
     Race: 'High-speed races through challenging tracks',
-    Sports: 'Pixel sports legends in action',
+    Sport: 'Iconic athletes and champions',
     RPG: 'Diverse RPG adventures with exploration',
     Guns: 'Fast-paced shooters packed with bullets',
     Brasil: 'Jogos hackeados e traduzidos para o PT-BR',
     Child: 'Fun and colorful adventures for all ages',
+    Ninja: 'Stealthy warriors mastering the shadows',
+    Hack: 'Hacked ROMs rebuilt with creative content',
   };
 
   return (

@@ -1,1 +1,312 @@
-import{Game}from"../index";export const rpgsGames:Game[]=[{id:"shadowrun-snes-ptbr",title:"Shadowrun (Brasil)",slug:"shadowrun-snes-ptbr",embedUrl:"/emulator.html?rom=https://ozequlizbaymnvzeqkyh.supabase.co/storage/v1/object/public/game-rom/shadowrun-ptbr.smc",year:1993,genre:"Brasil",folder:"Brasil",publisher:"Data East / DougRPG",characters:["Jake Armitage","Deckers","Riggers","Shamans"],description:"A versão traduzida para Brasil do clássico cyberpunk investigativo do SNES — mergulhe no submundo sombrio de Seattle.",longDescription:"Shadowrun (Brasil) traz o aclamado RPG cyberpunk do Super Nintendo totalmente traduzido para o português brasileiro, permitindo que novos jogadores vivenciem uma das narrativas mais únicas da era 16-bit. Assuma o papel de Jake Armitage enquanto desvenda conspirações envolvendo megacorporações, magia, implantes cibernéticos e hackers conhecidos como Deckers. Com combate tático, exploração em mundo semiaberto e acesso completo à Matrix, esta versão traduzida torna a jornada mais acessível — preservando a atmosfera noir, o humor afiado e o tom sombrio que definem o universo Shadowrun.",players:"1 Player",developer:"Beam Software / DougRPG",coverImage:"/assets/covers/shadowrun.jpg",platform:"Nintendo",logo:"/assets/logos/shadowrun.jpg"},{id:"breathoffire2-snes-ptbr",title:"Breath of Fire II (Brasil)",slug:"breath-of-fire-ii-ptbr",embedUrl:"/emulator.html?rom=https://ozequlizbaymnvzeqkyh.supabase.co/storage/v1/object/public/game-rom/BFII-pt-br.sfc",year:1994,genre:"Brasil",folder:"Brasil",publisher:"Capcom / Equipe Brasileira",characters:["Ryu","Bow","Nina","Katt","Rand","Sten","Jean","Spar"],description:"A versão totalmente traduzida para o Brasil do lendário RPG da Capcom — épico, emocional e inesquecível.",longDescription:"Breath of Fire II (Brasil) traz o clássico RPG da Capcom totalmente traduzido para o português, permitindo que novos jogadores descubram uma das narrativas mais emocionantes e sombrias da era 16-bit. Acompanhe Ryu e seus aliados em uma jornada marcada por mistérios, conflitos espirituais, reviravoltas dramáticas e um mundo vivo repleto de personagens memoráveis. Com uma tradução dedicada que preserva o tom original, este clássico torna-se ainda mais imersivo e acessível para os fãs brasileiros de JRPG.",players:"1 Player",developer:"Capcom",coverImage:"/assets/covers/breath_of_fire_ii.jpg",platform:"Nintendo",logo:"/assets/logos/breath_of_fire_ii.png"},{id:"breathoffire2-snes",title:"Breath of Fire II",slug:"breath-of-fire-ii",embedUrl:"https://www.retrogames.cc/embed/19771-breath-of-fire-ii-usa.html",year:1994,genre:"RPG",folder:"RPG",publisher:"Capcom",characters:["Ryu","Bow","Nina","Katt","Rand","Sten","Jean","Spar"],description:"A beloved Capcom RPG filled with mystery, transformation powers, and an unforgettable 16-bit adventure.",longDescription:"Breath of Fire II (1994) delivers one of Capcom’s richest RPG experiences, following Ryu and his allies on a journey marked by faith, betrayal, and supernatural forces. Featuring unique party transformations, character-driven storytelling, challenging dungeons, and a world packed with secrets, the game builds upon the foundation of the original with deeper emotional stakes and a darker narrative tone. With its memorable cast, atmospheric music, and classic 16-bit charm, Breath of Fire II remains a cornerstone of the JRPG genre and a must-play for fans of timeless fantasy adventures.",players:"1 Player",developer:"Capcom",coverImage:"/assets/covers/breath_of_fire_ii.jpg",platform:"Nintendo",logo:"/assets/logos/breath_of_fire_ii.png"},{id:"shadowrun-snes-usa",title:"Shadowrun",slug:"shadowrun-snes",embedUrl:"https://www.retrogames.cc/embed/22866-shadowrun-usa.html",year:1993,genre:"RPG",folder:"RPG",publisher:"Data East",characters:["Jake Armitage","Deckers","Riggers","Shamans"],description:"A gritty cyberpunk RPG blending magic, megacorporations, and tactical combat in dystopian Seattle.",longDescription:"Shadowrun for the Super Nintendo delivers a unique fusion of cyberpunk and fantasy, placing players in the role of amnesiac runner Jake Armitage. As you navigate the dark streets of Seattle, you’ll uncover conspiracies involving megacorporations, magic, cybernetic upgrades, and the digital underworld of the Matrix. With tactical, real-time combat and semi-open world exploration, Shadowrun stands out as one of the most atmospheric and narrative-driven RPGs of the 16-bit era — a cult classic renowned for its depth, style, and world-building.",players:"1 Player",developer:"Beam Software",coverImage:"/assets/covers/shadowrun.jpg",platform:"Nintendo",logo:"/assets/logos/shadowrun.jpg"},{id:"shining-force-genesis-ptbr",title:"Shining Force (Brasil)",slug:"shining-force-ptbr",embedUrl:"/emulator.html?rom=https://ozequlizbaymnvzeqkyh.supabase.co/storage/v1/object/public/game-rom/Shining-ptbr.gen",year:1992,genre:"Brasil",folder:"Brasil",publisher:"Sega / Lobo-FF",characters:["Max","Anri","Mae","Zylo","Shining Force"],description:"A versão totalmente traduzida para Brasil do clássico RPG tático da era 16-bit.",longDescription:"Shining Force (Brasil) traz o lendário RPG tático do Sega Genesis totalmente traduzido para o português, permitindo que novos jogadores vivenciem uma das campanhas mais memoráveis da era 16-bit. Lidere Max e seu grupo de heróis em batalhas estratégicas contra as forças sombrias do Reino de Runefaust, combinando combate em grid, progressão de classes e uma história épica. A tradução brasileira preserva o charme original e aumenta a imersão, tornando esta aventura clássica ainda mais acessível para os jogadores modernos.",players:"1 Player",developer:"Climax Entertainment",coverImage:"/assets/covers/shining-force.jpg",platform:"Genesis",logo:"/assets/logos/shiningforce.png"},{id:"shining-force-genesis-usa",title:"Shining Force",slug:"shining-force-usa",embedUrl:"/emulator.html?rom=https://www.retrogames.cc/genesis-games/shining-force-usa.html",year:1992,genre:"RPG",folder:"RPG",publisher:"Sega",characters:["Max","Anri","Mae","Zylo","Shining Force"],description:"A landmark tactical RPG combining grid-based strategy, character progression, and an epic fantasy narrative.",longDescription:"Shining Force delivers one of the most iconic tactical RPG experiences on the Sega Genesis, placing players in command of Max and his diverse group of heroes. Battle through the growing threat of the Runefaust Empire using grid-based strategy, class evolution, and a rich cast of recruitable characters. With its blend of exploration, story-driven campaigns, and strategic combat, Shining Force remains a defining classic of the 16-bit era and a cornerstone of Sega’s RPG legacy.",players:"1 Player",developer:"Climax Entertainment",coverImage:"/assets/covers/shining-force.jpg",platform:"Genesis",logo:"/assets/logos/shiningforce.png"},{id:"chronotrigger-rpg",title:"Chrono Trigger",slug:"chrono-trigger",embedUrl:"https://www.retrogames.cc/embed/22857-chrono-trigger-usa.html",year:1995,genre:"RPG",folder:"RPG",publisher:"Square",characters:["Crono","Marle","Lucca","Frog","Robo","Ayla","Magus"],description:"One of the greatest RPGs ever made — time-traveling adventure, unforgettable characters, and legendary storytelling.",longDescription:"Chrono Trigger stands as a masterpiece of the 16-bit era, blending innovative time-travel mechanics with a rich cast of heroes and a gripping narrative that spans multiple eras. Developed by Square’s iconic ‘Dream Team,’ the game delivers strategic, fast-flowing combat, emotional storytelling, and branching paths that shape the fate of the world. From prehistoric battles to futuristic ruins, every chapter unfolds with charm, depth, and unforgettable moments, making Chrono Trigger a timeless RPG classic celebrated across generations.",players:"1 Player",developer:"Square",coverImage:"/assets/covers/chrono_trigger.jpg",platform:"Nintendo",logo:"/assets/logos/chrono_trigger.png"},{id:"finalfantasy6-rpg",title:"Final Fantasy VI",slug:"final-fantasy-vi",embedUrl:"https://www.retrogames.cc/embed/20257-final-fantasy-vi-japan-en-by-rpgone-v1-2b-all-bug-fixes.html",year:1994,genre:"RPG",folder:"RPG",publisher:"Square",characters:["Terra Branford","Locke","Edgar","Sabin","Celes","Shadow","Setzer","Kefka"],description:"A legendary JRPG masterpiece — emotional storytelling, a vast cast, and one of the most iconic villains in gaming.",longDescription:"Final Fantasy VI redefines the 16-bit RPG experience with its ensemble cast, powerful emotional arcs, and cinematic storytelling. Set in a world where magic and technology collide, the narrative follows Terra and an unforgettable group of heroes as they rise against the tyranny of Kefka — one of gaming’s most iconic antagonists. Featuring an expansive world, deep character progression, Mode 7 airship exploration, and a hauntingly beautiful soundtrack, this fan-translated edition with bug fixes preserves everything that made FFVI a timeless RPG classic.",players:"1 Player",developer:"Square",coverImage:"/assets/covers/final_fantasy_vi.jpg",platform:"Nintendo",logo:"/assets/logos/final_fantasy_vi.png"},{id:"shining-force2-genesis",title:"Shining Force II",slug:"shining-force-ii",embedUrl:"https://www.retrogames.cc/embed/19064-shining-force-ii-usa.html",year:1993,genre:"RPG",folder:"RPG",publisher:"Sega",characters:["Bowie","Sarah","Jaha","Kazín","Peter","Shining Force"],description:"A definitive 16-bit tactical RPG with expanded classes, deeper strategy, and a massive world to explore.",longDescription:"Shining Force II elevates the tactical RPG formula with a richer storyline, an expansive overworld, and deeper character progression. Lead Bowie and the new Shining Force as you battle powerful monsters, uncover ancient legends, and confront the rising threat consuming the Kingdom of Granseal. With grid-based strategy, branching promotions, hidden characters, and memorable set pieces, Shining Force II remains one of Sega’s most beloved and enduring RPG masterpieces.",players:"1 Player",developer:"Sonic! Software Planning",coverImage:"/assets/covers/shiningforce2.jpg",platform:"Genesis",logo:"/assets/logos/shiningforceII.png"},{id:"shining-force2-genesis-ptbr",title:"Shining Force II (Brasil)",slug:"shining-force-ii-ptbr",embedUrl:"/emulator.html?rom=https://ozequlizbaymnvzeqkyh.supabase.co/storage/v1/object/public/game-rom/shining-II-ptbr.gen",year:1993,genre:"Brasil",folder:"Brasil",publisher:"Sega / Brazilian Team",characters:["Bowie","Sarah","Jaha","Kazín","Peter","Shining Force"],description:"A versão totalmente traduzida para Brasil do clássico épico de estratégia do Mega Drive.",longDescription:"Shining Force II (Brasil) traz o aclamado RPG tático do Sega Genesis totalmente traduzido para o português, permitindo que novos jogadores mergulhem em uma das maiores aventuras da era 16-bit. Lidere Bowie e a nova Shining Force em batalhas estratégicas, explorando um vasto mundo repleto de segredos, classes evolutivas, personagens ocultos e encontros memoráveis. A tradução brasileira preserva o espírito original e torna essa jornada clássica ainda mais imersiva e acessível para os jogadores modernos.",players:"1 Player",developer:"Sonic! Software Planning",coverImage:"/assets/covers/shiningforce2.jpg",platform:"Genesis",logo:"/assets/logos/shiningforceII.png"},{id:"dd-eternalsun-rpg",title:"D&D: Eternal Sun",slug:"dungeons-and-dragons-eternal-sun",embedUrl:"https://www.retrogames.cc/embed/30341-dungeons-dragons-warriors-of-the-eternal-sun-usa-europe.html",year:1992,genre:"RPG",folder:"RPG",publisher:"TSR / Sega",characters:["Clerics","Fighters","Dwarves","Elves","Monsters of Mystara"],description:"A classic D&D adventure on the Genesis featuring exploration, dungeon crawling, and party-based strategy.",longDescription:"Dungeons & Dragons: Warriors of the Eternal Sun brings the iconic tabletop universe of Mystara to the Sega Genesis with a mix of overworld exploration, first-person dungeons, and classic party-based RPG mechanics. Create your party, battle monstrous creatures, and uncover the secrets of a strange valley trapped under an eternal sun. With turn-based combat, character progression, and faithful D&D classes and races, the game delivers a rich and atmospheric journey for fans of old-school role-playing. A unique blend of strategy, exploration, and fantasy storytelling that remains a standout RPG in the Genesis library.",players:"1 Player",developer:"Westwood Associates",coverImage:"/assets/covers/dd_eternal_sun.jpg",platform:"Genesis",logo:"/assets/logos/dd_eternal_sun.png"},{id:"alcahest-rpg",title:"Alcahest",slug:"alcahest",embedUrl:"/emulator.html?rom=https://ozequlizbaymnvzeqkyh.supabase.co/storage/v1/object/public/game-rom/alcahest-eng.smc&platform=snes",year:1993,genre:"RPG",folder:"RPG",publisher:"Square",characters:["Alen","Guardians","Garam","Droma"],description:"A fast-paced action RPG from Square, blending elemental guardians, heroic quests, and cinematic 16-bit storytelling.",longDescription:"Alcahest is a Japan-exclusive fantasy Action RPG developed by Square that delivers real-time combat, richly animated cutscenes, and a heroic story centered on the warrior Alen. Harness the power of elemental Guardians, battle through diverse regions, and face powerful bosses in a game that blends fantasy adventure with classic 16-bit intensity. Featuring dynamic allies, stage-based progression, and polished presentation, Alcahest stands out as one of Square’s hidden gems on the Super Nintendo — a must-play for fans of action-driven RPGs.",players:"1 Player",developer:"HAL Laboratory / Square",coverImage:"/assets/covers/alcahest.jpg",platform:"Nintendo",logo:"/assets/logos/alcahest.png"},{id:"dbz-supersaiyadensetsu-ptbr",title:"Dragon Ball Z (Brasil)",slug:"dragon-ball-z-super-saiya-densetsu-ptbr",embedUrl:"/emulator.html?rom=https://ozequlizbaymnvzeqkyh.supabase.co/storage/v1/object/public/game-rom/dbz-ptbr.smc",year:1992,genre:"Brasil",folder:"Brasil",publisher:"Bandai / Equipe Brasileira",characters:["Goku","Gohan","Vegeta","Piccolo","Kuririn","Freeza"],description:"A versão traduzida para o Brasil do clássico RPG de Dragon Ball Z no Super Nintendo, cobrindo as sagas Saiyajin e Freeza.",longDescription:"Dragon Ball Z: Super Saiya Densetsu (Brasil) apresenta o lendário RPG do Super Nintendo totalmente traduzido para o português, permitindo que fãs vivenciem as sagas Saiyajin e Freeza com fidelidade e nostalgia. Acompanhe Goku, Gohan, Vegeta e os demais guerreiros Z em batalhas estratégicas baseadas em cartas, exploração por cenários icônicos e eventos que recriam momentos marcantes do anime. Com uma tradução dedicada que torna diálogos, menus e técnicas mais acessíveis, esta versão PT-BR oferece uma experiência envolvente e autêntica para novos jogadores e veteranos de Dragon Ball.",players:"1 Player",developer:"TOSE / Bandai",coverImage:"/assets/covers/dbz_super_saiya_densetsu.jpg",platform:"Nintendo",logo:"/assets/logos/dbz_super_saiya_densetsu.png"}];export const rpgsFilters=["RPG"];
+import { Game } from "../index";
+
+export const rpgsGames: Game[] = [
+    {
+        id: "shadowrun-snes-ptbr",
+        title: "Shadowrun (Brazil)",
+        slug: "shadowrun-snes-ptbr",
+        embedUrl:
+            "/emulator.html?rom=https://ozequlizbaymnvzeqkyh.supabase.co/storage/v1/object/public/game-rom/shadowrun-ptbr.smc",
+        year: 1993,
+        genre: "RPG / Hack",
+        folder: "RPG / Hack",
+        publisher: "Data East / DougRPG",
+        characters: ["Jake Armitage", "Deckers", "Riggers", "Shamans"],
+        description:
+            "A versão traduzida para Brasil do clássico cyberpunk investigativo do SNES — mergulhe no submundo sombrio de Seattle.",
+        longDescription:
+            "Shadowrun (Brazil) brings the acclaimed cyberpunk RPG from the Super Nintendo fully translated into Brazilian Portuguese, allowing new players to experience one of the most unique narratives of the 16-bit era. " +
+            "Step into the role of Jake Armitage as he uncovers conspiracies involving megacorporations, magic, cybernetic implants, and hackers known as Deckers. " +
+            "Featuring tactical combat, semi-open world exploration, and full access to the Matrix, this translated version makes the journey more accessible — while preserving the noir atmosphere, sharp humor, and dark tone that define the Shadowrun universe.",
+        players: "1 Player",
+        developer: "Beam Software / DougRPG",
+        coverImage: "/assets/covers/shadowrun.jpg",
+        platform: "Nintendo",
+        logo: "/assets/logos/shadowrun.jpg"
+    },
+    {
+        id: "breathoffire2-snes-ptbr",
+        title: "Breath of Fire II (Brasil)",
+        slug: "breath-of-fire-ii-ptbr",
+        embedUrl:
+            "/emulator.html?rom=https://ozequlizbaymnvzeqkyh.supabase.co/storage/v1/object/public/game-rom/BFII-pt-br.sfc",
+        year: 1994,
+        genre: "RPG / Hack",
+        folder: "RPG / Hack",
+        publisher: "Capcom / Equipe Brasileira",
+        characters: ["Ryu", "Bow", "Nina", "Katt", "Rand", "Sten", "Jean", "Spar"],
+        description:
+            "A versão totalmente traduzida para o Brasil do lendário RPG da Capcom — épico, emocional e inesquecível.",
+        longDescription:
+            "Breath of Fire II (Brazil) brings Capcom’s classic RPG fully translated into Portuguese, allowing new players to experience one of the most emotional and dark narratives of the 16-bit era. " +
+            "Follow Ryu and his allies on a journey filled with mysteries, spiritual conflicts, dramatic twists, and a living world packed with memorable characters. " +
+            "With a dedicated translation that preserves the original tone, this classic becomes even more immersive and accessible for Brazilian JRPG fans.",
+        players: "1 Player",
+        developer: "Capcom",
+        coverImage: "/assets/covers/breath_of_fire_ii.jpg",
+        platform: "Nintendo",
+        logo: "/assets/logos/breath_of_fire_ii.png"
+    },
+    {
+        id: "breathoffire2-snes",
+        title: "Breath of Fire II",
+        slug: "breath-of-fire-ii",
+        embedUrl:
+            "https://www.retrogames.cc/embed/19771-breath-of-fire-ii-usa.html",
+        year: 1994,
+        genre: "RPG",
+        folder: "RPG",
+        publisher: "Capcom",
+        characters: ["Ryu", "Bow", "Nina", "Katt", "Rand", "Sten", "Jean", "Spar"],
+        description:
+            "A beloved Capcom RPG filled with mystery, transformation powers, and an unforgettable 16-bit adventure.",
+        longDescription:
+            "Breath of Fire II (1994) delivers one of Capcom’s richest RPG experiences, following Ryu and his allies on a journey marked by faith, betrayal, and supernatural forces. " +
+            "Featuring unique party transformations, character-driven storytelling, challenging dungeons, and a world packed with secrets, the game builds upon the foundation of the original with deeper emotional stakes and a darker narrative tone. " +
+            "With its memorable cast, atmospheric music, and classic 16-bit charm, Breath of Fire II remains a cornerstone of the JRPG genre and a must-play for fans of timeless fantasy adventures.",
+        players: "1 Player",
+        developer: "Capcom",
+        coverImage: "/assets/covers/breath_of_fire_ii.jpg",
+        platform: "Nintendo",
+        logo: "/assets/logos/breath_of_fire_ii.png"
+    },
+    {
+        id: "shadowrun-snes-usa",
+        title: "Shadowrun",
+        slug: "shadowrun-snes",
+        embedUrl:
+            "https://www.retrogames.cc/embed/22866-shadowrun-usa.html",
+        year: 1993,
+        genre: "RPG",
+        folder: "RPG",
+        publisher: "Data East",
+        characters: ["Jake Armitage", "Deckers", "Riggers", "Shamans"],
+        description:
+            "A gritty cyberpunk RPG blending magic, megacorporations, and tactical combat in dystopian Seattle.",
+        longDescription:
+            "Shadowrun for the Super Nintendo delivers a unique fusion of cyberpunk and fantasy, placing players in the role of amnesiac runner Jake Armitage. " +
+            "As you navigate the dark streets of Seattle, you’ll uncover conspiracies involving megacorporations, magic, cybernetic upgrades, and the digital underworld of the Matrix. " +
+            "With tactical, real-time combat and semi-open world exploration, Shadowrun stands out as one of the most atmospheric and narrative-driven RPGs of the 16-bit era — a cult classic renowned for its depth, style, and world-building.",
+        players: "1 Player",
+        developer: "Beam Software",
+        coverImage: "/assets/covers/shadowrun.jpg",
+        platform: "Nintendo",
+        logo: "/assets/logos/shadowrun.jpg"
+    },
+    {
+        id: "shining-force-genesis-ptbr",
+        title: "Shining Force (Brazil)",
+        slug: "shining-force-ptbr",
+        embedUrl:
+            "/emulator.html?rom=https://ozequlizbaymnvzeqkyh.supabase.co/storage/v1/object/public/game-rom/Shining-ptbr.gen",
+        year: 1992,
+        genre: "RPG / Hack",
+        folder: "RPG / Hack",
+        publisher: "Sega / Lobo-FF",
+        characters: ["Max", "Anri", "Mae", "Zylo", "Shining Force"],
+        description:
+            "A versão totalmente traduzida para Brasil do clássico RPG tático da era 16-bit.",
+        longDescription:
+            "Shining Force (Brazil) brings the legendary tactical RPG from the Sega Genesis fully translated into Portuguese, allowing new players to experience one of the most memorable campaigns of the 16-bit era. " +
+            "Lead Max and his group of heroes in strategic battles against the dark forces of the Runefaust Kingdom, combining grid-based combat, class progression, and an epic storyline. " +
+            "The Brazilian translation preserves the original charm and enhances immersion, making this classic adventure even more accessible for modern players.",
+        players: "1 Player",
+        developer: "Climax Entertainment",
+        coverImage: "/assets/covers/shining-force.jpg",
+        platform: "Genesis",
+        logo: "/assets/logos/shiningforce.png"
+    },
+    {
+        id: "shining-force-genesis-usa",
+        title: "Shining Force",
+        slug: "shining-force-usa",
+        embedUrl:
+            "/emulator.html?rom=https://www.retrogames.cc/genesis-games/shining-force-usa.html",
+        year: 1992,
+        genre: "RPG",
+        folder: "RPG",
+        publisher: "Sega",
+        characters: ["Max", "Anri", "Mae", "Zylo", "Shining Force"],
+        description:
+            "A landmark tactical RPG combining grid-based strategy, character progression, and an epic fantasy narrative.",
+        longDescription:
+            "Shining Force delivers one of the most iconic tactical RPG experiences on the Sega Genesis, placing players in command of Max and his diverse group of heroes. " +
+            "Battle through the growing threat of the Runefaust Empire using grid-based strategy, class evolution, and a rich cast of recruitable characters. " +
+            "With its blend of exploration, story-driven campaigns, and strategic combat, Shining Force remains a defining classic of the 16-bit era and a cornerstone of Sega’s RPG legacy.",
+        players: "1 Player",
+        developer: "Climax Entertainment",
+        coverImage: "/assets/covers/shining-force.jpg",
+        platform: "Genesis",
+        logo: "/assets/logos/shiningforce.png"
+    },
+    {
+        id: "chronotrigger-rpg",
+        title: "Chrono Trigger",
+        slug: "chrono-trigger",
+        embedUrl: "https://www.retrogames.cc/embed/22857-chrono-trigger-usa.html",
+        year: 1995,
+        genre: "RPG",
+        folder: "RPG",
+        publisher: "Square",
+        characters: ["Crono", "Marle", "Lucca", "Frog", "Robo", "Ayla", "Magus"],
+        description:
+            "One of the greatest RPGs ever made — time-traveling adventure, unforgettable characters, and legendary storytelling.",
+        longDescription:
+            "Chrono Trigger stands as a masterpiece of the 16-bit era, blending innovative time-travel mechanics with a rich cast of heroes and a gripping narrative that spans multiple eras. " +
+            "Developed by Square’s iconic ‘Dream Team,’ the game delivers strategic, fast-flowing combat, emotional storytelling, and branching paths that shape the fate of the world. " +
+            "From prehistoric battles to futuristic ruins, every chapter unfolds with charm, depth, and unforgettable moments, making Chrono Trigger a timeless RPG classic celebrated across generations.",
+        players: "1 Player",
+        developer: "Square",
+        coverImage: "/assets/covers/chrono_trigger.jpg",
+        platform: "Nintendo",
+        logo: "/assets/logos/chrono_trigger.png"
+    },
+    {
+        id: "finalfantasy6-rpg",
+        title: "Final Fantasy VI",
+        slug: "final-fantasy-vi",
+        embedUrl: "https://www.retrogames.cc/embed/20257-final-fantasy-vi-japan-en-by-rpgone-v1-2b-all-bug-fixes.html",
+        year: 1994,
+        genre: "RPG",
+        folder: "RPG",
+        publisher: "Square",
+        characters: [
+            "Terra Branford",
+            "Locke",
+            "Edgar",
+            "Sabin",
+            "Celes",
+            "Shadow",
+            "Setzer",
+            "Kefka"
+        ],
+        description:
+            "A legendary JRPG masterpiece — emotional storytelling, a vast cast, and one of the most iconic villains in gaming.",
+        longDescription:
+            "Final Fantasy VI redefines the 16-bit RPG experience with its ensemble cast, powerful emotional arcs, and cinematic storytelling. " +
+            "Set in a world where magic and technology collide, the narrative follows Terra and an unforgettable group of heroes as they rise against the tyranny of Kefka — one of gaming’s most iconic antagonists. " +
+            "Featuring an expansive world, deep character progression, Mode 7 airship exploration, and a hauntingly beautiful soundtrack, this fan-translated edition with bug fixes preserves everything that made FFVI a timeless RPG classic.",
+        players: "1 Player",
+        developer: "Square",
+        coverImage: "/assets/covers/final_fantasy_vi.jpg",
+        platform: "Nintendo",
+        logo: "/assets/logos/final_fantasy_vi.png"
+    },
+    {
+        id: "shining-force2-genesis",
+        title: "Shining Force II",
+        slug: "shining-force-ii",
+        embedUrl:
+            "https://www.retrogames.cc/embed/19064-shining-force-ii-usa.html",
+        year: 1993,
+        genre: "RPG",
+        folder: "RPG",
+        publisher: "Sega",
+        characters: ["Bowie", "Sarah", "Jaha", "Kazín", "Peter", "Shining Force"],
+        description:
+            "A definitive 16-bit tactical RPG with expanded classes, deeper strategy, and a massive world to explore.",
+        longDescription:
+            "Shining Force II elevates the tactical RPG formula with a richer storyline, an expansive overworld, and deeper character progression. " +
+            "Lead Bowie and the new Shining Force as you battle powerful monsters, uncover ancient legends, and confront the rising threat consuming the Kingdom of Granseal. " +
+            "With grid-based strategy, branching promotions, hidden characters, and memorable set pieces, Shining Force II remains one of Sega’s most beloved and enduring RPG masterpieces.",
+        players: "1 Player",
+        developer: "Sonic! Software Planning",
+        coverImage: "/assets/covers/shiningforce2.jpg",
+        platform: "Genesis",
+        logo: "/assets/logos/shiningforceII.png"
+    },
+    {
+        id: "shining-force2-genesis-ptbr",
+        title: "Shining Force II (Brazil)",
+        slug: "shining-force-ii-ptbr",
+        embedUrl:
+            "/emulator.html?rom=https://ozequlizbaymnvzeqkyh.supabase.co/storage/v1/object/public/game-rom/shining-II-ptbr.gen",
+        year: 1993,
+        genre: "RPG / Hack",
+        folder: "RPG / Hack",
+        publisher: "Sega / Brazilian Team",
+        characters: ["Bowie", "Sarah", "Jaha", "Kazín", "Peter", "Shining Force"],
+        description:
+            "A versão totalmente traduzida para Brasil do clássico épico de estratégia do Mega Drive.",
+        longDescription:
+            "Shining Force II (Brazil) brings the acclaimed tactical RPG from the Sega Genesis fully translated into Portuguese, allowing new players to dive into one of the greatest adventures of the 16-bit era. " +
+            "Lead Bowie and the new Shining Force through strategic battles while exploring a vast world filled with secrets, class evolutions, hidden characters, and memorable encounters. " +
+            "The Brazilian translation preserves the original spirit and makes this classic journey even more immersive and accessible for modern players.",
+        players: "1 Player",
+        developer: "Sonic! Software Planning",
+        coverImage: "/assets/covers/shiningforce2.jpg",
+        platform: "Genesis",
+        logo: "/assets/logos/shiningforceII.png"
+    },
+    {
+        id: "dd-eternalsun-rpg",
+        title: "D&D: Eternal Sun",
+        slug: "dungeons-and-dragons-eternal-sun",
+        embedUrl:
+            "https://www.retrogames.cc/embed/30341-dungeons-dragons-warriors-of-the-eternal-sun-usa-europe.html",
+        year: 1992,
+        genre: "RPG",
+        folder: "RPG",
+        publisher: "TSR / Sega",
+        characters: ["Clerics", "Fighters", "Dwarves", "Elves", "Monsters of Mystara"],
+        description:
+            "A classic D&D adventure on the Genesis featuring exploration, dungeon crawling, and party-based strategy.",
+        longDescription:
+            "Dungeons & Dragons: Warriors of the Eternal Sun brings the iconic tabletop universe of Mystara to the Sega Genesis with a mix of overworld exploration, first-person dungeons, and classic party-based RPG mechanics. " +
+            "Create your party, battle monstrous creatures, and uncover the secrets of a strange valley trapped under an eternal sun. " +
+            "With turn-based combat, character progression, and faithful D&D classes and races, the game delivers a rich and atmospheric journey for fans of old-school role-playing. " +
+            "A unique blend of strategy, exploration, and fantasy storytelling that remains a standout RPG in the Genesis library.",
+        players: "1 Player",
+        developer: "Westwood Associates",
+        coverImage: "/assets/covers/dd_eternal_sun.jpg",
+        platform: "Genesis",
+        logo: "/assets/logos/dd_eternal_sun.png"
+    },
+    {
+        id: "alcahest-rpg",
+        title: "Alcahest",
+        slug: "alcahest",
+        embedUrl: "/emulator.html?rom=https://ozequlizbaymnvzeqkyh.supabase.co/storage/v1/object/public/game-rom/alcahest-eng.smc&platform=snes",
+        year: 1993,
+        genre: "RPG",
+        folder: "RPG",
+        publisher: "Square",
+        characters: ["Alen", "Guardians", "Garam", "Droma"],
+        description:
+            "A fast-paced action RPG from Square, blending elemental guardians, heroic quests, and cinematic 16-bit storytelling.",
+        longDescription:
+            "Alcahest is a Japan-exclusive fantasy Action RPG developed by Square that delivers real-time combat, richly animated cutscenes, and a heroic story centered on the warrior Alen. " +
+            "Harness the power of elemental Guardians, battle through diverse regions, and face powerful bosses in a game that blends fantasy adventure with classic 16-bit intensity. " +
+            "Featuring dynamic allies, stage-based progression, and polished presentation, Alcahest stands out as one of Square’s hidden gems on the Super Nintendo — a must-play for fans of action-driven RPGs.",
+        players: "1 Player",
+        developer: "HAL Laboratory / Square",
+        coverImage: "/assets/covers/alcahest.jpg",
+        platform: "Nintendo",
+        logo: "/assets/logos/alcahest.png"
+    },
+    {
+        id: "dbz-supersaiyadensetsu-ptbr",
+        title: "Dragon Ball Z (Brazil)",
+        slug: "dragon-ball-z-super-saiya-densetsu-ptbr",
+        embedUrl:
+            "/emulator.html?rom=https://ozequlizbaymnvzeqkyh.supabase.co/storage/v1/object/public/game-rom/dbz-ptbr.smc",
+        year: 1992,
+        genre: "RPG / Hack",
+        folder: "RPG / Hack",
+        publisher: "Bandai / Brazilian Team",
+        characters: ["Goku", "Gohan", "Vegeta", "Piccolo", "Kuririn", "Freeza"],
+        description:
+            "A versão traduzida para o Brasil do clássico RPG de Dragon Ball Z no Super Nintendo, cobrindo as sagas Saiyajin e Freeza.",
+        longDescription:
+            "Dragon Ball Z: Super Saiya Densetsu (Brazil) brings the legendary Super Nintendo RPG fully translated into Portuguese, allowing fans to relive the Saiyan and Frieza sagas with authenticity and nostalgia. " +
+            "Follow Goku, Gohan, Vegeta, and the other Z Warriors through strategic card-based battles, exploration of iconic locations, and events that faithfully recreate key moments from the anime. " +
+            "With a dedicated translation that makes dialogues, menus, and techniques more accessible, this PT-BR version offers an immersive and authentic experience for both new players and longtime Dragon Ball fans.",
+        players: "1 Player",
+        developer: "TOSE / Bandai",
+        coverImage: "/assets/covers/dbz_super_saiya_densetsu.jpg",
+        platform: "Nintendo",
+        logo: "/assets/logos/dbz_super_saiya_densetsu.png"
+    }
+];
+
+export const rpgsFilters = ["RPG"];
