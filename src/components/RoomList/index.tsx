@@ -157,7 +157,8 @@ export function RoomList() {
                         }`}
                       >
                         <td className="py-3 px-3 font-medium text-foreground truncate">
-                          {room.name || '—'}
+                          {room.name?.replace(/\s*\([^)]*\)/g, '').trim() ||
+                            '—'}
                         </td>
                         <td className="py-3 px-3 flex items-center gap-3 min-w-[200px]">
                           <img
@@ -243,7 +244,8 @@ export function RoomList() {
                           {game.title}
                         </p>
                         <p className="text-xs text-muted-foreground">
-                          {room.name || '—'}
+                          {room.name?.replace(/\s*\([^)]*\)/g, '').trim() ||
+                            '—'}
                         </p>
                         <p className="text-xs text-muted-foreground flex items-center gap-1">
                           {getFlag(room.server)} · {room.players} players ·{' '}
