@@ -81,7 +81,7 @@ export function RoomList() {
         <img
           src={`https://flagcdn.com/w20/${countryCode}.png`}
           alt={countryCode.toUpperCase()}
-          className="inline-block w-4 h-3 rounded object-cover align-[0.15em] sm:w-5 sm:h-4"
+          className="inline-block w-4 h-3 rounded object-cover sm:w-5 sm:h-4"
         />
       );
     }
@@ -89,7 +89,7 @@ export function RoomList() {
       <img
         src="https://flagcdn.com/w20/un.png"
         alt="Unknown"
-        className="inline-block w-4 h-3 rounded object-cover align-[0.15em] sm:w-5 sm:h-4 opacity-70"
+        className="inline-block w-4 h-3 rounded object-cover sm:w-5 sm:h-4 opacity-70"
       />
     );
   };
