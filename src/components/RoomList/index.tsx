@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import axios from 'axios';
 import { Button } from '@/components/ui/button';
 import { allGames } from '@/data';
 import {
@@ -21,18 +22,6 @@ interface NetplayRoom {
   system: string;
 }
 
-const regionFlags: Record<string, string> = {
-  us: '🇺🇸',
-  us2: '🇺🇸',
-  us3: '🇺🇸',
-  uk: '🇬🇧',
-  nl: '🇳🇱',
-  es: '🇪🇸',
-  au: '🇦🇺',
-  br: '🇧🇷',
-  jp: '🇯🇵',
-};
-
 export function RoomList() {
   const [rooms, setRooms] = useState<NetplayRoom[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
@@ -47,12 +36,10 @@ export function RoomList() {
 
   useEffect(() => {
     let intervalId: NodeJS.Timeout;
-
     const fetchRooms = async () => {
       try {
-        const res = await fetch('https://lobby.emulatorjs.com/list');
-        const data: NetplayRoom[] | { rooms?: NetplayRoom[] } =
-          await res.json();
+        const res = await axios.get('https://lobby.emulatorjs.com/list');
+        const data: NetplayRoom[] | { rooms?: NetplayRoom[] } = res.data;
         const normalized = Array.isArray(data)
           ? data
           : Array.isArray(data.rooms)
@@ -74,7 +61,8 @@ export function RoomList() {
           return isKnownGame || isSportsGame;
         });
         setRooms(filtered);
-      } catch {
+      } catch (error) {
+        console.error('Failed to load rooms:', error);
         setRooms([]);
       }
     };
@@ -86,7 +74,24 @@ export function RoomList() {
 
   const getFlag = (region: string) => {
     const code = region?.toLowerCase().replace(/\d+/g, '');
-    return regionFlags[code] || '🌍';
+    const validCodes = ['us', 'uk', 'nl', 'es', 'au', 'br', 'jp'];
+    const countryCode = code === 'uk' ? 'gb' : code;
+    if (validCodes.includes(code)) {
+      return (
+        <img
+          src={`https://flagcdn.com/w20/${countryCode}.png`}
+          alt={countryCode.toUpperCase()}
+          className="inline-block w-4 h-3 rounded object-cover align-[0.15em] sm:w-5 sm:h-4"
+        />
+      );
+    }
+    return (
+      <img
+        src="https://flagcdn.com/w20/un.png"
+        alt="Unknown"
+        className="inline-block w-4 h-3 rounded object-cover align-[0.15em] sm:w-5 sm:h-4 opacity-70"
+      />
+    );
   };
 
   return (
@@ -142,6 +147,7 @@ export function RoomList() {
                       ) ||
                       allGames.find((g) => g.id.toLowerCase() === lastPart);
                     if (!game) return null;
+
                     const link = `${window.location.origin}/game/${game.id}`;
                     return (
                       <tr
@@ -171,7 +177,7 @@ export function RoomList() {
                         <td className="py-3 px-3 text-foreground/80">
                           {room.players}
                         </td>
-                        <td className="py-3 px-3 text-center text-lg">
+                        <td className="py-3 px-3 text-center">
                           {getFlag(room.server)}
                         </td>
                         <td className="py-3 px-3 text-center">
@@ -239,7 +245,7 @@ export function RoomList() {
                         <p className="text-xs text-muted-foreground">
                           {room.name || '—'}
                         </p>
-                        <p className="text-xs text-muted-foreground">
+                        <p className="text-xs text-muted-foreground flex items-center gap-1">
                           {getFlag(room.server)} · {room.players} players ·{' '}
                           {room.password ? 'Private' : 'Public'}
                         </p>
