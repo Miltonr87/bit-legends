@@ -108,7 +108,10 @@ export const GameIframe = ({ game }: GameIframeProps) => {
               <img
                 src={game.coverImage || '/placeholder-game-logo.png'}
                 alt={`${game.title} Logo`}
-                className="w-full h-full object-cover drop-shadow-md"
+                loading="lazy"
+                decoding="async"
+                className="w-full h-full object-cover drop-shadow-md transition-opacity duration-300 opacity-0"
+                onLoad={(e) => (e.currentTarget.style.opacity = '1')}
               />
             </div>
             <h2 className="text-lg sm:text-xl font-semibold text-white mb-3">

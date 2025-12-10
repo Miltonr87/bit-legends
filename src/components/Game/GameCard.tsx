@@ -16,7 +16,10 @@ export const GameCard = ({ game }: GameCardProps) => {
             <img
               src={game.coverImage}
               alt={game.title}
-              className="absolute inset-0 w-full h-full object-cover"
+              loading="lazy"
+              decoding="async"
+              className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500"
+              onLoad={(e) => (e.currentTarget.style.opacity = '1')}
             />
           )}
           <div className="absolute inset-0 bg-gradient-to-t from-card via-card/50 to-transparent" />
