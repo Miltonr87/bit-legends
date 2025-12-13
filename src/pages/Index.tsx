@@ -5,7 +5,7 @@ import { Header } from '@/components/Layout/Header';
 import { Footer } from '@/components/Layout/Footer';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Search, Server, RadioTower } from 'lucide-react';
+import { Search, Server, RadioTower, AlertTriangle } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   Pagination,
@@ -26,6 +26,19 @@ const fadeUp = {
     y: 0,
     scale: 1,
     transition: { duration: 0.1, ease: 'easeInOut' },
+  },
+};
+
+const shakeAnim = {
+  hidden: { opacity: 0, y: 10 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.4, ease: 'easeOut' },
+  },
+  shake: {
+    x: [0, -6, 6, -4, 4, 0],
+    transition: { duration: 0.4 },
   },
 };
 
@@ -130,6 +143,7 @@ const Index = () => {
             Step into a pixel-powered universe where every legend lives again
             across classic consoles and arcades
           </p>
+
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mt-6">
             <AnimatePresence>
               <motion.div
@@ -208,24 +222,55 @@ const Index = () => {
         </div>
         {selectedSeries !== 'All Games' &&
           genreDescriptions[selectedSeries] && (
-            <div className="mb-8 sm:mb-10 p-4 sm:p-5 rounded-xl bg-accent/5 border border-accent/20 shadow-[0_0_12px_rgba(0,0,0,0.4)] backdrop-blur-sm animate-fade-in text-center">
+            <div className="mb-8 sm:mb-10 p-4 sm:p-5 rounded-xl bg-accent/5 border border-accent/20 shadow-[0_0_12px_rgba(0,0,0,0.4)] backdrop-blur-sm text-center">
               <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
                 {genreDescriptions[selectedSeries]}
               </p>
             </div>
           )}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3 sm:gap-6 animate-slide-up">
-          {paginatedGames.map((game, index) => (
-            <div
-              key={game.id}
-              className="animate-fade-in"
-              style={{ animationDelay: `${index * 100}ms` }}
+        <AnimatePresence mode="wait">
+          {filteredGames.length === 0 ? (
+            <motion.div
+              key="no-games"
+              variants={shakeAnim}
+              initial="hidden"
+              animate={['visible', 'shake']}
+              exit="hidden"
+              className="py-24 flex flex-col items-center text-center text-muted-foreground"
             >
-              <GameCard game={game} />
+              <AlertTriangle className="h-12 w-12 mb-4 text-[#00b4ff] animate-pulse" />
+              <motion.h3
+                className="text-2xl font-bold text-[#00b4ff]"
+                animate={{
+                  textShadow: [
+                    '0 0 8px #00b4ff',
+                    '0 0 16px #007bff',
+                    '0 0 8px #00b4ff',
+                  ],
+                }}
+                transition={{ repeat: Infinity, duration: 1.5 }}
+              >
+                No Games Found
+              </motion.h3>
+              <p className="text-sm text-muted-foreground mt-2">
+                Check the name, genre or keyword!
+              </p>
+            </motion.div>
+          ) : (
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3 sm:gap-6 animate-slide-up">
+              {paginatedGames.map((game, index) => (
+                <div
+                  key={game.id}
+                  className="animate-fade-in"
+                  style={{ animationDelay: `${index * 100}ms` }}
+                >
+                  <GameCard game={game} />
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
-        {totalPages > 1 && (
+          )}
+        </AnimatePresence>
+        {totalPages > 1 && filteredGames.length > 0 && (
           <div className="mt-8 sm:mt-12">
             <Pagination>
               <PaginationContent className="flex-wrap gap-1">
