@@ -197,7 +197,7 @@ const Index = () => {
                 size="sm"
                 className={
                   selectedSeries === series
-                    ? 'bg-gradient-to-r from-primary to-accent text-xs sm:text-sm'
+                    ? 'bg-gradient-to-r from-[#00b4ff] via-[#007bff] to-[#004cff] text-xs sm:text-sm'
                     : 'border-accent/50 hover:bg-accent/10 text-xs sm:text-sm'
                 }
               >
