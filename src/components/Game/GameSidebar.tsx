@@ -3,13 +3,13 @@ import { Card } from '@/components/ui/card';
 import { LogoGame } from '@/components/Game/LogoGame';
 import { GameController } from '@/components/Game/GameController';
 import { useIsMobile } from '@/hooks/useIsMobile';
+import { motion } from 'framer-motion';
+import type { Game } from '@/types';
+import { MdfBox } from '@/components/MdfBox';
 
 import arcadeLogo from '../../../public/assets/platforms/arcade.png';
 import genesisLogo from '../../../public/assets/platforms/genesis.png';
 import snesLogo from '../../../public/assets/platforms/snes.png';
-
-import { motion } from 'framer-motion';
-import type { Game } from '@/types';
 
 const PLATFORM_LOGO_MAP: Record<string, string> = {
   Arcade: arcadeLogo,
@@ -48,6 +48,8 @@ export const GameSidebar = ({ game }: GameSidebarProps) => {
     'Arcade';
   const platformLogo = PLATFORM_LOGO_MAP[platformKey] || arcadeLogo;
 
+  const hasMdf = Boolean(game.mdf);
+
   return (
     <motion.div
       initial={{ opacity: 0, y: -10 }}
@@ -60,6 +62,15 @@ export const GameSidebar = ({ game }: GameSidebarProps) => {
           title={game.title}
           backgroundColor="linear-gradient(135deg, #1e1e2f, #2c2c54)"
         />
+        {hasMdf && (
+          <motion.div
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
+            <MdfBox game={game} />
+          </motion.div>
+        )}
         <Card className="p-4 sm:p-6 border-2 border-accent/30 bg-gradient-to-br from-card to-card/40 rounded-2xl backdrop-blur-sm hover:shadow-lg hover:shadow-accent/10 transition-all duration-300">
           <div className="space-y-4">
             <div className="flex items-start gap-3 pb-4 border-b border-border">
@@ -83,7 +94,6 @@ export const GameSidebar = ({ game }: GameSidebarProps) => {
                 <p className="font-semibold text-lg">{game.players}</p>
               </div>
             </div>
-
             <div className="flex items-start gap-3">
               <div className="h-5 w-5 flex items-center justify-center mt-1">
                 <div className="h-3 w-3 rounded-full bg-accent animate-glow-pulse" />
@@ -95,17 +105,22 @@ export const GameSidebar = ({ game }: GameSidebarProps) => {
             </div>
           </div>
         </Card>
-        <Card
-          className="p-6 border-2 border-accent/30 rounded-2xl backdrop-blur-sm hover:shadow-lg hover:shadow-accent/10 transition-all duration-300 flex justify-center"
-          style={{ background: PANEL_BACKGROUND }}
-        >
-          <img
-            src={platformLogo}
-            alt={`${game.platform} Logo`}
-            className="object-contain w-full h-12 drop-shadow-md"
-          />
-        </Card>
-        {!isMobile && <GameController />}
+        {!hasMdf && (
+          <>
+            <Card
+              className="p-6 border-2 border-accent/30 rounded-2xl backdrop-blur-sm hover:shadow-lg hover:shadow-accent/10 transition-all duration-300 flex justify-center"
+              style={{ background: PANEL_BACKGROUND }}
+            >
+              <img
+                src={platformLogo}
+                alt={`${game.platform} Logo`}
+                className="object-contain w-full h-12 drop-shadow-md"
+              />
+            </Card>
+
+            {!isMobile && <GameController />}
+          </>
+        )}
       </aside>
     </motion.div>
   );

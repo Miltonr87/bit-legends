@@ -18,6 +18,7 @@ export interface Game {
     cover: string | null;
     coverImage: string;
     embedUrl?: string;
+    mdf?: string;
 }
 
 // ---------- HISTORY / SAVE ----------
