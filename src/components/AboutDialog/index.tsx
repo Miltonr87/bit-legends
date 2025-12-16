@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Info, ExternalLink } from 'lucide-react';
+import { Info, Gamepad2 } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import {
@@ -70,15 +70,7 @@ export const AboutDialog = () => {
               </div>
               <div className="pt-6 border-t border-border">
                 <p className="text-center text-sm text-muted-foreground flex items-center justify-center gap-1">
-                  <a
-                    href="https://miltonr87.vercel.app/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-accent transition-colors font-medium flex items-center gap-1"
-                  >
-                    Milton Rodrigues
-                    <ExternalLink className="w-4 h-4" />
-                  </a>
+                  Milton Rodrigues &copy; 2025
                 </p>
               </div>
             </div>

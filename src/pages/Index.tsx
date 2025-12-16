@@ -137,7 +137,7 @@ const Index = () => {
               Bit Legends
             </span>
             <br />
-            <span className="text-foreground">16-Bit Game Collection</span>
+            <span className="text-foreground">Digital Game Colection</span>
           </h1>
           <p className="text-base sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-6 sm:mb-8 px-4">
             Step into a pixel-powered universe where every legend lives again
