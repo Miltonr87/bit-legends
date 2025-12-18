@@ -1,15 +1,37 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FavoriteGame } from '@/types';
+import { FavoriteGame, GameHistory } from '@/types';
 import { db, auth } from '@/lib/firebase';
 import { collection, getDocs, doc, deleteDoc } from 'firebase/firestore';
 import { Header } from '@/components/Layout/Header';
 import { Footer } from '@/components/Layout/Footer';
 import { GameCard } from '@/components/Game/GameCard';
 import { Button } from '@/components/ui/button';
-import { Trash2, Gamepad2, FolderHeart } from 'lucide-react';
+import { Trash2, Gamepad2, FolderHeart, Star, Clock } from 'lucide-react';
 import { toast } from 'sonner';
 import { allGames } from '@/data';
+
+const pluralize = (count: number, singular: string, plural: string) =>
+  count === 1 ? singular : plural;
+
+const formatPlayTime = (seconds: number) => {
+  if (seconds < 60) return `${seconds}s`;
+  const minutes = Math.floor(seconds / 60);
+  if (minutes < 60) return `${minutes} min`;
+  const hours = Math.floor(minutes / 60);
+  const mins = minutes % 60;
+  return mins ? `${hours}h ${mins}m` : `${hours}h`;
+};
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 10, scale: 0.97 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: { duration: 0.2, ease: 'easeOut' },
+  },
+};
 
 export default function FavoriteGames() {
   const [favorites, setFavorites] = useState<FavoriteGame[]>([]);
@@ -23,7 +45,6 @@ export default function FavoriteGames() {
         setLoading(false);
         return;
       }
-
       try {
         const favRef = collection(db, 'favorites', user.uid, 'games');
         const snapshot = await getDocs(favRef);
@@ -31,7 +52,6 @@ export default function FavoriteGames() {
           id: doc.id,
           ...(doc.data() as FavoriteGame),
         }));
-
         setFavorites(favList);
       } catch (err) {
         console.error('Error loading favorites:', err);
@@ -40,14 +60,12 @@ export default function FavoriteGames() {
         setLoading(false);
       }
     };
-
     fetchFavorites();
   }, []);
 
   const removeFavorite = async (id: string) => {
     const user = auth.currentUser;
     if (!user) return toast.error('You must be logged in.');
-
     try {
       await deleteDoc(doc(db, 'favorites', user.uid, 'games', id));
       setFavorites((prev) => prev.filter((g) => g.id !== id));
@@ -57,6 +75,17 @@ export default function FavoriteGames() {
       toast.error('Failed to remove favorite.');
     }
   };
+
+  const totalTimePlayed = useMemo(() => {
+    try {
+      const raw = localStorage.getItem('bitlegends_game_history');
+      if (!raw) return 0;
+      const history: GameHistory[] = JSON.parse(raw);
+      return history.reduce((sum, h) => sum + (h.timeSpent || 0), 0);
+    } catch {
+      return 0;
+    }
+  }, []);
 
   if (loading) {
     return (
@@ -84,15 +113,62 @@ export default function FavoriteGames() {
           <div className="absolute inset-0 scanline pointer-events-none" />
           <div className="absolute inset-0 bg-gradient-to-b from-accent/5 via-transparent to-transparent" />
           <div className="container mx-auto text-center relative z-10">
-            <FolderHeart className="inline-block h-20 w-20 text-accent mb-1 mr-2 animate-pulse" />
+            <FolderHeart className="inline-block h-20 w-20 text-accent mb-1 animate-pulse" />
             <h1 className="text-4xl sm:text-6xl font-black mb-2">
               <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent glow-text">
                 Favorite Games
               </span>
             </h1>
             <p className="text-sm sm:text-lg text-muted-foreground max-w-2xl mx-auto">
-              All your 16-bit legends in one place!
+              All your Bit Legends games in one place!
             </p>
+            <div className="flex flex-col sm:flex-row justify-center items-center gap-3 mt-6">
+              <AnimatePresence>
+                <motion.div
+                  variants={fadeUp}
+                  initial="hidden"
+                  animate="visible"
+                  className="
+                    flex items-center gap-2
+                    px-3 py-1
+                    rounded-full
+                    bg-card/50
+                    border border-green-500/50
+                    shadow-lg
+                    backdrop-blur-sm
+                    text-green-400
+                    hover:scale-[1.02]
+                  "
+                >
+                  <Star className="h-5 w-5 animate-pulse" />
+                  <span className="text-sm font-semibold tracking-wider">
+                    {favorites.length}{' '}
+                    {pluralize(favorites.length, 'Favorite', 'Favorites')}
+                  </span>
+                </motion.div>
+                <motion.div
+                  variants={fadeUp}
+                  initial="hidden"
+                  animate="visible"
+                  className="
+                    flex items-center gap-2
+                    px-3 py-1
+                    rounded-full
+                    bg-card/50
+                    border border-pink-400/50
+                    shadow-lg
+                    backdrop-blur-sm
+                    text-pink-400
+                    hover:scale-[1.02]
+                  "
+                >
+                  <Clock className="h-5 w-5" />
+                  <span className="text-sm font-semibold tracking-wider">
+                    {formatPlayTime(totalTimePlayed)} Played
+                  </span>
+                </motion.div>
+              </AnimatePresence>
+            </div>
           </div>
         </section>
         <section className="container mx-auto px-4 py-8 sm:py-10">
@@ -123,7 +199,7 @@ export default function FavoriteGames() {
                         size="icon"
                         variant="ghost"
                         onClick={() => removeFavorite(fav.id)}
-                        className="absolute top-2 right-2 bg-black/70 text-red-500 hover:bg-red-600/80 hover:text-white transition rounded-full"
+                        className="absolute top-2 right-2 bg-black/70 text-red-500 hover:bg-red-600/80 hover:text-white rounded-full"
                         title="Remove from favorites"
                       >
                         <Trash2 className="h-4 w-4" />
