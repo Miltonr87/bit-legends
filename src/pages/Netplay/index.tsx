@@ -2,6 +2,7 @@ import { Header } from '@/components/Layout/Header';
 import { Footer } from '@/components/Layout/Footer';
 import { Globe } from 'lucide-react';
 import { RoomList } from '@/components/RoomList';
+import { NetplayCount } from '@/components/NetplayCount';
 
 export default function Netplay() {
   return (
@@ -29,10 +30,11 @@ export default function Netplay() {
           <p className="text-sm sm:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             Host or join retro game sessions directly from your browser.
           </p>
+          <NetplayCount />
         </div>
       </section>
       <main className="flex-grow">
-        <section className="animate-fade-in-up px-4 sm:px-6 md:px-10">
+        <section className="animate-fade-in-up px-4 sm:px-6 md:px-10 space-y-10">
           <RoomList />
         </section>
       </main>
