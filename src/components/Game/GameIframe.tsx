@@ -52,9 +52,12 @@ export const GameIframe = ({ game }: GameIframeProps) => {
 
   const isRetrogames = iframeUrl.includes('retrogames.cc');
 
-  const sandboxRules = isRetrogames
-    ? 'allow-scripts allow-same-origin allow-popups allow-downloads allow-forms allow-presentation'
-    : 'allow-scripts allow-same-origin allow-pointer-lock allow-downloads';
+  const sandboxRules =
+    isMobile && isRetrogames
+      ? 'allow-scripts allow-same-origin allow-downloads allow-presentation'
+      : isRetrogames
+        ? 'allow-scripts allow-same-origin allow-popups allow-downloads allow-forms allow-presentation'
+        : 'allow-scripts allow-same-origin allow-pointer-lock allow-downloads';
 
   useEffect(() => {
     if (isMobile) {
