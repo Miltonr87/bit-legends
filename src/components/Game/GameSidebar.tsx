@@ -4,9 +4,9 @@ import { LogoGame } from '@/components/Game/LogoGame';
 import { GameController } from '@/components/Game/GameController';
 import { useIsMobile } from '@/hooks/useIsMobile';
 
-import arcadeLogo from '../../../public/assets/platforms/arcade.png';
-import genesisLogo from '../../../public/assets/platforms/genesis.png';
-import snesLogo from '../../../public/assets/platforms/snes.png';
+import arcadeLogo from '/assets/platforms/arcade.png?url';
+import genesisLogo from '/assets/platforms/genesis.png?url';
+import snesLogo from '/assets/platforms/snes.png?url';
 
 import { motion } from 'framer-motion';
 import type { Game } from '@/types';
@@ -43,7 +43,7 @@ export const GameSidebar = ({ game }: GameSidebarProps) => {
   const platformKey =
     PLATFORM_MAP[game.platform.trim()] ||
     Object.keys(PLATFORM_MAP).find((p) =>
-      game.platform.toLowerCase().includes(p.toLowerCase())
+      game.platform.toLowerCase().includes(p.toLowerCase()),
     ) ||
     'Arcade';
   const platformLogo = PLATFORM_LOGO_MAP[platformKey] || arcadeLogo;

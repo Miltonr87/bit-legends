@@ -2,7 +2,7 @@ import { Card } from '@/components/ui/card';
 import { motion } from 'framer-motion';
 import { Gamepad2, Keyboard } from 'lucide-react';
 import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
-import gamepad from '../../../public/assets/backgrounds/controller_min.jpg';
+import gamepad from '/assets/backgrounds/controller_min.jpg?url';
 
 export const GameController = () => {
   return (
