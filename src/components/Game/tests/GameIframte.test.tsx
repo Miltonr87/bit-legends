@@ -53,7 +53,7 @@ describe('GameIframe Component', () => {
     expect(iframe).toBeInTheDocument();
     expect(iframe).toHaveAttribute(
       'src',
-      'https://www.retrogames.cc/embed/30108-castlevania-bloodlines-genesis.html'
+      'https://retrogamesnexus.com/embed/games/castlevania-bloodlines-genesis',
     );
   });
 
@@ -78,8 +78,9 @@ describe('GameIframe Component', () => {
     useIsMobile.mockReturnValue(true);
     render(<GameIframe game={mockGame} />);
 
-    const container = screen.getByTitle('Castlevania: Bloodlines')
-      .parentElement!;
+    const container = screen.getByTitle(
+      'Castlevania: Bloodlines',
+    ).parentElement!;
     const fullscreenButton = screen.getByTitle(/fullscreen/i);
 
     expect(container).not.toHaveClass('fullscreen-sim');

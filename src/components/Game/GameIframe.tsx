@@ -45,10 +45,11 @@ export const GameIframe = ({ game }: GameIframeProps) => {
   }, [tips.length]);
 
   const iframeUrl =
-    game.embedUrl ||
-    `https://www.retrogames.cc/embed/${game.embedId}-${game.slug}.html`;
+    game.embedUrl || `https://retrogamesnexus.com/embed/games/${game.slug}`;
 
-  const isRetrogames = iframeUrl.includes('retrogames.cc');
+  const isRetrogames =
+    iframeUrl.includes('retrogames.cc') ||
+    iframeUrl.includes('retrogamesnexus');
 
   const sandboxRules = isRetrogames
     ? 'allow-scripts allow-same-origin allow-popups allow-downloads allow-forms allow-presentation allow-top-navigation-by-user-activation'
