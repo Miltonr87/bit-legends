@@ -75,8 +75,21 @@ export const GameIframe = ({ game }: GameIframeProps) => {
         }
       };
 
+      // Intercept iframe navigation attempts to prevent parent page reload
+      const blockIframeNavigation = (e: Event) => {
+        const iframe = iframeRef.current?.querySelector(
+          'iframe',
+        ) as HTMLIFrameElement;
+        if (iframe && e.target === iframe.contentWindow) {
+          e.preventDefault();
+          e.stopPropagation();
+          e.stopImmediatePropagation();
+        }
+      };
+
       window.addEventListener('beforeunload', handleBeforeUnload);
       document.addEventListener('visibilitychange', handleVisibilityChange);
+      window.addEventListener('message', blockIframeNavigation, true);
 
       // Add referrer meta tag for better iframe compatibility
       let metaReferrer = document.querySelector(
@@ -95,6 +108,7 @@ export const GameIframe = ({ game }: GameIframeProps) => {
           'visibilitychange',
           handleVisibilityChange,
         );
+        window.removeEventListener('message', blockIframeNavigation, true);
       };
     }
   }, [isMobile, iframeUrl]);
