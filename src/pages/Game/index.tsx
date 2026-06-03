@@ -32,6 +32,26 @@ const Game = () => {
     window.scrollTo({ top: 0, behavior: 'auto' });
   }, []);
 
+  useEffect(() => {
+    const handlePopState = (e: PopStateEvent) => {
+      if (isMobile) {
+        e.preventDefault();
+        window.history.pushState(null, '', window.location.href);
+      }
+    };
+
+    if (isMobile) {
+      window.history.pushState(null, '', window.location.href);
+      window.addEventListener('popstate', handlePopState);
+    }
+
+    return () => {
+      if (isMobile) {
+        window.removeEventListener('popstate', handlePopState);
+      }
+    };
+  }, [isMobile]);
+
   const handleWhatsAppShare = () => {
     if (!game) return;
     const baseUrl = 'https://bitlegends.vercel.app';
@@ -39,7 +59,7 @@ const Game = () => {
     const text = `🎮 Check out ${game.title} on Bit Legends!\n${gameUrl}`;
     window.open(
       `https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`,
-      '_blank'
+      '_blank',
     );
   };
   if (!game) {

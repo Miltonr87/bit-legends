@@ -44,29 +44,6 @@ export const GameIframe = ({ game }: GameIframeProps) => {
     return () => clearInterval(interval);
   }, [tips.length]);
 
-  useEffect(() => {
-    if (isMobile) {
-      let meta = document.querySelector(
-        'meta[name="viewport"]'
-      ) as HTMLMetaElement | null;
-      const originalContent = meta?.getAttribute('content') ?? '';
-      if (!meta) {
-        meta = document.createElement('meta');
-        meta.name = 'viewport';
-        document.head.appendChild(meta);
-      }
-      meta.setAttribute(
-        'content',
-        'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'
-      );
-      return () => {
-        if (meta && originalContent) {
-          meta.setAttribute('content', originalContent);
-        }
-      };
-    }
-  }, [isMobile]);
-
   const iframeUrl =
     game.embedUrl ||
     `https://www.retrogames.cc/embed/${game.embedId}-${game.slug}.html`;
@@ -74,8 +51,53 @@ export const GameIframe = ({ game }: GameIframeProps) => {
   const isRetrogames = iframeUrl.includes('retrogames.cc');
 
   const sandboxRules = isRetrogames
-    ? 'allow-scripts allow-same-origin allow-popups allow-downloads allow-forms allow-presentation'
-    : 'allow-scripts allow-same-origin allow-pointer-lock allow-downloads';
+    ? 'allow-scripts allow-same-origin allow-popups allow-downloads allow-forms allow-presentation allow-top-navigation-by-user-activation'
+    : 'allow-scripts allow-same-origin allow-pointer-lock allow-downloads allow-top-navigation-by-user-activation';
+
+  useEffect(() => {
+    if (isMobile) {
+      // Prevent iframe from causing page reload on mobile
+      const handleBeforeUnload = (e: BeforeUnloadEvent) => {
+        e.preventDefault();
+        e.returnValue = '';
+      };
+
+      // Handle visibility changes to prevent mobile browser from discarding iframe
+      const handleVisibilityChange = () => {
+        if (document.visibilityState === 'visible') {
+          // Keep the iframe alive when tab becomes visible
+          const iframe = iframeRef.current?.querySelector(
+            'iframe',
+          ) as HTMLIFrameElement;
+          if (iframe && !iframe.src) {
+            iframe.src = iframeUrl;
+          }
+        }
+      };
+
+      window.addEventListener('beforeunload', handleBeforeUnload);
+      document.addEventListener('visibilitychange', handleVisibilityChange);
+
+      // Add referrer meta tag for better iframe compatibility
+      let metaReferrer = document.querySelector(
+        'meta[name="referrer"]',
+      ) as HTMLMetaElement | null;
+      if (!metaReferrer) {
+        metaReferrer = document.createElement('meta');
+        metaReferrer.name = 'referrer';
+        document.head.appendChild(metaReferrer);
+      }
+      metaReferrer.setAttribute('content', 'no-referrer-when-downgrade');
+
+      return () => {
+        window.removeEventListener('beforeunload', handleBeforeUnload);
+        document.removeEventListener(
+          'visibilitychange',
+          handleVisibilityChange,
+        );
+      };
+    }
+  }, [isMobile, iframeUrl]);
 
   const toggleFullscreen = () => {
     const container = iframeRef.current;
@@ -137,6 +159,8 @@ export const GameIframe = ({ game }: GameIframeProps) => {
               title={game.title}
               allow="gamepad; fullscreen; autoplay; encrypted-media; picture-in-picture"
               allowFullScreen
+              referrerPolicy="no-referrer-when-downgrade"
+              loading="eager"
               style={{
                 border: 'none',
                 overflow: 'hidden',
