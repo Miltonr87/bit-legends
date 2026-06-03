@@ -12,10 +12,12 @@ interface GameIframeProps {
 
 export const GameIframe = ({ game }: GameIframeProps) => {
   const iframeRef = useRef<HTMLDivElement>(null);
+  const iframeElRef = useRef<HTMLIFrameElement>(null);
   const isMobile = useIsMobile();
   const deviceInfo = useDisplayDevice();
   const [introDismissed, setIntroDismissed] = useState(false);
   const [tipIndex, setTipIndex] = useState(0);
+  const loadCountRef = useRef(0);
 
   const tips = [
     { text: 'On mobile, tap ⛶ button to fullscreen or move the game box!' },
@@ -167,6 +169,7 @@ export const GameIframe = ({ game }: GameIframeProps) => {
           <>
             <iframe
               key={game.id}
+              ref={iframeElRef}
               src={iframeUrl}
               scrolling="no"
               className="absolute inset-0 w-full h-full rounded-lg"
@@ -175,6 +178,22 @@ export const GameIframe = ({ game }: GameIframeProps) => {
               allowFullScreen
               referrerPolicy="no-referrer-when-downgrade"
               loading="eager"
+              onLoad={() => {
+                if (isMobile) {
+                  loadCountRef.current += 1;
+                  if (loadCountRef.current > 1) {
+                    // Prevent subsequent reloads by freezing the iframe
+                    const iframe = iframeElRef.current;
+                    if (iframe) {
+                      iframe.src = 'about:blank';
+                      setTimeout(() => {
+                        iframe.src = iframeUrl;
+                        loadCountRef.current = 1;
+                      }, 100);
+                    }
+                  }
+                }
+              }}
               style={{
                 border: 'none',
                 overflow: 'hidden',
